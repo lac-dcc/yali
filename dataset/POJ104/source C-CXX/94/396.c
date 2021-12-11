@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char s1[80],s2[80];
+	gets(s1);
+	gets(s2);
+	int i;
+	for(i=0;s1[i]!='\0';i++)
+	{
+		if(s1[i]>='A'&&s1[i]<='Z')
+			s1[i]=s1[i]+'a'-'A';
+	}
+    for(i=0;s2[i]!='\0';i++)
+	{
+		if(s2[i]>='A'&&s2[i]<='Z')
+			s2[i]=s2[i]+'a'-'A';
+	}
+	if(strcmp(s1,s2)>0)
+		printf(">");
+	if (strcmp(s1,s2)<0)
+		printf("<");
+    if (strcmp(s1,s2)==0)
+		printf("=");
+	return 0;
+}

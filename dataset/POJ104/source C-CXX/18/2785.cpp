@@ -1,0 +1,63 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+#define LEN 100
+#define ASCII 100
+#define MAX_N 100
+#define MAX_N 100
+#define L 100
+#define MAX 100
+#define ASC 100
+#define null 0
+#define Len 100
+#define M 100
+#define SUM 100
+#define NUMBER 100
+#define SIZE 100
+#define N 100
+#define Max 100
+#define X 100
+#define Y 100
+#define A 100
+#define MAXN 100
+#define MAXSIZE 100
+int main()
+{
+    char sen[1000],a[1000],b[1000],end[2000];
+	int i,j,lensen,lena,lenb;
+    sen[0]=' '; 
+	a[0]=' '; 
+	b[0]=' ';
+    gets(&sen[1]);
+    cin>>&a[1]>>&b[1];
+
+    lensen=strlen(sen)+1;
+    lena=strlen(a)+1;
+    lenb=strlen(b)+1;
+
+    sen[lensen-1]=a[lena-1]=b[lenb-1]=' ';
+    sen[lensen]=a[lena]=b[lenb]='\0';
+
+    
+    for(i=0,j=0;i<lensen;++i,++j)
+    {
+        if (strncmp(sen+i,a,lena) == 0)
+        {
+            strcpy(end+j,b);
+            i = i+lena-1;
+            j = j+lenb-1;
+        }
+        else
+      {
+            end[j] =sen[i];
+        }
+    }
+
+    end[j-1] = 0;
+    cout<<&end[1]<<endl;
+    return 0;
+}

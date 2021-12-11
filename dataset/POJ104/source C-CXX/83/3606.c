@@ -1,0 +1,28 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+int n,i,j,t;
+int a[30]={0};
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+  scanf("%d",&a[i]);
+}
+for(j=0;j<n-1;j++)
+{
+	for(i=0;i<n-1-j;i++)
+		if(a[i]<a[i+1])
+		{
+		 t=a[i];
+		 a[i]=a[i+1];
+		 a[i+1]=t;
+		}
+}
+for(i=0;i<2;i++)
+printf("%d\n",a[i]);
+return 0;
+}

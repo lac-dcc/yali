@@ -1,0 +1,96 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAX_DIGITS 26
+#define MAXNUM 100
+#define MAX_LENGTH 100
+#define ASC 100
+#define null 0
+#define pi 3.14
+#define Pi 3.14
+#define pai 3.14
+#define P 3.14
+#define false 1
+#define LEN 100
+#define WIDTH 100
+#define maxcol 100
+#define MN 100
+#define LIMIT 100
+#define MAX_NUM 100
+#define GESHU 100
+#define SIZEE 100
+#define MAX_LEN 100
+#define LIU 100
+#define maxsize 100
+#define NUM 100
+#define NO 100
+#define Null 0
+#define ID_DIGITS 100
+#define INT_MAX 100
+#define INT_MIN 100
+#define FALSE 0
+#define TRUE 1
+#define hang 100
+#define lie 100
+#define lll 100
+#define LEM 100
+#define K 100
+#define INF 100
+#define MONTH 12
+#define true 1
+#define PI 100
+#define maxlen 100
+#define maxinputint 100
+#define STUDENT_NUM 100
+#define TOTAL 100
+#define LEN1 100
+#define student_num 100
+#define MAXLEN 100
+#define MAXL 100
+#define nMax 100
+#define Vocabularysize 100
+#define Sentencelength 100
+#define LENGTH 100
+#define ARRAY 100
+#define ISNOT_POSITIVEINT 1
+#define ISMORETHAN_THREEHUNDRED 1
+#define ISCORRECT 1
+ 
+int judge(int a[][5],int n,int m)
+{
+    int i,temp;
+    if(n<=4&&n>=0&&m>=0&&m<=4)
+    {
+        for(i=0;i<5;i++)
+        {
+            temp=a[n][i];
+            a[n][i]=a[m][i];
+            a[m][i]=temp;
+         }
+    return(1);
+    }
+    else
+        return(0);
+}
+void main()
+{
+    int i,j,a[5][5],n,m;
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+            scanf("%d",&a[i][j]);
+     }
+     scanf("%d%d",&n,&m);
+     if(judge(a,n,m)==0)
+         printf("error\n");
+     else 
+     {
+         for(i=0;i<5;i++)
+         { 
+            for(j=0;j<4;j++)
+                printf("%d ",a[i][j]);
+            printf("%d\n",a[i][4]);
+         }
+      }
+}

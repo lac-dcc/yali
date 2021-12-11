@@ -1,0 +1,385 @@
+; ModuleID = '85/768.c'
+source_filename = "85/768.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [3 x i8] c"%s\00", align 1
+@.str.2 = private unnamed_addr constant [4 x i8] c"no\0A\00", align 1
+@.str.3 = private unnamed_addr constant [5 x i8] c"yes\0A\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define dso_local i32 @main() #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca [20 x [20 x i8]], align 16
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca [20 x i32], align 16
+  store i32 0, i32* %1, align 4
+  %8 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32* %3)
+  store i32 0, i32* %4, align 4
+  br label %9
+
+9:                                                ; preds = %237, %0
+  %10 = load i32, i32* %4, align 4
+  %11 = load i32, i32* %3, align 4
+  %12 = icmp slt i32 %10, %11
+  br i1 %12, label %13, label %240
+
+13:                                               ; preds = %9
+  %14 = load i32, i32* %4, align 4
+  %15 = sext i32 %14 to i64
+  %16 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %15
+  %17 = getelementptr inbounds [20 x i8], [20 x i8]* %16, i64 0, i64 0
+  %18 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i8* %17)
+  %19 = load i32, i32* %4, align 4
+  %20 = sext i32 %19 to i64
+  %21 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %20
+  %22 = getelementptr inbounds [20 x i8], [20 x i8]* %21, i64 0, i64 0
+  %23 = call i64 @strlen(i8* %22) #3
+  %24 = trunc i64 %23 to i32
+  store i32 %24, i32* %6, align 4
+  %25 = load i32, i32* %4, align 4
+  %26 = sext i32 %25 to i64
+  %27 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %26
+  %28 = getelementptr inbounds [20 x i8], [20 x i8]* %27, i64 0, i64 0
+  %29 = load i8, i8* %28, align 4
+  %30 = sext i8 %29 to i32
+  %31 = icmp sge i32 %30, 97
+  br i1 %31, label %32, label %40
+
+32:                                               ; preds = %13
+  %33 = load i32, i32* %4, align 4
+  %34 = sext i32 %33 to i64
+  %35 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %34
+  %36 = getelementptr inbounds [20 x i8], [20 x i8]* %35, i64 0, i64 0
+  %37 = load i8, i8* %36, align 4
+  %38 = sext i8 %37 to i32
+  %39 = icmp sle i32 %38, 122
+  br i1 %39, label %64, label %40
+
+40:                                               ; preds = %32, %13
+  %41 = load i32, i32* %4, align 4
+  %42 = sext i32 %41 to i64
+  %43 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %42
+  %44 = getelementptr inbounds [20 x i8], [20 x i8]* %43, i64 0, i64 0
+  %45 = load i8, i8* %44, align 4
+  %46 = sext i8 %45 to i32
+  %47 = icmp sge i32 %46, 65
+  br i1 %47, label %48, label %56
+
+48:                                               ; preds = %40
+  %49 = load i32, i32* %4, align 4
+  %50 = sext i32 %49 to i64
+  %51 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %50
+  %52 = getelementptr inbounds [20 x i8], [20 x i8]* %51, i64 0, i64 0
+  %53 = load i8, i8* %52, align 4
+  %54 = sext i8 %53 to i32
+  %55 = icmp sle i32 %54, 90
+  br i1 %55, label %64, label %56
+
+56:                                               ; preds = %48, %40
+  %57 = load i32, i32* %4, align 4
+  %58 = sext i32 %57 to i64
+  %59 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %58
+  %60 = getelementptr inbounds [20 x i8], [20 x i8]* %59, i64 0, i64 0
+  %61 = load i8, i8* %60, align 4
+  %62 = sext i8 %61 to i32
+  %63 = icmp eq i32 %62, 95
+  br i1 %63, label %64, label %232
+
+64:                                               ; preds = %56, %48, %32
+  store i32 1, i32* %5, align 4
+  br label %65
+
+65:                                               ; preds = %228, %64
+  %66 = load i32, i32* %5, align 4
+  %67 = load i32, i32* %6, align 4
+  %68 = icmp slt i32 %66, %67
+  br i1 %68, label %69, label %231
+
+69:                                               ; preds = %65
+  %70 = load i32, i32* %4, align 4
+  %71 = sext i32 %70 to i64
+  %72 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %71
+  %73 = load i32, i32* %5, align 4
+  %74 = sext i32 %73 to i64
+  %75 = getelementptr inbounds [20 x i8], [20 x i8]* %72, i64 0, i64 %74
+  %76 = load i8, i8* %75, align 1
+  %77 = sext i8 %76 to i32
+  %78 = icmp sge i32 %77, 97
+  br i1 %78, label %79, label %89
+
+79:                                               ; preds = %69
+  %80 = load i32, i32* %4, align 4
+  %81 = sext i32 %80 to i64
+  %82 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %81
+  %83 = load i32, i32* %5, align 4
+  %84 = sext i32 %83 to i64
+  %85 = getelementptr inbounds [20 x i8], [20 x i8]* %82, i64 0, i64 %84
+  %86 = load i8, i8* %85, align 1
+  %87 = sext i8 %86 to i32
+  %88 = icmp sle i32 %87, 122
+  br i1 %88, label %143, label %89
+
+89:                                               ; preds = %79, %69
+  %90 = load i32, i32* %4, align 4
+  %91 = sext i32 %90 to i64
+  %92 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %91
+  %93 = load i32, i32* %5, align 4
+  %94 = sext i32 %93 to i64
+  %95 = getelementptr inbounds [20 x i8], [20 x i8]* %92, i64 0, i64 %94
+  %96 = load i8, i8* %95, align 1
+  %97 = sext i8 %96 to i32
+  %98 = icmp sge i32 %97, 65
+  br i1 %98, label %99, label %109
+
+99:                                               ; preds = %89
+  %100 = load i32, i32* %4, align 4
+  %101 = sext i32 %100 to i64
+  %102 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %101
+  %103 = load i32, i32* %5, align 4
+  %104 = sext i32 %103 to i64
+  %105 = getelementptr inbounds [20 x i8], [20 x i8]* %102, i64 0, i64 %104
+  %106 = load i8, i8* %105, align 1
+  %107 = sext i8 %106 to i32
+  %108 = icmp sle i32 %107, 90
+  br i1 %108, label %143, label %109
+
+109:                                              ; preds = %99, %89
+  %110 = load i32, i32* %4, align 4
+  %111 = sext i32 %110 to i64
+  %112 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %111
+  %113 = load i32, i32* %5, align 4
+  %114 = sext i32 %113 to i64
+  %115 = getelementptr inbounds [20 x i8], [20 x i8]* %112, i64 0, i64 %114
+  %116 = load i8, i8* %115, align 1
+  %117 = sext i8 %116 to i32
+  %118 = icmp sge i32 %117, 48
+  br i1 %118, label %119, label %129
+
+119:                                              ; preds = %109
+  %120 = load i32, i32* %4, align 4
+  %121 = sext i32 %120 to i64
+  %122 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %121
+  %123 = load i32, i32* %5, align 4
+  %124 = sext i32 %123 to i64
+  %125 = getelementptr inbounds [20 x i8], [20 x i8]* %122, i64 0, i64 %124
+  %126 = load i8, i8* %125, align 1
+  %127 = sext i8 %126 to i32
+  %128 = icmp sle i32 %127, 57
+  br i1 %128, label %143, label %129
+
+129:                                              ; preds = %119, %109
+  %130 = load i32, i32* %4, align 4
+  %131 = sext i32 %130 to i64
+  %132 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %131
+  %133 = load i32, i32* %5, align 4
+  %134 = sext i32 %133 to i64
+  %135 = getelementptr inbounds [20 x i8], [20 x i8]* %132, i64 0, i64 %134
+  %136 = load i8, i8* %135, align 1
+  %137 = sext i8 %136 to i32
+  %138 = icmp eq i32 %137, 95
+  br i1 %138, label %143, label %139
+
+139:                                              ; preds = %129
+  %140 = load i32, i32* %4, align 4
+  %141 = sext i32 %140 to i64
+  %142 = getelementptr inbounds [20 x i32], [20 x i32]* %7, i64 0, i64 %141
+  store i32 0, i32* %142, align 4
+  br label %231
+
+143:                                              ; preds = %129, %119, %99, %79
+  %144 = load i32, i32* %5, align 4
+  %145 = load i32, i32* %6, align 4
+  %146 = sub nsw i32 %145, 1
+  %147 = icmp eq i32 %144, %146
+  br i1 %147, label %148, label %227
+
+148:                                              ; preds = %143
+  %149 = load i32, i32* %4, align 4
+  %150 = sext i32 %149 to i64
+  %151 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %150
+  %152 = load i32, i32* %5, align 4
+  %153 = sext i32 %152 to i64
+  %154 = getelementptr inbounds [20 x i8], [20 x i8]* %151, i64 0, i64 %153
+  %155 = load i8, i8* %154, align 1
+  %156 = sext i8 %155 to i32
+  %157 = icmp sge i32 %156, 97
+  br i1 %157, label %158, label %168
+
+158:                                              ; preds = %148
+  %159 = load i32, i32* %4, align 4
+  %160 = sext i32 %159 to i64
+  %161 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %160
+  %162 = load i32, i32* %5, align 4
+  %163 = sext i32 %162 to i64
+  %164 = getelementptr inbounds [20 x i8], [20 x i8]* %161, i64 0, i64 %163
+  %165 = load i8, i8* %164, align 1
+  %166 = sext i8 %165 to i32
+  %167 = icmp sle i32 %166, 122
+  br i1 %167, label %218, label %168
+
+168:                                              ; preds = %158, %148
+  %169 = load i32, i32* %4, align 4
+  %170 = sext i32 %169 to i64
+  %171 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %170
+  %172 = load i32, i32* %5, align 4
+  %173 = sext i32 %172 to i64
+  %174 = getelementptr inbounds [20 x i8], [20 x i8]* %171, i64 0, i64 %173
+  %175 = load i8, i8* %174, align 1
+  %176 = sext i8 %175 to i32
+  %177 = icmp sge i32 %176, 65
+  br i1 %177, label %178, label %188
+
+178:                                              ; preds = %168
+  %179 = load i32, i32* %4, align 4
+  %180 = sext i32 %179 to i64
+  %181 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %180
+  %182 = load i32, i32* %5, align 4
+  %183 = sext i32 %182 to i64
+  %184 = getelementptr inbounds [20 x i8], [20 x i8]* %181, i64 0, i64 %183
+  %185 = load i8, i8* %184, align 1
+  %186 = sext i8 %185 to i32
+  %187 = icmp sle i32 %186, 90
+  br i1 %187, label %218, label %188
+
+188:                                              ; preds = %178, %168
+  %189 = load i32, i32* %4, align 4
+  %190 = sext i32 %189 to i64
+  %191 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %190
+  %192 = load i32, i32* %5, align 4
+  %193 = sext i32 %192 to i64
+  %194 = getelementptr inbounds [20 x i8], [20 x i8]* %191, i64 0, i64 %193
+  %195 = load i8, i8* %194, align 1
+  %196 = sext i8 %195 to i32
+  %197 = icmp sge i32 %196, 48
+  br i1 %197, label %198, label %208
+
+198:                                              ; preds = %188
+  %199 = load i32, i32* %4, align 4
+  %200 = sext i32 %199 to i64
+  %201 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %200
+  %202 = load i32, i32* %5, align 4
+  %203 = sext i32 %202 to i64
+  %204 = getelementptr inbounds [20 x i8], [20 x i8]* %201, i64 0, i64 %203
+  %205 = load i8, i8* %204, align 1
+  %206 = sext i8 %205 to i32
+  %207 = icmp sle i32 %206, 57
+  br i1 %207, label %218, label %208
+
+208:                                              ; preds = %198, %188
+  %209 = load i32, i32* %4, align 4
+  %210 = sext i32 %209 to i64
+  %211 = getelementptr inbounds [20 x [20 x i8]], [20 x [20 x i8]]* %2, i64 0, i64 %210
+  %212 = load i32, i32* %5, align 4
+  %213 = sext i32 %212 to i64
+  %214 = getelementptr inbounds [20 x i8], [20 x i8]* %211, i64 0, i64 %213
+  %215 = load i8, i8* %214, align 1
+  %216 = sext i8 %215 to i32
+  %217 = icmp eq i32 %216, 95
+  br i1 %217, label %218, label %222
+
+218:                                              ; preds = %208, %198, %178, %158
+  %219 = load i32, i32* %4, align 4
+  %220 = sext i32 %219 to i64
+  %221 = getelementptr inbounds [20 x i32], [20 x i32]* %7, i64 0, i64 %220
+  store i32 1, i32* %221, align 4
+  br label %226
+
+222:                                              ; preds = %208
+  %223 = load i32, i32* %4, align 4
+  %224 = sext i32 %223 to i64
+  %225 = getelementptr inbounds [20 x i32], [20 x i32]* %7, i64 0, i64 %224
+  store i32 0, i32* %225, align 4
+  br label %226
+
+226:                                              ; preds = %222, %218
+  br label %227
+
+227:                                              ; preds = %226, %143
+  br label %228
+
+228:                                              ; preds = %227
+  %229 = load i32, i32* %5, align 4
+  %230 = add nsw i32 %229, 1
+  store i32 %230, i32* %5, align 4
+  br label %65
+
+231:                                              ; preds = %139, %65
+  br label %236
+
+232:                                              ; preds = %56
+  %233 = load i32, i32* %4, align 4
+  %234 = sext i32 %233 to i64
+  %235 = getelementptr inbounds [20 x i32], [20 x i32]* %7, i64 0, i64 %234
+  store i32 0, i32* %235, align 4
+  br label %236
+
+236:                                              ; preds = %232, %231
+  br label %237
+
+237:                                              ; preds = %236
+  %238 = load i32, i32* %4, align 4
+  %239 = add nsw i32 %238, 1
+  store i32 %239, i32* %4, align 4
+  br label %9
+
+240:                                              ; preds = %9
+  store i32 0, i32* %4, align 4
+  br label %241
+
+241:                                              ; preds = %256, %240
+  %242 = load i32, i32* %4, align 4
+  %243 = load i32, i32* %3, align 4
+  %244 = icmp slt i32 %242, %243
+  br i1 %244, label %245, label %259
+
+245:                                              ; preds = %241
+  %246 = load i32, i32* %4, align 4
+  %247 = sext i32 %246 to i64
+  %248 = getelementptr inbounds [20 x i32], [20 x i32]* %7, i64 0, i64 %247
+  %249 = load i32, i32* %248, align 4
+  %250 = icmp eq i32 %249, 0
+  br i1 %250, label %251, label %253
+
+251:                                              ; preds = %245
+  %252 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.2, i64 0, i64 0))
+  br label %255
+
+253:                                              ; preds = %245
+  %254 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i64 0, i64 0))
+  br label %255
+
+255:                                              ; preds = %253, %251
+  br label %256
+
+256:                                              ; preds = %255
+  %257 = load i32, i32* %4, align 4
+  %258 = add nsw i32 %257, 1
+  store i32 %258, i32* %4, align 4
+  br label %241
+
+259:                                              ; preds = %241
+  ret i32 0
+}
+
+declare dso_local i32 @__isoc99_scanf(i8*, ...) #1
+
+; Function Attrs: nounwind readonly
+declare dso_local i64 @strlen(i8*) #2
+
+declare dso_local i32 @printf(i8*, ...) #1
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind readonly "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind readonly }
+
+!llvm.module.flags = !{!0}
+!llvm.ident = !{!1}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{!"clang version 10.0.0-4ubuntu1 "}
