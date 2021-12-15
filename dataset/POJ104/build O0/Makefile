@@ -3,6 +3,11 @@ BUILD=../features
 
 LLPATH=${LLVM13}
 CC=${LLPATH}/clang
+###################################################################################
+# This Makefile extracts the histogram for each program in the *programs* folder 
+# and saves all output in the *../features/features.csv* file
+###################################################################################
+
 CXX=${LLPATH}/clang++
 OPT=${LLPATH}/opt
 MY_LLVM_LIB=${LLPATH}/../lib/LLVMHistogram.so
