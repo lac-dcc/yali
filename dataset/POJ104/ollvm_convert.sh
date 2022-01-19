@@ -52012,7 +52012,7 @@ CLANG_CPP=/home/obfuscator/build/bin/clang++
 
 for ((i = 0; i < ${#BENCH[@]}; i++)); do
 	
-	CODE="source C-CXX/"${BENCH[i]}
+	CODE="source-C-CXX/"${BENCH[i]}
 	BS_NAME=${BENCH[i]}
 	FL_NAME="${BS_NAME%.*}"
 	DR_NAME="${BS_NAME%/*}"
