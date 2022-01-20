@@ -1,0 +1,224 @@
+; ModuleID = 'source-C-CXX/39/477.c'
+source_filename = "source-C-CXX/39/477.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.str = private unnamed_addr constant [20 x i8] c"%lf\0A%lf\0A%lf\0A%lf\0A%lf\00", align 1
+@.str.1 = private unnamed_addr constant [6 x i8] c"%.4lf\00", align 1
+@.str.2 = private unnamed_addr constant [14 x i8] c"Invalid input\00", align 1
+@x = common global i32 0
+@y = common global i32 0
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main() #0 {
+entry:
+  %cmp21.reg2mem = alloca i1
+  %.reg2mem = alloca double
+  %retval = alloca i32, align 4
+  %s = alloca double, align 8
+  %S = alloca double, align 8
+  %a = alloca double, align 8
+  %b = alloca double, align 8
+  %c = alloca double, align 8
+  %d = alloca double, align 8
+  %e = alloca double, align 8
+  %f = alloca double, align 8
+  %g = alloca double, align 8
+  store i32 0, i32* %retval, align 4
+  %call = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str, i32 0, i32 0), double* %a, double* %b, double* %c, double* %d, double* %e)
+  %0 = load double, double* %a, align 8
+  %1 = load double, double* %b, align 8
+  %add = fadd double %0, %1
+  %2 = load double, double* %c, align 8
+  %add1 = fadd double %add, %2
+  %3 = load double, double* %d, align 8
+  %add2 = fadd double %add1, %3
+  %div = fdiv double %add2, 2.000000e+00
+  store double %div, double* %s, align 8
+  %4 = load double, double* %e, align 8
+  %mul = fmul double 1.000000e+02, %4
+  %div3 = fdiv double %mul, 3.600000e+02
+  store double %div3, double* %f, align 8
+  %5 = load double, double* %s, align 8
+  %6 = load double, double* %a, align 8
+  %sub = fsub double %5, %6
+  %7 = load double, double* %s, align 8
+  %8 = load double, double* %b, align 8
+  %sub4 = fsub double %7, %8
+  %mul5 = fmul double %sub, %sub4
+  %9 = load double, double* %s, align 8
+  %10 = load double, double* %c, align 8
+  %sub6 = fsub double %9, %10
+  %mul7 = fmul double %mul5, %sub6
+  %11 = load double, double* %s, align 8
+  %12 = load double, double* %d, align 8
+  %sub8 = fsub double %11, %12
+  %mul9 = fmul double %mul7, %sub8
+  %13 = load double, double* %a, align 8
+  %14 = load double, double* %b, align 8
+  %mul10 = fmul double %13, %14
+  %15 = load double, double* %c, align 8
+  %mul11 = fmul double %mul10, %15
+  %16 = load double, double* %d, align 8
+  %mul12 = fmul double %mul11, %16
+  %17 = load double, double* %f, align 8
+  %call13 = call double @cos(double %17) #3
+  %mul14 = fmul double %mul12, %call13
+  %18 = load double, double* %f, align 8
+  %call15 = call double @cos(double %18) #3
+  %mul16 = fmul double %mul14, %call15
+  %sub17 = fsub double %mul9, %mul16
+  store double %sub17, double* %g, align 8
+  %19 = load double, double* %g, align 8
+  store double %19, double* %.reg2mem
+  %switchVar = alloca i32
+  store i32 1724886868, i32* %switchVar
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %entry, %loopEnd
+  %switchVar25 = load i32, i32* %switchVar
+  switch i32 %switchVar25, label %switchDefault [
+    i32 1724886868, label %first
+    i32 -1262817021, label %lor.lhs.false
+    i32 -1460768953, label %if.then
+    i32 -312641272, label %if.end
+    i32 -377486415, label %originalBB
+    i32 -2119277511, label %originalBBpart2
+    i32 -1797260570, label %if.then22
+    i32 -1063667784, label %if.end24
+    i32 1010219699, label %originalBBalteredBB
+  ]
+
+switchDefault:                                    ; preds = %loopEntry
+  br label %loopEnd
+
+first:                                            ; preds = %loopEntry
+  %.reload = load volatile double, double* %.reg2mem
+  %cmp = fcmp ogt double %.reload, 0.000000e+00
+  %20 = select i1 %cmp, i32 -1460768953, i32 -1262817021
+  store i32 %20, i32* %switchVar
+  br label %loopEnd
+
+lor.lhs.false:                                    ; preds = %loopEntry
+  %21 = load double, double* %g, align 8
+  %cmp18 = fcmp oeq double %21, 0.000000e+00
+  %22 = select i1 %cmp18, i32 -1460768953, i32 -312641272
+  store i32 %22, i32* %switchVar
+  br label %loopEnd
+
+if.then:                                          ; preds = %loopEntry
+  %23 = load double, double* %g, align 8
+  %call19 = call double @sqrt(double %23) #3
+  store double %call19, double* %S, align 8
+  %24 = load double, double* %S, align 8
+  %call20 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.1, i32 0, i32 0), double %24)
+  store i32 -312641272, i32* %switchVar
+  br label %loopEnd
+
+if.end:                                           ; preds = %loopEntry
+  %25 = load i32, i32* @x
+  %26 = load i32, i32* @y
+  %27 = add i32 %25, 67289394
+  %28 = sub i32 %27, 1
+  %29 = sub i32 %28, 67289394
+  %30 = sub i32 %25, 1
+  %31 = mul i32 %25, %29
+  %32 = urem i32 %31, 2
+  %33 = icmp eq i32 %32, 0
+  %34 = icmp slt i32 %26, 10
+  %35 = xor i1 %33, true
+  %36 = xor i1 %34, true
+  %37 = xor i1 false, true
+  %38 = and i1 %35, false
+  %39 = and i1 %33, %37
+  %40 = and i1 %36, false
+  %41 = and i1 %34, %37
+  %42 = or i1 %38, %39
+  %43 = or i1 %40, %41
+  %44 = xor i1 %42, %43
+  %45 = or i1 %35, %36
+  %46 = xor i1 %45, true
+  %47 = or i1 false, %37
+  %48 = and i1 %46, %47
+  %49 = or i1 %44, %48
+  %50 = or i1 %33, %34
+  %51 = select i1 %49, i32 -377486415, i32 1010219699
+  store i32 %51, i32* %switchVar
+  br label %loopEnd
+
+originalBB:                                       ; preds = %loopEntry
+  %52 = load double, double* %g, align 8
+  %cmp21 = fcmp olt double %52, 0.000000e+00
+  store i1 %cmp21, i1* %cmp21.reg2mem
+  %53 = load i32, i32* @x
+  %54 = load i32, i32* @y
+  %55 = add i32 %53, -1419355691
+  %56 = sub i32 %55, 1
+  %57 = sub i32 %56, -1419355691
+  %58 = sub i32 %53, 1
+  %59 = mul i32 %53, %57
+  %60 = urem i32 %59, 2
+  %61 = icmp eq i32 %60, 0
+  %62 = icmp slt i32 %54, 10
+  %63 = xor i1 %61, true
+  %64 = xor i1 %62, true
+  %65 = xor i1 false, true
+  %66 = and i1 %63, false
+  %67 = and i1 %61, %65
+  %68 = and i1 %64, false
+  %69 = and i1 %62, %65
+  %70 = or i1 %66, %67
+  %71 = or i1 %68, %69
+  %72 = xor i1 %70, %71
+  %73 = or i1 %63, %64
+  %74 = xor i1 %73, true
+  %75 = or i1 false, %65
+  %76 = and i1 %74, %75
+  %77 = or i1 %72, %76
+  %78 = or i1 %61, %62
+  %79 = select i1 %77, i32 -2119277511, i32 1010219699
+  store i32 %79, i32* %switchVar
+  br label %loopEnd
+
+originalBBpart2:                                  ; preds = %loopEntry
+  %cmp21.reload = load volatile i1, i1* %cmp21.reg2mem
+  %80 = select i1 %cmp21.reload, i32 -1797260570, i32 -1063667784
+  store i32 %80, i32* %switchVar
+  br label %loopEnd
+
+if.then22:                                        ; preds = %loopEntry
+  %call23 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.2, i32 0, i32 0))
+  store i32 -1063667784, i32* %switchVar
+  br label %loopEnd
+
+if.end24:                                         ; preds = %loopEntry
+  ret i32 0
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %81 = load double, double* %g, align 8
+  %cmp21alteredBB = fcmp olt double %81, 0.000000e+00
+  store i32 -377486415, i32* %switchVar
+  br label %loopEnd
+
+loopEnd:                                          ; preds = %originalBBalteredBB, %if.then22, %originalBBpart2, %originalBB, %if.end, %if.then, %lor.lhs.false, %first, %switchDefault
+  br label %loopEntry
+}
+
+declare i32 @__isoc99_scanf(i8*, ...) #1
+
+; Function Attrs: nounwind
+declare double @cos(double) #2
+
+; Function Attrs: nounwind
+declare double @sqrt(double) #2
+
+declare i32 @printf(i8*, ...) #1
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
