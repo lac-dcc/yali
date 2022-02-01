@@ -1,0 +1,81 @@
+; ModuleID = 'source-C-CXX/46/4258.c'
+source_filename = "source-C-CXX/46/4258.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [4 x i8] c"%d \00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define void @main() #0 {
+  %1 = alloca [100 x i32], align 16
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  store i32 0, i32* %3, align 4
+  %4 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32* %2)
+  br label %5
+
+; <label>:5:                                      ; preds = %9, %0
+  %6 = load i32, i32* %3, align 4
+  %7 = load i32, i32* %2, align 4
+  %8 = icmp slt i32 %6, %7
+  br i1 %8, label %9, label %19
+
+; <label>:9:                                      ; preds = %5
+  %10 = load i32, i32* %3, align 4
+  %11 = sext i32 %10 to i64
+  %12 = getelementptr inbounds [100 x i32], [100 x i32]* %1, i64 0, i64 %11
+  %13 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32* %12)
+  %14 = load i32, i32* %3, align 4
+  %15 = add i32 %14, 1128975620
+  %16 = add i32 %15, 1
+  %17 = sub i32 %16, 1128975620
+  %18 = add nsw i32 %14, 1
+  store i32 %17, i32* %3, align 4
+  br label %5
+
+; <label>:19:                                     ; preds = %5
+  %20 = load i32, i32* %2, align 4
+  %21 = add i32 %20, -1649398525
+  %22 = sub i32 %21, 1
+  %23 = sub i32 %22, -1649398525
+  %24 = sub nsw i32 %20, 1
+  store i32 %23, i32* %3, align 4
+  br label %25
+
+; <label>:25:                                     ; preds = %28, %19
+  %26 = load i32, i32* %3, align 4
+  %27 = icmp sgt i32 %26, 0
+  br i1 %27, label %28, label %39
+
+; <label>:28:                                     ; preds = %25
+  %29 = load i32, i32* %3, align 4
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds [100 x i32], [100 x i32]* %1, i64 0, i64 %30
+  %32 = load i32, i32* %31, align 4
+  %33 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i32 0, i32 0), i32 %32)
+  %34 = load i32, i32* %3, align 4
+  %35 = sub i32 %34, -1582417254
+  %36 = sub i32 %35, 1
+  %37 = add i32 %36, -1582417254
+  %38 = sub nsw i32 %34, 1
+  store i32 %37, i32* %3, align 4
+  br label %25
+
+; <label>:39:                                     ; preds = %25
+  %40 = getelementptr inbounds [100 x i32], [100 x i32]* %1, i64 0, i64 0
+  %41 = load i32, i32* %40, align 16
+  %42 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32 %41)
+  ret void
+}
+
+declare i32 @__isoc99_scanf(i8*, ...) #1
+
+declare i32 @printf(i8*, ...) #1
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
