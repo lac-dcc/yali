@@ -21,6 +21,6 @@ build: ${FOLDERS}
 	@echo "$@ Started!"
 	$(eval FILES:=$(wildcard programs/$(basename $@)/*.ll))
 	@for file in ${FILES} ; do \
-		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/features_ollvm.csv; \
+		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/features_ollvm_sub.csv; \
 	done;
 	@echo "$@ Finished! \n"
