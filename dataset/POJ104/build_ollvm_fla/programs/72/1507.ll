@@ -1,0 +1,451 @@
+; ModuleID = 'source-C-CXX/72/1507.cpp'
+source_filename = "source-C-CXX/72/1507.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@.str = private unnamed_addr constant [10 x i8] c"not found\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_1507.cpp, i8* null }]
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #2
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #2
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #3 {
+  %1 = alloca i32, align 4
+  %2 = alloca [5 x [5 x i32]], align 16
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca [5 x i32], align 16
+  %6 = alloca [5 x i32], align 16
+  %7 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %7, align 4
+  store i32 0, i32* %3, align 4
+  %8 = alloca i32
+  store i32 -1967102780, i32* %8
+  br label %9
+
+; <label>:9:                                      ; preds = %0, %190
+  %10 = load i32, i32* %8
+  switch i32 %10, label %11 [
+    i32 -1967102780, label %12
+    i32 -183387308, label %16
+    i32 2135482853, label %17
+    i32 1013647638, label %21
+    i32 -363252004, label %29
+    i32 -1362031910, label %32
+    i32 -454595090, label %33
+    i32 998300921, label %36
+    i32 -1709355817, label %37
+    i32 -420127882, label %41
+    i32 1978079810, label %50
+    i32 1493521887, label %53
+    i32 -1492493157, label %54
+    i32 -1946283896, label %58
+    i32 723785932, label %67
+    i32 430076245, label %70
+    i32 -2099769785, label %71
+    i32 -1933775134, label %75
+    i32 103689088, label %76
+    i32 920662705, label %80
+    i32 -1084510336, label %94
+    i32 -999949781, label %105
+    i32 1759603224, label %119
+    i32 967278159, label %130
+    i32 -1791652957, label %131
+    i32 1007032152, label %134
+    i32 1365375302, label %135
+    i32 2111014004, label %138
+    i32 -912463003, label %139
+    i32 78610742, label %143
+    i32 -346826710, label %144
+    i32 1329785572, label %148
+    i32 -455641743, label %159
+    i32 1126534910, label %175
+    i32 202780996, label %176
+    i32 -444398995, label %179
+    i32 1012902733, label %180
+    i32 697944810, label %183
+    i32 -1727036274, label %187
+    i32 522683565, label %189
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %190
+
+; <label>:12:                                     ; preds = %9
+  %13 = load i32, i32* %3, align 4
+  %14 = icmp slt i32 %13, 5
+  %15 = select i1 %14, i32 -183387308, i32 998300921
+  store i32 %15, i32* %8
+  br label %190
+
+; <label>:16:                                     ; preds = %9
+  store i32 0, i32* %4, align 4
+  store i32 2135482853, i32* %8
+  br label %190
+
+; <label>:17:                                     ; preds = %9
+  %18 = load i32, i32* %4, align 4
+  %19 = icmp slt i32 %18, 5
+  %20 = select i1 %19, i32 1013647638, i32 -1362031910
+  store i32 %20, i32* %8
+  br label %190
+
+; <label>:21:                                     ; preds = %9
+  %22 = load i32, i32* %3, align 4
+  %23 = sext i32 %22 to i64
+  %24 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %23
+  %25 = load i32, i32* %4, align 4
+  %26 = sext i32 %25 to i64
+  %27 = getelementptr inbounds [5 x i32], [5 x i32]* %24, i64 0, i64 %26
+  %28 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* dereferenceable(4) %27)
+  store i32 -363252004, i32* %8
+  br label %190
+
+; <label>:29:                                     ; preds = %9
+  %30 = load i32, i32* %4, align 4
+  %31 = add nsw i32 %30, 1
+  store i32 %31, i32* %4, align 4
+  store i32 2135482853, i32* %8
+  br label %190
+
+; <label>:32:                                     ; preds = %9
+  store i32 -454595090, i32* %8
+  br label %190
+
+; <label>:33:                                     ; preds = %9
+  %34 = load i32, i32* %3, align 4
+  %35 = add nsw i32 %34, 1
+  store i32 %35, i32* %3, align 4
+  store i32 -1967102780, i32* %8
+  br label %190
+
+; <label>:36:                                     ; preds = %9
+  store i32 0, i32* %3, align 4
+  store i32 -1709355817, i32* %8
+  br label %190
+
+; <label>:37:                                     ; preds = %9
+  %38 = load i32, i32* %3, align 4
+  %39 = icmp slt i32 %38, 5
+  %40 = select i1 %39, i32 -420127882, i32 1493521887
+  store i32 %40, i32* %8
+  br label %190
+
+; <label>:41:                                     ; preds = %9
+  %42 = load i32, i32* %3, align 4
+  %43 = sext i32 %42 to i64
+  %44 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %43
+  %45 = getelementptr inbounds [5 x i32], [5 x i32]* %44, i64 0, i64 0
+  %46 = load i32, i32* %45, align 4
+  %47 = load i32, i32* %3, align 4
+  %48 = sext i32 %47 to i64
+  %49 = getelementptr inbounds [5 x i32], [5 x i32]* %5, i64 0, i64 %48
+  store i32 %46, i32* %49, align 4
+  store i32 1978079810, i32* %8
+  br label %190
+
+; <label>:50:                                     ; preds = %9
+  %51 = load i32, i32* %3, align 4
+  %52 = add nsw i32 %51, 1
+  store i32 %52, i32* %3, align 4
+  store i32 -1709355817, i32* %8
+  br label %190
+
+; <label>:53:                                     ; preds = %9
+  store i32 0, i32* %4, align 4
+  store i32 -1492493157, i32* %8
+  br label %190
+
+; <label>:54:                                     ; preds = %9
+  %55 = load i32, i32* %4, align 4
+  %56 = icmp slt i32 %55, 5
+  %57 = select i1 %56, i32 -1946283896, i32 430076245
+  store i32 %57, i32* %8
+  br label %190
+
+; <label>:58:                                     ; preds = %9
+  %59 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 0
+  %60 = load i32, i32* %4, align 4
+  %61 = sext i32 %60 to i64
+  %62 = getelementptr inbounds [5 x i32], [5 x i32]* %59, i64 0, i64 %61
+  %63 = load i32, i32* %62, align 4
+  %64 = load i32, i32* %4, align 4
+  %65 = sext i32 %64 to i64
+  %66 = getelementptr inbounds [5 x i32], [5 x i32]* %6, i64 0, i64 %65
+  store i32 %63, i32* %66, align 4
+  store i32 723785932, i32* %8
+  br label %190
+
+; <label>:67:                                     ; preds = %9
+  %68 = load i32, i32* %4, align 4
+  %69 = add nsw i32 %68, 1
+  store i32 %69, i32* %4, align 4
+  store i32 -1492493157, i32* %8
+  br label %190
+
+; <label>:70:                                     ; preds = %9
+  store i32 0, i32* %3, align 4
+  store i32 -2099769785, i32* %8
+  br label %190
+
+; <label>:71:                                     ; preds = %9
+  %72 = load i32, i32* %3, align 4
+  %73 = icmp slt i32 %72, 5
+  %74 = select i1 %73, i32 -1933775134, i32 2111014004
+  store i32 %74, i32* %8
+  br label %190
+
+; <label>:75:                                     ; preds = %9
+  store i32 0, i32* %4, align 4
+  store i32 103689088, i32* %8
+  br label %190
+
+; <label>:76:                                     ; preds = %9
+  %77 = load i32, i32* %4, align 4
+  %78 = icmp slt i32 %77, 5
+  %79 = select i1 %78, i32 920662705, i32 1007032152
+  store i32 %79, i32* %8
+  br label %190
+
+; <label>:80:                                     ; preds = %9
+  %81 = load i32, i32* %3, align 4
+  %82 = sext i32 %81 to i64
+  %83 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %82
+  %84 = load i32, i32* %4, align 4
+  %85 = sext i32 %84 to i64
+  %86 = getelementptr inbounds [5 x i32], [5 x i32]* %83, i64 0, i64 %85
+  %87 = load i32, i32* %86, align 4
+  %88 = load i32, i32* %3, align 4
+  %89 = sext i32 %88 to i64
+  %90 = getelementptr inbounds [5 x i32], [5 x i32]* %5, i64 0, i64 %89
+  %91 = load i32, i32* %90, align 4
+  %92 = icmp sgt i32 %87, %91
+  %93 = select i1 %92, i32 -1084510336, i32 -999949781
+  store i32 %93, i32* %8
+  br label %190
+
+; <label>:94:                                     ; preds = %9
+  %95 = load i32, i32* %3, align 4
+  %96 = sext i32 %95 to i64
+  %97 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %96
+  %98 = load i32, i32* %4, align 4
+  %99 = sext i32 %98 to i64
+  %100 = getelementptr inbounds [5 x i32], [5 x i32]* %97, i64 0, i64 %99
+  %101 = load i32, i32* %100, align 4
+  %102 = load i32, i32* %3, align 4
+  %103 = sext i32 %102 to i64
+  %104 = getelementptr inbounds [5 x i32], [5 x i32]* %5, i64 0, i64 %103
+  store i32 %101, i32* %104, align 4
+  store i32 -999949781, i32* %8
+  br label %190
+
+; <label>:105:                                    ; preds = %9
+  %106 = load i32, i32* %3, align 4
+  %107 = sext i32 %106 to i64
+  %108 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %107
+  %109 = load i32, i32* %4, align 4
+  %110 = sext i32 %109 to i64
+  %111 = getelementptr inbounds [5 x i32], [5 x i32]* %108, i64 0, i64 %110
+  %112 = load i32, i32* %111, align 4
+  %113 = load i32, i32* %4, align 4
+  %114 = sext i32 %113 to i64
+  %115 = getelementptr inbounds [5 x i32], [5 x i32]* %6, i64 0, i64 %114
+  %116 = load i32, i32* %115, align 4
+  %117 = icmp slt i32 %112, %116
+  %118 = select i1 %117, i32 1759603224, i32 967278159
+  store i32 %118, i32* %8
+  br label %190
+
+; <label>:119:                                    ; preds = %9
+  %120 = load i32, i32* %3, align 4
+  %121 = sext i32 %120 to i64
+  %122 = getelementptr inbounds [5 x [5 x i32]], [5 x [5 x i32]]* %2, i64 0, i64 %121
+  %123 = load i32, i32* %4, align 4
+  %124 = sext i32 %123 to i64
+  %125 = getelementptr inbounds [5 x i32], [5 x i32]* %122, i64 0, i64 %124
+  %126 = load i32, i32* %125, align 4
+  %127 = load i32, i32* %4, align 4
+  %128 = sext i32 %127 to i64
+  %129 = getelementptr inbounds [5 x i32], [5 x i32]* %6, i64 0, i64 %128
+  store i32 %126, i32* %129, align 4
+  store i32 967278159, i32* %8
+  br label %190
+
+; <label>:130:                                    ; preds = %9
+  store i32 -1791652957, i32* %8
+  br label %190
+
+; <label>:131:                                    ; preds = %9
+  %132 = load i32, i32* %4, align 4
+  %133 = add nsw i32 %132, 1
+  store i32 %133, i32* %4, align 4
+  store i32 103689088, i32* %8
+  br label %190
+
+; <label>:134:                                    ; preds = %9
+  store i32 1365375302, i32* %8
+  br label %190
+
+; <label>:135:                                    ; preds = %9
+  %136 = load i32, i32* %3, align 4
+  %137 = add nsw i32 %136, 1
+  store i32 %137, i32* %3, align 4
+  store i32 -2099769785, i32* %8
+  br label %190
+
+; <label>:138:                                    ; preds = %9
+  store i32 0, i32* %3, align 4
+  store i32 -912463003, i32* %8
+  br label %190
+
+; <label>:139:                                    ; preds = %9
+  %140 = load i32, i32* %3, align 4
+  %141 = icmp slt i32 %140, 5
+  %142 = select i1 %141, i32 78610742, i32 697944810
+  store i32 %142, i32* %8
+  br label %190
+
+; <label>:143:                                    ; preds = %9
+  store i32 0, i32* %4, align 4
+  store i32 -346826710, i32* %8
+  br label %190
+
+; <label>:144:                                    ; preds = %9
+  %145 = load i32, i32* %4, align 4
+  %146 = icmp slt i32 %145, 5
+  %147 = select i1 %146, i32 1329785572, i32 -444398995
+  store i32 %147, i32* %8
+  br label %190
+
+; <label>:148:                                    ; preds = %9
+  %149 = load i32, i32* %3, align 4
+  %150 = sext i32 %149 to i64
+  %151 = getelementptr inbounds [5 x i32], [5 x i32]* %5, i64 0, i64 %150
+  %152 = load i32, i32* %151, align 4
+  %153 = load i32, i32* %4, align 4
+  %154 = sext i32 %153 to i64
+  %155 = getelementptr inbounds [5 x i32], [5 x i32]* %6, i64 0, i64 %154
+  %156 = load i32, i32* %155, align 4
+  %157 = icmp eq i32 %152, %156
+  %158 = select i1 %157, i32 -455641743, i32 1126534910
+  store i32 %158, i32* %8
+  br label %190
+
+; <label>:159:                                    ; preds = %9
+  %160 = load i32, i32* %3, align 4
+  %161 = add nsw i32 %160, 1
+  %162 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %161)
+  %163 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* dereferenceable(272) %162, i8 signext 32)
+  %164 = load i32, i32* %4, align 4
+  %165 = add nsw i32 %164, 1
+  %166 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %163, i32 %165)
+  %167 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* dereferenceable(272) %166, i8 signext 32)
+  %168 = load i32, i32* %3, align 4
+  %169 = sext i32 %168 to i64
+  %170 = getelementptr inbounds [5 x i32], [5 x i32]* %5, i64 0, i64 %169
+  %171 = load i32, i32* %170, align 4
+  %172 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* %167, i32 %171)
+  %173 = load i32, i32* %7, align 4
+  %174 = add nsw i32 %173, 1
+  store i32 %174, i32* %7, align 4
+  store i32 1126534910, i32* %8
+  br label %190
+
+; <label>:175:                                    ; preds = %9
+  store i32 202780996, i32* %8
+  br label %190
+
+; <label>:176:                                    ; preds = %9
+  %177 = load i32, i32* %4, align 4
+  %178 = add nsw i32 %177, 1
+  store i32 %178, i32* %4, align 4
+  store i32 -346826710, i32* %8
+  br label %190
+
+; <label>:179:                                    ; preds = %9
+  store i32 1012902733, i32* %8
+  br label %190
+
+; <label>:180:                                    ; preds = %9
+  %181 = load i32, i32* %3, align 4
+  %182 = add nsw i32 %181, 1
+  store i32 %182, i32* %3, align 4
+  store i32 -912463003, i32* %8
+  br label %190
+
+; <label>:183:                                    ; preds = %9
+  %184 = load i32, i32* %7, align 4
+  %185 = icmp eq i32 %184, 0
+  %186 = select i1 %185, i32 -1727036274, i32 522683565
+  store i32 %186, i32* %8
+  br label %190
+
+; <label>:187:                                    ; preds = %9
+  %188 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str, i32 0, i32 0))
+  store i32 522683565, i32* %8
+  br label %190
+
+; <label>:189:                                    ; preds = %9
+  ret i32 0
+
+; <label>:190:                                    ; preds = %187, %183, %180, %179, %176, %175, %159, %148, %144, %143, %139, %138, %135, %134, %131, %130, %119, %105, %94, %80, %76, %75, %71, %70, %67, %58, %54, %53, %50, %41, %37, %36, %33, %32, %29, %21, %17, %16, %12, %11
+  br label %9
+}
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"*, i32* dereferenceable(4)) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* dereferenceable(272), i8 signext) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"*, i32) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272), i8*) #1
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_1507.cpp() #0 section ".text.startup" {
+  call void @__cxx_global_var_init()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind }
+attributes #3 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

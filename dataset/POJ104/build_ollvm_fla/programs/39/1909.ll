@@ -1,0 +1,196 @@
+; ModuleID = 'source-C-CXX/39/1909.c'
+source_filename = "source-C-CXX/39/1909.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@pi = constant double 0x400921FB4D12D84A, align 8
+@.str = private unnamed_addr constant [16 x i8] c"%lf%lf%lf%lf%lf\00", align 1
+@.str.1 = private unnamed_addr constant [6 x i8] c"%.4lf\00", align 1
+@.str.2 = private unnamed_addr constant [14 x i8] c"Invalid input\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define double @Area(double, double, double, double, double) #0 {
+  %6 = alloca double
+  %7 = alloca double, align 8
+  %8 = alloca double, align 8
+  %9 = alloca double, align 8
+  %10 = alloca double, align 8
+  %11 = alloca double, align 8
+  %12 = alloca double, align 8
+  %13 = alloca double, align 8
+  %14 = alloca double, align 8
+  store double %0, double* %8, align 8
+  store double %1, double* %9, align 8
+  store double %2, double* %10, align 8
+  store double %3, double* %11, align 8
+  store double %4, double* %12, align 8
+  %15 = load double, double* %8, align 8
+  %16 = load double, double* %9, align 8
+  %17 = fadd double %15, %16
+  %18 = load double, double* %10, align 8
+  %19 = fadd double %17, %18
+  %20 = load double, double* %11, align 8
+  %21 = fadd double %19, %20
+  %22 = fdiv double %21, 2.000000e+00
+  store double %22, double* %13, align 8
+  %23 = load double, double* %12, align 8
+  %24 = fdiv double %23, 2.000000e+00
+  %25 = fdiv double %24, 3.600000e+02
+  %26 = fmul double %25, 2.000000e+00
+  %27 = fmul double %26, 0x400921FB4D12D84A
+  store double %27, double* %12, align 8
+  %28 = load double, double* %13, align 8
+  %29 = load double, double* %8, align 8
+  %30 = fsub double %28, %29
+  %31 = load double, double* %13, align 8
+  %32 = load double, double* %9, align 8
+  %33 = fsub double %31, %32
+  %34 = fmul double %30, %33
+  %35 = load double, double* %13, align 8
+  %36 = load double, double* %10, align 8
+  %37 = fsub double %35, %36
+  %38 = fmul double %34, %37
+  %39 = load double, double* %13, align 8
+  %40 = load double, double* %11, align 8
+  %41 = fsub double %39, %40
+  %42 = fmul double %38, %41
+  %43 = load double, double* %8, align 8
+  %44 = load double, double* %9, align 8
+  %45 = fmul double %43, %44
+  %46 = load double, double* %10, align 8
+  %47 = fmul double %45, %46
+  %48 = load double, double* %11, align 8
+  %49 = fmul double %47, %48
+  %50 = load double, double* %12, align 8
+  %51 = call double @cos(double %50) #3
+  %52 = fmul double %49, %51
+  %53 = load double, double* %12, align 8
+  %54 = call double @cos(double %53) #3
+  %55 = fmul double %52, %54
+  %56 = fsub double %42, %55
+  store double %56, double* %14, align 8
+  %57 = load double, double* %14, align 8
+  store double %57, double* %6
+  %58 = alloca i32
+  store i32 1644160047, i32* %58
+  br label %59
+
+; <label>:59:                                     ; preds = %5, %72
+  %60 = load i32, i32* %58
+  switch i32 %60, label %61 [
+    i32 1644160047, label %62
+    i32 1849034624, label %66
+    i32 1899109844, label %67
+    i32 -1437515799, label %70
+  ]
+
+; <label>:61:                                     ; preds = %59
+  br label %72
+
+; <label>:62:                                     ; preds = %59
+  %63 = load volatile double, double* %6
+  %64 = fcmp olt double %63, 0.000000e+00
+  %65 = select i1 %64, i32 1849034624, i32 1899109844
+  store i32 %65, i32* %58
+  br label %72
+
+; <label>:66:                                     ; preds = %59
+  store double -1.000000e+00, double* %7, align 8
+  store i32 -1437515799, i32* %58
+  br label %72
+
+; <label>:67:                                     ; preds = %59
+  %68 = load double, double* %14, align 8
+  %69 = call double @sqrt(double %68) #3
+  store double %69, double* %7, align 8
+  store i32 -1437515799, i32* %58
+  br label %72
+
+; <label>:70:                                     ; preds = %59
+  %71 = load double, double* %7, align 8
+  ret double %71
+
+; <label>:72:                                     ; preds = %67, %66, %62, %61
+  br label %59
+}
+
+; Function Attrs: nounwind
+declare double @cos(double) #1
+
+; Function Attrs: nounwind
+declare double @sqrt(double) #1
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main() #0 {
+  %1 = alloca double
+  %2 = alloca i32, align 4
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  %6 = alloca double, align 8
+  %7 = alloca double, align 8
+  %8 = alloca double, align 8
+  store i32 0, i32* %2, align 4
+  %9 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str, i32 0, i32 0), double* %3, double* %4, double* %5, double* %6, double* %7)
+  %10 = load double, double* %3, align 8
+  %11 = load double, double* %4, align 8
+  %12 = load double, double* %5, align 8
+  %13 = load double, double* %6, align 8
+  %14 = load double, double* %7, align 8
+  %15 = call double @Area(double %10, double %11, double %12, double %13, double %14)
+  store double %15, double* %8, align 8
+  %16 = load double, double* %8, align 8
+  store double %16, double* %1
+  %17 = alloca i32
+  store i32 1015096754, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %0, %31
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 1015096754, label %21
+    i32 650400820, label %25
+    i32 -418203370, label %28
+    i32 1334750112, label %30
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %31
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile double, double* %1
+  %23 = fcmp oge double %22, 0.000000e+00
+  %24 = select i1 %23, i32 650400820, i32 -418203370
+  store i32 %24, i32* %17
+  br label %31
+
+; <label>:25:                                     ; preds = %18
+  %26 = load double, double* %8, align 8
+  %27 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.1, i32 0, i32 0), double %26)
+  store i32 1334750112, i32* %17
+  br label %31
+
+; <label>:28:                                     ; preds = %18
+  %29 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.2, i32 0, i32 0))
+  store i32 1334750112, i32* %17
+  br label %31
+
+; <label>:30:                                     ; preds = %18
+  ret i32 0
+
+; <label>:31:                                     ; preds = %28, %25, %21, %20
+  br label %18
+}
+
+declare i32 @__isoc99_scanf(i8*, ...) #2
+
+declare i32 @printf(i8*, ...) #2
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

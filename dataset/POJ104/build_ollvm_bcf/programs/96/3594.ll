@@ -1,0 +1,392 @@
+; ModuleID = 'source-C-CXX/96/3594.c'
+source_filename = "source-C-CXX/96/3594.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [19 x i8] c"%d\0A%d\0A%d\0A%d\0A%d\0A%d\0A\00", align 1
+@x = common global i32 0
+@y = common global i32 0
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main() #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca [7 x i32], align 16
+  %4 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  %5 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32* %2)
+  %6 = load i32, i32* %2, align 4
+  %7 = icmp slt i32 %6, 1000
+  br i1 %7, label %8, label %98
+
+; <label>:8:                                      ; preds = %0
+  %9 = load i32, i32* @x
+  %10 = load i32, i32* @y
+  %11 = sub i32 %9, 1
+  %12 = mul i32 %9, %11
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  %15 = icmp slt i32 %10, 10
+  %16 = or i1 %14, %15
+  br i1 %16, label %17, label %99
+
+; <label>:17:                                     ; preds = %8, %99
+  %18 = load i32, i32* %2, align 4
+  %19 = sdiv i32 %18, 100
+  %20 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  store i32 %19, i32* %20, align 4
+  %21 = load i32, i32* %2, align 4
+  %22 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %23 = load i32, i32* %22, align 4
+  %24 = mul nsw i32 %23, 100
+  %25 = sub nsw i32 %21, %24
+  %26 = sdiv i32 %25, 50
+  %27 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  store i32 %26, i32* %27, align 8
+  %28 = load i32, i32* %2, align 4
+  %29 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %30 = load i32, i32* %29, align 4
+  %31 = mul nsw i32 %30, 100
+  %32 = sub nsw i32 %28, %31
+  %33 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %34 = load i32, i32* %33, align 8
+  %35 = mul nsw i32 %34, 50
+  %36 = sub nsw i32 %32, %35
+  %37 = sdiv i32 %36, 20
+  %38 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  store i32 %37, i32* %38, align 4
+  %39 = load i32, i32* %2, align 4
+  %40 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %41 = load i32, i32* %40, align 4
+  %42 = mul nsw i32 %41, 100
+  %43 = sub nsw i32 %39, %42
+  %44 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %45 = load i32, i32* %44, align 8
+  %46 = mul nsw i32 %45, 50
+  %47 = sub nsw i32 %43, %46
+  %48 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %49 = load i32, i32* %48, align 4
+  %50 = mul nsw i32 %49, 20
+  %51 = sub nsw i32 %47, %50
+  %52 = sdiv i32 %51, 10
+  %53 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  store i32 %52, i32* %53, align 16
+  %54 = load i32, i32* %2, align 4
+  %55 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %56 = load i32, i32* %55, align 4
+  %57 = mul nsw i32 %56, 100
+  %58 = sub nsw i32 %54, %57
+  %59 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %60 = load i32, i32* %59, align 8
+  %61 = mul nsw i32 %60, 50
+  %62 = sub nsw i32 %58, %61
+  %63 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %64 = load i32, i32* %63, align 4
+  %65 = mul nsw i32 %64, 20
+  %66 = sub nsw i32 %62, %65
+  %67 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  %68 = load i32, i32* %67, align 16
+  %69 = mul nsw i32 %68, 10
+  %70 = sub nsw i32 %66, %69
+  %71 = sdiv i32 %70, 5
+  %72 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 5
+  store i32 %71, i32* %72, align 4
+  %73 = load i32, i32* %2, align 4
+  %74 = srem i32 %73, 5
+  %75 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 6
+  store i32 %74, i32* %75, align 8
+  %76 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %77 = load i32, i32* %76, align 4
+  %78 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %79 = load i32, i32* %78, align 8
+  %80 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %81 = load i32, i32* %80, align 4
+  %82 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  %83 = load i32, i32* %82, align 16
+  %84 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 5
+  %85 = load i32, i32* %84, align 4
+  %86 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 6
+  %87 = load i32, i32* %86, align 8
+  %88 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.1, i32 0, i32 0), i32 %77, i32 %79, i32 %81, i32 %83, i32 %85, i32 %87)
+  %89 = load i32, i32* @x
+  %90 = load i32, i32* @y
+  %91 = sub i32 %89, 1
+  %92 = mul i32 %89, %91
+  %93 = urem i32 %92, 2
+  %94 = icmp eq i32 %93, 0
+  %95 = icmp slt i32 %90, 10
+  %96 = or i1 %94, %95
+  br i1 %96, label %97, label %99
+
+; <label>:97:                                     ; preds = %17
+  br label %98
+
+; <label>:98:                                     ; preds = %97, %0
+  ret i32 0
+
+; <label>:99:                                     ; preds = %17, %8
+  %100 = load i32, i32* %2, align 4
+  %101 = sub i32 0, %100
+  %102 = add i32 %101, 100
+  %103 = sub i32 %100, 100
+  %104 = mul i32 %103, 100
+  %105 = sub i32 %100, 100
+  %106 = mul i32 %105, 100
+  %107 = sdiv i32 %100, 100
+  %108 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  store i32 %107, i32* %108, align 4
+  %109 = load i32, i32* %2, align 4
+  %110 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %111 = load i32, i32* %110, align 4
+  %112 = sub i32 %111, 100
+  %113 = mul i32 %112, 100
+  %114 = sub i32 %111, 100
+  %115 = mul i32 %114, 100
+  %116 = sub i32 %111, 100
+  %117 = mul i32 %116, 100
+  %118 = shl i32 %111, 100
+  %119 = shl i32 %111, 100
+  %120 = sub i32 0, %111
+  %121 = add i32 %120, 100
+  %122 = mul nsw i32 %111, 100
+  %123 = sub i32 0, %109
+  %124 = add i32 %123, %122
+  %125 = sub i32 %109, %122
+  %126 = mul i32 %125, %122
+  %127 = shl i32 %109, %122
+  %128 = sub i32 %109, %122
+  %129 = mul i32 %128, %122
+  %130 = shl i32 %109, %122
+  %131 = shl i32 %109, %122
+  %132 = sub i32 %109, %122
+  %133 = mul i32 %132, %122
+  %134 = sub nsw i32 %109, %122
+  %135 = sub i32 0, %134
+  %136 = add i32 %135, 50
+  %137 = sub i32 0, %134
+  %138 = add i32 %137, 50
+  %139 = shl i32 %134, 50
+  %140 = sub i32 %134, 50
+  %141 = mul i32 %140, 50
+  %142 = sub i32 0, %134
+  %143 = add i32 %142, 50
+  %144 = sub i32 %134, 50
+  %145 = mul i32 %144, 50
+  %146 = sub i32 %134, 50
+  %147 = mul i32 %146, 50
+  %148 = sdiv i32 %134, 50
+  %149 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  store i32 %148, i32* %149, align 8
+  %150 = load i32, i32* %2, align 4
+  %151 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %152 = load i32, i32* %151, align 4
+  %153 = sub i32 0, %152
+  %154 = add i32 %153, 100
+  %155 = shl i32 %152, 100
+  %156 = mul nsw i32 %152, 100
+  %157 = sub i32 %150, %156
+  %158 = mul i32 %157, %156
+  %159 = sub i32 %150, %156
+  %160 = mul i32 %159, %156
+  %161 = sub i32 0, %150
+  %162 = add i32 %161, %156
+  %163 = shl i32 %150, %156
+  %164 = sub nsw i32 %150, %156
+  %165 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %166 = load i32, i32* %165, align 8
+  %167 = shl i32 %166, 50
+  %168 = sub i32 0, %166
+  %169 = add i32 %168, 50
+  %170 = mul nsw i32 %166, 50
+  %171 = sub i32 %164, %170
+  %172 = mul i32 %171, %170
+  %173 = sub nsw i32 %164, %170
+  %174 = sub i32 %173, 20
+  %175 = mul i32 %174, 20
+  %176 = sub i32 %173, 20
+  %177 = mul i32 %176, 20
+  %178 = shl i32 %173, 20
+  %179 = sub i32 0, %173
+  %180 = add i32 %179, 20
+  %181 = sub i32 0, %173
+  %182 = add i32 %181, 20
+  %183 = sub i32 %173, 20
+  %184 = mul i32 %183, 20
+  %185 = shl i32 %173, 20
+  %186 = sub i32 %173, 20
+  %187 = mul i32 %186, 20
+  %188 = sdiv i32 %173, 20
+  %189 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  store i32 %188, i32* %189, align 4
+  %190 = load i32, i32* %2, align 4
+  %191 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %192 = load i32, i32* %191, align 4
+  %193 = sub i32 0, %192
+  %194 = add i32 %193, 100
+  %195 = sub i32 %192, 100
+  %196 = mul i32 %195, 100
+  %197 = sub i32 0, %192
+  %198 = add i32 %197, 100
+  %199 = mul nsw i32 %192, 100
+  %200 = sub i32 0, %190
+  %201 = add i32 %200, %199
+  %202 = sub nsw i32 %190, %199
+  %203 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %204 = load i32, i32* %203, align 8
+  %205 = sub i32 0, %204
+  %206 = add i32 %205, 50
+  %207 = sub i32 %204, 50
+  %208 = mul i32 %207, 50
+  %209 = sub i32 %204, 50
+  %210 = mul i32 %209, 50
+  %211 = mul nsw i32 %204, 50
+  %212 = sub i32 0, %202
+  %213 = add i32 %212, %211
+  %214 = sub i32 %202, %211
+  %215 = mul i32 %214, %211
+  %216 = sub i32 %202, %211
+  %217 = mul i32 %216, %211
+  %218 = sub nsw i32 %202, %211
+  %219 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %220 = load i32, i32* %219, align 4
+  %221 = sub i32 %220, 20
+  %222 = mul i32 %221, 20
+  %223 = sub i32 %220, 20
+  %224 = mul i32 %223, 20
+  %225 = sub i32 %220, 20
+  %226 = mul i32 %225, 20
+  %227 = sub i32 0, %220
+  %228 = add i32 %227, 20
+  %229 = shl i32 %220, 20
+  %230 = shl i32 %220, 20
+  %231 = sub i32 %220, 20
+  %232 = mul i32 %231, 20
+  %233 = mul nsw i32 %220, 20
+  %234 = shl i32 %218, %233
+  %235 = shl i32 %218, %233
+  %236 = sub i32 %218, %233
+  %237 = mul i32 %236, %233
+  %238 = shl i32 %218, %233
+  %239 = shl i32 %218, %233
+  %240 = shl i32 %218, %233
+  %241 = shl i32 %218, %233
+  %242 = sub nsw i32 %218, %233
+  %243 = sub i32 0, %242
+  %244 = add i32 %243, 10
+  %245 = sub i32 0, %242
+  %246 = add i32 %245, 10
+  %247 = sdiv i32 %242, 10
+  %248 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  store i32 %247, i32* %248, align 16
+  %249 = load i32, i32* %2, align 4
+  %250 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %251 = load i32, i32* %250, align 4
+  %252 = mul nsw i32 %251, 100
+  %253 = shl i32 %249, %252
+  %254 = shl i32 %249, %252
+  %255 = sub i32 0, %249
+  %256 = add i32 %255, %252
+  %257 = sub i32 %249, %252
+  %258 = mul i32 %257, %252
+  %259 = sub i32 0, %249
+  %260 = add i32 %259, %252
+  %261 = sub i32 0, %249
+  %262 = add i32 %261, %252
+  %263 = shl i32 %249, %252
+  %264 = sub i32 %249, %252
+  %265 = mul i32 %264, %252
+  %266 = sub nsw i32 %249, %252
+  %267 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %268 = load i32, i32* %267, align 8
+  %269 = sub i32 %268, 50
+  %270 = mul i32 %269, 50
+  %271 = sub i32 0, %268
+  %272 = add i32 %271, 50
+  %273 = sub i32 %268, 50
+  %274 = mul i32 %273, 50
+  %275 = sub i32 %268, 50
+  %276 = mul i32 %275, 50
+  %277 = mul nsw i32 %268, 50
+  %278 = sub i32 %266, %277
+  %279 = mul i32 %278, %277
+  %280 = sub i32 %266, %277
+  %281 = mul i32 %280, %277
+  %282 = sub i32 %266, %277
+  %283 = mul i32 %282, %277
+  %284 = shl i32 %266, %277
+  %285 = sub i32 %266, %277
+  %286 = mul i32 %285, %277
+  %287 = sub nsw i32 %266, %277
+  %288 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %289 = load i32, i32* %288, align 4
+  %290 = sub i32 %289, 20
+  %291 = mul i32 %290, 20
+  %292 = shl i32 %289, 20
+  %293 = sub i32 0, %289
+  %294 = add i32 %293, 20
+  %295 = mul nsw i32 %289, 20
+  %296 = shl i32 %287, %295
+  %297 = shl i32 %287, %295
+  %298 = shl i32 %287, %295
+  %299 = sub i32 %287, %295
+  %300 = mul i32 %299, %295
+  %301 = sub i32 %287, %295
+  %302 = mul i32 %301, %295
+  %303 = shl i32 %287, %295
+  %304 = sub i32 %287, %295
+  %305 = mul i32 %304, %295
+  %306 = sub nsw i32 %287, %295
+  %307 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  %308 = load i32, i32* %307, align 16
+  %309 = sub i32 0, %308
+  %310 = add i32 %309, 10
+  %311 = sub i32 %308, 10
+  %312 = mul i32 %311, 10
+  %313 = sub i32 %308, 10
+  %314 = mul i32 %313, 10
+  %315 = shl i32 %308, 10
+  %316 = mul nsw i32 %308, 10
+  %317 = sub i32 0, %306
+  %318 = add i32 %317, %316
+  %319 = shl i32 %306, %316
+  %320 = sub nsw i32 %306, %316
+  %321 = sub i32 0, %320
+  %322 = add i32 %321, 5
+  %323 = sub i32 0, %320
+  %324 = add i32 %323, 5
+  %325 = sdiv i32 %320, 5
+  %326 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 5
+  store i32 %325, i32* %326, align 4
+  %327 = load i32, i32* %2, align 4
+  %328 = shl i32 %327, 5
+  %329 = shl i32 %327, 5
+  %330 = srem i32 %327, 5
+  %331 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 6
+  store i32 %330, i32* %331, align 8
+  %332 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 1
+  %333 = load i32, i32* %332, align 4
+  %334 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 2
+  %335 = load i32, i32* %334, align 8
+  %336 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 3
+  %337 = load i32, i32* %336, align 4
+  %338 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 4
+  %339 = load i32, i32* %338, align 16
+  %340 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 5
+  %341 = load i32, i32* %340, align 4
+  %342 = getelementptr inbounds [7 x i32], [7 x i32]* %3, i64 0, i64 6
+  %343 = load i32, i32* %342, align 8
+  %344 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.1, i32 0, i32 0), i32 %333, i32 %335, i32 %337, i32 %339, i32 %341, i32 %343)
+  br label %17
+}
+
+declare i32 @__isoc99_scanf(i8*, ...) #1
+
+declare i32 @printf(i8*, ...) #1
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

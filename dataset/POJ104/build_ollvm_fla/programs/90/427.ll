@@ -1,0 +1,140 @@
+; ModuleID = 'source-C-CXX/90/427.c'
+source_filename = "source-C-CXX/90/427.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%c\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define void @main() #0 {
+  %1 = alloca [101 x i8], align 16
+  %2 = alloca [101 x i8], align 16
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = bitcast [101 x i8]* %1 to i8*
+  call void @llvm.memset.p0i8.i64(i8* %6, i8 0, i64 101, i32 16, i1 false)
+  %7 = bitcast [101 x i8]* %2 to i8*
+  call void @llvm.memset.p0i8.i64(i8* %7, i8 0, i64 101, i32 16, i1 false)
+  %8 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %9 = call i32 (i8*, ...) bitcast (i32 (...)* @gets to i32 (i8*, ...)*)(i8* %8)
+  %10 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %11 = call i64 @strlen(i8* %10) #4
+  %12 = trunc i64 %11 to i32
+  store i32 %12, i32* %5, align 4
+  store i32 0, i32* %3, align 4
+  %13 = alloca i32
+  store i32 1859512080, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %0, %79
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 1859512080, label %17
+    i32 -2044096569, label %23
+    i32 -731701288, label %50
+    i32 1808749772, label %53
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %79
+
+; <label>:17:                                     ; preds = %14
+  %18 = load i32, i32* %3, align 4
+  %19 = load i32, i32* %5, align 4
+  %20 = sub nsw i32 %19, 1
+  %21 = icmp slt i32 %18, %20
+  %22 = select i1 %21, i32 -2044096569, i32 1808749772
+  store i32 %22, i32* %13
+  br label %79
+
+; <label>:23:                                     ; preds = %14
+  %24 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %25 = load i32, i32* %3, align 4
+  %26 = sext i32 %25 to i64
+  %27 = getelementptr inbounds i8, i8* %24, i64 %26
+  %28 = load i8, i8* %27, align 1
+  %29 = sext i8 %28 to i32
+  %30 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %31 = load i32, i32* %3, align 4
+  %32 = sext i32 %31 to i64
+  %33 = getelementptr inbounds i8, i8* %30, i64 %32
+  %34 = getelementptr inbounds i8, i8* %33, i64 1
+  %35 = load i8, i8* %34, align 1
+  %36 = sext i8 %35 to i32
+  %37 = add nsw i32 %29, %36
+  %38 = trunc i32 %37 to i8
+  %39 = getelementptr inbounds [101 x i8], [101 x i8]* %2, i32 0, i32 0
+  %40 = load i32, i32* %3, align 4
+  %41 = sext i32 %40 to i64
+  %42 = getelementptr inbounds i8, i8* %39, i64 %41
+  store i8 %38, i8* %42, align 1
+  %43 = getelementptr inbounds [101 x i8], [101 x i8]* %2, i32 0, i32 0
+  %44 = load i32, i32* %3, align 4
+  %45 = sext i32 %44 to i64
+  %46 = getelementptr inbounds i8, i8* %43, i64 %45
+  %47 = load i8, i8* %46, align 1
+  %48 = sext i8 %47 to i32
+  %49 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32 %48)
+  store i32 -731701288, i32* %13
+  br label %79
+
+; <label>:50:                                     ; preds = %14
+  %51 = load i32, i32* %3, align 4
+  %52 = add nsw i32 %51, 1
+  store i32 %52, i32* %3, align 4
+  store i32 1859512080, i32* %13
+  br label %79
+
+; <label>:53:                                     ; preds = %14
+  %54 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %55 = load i32, i32* %5, align 4
+  %56 = sext i32 %55 to i64
+  %57 = getelementptr inbounds i8, i8* %54, i64 %56
+  %58 = getelementptr inbounds i8, i8* %57, i64 -1
+  %59 = load i8, i8* %58, align 1
+  %60 = sext i8 %59 to i32
+  %61 = getelementptr inbounds [101 x i8], [101 x i8]* %1, i32 0, i32 0
+  %62 = load i8, i8* %61, align 16
+  %63 = sext i8 %62 to i32
+  %64 = add nsw i32 %60, %63
+  %65 = trunc i32 %64 to i8
+  %66 = getelementptr inbounds [101 x i8], [101 x i8]* %2, i32 0, i32 0
+  %67 = load i32, i32* %5, align 4
+  %68 = sext i32 %67 to i64
+  %69 = getelementptr inbounds i8, i8* %66, i64 %68
+  %70 = getelementptr inbounds i8, i8* %69, i64 -1
+  store i8 %65, i8* %70, align 1
+  %71 = getelementptr inbounds [101 x i8], [101 x i8]* %2, i32 0, i32 0
+  %72 = load i32, i32* %5, align 4
+  %73 = sext i32 %72 to i64
+  %74 = getelementptr inbounds i8, i8* %71, i64 %73
+  %75 = getelementptr inbounds i8, i8* %74, i64 -1
+  %76 = load i8, i8* %75, align 1
+  %77 = sext i8 %76 to i32
+  %78 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32 %77)
+  ret void
+
+; <label>:79:                                     ; preds = %50, %23, %17, %16
+  br label %14
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #1
+
+declare i32 @gets(...) #2
+
+; Function Attrs: nounwind readonly
+declare i64 @strlen(i8*) #3
+
+declare i32 @printf(i8*, ...) #2
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { argmemonly nounwind }
+attributes #2 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind readonly "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { nounwind readonly }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
