@@ -1,0 +1,208 @@
+; ModuleID = 'source-C-CXX/55/942.c'
+source_filename = "source-C-CXX/55/942.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%s\00", align 1
+
+; Function Attrs: nofree nounwind sspstrong uwtable
+define dso_local void @main() local_unnamed_addr #0 {
+  %1 = alloca [10 x i8], align 1
+  %2 = alloca [10 x i8], align 1
+  %3 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 0
+  call void @llvm.lifetime.start.p0i8(i64 10, i8* nonnull %3) #5
+  %4 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 0
+  call void @llvm.lifetime.start.p0i8(i64 10, i8* nonnull %4) #5
+  call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 1 dereferenceable(10) %4, i8 0, i64 10, i1 false)
+  %5 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i8* nonnull %3)
+  %6 = call i64 @strlen(i8* noundef nonnull %3) #6
+  %7 = trunc i64 %6 to i32
+  %8 = icmp sgt i32 %7, 0
+  br i1 %8, label %9, label %112
+
+9:                                                ; preds = %0
+  %10 = and i64 %6, 4294967295
+  %11 = icmp ult i64 %10, 8
+  br i1 %11, label %73, label %12
+
+12:                                               ; preds = %9
+  %13 = add nsw i64 %10, -1
+  %14 = add i32 %7, -1
+  %15 = trunc i64 %13 to i32
+  %16 = sub i32 %14, %15
+  %17 = icmp sgt i32 %16, %14
+  %18 = icmp ugt i64 %13, 4294967295
+  %19 = or i1 %17, %18
+  br i1 %19, label %73, label %20
+
+20:                                               ; preds = %12
+  %21 = icmp ult i64 %10, 32
+  br i1 %21, label %51, label %22
+
+22:                                               ; preds = %20
+  %23 = and i64 %6, 31
+  %24 = sub nsw i64 %10, %23
+  br label %25
+
+25:                                               ; preds = %25, %22
+  %26 = phi i64 [ 0, %22 ], [ %44, %25 ]
+  %27 = xor i64 %26, -1
+  %28 = add i64 %6, %27
+  %29 = shl i64 %28, 32
+  %30 = ashr exact i64 %29, 32
+  %31 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 %30
+  %32 = getelementptr inbounds i8, i8* %31, i64 -15
+  %33 = bitcast i8* %32 to <16 x i8>*
+  %34 = load <16 x i8>, <16 x i8>* %33, align 1, !tbaa !5
+  %35 = shufflevector <16 x i8> %34, <16 x i8> poison, <16 x i32> <i32 15, i32 14, i32 13, i32 12, i32 11, i32 10, i32 9, i32 8, i32 7, i32 6, i32 5, i32 4, i32 3, i32 2, i32 1, i32 0>
+  %36 = getelementptr inbounds i8, i8* %31, i64 -31
+  %37 = bitcast i8* %36 to <16 x i8>*
+  %38 = load <16 x i8>, <16 x i8>* %37, align 1, !tbaa !5
+  %39 = shufflevector <16 x i8> %38, <16 x i8> poison, <16 x i32> <i32 15, i32 14, i32 13, i32 12, i32 11, i32 10, i32 9, i32 8, i32 7, i32 6, i32 5, i32 4, i32 3, i32 2, i32 1, i32 0>
+  %40 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 %26
+  %41 = bitcast i8* %40 to <16 x i8>*
+  store <16 x i8> %35, <16 x i8>* %41, align 1, !tbaa !5
+  %42 = getelementptr inbounds i8, i8* %40, i64 16
+  %43 = bitcast i8* %42 to <16 x i8>*
+  store <16 x i8> %39, <16 x i8>* %43, align 1, !tbaa !5
+  %44 = add nuw i64 %26, 32
+  %45 = icmp eq i64 %44, %24
+  br i1 %45, label %46, label %25, !llvm.loop !8
+
+46:                                               ; preds = %25
+  %47 = icmp eq i64 %23, 0
+  br i1 %47, label %112, label %48
+
+48:                                               ; preds = %46
+  %49 = trunc i64 %24 to i32
+  %50 = icmp ult i64 %23, 8
+  br i1 %50, label %73, label %51
+
+51:                                               ; preds = %20, %48
+  %52 = phi i64 [ %24, %48 ], [ 0, %20 ]
+  %53 = and i64 %6, 7
+  %54 = sub nsw i64 %10, %53
+  %55 = trunc i64 %54 to i32
+  br label %56
+
+56:                                               ; preds = %56, %51
+  %57 = phi i64 [ %52, %51 ], [ %69, %56 ]
+  %58 = xor i64 %57, -1
+  %59 = add i64 %6, %58
+  %60 = shl i64 %59, 32
+  %61 = ashr exact i64 %60, 32
+  %62 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 %61
+  %63 = getelementptr inbounds i8, i8* %62, i64 -7
+  %64 = bitcast i8* %63 to <8 x i8>*
+  %65 = load <8 x i8>, <8 x i8>* %64, align 1, !tbaa !5
+  %66 = shufflevector <8 x i8> %65, <8 x i8> poison, <8 x i32> <i32 7, i32 6, i32 5, i32 4, i32 3, i32 2, i32 1, i32 0>
+  %67 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 %57
+  %68 = bitcast i8* %67 to <8 x i8>*
+  store <8 x i8> %66, <8 x i8>* %68, align 1, !tbaa !5
+  %69 = add nuw i64 %57, 8
+  %70 = icmp eq i64 %69, %54
+  br i1 %70, label %71, label %56, !llvm.loop !11
+
+71:                                               ; preds = %56
+  %72 = icmp eq i64 %53, 0
+  br i1 %72, label %112, label %73
+
+73:                                               ; preds = %12, %9, %48, %71
+  %74 = phi i64 [ 0, %9 ], [ 0, %12 ], [ %24, %48 ], [ %54, %71 ]
+  %75 = phi i32 [ 0, %9 ], [ 0, %12 ], [ %49, %48 ], [ %55, %71 ]
+  %76 = sub i64 %6, %74
+  %77 = add nsw i64 %74, 1
+  %78 = and i64 %76, 1
+  %79 = icmp eq i64 %78, 0
+  br i1 %79, label %89, label %80
+
+80:                                               ; preds = %73
+  %81 = xor i32 %75, -1
+  %82 = add i32 %81, %7
+  %83 = sext i32 %82 to i64
+  %84 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 %83
+  %85 = load i8, i8* %84, align 1, !tbaa !5
+  %86 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 %74
+  store i8 %85, i8* %86, align 1, !tbaa !5
+  %87 = add nuw nsw i64 %74, 1
+  %88 = add nuw nsw i32 %75, 1
+  br label %89
+
+89:                                               ; preds = %80, %73
+  %90 = phi i64 [ %74, %73 ], [ %87, %80 ]
+  %91 = phi i32 [ %75, %73 ], [ %88, %80 ]
+  %92 = icmp eq i64 %10, %77
+  br i1 %92, label %112, label %93
+
+93:                                               ; preds = %89, %93
+  %94 = phi i64 [ %109, %93 ], [ %90, %89 ]
+  %95 = phi i32 [ %110, %93 ], [ %91, %89 ]
+  %96 = xor i32 %95, -1
+  %97 = add i32 %96, %7
+  %98 = sext i32 %97 to i64
+  %99 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 %98
+  %100 = load i8, i8* %99, align 1, !tbaa !5
+  %101 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 %94
+  store i8 %100, i8* %101, align 1, !tbaa !5
+  %102 = add nuw nsw i64 %94, 1
+  %103 = sub i32 -2, %95
+  %104 = add i32 %103, %7
+  %105 = sext i32 %104 to i64
+  %106 = getelementptr inbounds [10 x i8], [10 x i8]* %1, i64 0, i64 %105
+  %107 = load i8, i8* %106, align 1, !tbaa !5
+  %108 = getelementptr inbounds [10 x i8], [10 x i8]* %2, i64 0, i64 %102
+  store i8 %107, i8* %108, align 1, !tbaa !5
+  %109 = add nuw nsw i64 %94, 2
+  %110 = add nuw nsw i32 %95, 2
+  %111 = icmp eq i64 %109, %10
+  br i1 %111, label %112, label %93, !llvm.loop !12
+
+112:                                              ; preds = %89, %93, %46, %71, %0
+  %113 = call i32 @puts(i8* nonnull %4)
+  call void @llvm.lifetime.end.p0i8(i64 10, i8* nonnull %4) #5
+  call void @llvm.lifetime.end.p0i8(i64 10, i8* nonnull %3) #5
+  ret void
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: argmemonly mustprogress nofree nounwind willreturn writeonly
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg) #2
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #3
+
+; Function Attrs: argmemonly mustprogress nofree nounwind readonly willreturn
+declare i64 @strlen(i8* nocapture) local_unnamed_addr #4
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @puts(i8* nocapture noundef readonly) local_unnamed_addr #3
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+
+attributes #0 = { nofree nounwind sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #2 = { argmemonly mustprogress nofree nounwind willreturn writeonly }
+attributes #3 = { nofree nounwind "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { argmemonly mustprogress nofree nounwind readonly willreturn "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #5 = { nounwind }
+attributes #6 = { nounwind readonly willreturn }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !6, i64 0}
+!6 = !{!"omnipotent char", !7, i64 0}
+!7 = !{!"Simple C/C++ TBAA"}
+!8 = distinct !{!8, !9, !10}
+!9 = !{!"llvm.loop.mustprogress"}
+!10 = !{!"llvm.loop.isvectorized", i32 1}
+!11 = distinct !{!11, !9, !10}
+!12 = distinct !{!12, !9, !10}

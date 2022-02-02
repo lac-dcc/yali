@@ -1,0 +1,354 @@
+; ModuleID = 'source-C-CXX/79/1233.c'
+source_filename = "source-C-CXX/79/1233.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [13 x i8] c"%d%d%d%d%d%d\00", align 1
+@.str.1 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+
+; Function Attrs: nofree nounwind sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #0 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = bitcast i32* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %7) #6
+  %8 = bitcast i32* %2 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %8) #6
+  %9 = bitcast i32* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %9) #6
+  %10 = bitcast i32* %4 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %10) #6
+  %11 = bitcast i32* %5 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %11) #6
+  %12 = bitcast i32* %6 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %12) #6
+  %13 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str, i64 0, i64 0), i32* nonnull %1, i32* nonnull %2, i32* nonnull %3, i32* nonnull %4, i32* nonnull %5, i32* nonnull %6)
+  %14 = load i32, i32* %1, align 4, !tbaa !5
+  %15 = load i32, i32* %4, align 4, !tbaa !5
+  %16 = icmp sgt i32 %14, %15
+  br i1 %16, label %22, label %17
+
+17:                                               ; preds = %0
+  %18 = load i32, i32* %2, align 4, !tbaa !5
+  %19 = load i32, i32* %3, align 4, !tbaa !5
+  %20 = load i32, i32* %5, align 4, !tbaa !5
+  %21 = load i32, i32* %6, align 4, !tbaa !5
+  br label %27
+
+22:                                               ; preds = %0
+  store i32 %15, i32* %1, align 4, !tbaa !5
+  store i32 %14, i32* %4, align 4, !tbaa !5
+  %23 = load i32, i32* %2, align 4, !tbaa !5
+  %24 = load i32, i32* %5, align 4, !tbaa !5
+  store i32 %24, i32* %2, align 4, !tbaa !5
+  store i32 %23, i32* %5, align 4, !tbaa !5
+  %25 = load i32, i32* %3, align 4, !tbaa !5
+  %26 = load i32, i32* %6, align 4, !tbaa !5
+  store i32 %26, i32* %3, align 4, !tbaa !5
+  store i32 %25, i32* %6, align 4, !tbaa !5
+  br label %27
+
+27:                                               ; preds = %17, %22
+  %28 = phi i32 [ %25, %22 ], [ %21, %17 ]
+  %29 = phi i32 [ %23, %22 ], [ %20, %17 ]
+  %30 = phi i32 [ %14, %22 ], [ %15, %17 ]
+  %31 = phi i32 [ %26, %22 ], [ %19, %17 ]
+  %32 = phi i32 [ %24, %22 ], [ %18, %17 ]
+  %33 = phi i32 [ %15, %22 ], [ %14, %17 ]
+  %34 = call i32 @DiJiTian(i32 %33, i32 %32, i32 %31)
+  %35 = call i32 @DiJiTian(i32 %30, i32 %29, i32 %28)
+  %36 = sub nsw i32 %30, %33
+  %37 = mul nsw i32 %36, 365
+  %38 = icmp sgt i32 %30, %33
+  br i1 %38, label %39, label %100
+
+39:                                               ; preds = %27
+  %40 = sub i32 %30, %33
+  %41 = icmp ult i32 %40, 8
+  br i1 %41, label %82, label %42
+
+42:                                               ; preds = %39
+  %43 = and i32 %40, -8
+  %44 = add i32 %33, %43
+  %45 = insertelement <4 x i32> <i32 poison, i32 0, i32 0, i32 0>, i32 %37, i32 0
+  %46 = insertelement <4 x i32> poison, i32 %33, i32 0
+  %47 = shufflevector <4 x i32> %46, <4 x i32> poison, <4 x i32> zeroinitializer
+  %48 = add <4 x i32> %47, <i32 0, i32 1, i32 2, i32 3>
+  br label %49
+
+49:                                               ; preds = %49, %42
+  %50 = phi i32 [ 0, %42 ], [ %75, %49 ]
+  %51 = phi <4 x i32> [ %45, %42 ], [ %73, %49 ]
+  %52 = phi <4 x i32> [ zeroinitializer, %42 ], [ %74, %49 ]
+  %53 = phi <4 x i32> [ %48, %42 ], [ %76, %49 ]
+  %54 = add <4 x i32> %53, <i32 4, i32 4, i32 4, i32 4>
+  %55 = srem <4 x i32> %53, <i32 100, i32 100, i32 100, i32 100>
+  %56 = srem <4 x i32> %54, <i32 100, i32 100, i32 100, i32 100>
+  %57 = icmp ne <4 x i32> %55, zeroinitializer
+  %58 = icmp ne <4 x i32> %56, zeroinitializer
+  %59 = and <4 x i32> %53, <i32 3, i32 3, i32 3, i32 3>
+  %60 = and <4 x i32> %53, <i32 3, i32 3, i32 3, i32 3>
+  %61 = icmp eq <4 x i32> %59, zeroinitializer
+  %62 = icmp eq <4 x i32> %60, zeroinitializer
+  %63 = and <4 x i1> %57, %61
+  %64 = and <4 x i1> %58, %62
+  %65 = srem <4 x i32> %53, <i32 400, i32 400, i32 400, i32 400>
+  %66 = srem <4 x i32> %54, <i32 400, i32 400, i32 400, i32 400>
+  %67 = icmp eq <4 x i32> %65, zeroinitializer
+  %68 = icmp eq <4 x i32> %66, zeroinitializer
+  %69 = select <4 x i1> %63, <4 x i1> <i1 true, i1 true, i1 true, i1 true>, <4 x i1> %67
+  %70 = select <4 x i1> %64, <4 x i1> <i1 true, i1 true, i1 true, i1 true>, <4 x i1> %68
+  %71 = zext <4 x i1> %69 to <4 x i32>
+  %72 = zext <4 x i1> %70 to <4 x i32>
+  %73 = add <4 x i32> %51, %71
+  %74 = add <4 x i32> %52, %72
+  %75 = add nuw i32 %50, 8
+  %76 = add <4 x i32> %53, <i32 8, i32 8, i32 8, i32 8>
+  %77 = icmp eq i32 %75, %43
+  br i1 %77, label %78, label %49, !llvm.loop !9
+
+78:                                               ; preds = %49
+  %79 = add <4 x i32> %74, %73
+  %80 = call i32 @llvm.vector.reduce.add.v4i32(<4 x i32> %79)
+  %81 = icmp eq i32 %40, %43
+  br i1 %81, label %100, label %82
+
+82:                                               ; preds = %39, %78
+  %83 = phi i32 [ %37, %39 ], [ %80, %78 ]
+  %84 = phi i32 [ %33, %39 ], [ %44, %78 ]
+  br label %85
+
+85:                                               ; preds = %82, %85
+  %86 = phi i32 [ %97, %85 ], [ %83, %82 ]
+  %87 = phi i32 [ %98, %85 ], [ %84, %82 ]
+  %88 = srem i32 %87, 100
+  %89 = icmp ne i32 %88, 0
+  %90 = and i32 %87, 3
+  %91 = icmp eq i32 %90, 0
+  %92 = and i1 %89, %91
+  %93 = srem i32 %87, 400
+  %94 = icmp eq i32 %93, 0
+  %95 = select i1 %92, i1 true, i1 %94
+  %96 = zext i1 %95 to i32
+  %97 = add nsw i32 %86, %96
+  %98 = add nsw i32 %87, 1
+  %99 = icmp eq i32 %98, %30
+  br i1 %99, label %100, label %85, !llvm.loop !12
+
+100:                                              ; preds = %85, %78, %27
+  %101 = phi i32 [ %37, %27 ], [ %80, %78 ], [ %97, %85 ]
+  %102 = sub i32 %35, %34
+  %103 = add i32 %102, %101
+  %104 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32 %103)
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %12) #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %11) #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %10) #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %9) #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %8) #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %7) #6
+  ret i32 0
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: nofree norecurse nosync nounwind readnone sspstrong uwtable
+define dso_local i32 @DiJiTian(i32 %0, i32 %1, i32 %2) local_unnamed_addr #3 {
+  %4 = and i32 %0, 3
+  %5 = icmp ne i32 %4, 0
+  %6 = srem i32 %0, 100
+  %7 = icmp eq i32 %6, 0
+  %8 = or i1 %5, %7
+  %9 = icmp sgt i32 %1, 1
+  br i1 %9, label %10, label %60
+
+10:                                               ; preds = %3
+  %11 = srem i32 %0, 400
+  %12 = icmp eq i32 %11, 0
+  br i1 %12, label %13, label %36
+
+13:                                               ; preds = %10, %32
+  %14 = phi i32 [ %34, %32 ], [ 1, %10 ]
+  %15 = phi i32 [ %33, %32 ], [ 0, %10 ]
+  %16 = and i32 %14, 2147483641
+  %17 = icmp eq i32 %16, 1
+  %18 = and i32 %14, 2147483645
+  %19 = icmp eq i32 %18, 8
+  %20 = or i1 %19, %17
+  %21 = icmp eq i32 %14, 12
+  %22 = select i1 %20, i1 true, i1 %21
+  br i1 %22, label %30, label %23
+
+23:                                               ; preds = %13
+  switch i32 %18, label %26 [
+    i32 9, label %24
+    i32 4, label %24
+  ]
+
+24:                                               ; preds = %23, %23
+  %25 = add nsw i32 %15, 30
+  br label %32
+
+26:                                               ; preds = %23
+  %27 = icmp eq i32 %14, 2
+  %28 = add nsw i32 %15, 29
+  %29 = select i1 %27, i32 %28, i32 %15
+  br label %32
+
+30:                                               ; preds = %13
+  %31 = add nsw i32 %15, 31
+  br label %32
+
+32:                                               ; preds = %26, %30, %24
+  %33 = phi i32 [ %31, %30 ], [ %25, %24 ], [ %29, %26 ]
+  %34 = add nuw nsw i32 %14, 1
+  %35 = icmp eq i32 %34, %1
+  br i1 %35, label %60, label %13, !llvm.loop !14
+
+36:                                               ; preds = %10
+  br i1 %8, label %37, label %63
+
+37:                                               ; preds = %36, %56
+  %38 = phi i32 [ %58, %56 ], [ 1, %36 ]
+  %39 = phi i32 [ %57, %56 ], [ 0, %36 ]
+  %40 = and i32 %38, 2147483641
+  %41 = icmp eq i32 %40, 1
+  %42 = and i32 %38, 2147483645
+  %43 = icmp eq i32 %42, 8
+  %44 = or i1 %43, %41
+  %45 = icmp eq i32 %38, 12
+  %46 = select i1 %44, i1 true, i1 %45
+  br i1 %46, label %54, label %47
+
+47:                                               ; preds = %37
+  switch i32 %42, label %50 [
+    i32 9, label %48
+    i32 4, label %48
+  ]
+
+48:                                               ; preds = %47, %47
+  %49 = add nsw i32 %39, 30
+  br label %56
+
+50:                                               ; preds = %47
+  %51 = icmp eq i32 %38, 2
+  %52 = add nsw i32 %39, 28
+  %53 = select i1 %51, i32 %52, i32 %39
+  br label %56
+
+54:                                               ; preds = %37
+  %55 = add nsw i32 %39, 31
+  br label %56
+
+56:                                               ; preds = %50, %54, %48
+  %57 = phi i32 [ %55, %54 ], [ %49, %48 ], [ %53, %50 ]
+  %58 = add nuw nsw i32 %38, 1
+  %59 = icmp eq i32 %58, %1
+  br i1 %59, label %60, label %37, !llvm.loop !14
+
+60:                                               ; preds = %82, %56, %32, %3
+  %61 = phi i32 [ 0, %3 ], [ %33, %32 ], [ %57, %56 ], [ %83, %82 ]
+  %62 = add nsw i32 %61, %2
+  ret i32 %62
+
+63:                                               ; preds = %36, %82
+  %64 = phi i32 [ %84, %82 ], [ 1, %36 ]
+  %65 = phi i32 [ %83, %82 ], [ 0, %36 ]
+  %66 = and i32 %64, 2147483641
+  %67 = icmp eq i32 %66, 1
+  %68 = and i32 %64, 2147483645
+  %69 = icmp eq i32 %68, 8
+  %70 = or i1 %69, %67
+  %71 = icmp eq i32 %64, 12
+  %72 = select i1 %70, i1 true, i1 %71
+  br i1 %72, label %73, label %75
+
+73:                                               ; preds = %63
+  %74 = add nsw i32 %65, 31
+  br label %82
+
+75:                                               ; preds = %63
+  switch i32 %68, label %78 [
+    i32 9, label %76
+    i32 4, label %76
+  ]
+
+76:                                               ; preds = %75, %75
+  %77 = add nsw i32 %65, 30
+  br label %82
+
+78:                                               ; preds = %75
+  %79 = icmp eq i32 %64, 2
+  %80 = add nsw i32 %65, 29
+  %81 = select i1 %79, i32 %80, i32 %65
+  br label %82
+
+82:                                               ; preds = %78, %73, %76
+  %83 = phi i32 [ %74, %73 ], [ %77, %76 ], [ %81, %78 ]
+  %84 = add nuw nsw i32 %64, 1
+  %85 = icmp eq i32 %84, %1
+  br i1 %85, label %60, label %63, !llvm.loop !14
+}
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: mustprogress nofree norecurse nosync nounwind readnone sspstrong uwtable willreturn
+define dso_local i32 @isRunNian(i32 %0) local_unnamed_addr #4 {
+  %2 = srem i32 %0, 400
+  %3 = icmp eq i32 %2, 0
+  br i1 %3, label %11, label %4
+
+4:                                                ; preds = %1
+  %5 = and i32 %0, 3
+  %6 = icmp eq i32 %5, 0
+  %7 = srem i32 %0, 100
+  %8 = icmp ne i32 %7, 0
+  %9 = and i1 %6, %8
+  %10 = zext i1 %9 to i32
+  br label %11
+
+11:                                               ; preds = %4, %1
+  %12 = phi i32 [ 1, %1 ], [ %10, %4 ]
+  ret i32 %12
+}
+
+; Function Attrs: nofree nosync nounwind readnone willreturn
+declare i32 @llvm.vector.reduce.add.v4i32(<4 x i32>) #5
+
+attributes #0 = { nofree nounwind sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #2 = { nofree nounwind "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #3 = { nofree norecurse nosync nounwind readnone sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { mustprogress nofree norecurse nosync nounwind readnone sspstrong uwtable willreturn "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #5 = { nofree nosync nounwind readnone willreturn }
+attributes #6 = { nounwind }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !6, i64 0}
+!6 = !{!"int", !7, i64 0}
+!7 = !{!"omnipotent char", !8, i64 0}
+!8 = !{!"Simple C/C++ TBAA"}
+!9 = distinct !{!9, !10, !11}
+!10 = !{!"llvm.loop.mustprogress"}
+!11 = !{!"llvm.loop.isvectorized", i32 1}
+!12 = distinct !{!12, !10, !13, !11}
+!13 = !{!"llvm.loop.unroll.runtime.disable"}
+!14 = distinct !{!14, !10}

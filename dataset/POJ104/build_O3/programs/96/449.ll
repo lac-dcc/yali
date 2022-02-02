@@ -1,0 +1,100 @@
+; ModuleID = 'source-C-CXX/96/449.c'
+source_filename = "source-C-CXX/96/449.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [4 x i8] c"%d\0A\00", align 1
+
+; Function Attrs: nofree nounwind sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #0 {
+  %1 = alloca i32, align 4
+  %2 = bitcast i32* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %2) #3
+  %3 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32* nonnull %1)
+  %4 = load i32, i32* %1, align 4, !tbaa !5
+  %5 = icmp sgt i32 %4, 99
+  %6 = sdiv i32 %4, 100
+  %7 = select i1 %5, i32 %6, i32 0
+  %8 = sdiv i32 %4, 50
+  %9 = mul nsw i32 %7, -2
+  %10 = add nsw i32 %9, %8
+  %11 = icmp sgt i32 %10, 0
+  %12 = select i1 %11, i32 %10, i32 0
+  %13 = mul nuw nsw i32 %12, 50
+  %14 = sub nsw i32 %4, %13
+  %15 = sdiv i32 %14, 20
+  %16 = mul nsw i32 %7, -5
+  %17 = add nsw i32 %15, %16
+  %18 = icmp sgt i32 %17, 0
+  %19 = select i1 %18, i32 %17, i32 0
+  %20 = sdiv i32 %4, 10
+  %21 = mul nsw i32 %7, -10
+  %22 = add nsw i32 %21, %20
+  %23 = mul nsw i32 %12, -5
+  %24 = add nsw i32 %22, %23
+  %25 = mul nsw i32 %19, -2
+  %26 = add nsw i32 %24, %25
+  %27 = icmp sgt i32 %26, 0
+  %28 = select i1 %27, i32 %26, i32 0
+  %29 = sdiv i32 %4, 5
+  %30 = mul nsw i32 %7, -20
+  %31 = add nsw i32 %30, %29
+  %32 = mul nsw i32 %12, -10
+  %33 = add nsw i32 %31, %32
+  %34 = mul nsw i32 %19, -4
+  %35 = add i32 %33, %34
+  %36 = mul nsw i32 %28, -2
+  %37 = add i32 %35, %36
+  %38 = icmp sgt i32 %37, 0
+  %39 = select i1 %38, i32 %37, i32 0
+  %40 = mul nsw i32 %7, -100
+  %41 = add i32 %40, %4
+  %42 = sub i32 %41, %13
+  %43 = mul i32 %19, -20
+  %44 = add i32 %42, %43
+  %45 = mul i32 %28, -10
+  %46 = add i32 %44, %45
+  %47 = mul i32 %39, -5
+  %48 = add i32 %46, %47
+  %49 = icmp sgt i32 %48, 0
+  %50 = select i1 %49, i32 %48, i32 0
+  %51 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %7)
+  %52 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %12)
+  %53 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %19)
+  %54 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %28)
+  %55 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %39)
+  %56 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %50)
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %2) #3
+  ret i32 0
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+
+attributes #0 = { nofree nounwind sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #2 = { nofree nounwind "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #3 = { nounwind }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !6, i64 0}
+!6 = !{!"int", !7, i64 0}
+!7 = !{!"omnipotent char", !8, i64 0}
+!8 = !{!"Simple C/C++ TBAA"}
