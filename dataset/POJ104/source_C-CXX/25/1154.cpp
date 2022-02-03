@@ -1,0 +1,23 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char a[101];
+	cin.get(a, 101);
+	for(int i = 0; i < strlen(a); i++)
+	{
+		if(a[i] != ' ')
+			cout << a[i];
+		if(a[i] == ' ' && a[i+1] != ' ')
+		{
+			cout << a[i] << a[i+1];
+			i++;
+		}
+	}
+	return 0;
+}

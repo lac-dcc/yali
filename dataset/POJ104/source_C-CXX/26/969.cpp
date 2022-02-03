@@ -1,0 +1,116 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+#define LEN 100
+#define ASCII 100
+#define MAX_N 100
+#define MAX_M 100
+#define MAX 100
+#define ASC 100
+#define null 0
+#define Len 100
+#define SUM 100
+#define NUMBER 100
+#define SIZE 100
+#define MAXN 100
+#define MAXSIZE 100
+#define maxrow 100
+#define maxcol 100
+#define mx 100
+#define NUM 100
+#define ROW 100
+#define COL 100
+#define SIZEE 100
+#define MAX_LEN 100
+#define LIU 100
+#define maxsize 100
+#define NUM 100
+#define NO 100
+#define Null 0
+#define ID_DIGITS 100
+#define INT_MAX 100
+#define INT_MIN 100
+#define FALSE 0
+#define TRUE 1
+#define hang 100
+#define lie 100
+#define lll 100
+#define LEM 100
+#define K 100
+#define INF 100
+#define MONTH 12
+#define true 1
+#define PI 100
+#define maxlen 100
+#define maxinputint 100
+#define STUDENT_NUM 100
+#define TOTAL 100
+#define LEN1 100
+#define student_num 100
+#define MAXLEN 100
+#define MAXL 100
+#define nMax 100
+#define Vocabularysize 100
+#define Sentencelength 100
+#define LENGTH 100
+#define ARRAY 100
+/*????
+x1 = (-b + sqrt(b*b-4*a*c))/(2*a)
+x2 = (-b - sqrt(b*b-4*a*c))/(2*a)
+??????? ax2 + bx + c = 0 ?????a???0?
+
+????
+???????????n?
+??n?????????a, b, c??????????????????ax2 + bx + c =0???
+
+????
+????n????????????
+???????????x1=...;x2 = ...
+????????????x1=x2=...
+???????????x1=??+??i; x2=??-??i
+
+???????????????5?????????????*/
+int main()
+{
+	double q,p;
+	int n,i;
+	cin>>n;
+	double a[n],b[n],c[n];
+	for( i=1;i<=n;i++)
+		cin>>a[i]>>b[i]>>c[i];
+	for(i=1;i<=n;i++)
+	{
+		if(b[i]*b[i]-4*a[i]*c[i]>0)
+		{
+			p=-b[i]/(2*a[i]);
+		    q=sqrt(b[i]*b[i]-4*a[i]*c[i])/(2*a[i]);
+		    if(p==-0) p=0;
+		    if(q==-0) q=0;
+		    cout<<"x1="<<fixed<<setprecision(5)<<p+q<<";";
+		    cout<<"x2="<<fixed<<setprecision(5)<<p-q<<endl;
+		}
+		if(b[i]*b[i]-4*a[i]*c[i]<0)
+		{
+			p=-b[i]/(2*a[i]);
+			q=sqrt(-b[i]*b[i]+4*a[i]*c[i])/(2*a[i]);
+			 if(p==-0) p=0;
+					    if(q==-0) q=0;
+			cout<<"x1="<<fixed<<setprecision(5)<<p<<"+"<<q<<"i"<<";";
+		    cout<<"x2="<<fixed<<setprecision(5)<<p<<"-"<<q<<"i"<<endl;
+		}
+		if(b[i]*b[i]-4*a[i]*c[i]==0)
+		{
+			p=-b[i]/(2*a[i]);
+			 if(p==-0) p=0;
+			cout<<"x1=x2="<<fixed<<setprecision(5)<<p<<endl;;
+		}
+
+	}
+	return 0;
+
+}

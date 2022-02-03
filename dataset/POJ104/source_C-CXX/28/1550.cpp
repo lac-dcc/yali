@@ -1,0 +1,27 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+int main()//?????
+{
+	int m,n;//???m,n
+	cin>>m;//??m
+	for(int i=1;i<=m;i++)//????m?n
+	{
+		cin>>n;
+		float a=1,b=2,s=0,t;//??????
+		for(int j=1;j<=n;j++)//??
+		{
+			s=s+b/a;
+			t=b;
+			b=a+b;
+			a=t;
+		}
+		printf("%.3f",s);//????
+		cout<<endl;
+	}
+	return 0;//?????
+}

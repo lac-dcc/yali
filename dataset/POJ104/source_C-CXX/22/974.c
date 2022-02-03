@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void main()
+{
+	int i=0;
+	char str[100][100];
+	while (scanf("%s",str[i])!=EOF)//EOF?????
+		i++;
+	i--;//??????????,?????
+		for(;i>0;i--)
+		printf("%s ",str[i]);
+	printf("%s",str[0]);
+}

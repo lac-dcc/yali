@@ -1,12 +1,13 @@
+###################################################################################
+# This Makefile extracts the histogram for each program in the *programs* folder 
+# and saves all output in the *${BUILD}/${FILENAME}* file
+###################################################################################
 REPO=./programs
-BUILD=../features
+BUILD=../../../features
+FILENAME=poj_features_ollvm_fla.csv
 
 LLPATH=${LLVM13}
 CC=${LLPATH}/clang
-###################################################################################
-# This Makefile extracts the histogram for each program in the *programs* folder 
-# and saves all output in the *../features/features.csv* file
-###################################################################################
 
 CXX=${LLPATH}/clang++
 OPT=${LLPATH}/opt
@@ -21,6 +22,6 @@ build: ${FOLDERS}
 	@echo "$@ Started!"
 	$(eval FILES:=$(wildcard programs/$(basename $@)/*.ll))
 	@for file in ${FILES} ; do \
-		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/features_ollvm_fla.csv; \
+		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
 	done;
 	@echo "$@ Finished! \n"
