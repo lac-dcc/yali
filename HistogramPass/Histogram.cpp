@@ -2,8 +2,8 @@
 #include "llvm/IR/Module.h"
 #include "llvm/IR/Instructions.h"
 #include "llvm/Support/raw_ostream.h"
-#include "llvm/IR/InstIterator.h"     // To use the iterator "instructions"
-#include "llvm/Support/Debug.h"       // To print error messages.
+#include "llvm/IR/InstIterator.h"
+#include "llvm/Support/Debug.h"
 #include "llvm/ADT/DenseMap.h"
 
 #include "Histogram.h"
@@ -19,7 +19,6 @@ bool Histogram::runOnModule(llvm::Module& M) {
       continue;
 
     // Fill up the map hist with the opcodes of the instructions:
-    //
     LLVM_DEBUG(llvm::dbgs() << "Function " << F.getName() << "\n");
     for (llvm::Instruction &inst: llvm::instructions(F)) {
       const unsigned op_code = inst.getOpcode();
@@ -30,7 +29,6 @@ bool Histogram::runOnModule(llvm::Module& M) {
   }
 
   // Print the map:
-  //
   for (unsigned i = 0; i < NUM_OPCODES; i++) {
     auto entries = hist.find(i);
     const unsigned num_insts = entries != hist.end() ? entries->second : 0;
