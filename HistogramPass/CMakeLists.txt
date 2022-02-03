@@ -6,4 +6,4 @@ add_llvm_library( LLVMHistogram MODULE
   intrinsics_gen
   PLUGIN_TOOL
   opt
-  )
+)
