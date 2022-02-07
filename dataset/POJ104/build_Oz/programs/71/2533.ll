@@ -1,0 +1,219 @@
+; ModuleID = 'source-C-CXX/71/2533.c'
+source_filename = "source-C-CXX/71/2533.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [5 x i8] c"%d%d\00", align 1
+@.str.1 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.2 = private unnamed_addr constant [7 x i8] c"%d %d\0A\00", align 1
+
+; Function Attrs: minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn
+define dso_local i32 @comp(i32 %0, i32 %1, i32 %2, i32 %3, i32 %4) local_unnamed_addr #0 {
+  %6 = icmp sge i32 %0, %1
+  %7 = icmp sge i32 %0, %2
+  %8 = select i1 %6, i1 %7, i1 false
+  %9 = icmp sge i32 %0, %3
+  %10 = select i1 %8, i1 %9, i1 false
+  %11 = icmp sge i32 %0, %4
+  %12 = select i1 %10, i1 %11, i1 false
+  %13 = zext i1 %12 to i32
+  ret i32 %13
+}
+
+; Function Attrs: minsize nofree nounwind optsize sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #1 {
+  %1 = alloca [22 x [22 x i32]], align 16
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = bitcast [22 x [22 x i32]]* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 1936, i8* nonnull %4) #5
+  %5 = bitcast i32* %2 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %5) #5
+  %6 = bitcast i32* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %6) #5
+  %7 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str, i64 0, i64 0), i32* nonnull %2, i32* nonnull %3) #6
+  %8 = load i32, i32* %2, align 4, !tbaa !5
+  %9 = load i32, i32* %3, align 4
+  %10 = add nsw i32 %9, 1
+  %11 = sext i32 %10 to i64
+  %12 = add i32 %8, 2
+  %13 = call i32 @llvm.smax.i32(i32 %12, i32 0)
+  %14 = zext i32 %13 to i64
+  br label %15
+
+15:                                               ; preds = %24, %0
+  %16 = phi i64 [ %27, %24 ], [ 0, %0 ]
+  %17 = icmp eq i64 %16, %14
+  br i1 %17, label %18, label %24
+
+18:                                               ; preds = %15
+  %19 = add nsw i32 %8, 1
+  %20 = sext i32 %19 to i64
+  %21 = call i32 @llvm.smax.i32(i32 %9, i32 0)
+  %22 = add nuw i32 %21, 1
+  %23 = zext i32 %22 to i64
+  br label %28
+
+24:                                               ; preds = %15
+  %25 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %16, i64 0
+  store i32 -1, i32* %25, align 8, !tbaa !5
+  %26 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %16, i64 %11
+  store i32 -1, i32* %26, align 4, !tbaa !5
+  %27 = add nuw nsw i64 %16, 1
+  br label %15, !llvm.loop !9
+
+28:                                               ; preds = %18, %31
+  %29 = phi i64 [ 1, %18 ], [ %34, %31 ]
+  %30 = icmp eq i64 %29, %23
+  br i1 %30, label %35, label %31
+
+31:                                               ; preds = %28
+  %32 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 0, i64 %29
+  store i32 -1, i32* %32, align 4, !tbaa !5
+  %33 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %20, i64 %29
+  store i32 -1, i32* %33, align 4, !tbaa !5
+  %34 = add nuw nsw i64 %29, 1
+  br label %28, !llvm.loop !11
+
+35:                                               ; preds = %28, %51
+  %36 = phi i32 [ %42, %51 ], [ %9, %28 ]
+  %37 = phi i32 [ %53, %51 ], [ %8, %28 ]
+  %38 = phi i64 [ %52, %51 ], [ 1, %28 ]
+  %39 = sext i32 %37 to i64
+  %40 = icmp sgt i64 %38, %39
+  br i1 %40, label %54, label %41
+
+41:                                               ; preds = %35, %46
+  %42 = phi i32 [ %50, %46 ], [ %36, %35 ]
+  %43 = phi i64 [ %49, %46 ], [ 1, %35 ]
+  %44 = sext i32 %42 to i64
+  %45 = icmp sgt i64 %43, %44
+  br i1 %45, label %51, label %46
+
+46:                                               ; preds = %41
+  %47 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %38, i64 %43
+  %48 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32* nonnull %47) #6
+  %49 = add nuw nsw i64 %43, 1
+  %50 = load i32, i32* %3, align 4, !tbaa !5
+  br label %41, !llvm.loop !12
+
+51:                                               ; preds = %41
+  %52 = add nuw nsw i64 %38, 1
+  %53 = load i32, i32* %2, align 4, !tbaa !5
+  br label %35, !llvm.loop !13
+
+54:                                               ; preds = %35, %98
+  %55 = phi i32 [ %66, %98 ], [ %36, %35 ]
+  %56 = phi i32 [ %70, %98 ], [ %36, %35 ]
+  %57 = phi i32 [ %99, %98 ], [ %37, %35 ]
+  %58 = phi i64 [ %63, %98 ], [ 1, %35 ]
+  %59 = sext i32 %57 to i64
+  %60 = icmp sgt i64 %58, %59
+  br i1 %60, label %100, label %61
+
+61:                                               ; preds = %54
+  %62 = add nsw i64 %58, -1
+  %63 = add nuw nsw i64 %58, 1
+  %64 = trunc i64 %62 to i32
+  br label %65
+
+65:                                               ; preds = %94, %61
+  %66 = phi i32 [ %97, %94 ], [ %55, %61 ]
+  %67 = phi i32 [ %97, %94 ], [ %56, %61 ]
+  %68 = phi i64 [ %84, %94 ], [ 1, %61 ]
+  br label %69
+
+69:                                               ; preds = %65, %74
+  %70 = phi i32 [ %66, %74 ], [ %67, %65 ]
+  %71 = phi i64 [ %84, %74 ], [ %68, %65 ]
+  %72 = sext i32 %70 to i64
+  %73 = icmp sgt i64 %71, %72
+  br i1 %73, label %98, label %74
+
+74:                                               ; preds = %69
+  %75 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %58, i64 %71
+  %76 = load i32, i32* %75, align 4, !tbaa !5
+  %77 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %62, i64 %71
+  %78 = load i32, i32* %77, align 4, !tbaa !5
+  %79 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %63, i64 %71
+  %80 = load i32, i32* %79, align 4, !tbaa !5
+  %81 = add nsw i64 %71, -1
+  %82 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %58, i64 %81
+  %83 = load i32, i32* %82, align 4, !tbaa !5
+  %84 = add nuw nsw i64 %71, 1
+  %85 = getelementptr inbounds [22 x [22 x i32]], [22 x [22 x i32]]* %1, i64 0, i64 %58, i64 %84
+  %86 = load i32, i32* %85, align 4, !tbaa !5
+  %87 = icmp sge i32 %76, %78
+  %88 = icmp sge i32 %76, %80
+  %89 = select i1 %87, i1 %88, i1 false
+  %90 = icmp sge i32 %76, %83
+  %91 = select i1 %89, i1 %90, i1 false
+  %92 = icmp sge i32 %76, %86
+  %93 = select i1 %91, i1 %92, i1 false
+  br i1 %93, label %94, label %69, !llvm.loop !14
+
+94:                                               ; preds = %74
+  %95 = trunc i64 %81 to i32
+  %96 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([7 x i8], [7 x i8]* @.str.2, i64 0, i64 0), i32 %64, i32 %95) #6
+  %97 = load i32, i32* %3, align 4, !tbaa !5
+  br label %65, !llvm.loop !14
+
+98:                                               ; preds = %69
+  %99 = load i32, i32* %2, align 4, !tbaa !5
+  br label %54, !llvm.loop !15
+
+100:                                              ; preds = %54
+  %101 = call i32 @getchar() #6
+  %102 = call i32 @getchar() #6
+  %103 = call i32 @getchar() #6
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %6) #5
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* nonnull %5) #5
+  call void @llvm.lifetime.end.p0i8(i64 1936, i8* nonnull %4) #5
+  ret i32 0
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #2
+
+; Function Attrs: minsize nofree nounwind optsize
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #3
+
+; Function Attrs: minsize nofree nounwind optsize
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #3
+
+; Function Attrs: minsize nofree nounwind optsize
+declare noundef i32 @getchar() local_unnamed_addr #3
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #2
+
+; Function Attrs: nofree nosync nounwind readnone speculatable willreturn
+declare i32 @llvm.smax.i32(i32, i32) #4
+
+attributes #0 = { minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { minsize nofree nounwind optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #2 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #3 = { minsize nofree nounwind optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { nofree nosync nounwind readnone speculatable willreturn }
+attributes #5 = { nounwind }
+attributes #6 = { minsize optsize }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !6, i64 0}
+!6 = !{!"int", !7, i64 0}
+!7 = !{!"omnipotent char", !8, i64 0}
+!8 = !{!"Simple C/C++ TBAA"}
+!9 = distinct !{!9, !10}
+!10 = !{!"llvm.loop.mustprogress"}
+!11 = distinct !{!11, !10}
+!12 = distinct !{!12, !10}
+!13 = distinct !{!13, !10}
+!14 = distinct !{!14, !10}
+!15 = distinct !{!15, !10}

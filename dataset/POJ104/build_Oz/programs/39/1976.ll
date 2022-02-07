@@ -1,0 +1,146 @@
+; ModuleID = 'source-C-CXX/39/1976.c'
+source_filename = "source-C-CXX/39/1976.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [13 x i8] c"%lf%lf%lf%lf\00", align 1
+@.str.1 = private unnamed_addr constant [4 x i8] c"%lf\00", align 1
+@.str.2 = private unnamed_addr constant [7 x i8] c"%.4lf\0A\00", align 1
+@str = private unnamed_addr constant [14 x i8] c"Invalid input\00", align 1
+
+; Function Attrs: minsize nofree nounwind optsize sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #0 {
+  %1 = alloca double, align 8
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca double, align 8
+  %6 = bitcast double* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %6) #5
+  %7 = bitcast double* %2 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %7) #5
+  %8 = bitcast double* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %8) #5
+  %9 = bitcast double* %4 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %9) #5
+  %10 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str, i64 0, i64 0), double* nonnull %1, double* nonnull %2, double* nonnull %3, double* nonnull %4) #6
+  %11 = bitcast double* %5 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %11) #5
+  %12 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), double* nonnull %5) #6
+  %13 = load double, double* %1, align 8, !tbaa !5
+  %14 = load double, double* %2, align 8, !tbaa !5
+  %15 = fadd double %13, %14
+  %16 = load double, double* %3, align 8, !tbaa !5
+  %17 = fadd double %15, %16
+  %18 = load double, double* %4, align 8, !tbaa !5
+  %19 = fadd double %17, %18
+  %20 = fmul double %19, 5.000000e-01
+  %21 = fsub double %20, %13
+  %22 = fsub double %20, %14
+  %23 = fmul double %21, %22
+  %24 = fsub double %20, %16
+  %25 = fmul double %24, %23
+  %26 = fsub double %20, %18
+  %27 = fmul double %26, %25
+  %28 = fmul double %13, %14
+  %29 = fmul double %28, %16
+  %30 = fmul double %29, %18
+  %31 = load double, double* %5, align 8, !tbaa !5
+  %32 = fmul double %31, 1.000000e+02
+  %33 = fdiv double %32, 3.600000e+02
+  %34 = call double @cos(double %33) #7
+  %35 = fmul double %30, %34
+  %36 = load double, double* %5, align 8, !tbaa !5
+  %37 = fmul double %36, 1.000000e+02
+  %38 = fdiv double %37, 3.600000e+02
+  %39 = call double @cos(double %38) #7
+  %40 = fmul double %35, %39
+  %41 = fsub double %27, %40
+  %42 = fcmp ult double %41, 0.000000e+00
+  br i1 %42, label %71, label %43
+
+43:                                               ; preds = %0
+  %44 = load double, double* %1, align 8, !tbaa !5
+  %45 = fsub double %20, %44
+  %46 = load double, double* %2, align 8, !tbaa !5
+  %47 = fsub double %20, %46
+  %48 = fmul double %45, %47
+  %49 = load double, double* %3, align 8, !tbaa !5
+  %50 = fsub double %20, %49
+  %51 = fmul double %48, %50
+  %52 = load double, double* %4, align 8, !tbaa !5
+  %53 = fsub double %20, %52
+  %54 = fmul double %51, %53
+  %55 = fmul double %44, %46
+  %56 = fmul double %55, %49
+  %57 = fmul double %56, %52
+  %58 = load double, double* %5, align 8, !tbaa !5
+  %59 = fmul double %58, 1.000000e+02
+  %60 = fdiv double %59, 3.600000e+02
+  %61 = call double @cos(double %60) #7
+  %62 = fmul double %57, %61
+  %63 = load double, double* %5, align 8, !tbaa !5
+  %64 = fmul double %63, 1.000000e+02
+  %65 = fdiv double %64, 3.600000e+02
+  %66 = call double @cos(double %65) #7
+  %67 = fmul double %62, %66
+  %68 = fsub double %54, %67
+  %69 = call double @sqrt(double %68) #7
+  %70 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([7 x i8], [7 x i8]* @.str.2, i64 0, i64 0), double %69) #6
+  br label %73
+
+71:                                               ; preds = %0
+  %72 = call i32 @puts(i8* nonnull dereferenceable(1) getelementptr inbounds ([14 x i8], [14 x i8]* @str, i64 0, i64 0))
+  br label %73
+
+73:                                               ; preds = %71, %43
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %11) #5
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %9) #5
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %8) #5
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %7) #5
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %6) #5
+  ret i32 0
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: minsize nofree nounwind optsize
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: minsize mustprogress nofree nounwind optsize willreturn
+declare double @cos(double) local_unnamed_addr #3
+
+; Function Attrs: minsize nofree nounwind optsize
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #2
+
+; Function Attrs: minsize mustprogress nofree nounwind optsize willreturn
+declare double @sqrt(double) local_unnamed_addr #3
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @puts(i8* nocapture noundef readonly) local_unnamed_addr #4
+
+attributes #0 = { minsize nofree nounwind optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #2 = { minsize nofree nounwind optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #3 = { minsize mustprogress nofree nounwind optsize willreturn "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { nofree nounwind }
+attributes #5 = { nounwind }
+attributes #6 = { minsize optsize }
+attributes #7 = { minsize nounwind optsize }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !6, i64 0}
+!6 = !{!"double", !7, i64 0}
+!7 = !{!"omnipotent char", !8, i64 0}
+!8 = !{!"Simple C/C++ TBAA"}
