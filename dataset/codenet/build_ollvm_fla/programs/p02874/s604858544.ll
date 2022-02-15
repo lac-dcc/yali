@@ -1,0 +1,2429 @@
+; ModuleID = 'Project_CodeNet_C++1400/p02874/s604858544.cpp'
+source_filename = "Project_CodeNet_C++1400/p02874/s604858544.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct.pt = type { i32, i32 }
+%"struct.__gnu_cxx::__ops::_Iter_comp_iter" = type { i1 (i64, i64)* }
+%"struct.__gnu_cxx::__ops::_Iter_comp_val" = type { i1 (i64, i64)* }
+%"struct.__gnu_cxx::__ops::_Val_comp_iter" = type { i1 (i64, i64)* }
+
+$_ZSt3maxIiERKT_S2_S2_ = comdat any
+
+$_ZSt4sortIP2ptPFbS0_S0_EEvT_S4_T0_ = comdat any
+
+$_ZSt3minIiERKT_S2_S2_ = comdat any
+
+$_ZSt6__sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops16__iter_comp_iterIPFb2ptS2_EEENS0_15_Iter_comp_iterIT_EES6_ = comdat any
+
+$_ZSt16__introsort_loopIP2ptlN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_T1_ = comdat any
+
+$_ZSt4__lgl = comdat any
+
+$_ZSt22__final_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZSt14__partial_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_ = comdat any
+
+$_ZSt27__unguarded_partition_pivotIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_T0_ = comdat any
+
+$_ZSt13__heap_selectIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_ = comdat any
+
+$_ZSt11__sort_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZSt11__make_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_ = comdat any
+
+$_ZSt10__pop_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_ = comdat any
+
+$_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_ = comdat any
+
+$_ZSt13__adjust_heapIP2ptlS0_N9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_T0_S9_T1_T2_ = comdat any
+
+$_ZSt11__push_heapIP2ptlS0_N9__gnu_cxx5__ops14_Iter_comp_valIPFbS0_S0_EEEEvT_T0_S9_T1_T2_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__iter_comp_valIPFb2ptS2_EEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS6_EE = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEclIPS2_S2_EEbT_RT0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEC2ES4_ = comdat any
+
+$_ZSt22__move_median_to_firstIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_S8_T0_ = comdat any
+
+$_ZSt21__unguarded_partitionIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_S8_T0_ = comdat any
+
+$_ZSt9iter_swapIP2ptS1_EvT_T0_ = comdat any
+
+$_ZSt4swapI2ptEvRT_S2_ = comdat any
+
+$_ZSt16__insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZSt26__unguarded_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_ = comdat any
+
+$_ZSt13move_backwardIP2ptS1_ET0_T_S3_S2_ = comdat any
+
+$_ZSt25__unguarded_linear_insertIP2ptN9__gnu_cxx5__ops14_Val_comp_iterIPFbS0_S0_EEEEvT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__val_comp_iterIPFb2ptS2_EEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS6_EE = comdat any
+
+$_ZSt23__copy_move_backward_a2ILb1EP2ptS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZSt12__miter_baseIP2ptENSt11_Miter_baseIT_E13iterator_typeES3_ = comdat any
+
+$_ZSt22__copy_move_backward_aILb1EP2ptS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZSt12__niter_baseIP2ptENSt11_Niter_baseIT_E13iterator_typeES3_ = comdat any
+
+$_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bI2ptEEPT_PKS4_S7_S5_ = comdat any
+
+$_ZNSt10_Iter_baseIP2ptLb0EE7_S_baseES1_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEclIS2_PS2_EEbRT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEC2ES4_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEC2ES4_ = comdat any
+
+@a = global [100005 x %struct.pt] zeroinitializer, align 16
+@n = global i32 0, align 4
+@pre = global [100005 x i32] zeroinitializer, align 16
+@suf = global [100005 x i32] zeroinitializer, align 16
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [5 x i8] c"%d%d\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define zeroext i1 @_Z3cmp2ptS_(i64, i64) #0 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca %struct.pt, align 4
+  %6 = alloca %struct.pt, align 4
+  %7 = bitcast %struct.pt* %5 to i64*
+  store i64 %0, i64* %7, align 4
+  %8 = bitcast %struct.pt* %6 to i64*
+  store i64 %1, i64* %8, align 4
+  %9 = getelementptr inbounds %struct.pt, %struct.pt* %5, i32 0, i32 1
+  %10 = load i32, i32* %9, align 4
+  store i32 %10, i32* %4
+  %11 = getelementptr inbounds %struct.pt, %struct.pt* %6, i32 0, i32 1
+  %12 = load i32, i32* %11, align 4
+  store i32 %12, i32* %3
+  %13 = alloca i32
+  store i32 -1208284763, i32* %13
+  %14 = alloca i1
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %37
+  %16 = load i32, i32* %13
+  switch i32 %16, label %17 [
+    i32 -1208284763, label %18
+    i32 1266484466, label %23
+    i32 936918296, label %29
+    i32 -1416531468, label %35
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %37
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i32, i32* %4
+  %20 = load volatile i32, i32* %3
+  %21 = icmp eq i32 %19, %20
+  %22 = select i1 %21, i32 1266484466, i32 936918296
+  store i32 %22, i32* %13
+  br label %37
+
+; <label>:23:                                     ; preds = %15
+  %24 = getelementptr inbounds %struct.pt, %struct.pt* %5, i32 0, i32 0
+  %25 = load i32, i32* %24, align 4
+  %26 = getelementptr inbounds %struct.pt, %struct.pt* %6, i32 0, i32 0
+  %27 = load i32, i32* %26, align 4
+  %28 = icmp slt i32 %25, %27
+  store i32 -1416531468, i32* %13
+  store i1 %28, i1* %14
+  br label %37
+
+; <label>:29:                                     ; preds = %15
+  %30 = getelementptr inbounds %struct.pt, %struct.pt* %5, i32 0, i32 1
+  %31 = load i32, i32* %30, align 4
+  %32 = getelementptr inbounds %struct.pt, %struct.pt* %6, i32 0, i32 1
+  %33 = load i32, i32* %32, align 4
+  %34 = icmp slt i32 %31, %33
+  store i32 -1416531468, i32* %13
+  store i1 %34, i1* %14
+  br label %37
+
+; <label>:35:                                     ; preds = %15
+  %36 = load i1, i1* %14
+  ret i1 %36
+
+; <label>:37:                                     ; preds = %29, %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define zeroext i1 @_Z4cmp22ptS_(i64, i64) #0 {
+  %3 = alloca %struct.pt, align 4
+  %4 = alloca %struct.pt, align 4
+  %5 = bitcast %struct.pt* %3 to i64*
+  store i64 %0, i64* %5, align 4
+  %6 = bitcast %struct.pt* %4 to i64*
+  store i64 %1, i64* %6, align 4
+  %7 = getelementptr inbounds %struct.pt, %struct.pt* %3, i32 0, i32 0
+  %8 = load i32, i32* %7, align 4
+  %9 = getelementptr inbounds %struct.pt, %struct.pt* %4, i32 0, i32 0
+  %10 = load i32, i32* %9, align 4
+  %11 = icmp slt i32 %8, %10
+  ret i1 %11
+}
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #1 {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  %10 = alloca i32, align 4
+  %11 = alloca i32, align 4
+  %12 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  store i32 0, i32* %2, align 4
+  store i32 0, i32* %3, align 4
+  %13 = call i32 (i8*, ...) @scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32* @n)
+  store i32 1, i32* %4, align 4
+  %14 = alloca i32
+  store i32 1652494757, i32* %14
+  %15 = alloca i32
+  %16 = alloca i32
+  br label %17
+
+; <label>:17:                                     ; preds = %0, %167
+  %18 = load i32, i32* %14
+  switch i32 %18, label %19 [
+    i32 1652494757, label %20
+    i32 -1887903120, label %25
+    i32 -1730189667, label %49
+    i32 -1131114429, label %52
+    i32 1024809123, label %61
+    i32 -558925113, label %66
+    i32 -737069463, label %83
+    i32 -1719307531, label %88
+    i32 -320271606, label %89
+    i32 -517562234, label %94
+    i32 -1098771024, label %97
+    i32 -1072797854, label %107
+    i32 -332950769, label %111
+    i32 1455150515, label %128
+    i32 -1605625056, label %133
+    i32 1879579612, label %134
+    i32 -768386314, label %139
+    i32 1009766707, label %142
+    i32 -1801807619, label %143
+    i32 661543004, label %148
+    i32 1193405727, label %161
+    i32 -1252347268, label %164
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %167
+
+; <label>:20:                                     ; preds = %17
+  %21 = load i32, i32* %4, align 4
+  %22 = load i32, i32* @n, align 4
+  %23 = icmp sle i32 %21, %22
+  %24 = select i1 %23, i32 -1887903120, i32 -1131114429
+  store i32 %24, i32* %14
+  br label %167
+
+; <label>:25:                                     ; preds = %17
+  %26 = load i32, i32* %4, align 4
+  %27 = sext i32 %26 to i64
+  %28 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %27
+  %29 = getelementptr inbounds %struct.pt, %struct.pt* %28, i32 0, i32 0
+  %30 = load i32, i32* %4, align 4
+  %31 = sext i32 %30 to i64
+  %32 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %31
+  %33 = getelementptr inbounds %struct.pt, %struct.pt* %32, i32 0, i32 1
+  %34 = call i32 (i8*, ...) @scanf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.1, i32 0, i32 0), i32* %29, i32* %33)
+  %35 = load i32, i32* %4, align 4
+  %36 = sext i32 %35 to i64
+  %37 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %36
+  %38 = getelementptr inbounds %struct.pt, %struct.pt* %37, i32 0, i32 1
+  %39 = load i32, i32* %38, align 4
+  %40 = load i32, i32* %4, align 4
+  %41 = sext i32 %40 to i64
+  %42 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %41
+  %43 = getelementptr inbounds %struct.pt, %struct.pt* %42, i32 0, i32 0
+  %44 = load i32, i32* %43, align 8
+  %45 = sub nsw i32 %39, %44
+  %46 = add nsw i32 %45, 1
+  store i32 %46, i32* %5, align 4
+  %47 = call dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4) %2, i32* dereferenceable(4) %5)
+  %48 = load i32, i32* %47, align 4
+  store i32 %48, i32* %2, align 4
+  store i32 -1730189667, i32* %14
+  br label %167
+
+; <label>:49:                                     ; preds = %17
+  %50 = load i32, i32* %4, align 4
+  %51 = add nsw i32 %50, 1
+  store i32 %51, i32* %4, align 4
+  store i32 1652494757, i32* %14
+  br label %167
+
+; <label>:52:                                     ; preds = %17
+  %53 = load i32, i32* @n, align 4
+  %54 = sext i32 %53 to i64
+  %55 = getelementptr inbounds %struct.pt, %struct.pt* getelementptr inbounds ([100005 x %struct.pt], [100005 x %struct.pt]* @a, i32 0, i32 0), i64 %54
+  %56 = getelementptr inbounds %struct.pt, %struct.pt* %55, i64 1
+  call void @_ZSt4sortIP2ptPFbS0_S0_EEvT_S4_T0_(%struct.pt* getelementptr inbounds ([100005 x %struct.pt], [100005 x %struct.pt]* @a, i32 0, i64 1), %struct.pt* %56, i1 (i64, i64)* @_Z3cmp2ptS_)
+  %57 = load i32, i32* @n, align 4
+  %58 = sext i32 %57 to i64
+  %59 = getelementptr inbounds %struct.pt, %struct.pt* getelementptr inbounds ([100005 x %struct.pt], [100005 x %struct.pt]* @a, i32 0, i32 0), i64 %58
+  %60 = getelementptr inbounds %struct.pt, %struct.pt* %59, i64 1
+  call void @_ZSt4sortIP2ptPFbS0_S0_EEvT_S4_T0_(%struct.pt* getelementptr inbounds ([100005 x %struct.pt], [100005 x %struct.pt]* @a, i32 0, i64 2), %struct.pt* %60, i1 (i64, i64)* @_Z4cmp22ptS_)
+  store i32 -1000000000, i32* %6, align 4
+  store i32 1000000000, i32* %7, align 4
+  store i32 1, i32* %8, align 4
+  store i32 1024809123, i32* %14
+  br label %167
+
+; <label>:61:                                     ; preds = %17
+  %62 = load i32, i32* %8, align 4
+  %63 = load i32, i32* @n, align 4
+  %64 = icmp sle i32 %62, %63
+  %65 = select i1 %64, i32 -558925113, i32 -1098771024
+  store i32 %65, i32* %14
+  br label %167
+
+; <label>:66:                                     ; preds = %17
+  %67 = load i32, i32* %8, align 4
+  %68 = sext i32 %67 to i64
+  %69 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %68
+  %70 = getelementptr inbounds %struct.pt, %struct.pt* %69, i32 0, i32 0
+  %71 = call dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4) %6, i32* dereferenceable(4) %70)
+  %72 = load i32, i32* %71, align 4
+  store i32 %72, i32* %6, align 4
+  %73 = load i32, i32* %8, align 4
+  %74 = sext i32 %73 to i64
+  %75 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %74
+  %76 = getelementptr inbounds %struct.pt, %struct.pt* %75, i32 0, i32 1
+  %77 = call dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4) %7, i32* dereferenceable(4) %76)
+  %78 = load i32, i32* %77, align 4
+  store i32 %78, i32* %7, align 4
+  %79 = load i32, i32* %6, align 4
+  %80 = load i32, i32* %7, align 4
+  %81 = icmp sle i32 %79, %80
+  %82 = select i1 %81, i32 -737069463, i32 -1719307531
+  store i32 %82, i32* %14
+  br label %167
+
+; <label>:83:                                     ; preds = %17
+  %84 = load i32, i32* %7, align 4
+  %85 = load i32, i32* %6, align 4
+  %86 = sub nsw i32 %84, %85
+  %87 = add nsw i32 %86, 1
+  store i32 -320271606, i32* %14
+  store i32 %87, i32* %15
+  br label %167
+
+; <label>:88:                                     ; preds = %17
+  store i32 -320271606, i32* %14
+  store i32 0, i32* %15
+  br label %167
+
+; <label>:89:                                     ; preds = %17
+  %90 = load i32, i32* %15
+  %91 = load i32, i32* %8, align 4
+  %92 = sext i32 %91 to i64
+  %93 = getelementptr inbounds [100005 x i32], [100005 x i32]* @pre, i64 0, i64 %92
+  store i32 %90, i32* %93, align 4
+  store i32 -517562234, i32* %14
+  br label %167
+
+; <label>:94:                                     ; preds = %17
+  %95 = load i32, i32* %8, align 4
+  %96 = add nsw i32 %95, 1
+  store i32 %96, i32* %8, align 4
+  store i32 1024809123, i32* %14
+  br label %167
+
+; <label>:97:                                     ; preds = %17
+  %98 = load i32, i32* %2, align 4
+  %99 = load i32, i32* @n, align 4
+  %100 = sext i32 %99 to i64
+  %101 = getelementptr inbounds [100005 x i32], [100005 x i32]* @pre, i64 0, i64 %100
+  %102 = load i32, i32* %101, align 4
+  %103 = add nsw i32 %98, %102
+  store i32 %103, i32* %9, align 4
+  %104 = call dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4) %3, i32* dereferenceable(4) %9)
+  %105 = load i32, i32* %104, align 4
+  store i32 %105, i32* %3, align 4
+  store i32 -1000000000, i32* %6, align 4
+  store i32 1000000000, i32* %7, align 4
+  %106 = load i32, i32* @n, align 4
+  store i32 %106, i32* %10, align 4
+  store i32 -1072797854, i32* %14
+  br label %167
+
+; <label>:107:                                    ; preds = %17
+  %108 = load i32, i32* %10, align 4
+  %109 = icmp ne i32 %108, 0
+  %110 = select i1 %109, i32 -332950769, i32 1009766707
+  store i32 %110, i32* %14
+  br label %167
+
+; <label>:111:                                    ; preds = %17
+  %112 = load i32, i32* %10, align 4
+  %113 = sext i32 %112 to i64
+  %114 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %113
+  %115 = getelementptr inbounds %struct.pt, %struct.pt* %114, i32 0, i32 0
+  %116 = call dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4) %6, i32* dereferenceable(4) %115)
+  %117 = load i32, i32* %116, align 4
+  store i32 %117, i32* %6, align 4
+  %118 = load i32, i32* %10, align 4
+  %119 = sext i32 %118 to i64
+  %120 = getelementptr inbounds [100005 x %struct.pt], [100005 x %struct.pt]* @a, i64 0, i64 %119
+  %121 = getelementptr inbounds %struct.pt, %struct.pt* %120, i32 0, i32 1
+  %122 = call dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4) %7, i32* dereferenceable(4) %121)
+  %123 = load i32, i32* %122, align 4
+  store i32 %123, i32* %7, align 4
+  %124 = load i32, i32* %6, align 4
+  %125 = load i32, i32* %7, align 4
+  %126 = icmp sle i32 %124, %125
+  %127 = select i1 %126, i32 1455150515, i32 -1605625056
+  store i32 %127, i32* %14
+  br label %167
+
+; <label>:128:                                    ; preds = %17
+  %129 = load i32, i32* %7, align 4
+  %130 = load i32, i32* %6, align 4
+  %131 = sub nsw i32 %129, %130
+  %132 = add nsw i32 %131, 1
+  store i32 1879579612, i32* %14
+  store i32 %132, i32* %16
+  br label %167
+
+; <label>:133:                                    ; preds = %17
+  store i32 1879579612, i32* %14
+  store i32 0, i32* %16
+  br label %167
+
+; <label>:134:                                    ; preds = %17
+  %135 = load i32, i32* %16
+  %136 = load i32, i32* %10, align 4
+  %137 = sext i32 %136 to i64
+  %138 = getelementptr inbounds [100005 x i32], [100005 x i32]* @suf, i64 0, i64 %137
+  store i32 %135, i32* %138, align 4
+  store i32 -768386314, i32* %14
+  br label %167
+
+; <label>:139:                                    ; preds = %17
+  %140 = load i32, i32* %10, align 4
+  %141 = add nsw i32 %140, -1
+  store i32 %141, i32* %10, align 4
+  store i32 -1072797854, i32* %14
+  br label %167
+
+; <label>:142:                                    ; preds = %17
+  store i32 1, i32* %11, align 4
+  store i32 -1801807619, i32* %14
+  br label %167
+
+; <label>:143:                                    ; preds = %17
+  %144 = load i32, i32* %11, align 4
+  %145 = load i32, i32* @n, align 4
+  %146 = icmp slt i32 %144, %145
+  %147 = select i1 %146, i32 661543004, i32 -1252347268
+  store i32 %147, i32* %14
+  br label %167
+
+; <label>:148:                                    ; preds = %17
+  %149 = load i32, i32* %11, align 4
+  %150 = sext i32 %149 to i64
+  %151 = getelementptr inbounds [100005 x i32], [100005 x i32]* @pre, i64 0, i64 %150
+  %152 = load i32, i32* %151, align 4
+  %153 = load i32, i32* %11, align 4
+  %154 = add nsw i32 %153, 1
+  %155 = sext i32 %154 to i64
+  %156 = getelementptr inbounds [100005 x i32], [100005 x i32]* @suf, i64 0, i64 %155
+  %157 = load i32, i32* %156, align 4
+  %158 = add nsw i32 %152, %157
+  store i32 %158, i32* %12, align 4
+  %159 = call dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4) %3, i32* dereferenceable(4) %12)
+  %160 = load i32, i32* %159, align 4
+  store i32 %160, i32* %3, align 4
+  store i32 1193405727, i32* %14
+  br label %167
+
+; <label>:161:                                    ; preds = %17
+  %162 = load i32, i32* %11, align 4
+  %163 = add nsw i32 %162, 1
+  store i32 %163, i32* %11, align 4
+  store i32 -1801807619, i32* %14
+  br label %167
+
+; <label>:164:                                    ; preds = %17
+  %165 = load i32, i32* %3, align 4
+  %166 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32 %165)
+  ret i32 0
+
+; <label>:167:                                    ; preds = %161, %148, %143, %142, %139, %134, %133, %128, %111, %107, %97, %94, %89, %88, %83, %66, %61, %52, %49, %25, %20, %19
+  br label %17
+}
+
+declare i32 @scanf(i8*, ...) #2
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt3maxIiERKT_S2_S2_(i32* dereferenceable(4), i32* dereferenceable(4)) #0 comdat {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %8 = load i32*, i32** %6, align 8
+  %9 = load i32, i32* %8, align 4
+  store i32 %9, i32* %4
+  %10 = load i32*, i32** %7, align 8
+  %11 = load i32, i32* %10, align 4
+  store i32 %11, i32* %3
+  %12 = alloca i32
+  store i32 -1267008708, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %27
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -1267008708, label %16
+    i32 -2050819134, label %21
+    i32 -8117976, label %23
+    i32 212883390, label %25
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %27
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i32, i32* %4
+  %18 = load volatile i32, i32* %3
+  %19 = icmp slt i32 %17, %18
+  %20 = select i1 %19, i32 -2050819134, i32 -8117976
+  store i32 %20, i32* %12
+  br label %27
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32*, i32** %7, align 8
+  store i32* %22, i32** %5, align 8
+  store i32 212883390, i32* %12
+  br label %27
+
+; <label>:23:                                     ; preds = %13
+  %24 = load i32*, i32** %6, align 8
+  store i32* %24, i32** %5, align 8
+  store i32 212883390, i32* %12
+  br label %27
+
+; <label>:25:                                     ; preds = %13
+  %26 = load i32*, i32** %5, align 8
+  ret i32* %26
+
+; <label>:27:                                     ; preds = %23, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt4sortIP2ptPFbS0_S0_EEvT_S4_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca i1 (i64, i64)*, align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  store %struct.pt* %0, %struct.pt** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %6, align 8
+  %8 = load %struct.pt*, %struct.pt** %4, align 8
+  %9 = load %struct.pt*, %struct.pt** %5, align 8
+  %10 = load i1 (i64, i64)*, i1 (i64, i64)** %6, align 8
+  %11 = call i1 (i64, i64)* @_ZN9__gnu_cxx5__ops16__iter_comp_iterIPFb2ptS2_EEENS0_15_Iter_comp_iterIT_EES6_(i1 (i64, i64)* %10)
+  %12 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, i32 0, i32 0
+  store i1 (i64, i64)* %11, i1 (i64, i64)** %12, align 8
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, i32 0, i32 0
+  %14 = load i1 (i64, i64)*, i1 (i64, i64)** %13, align 8
+  call void @_ZSt6__sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %8, %struct.pt* %9, i1 (i64, i64)* %14)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4), i32* dereferenceable(4)) #0 comdat {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %8 = load i32*, i32** %7, align 8
+  %9 = load i32, i32* %8, align 4
+  store i32 %9, i32* %4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  store i32 %11, i32* %3
+  %12 = alloca i32
+  store i32 815817105, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %27
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 815817105, label %16
+    i32 31272364, label %21
+    i32 -582041589, label %23
+    i32 1242453227, label %25
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %27
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i32, i32* %4
+  %18 = load volatile i32, i32* %3
+  %19 = icmp slt i32 %17, %18
+  %20 = select i1 %19, i32 31272364, i32 -582041589
+  store i32 %20, i32* %12
+  br label %27
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32*, i32** %7, align 8
+  store i32* %22, i32** %5, align 8
+  store i32 1242453227, i32* %12
+  br label %27
+
+; <label>:23:                                     ; preds = %13
+  %24 = load i32*, i32** %6, align 8
+  store i32* %24, i32** %5, align 8
+  store i32 1242453227, i32* %12
+  br label %27
+
+; <label>:25:                                     ; preds = %13
+  %26 = load i32*, i32** %5, align 8
+  ret i32* %26
+
+; <label>:27:                                     ; preds = %23, %21, %16, %15
+  br label %13
+}
+
+declare i32 @printf(i8*, ...) #2
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt6__sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %struct.pt*
+  %5 = alloca %struct.pt*
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %11 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %11, align 8
+  store %struct.pt* %0, %struct.pt** %7, align 8
+  store %struct.pt* %1, %struct.pt** %8, align 8
+  %12 = load %struct.pt*, %struct.pt** %7, align 8
+  store %struct.pt* %12, %struct.pt** %5
+  %13 = load %struct.pt*, %struct.pt** %8, align 8
+  store %struct.pt* %13, %struct.pt** %4
+  %14 = alloca i32
+  store i32 428487835, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %3, %45
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 428487835, label %18
+    i32 -850877704, label %23
+    i32 1292841638, label %44
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %45
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile %struct.pt*, %struct.pt** %5
+  %20 = load volatile %struct.pt*, %struct.pt** %4
+  %21 = icmp ne %struct.pt* %19, %20
+  %22 = select i1 %21, i32 -850877704, i32 1292841638
+  store i32 %22, i32* %14
+  br label %45
+
+; <label>:23:                                     ; preds = %15
+  %24 = load %struct.pt*, %struct.pt** %7, align 8
+  %25 = load %struct.pt*, %struct.pt** %8, align 8
+  %26 = load %struct.pt*, %struct.pt** %8, align 8
+  %27 = load %struct.pt*, %struct.pt** %7, align 8
+  %28 = ptrtoint %struct.pt* %26 to i64
+  %29 = ptrtoint %struct.pt* %27 to i64
+  %30 = sub i64 %28, %29
+  %31 = sdiv exact i64 %30, 8
+  %32 = call i64 @_ZSt4__lgl(i64 %31)
+  %33 = mul nsw i64 %32, 2
+  %34 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %35 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %34, i8* %35, i64 8, i32 8, i1 false)
+  %36 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %37 = load i1 (i64, i64)*, i1 (i64, i64)** %36, align 8
+  call void @_ZSt16__introsort_loopIP2ptlN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_T1_(%struct.pt* %24, %struct.pt* %25, i64 %33, i1 (i64, i64)* %37)
+  %38 = load %struct.pt*, %struct.pt** %7, align 8
+  %39 = load %struct.pt*, %struct.pt** %8, align 8
+  %40 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %41 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %40, i8* %41, i64 8, i32 8, i1 false)
+  %42 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10, i32 0, i32 0
+  %43 = load i1 (i64, i64)*, i1 (i64, i64)** %42, align 8
+  call void @_ZSt22__final_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %38, %struct.pt* %39, i1 (i64, i64)* %43)
+  store i32 1292841638, i32* %14
+  br label %45
+
+; <label>:44:                                     ; preds = %15
+  ret void
+
+; <label>:45:                                     ; preds = %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i1 (i64, i64)* @_ZN9__gnu_cxx5__ops16__iter_comp_iterIPFb2ptS2_EEENS0_15_Iter_comp_iterIT_EES6_(i1 (i64, i64)*) #3 comdat {
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %3 = alloca i1 (i64, i64)*, align 8
+  store i1 (i64, i64)* %0, i1 (i64, i64)** %3, align 8
+  %4 = load i1 (i64, i64)*, i1 (i64, i64)** %3, align 8
+  call void @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %2, i1 (i64, i64)* %4)
+  %5 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %2, i32 0, i32 0
+  %6 = load i1 (i64, i64)*, i1 (i64, i64)** %5, align 8
+  ret i1 (i64, i64)* %6
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__introsort_loopIP2ptlN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_T1_(%struct.pt*, %struct.pt*, i64, i1 (i64, i64)*) #3 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = alloca %struct.pt*, align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %3, i1 (i64, i64)** %13, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  store i64 %2, i64* %8, align 8
+  %14 = alloca i32
+  store i32 -1254210966, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %4, %58
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -1254210966, label %18
+    i32 1627881868, label %27
+    i32 -1941577752, label %31
+    i32 1536813726, label %39
+    i32 -1366493536, label %57
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %58
+
+; <label>:18:                                     ; preds = %15
+  %19 = load %struct.pt*, %struct.pt** %7, align 8
+  %20 = load %struct.pt*, %struct.pt** %6, align 8
+  %21 = ptrtoint %struct.pt* %19 to i64
+  %22 = ptrtoint %struct.pt* %20 to i64
+  %23 = sub i64 %21, %22
+  %24 = sdiv exact i64 %23, 8
+  %25 = icmp sgt i64 %24, 16
+  %26 = select i1 %25, i32 1627881868, i32 -1366493536
+  store i32 %26, i32* %14
+  br label %58
+
+; <label>:27:                                     ; preds = %15
+  %28 = load i64, i64* %8, align 8
+  %29 = icmp eq i64 %28, 0
+  %30 = select i1 %29, i32 -1941577752, i32 1536813726
+  store i32 %30, i32* %14
+  br label %58
+
+; <label>:31:                                     ; preds = %15
+  %32 = load %struct.pt*, %struct.pt** %6, align 8
+  %33 = load %struct.pt*, %struct.pt** %7, align 8
+  %34 = load %struct.pt*, %struct.pt** %7, align 8
+  %35 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %36 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %35, i8* %36, i64 8, i32 8, i1 false)
+  %37 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %38 = load i1 (i64, i64)*, i1 (i64, i64)** %37, align 8
+  call void @_ZSt14__partial_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt* %32, %struct.pt* %33, %struct.pt* %34, i1 (i64, i64)* %38)
+  store i32 -1366493536, i32* %14
+  br label %58
+
+; <label>:39:                                     ; preds = %15
+  %40 = load i64, i64* %8, align 8
+  %41 = add nsw i64 %40, -1
+  store i64 %41, i64* %8, align 8
+  %42 = load %struct.pt*, %struct.pt** %6, align 8
+  %43 = load %struct.pt*, %struct.pt** %7, align 8
+  %44 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %45 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %44, i8* %45, i64 8, i32 8, i1 false)
+  %46 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11, i32 0, i32 0
+  %47 = load i1 (i64, i64)*, i1 (i64, i64)** %46, align 8
+  %48 = call %struct.pt* @_ZSt27__unguarded_partition_pivotIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_T0_(%struct.pt* %42, %struct.pt* %43, i1 (i64, i64)* %47)
+  store %struct.pt* %48, %struct.pt** %10, align 8
+  %49 = load %struct.pt*, %struct.pt** %10, align 8
+  %50 = load %struct.pt*, %struct.pt** %7, align 8
+  %51 = load i64, i64* %8, align 8
+  %52 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12 to i8*
+  %53 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %52, i8* %53, i64 8, i32 8, i1 false)
+  %54 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12, i32 0, i32 0
+  %55 = load i1 (i64, i64)*, i1 (i64, i64)** %54, align 8
+  call void @_ZSt16__introsort_loopIP2ptlN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_T1_(%struct.pt* %49, %struct.pt* %50, i64 %51, i1 (i64, i64)* %55)
+  %56 = load %struct.pt*, %struct.pt** %10, align 8
+  store %struct.pt* %56, %struct.pt** %7, align 8
+  store i32 -1254210966, i32* %14
+  br label %58
+
+; <label>:57:                                     ; preds = %15
+  ret void
+
+; <label>:58:                                     ; preds = %39, %31, %27, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZSt4__lgl(i64) #0 comdat {
+  %2 = alloca i64, align 8
+  store i64 %0, i64* %2, align 8
+  %3 = load i64, i64* %2, align 8
+  %4 = call i64 @llvm.ctlz.i64(i64 %3, i1 true)
+  %5 = trunc i64 %4 to i32
+  %6 = sext i32 %5 to i64
+  %7 = sub i64 63, %6
+  ret i64 %7
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #4
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__final_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca i64
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %11 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %11, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  %12 = load %struct.pt*, %struct.pt** %7, align 8
+  %13 = load %struct.pt*, %struct.pt** %6, align 8
+  %14 = ptrtoint %struct.pt* %12 to i64
+  %15 = ptrtoint %struct.pt* %13 to i64
+  %16 = sub i64 %14, %15
+  %17 = sdiv exact i64 %16, 8
+  store i64 %17, i64* %4
+  %18 = alloca i32
+  store i32 529466352, i32* %18
+  br label %19
+
+; <label>:19:                                     ; preds = %3, %49
+  %20 = load i32, i32* %18
+  switch i32 %20, label %21 [
+    i32 529466352, label %22
+    i32 1045526970, label %26
+    i32 -1116509828, label %41
+    i32 1311134921, label %48
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %49
+
+; <label>:22:                                     ; preds = %19
+  %23 = load volatile i64, i64* %4
+  %24 = icmp sgt i64 %23, 16
+  %25 = select i1 %24, i32 1045526970, i32 -1116509828
+  store i32 %25, i32* %18
+  br label %49
+
+; <label>:26:                                     ; preds = %19
+  %27 = load %struct.pt*, %struct.pt** %6, align 8
+  %28 = load %struct.pt*, %struct.pt** %6, align 8
+  %29 = getelementptr inbounds %struct.pt, %struct.pt* %28, i64 16
+  %30 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8 to i8*
+  %31 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %30, i8* %31, i64 8, i32 8, i1 false)
+  %32 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, i32 0, i32 0
+  %33 = load i1 (i64, i64)*, i1 (i64, i64)** %32, align 8
+  call void @_ZSt16__insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %27, %struct.pt* %29, i1 (i64, i64)* %33)
+  %34 = load %struct.pt*, %struct.pt** %6, align 8
+  %35 = getelementptr inbounds %struct.pt, %struct.pt* %34, i64 16
+  %36 = load %struct.pt*, %struct.pt** %7, align 8
+  %37 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %38 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %37, i8* %38, i64 8, i32 8, i1 false)
+  %39 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %40 = load i1 (i64, i64)*, i1 (i64, i64)** %39, align 8
+  call void @_ZSt26__unguarded_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %35, %struct.pt* %36, i1 (i64, i64)* %40)
+  store i32 1311134921, i32* %18
+  br label %49
+
+; <label>:41:                                     ; preds = %19
+  %42 = load %struct.pt*, %struct.pt** %6, align 8
+  %43 = load %struct.pt*, %struct.pt** %7, align 8
+  %44 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %45 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %44, i8* %45, i64 8, i32 8, i1 false)
+  %46 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10, i32 0, i32 0
+  %47 = load i1 (i64, i64)*, i1 (i64, i64)** %46, align 8
+  call void @_ZSt16__insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %42, %struct.pt* %43, i1 (i64, i64)* %47)
+  store i32 1311134921, i32* %18
+  br label %49
+
+; <label>:48:                                     ; preds = %19
+  ret void
+
+; <label>:49:                                     ; preds = %41, %26, %22, %21
+  br label %19
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt14__partial_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt*, %struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %11 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %3, i1 (i64, i64)** %11, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  store %struct.pt* %2, %struct.pt** %8, align 8
+  %12 = load %struct.pt*, %struct.pt** %6, align 8
+  %13 = load %struct.pt*, %struct.pt** %7, align 8
+  %14 = load %struct.pt*, %struct.pt** %8, align 8
+  %15 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %16 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 8, i32 8, i1 false)
+  %17 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %18 = load i1 (i64, i64)*, i1 (i64, i64)** %17, align 8
+  call void @_ZSt13__heap_selectIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt* %12, %struct.pt* %13, %struct.pt* %14, i1 (i64, i64)* %18)
+  %19 = load %struct.pt*, %struct.pt** %6, align 8
+  %20 = load %struct.pt*, %struct.pt** %7, align 8
+  %21 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %22 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %21, i8* %22, i64 8, i32 8, i1 false)
+  %23 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10, i32 0, i32 0
+  %24 = load i1 (i64, i64)*, i1 (i64, i64)** %23, align 8
+  call void @_ZSt11__sort_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %19, %struct.pt* %20, i1 (i64, i64)* %24)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt27__unguarded_partition_pivotIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %10, align 8
+  store %struct.pt* %0, %struct.pt** %5, align 8
+  store %struct.pt* %1, %struct.pt** %6, align 8
+  %11 = load %struct.pt*, %struct.pt** %5, align 8
+  %12 = load %struct.pt*, %struct.pt** %6, align 8
+  %13 = load %struct.pt*, %struct.pt** %5, align 8
+  %14 = ptrtoint %struct.pt* %12 to i64
+  %15 = ptrtoint %struct.pt* %13 to i64
+  %16 = sub i64 %14, %15
+  %17 = sdiv exact i64 %16, 8
+  %18 = sdiv i64 %17, 2
+  %19 = getelementptr inbounds %struct.pt, %struct.pt* %11, i64 %18
+  store %struct.pt* %19, %struct.pt** %7, align 8
+  %20 = load %struct.pt*, %struct.pt** %5, align 8
+  %21 = load %struct.pt*, %struct.pt** %5, align 8
+  %22 = getelementptr inbounds %struct.pt, %struct.pt* %21, i64 1
+  %23 = load %struct.pt*, %struct.pt** %7, align 8
+  %24 = load %struct.pt*, %struct.pt** %6, align 8
+  %25 = getelementptr inbounds %struct.pt, %struct.pt* %24, i64 -1
+  %26 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8 to i8*
+  %27 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %26, i8* %27, i64 8, i32 8, i1 false)
+  %28 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, i32 0, i32 0
+  %29 = load i1 (i64, i64)*, i1 (i64, i64)** %28, align 8
+  call void @_ZSt22__move_median_to_firstIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_S8_T0_(%struct.pt* %20, %struct.pt* %22, %struct.pt* %23, %struct.pt* %25, i1 (i64, i64)* %29)
+  %30 = load %struct.pt*, %struct.pt** %5, align 8
+  %31 = getelementptr inbounds %struct.pt, %struct.pt* %30, i64 1
+  %32 = load %struct.pt*, %struct.pt** %6, align 8
+  %33 = load %struct.pt*, %struct.pt** %5, align 8
+  %34 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %35 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %34, i8* %35, i64 8, i32 8, i1 false)
+  %36 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %37 = load i1 (i64, i64)*, i1 (i64, i64)** %36, align 8
+  %38 = call %struct.pt* @_ZSt21__unguarded_partitionIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_S8_T0_(%struct.pt* %31, %struct.pt* %32, %struct.pt* %33, i1 (i64, i64)* %37)
+  ret %struct.pt* %38
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__heap_selectIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt*, %struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = alloca %struct.pt*, align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %12 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %3, i1 (i64, i64)** %12, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  store %struct.pt* %2, %struct.pt** %8, align 8
+  %13 = load %struct.pt*, %struct.pt** %6, align 8
+  %14 = load %struct.pt*, %struct.pt** %7, align 8
+  %15 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %16 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 8, i32 8, i1 false)
+  %17 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %18 = load i1 (i64, i64)*, i1 (i64, i64)** %17, align 8
+  call void @_ZSt11__make_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt* %13, %struct.pt* %14, i1 (i64, i64)* %18)
+  %19 = load %struct.pt*, %struct.pt** %7, align 8
+  store %struct.pt* %19, %struct.pt** %10, align 8
+  %20 = alloca i32
+  store i32 -384264315, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %4, %47
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 -384264315, label %24
+    i32 -911330307, label %29
+    i32 1266853105, label %34
+    i32 645491294, label %42
+    i32 500315626, label %43
+    i32 711253936, label %46
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %47
+
+; <label>:24:                                     ; preds = %21
+  %25 = load %struct.pt*, %struct.pt** %10, align 8
+  %26 = load %struct.pt*, %struct.pt** %8, align 8
+  %27 = icmp ult %struct.pt* %25, %26
+  %28 = select i1 %27, i32 -911330307, i32 711253936
+  store i32 %28, i32* %20
+  br label %47
+
+; <label>:29:                                     ; preds = %21
+  %30 = load %struct.pt*, %struct.pt** %10, align 8
+  %31 = load %struct.pt*, %struct.pt** %6, align 8
+  %32 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, %struct.pt* %30, %struct.pt* %31)
+  %33 = select i1 %32, i32 1266853105, i32 645491294
+  store i32 %33, i32* %20
+  br label %47
+
+; <label>:34:                                     ; preds = %21
+  %35 = load %struct.pt*, %struct.pt** %6, align 8
+  %36 = load %struct.pt*, %struct.pt** %7, align 8
+  %37 = load %struct.pt*, %struct.pt** %10, align 8
+  %38 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %39 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %38, i8* %39, i64 8, i32 8, i1 false)
+  %40 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11, i32 0, i32 0
+  %41 = load i1 (i64, i64)*, i1 (i64, i64)** %40, align 8
+  call void @_ZSt10__pop_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt* %35, %struct.pt* %36, %struct.pt* %37, i1 (i64, i64)* %41)
+  store i32 645491294, i32* %20
+  br label %47
+
+; <label>:42:                                     ; preds = %21
+  store i32 500315626, i32* %20
+  br label %47
+
+; <label>:43:                                     ; preds = %21
+  %44 = load %struct.pt*, %struct.pt** %10, align 8
+  %45 = getelementptr inbounds %struct.pt, %struct.pt* %44, i32 1
+  store %struct.pt* %45, %struct.pt** %10, align 8
+  store i32 -384264315, i32* %20
+  br label %47
+
+; <label>:46:                                     ; preds = %21
+  ret void
+
+; <label>:47:                                     ; preds = %43, %42, %34, %29, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__sort_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %8 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %8, align 8
+  store %struct.pt* %0, %struct.pt** %5, align 8
+  store %struct.pt* %1, %struct.pt** %6, align 8
+  %9 = alloca i32
+  store i32 -1162142524, i32* %9
+  br label %10
+
+; <label>:10:                                     ; preds = %3, %33
+  %11 = load i32, i32* %9
+  switch i32 %11, label %12 [
+    i32 -1162142524, label %13
+    i32 -1414328720, label %22
+    i32 -1417178913, label %32
+  ]
+
+; <label>:12:                                     ; preds = %10
+  br label %33
+
+; <label>:13:                                     ; preds = %10
+  %14 = load %struct.pt*, %struct.pt** %6, align 8
+  %15 = load %struct.pt*, %struct.pt** %5, align 8
+  %16 = ptrtoint %struct.pt* %14 to i64
+  %17 = ptrtoint %struct.pt* %15 to i64
+  %18 = sub i64 %16, %17
+  %19 = sdiv exact i64 %18, 8
+  %20 = icmp sgt i64 %19, 1
+  %21 = select i1 %20, i32 -1414328720, i32 -1417178913
+  store i32 %21, i32* %9
+  br label %33
+
+; <label>:22:                                     ; preds = %10
+  %23 = load %struct.pt*, %struct.pt** %6, align 8
+  %24 = getelementptr inbounds %struct.pt, %struct.pt* %23, i32 -1
+  store %struct.pt* %24, %struct.pt** %6, align 8
+  %25 = load %struct.pt*, %struct.pt** %5, align 8
+  %26 = load %struct.pt*, %struct.pt** %6, align 8
+  %27 = load %struct.pt*, %struct.pt** %6, align 8
+  %28 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  %29 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %28, i8* %29, i64 8, i32 8, i1 false)
+  %30 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, i32 0, i32 0
+  %31 = load i1 (i64, i64)*, i1 (i64, i64)** %30, align 8
+  call void @_ZSt10__pop_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt* %25, %struct.pt* %26, %struct.pt* %27, i1 (i64, i64)* %31)
+  store i32 -1162142524, i32* %9
+  br label %33
+
+; <label>:32:                                     ; preds = %10
+  ret void
+
+; <label>:33:                                     ; preds = %22, %13, %12
+  br label %10
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__make_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca i64
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i64, align 8
+  %10 = alloca %struct.pt, align 4
+  %11 = alloca %struct.pt, align 4
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %13, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  %14 = load %struct.pt*, %struct.pt** %7, align 8
+  %15 = load %struct.pt*, %struct.pt** %6, align 8
+  %16 = ptrtoint %struct.pt* %14 to i64
+  %17 = ptrtoint %struct.pt* %15 to i64
+  %18 = sub i64 %16, %17
+  %19 = sdiv exact i64 %18, 8
+  store i64 %19, i64* %4
+  %20 = alloca i32
+  store i32 653854171, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %3, %66
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 653854171, label %24
+    i32 853361054, label %28
+    i32 -1579928859, label %29
+    i32 70989226, label %39
+    i32 1954528181, label %61
+    i32 1585186425, label %62
+    i32 -24798139, label %65
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %66
+
+; <label>:24:                                     ; preds = %21
+  %25 = load volatile i64, i64* %4
+  %26 = icmp slt i64 %25, 2
+  %27 = select i1 %26, i32 853361054, i32 -1579928859
+  store i32 %27, i32* %20
+  br label %66
+
+; <label>:28:                                     ; preds = %21
+  store i32 -24798139, i32* %20
+  br label %66
+
+; <label>:29:                                     ; preds = %21
+  %30 = load %struct.pt*, %struct.pt** %7, align 8
+  %31 = load %struct.pt*, %struct.pt** %6, align 8
+  %32 = ptrtoint %struct.pt* %30 to i64
+  %33 = ptrtoint %struct.pt* %31 to i64
+  %34 = sub i64 %32, %33
+  %35 = sdiv exact i64 %34, 8
+  store i64 %35, i64* %8, align 8
+  %36 = load i64, i64* %8, align 8
+  %37 = sub nsw i64 %36, 2
+  %38 = sdiv i64 %37, 2
+  store i64 %38, i64* %9, align 8
+  store i32 70989226, i32* %20
+  br label %66
+
+; <label>:39:                                     ; preds = %21
+  %40 = load %struct.pt*, %struct.pt** %6, align 8
+  %41 = load i64, i64* %9, align 8
+  %42 = getelementptr inbounds %struct.pt, %struct.pt* %40, i64 %41
+  %43 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %42) #6
+  %44 = bitcast %struct.pt* %10 to i8*
+  %45 = bitcast %struct.pt* %43 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %44, i8* %45, i64 8, i32 4, i1 false)
+  %46 = load %struct.pt*, %struct.pt** %6, align 8
+  %47 = load i64, i64* %9, align 8
+  %48 = load i64, i64* %8, align 8
+  %49 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %10) #6
+  %50 = bitcast %struct.pt* %11 to i8*
+  %51 = bitcast %struct.pt* %49 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %50, i8* %51, i64 8, i32 4, i1 false)
+  %52 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12 to i8*
+  %53 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %52, i8* %53, i64 8, i32 8, i1 false)
+  %54 = bitcast %struct.pt* %11 to i64*
+  %55 = load i64, i64* %54, align 4
+  %56 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12, i32 0, i32 0
+  %57 = load i1 (i64, i64)*, i1 (i64, i64)** %56, align 8
+  call void @_ZSt13__adjust_heapIP2ptlS0_N9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_T0_S9_T1_T2_(%struct.pt* %46, i64 %47, i64 %48, i64 %55, i1 (i64, i64)* %57)
+  %58 = load i64, i64* %9, align 8
+  %59 = icmp eq i64 %58, 0
+  %60 = select i1 %59, i32 1954528181, i32 1585186425
+  store i32 %60, i32* %20
+  br label %66
+
+; <label>:61:                                     ; preds = %21
+  store i32 -24798139, i32* %20
+  br label %66
+
+; <label>:62:                                     ; preds = %21
+  %63 = load i64, i64* %9, align 8
+  %64 = add nsw i64 %63, -1
+  store i64 %64, i64* %9, align 8
+  store i32 70989226, i32* %20
+  br label %66
+
+; <label>:65:                                     ; preds = %21
+  ret void
+
+; <label>:66:                                     ; preds = %62, %61, %39, %29, %28, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %struct.pt*, %struct.pt*) #3 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt, align 4
+  %8 = alloca %struct.pt, align 4
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  %9 = load %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4, align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %11 = load i1 (i64, i64)*, i1 (i64, i64)** %10, align 8
+  %12 = load %struct.pt*, %struct.pt** %5, align 8
+  %13 = bitcast %struct.pt* %7 to i8*
+  %14 = bitcast %struct.pt* %12 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 4, i1 false)
+  %15 = load %struct.pt*, %struct.pt** %6, align 8
+  %16 = bitcast %struct.pt* %8 to i8*
+  %17 = bitcast %struct.pt* %15 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %16, i8* %17, i64 8, i32 4, i1 false)
+  %18 = bitcast %struct.pt* %7 to i64*
+  %19 = load i64, i64* %18, align 4
+  %20 = bitcast %struct.pt* %8 to i64*
+  %21 = load i64, i64* %20, align 4
+  %22 = call zeroext i1 %11(i64 %19, i64 %21)
+  ret i1 %22
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt10__pop_heapIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_T0_(%struct.pt*, %struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca %struct.pt, align 4
+  %10 = alloca %struct.pt, align 4
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %12 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %3, i1 (i64, i64)** %12, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  store %struct.pt* %2, %struct.pt** %8, align 8
+  %13 = load %struct.pt*, %struct.pt** %8, align 8
+  %14 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %13) #6
+  %15 = bitcast %struct.pt* %9 to i8*
+  %16 = bitcast %struct.pt* %14 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 8, i32 4, i1 false)
+  %17 = load %struct.pt*, %struct.pt** %6, align 8
+  %18 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %17) #6
+  %19 = load %struct.pt*, %struct.pt** %8, align 8
+  %20 = bitcast %struct.pt* %19 to i8*
+  %21 = bitcast %struct.pt* %18 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %20, i8* %21, i64 8, i32 4, i1 false)
+  %22 = load %struct.pt*, %struct.pt** %6, align 8
+  %23 = load %struct.pt*, %struct.pt** %7, align 8
+  %24 = load %struct.pt*, %struct.pt** %6, align 8
+  %25 = ptrtoint %struct.pt* %23 to i64
+  %26 = ptrtoint %struct.pt* %24 to i64
+  %27 = sub i64 %25, %26
+  %28 = sdiv exact i64 %27, 8
+  %29 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %9) #6
+  %30 = bitcast %struct.pt* %10 to i8*
+  %31 = bitcast %struct.pt* %29 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %30, i8* %31, i64 8, i32 4, i1 false)
+  %32 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %33 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %32, i8* %33, i64 8, i32 8, i1 false)
+  %34 = bitcast %struct.pt* %10 to i64*
+  %35 = load i64, i64* %34, align 4
+  %36 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11, i32 0, i32 0
+  %37 = load i1 (i64, i64)*, i1 (i64, i64)** %36, align 8
+  call void @_ZSt13__adjust_heapIP2ptlS0_N9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_T0_S9_T1_T2_(%struct.pt* %22, i64 0, i64 %28, i64 %35, i1 (i64, i64)* %37)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8)) #0 comdat {
+  %2 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %2, align 8
+  %3 = load %struct.pt*, %struct.pt** %2, align 8
+  ret %struct.pt* %3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__adjust_heapIP2ptlS0_N9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_T0_S9_T1_T2_(%struct.pt*, i64, i64, i64, i1 (i64, i64)*) #3 comdat {
+  %6 = alloca %struct.pt, align 4
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca i64, align 8
+  %10 = alloca i64, align 8
+  %11 = alloca i64, align 8
+  %12 = alloca i64, align 8
+  %13 = alloca %struct.pt, align 4
+  %14 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 8
+  %15 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %16 = bitcast %struct.pt* %6 to i64*
+  store i64 %3, i64* %16, align 4
+  %17 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, i32 0, i32 0
+  store i1 (i64, i64)* %4, i1 (i64, i64)** %17, align 8
+  store %struct.pt* %0, %struct.pt** %8, align 8
+  store i64 %1, i64* %9, align 8
+  store i64 %2, i64* %10, align 8
+  %18 = load i64, i64* %9, align 8
+  store i64 %18, i64* %11, align 8
+  %19 = load i64, i64* %9, align 8
+  store i64 %19, i64* %12, align 8
+  %20 = alloca i32
+  store i32 1291248649, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %5, %103
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 1291248649, label %24
+    i32 -1310296134, label %31
+    i32 588352995, label %44
+    i32 1325889930, label %47
+    i32 1061511817, label %58
+    i32 -1224058835, label %63
+    i32 -746817670, label %70
+    i32 -1345378709, label %86
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %103
+
+; <label>:24:                                     ; preds = %21
+  %25 = load i64, i64* %12, align 8
+  %26 = load i64, i64* %10, align 8
+  %27 = sub nsw i64 %26, 1
+  %28 = sdiv i64 %27, 2
+  %29 = icmp slt i64 %25, %28
+  %30 = select i1 %29, i32 -1310296134, i32 1061511817
+  store i32 %30, i32* %20
+  br label %103
+
+; <label>:31:                                     ; preds = %21
+  %32 = load i64, i64* %12, align 8
+  %33 = add nsw i64 %32, 1
+  %34 = mul nsw i64 2, %33
+  store i64 %34, i64* %12, align 8
+  %35 = load %struct.pt*, %struct.pt** %8, align 8
+  %36 = load i64, i64* %12, align 8
+  %37 = getelementptr inbounds %struct.pt, %struct.pt* %35, i64 %36
+  %38 = load %struct.pt*, %struct.pt** %8, align 8
+  %39 = load i64, i64* %12, align 8
+  %40 = sub nsw i64 %39, 1
+  %41 = getelementptr inbounds %struct.pt, %struct.pt* %38, i64 %40
+  %42 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, %struct.pt* %37, %struct.pt* %41)
+  %43 = select i1 %42, i32 588352995, i32 1325889930
+  store i32 %43, i32* %20
+  br label %103
+
+; <label>:44:                                     ; preds = %21
+  %45 = load i64, i64* %12, align 8
+  %46 = add nsw i64 %45, -1
+  store i64 %46, i64* %12, align 8
+  store i32 1325889930, i32* %20
+  br label %103
+
+; <label>:47:                                     ; preds = %21
+  %48 = load %struct.pt*, %struct.pt** %8, align 8
+  %49 = load i64, i64* %12, align 8
+  %50 = getelementptr inbounds %struct.pt, %struct.pt* %48, i64 %49
+  %51 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %50) #6
+  %52 = load %struct.pt*, %struct.pt** %8, align 8
+  %53 = load i64, i64* %9, align 8
+  %54 = getelementptr inbounds %struct.pt, %struct.pt* %52, i64 %53
+  %55 = bitcast %struct.pt* %54 to i8*
+  %56 = bitcast %struct.pt* %51 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %55, i8* %56, i64 8, i32 4, i1 false)
+  %57 = load i64, i64* %12, align 8
+  store i64 %57, i64* %9, align 8
+  store i32 1291248649, i32* %20
+  br label %103
+
+; <label>:58:                                     ; preds = %21
+  %59 = load i64, i64* %10, align 8
+  %60 = and i64 %59, 1
+  %61 = icmp eq i64 %60, 0
+  %62 = select i1 %61, i32 -1224058835, i32 -1345378709
+  store i32 %62, i32* %20
+  br label %103
+
+; <label>:63:                                     ; preds = %21
+  %64 = load i64, i64* %12, align 8
+  %65 = load i64, i64* %10, align 8
+  %66 = sub nsw i64 %65, 2
+  %67 = sdiv i64 %66, 2
+  %68 = icmp eq i64 %64, %67
+  %69 = select i1 %68, i32 -746817670, i32 -1345378709
+  store i32 %69, i32* %20
+  br label %103
+
+; <label>:70:                                     ; preds = %21
+  %71 = load i64, i64* %12, align 8
+  %72 = add nsw i64 %71, 1
+  %73 = mul nsw i64 2, %72
+  store i64 %73, i64* %12, align 8
+  %74 = load %struct.pt*, %struct.pt** %8, align 8
+  %75 = load i64, i64* %12, align 8
+  %76 = sub nsw i64 %75, 1
+  %77 = getelementptr inbounds %struct.pt, %struct.pt* %74, i64 %76
+  %78 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %77) #6
+  %79 = load %struct.pt*, %struct.pt** %8, align 8
+  %80 = load i64, i64* %9, align 8
+  %81 = getelementptr inbounds %struct.pt, %struct.pt* %79, i64 %80
+  %82 = bitcast %struct.pt* %81 to i8*
+  %83 = bitcast %struct.pt* %78 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %82, i8* %83, i64 8, i32 4, i1 false)
+  %84 = load i64, i64* %12, align 8
+  %85 = sub nsw i64 %84, 1
+  store i64 %85, i64* %9, align 8
+  store i32 -1345378709, i32* %20
+  br label %103
+
+; <label>:86:                                     ; preds = %21
+  %87 = load %struct.pt*, %struct.pt** %8, align 8
+  %88 = load i64, i64* %9, align 8
+  %89 = load i64, i64* %11, align 8
+  %90 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %6) #6
+  %91 = bitcast %struct.pt* %13 to i8*
+  %92 = bitcast %struct.pt* %90 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %91, i8* %92, i64 8, i32 4, i1 false)
+  %93 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %15 to i8*
+  %94 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %93, i8* %94, i64 8, i32 8, i1 false)
+  %95 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %15, i32 0, i32 0
+  %96 = load i1 (i64, i64)*, i1 (i64, i64)** %95, align 8
+  %97 = call i1 (i64, i64)* @_ZN9__gnu_cxx5__ops15__iter_comp_valIPFb2ptS2_EEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS6_EE(i1 (i64, i64)* %96)
+  %98 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %14, i32 0, i32 0
+  store i1 (i64, i64)* %97, i1 (i64, i64)** %98, align 8
+  %99 = bitcast %struct.pt* %13 to i64*
+  %100 = load i64, i64* %99, align 4
+  %101 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %14, i32 0, i32 0
+  %102 = load i1 (i64, i64)*, i1 (i64, i64)** %101, align 8
+  call void @_ZSt11__push_heapIP2ptlS0_N9__gnu_cxx5__ops14_Iter_comp_valIPFbS0_S0_EEEEvT_T0_S9_T1_T2_(%struct.pt* %87, i64 %88, i64 %89, i64 %100, i1 (i64, i64)* %102)
+  ret void
+
+; <label>:103:                                    ; preds = %70, %63, %58, %47, %44, %31, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__push_heapIP2ptlS0_N9__gnu_cxx5__ops14_Iter_comp_valIPFbS0_S0_EEEEvT_T0_S9_T1_T2_(%struct.pt*, i64, i64, i64, i1 (i64, i64)*) #3 comdat {
+  %6 = alloca %struct.pt, align 4
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca i64, align 8
+  %10 = alloca i64, align 8
+  %11 = alloca i64, align 8
+  %12 = bitcast %struct.pt* %6 to i64*
+  store i64 %3, i64* %12, align 4
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %7, i32 0, i32 0
+  store i1 (i64, i64)* %4, i1 (i64, i64)** %13, align 8
+  store %struct.pt* %0, %struct.pt** %8, align 8
+  store i64 %1, i64* %9, align 8
+  store i64 %2, i64* %10, align 8
+  %14 = load i64, i64* %9, align 8
+  %15 = sub nsw i64 %14, 1
+  %16 = sdiv i64 %15, 2
+  store i64 %16, i64* %11, align 8
+  %17 = alloca i32
+  store i32 1235036144, i32* %17
+  %18 = alloca i1
+  br label %19
+
+; <label>:19:                                     ; preds = %5, %56
+  %20 = load i32, i32* %17
+  switch i32 %20, label %21 [
+    i32 1235036144, label %22
+    i32 -1496865792, label %27
+    i32 1554440367, label %32
+    i32 -740552413, label %35
+    i32 -355801336, label %49
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %56
+
+; <label>:22:                                     ; preds = %19
+  %23 = load i64, i64* %9, align 8
+  %24 = load i64, i64* %10, align 8
+  %25 = icmp sgt i64 %23, %24
+  %26 = select i1 %25, i32 -1496865792, i32 1554440367
+  store i32 %26, i32* %17
+  store i1 false, i1* %18
+  br label %56
+
+; <label>:27:                                     ; preds = %19
+  %28 = load %struct.pt*, %struct.pt** %8, align 8
+  %29 = load i64, i64* %11, align 8
+  %30 = getelementptr inbounds %struct.pt, %struct.pt* %28, i64 %29
+  %31 = call zeroext i1 @_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEclIPS2_S2_EEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"* %7, %struct.pt* %30, %struct.pt* dereferenceable(8) %6)
+  store i32 1554440367, i32* %17
+  store i1 %31, i1* %18
+  br label %56
+
+; <label>:32:                                     ; preds = %19
+  %33 = load i1, i1* %18
+  %34 = select i1 %33, i32 -740552413, i32 -355801336
+  store i32 %34, i32* %17
+  br label %56
+
+; <label>:35:                                     ; preds = %19
+  %36 = load %struct.pt*, %struct.pt** %8, align 8
+  %37 = load i64, i64* %11, align 8
+  %38 = getelementptr inbounds %struct.pt, %struct.pt* %36, i64 %37
+  %39 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %38) #6
+  %40 = load %struct.pt*, %struct.pt** %8, align 8
+  %41 = load i64, i64* %9, align 8
+  %42 = getelementptr inbounds %struct.pt, %struct.pt* %40, i64 %41
+  %43 = bitcast %struct.pt* %42 to i8*
+  %44 = bitcast %struct.pt* %39 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %43, i8* %44, i64 8, i32 4, i1 false)
+  %45 = load i64, i64* %11, align 8
+  store i64 %45, i64* %9, align 8
+  %46 = load i64, i64* %9, align 8
+  %47 = sub nsw i64 %46, 1
+  %48 = sdiv i64 %47, 2
+  store i64 %48, i64* %11, align 8
+  store i32 1235036144, i32* %17
+  br label %56
+
+; <label>:49:                                     ; preds = %19
+  %50 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %6) #6
+  %51 = load %struct.pt*, %struct.pt** %8, align 8
+  %52 = load i64, i64* %9, align 8
+  %53 = getelementptr inbounds %struct.pt, %struct.pt* %51, i64 %52
+  %54 = bitcast %struct.pt* %53 to i8*
+  %55 = bitcast %struct.pt* %50 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %54, i8* %55, i64 8, i32 4, i1 false)
+  ret void
+
+; <label>:56:                                     ; preds = %35, %32, %27, %22, %21
+  br label %19
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i1 (i64, i64)* @_ZN9__gnu_cxx5__ops15__iter_comp_valIPFb2ptS2_EEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS6_EE(i1 (i64, i64)*) #3 comdat {
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 8
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %4 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %3, i32 0, i32 0
+  store i1 (i64, i64)* %0, i1 (i64, i64)** %4, align 8
+  %5 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %3, i32 0, i32 0
+  %6 = load i1 (i64, i64)*, i1 (i64, i64)** %5, align 8
+  call void @_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"* %2, i1 (i64, i64)* %6)
+  %7 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %2, i32 0, i32 0
+  %8 = load i1 (i64, i64)*, i1 (i64, i64)** %7, align 8
+  ret i1 (i64, i64)* %8
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEclIPS2_S2_EEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %struct.pt*, %struct.pt* dereferenceable(8)) #3 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt, align 4
+  %8 = alloca %struct.pt, align 4
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  %9 = load %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %4, align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %9, i32 0, i32 0
+  %11 = load i1 (i64, i64)*, i1 (i64, i64)** %10, align 8
+  %12 = load %struct.pt*, %struct.pt** %5, align 8
+  %13 = bitcast %struct.pt* %7 to i8*
+  %14 = bitcast %struct.pt* %12 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 4, i1 false)
+  %15 = load %struct.pt*, %struct.pt** %6, align 8
+  %16 = bitcast %struct.pt* %8 to i8*
+  %17 = bitcast %struct.pt* %15 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %16, i8* %17, i64 8, i32 4, i1 false)
+  %18 = bitcast %struct.pt* %7 to i64*
+  %19 = load i64, i64* %18, align 4
+  %20 = bitcast %struct.pt* %8 to i64*
+  %21 = load i64, i64* %20, align 4
+  %22 = call zeroext i1 %11(i64 %19, i64 %21)
+  ret i1 %22
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops14_Iter_comp_valIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"*, i1 (i64, i64)*) unnamed_addr #0 comdat align 2 {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, align 8
+  %4 = alloca i1 (i64, i64)*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %3, align 8
+  store i1 (i64, i64)* %1, i1 (i64, i64)** %4, align 8
+  %5 = load %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %3, align 8
+  %6 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %5, i32 0, i32 0
+  %7 = load i1 (i64, i64)*, i1 (i64, i64)** %4, align 8
+  store i1 (i64, i64)* %7, i1 (i64, i64)** %6, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__move_median_to_firstIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_S8_S8_T0_(%struct.pt*, %struct.pt*, %struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %6 = alloca %struct.pt*
+  %7 = alloca %struct.pt*
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %9 = alloca %struct.pt*, align 8
+  %10 = alloca %struct.pt*, align 8
+  %11 = alloca %struct.pt*, align 8
+  %12 = alloca %struct.pt*, align 8
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, i32 0, i32 0
+  store i1 (i64, i64)* %4, i1 (i64, i64)** %13, align 8
+  store %struct.pt* %0, %struct.pt** %9, align 8
+  store %struct.pt* %1, %struct.pt** %10, align 8
+  store %struct.pt* %2, %struct.pt** %11, align 8
+  store %struct.pt* %3, %struct.pt** %12, align 8
+  %14 = load %struct.pt*, %struct.pt** %10, align 8
+  store %struct.pt* %14, %struct.pt** %7
+  %15 = load %struct.pt*, %struct.pt** %11, align 8
+  store %struct.pt* %15, %struct.pt** %6
+  %16 = alloca i32
+  store i32 -1663506280, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %5, %68
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -1663506280, label %20
+    i32 -145449020, label %25
+    i32 553974167, label %30
+    i32 1526851288, label %33
+    i32 811700870, label %38
+    i32 224052923, label %41
+    i32 -1787944196, label %44
+    i32 2084125339, label %45
+    i32 -870119067, label %46
+    i32 2140441288, label %51
+    i32 1098709443, label %54
+    i32 1529291080, label %59
+    i32 238649446, label %62
+    i32 -1587885657, label %65
+    i32 1689440346, label %66
+    i32 -1609211793, label %67
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %68
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile %struct.pt*, %struct.pt** %7
+  %22 = load volatile %struct.pt*, %struct.pt** %6
+  %23 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, %struct.pt* %21, %struct.pt* %22)
+  %24 = select i1 %23, i32 -145449020, i32 -870119067
+  store i32 %24, i32* %16
+  br label %68
+
+; <label>:25:                                     ; preds = %17
+  %26 = load %struct.pt*, %struct.pt** %11, align 8
+  %27 = load %struct.pt*, %struct.pt** %12, align 8
+  %28 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, %struct.pt* %26, %struct.pt* %27)
+  %29 = select i1 %28, i32 553974167, i32 1526851288
+  store i32 %29, i32* %16
+  br label %68
+
+; <label>:30:                                     ; preds = %17
+  %31 = load %struct.pt*, %struct.pt** %9, align 8
+  %32 = load %struct.pt*, %struct.pt** %11, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %31, %struct.pt* %32)
+  store i32 2084125339, i32* %16
+  br label %68
+
+; <label>:33:                                     ; preds = %17
+  %34 = load %struct.pt*, %struct.pt** %10, align 8
+  %35 = load %struct.pt*, %struct.pt** %12, align 8
+  %36 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, %struct.pt* %34, %struct.pt* %35)
+  %37 = select i1 %36, i32 811700870, i32 224052923
+  store i32 %37, i32* %16
+  br label %68
+
+; <label>:38:                                     ; preds = %17
+  %39 = load %struct.pt*, %struct.pt** %9, align 8
+  %40 = load %struct.pt*, %struct.pt** %12, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %39, %struct.pt* %40)
+  store i32 -1787944196, i32* %16
+  br label %68
+
+; <label>:41:                                     ; preds = %17
+  %42 = load %struct.pt*, %struct.pt** %9, align 8
+  %43 = load %struct.pt*, %struct.pt** %10, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %42, %struct.pt* %43)
+  store i32 -1787944196, i32* %16
+  br label %68
+
+; <label>:44:                                     ; preds = %17
+  store i32 2084125339, i32* %16
+  br label %68
+
+; <label>:45:                                     ; preds = %17
+  store i32 -1609211793, i32* %16
+  br label %68
+
+; <label>:46:                                     ; preds = %17
+  %47 = load %struct.pt*, %struct.pt** %10, align 8
+  %48 = load %struct.pt*, %struct.pt** %12, align 8
+  %49 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, %struct.pt* %47, %struct.pt* %48)
+  %50 = select i1 %49, i32 2140441288, i32 1098709443
+  store i32 %50, i32* %16
+  br label %68
+
+; <label>:51:                                     ; preds = %17
+  %52 = load %struct.pt*, %struct.pt** %9, align 8
+  %53 = load %struct.pt*, %struct.pt** %10, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %52, %struct.pt* %53)
+  store i32 1689440346, i32* %16
+  br label %68
+
+; <label>:54:                                     ; preds = %17
+  %55 = load %struct.pt*, %struct.pt** %11, align 8
+  %56 = load %struct.pt*, %struct.pt** %12, align 8
+  %57 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8, %struct.pt* %55, %struct.pt* %56)
+  %58 = select i1 %57, i32 1529291080, i32 238649446
+  store i32 %58, i32* %16
+  br label %68
+
+; <label>:59:                                     ; preds = %17
+  %60 = load %struct.pt*, %struct.pt** %9, align 8
+  %61 = load %struct.pt*, %struct.pt** %12, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %60, %struct.pt* %61)
+  store i32 -1587885657, i32* %16
+  br label %68
+
+; <label>:62:                                     ; preds = %17
+  %63 = load %struct.pt*, %struct.pt** %9, align 8
+  %64 = load %struct.pt*, %struct.pt** %11, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %63, %struct.pt* %64)
+  store i32 -1587885657, i32* %16
+  br label %68
+
+; <label>:65:                                     ; preds = %17
+  store i32 1689440346, i32* %16
+  br label %68
+
+; <label>:66:                                     ; preds = %17
+  store i32 -1609211793, i32* %16
+  br label %68
+
+; <label>:67:                                     ; preds = %17
+  ret void
+
+; <label>:68:                                     ; preds = %66, %65, %62, %59, %54, %51, %46, %45, %44, %41, %38, %33, %30, %25, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt21__unguarded_partitionIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEET_S8_S8_S8_T0_(%struct.pt*, %struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  store i1 (i64, i64)* %3, i1 (i64, i64)** %9, align 8
+  store %struct.pt* %0, %struct.pt** %6, align 8
+  store %struct.pt* %1, %struct.pt** %7, align 8
+  store %struct.pt* %2, %struct.pt** %8, align 8
+  %10 = alloca i32
+  store i32 -131819139, i32* %10
+  br label %11
+
+; <label>:11:                                     ; preds = %4, %46
+  %12 = load i32, i32* %10
+  switch i32 %12, label %13 [
+    i32 -131819139, label %14
+    i32 -1859090281, label %15
+    i32 2060737972, label %20
+    i32 916155902, label %23
+    i32 -53291154, label %26
+    i32 -571874190, label %31
+    i32 -840862733, label %34
+    i32 -1585380575, label %39
+    i32 1505609011, label %41
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %46
+
+; <label>:14:                                     ; preds = %11
+  store i32 -1859090281, i32* %10
+  br label %46
+
+; <label>:15:                                     ; preds = %11
+  %16 = load %struct.pt*, %struct.pt** %6, align 8
+  %17 = load %struct.pt*, %struct.pt** %8, align 8
+  %18 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, %struct.pt* %16, %struct.pt* %17)
+  %19 = select i1 %18, i32 2060737972, i32 916155902
+  store i32 %19, i32* %10
+  br label %46
+
+; <label>:20:                                     ; preds = %11
+  %21 = load %struct.pt*, %struct.pt** %6, align 8
+  %22 = getelementptr inbounds %struct.pt, %struct.pt* %21, i32 1
+  store %struct.pt* %22, %struct.pt** %6, align 8
+  store i32 -1859090281, i32* %10
+  br label %46
+
+; <label>:23:                                     ; preds = %11
+  %24 = load %struct.pt*, %struct.pt** %7, align 8
+  %25 = getelementptr inbounds %struct.pt, %struct.pt* %24, i32 -1
+  store %struct.pt* %25, %struct.pt** %7, align 8
+  store i32 -53291154, i32* %10
+  br label %46
+
+; <label>:26:                                     ; preds = %11
+  %27 = load %struct.pt*, %struct.pt** %8, align 8
+  %28 = load %struct.pt*, %struct.pt** %7, align 8
+  %29 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, %struct.pt* %27, %struct.pt* %28)
+  %30 = select i1 %29, i32 -571874190, i32 -840862733
+  store i32 %30, i32* %10
+  br label %46
+
+; <label>:31:                                     ; preds = %11
+  %32 = load %struct.pt*, %struct.pt** %7, align 8
+  %33 = getelementptr inbounds %struct.pt, %struct.pt* %32, i32 -1
+  store %struct.pt* %33, %struct.pt** %7, align 8
+  store i32 -53291154, i32* %10
+  br label %46
+
+; <label>:34:                                     ; preds = %11
+  %35 = load %struct.pt*, %struct.pt** %6, align 8
+  %36 = load %struct.pt*, %struct.pt** %7, align 8
+  %37 = icmp ult %struct.pt* %35, %36
+  %38 = select i1 %37, i32 1505609011, i32 -1585380575
+  store i32 %38, i32* %10
+  br label %46
+
+; <label>:39:                                     ; preds = %11
+  %40 = load %struct.pt*, %struct.pt** %6, align 8
+  ret %struct.pt* %40
+
+; <label>:41:                                     ; preds = %11
+  %42 = load %struct.pt*, %struct.pt** %6, align 8
+  %43 = load %struct.pt*, %struct.pt** %7, align 8
+  call void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt* %42, %struct.pt* %43)
+  %44 = load %struct.pt*, %struct.pt** %6, align 8
+  %45 = getelementptr inbounds %struct.pt, %struct.pt* %44, i32 1
+  store %struct.pt* %45, %struct.pt** %6, align 8
+  store i32 -131819139, i32* %10
+  br label %46
+
+; <label>:46:                                     ; preds = %41, %34, %31, %26, %23, %20, %15, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt9iter_swapIP2ptS1_EvT_T0_(%struct.pt*, %struct.pt*) #0 comdat {
+  %3 = alloca %struct.pt*, align 8
+  %4 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %3, align 8
+  store %struct.pt* %1, %struct.pt** %4, align 8
+  %5 = load %struct.pt*, %struct.pt** %3, align 8
+  %6 = load %struct.pt*, %struct.pt** %4, align 8
+  call void @_ZSt4swapI2ptEvRT_S2_(%struct.pt* dereferenceable(8) %5, %struct.pt* dereferenceable(8) %6) #6
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapI2ptEvRT_S2_(%struct.pt* dereferenceable(8), %struct.pt* dereferenceable(8)) #0 comdat {
+  %3 = alloca %struct.pt*, align 8
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt, align 4
+  store %struct.pt* %0, %struct.pt** %3, align 8
+  store %struct.pt* %1, %struct.pt** %4, align 8
+  %6 = load %struct.pt*, %struct.pt** %3, align 8
+  %7 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %6) #6
+  %8 = bitcast %struct.pt* %5 to i8*
+  %9 = bitcast %struct.pt* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %8, i8* %9, i64 8, i32 4, i1 false)
+  %10 = load %struct.pt*, %struct.pt** %4, align 8
+  %11 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %10) #6
+  %12 = load %struct.pt*, %struct.pt** %3, align 8
+  %13 = bitcast %struct.pt* %12 to i8*
+  %14 = bitcast %struct.pt* %11 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 4, i1 false)
+  %15 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %5) #6
+  %16 = load %struct.pt*, %struct.pt** %4, align 8
+  %17 = bitcast %struct.pt* %16 to i8*
+  %18 = bitcast %struct.pt* %15 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %17, i8* %18, i64 8, i32 4, i1 false)
+  ret void
+}
+
+; Function Attrs: nounwind readnone
+declare i64 @llvm.ctlz.i64(i64, i1) #5
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %struct.pt*
+  %5 = alloca %struct.pt*
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %struct.pt*, align 8
+  %9 = alloca %struct.pt*, align 8
+  %10 = alloca %struct.pt, align 4
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %13 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %13, align 8
+  store %struct.pt* %0, %struct.pt** %7, align 8
+  store %struct.pt* %1, %struct.pt** %8, align 8
+  %14 = load %struct.pt*, %struct.pt** %7, align 8
+  store %struct.pt* %14, %struct.pt** %5
+  %15 = load %struct.pt*, %struct.pt** %8, align 8
+  store %struct.pt* %15, %struct.pt** %4
+  %16 = alloca i32
+  store i32 -468879191, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %68
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -468879191, label %20
+    i32 -378815699, label %25
+    i32 -1518223569, label %26
+    i32 1493068027, label %29
+    i32 -1502061648, label %34
+    i32 1591502075, label %39
+    i32 -667557494, label %53
+    i32 1797181374, label %63
+    i32 -620736826, label %64
+    i32 -621750713, label %67
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %68
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile %struct.pt*, %struct.pt** %5
+  %22 = load volatile %struct.pt*, %struct.pt** %4
+  %23 = icmp eq %struct.pt* %21, %22
+  %24 = select i1 %23, i32 -378815699, i32 -1518223569
+  store i32 %24, i32* %16
+  br label %68
+
+; <label>:25:                                     ; preds = %17
+  store i32 -621750713, i32* %16
+  br label %68
+
+; <label>:26:                                     ; preds = %17
+  %27 = load %struct.pt*, %struct.pt** %7, align 8
+  %28 = getelementptr inbounds %struct.pt, %struct.pt* %27, i64 1
+  store %struct.pt* %28, %struct.pt** %9, align 8
+  store i32 1493068027, i32* %16
+  br label %68
+
+; <label>:29:                                     ; preds = %17
+  %30 = load %struct.pt*, %struct.pt** %9, align 8
+  %31 = load %struct.pt*, %struct.pt** %8, align 8
+  %32 = icmp ne %struct.pt* %30, %31
+  %33 = select i1 %32, i32 -1502061648, i32 -621750713
+  store i32 %33, i32* %16
+  br label %68
+
+; <label>:34:                                     ; preds = %17
+  %35 = load %struct.pt*, %struct.pt** %9, align 8
+  %36 = load %struct.pt*, %struct.pt** %7, align 8
+  %37 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEclIPS2_S7_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6, %struct.pt* %35, %struct.pt* %36)
+  %38 = select i1 %37, i32 1591502075, i32 -667557494
+  store i32 %38, i32* %16
+  br label %68
+
+; <label>:39:                                     ; preds = %17
+  %40 = load %struct.pt*, %struct.pt** %9, align 8
+  %41 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %40) #6
+  %42 = bitcast %struct.pt* %10 to i8*
+  %43 = bitcast %struct.pt* %41 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %42, i8* %43, i64 8, i32 4, i1 false)
+  %44 = load %struct.pt*, %struct.pt** %7, align 8
+  %45 = load %struct.pt*, %struct.pt** %9, align 8
+  %46 = load %struct.pt*, %struct.pt** %9, align 8
+  %47 = getelementptr inbounds %struct.pt, %struct.pt* %46, i64 1
+  %48 = call %struct.pt* @_ZSt13move_backwardIP2ptS1_ET0_T_S3_S2_(%struct.pt* %44, %struct.pt* %45, %struct.pt* %47)
+  %49 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %10) #6
+  %50 = load %struct.pt*, %struct.pt** %7, align 8
+  %51 = bitcast %struct.pt* %50 to i8*
+  %52 = bitcast %struct.pt* %49 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %51, i8* %52, i64 8, i32 4, i1 false)
+  store i32 1797181374, i32* %16
+  br label %68
+
+; <label>:53:                                     ; preds = %17
+  %54 = load %struct.pt*, %struct.pt** %9, align 8
+  %55 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12 to i8*
+  %56 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %55, i8* %56, i64 8, i32 8, i1 false)
+  %57 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12, i32 0, i32 0
+  %58 = load i1 (i64, i64)*, i1 (i64, i64)** %57, align 8
+  %59 = call i1 (i64, i64)* @_ZN9__gnu_cxx5__ops15__val_comp_iterIPFb2ptS2_EEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS6_EE(i1 (i64, i64)* %58)
+  %60 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %11, i32 0, i32 0
+  store i1 (i64, i64)* %59, i1 (i64, i64)** %60, align 8
+  %61 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %11, i32 0, i32 0
+  %62 = load i1 (i64, i64)*, i1 (i64, i64)** %61, align 8
+  call void @_ZSt25__unguarded_linear_insertIP2ptN9__gnu_cxx5__ops14_Val_comp_iterIPFbS0_S0_EEEEvT_T0_(%struct.pt* %54, i1 (i64, i64)* %62)
+  store i32 1797181374, i32* %16
+  br label %68
+
+; <label>:63:                                     ; preds = %17
+  store i32 -620736826, i32* %16
+  br label %68
+
+; <label>:64:                                     ; preds = %17
+  %65 = load %struct.pt*, %struct.pt** %9, align 8
+  %66 = getelementptr inbounds %struct.pt, %struct.pt* %65, i32 1
+  store %struct.pt* %66, %struct.pt** %9, align 8
+  store i32 1493068027, i32* %16
+  br label %68
+
+; <label>:67:                                     ; preds = %17
+  ret void
+
+; <label>:68:                                     ; preds = %64, %63, %53, %39, %34, %29, %26, %25, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt26__unguarded_insertion_sortIP2ptN9__gnu_cxx5__ops15_Iter_comp_iterIPFbS0_S0_EEEEvT_S8_T0_(%struct.pt*, %struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4, i32 0, i32 0
+  store i1 (i64, i64)* %2, i1 (i64, i64)** %10, align 8
+  store %struct.pt* %0, %struct.pt** %5, align 8
+  store %struct.pt* %1, %struct.pt** %6, align 8
+  %11 = load %struct.pt*, %struct.pt** %5, align 8
+  store %struct.pt* %11, %struct.pt** %7, align 8
+  %12 = alloca i32
+  store i32 -349961779, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %3, %35
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -349961779, label %16
+    i32 1050174871, label %21
+    i32 -239154760, label %31
+    i32 278816334, label %34
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %35
+
+; <label>:16:                                     ; preds = %13
+  %17 = load %struct.pt*, %struct.pt** %7, align 8
+  %18 = load %struct.pt*, %struct.pt** %6, align 8
+  %19 = icmp ne %struct.pt* %17, %18
+  %20 = select i1 %19, i32 1050174871, i32 278816334
+  store i32 %20, i32* %12
+  br label %35
+
+; <label>:21:                                     ; preds = %13
+  %22 = load %struct.pt*, %struct.pt** %7, align 8
+  %23 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9 to i8*
+  %24 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 8, i32 8, i1 false)
+  %25 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %26 = load i1 (i64, i64)*, i1 (i64, i64)** %25, align 8
+  %27 = call i1 (i64, i64)* @_ZN9__gnu_cxx5__ops15__val_comp_iterIPFb2ptS2_EEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS6_EE(i1 (i64, i64)* %26)
+  %28 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %8, i32 0, i32 0
+  store i1 (i64, i64)* %27, i1 (i64, i64)** %28, align 8
+  %29 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %8, i32 0, i32 0
+  %30 = load i1 (i64, i64)*, i1 (i64, i64)** %29, align 8
+  call void @_ZSt25__unguarded_linear_insertIP2ptN9__gnu_cxx5__ops14_Val_comp_iterIPFbS0_S0_EEEEvT_T0_(%struct.pt* %22, i1 (i64, i64)* %30)
+  store i32 -239154760, i32* %12
+  br label %35
+
+; <label>:31:                                     ; preds = %13
+  %32 = load %struct.pt*, %struct.pt** %7, align 8
+  %33 = getelementptr inbounds %struct.pt, %struct.pt* %32, i32 1
+  store %struct.pt* %33, %struct.pt** %7, align 8
+  store i32 -349961779, i32* %12
+  br label %35
+
+; <label>:34:                                     ; preds = %13
+  ret void
+
+; <label>:35:                                     ; preds = %31, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt13move_backwardIP2ptS1_ET0_T_S3_S2_(%struct.pt*, %struct.pt*, %struct.pt*) #3 comdat {
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  %7 = load %struct.pt*, %struct.pt** %4, align 8
+  %8 = call %struct.pt* @_ZSt12__miter_baseIP2ptENSt11_Miter_baseIT_E13iterator_typeES3_(%struct.pt* %7)
+  %9 = load %struct.pt*, %struct.pt** %5, align 8
+  %10 = call %struct.pt* @_ZSt12__miter_baseIP2ptENSt11_Miter_baseIT_E13iterator_typeES3_(%struct.pt* %9)
+  %11 = load %struct.pt*, %struct.pt** %6, align 8
+  %12 = call %struct.pt* @_ZSt23__copy_move_backward_a2ILb1EP2ptS1_ET1_T0_S3_S2_(%struct.pt* %8, %struct.pt* %10, %struct.pt* %11)
+  ret %struct.pt* %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt25__unguarded_linear_insertIP2ptN9__gnu_cxx5__ops14_Val_comp_iterIPFbS0_S0_EEEEvT_T0_(%struct.pt*, i1 (i64, i64)*) #3 comdat {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 8
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt, align 4
+  %6 = alloca %struct.pt*, align 8
+  %7 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %3, i32 0, i32 0
+  store i1 (i64, i64)* %1, i1 (i64, i64)** %7, align 8
+  store %struct.pt* %0, %struct.pt** %4, align 8
+  %8 = load %struct.pt*, %struct.pt** %4, align 8
+  %9 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %8) #6
+  %10 = bitcast %struct.pt* %5 to i8*
+  %11 = bitcast %struct.pt* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %10, i8* %11, i64 8, i32 4, i1 false)
+  %12 = load %struct.pt*, %struct.pt** %4, align 8
+  store %struct.pt* %12, %struct.pt** %6, align 8
+  %13 = load %struct.pt*, %struct.pt** %6, align 8
+  %14 = getelementptr inbounds %struct.pt, %struct.pt* %13, i32 -1
+  store %struct.pt* %14, %struct.pt** %6, align 8
+  %15 = alloca i32
+  store i32 409038138, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %37
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 409038138, label %19
+    i32 1903804285, label %23
+    i32 793562925, label %32
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %37
+
+; <label>:19:                                     ; preds = %16
+  %20 = load %struct.pt*, %struct.pt** %6, align 8
+  %21 = call zeroext i1 @_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEclIS2_PS2_EEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"* %3, %struct.pt* dereferenceable(8) %5, %struct.pt* %20)
+  %22 = select i1 %21, i32 1903804285, i32 793562925
+  store i32 %22, i32* %15
+  br label %37
+
+; <label>:23:                                     ; preds = %16
+  %24 = load %struct.pt*, %struct.pt** %6, align 8
+  %25 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %24) #6
+  %26 = load %struct.pt*, %struct.pt** %4, align 8
+  %27 = bitcast %struct.pt* %26 to i8*
+  %28 = bitcast %struct.pt* %25 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %27, i8* %28, i64 8, i32 4, i1 false)
+  %29 = load %struct.pt*, %struct.pt** %6, align 8
+  store %struct.pt* %29, %struct.pt** %4, align 8
+  %30 = load %struct.pt*, %struct.pt** %6, align 8
+  %31 = getelementptr inbounds %struct.pt, %struct.pt* %30, i32 -1
+  store %struct.pt* %31, %struct.pt** %6, align 8
+  store i32 409038138, i32* %15
+  br label %37
+
+; <label>:32:                                     ; preds = %16
+  %33 = call dereferenceable(8) %struct.pt* @_ZSt4moveIR2ptEONSt16remove_referenceIT_E4typeEOS3_(%struct.pt* dereferenceable(8) %5) #6
+  %34 = load %struct.pt*, %struct.pt** %4, align 8
+  %35 = bitcast %struct.pt* %34 to i8*
+  %36 = bitcast %struct.pt* %33 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %35, i8* %36, i64 8, i32 4, i1 false)
+  ret void
+
+; <label>:37:                                     ; preds = %23, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i1 (i64, i64)* @_ZN9__gnu_cxx5__ops15__val_comp_iterIPFb2ptS2_EEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS6_EE(i1 (i64, i64)*) #3 comdat {
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 8
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 8
+  %4 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %3, i32 0, i32 0
+  store i1 (i64, i64)* %0, i1 (i64, i64)** %4, align 8
+  %5 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %3, i32 0, i32 0
+  %6 = load i1 (i64, i64)*, i1 (i64, i64)** %5, align 8
+  call void @_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"* %2, i1 (i64, i64)* %6)
+  %7 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %2, i32 0, i32 0
+  %8 = load i1 (i64, i64)*, i1 (i64, i64)** %7, align 8
+  ret i1 (i64, i64)* %8
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt23__copy_move_backward_a2ILb1EP2ptS1_ET1_T0_S3_S2_(%struct.pt*, %struct.pt*, %struct.pt*) #3 comdat {
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  %7 = load %struct.pt*, %struct.pt** %4, align 8
+  %8 = call %struct.pt* @_ZSt12__niter_baseIP2ptENSt11_Niter_baseIT_E13iterator_typeES3_(%struct.pt* %7)
+  %9 = load %struct.pt*, %struct.pt** %5, align 8
+  %10 = call %struct.pt* @_ZSt12__niter_baseIP2ptENSt11_Niter_baseIT_E13iterator_typeES3_(%struct.pt* %9)
+  %11 = load %struct.pt*, %struct.pt** %6, align 8
+  %12 = call %struct.pt* @_ZSt12__niter_baseIP2ptENSt11_Niter_baseIT_E13iterator_typeES3_(%struct.pt* %11)
+  %13 = call %struct.pt* @_ZSt22__copy_move_backward_aILb1EP2ptS1_ET1_T0_S3_S2_(%struct.pt* %8, %struct.pt* %10, %struct.pt* %12)
+  ret %struct.pt* %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr %struct.pt* @_ZSt12__miter_baseIP2ptENSt11_Miter_baseIT_E13iterator_typeES3_(%struct.pt*) #0 comdat {
+  %2 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %2, align 8
+  %3 = load %struct.pt*, %struct.pt** %2, align 8
+  %4 = call %struct.pt* @_ZNSt10_Iter_baseIP2ptLb0EE7_S_baseES1_(%struct.pt* %3)
+  ret %struct.pt* %4
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt22__copy_move_backward_aILb1EP2ptS1_ET1_T0_S3_S2_(%struct.pt*, %struct.pt*, %struct.pt*) #3 comdat {
+  %4 = alloca %struct.pt*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca i8, align 1
+  store %struct.pt* %0, %struct.pt** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  store i8 1, i8* %7, align 1
+  %8 = load %struct.pt*, %struct.pt** %4, align 8
+  %9 = load %struct.pt*, %struct.pt** %5, align 8
+  %10 = load %struct.pt*, %struct.pt** %6, align 8
+  %11 = call %struct.pt* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bI2ptEEPT_PKS4_S7_S5_(%struct.pt* %8, %struct.pt* %9, %struct.pt* %10)
+  ret %struct.pt* %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr %struct.pt* @_ZSt12__niter_baseIP2ptENSt11_Niter_baseIT_E13iterator_typeES3_(%struct.pt*) #3 comdat {
+  %2 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %2, align 8
+  %3 = load %struct.pt*, %struct.pt** %2, align 8
+  %4 = call %struct.pt* @_ZNSt10_Iter_baseIP2ptLb0EE7_S_baseES1_(%struct.pt* %3)
+  ret %struct.pt* %4
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr %struct.pt* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bI2ptEEPT_PKS4_S7_S5_(%struct.pt*, %struct.pt*, %struct.pt*) #0 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt*, align 8
+  %8 = alloca i64, align 8
+  store %struct.pt* %0, %struct.pt** %5, align 8
+  store %struct.pt* %1, %struct.pt** %6, align 8
+  store %struct.pt* %2, %struct.pt** %7, align 8
+  %9 = load %struct.pt*, %struct.pt** %6, align 8
+  %10 = load %struct.pt*, %struct.pt** %5, align 8
+  %11 = ptrtoint %struct.pt* %9 to i64
+  %12 = ptrtoint %struct.pt* %10 to i64
+  %13 = sub i64 %11, %12
+  %14 = sdiv exact i64 %13, 8
+  store i64 %14, i64* %8, align 8
+  %15 = load i64, i64* %8, align 8
+  store i64 %15, i64* %4
+  %16 = alloca i32
+  store i32 -861997903, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %39
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -861997903, label %20
+    i32 651205125, label %24
+    i32 504914395, label %34
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %39
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i64, i64* %4
+  %22 = icmp ne i64 %21, 0
+  %23 = select i1 %22, i32 651205125, i32 504914395
+  store i32 %23, i32* %16
+  br label %39
+
+; <label>:24:                                     ; preds = %17
+  %25 = load %struct.pt*, %struct.pt** %7, align 8
+  %26 = load i64, i64* %8, align 8
+  %27 = sub i64 0, %26
+  %28 = getelementptr inbounds %struct.pt, %struct.pt* %25, i64 %27
+  %29 = bitcast %struct.pt* %28 to i8*
+  %30 = load %struct.pt*, %struct.pt** %5, align 8
+  %31 = bitcast %struct.pt* %30 to i8*
+  %32 = load i64, i64* %8, align 8
+  %33 = mul i64 8, %32
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %29, i8* %31, i64 %33, i32 4, i1 false)
+  store i32 504914395, i32* %16
+  br label %39
+
+; <label>:34:                                     ; preds = %17
+  %35 = load %struct.pt*, %struct.pt** %7, align 8
+  %36 = load i64, i64* %8, align 8
+  %37 = sub i64 0, %36
+  %38 = getelementptr inbounds %struct.pt, %struct.pt* %35, i64 %37
+  ret %struct.pt* %38
+
+; <label>:39:                                     ; preds = %24, %20, %19
+  br label %17
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memmove.p0i8.p0i8.i64(i8* nocapture, i8* nocapture readonly, i64, i32, i1) #4
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr %struct.pt* @_ZNSt10_Iter_baseIP2ptLb0EE7_S_baseES1_(%struct.pt*) #0 comdat align 2 {
+  %2 = alloca %struct.pt*, align 8
+  store %struct.pt* %0, %struct.pt** %2, align 8
+  %3 = load %struct.pt*, %struct.pt** %2, align 8
+  ret %struct.pt* %3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEclIS2_PS2_EEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %struct.pt* dereferenceable(8), %struct.pt*) #3 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, align 8
+  %5 = alloca %struct.pt*, align 8
+  %6 = alloca %struct.pt*, align 8
+  %7 = alloca %struct.pt, align 4
+  %8 = alloca %struct.pt, align 4
+  store %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %4, align 8
+  store %struct.pt* %1, %struct.pt** %5, align 8
+  store %struct.pt* %2, %struct.pt** %6, align 8
+  %9 = load %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %4, align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %9, i32 0, i32 0
+  %11 = load i1 (i64, i64)*, i1 (i64, i64)** %10, align 8
+  %12 = load %struct.pt*, %struct.pt** %5, align 8
+  %13 = bitcast %struct.pt* %7 to i8*
+  %14 = bitcast %struct.pt* %12 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 4, i1 false)
+  %15 = load %struct.pt*, %struct.pt** %6, align 8
+  %16 = bitcast %struct.pt* %8 to i8*
+  %17 = bitcast %struct.pt* %15 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %16, i8* %17, i64 8, i32 4, i1 false)
+  %18 = bitcast %struct.pt* %7 to i64*
+  %19 = load i64, i64* %18, align 4
+  %20 = bitcast %struct.pt* %8 to i64*
+  %21 = load i64, i64* %20, align 4
+  %22 = call zeroext i1 %11(i64 %19, i64 %21)
+  ret i1 %22
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops14_Val_comp_iterIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"*, i1 (i64, i64)*) unnamed_addr #0 comdat align 2 {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, align 8
+  %4 = alloca i1 (i64, i64)*, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %3, align 8
+  store i1 (i64, i64)* %1, i1 (i64, i64)** %4, align 8
+  %5 = load %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %3, align 8
+  %6 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %5, i32 0, i32 0
+  %7 = load i1 (i64, i64)*, i1 (i64, i64)** %4, align 8
+  store i1 (i64, i64)* %7, i1 (i64, i64)** %6, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15_Iter_comp_iterIPFb2ptS2_EEC2ES4_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, i1 (i64, i64)*) unnamed_addr #0 comdat align 2 {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, align 8
+  %4 = alloca i1 (i64, i64)*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %3, align 8
+  store i1 (i64, i64)* %1, i1 (i64, i64)** %4, align 8
+  %5 = load %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %3, align 8
+  %6 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32 0, i32 0
+  %7 = load i1 (i64, i64)*, i1 (i64, i64)** %4, align 8
+  store i1 (i64, i64)* %7, i1 (i64, i64)** %6, align 8
+  ret void
+}
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { argmemonly nounwind }
+attributes #5 = { nounwind readnone }
+attributes #6 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

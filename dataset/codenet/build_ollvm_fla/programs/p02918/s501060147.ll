@@ -1,0 +1,343 @@
+; ModuleID = 'Project_CodeNet_C++1400/p02918/s501060147.cpp'
+source_filename = "Project_CodeNet_C++1400/p02918/s501060147.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::__cxx11::basic_string" = type { %"struct.std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider", i64, %union.anon }
+%"struct.std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider" = type { i8* }
+%union.anon = type { i64, [8 x i8] }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s501060147.cpp, i8* null }]
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #3
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #3
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca %"class.std::__cxx11::basic_string", align 8
+  %5 = alloca i8*
+  %6 = alloca i32
+  %7 = alloca i8, align 1
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  %10 = alloca i32, align 4
+  %11 = alloca i8, align 1
+  %12 = alloca i32, align 4
+  %13 = alloca i8, align 1
+  %14 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  %15 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* dereferenceable(4) %2)
+  %16 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %15, i32* dereferenceable(4) %3)
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_string"* %4) #3
+  %17 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE(%"class.std::basic_istream"* dereferenceable(280) @_ZSt3cin, %"class.std::__cxx11::basic_string"* dereferenceable(32) %4)
+          to label %18 unwind label %28
+
+; <label>:18:                                     ; preds = %0
+  %19 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 0)
+          to label %20 unwind label %28
+
+; <label>:20:                                     ; preds = %18
+  %21 = load i8, i8* %19, align 1
+  store i8 %21, i8* %7, align 1
+  store i32 0, i32* %8, align 4
+  store i32 0, i32* %9, align 4
+  store i32 0, i32* %10, align 4
+  %22 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 0)
+          to label %23 unwind label %28
+
+; <label>:23:                                     ; preds = %20
+  %24 = load i8, i8* %22, align 1
+  %25 = sext i8 %24 to i32
+  %26 = icmp eq i32 %25, 76
+  br i1 %26, label %27, label %32
+
+; <label>:27:                                     ; preds = %23
+  store i8 82, i8* %11, align 1
+  br label %33
+
+; <label>:28:                                     ; preds = %143, %140, %131, %118, %103, %39, %20, %18, %0
+  %29 = landingpad { i8*, i32 }
+          cleanup
+  %30 = extractvalue { i8*, i32 } %29, 0
+  store i8* %30, i8** %5, align 8
+  %31 = extractvalue { i8*, i32 } %29, 1
+  store i32 %31, i32* %6, align 4
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"* %4) #3
+  br label %147
+
+; <label>:32:                                     ; preds = %23
+  store i8 76, i8* %11, align 1
+  br label %33
+
+; <label>:33:                                     ; preds = %32, %27
+  store i32 0, i32* %12, align 4
+  br label %34
+
+; <label>:34:                                     ; preds = %100, %33
+  %35 = load i32, i32* %12, align 4
+  %36 = load i32, i32* %2, align 4
+  %37 = sub nsw i32 %36, 1
+  %38 = icmp slt i32 %35, %37
+  br i1 %38, label %39, label %103
+
+; <label>:39:                                     ; preds = %34
+  %40 = load i32, i32* %12, align 4
+  %41 = add nsw i32 %40, 1
+  %42 = sext i32 %41 to i64
+  %43 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 %42)
+          to label %44 unwind label %28
+
+; <label>:44:                                     ; preds = %39
+  %45 = load i8, i8* %43, align 1
+  %46 = sext i8 %45 to i32
+  %47 = load i8, i8* %11, align 1
+  %48 = sext i8 %47 to i32
+  %49 = icmp eq i32 %46, %48
+  br i1 %49, label %50, label %73
+
+; <label>:50:                                     ; preds = %44
+  %51 = load i8, i8* %11, align 1
+  %52 = sext i8 %51 to i32
+  %53 = load i8, i8* %7, align 1
+  %54 = sext i8 %53 to i32
+  %55 = icmp eq i32 %52, %54
+  br i1 %55, label %56, label %59
+
+; <label>:56:                                     ; preds = %50
+  %57 = load i32, i32* %8, align 4
+  %58 = add nsw i32 %57, 1
+  store i32 %58, i32* %8, align 4
+  br label %59
+
+; <label>:59:                                     ; preds = %56, %50
+  %60 = load i32, i32* %8, align 4
+  %61 = load i32, i32* %3, align 4
+  %62 = icmp sge i32 %60, %61
+  br i1 %62, label %63, label %66
+
+; <label>:63:                                     ; preds = %59
+  %64 = load i32, i32* %12, align 4
+  %65 = add nsw i32 %64, 1
+  store i32 %65, i32* %10, align 4
+  br label %103
+
+; <label>:66:                                     ; preds = %59
+  %67 = load i8, i8* %11, align 1
+  %68 = sext i8 %67 to i32
+  %69 = icmp eq i32 %68, 76
+  br i1 %69, label %70, label %71
+
+; <label>:70:                                     ; preds = %66
+  store i8 82, i8* %11, align 1
+  br label %72
+
+; <label>:71:                                     ; preds = %66
+  store i8 76, i8* %11, align 1
+  br label %72
+
+; <label>:72:                                     ; preds = %71, %70
+  br label %73
+
+; <label>:73:                                     ; preds = %72, %44
+  %74 = load i32, i32* %12, align 4
+  %75 = load i32, i32* %2, align 4
+  %76 = sub nsw i32 %75, 2
+  %77 = icmp eq i32 %74, %76
+  br i1 %77, label %78, label %87
+
+; <label>:78:                                     ; preds = %73
+  %79 = load i8, i8* %11, align 1
+  %80 = sext i8 %79 to i32
+  %81 = load i8, i8* %7, align 1
+  %82 = sext i8 %81 to i32
+  %83 = icmp eq i32 %80, %82
+  br i1 %83, label %84, label %87
+
+; <label>:84:                                     ; preds = %78
+  %85 = load i32, i32* %2, align 4
+  %86 = sub nsw i32 %85, 1
+  store i32 %86, i32* %10, align 4
+  br label %87
+
+; <label>:87:                                     ; preds = %84, %78, %73
+  %88 = load i32, i32* %12, align 4
+  %89 = load i32, i32* %2, align 4
+  %90 = sub nsw i32 %89, 2
+  %91 = icmp eq i32 %88, %90
+  br i1 %91, label %92, label %99
+
+; <label>:92:                                     ; preds = %87
+  %93 = load i32, i32* %8, align 4
+  %94 = load i32, i32* %3, align 4
+  %95 = icmp slt i32 %93, %94
+  br i1 %95, label %96, label %99
+
+; <label>:96:                                     ; preds = %92
+  %97 = load i32, i32* %2, align 4
+  %98 = sub nsw i32 %97, 1
+  store i32 %98, i32* %10, align 4
+  br label %99
+
+; <label>:99:                                     ; preds = %96, %92, %87
+  br label %100
+
+; <label>:100:                                    ; preds = %99
+  %101 = load i32, i32* %12, align 4
+  %102 = add nsw i32 %101, 1
+  store i32 %102, i32* %12, align 4
+  br label %34
+
+; <label>:103:                                    ; preds = %63, %34
+  %104 = load i32, i32* %10, align 4
+  %105 = load i32, i32* %9, align 4
+  %106 = add nsw i32 %105, %104
+  store i32 %106, i32* %9, align 4
+  %107 = load i32, i32* %10, align 4
+  %108 = sext i32 %107 to i64
+  %109 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 %108)
+          to label %110 unwind label %28
+
+; <label>:110:                                    ; preds = %103
+  %111 = load i8, i8* %109, align 1
+  store i8 %111, i8* %13, align 1
+  %112 = load i32, i32* %10, align 4
+  %113 = add nsw i32 %112, 1
+  store i32 %113, i32* %14, align 4
+  br label %114
+
+; <label>:114:                                    ; preds = %137, %110
+  %115 = load i32, i32* %14, align 4
+  %116 = load i32, i32* %2, align 4
+  %117 = icmp slt i32 %115, %116
+  br i1 %117, label %118, label %140
+
+; <label>:118:                                    ; preds = %114
+  %119 = load i32, i32* %14, align 4
+  %120 = sext i32 %119 to i64
+  %121 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 %120)
+          to label %122 unwind label %28
+
+; <label>:122:                                    ; preds = %118
+  %123 = load i8, i8* %121, align 1
+  %124 = sext i8 %123 to i32
+  %125 = load i8, i8* %13, align 1
+  %126 = sext i8 %125 to i32
+  %127 = icmp eq i32 %124, %126
+  br i1 %127, label %128, label %131
+
+; <label>:128:                                    ; preds = %122
+  %129 = load i32, i32* %9, align 4
+  %130 = add nsw i32 %129, 1
+  store i32 %130, i32* %9, align 4
+  br label %131
+
+; <label>:131:                                    ; preds = %128, %122
+  %132 = load i32, i32* %14, align 4
+  %133 = sext i32 %132 to i64
+  %134 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* %4, i64 %133)
+          to label %135 unwind label %28
+
+; <label>:135:                                    ; preds = %131
+  %136 = load i8, i8* %134, align 1
+  store i8 %136, i8* %13, align 1
+  br label %137
+
+; <label>:137:                                    ; preds = %135
+  %138 = load i32, i32* %14, align 4
+  %139 = add nsw i32 %138, 1
+  store i32 %139, i32* %14, align 4
+  br label %114
+
+; <label>:140:                                    ; preds = %114
+  %141 = load i32, i32* %9, align 4
+  %142 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* @_ZSt4cout, i32 %141)
+          to label %143 unwind label %28
+
+; <label>:143:                                    ; preds = %140
+  %144 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %142, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %145 unwind label %28
+
+; <label>:145:                                    ; preds = %143
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"* %4) #3
+  %146 = load i32, i32* %1, align 4
+  ret i32 %146
+
+; <label>:147:                                    ; preds = %28
+  %148 = load i8*, i8** %5, align 8
+  %149 = load i32, i32* %6, align 4
+  %150 = insertvalue { i8*, i32 } undef, i8* %148, 0
+  %151 = insertvalue { i8*, i32 } %150, i32 %149, 1
+  resume { i8*, i32 } %151
+}
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"*, i32* dereferenceable(4)) #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_string"*) unnamed_addr #2
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE(%"class.std::basic_istream"* dereferenceable(280), %"class.std::__cxx11::basic_string"* dereferenceable(32)) #1
+
+declare i32 @__gxx_personality_v0(...)
+
+declare dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"*, i64) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"*, i32) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"*, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)*) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%"class.std::basic_ostream"* dereferenceable(272)) #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"*) unnamed_addr #2
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s501060147.cpp() #0 section ".text.startup" {
+  call void @__cxx_global_var_init()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

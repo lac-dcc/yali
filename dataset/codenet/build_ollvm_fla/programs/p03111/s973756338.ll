@@ -1,0 +1,4046 @@
+; ModuleID = 'Project_CodeNet_C++1400/p03111/s973756338.cpp'
+source_filename = "Project_CodeNet_C++1400/p03111/s973756338.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct._IO_FILE = type { i32, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, %struct._IO_marker*, %struct._IO_FILE*, i32, i32, i64, i16, i8, [1 x i8], i8*, i64, i8*, i8*, i8*, i8*, i64, i32, [20 x i8] }
+%struct._IO_marker = type { %struct._IO_marker*, %struct._IO_FILE*, i32 }
+%struct.Veci = type { i32*, i32, i32 }
+%struct.Vecll = type { i64*, i32, i32 }
+%struct.Vecs = type { i8**, i32, i32 }
+%struct.Pairi = type { i32, i32 }
+%"struct.__gnu_cxx::__ops::_Iter_less_iter" = type { i8 }
+%"struct.__gnu_cxx::__ops::_Iter_less_val" = type { i8 }
+%"struct.__gnu_cxx::__ops::_Val_less_iter" = type { i8 }
+
+$_ZSt4sortIPiEvT_S1_ = comdat any
+
+$_ZSt6__sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops16__iter_less_iterEv = comdat any
+
+$_ZSt16__introsort_loopIPilN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_ = comdat any
+
+$_ZSt4__lgl = comdat any
+
+$_ZSt22__final_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZSt14__partial_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_ = comdat any
+
+$_ZSt27__unguarded_partition_pivotIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_T0_ = comdat any
+
+$_ZSt13__heap_selectIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_ = comdat any
+
+$_ZSt11__sort_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZSt11__make_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_ = comdat any
+
+$_ZSt10__pop_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_ = comdat any
+
+$_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_ = comdat any
+
+$_ZSt13__adjust_heapIPiliN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_ = comdat any
+
+$_ZSt11__push_heapIPiliN9__gnu_cxx5__ops14_Iter_less_valEEvT_T0_S5_T1_T2_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE = comdat any
+
+$_ZNK9__gnu_cxx5__ops14_Iter_less_valclIPiiEEbT_RT0_ = comdat any
+
+$_ZSt22__move_median_to_firstIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_S4_T0_ = comdat any
+
+$_ZSt21__unguarded_partitionIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_S4_T0_ = comdat any
+
+$_ZSt9iter_swapIPiS0_EvT_T0_ = comdat any
+
+$_ZSt4swapIiEvRT_S1_ = comdat any
+
+$_ZSt16__insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZSt26__unguarded_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_ = comdat any
+
+$_ZSt13move_backwardIPiS0_ET0_T_S2_S1_ = comdat any
+
+$_ZSt25__unguarded_linear_insertIPiN9__gnu_cxx5__ops14_Val_less_iterEEvT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE = comdat any
+
+$_ZSt23__copy_move_backward_a2ILb1EPiS0_ET1_T0_S2_S1_ = comdat any
+
+$_ZSt12__miter_baseIPiENSt11_Miter_baseIT_E13iterator_typeES2_ = comdat any
+
+$_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_ = comdat any
+
+$_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_ = comdat any
+
+$_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_ = comdat any
+
+$_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_ = comdat any
+
+$_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiPiEEbRT_T0_ = comdat any
+
+@_fin = global %struct._IO_FILE* null, align 8
+@stdin = external global %struct._IO_FILE*, align 8
+@_fout = global %struct._IO_FILE* null, align 8
+@stdout = external global %struct._IO_FILE*, align 8
+@.str = private unnamed_addr constant [3 x i8] c"%c\00", align 1
+@.str.2 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.3 = private unnamed_addr constant [4 x i8] c"%lf\00", align 1
+@.str.4 = private unnamed_addr constant [5 x i8] c"%lld\00", align 1
+@.str.5 = private unnamed_addr constant [13 x i8] c"xxtop2_0.txt\00", align 1
+@.str.6 = private unnamed_addr constant [2 x i8] c"r\00", align 1
+@_ZZ4mainE1l = internal global [10 x i32] zeroinitializer, align 16
+@.str.7 = private unnamed_addr constant [4 x i8] c"%d\0A\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s973756338.cpp, i8* null }]
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  %1 = load %struct._IO_FILE*, %struct._IO_FILE** @stdin, align 8
+  store %struct._IO_FILE* %1, %struct._IO_FILE** @_fin, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init.1() #0 section ".text.startup" {
+  %1 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8
+  store %struct._IO_FILE* %1, %struct._IO_FILE** @_fout, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4_minii(i32, i32) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i32 %0, i32* %5, align 4
+  store i32 %1, i32* %6, align 4
+  %7 = load i32, i32* %5, align 4
+  store i32 %7, i32* %4
+  %8 = load i32, i32* %6, align 4
+  store i32 %8, i32* %3
+  %9 = alloca i32
+  store i32 -1663434081, i32* %9
+  %10 = alloca i32
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %25
+  %12 = load i32, i32* %9
+  switch i32 %12, label %13 [
+    i32 -1663434081, label %14
+    i32 -86354221, label %19
+    i32 -1188856808, label %21
+    i32 1211435627, label %23
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %25
+
+; <label>:14:                                     ; preds = %11
+  %15 = load volatile i32, i32* %4
+  %16 = load volatile i32, i32* %3
+  %17 = icmp sle i32 %15, %16
+  %18 = select i1 %17, i32 -86354221, i32 -1188856808
+  store i32 %18, i32* %9
+  br label %25
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i32, i32* %5, align 4
+  store i32 1211435627, i32* %9
+  store i32 %20, i32* %10
+  br label %25
+
+; <label>:21:                                     ; preds = %11
+  %22 = load i32, i32* %6, align 4
+  store i32 1211435627, i32* %9
+  store i32 %22, i32* %10
+  br label %25
+
+; <label>:23:                                     ; preds = %11
+  %24 = load i32, i32* %10
+  ret i32 %24
+
+; <label>:25:                                     ; preds = %21, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4_minxx(i64, i64) #1 {
+  %3 = alloca i64
+  %4 = alloca i64
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  store i64 %0, i64* %5, align 8
+  store i64 %1, i64* %6, align 8
+  %7 = load i64, i64* %5, align 8
+  store i64 %7, i64* %4
+  %8 = load i64, i64* %6, align 8
+  store i64 %8, i64* %3
+  %9 = alloca i32
+  store i32 782185437, i32* %9
+  %10 = alloca i64
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %26
+  %12 = load i32, i32* %9
+  switch i32 %12, label %13 [
+    i32 782185437, label %14
+    i32 -1826850891, label %19
+    i32 1697710487, label %21
+    i32 -994867308, label %23
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %26
+
+; <label>:14:                                     ; preds = %11
+  %15 = load volatile i64, i64* %4
+  %16 = load volatile i64, i64* %3
+  %17 = icmp sle i64 %15, %16
+  %18 = select i1 %17, i32 -1826850891, i32 1697710487
+  store i32 %18, i32* %9
+  br label %26
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i64, i64* %5, align 8
+  store i32 -994867308, i32* %9
+  store i64 %20, i64* %10
+  br label %26
+
+; <label>:21:                                     ; preds = %11
+  %22 = load i64, i64* %6, align 8
+  store i32 -994867308, i32* %9
+  store i64 %22, i64* %10
+  br label %26
+
+; <label>:23:                                     ; preds = %11
+  %24 = load i64, i64* %10
+  %25 = trunc i64 %24 to i32
+  ret i32 %25
+
+; <label>:26:                                     ; preds = %21, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4_maxii(i32, i32) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i32 %0, i32* %5, align 4
+  store i32 %1, i32* %6, align 4
+  %7 = load i32, i32* %5, align 4
+  store i32 %7, i32* %4
+  %8 = load i32, i32* %6, align 4
+  store i32 %8, i32* %3
+  %9 = alloca i32
+  store i32 -645370489, i32* %9
+  %10 = alloca i32
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %25
+  %12 = load i32, i32* %9
+  switch i32 %12, label %13 [
+    i32 -645370489, label %14
+    i32 -1739178045, label %19
+    i32 -254927972, label %21
+    i32 -918142256, label %23
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %25
+
+; <label>:14:                                     ; preds = %11
+  %15 = load volatile i32, i32* %4
+  %16 = load volatile i32, i32* %3
+  %17 = icmp sge i32 %15, %16
+  %18 = select i1 %17, i32 -1739178045, i32 -254927972
+  store i32 %18, i32* %9
+  br label %25
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i32, i32* %5, align 4
+  store i32 -918142256, i32* %9
+  store i32 %20, i32* %10
+  br label %25
+
+; <label>:21:                                     ; preds = %11
+  %22 = load i32, i32* %6, align 4
+  store i32 -918142256, i32* %9
+  store i32 %22, i32* %10
+  br label %25
+
+; <label>:23:                                     ; preds = %11
+  %24 = load i32, i32* %10
+  ret i32 %24
+
+; <label>:25:                                     ; preds = %21, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4_maxxx(i64, i64) #1 {
+  %3 = alloca i64
+  %4 = alloca i64
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  store i64 %0, i64* %5, align 8
+  store i64 %1, i64* %6, align 8
+  %7 = load i64, i64* %5, align 8
+  store i64 %7, i64* %4
+  %8 = load i64, i64* %6, align 8
+  store i64 %8, i64* %3
+  %9 = alloca i32
+  store i32 552306870, i32* %9
+  %10 = alloca i64
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %26
+  %12 = load i32, i32* %9
+  switch i32 %12, label %13 [
+    i32 552306870, label %14
+    i32 -1017145174, label %19
+    i32 636175218, label %21
+    i32 275794821, label %23
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %26
+
+; <label>:14:                                     ; preds = %11
+  %15 = load volatile i64, i64* %4
+  %16 = load volatile i64, i64* %3
+  %17 = icmp sge i64 %15, %16
+  %18 = select i1 %17, i32 -1017145174, i32 636175218
+  store i32 %18, i32* %9
+  br label %26
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i64, i64* %5, align 8
+  store i32 275794821, i32* %9
+  store i64 %20, i64* %10
+  br label %26
+
+; <label>:21:                                     ; preds = %11
+  %22 = load i64, i64* %6, align 8
+  store i32 275794821, i32* %9
+  store i64 %22, i64* %10
+  br label %26
+
+; <label>:23:                                     ; preds = %11
+  %24 = load i64, i64* %10
+  %25 = trunc i64 %24 to i32
+  ret i32 %25
+
+; <label>:26:                                     ; preds = %21, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4zeroPii(i32*, i32) #1 {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32, align 4
+  store i32* %0, i32** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i32*, i32** %3, align 8
+  %6 = bitcast i32* %5 to i8*
+  %7 = load i32, i32* %4, align 4
+  %8 = sext i32 %7 to i64
+  %9 = mul i64 4, %8
+  call void @llvm.memset.p0i8.i64(i8* %6, i8 0, i64 %9, i32 4, i1 false)
+  ret void
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #2
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4zeroPxi(i64*, i32) #1 {
+  %3 = alloca i64*, align 8
+  %4 = alloca i32, align 4
+  store i64* %0, i64** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i64*, i64** %3, align 8
+  %6 = bitcast i64* %5 to i8*
+  %7 = load i32, i32* %4, align 4
+  %8 = sext i32 %7 to i64
+  %9 = mul i64 8, %8
+  call void @llvm.memset.p0i8.i64(i8* %6, i8 0, i64 %9, i32 8, i1 false)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4zeroPci(i8*, i32) #1 {
+  %3 = alloca i8*, align 8
+  %4 = alloca i32, align 4
+  store i8* %0, i8** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i8*, i8** %3, align 8
+  %6 = load i32, i32* %4, align 4
+  %7 = sext i32 %6 to i64
+  %8 = mul i64 1, %7
+  call void @llvm.memset.p0i8.i64(i8* %5, i8 0, i64 %8, i32 1, i1 false)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define signext i8 @_Z5readcv() #0 {
+  %1 = alloca i8, align 1
+  %2 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  %3 = call i32 (%struct._IO_FILE*, i8*, ...) @fscanf(%struct._IO_FILE* %2, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i8* %1)
+  %4 = load i8, i8* %1, align 1
+  ret i8 %4
+}
+
+declare i32 @fscanf(%struct._IO_FILE*, i8*, ...) #3
+
+; Function Attrs: noinline uwtable
+define i32 @_Z5readiv() #0 {
+  %1 = alloca i32, align 4
+  %2 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  %3 = call i32 (%struct._IO_FILE*, i8*, ...) @fscanf(%struct._IO_FILE* %2, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.2, i32 0, i32 0), i32* %1)
+  %4 = load i32, i32* %1, align 4
+  ret i32 %4
+}
+
+; Function Attrs: noinline uwtable
+define double @_Z6readlfv() #0 {
+  %1 = alloca double, align 8
+  %2 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  %3 = call i32 (%struct._IO_FILE*, i8*, ...) @fscanf(%struct._IO_FILE* %2, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0), double* %1)
+  %4 = load double, double* %1, align 8
+  ret double %4
+}
+
+; Function Attrs: noinline uwtable
+define i64 @_Z6readllv() #0 {
+  %1 = alloca i64, align 8
+  %2 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  %3 = call i32 (%struct._IO_FILE*, i8*, ...) @fscanf(%struct._IO_FILE* %2, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i64* %1)
+  %4 = load i64, i64* %1, align 8
+  ret i64 %4
+}
+
+; Function Attrs: noinline uwtable
+define void @_Z7repreadPii(i32*, i32) #0 {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  store i32* %0, i32** %3, align 8
+  store i32 %1, i32* %4, align 4
+  store i32 0, i32* %5, align 4
+  %6 = alloca i32
+  store i32 758489820, i32* %6
+  br label %7
+
+; <label>:7:                                      ; preds = %2, %25
+  %8 = load i32, i32* %6
+  switch i32 %8, label %9 [
+    i32 758489820, label %10
+    i32 -1425236487, label %15
+    i32 1070209810, label %21
+    i32 -202711228, label %24
+  ]
+
+; <label>:9:                                      ; preds = %7
+  br label %25
+
+; <label>:10:                                     ; preds = %7
+  %11 = load i32, i32* %5, align 4
+  %12 = load i32, i32* %4, align 4
+  %13 = icmp slt i32 %11, %12
+  %14 = select i1 %13, i32 -1425236487, i32 -202711228
+  store i32 %14, i32* %6
+  br label %25
+
+; <label>:15:                                     ; preds = %7
+  %16 = call i32 @_Z5readiv()
+  %17 = load i32*, i32** %3, align 8
+  %18 = load i32, i32* %5, align 4
+  %19 = sext i32 %18 to i64
+  %20 = getelementptr inbounds i32, i32* %17, i64 %19
+  store i32 %16, i32* %20, align 4
+  store i32 1070209810, i32* %6
+  br label %25
+
+; <label>:21:                                     ; preds = %7
+  %22 = load i32, i32* %5, align 4
+  %23 = add nsw i32 %22, 1
+  store i32 %23, i32* %5, align 4
+  store i32 758489820, i32* %6
+  br label %25
+
+; <label>:24:                                     ; preds = %7
+  ret void
+
+; <label>:25:                                     ; preds = %21, %15, %10, %9
+  br label %7
+}
+
+; Function Attrs: noinline uwtable
+define void @_Z7repreadPxi(i64*, i32) #0 {
+  %3 = alloca i64*, align 8
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  store i64* %0, i64** %3, align 8
+  store i32 %1, i32* %4, align 4
+  store i32 0, i32* %5, align 4
+  %6 = alloca i32
+  store i32 -1232148627, i32* %6
+  br label %7
+
+; <label>:7:                                      ; preds = %2, %25
+  %8 = load i32, i32* %6
+  switch i32 %8, label %9 [
+    i32 -1232148627, label %10
+    i32 308458027, label %15
+    i32 -250445562, label %21
+    i32 -1545116097, label %24
+  ]
+
+; <label>:9:                                      ; preds = %7
+  br label %25
+
+; <label>:10:                                     ; preds = %7
+  %11 = load i32, i32* %5, align 4
+  %12 = load i32, i32* %4, align 4
+  %13 = icmp slt i32 %11, %12
+  %14 = select i1 %13, i32 308458027, i32 -1545116097
+  store i32 %14, i32* %6
+  br label %25
+
+; <label>:15:                                     ; preds = %7
+  %16 = call i64 @_Z6readllv()
+  %17 = load i64*, i64** %3, align 8
+  %18 = load i32, i32* %5, align 4
+  %19 = sext i32 %18 to i64
+  %20 = getelementptr inbounds i64, i64* %17, i64 %19
+  store i64 %16, i64* %20, align 8
+  store i32 -250445562, i32* %6
+  br label %25
+
+; <label>:21:                                     ; preds = %7
+  %22 = load i32, i32* %5, align 4
+  %23 = add nsw i32 %22, 1
+  store i32 %23, i32* %5, align 4
+  store i32 -1232148627, i32* %6
+  br label %25
+
+; <label>:24:                                     ; preds = %7
+  ret void
+
+; <label>:25:                                     ; preds = %21, %15, %10, %9
+  br label %7
+}
+
+; Function Attrs: noinline uwtable
+define i32 @_Z5readsPci(i8*, i32) #0 {
+  %3 = alloca i32, align 4
+  %4 = alloca i8*, align 8
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i8* %0, i8** %4, align 8
+  store i32 %1, i32* %5, align 4
+  %7 = alloca i32
+  store i32 1017134052, i32* %7
+  br label %8
+
+; <label>:8:                                      ; preds = %2, %73
+  %9 = load i32, i32* %7
+  switch i32 %9, label %10 [
+    i32 1017134052, label %11
+    i32 1903411598, label %18
+    i32 1875272451, label %19
+    i32 579509978, label %26
+    i32 -894774032, label %33
+    i32 -166426285, label %34
+    i32 1640542534, label %35
+    i32 -565869414, label %42
+    i32 -657858661, label %43
+    i32 -897574175, label %53
+    i32 1454226452, label %63
+    i32 -1901829619, label %69
+    i32 2068291322, label %71
+  ]
+
+; <label>:10:                                     ; preds = %8
+  br label %73
+
+; <label>:11:                                     ; preds = %8
+  %12 = load i8*, i8** %4, align 8
+  %13 = load i32, i32* %5, align 4
+  %14 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  %15 = call i8* @fgets(i8* %12, i32 %13, %struct._IO_FILE* %14)
+  %16 = icmp eq i8* %15, null
+  %17 = select i1 %16, i32 1903411598, i32 1875272451
+  store i32 %17, i32* %7
+  br label %73
+
+; <label>:18:                                     ; preds = %8
+  store i32 1640542534, i32* %7
+  br label %73
+
+; <label>:19:                                     ; preds = %8
+  %20 = load i8*, i8** %4, align 8
+  %21 = getelementptr inbounds i8, i8* %20, i64 0
+  %22 = load i8, i8* %21, align 1
+  %23 = sext i8 %22 to i32
+  %24 = icmp ne i32 %23, 10
+  %25 = select i1 %24, i32 579509978, i32 -166426285
+  store i32 %25, i32* %7
+  br label %73
+
+; <label>:26:                                     ; preds = %8
+  %27 = load i8*, i8** %4, align 8
+  %28 = getelementptr inbounds i8, i8* %27, i64 0
+  %29 = load i8, i8* %28, align 1
+  %30 = sext i8 %29 to i32
+  %31 = icmp ne i32 %30, 13
+  %32 = select i1 %31, i32 -894774032, i32 -166426285
+  store i32 %32, i32* %7
+  br label %73
+
+; <label>:33:                                     ; preds = %8
+  store i32 1640542534, i32* %7
+  br label %73
+
+; <label>:34:                                     ; preds = %8
+  store i32 1017134052, i32* %7
+  br label %73
+
+; <label>:35:                                     ; preds = %8
+  %36 = load i8*, i8** %4, align 8
+  %37 = call i64 @strlen(i8* %36) #9
+  %38 = trunc i64 %37 to i32
+  store i32 %38, i32* %6, align 4
+  %39 = load i32, i32* %6, align 4
+  %40 = icmp eq i32 %39, 0
+  %41 = select i1 %40, i32 -565869414, i32 -657858661
+  store i32 %41, i32* %7
+  br label %73
+
+; <label>:42:                                     ; preds = %8
+  store i32 0, i32* %3, align 4
+  store i32 2068291322, i32* %7
+  br label %73
+
+; <label>:43:                                     ; preds = %8
+  %44 = load i8*, i8** %4, align 8
+  %45 = load i32, i32* %6, align 4
+  %46 = sub nsw i32 %45, 1
+  %47 = sext i32 %46 to i64
+  %48 = getelementptr inbounds i8, i8* %44, i64 %47
+  %49 = load i8, i8* %48, align 1
+  %50 = sext i8 %49 to i32
+  %51 = icmp eq i32 %50, 10
+  %52 = select i1 %51, i32 1454226452, i32 -897574175
+  store i32 %52, i32* %7
+  br label %73
+
+; <label>:53:                                     ; preds = %8
+  %54 = load i8*, i8** %4, align 8
+  %55 = load i32, i32* %6, align 4
+  %56 = sub nsw i32 %55, 1
+  %57 = sext i32 %56 to i64
+  %58 = getelementptr inbounds i8, i8* %54, i64 %57
+  %59 = load i8, i8* %58, align 1
+  %60 = sext i8 %59 to i32
+  %61 = icmp eq i32 %60, 13
+  %62 = select i1 %61, i32 1454226452, i32 -1901829619
+  store i32 %62, i32* %7
+  br label %73
+
+; <label>:63:                                     ; preds = %8
+  %64 = load i8*, i8** %4, align 8
+  %65 = load i32, i32* %6, align 4
+  %66 = add nsw i32 %65, -1
+  store i32 %66, i32* %6, align 4
+  %67 = sext i32 %66 to i64
+  %68 = getelementptr inbounds i8, i8* %64, i64 %67
+  store i8 0, i8* %68, align 1
+  store i32 -1901829619, i32* %7
+  br label %73
+
+; <label>:69:                                     ; preds = %8
+  %70 = load i32, i32* %6, align 4
+  store i32 %70, i32* %3, align 4
+  store i32 2068291322, i32* %7
+  br label %73
+
+; <label>:71:                                     ; preds = %8
+  %72 = load i32, i32* %3, align 4
+  ret i32 %72
+
+; <label>:73:                                     ; preds = %69, %63, %53, %43, %42, %35, %34, %33, %26, %19, %18, %11, %10
+  br label %8
+}
+
+declare i8* @fgets(i8*, i32, %struct._IO_FILE*) #3
+
+; Function Attrs: nounwind readonly
+declare i64 @strlen(i8*) #4
+
+; Function Attrs: noinline uwtable
+define i64 @_Z3gcdxx(i64, i64) #0 {
+  %3 = alloca i64
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  store i64 %0, i64* %5, align 8
+  store i64 %1, i64* %6, align 8
+  %7 = load i64, i64* %6, align 8
+  store i64 %7, i64* %3
+  %8 = alloca i32
+  store i32 -713992645, i32* %8
+  br label %9
+
+; <label>:9:                                      ; preds = %2, %26
+  %10 = load i32, i32* %8
+  switch i32 %10, label %11 [
+    i32 -713992645, label %12
+    i32 -1438443452, label %16
+    i32 -1266457103, label %18
+    i32 2010667735, label %24
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %26
+
+; <label>:12:                                     ; preds = %9
+  %13 = load volatile i64, i64* %3
+  %14 = icmp eq i64 %13, 0
+  %15 = select i1 %14, i32 -1438443452, i32 -1266457103
+  store i32 %15, i32* %8
+  br label %26
+
+; <label>:16:                                     ; preds = %9
+  %17 = load i64, i64* %5, align 8
+  store i64 %17, i64* %4, align 8
+  store i32 2010667735, i32* %8
+  br label %26
+
+; <label>:18:                                     ; preds = %9
+  %19 = load i64, i64* %6, align 8
+  %20 = load i64, i64* %5, align 8
+  %21 = load i64, i64* %6, align 8
+  %22 = srem i64 %20, %21
+  %23 = call i64 @_Z3gcdxx(i64 %19, i64 %22)
+  store i64 %23, i64* %4, align 8
+  store i32 2010667735, i32* %8
+  br label %26
+
+; <label>:24:                                     ; preds = %9
+  %25 = load i64, i64* %4, align 8
+  ret i64 %25
+
+; <label>:26:                                     ; preds = %18, %16, %12, %11
+  br label %9
+}
+
+; Function Attrs: noinline uwtable
+define i64 @_Z3lcmxx(i64, i64) #0 {
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  store i64 %0, i64* %3, align 8
+  store i64 %1, i64* %4, align 8
+  %6 = load i64, i64* %3, align 8
+  %7 = load i64, i64* %4, align 8
+  %8 = call i64 @_Z3gcdxx(i64 %6, i64 %7)
+  store i64 %8, i64* %5, align 8
+  %9 = load i64, i64* %3, align 8
+  %10 = load i64, i64* %5, align 8
+  %11 = sdiv i64 %9, %10
+  %12 = load i64, i64* %4, align 8
+  %13 = mul nsw i64 %11, %12
+  ret i64 %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z7reversePci(i8*, i32) #1 {
+  %3 = alloca i8*, align 8
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i8, align 1
+  store i8* %0, i8** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %8 = load i32, i32* %4, align 4
+  %9 = ashr i32 %8, 1
+  store i32 %9, i32* %5, align 4
+  store i32 0, i32* %6, align 4
+  %10 = alloca i32
+  store i32 -1303860272, i32* %10
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %49
+  %12 = load i32, i32* %10
+  switch i32 %12, label %13 [
+    i32 -1303860272, label %14
+    i32 -2127390873, label %19
+    i32 679716774, label %45
+    i32 1869480338, label %48
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %49
+
+; <label>:14:                                     ; preds = %11
+  %15 = load i32, i32* %6, align 4
+  %16 = load i32, i32* %5, align 4
+  %17 = icmp slt i32 %15, %16
+  %18 = select i1 %17, i32 -2127390873, i32 1869480338
+  store i32 %18, i32* %10
+  br label %49
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i8*, i8** %3, align 8
+  %21 = load i32, i32* %6, align 4
+  %22 = sext i32 %21 to i64
+  %23 = getelementptr inbounds i8, i8* %20, i64 %22
+  %24 = load i8, i8* %23, align 1
+  store i8 %24, i8* %7, align 1
+  %25 = load i8*, i8** %3, align 8
+  %26 = load i32, i32* %4, align 4
+  %27 = load i32, i32* %6, align 4
+  %28 = sub nsw i32 %26, %27
+  %29 = sub nsw i32 %28, 1
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds i8, i8* %25, i64 %30
+  %32 = load i8, i8* %31, align 1
+  %33 = load i8*, i8** %3, align 8
+  %34 = load i32, i32* %6, align 4
+  %35 = sext i32 %34 to i64
+  %36 = getelementptr inbounds i8, i8* %33, i64 %35
+  store i8 %32, i8* %36, align 1
+  %37 = load i8, i8* %7, align 1
+  %38 = load i8*, i8** %3, align 8
+  %39 = load i32, i32* %4, align 4
+  %40 = load i32, i32* %6, align 4
+  %41 = sub nsw i32 %39, %40
+  %42 = sub nsw i32 %41, 1
+  %43 = sext i32 %42 to i64
+  %44 = getelementptr inbounds i8, i8* %38, i64 %43
+  store i8 %37, i8* %44, align 1
+  store i32 679716774, i32* %10
+  br label %49
+
+; <label>:45:                                     ; preds = %11
+  %46 = load i32, i32* %6, align 4
+  %47 = add nsw i32 %46, 1
+  store i32 %47, i32* %6, align 4
+  store i32 -1303860272, i32* %10
+  br label %49
+
+; <label>:48:                                     ; preds = %11
+  ret void
+
+; <label>:49:                                     ; preds = %45, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z7reversePii(i32*, i32) #1 {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  store i32* %0, i32** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %8 = load i32, i32* %4, align 4
+  %9 = ashr i32 %8, 1
+  store i32 %9, i32* %5, align 4
+  store i32 0, i32* %6, align 4
+  %10 = alloca i32
+  store i32 1609896906, i32* %10
+  br label %11
+
+; <label>:11:                                     ; preds = %2, %49
+  %12 = load i32, i32* %10
+  switch i32 %12, label %13 [
+    i32 1609896906, label %14
+    i32 -679454563, label %19
+    i32 -1451030724, label %45
+    i32 -446950995, label %48
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %49
+
+; <label>:14:                                     ; preds = %11
+  %15 = load i32, i32* %6, align 4
+  %16 = load i32, i32* %5, align 4
+  %17 = icmp slt i32 %15, %16
+  %18 = select i1 %17, i32 -679454563, i32 -446950995
+  store i32 %18, i32* %10
+  br label %49
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i32*, i32** %3, align 8
+  %21 = load i32, i32* %6, align 4
+  %22 = sext i32 %21 to i64
+  %23 = getelementptr inbounds i32, i32* %20, i64 %22
+  %24 = load i32, i32* %23, align 4
+  store i32 %24, i32* %7, align 4
+  %25 = load i32*, i32** %3, align 8
+  %26 = load i32, i32* %4, align 4
+  %27 = load i32, i32* %6, align 4
+  %28 = sub nsw i32 %26, %27
+  %29 = sub nsw i32 %28, 1
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds i32, i32* %25, i64 %30
+  %32 = load i32, i32* %31, align 4
+  %33 = load i32*, i32** %3, align 8
+  %34 = load i32, i32* %6, align 4
+  %35 = sext i32 %34 to i64
+  %36 = getelementptr inbounds i32, i32* %33, i64 %35
+  store i32 %32, i32* %36, align 4
+  %37 = load i32, i32* %7, align 4
+  %38 = load i32*, i32** %3, align 8
+  %39 = load i32, i32* %4, align 4
+  %40 = load i32, i32* %6, align 4
+  %41 = sub nsw i32 %39, %40
+  %42 = sub nsw i32 %41, 1
+  %43 = sext i32 %42 to i64
+  %44 = getelementptr inbounds i32, i32* %38, i64 %43
+  store i32 %37, i32* %44, align 4
+  store i32 -1451030724, i32* %10
+  br label %49
+
+; <label>:45:                                     ; preds = %11
+  %46 = load i32, i32* %6, align 4
+  %47 = add nsw i32 %46, 1
+  store i32 %47, i32* %6, align 4
+  store i32 1609896906, i32* %10
+  br label %49
+
+; <label>:48:                                     ; preds = %11
+  ret void
+
+; <label>:49:                                     ; preds = %45, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4initP4Vecii(%struct.Veci*, i32) #1 {
+  %3 = alloca %struct.Veci*, align 8
+  %4 = alloca i32, align 4
+  store %struct.Veci* %0, %struct.Veci** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i32, i32* %4, align 4
+  %6 = sext i32 %5 to i64
+  %7 = mul i64 4, %6
+  %8 = call noalias i8* @malloc(i64 %7) #10
+  %9 = bitcast i8* %8 to i32*
+  %10 = load %struct.Veci*, %struct.Veci** %3, align 8
+  %11 = getelementptr inbounds %struct.Veci, %struct.Veci* %10, i32 0, i32 0
+  store i32* %9, i32** %11, align 8
+  %12 = load i32, i32* %4, align 4
+  %13 = load %struct.Veci*, %struct.Veci** %3, align 8
+  %14 = getelementptr inbounds %struct.Veci, %struct.Veci* %13, i32 0, i32 1
+  store i32 %12, i32* %14, align 8
+  %15 = load %struct.Veci*, %struct.Veci** %3, align 8
+  %16 = getelementptr inbounds %struct.Veci, %struct.Veci* %15, i32 0, i32 2
+  store i32 0, i32* %16, align 4
+  ret void
+}
+
+; Function Attrs: nounwind
+declare noalias i8* @malloc(i64) #5
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z6resizeP4Veci(%struct.Veci*) #1 {
+  %2 = alloca %struct.Veci*, align 8
+  %3 = alloca i32, align 4
+  store %struct.Veci* %0, %struct.Veci** %2, align 8
+  %4 = load %struct.Veci*, %struct.Veci** %2, align 8
+  %5 = getelementptr inbounds %struct.Veci, %struct.Veci* %4, i32 0, i32 1
+  %6 = load i32, i32* %5, align 8
+  %7 = sitofp i32 %6 to float
+  %8 = fmul float %7, 0x3FF3333340000000
+  %9 = fptosi float %8 to i32
+  store i32 %9, i32* %3, align 4
+  %10 = load %struct.Veci*, %struct.Veci** %2, align 8
+  %11 = getelementptr inbounds %struct.Veci, %struct.Veci* %10, i32 0, i32 0
+  %12 = load i32*, i32** %11, align 8
+  %13 = bitcast i32* %12 to i8*
+  %14 = load i32, i32* %3, align 4
+  %15 = sext i32 %14 to i64
+  %16 = mul i64 4, %15
+  %17 = call i8* @realloc(i8* %13, i64 %16) #10
+  %18 = bitcast i8* %17 to i32*
+  %19 = load %struct.Veci*, %struct.Veci** %2, align 8
+  %20 = getelementptr inbounds %struct.Veci, %struct.Veci* %19, i32 0, i32 0
+  store i32* %18, i32** %20, align 8
+  %21 = load i32, i32* %3, align 4
+  %22 = load %struct.Veci*, %struct.Veci** %2, align 8
+  %23 = getelementptr inbounds %struct.Veci, %struct.Veci* %22, i32 0, i32 1
+  store i32 %21, i32* %23, align 8
+  ret void
+}
+
+; Function Attrs: nounwind
+declare i8* @realloc(i8*, i64) #5
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z3addP4Vecii(%struct.Veci*, i32) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca %struct.Veci*, align 8
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  store %struct.Veci* %0, %struct.Veci** %5, align 8
+  store i32 %1, i32* %6, align 4
+  %8 = load %struct.Veci*, %struct.Veci** %5, align 8
+  %9 = getelementptr inbounds %struct.Veci, %struct.Veci* %8, i32 0, i32 2
+  %10 = load i32, i32* %9, align 4
+  store i32 %10, i32* %4
+  %11 = load %struct.Veci*, %struct.Veci** %5, align 8
+  %12 = getelementptr inbounds %struct.Veci, %struct.Veci* %11, i32 0, i32 1
+  %13 = load i32, i32* %12, align 8
+  store i32 %13, i32* %3
+  %14 = alloca i32
+  store i32 516276399, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %40
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 516276399, label %18
+    i32 -437459203, label %23
+    i32 -1847259171, label %25
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %40
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i32, i32* %4
+  %20 = load volatile i32, i32* %3
+  %21 = icmp sge i32 %19, %20
+  %22 = select i1 %21, i32 -437459203, i32 -1847259171
+  store i32 %22, i32* %14
+  br label %40
+
+; <label>:23:                                     ; preds = %15
+  %24 = load %struct.Veci*, %struct.Veci** %5, align 8
+  call void @_Z6resizeP4Veci(%struct.Veci* %24)
+  store i32 -1847259171, i32* %14
+  br label %40
+
+; <label>:25:                                     ; preds = %15
+  %26 = load %struct.Veci*, %struct.Veci** %5, align 8
+  %27 = getelementptr inbounds %struct.Veci, %struct.Veci* %26, i32 0, i32 2
+  %28 = load i32, i32* %27, align 4
+  store i32 %28, i32* %7, align 4
+  %29 = load i32, i32* %6, align 4
+  %30 = load %struct.Veci*, %struct.Veci** %5, align 8
+  %31 = getelementptr inbounds %struct.Veci, %struct.Veci* %30, i32 0, i32 0
+  %32 = load i32*, i32** %31, align 8
+  %33 = load i32, i32* %7, align 4
+  %34 = sext i32 %33 to i64
+  %35 = getelementptr inbounds i32, i32* %32, i64 %34
+  store i32 %29, i32* %35, align 4
+  %36 = load i32, i32* %7, align 4
+  %37 = add nsw i32 %36, 1
+  %38 = load %struct.Veci*, %struct.Veci** %5, align 8
+  %39 = getelementptr inbounds %struct.Veci, %struct.Veci* %38, i32 0, i32 2
+  store i32 %37, i32* %39, align 4
+  ret void
+
+; <label>:40:                                     ; preds = %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4freeP4Veci(%struct.Veci*) #1 {
+  %2 = alloca %struct.Veci*, align 8
+  store %struct.Veci* %0, %struct.Veci** %2, align 8
+  %3 = load %struct.Veci*, %struct.Veci** %2, align 8
+  %4 = getelementptr inbounds %struct.Veci, %struct.Veci* %3, i32 0, i32 0
+  %5 = load i32*, i32** %4, align 8
+  %6 = bitcast i32* %5 to i8*
+  call void @free(i8* %6) #10
+  ret void
+}
+
+; Function Attrs: nounwind
+declare void @free(i8*) #5
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4initP5Veclli(%struct.Vecll*, i32) #1 {
+  %3 = alloca %struct.Vecll*, align 8
+  %4 = alloca i32, align 4
+  store %struct.Vecll* %0, %struct.Vecll** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i32, i32* %4, align 4
+  %6 = sext i32 %5 to i64
+  %7 = mul i64 8, %6
+  %8 = call noalias i8* @malloc(i64 %7) #10
+  %9 = bitcast i8* %8 to i64*
+  %10 = load %struct.Vecll*, %struct.Vecll** %3, align 8
+  %11 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %10, i32 0, i32 0
+  store i64* %9, i64** %11, align 8
+  %12 = load i32, i32* %4, align 4
+  %13 = load %struct.Vecll*, %struct.Vecll** %3, align 8
+  %14 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %13, i32 0, i32 1
+  store i32 %12, i32* %14, align 8
+  %15 = load %struct.Vecll*, %struct.Vecll** %3, align 8
+  %16 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %15, i32 0, i32 2
+  store i32 0, i32* %16, align 4
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z6resizeP5Vecll(%struct.Vecll*) #1 {
+  %2 = alloca %struct.Vecll*, align 8
+  %3 = alloca i32, align 4
+  store %struct.Vecll* %0, %struct.Vecll** %2, align 8
+  %4 = load %struct.Vecll*, %struct.Vecll** %2, align 8
+  %5 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %4, i32 0, i32 1
+  %6 = load i32, i32* %5, align 8
+  %7 = sitofp i32 %6 to float
+  %8 = fmul float %7, 0x3FF3333340000000
+  %9 = fptosi float %8 to i32
+  store i32 %9, i32* %3, align 4
+  %10 = load %struct.Vecll*, %struct.Vecll** %2, align 8
+  %11 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %10, i32 0, i32 0
+  %12 = load i64*, i64** %11, align 8
+  %13 = bitcast i64* %12 to i8*
+  %14 = load i32, i32* %3, align 4
+  %15 = sext i32 %14 to i64
+  %16 = mul i64 8, %15
+  %17 = call i8* @realloc(i8* %13, i64 %16) #10
+  %18 = bitcast i8* %17 to i64*
+  %19 = load %struct.Vecll*, %struct.Vecll** %2, align 8
+  %20 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %19, i32 0, i32 0
+  store i64* %18, i64** %20, align 8
+  %21 = load i32, i32* %3, align 4
+  %22 = load %struct.Vecll*, %struct.Vecll** %2, align 8
+  %23 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %22, i32 0, i32 1
+  store i32 %21, i32* %23, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z3addP5Vecllx(%struct.Vecll*, i64) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca %struct.Vecll*, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca i32, align 4
+  store %struct.Vecll* %0, %struct.Vecll** %5, align 8
+  store i64 %1, i64* %6, align 8
+  %8 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  %9 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %8, i32 0, i32 2
+  %10 = load i32, i32* %9, align 4
+  store i32 %10, i32* %4
+  %11 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  %12 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %11, i32 0, i32 1
+  %13 = load i32, i32* %12, align 8
+  store i32 %13, i32* %3
+  %14 = alloca i32
+  store i32 548242618, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %40
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 548242618, label %18
+    i32 -1638044685, label %23
+    i32 -1238738239, label %25
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %40
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i32, i32* %4
+  %20 = load volatile i32, i32* %3
+  %21 = icmp sge i32 %19, %20
+  %22 = select i1 %21, i32 -1638044685, i32 -1238738239
+  store i32 %22, i32* %14
+  br label %40
+
+; <label>:23:                                     ; preds = %15
+  %24 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  call void @_Z6resizeP5Vecll(%struct.Vecll* %24)
+  store i32 -1238738239, i32* %14
+  br label %40
+
+; <label>:25:                                     ; preds = %15
+  %26 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  %27 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %26, i32 0, i32 2
+  %28 = load i32, i32* %27, align 4
+  store i32 %28, i32* %7, align 4
+  %29 = load i64, i64* %6, align 8
+  %30 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  %31 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %30, i32 0, i32 0
+  %32 = load i64*, i64** %31, align 8
+  %33 = load i32, i32* %7, align 4
+  %34 = sext i32 %33 to i64
+  %35 = getelementptr inbounds i64, i64* %32, i64 %34
+  store i64 %29, i64* %35, align 8
+  %36 = load i32, i32* %7, align 4
+  %37 = add nsw i32 %36, 1
+  %38 = load %struct.Vecll*, %struct.Vecll** %5, align 8
+  %39 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %38, i32 0, i32 2
+  store i32 %37, i32* %39, align 4
+  ret void
+
+; <label>:40:                                     ; preds = %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4freeP5Vecll(%struct.Vecll*) #1 {
+  %2 = alloca %struct.Vecll*, align 8
+  store %struct.Vecll* %0, %struct.Vecll** %2, align 8
+  %3 = load %struct.Vecll*, %struct.Vecll** %2, align 8
+  %4 = getelementptr inbounds %struct.Vecll, %struct.Vecll* %3, i32 0, i32 0
+  %5 = load i64*, i64** %4, align 8
+  %6 = bitcast i64* %5 to i8*
+  call void @free(i8* %6) #10
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4initP4Vecsi(%struct.Vecs*, i32) #1 {
+  %3 = alloca %struct.Vecs*, align 8
+  %4 = alloca i32, align 4
+  store %struct.Vecs* %0, %struct.Vecs** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i32, i32* %4, align 4
+  %6 = sext i32 %5 to i64
+  %7 = mul i64 8, %6
+  %8 = call noalias i8* @malloc(i64 %7) #10
+  %9 = bitcast i8* %8 to i8**
+  %10 = load %struct.Vecs*, %struct.Vecs** %3, align 8
+  %11 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %10, i32 0, i32 0
+  store i8** %9, i8*** %11, align 8
+  %12 = load i32, i32* %4, align 4
+  %13 = load %struct.Vecs*, %struct.Vecs** %3, align 8
+  %14 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %13, i32 0, i32 1
+  store i32 %12, i32* %14, align 8
+  %15 = load %struct.Vecs*, %struct.Vecs** %3, align 8
+  %16 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %15, i32 0, i32 2
+  store i32 0, i32* %16, align 4
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z6resizeP4Vecs(%struct.Vecs*) #1 {
+  %2 = alloca %struct.Vecs*, align 8
+  %3 = alloca i32, align 4
+  store %struct.Vecs* %0, %struct.Vecs** %2, align 8
+  %4 = load %struct.Vecs*, %struct.Vecs** %2, align 8
+  %5 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %4, i32 0, i32 1
+  %6 = load i32, i32* %5, align 8
+  %7 = sitofp i32 %6 to float
+  %8 = fmul float %7, 0x3FF3333340000000
+  %9 = fptosi float %8 to i32
+  store i32 %9, i32* %3, align 4
+  %10 = load %struct.Vecs*, %struct.Vecs** %2, align 8
+  %11 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %10, i32 0, i32 0
+  %12 = load i8**, i8*** %11, align 8
+  %13 = bitcast i8** %12 to i8*
+  %14 = load i32, i32* %3, align 4
+  %15 = sext i32 %14 to i64
+  %16 = mul i64 8, %15
+  %17 = call i8* @realloc(i8* %13, i64 %16) #10
+  %18 = bitcast i8* %17 to i8**
+  %19 = load %struct.Vecs*, %struct.Vecs** %2, align 8
+  %20 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %19, i32 0, i32 0
+  store i8** %18, i8*** %20, align 8
+  %21 = load i32, i32* %3, align 4
+  %22 = load %struct.Vecs*, %struct.Vecs** %2, align 8
+  %23 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %22, i32 0, i32 1
+  store i32 %21, i32* %23, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z3addP4VecsPc(%struct.Vecs*, i8*) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca %struct.Vecs*, align 8
+  %6 = alloca i8*, align 8
+  %7 = alloca i32, align 4
+  store %struct.Vecs* %0, %struct.Vecs** %5, align 8
+  store i8* %1, i8** %6, align 8
+  %8 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  %9 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %8, i32 0, i32 2
+  %10 = load i32, i32* %9, align 4
+  store i32 %10, i32* %4
+  %11 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  %12 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %11, i32 0, i32 1
+  %13 = load i32, i32* %12, align 8
+  store i32 %13, i32* %3
+  %14 = alloca i32
+  store i32 -105900925, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %40
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -105900925, label %18
+    i32 -1781737741, label %23
+    i32 434650673, label %25
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %40
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i32, i32* %4
+  %20 = load volatile i32, i32* %3
+  %21 = icmp sge i32 %19, %20
+  %22 = select i1 %21, i32 -1781737741, i32 434650673
+  store i32 %22, i32* %14
+  br label %40
+
+; <label>:23:                                     ; preds = %15
+  %24 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  call void @_Z6resizeP4Vecs(%struct.Vecs* %24)
+  store i32 434650673, i32* %14
+  br label %40
+
+; <label>:25:                                     ; preds = %15
+  %26 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  %27 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %26, i32 0, i32 2
+  %28 = load i32, i32* %27, align 4
+  store i32 %28, i32* %7, align 4
+  %29 = load i8*, i8** %6, align 8
+  %30 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  %31 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %30, i32 0, i32 0
+  %32 = load i8**, i8*** %31, align 8
+  %33 = load i32, i32* %7, align 4
+  %34 = sext i32 %33 to i64
+  %35 = getelementptr inbounds i8*, i8** %32, i64 %34
+  store i8* %29, i8** %35, align 8
+  %36 = load i32, i32* %7, align 4
+  %37 = add nsw i32 %36, 1
+  %38 = load %struct.Vecs*, %struct.Vecs** %5, align 8
+  %39 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %38, i32 0, i32 2
+  store i32 %37, i32* %39, align 4
+  ret void
+
+; <label>:40:                                     ; preds = %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define void @_Z4freeP4Vecs(%struct.Vecs*) #1 {
+  %2 = alloca %struct.Vecs*, align 8
+  store %struct.Vecs* %0, %struct.Vecs** %2, align 8
+  %3 = load %struct.Vecs*, %struct.Vecs** %2, align 8
+  %4 = getelementptr inbounds %struct.Vecs, %struct.Vecs* %3, i32 0, i32 0
+  %5 = load i8**, i8*** %4, align 8
+  %6 = bitcast i8** %5 to i8*
+  call void @free(i8* %6) #10
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z6ispaliPiS_i(i32*, i32*, i32) #1 {
+  %4 = alloca i32, align 4
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32 %2, i32* %7, align 4
+  store i32 0, i32* %8, align 4
+  %9 = alloca i32
+  store i32 1456296950, i32* %9
+  br label %10
+
+; <label>:10:                                     ; preds = %3, %42
+  %11 = load i32, i32* %9
+  switch i32 %11, label %12 [
+    i32 1456296950, label %13
+    i32 -779420690, label %18
+    i32 529850275, label %34
+    i32 -333366751, label %35
+    i32 1850248129, label %36
+    i32 -6998340, label %39
+    i32 1351410784, label %40
+  ]
+
+; <label>:12:                                     ; preds = %10
+  br label %42
+
+; <label>:13:                                     ; preds = %10
+  %14 = load i32, i32* %8, align 4
+  %15 = load i32, i32* %7, align 4
+  %16 = icmp slt i32 %14, %15
+  %17 = select i1 %16, i32 -779420690, i32 -6998340
+  store i32 %17, i32* %9
+  br label %42
+
+; <label>:18:                                     ; preds = %10
+  %19 = load i32*, i32** %5, align 8
+  %20 = load i32, i32* %8, align 4
+  %21 = sext i32 %20 to i64
+  %22 = getelementptr inbounds i32, i32* %19, i64 %21
+  %23 = load i32, i32* %22, align 4
+  %24 = load i32*, i32** %6, align 8
+  %25 = load i32, i32* %7, align 4
+  %26 = load i32, i32* %8, align 4
+  %27 = sub nsw i32 %25, %26
+  %28 = sub nsw i32 %27, 1
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds i32, i32* %24, i64 %29
+  %31 = load i32, i32* %30, align 4
+  %32 = icmp ne i32 %23, %31
+  %33 = select i1 %32, i32 529850275, i32 -333366751
+  store i32 %33, i32* %9
+  br label %42
+
+; <label>:34:                                     ; preds = %10
+  store i32 0, i32* %4, align 4
+  store i32 1351410784, i32* %9
+  br label %42
+
+; <label>:35:                                     ; preds = %10
+  store i32 1850248129, i32* %9
+  br label %42
+
+; <label>:36:                                     ; preds = %10
+  %37 = load i32, i32* %8, align 4
+  %38 = add nsw i32 %37, 1
+  store i32 %38, i32* %8, align 4
+  store i32 1456296950, i32* %9
+  br label %42
+
+; <label>:39:                                     ; preds = %10
+  store i32 1, i32* %4, align 4
+  store i32 1351410784, i32* %9
+  br label %42
+
+; <label>:40:                                     ; preds = %10
+  %41 = load i32, i32* %4, align 4
+  ret i32 %41
+
+; <label>:42:                                     ; preds = %39, %36, %35, %34, %18, %13, %12
+  br label %10
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z6ispalcPcS_i(i8*, i8*, i32) #1 {
+  %4 = alloca i32, align 4
+  %5 = alloca i8*, align 8
+  %6 = alloca i8*, align 8
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  store i8* %0, i8** %5, align 8
+  store i8* %1, i8** %6, align 8
+  store i32 %2, i32* %7, align 4
+  store i32 0, i32* %8, align 4
+  %9 = alloca i32
+  store i32 -526217101, i32* %9
+  br label %10
+
+; <label>:10:                                     ; preds = %3, %44
+  %11 = load i32, i32* %9
+  switch i32 %11, label %12 [
+    i32 -526217101, label %13
+    i32 816596266, label %18
+    i32 -718223394, label %36
+    i32 927567847, label %37
+    i32 -637101631, label %38
+    i32 385060179, label %41
+    i32 483376270, label %42
+  ]
+
+; <label>:12:                                     ; preds = %10
+  br label %44
+
+; <label>:13:                                     ; preds = %10
+  %14 = load i32, i32* %8, align 4
+  %15 = load i32, i32* %7, align 4
+  %16 = icmp slt i32 %14, %15
+  %17 = select i1 %16, i32 816596266, i32 385060179
+  store i32 %17, i32* %9
+  br label %44
+
+; <label>:18:                                     ; preds = %10
+  %19 = load i8*, i8** %5, align 8
+  %20 = load i32, i32* %8, align 4
+  %21 = sext i32 %20 to i64
+  %22 = getelementptr inbounds i8, i8* %19, i64 %21
+  %23 = load i8, i8* %22, align 1
+  %24 = sext i8 %23 to i32
+  %25 = load i8*, i8** %6, align 8
+  %26 = load i32, i32* %7, align 4
+  %27 = load i32, i32* %8, align 4
+  %28 = sub nsw i32 %26, %27
+  %29 = sub nsw i32 %28, 1
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds i8, i8* %25, i64 %30
+  %32 = load i8, i8* %31, align 1
+  %33 = sext i8 %32 to i32
+  %34 = icmp ne i32 %24, %33
+  %35 = select i1 %34, i32 -718223394, i32 927567847
+  store i32 %35, i32* %9
+  br label %44
+
+; <label>:36:                                     ; preds = %10
+  store i32 0, i32* %4, align 4
+  store i32 483376270, i32* %9
+  br label %44
+
+; <label>:37:                                     ; preds = %10
+  store i32 -637101631, i32* %9
+  br label %44
+
+; <label>:38:                                     ; preds = %10
+  %39 = load i32, i32* %8, align 4
+  %40 = add nsw i32 %39, 1
+  store i32 %40, i32* %8, align 4
+  store i32 -526217101, i32* %9
+  br label %44
+
+; <label>:41:                                     ; preds = %10
+  store i32 1, i32* %4, align 4
+  store i32 483376270, i32* %9
+  br label %44
+
+; <label>:42:                                     ; preds = %10
+  %43 = load i32, i32* %4, align 4
+  ret i32 %43
+
+; <label>:44:                                     ; preds = %41, %38, %37, %36, %18, %13, %12
+  br label %10
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z9cmp_PairiPKvS0_(i8*, i8*) #1 {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32, align 4
+  %6 = alloca i8*, align 8
+  %7 = alloca i8*, align 8
+  %8 = alloca %struct.Pairi*, align 8
+  %9 = alloca %struct.Pairi*, align 8
+  store i8* %0, i8** %6, align 8
+  store i8* %1, i8** %7, align 8
+  %10 = load i8*, i8** %6, align 8
+  %11 = bitcast i8* %10 to %struct.Pairi*
+  store %struct.Pairi* %11, %struct.Pairi** %8, align 8
+  %12 = load i8*, i8** %7, align 8
+  %13 = bitcast i8* %12 to %struct.Pairi*
+  store %struct.Pairi* %13, %struct.Pairi** %9, align 8
+  %14 = load %struct.Pairi*, %struct.Pairi** %8, align 8
+  %15 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %14, i32 0, i32 0
+  %16 = load i32, i32* %15, align 4
+  store i32 %16, i32* %4
+  %17 = load %struct.Pairi*, %struct.Pairi** %9, align 8
+  %18 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %17, i32 0, i32 0
+  %19 = load i32, i32* %18, align 4
+  store i32 %19, i32* %3
+  %20 = alloca i32
+  store i32 923375762, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %2, %63
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 923375762, label %24
+    i32 -932209312, label %29
+    i32 65310055, label %30
+    i32 -2029792332, label %39
+    i32 1789480427, label %48
+    i32 -1736764979, label %49
+    i32 -1626859402, label %58
+    i32 2018141229, label %59
+    i32 -571944851, label %60
+    i32 -1263033053, label %61
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %63
+
+; <label>:24:                                     ; preds = %21
+  %25 = load volatile i32, i32* %4
+  %26 = load volatile i32, i32* %3
+  %27 = icmp slt i32 %25, %26
+  %28 = select i1 %27, i32 -932209312, i32 65310055
+  store i32 %28, i32* %20
+  br label %63
+
+; <label>:29:                                     ; preds = %21
+  store i32 -1, i32* %5, align 4
+  store i32 -1263033053, i32* %20
+  br label %63
+
+; <label>:30:                                     ; preds = %21
+  %31 = load %struct.Pairi*, %struct.Pairi** %8, align 8
+  %32 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %31, i32 0, i32 0
+  %33 = load i32, i32* %32, align 4
+  %34 = load %struct.Pairi*, %struct.Pairi** %9, align 8
+  %35 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %34, i32 0, i32 0
+  %36 = load i32, i32* %35, align 4
+  %37 = icmp eq i32 %33, %36
+  %38 = select i1 %37, i32 -2029792332, i32 -571944851
+  store i32 %38, i32* %20
+  br label %63
+
+; <label>:39:                                     ; preds = %21
+  %40 = load %struct.Pairi*, %struct.Pairi** %8, align 8
+  %41 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %40, i32 0, i32 1
+  %42 = load i32, i32* %41, align 4
+  %43 = load %struct.Pairi*, %struct.Pairi** %9, align 8
+  %44 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %43, i32 0, i32 1
+  %45 = load i32, i32* %44, align 4
+  %46 = icmp eq i32 %42, %45
+  %47 = select i1 %46, i32 1789480427, i32 -1736764979
+  store i32 %47, i32* %20
+  br label %63
+
+; <label>:48:                                     ; preds = %21
+  store i32 0, i32* %5, align 4
+  store i32 -1263033053, i32* %20
+  br label %63
+
+; <label>:49:                                     ; preds = %21
+  %50 = load %struct.Pairi*, %struct.Pairi** %8, align 8
+  %51 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %50, i32 0, i32 1
+  %52 = load i32, i32* %51, align 4
+  %53 = load %struct.Pairi*, %struct.Pairi** %9, align 8
+  %54 = getelementptr inbounds %struct.Pairi, %struct.Pairi* %53, i32 0, i32 1
+  %55 = load i32, i32* %54, align 4
+  %56 = icmp slt i32 %52, %55
+  %57 = select i1 %56, i32 -1626859402, i32 2018141229
+  store i32 %57, i32* %20
+  br label %63
+
+; <label>:58:                                     ; preds = %21
+  store i32 -1, i32* %5, align 4
+  store i32 -1263033053, i32* %20
+  br label %63
+
+; <label>:59:                                     ; preds = %21
+  store i32 1, i32* %5, align 4
+  store i32 -1263033053, i32* %20
+  br label %63
+
+; <label>:60:                                     ; preds = %21
+  store i32 1, i32* %5, align 4
+  store i32 -1263033053, i32* %20
+  br label %63
+
+; <label>:61:                                     ; preds = %21
+  %62 = load i32, i32* %5, align 4
+  ret i32 %62
+
+; <label>:63:                                     ; preds = %60, %59, %58, %49, %48, %39, %30, %29, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define void @_Z10sort_PairiP5Pairii(%struct.Pairi*, i32) #0 {
+  %3 = alloca %struct.Pairi*, align 8
+  %4 = alloca i32, align 4
+  store %struct.Pairi* %0, %struct.Pairi** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load %struct.Pairi*, %struct.Pairi** %3, align 8
+  %6 = bitcast %struct.Pairi* %5 to i8*
+  %7 = load i32, i32* %4, align 4
+  %8 = sext i32 %7 to i64
+  call void @qsort(i8* %6, i64 %8, i64 8, i32 (i8*, i8*)* @_Z9cmp_PairiPKvS0_)
+  ret void
+}
+
+declare void @qsort(i8*, i64, i64, i32 (i8*, i8*)*) #3
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z7cmp_StrPKvS0_(i8*, i8*) #1 {
+  %3 = alloca i8*, align 8
+  %4 = alloca i8*, align 8
+  %5 = alloca i8*, align 8
+  %6 = alloca i8*, align 8
+  store i8* %0, i8** %3, align 8
+  store i8* %1, i8** %4, align 8
+  %7 = load i8*, i8** %3, align 8
+  %8 = bitcast i8* %7 to i8**
+  %9 = load i8*, i8** %8, align 8
+  store i8* %9, i8** %5, align 8
+  %10 = load i8*, i8** %4, align 8
+  %11 = bitcast i8* %10 to i8**
+  %12 = load i8*, i8** %11, align 8
+  store i8* %12, i8** %6, align 8
+  %13 = load i8*, i8** %5, align 8
+  %14 = load i8*, i8** %6, align 8
+  %15 = call i32 @strcmp(i8* %13, i8* %14) #9
+  ret i32 %15
+}
+
+; Function Attrs: nounwind readonly
+declare i32 @strcmp(i8*, i8*) #4
+
+; Function Attrs: noinline uwtable
+define void @_Z8sort_StrPPci(i8**, i32) #0 {
+  %3 = alloca i8**, align 8
+  %4 = alloca i32, align 4
+  store i8** %0, i8*** %3, align 8
+  store i32 %1, i32* %4, align 4
+  %5 = load i8**, i8*** %3, align 8
+  %6 = bitcast i8** %5 to i8*
+  %7 = load i32, i32* %4, align 4
+  %8 = sext i32 %7 to i64
+  call void @qsort(i8* %6, i64 %8, i64 8, i32 (i8*, i8*)* @_Z7cmp_StrPKvS0_)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i64 @_Z6expmodxxx(i64, i64, i64) #1 {
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca i64, align 8
+  store i64 %0, i64* %4, align 8
+  store i64 %1, i64* %5, align 8
+  store i64 %2, i64* %6, align 8
+  store i64 1, i64* %7, align 8
+  %8 = alloca i32
+  store i32 -1441824976, i32* %8
+  br label %9
+
+; <label>:9:                                      ; preds = %3, %37
+  %10 = load i32, i32* %8
+  switch i32 %10, label %11 [
+    i32 -1441824976, label %12
+    i32 -1909817173, label %16
+    i32 1747438244, label %21
+    i32 -885959607, label %27
+    i32 -435019543, label %35
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %37
+
+; <label>:12:                                     ; preds = %9
+  %13 = load i64, i64* %5, align 8
+  %14 = icmp ne i64 %13, 0
+  %15 = select i1 %14, i32 -1909817173, i32 -435019543
+  store i32 %15, i32* %8
+  br label %37
+
+; <label>:16:                                     ; preds = %9
+  %17 = load i64, i64* %5, align 8
+  %18 = and i64 %17, 1
+  %19 = icmp ne i64 %18, 0
+  %20 = select i1 %19, i32 1747438244, i32 -885959607
+  store i32 %20, i32* %8
+  br label %37
+
+; <label>:21:                                     ; preds = %9
+  %22 = load i64, i64* %7, align 8
+  %23 = load i64, i64* %4, align 8
+  %24 = mul nsw i64 %22, %23
+  %25 = load i64, i64* %6, align 8
+  %26 = srem i64 %24, %25
+  store i64 %26, i64* %7, align 8
+  store i32 -885959607, i32* %8
+  br label %37
+
+; <label>:27:                                     ; preds = %9
+  %28 = load i64, i64* %4, align 8
+  %29 = load i64, i64* %4, align 8
+  %30 = mul nsw i64 %28, %29
+  %31 = load i64, i64* %6, align 8
+  %32 = srem i64 %30, %31
+  store i64 %32, i64* %4, align 8
+  %33 = load i64, i64* %5, align 8
+  %34 = ashr i64 %33, 1
+  store i64 %34, i64* %5, align 8
+  store i32 -1441824976, i32* %8
+  br label %37
+
+; <label>:35:                                     ; preds = %9
+  %36 = load i64, i64* %7, align 8
+  ret i64 %36
+
+; <label>:37:                                     ; preds = %27, %21, %16, %12, %11
+  br label %9
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i64 @_Z7combmodxxx(i64, i64, i64) #1 {
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i64, align 8
+  store i64 %0, i64* %4, align 8
+  store i64 %1, i64* %5, align 8
+  store i64 %2, i64* %6, align 8
+  store i64 1, i64* %7, align 8
+  store i64 1, i64* %8, align 8
+  store i64 0, i64* %9, align 8
+  %10 = alloca i32
+  store i32 20063382, i32* %10
+  br label %11
+
+; <label>:11:                                     ; preds = %3, %51
+  %12 = load i32, i32* %10
+  switch i32 %12, label %13 [
+    i32 20063382, label %14
+    i32 -1574727046, label %19
+    i32 1892192925, label %35
+    i32 1432092741, label %38
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %51
+
+; <label>:14:                                     ; preds = %11
+  %15 = load i64, i64* %9, align 8
+  %16 = load i64, i64* %5, align 8
+  %17 = icmp slt i64 %15, %16
+  %18 = select i1 %17, i32 -1574727046, i32 1432092741
+  store i32 %18, i32* %10
+  br label %51
+
+; <label>:19:                                     ; preds = %11
+  %20 = load i64, i64* %7, align 8
+  %21 = load i64, i64* %4, align 8
+  %22 = load i64, i64* %9, align 8
+  %23 = sub nsw i64 %21, %22
+  %24 = mul nsw i64 %20, %23
+  %25 = load i64, i64* %6, align 8
+  %26 = srem i64 %24, %25
+  %27 = load i64, i64* %6, align 8
+  %28 = srem i64 %26, %27
+  store i64 %28, i64* %7, align 8
+  %29 = load i64, i64* %8, align 8
+  %30 = load i64, i64* %9, align 8
+  %31 = add nsw i64 %30, 1
+  %32 = mul nsw i64 %29, %31
+  %33 = load i64, i64* %6, align 8
+  %34 = srem i64 %32, %33
+  store i64 %34, i64* %8, align 8
+  store i32 1892192925, i32* %10
+  br label %51
+
+; <label>:35:                                     ; preds = %11
+  %36 = load i64, i64* %9, align 8
+  %37 = add nsw i64 %36, 1
+  store i64 %37, i64* %9, align 8
+  store i32 20063382, i32* %10
+  br label %51
+
+; <label>:38:                                     ; preds = %11
+  %39 = load i64, i64* %8, align 8
+  %40 = load i64, i64* %6, align 8
+  %41 = sub nsw i64 %40, 2
+  %42 = load i64, i64* %6, align 8
+  %43 = call i64 @_Z6expmodxxx(i64 %39, i64 %41, i64 %42)
+  %44 = load i64, i64* %6, align 8
+  %45 = srem i64 %43, %44
+  store i64 %45, i64* %8, align 8
+  %46 = load i64, i64* %7, align 8
+  %47 = load i64, i64* %8, align 8
+  %48 = mul nsw i64 %46, %47
+  %49 = load i64, i64* %6, align 8
+  %50 = srem i64 %48, %49
+  ret i64 %50
+
+; <label>:51:                                     ; preds = %35, %19, %14, %13
+  br label %11
+}
+
+; Function Attrs: noinline uwtable
+define i32 @_Z9next_permPii(i32*, i32) #0 {
+  %3 = alloca i32, align 4
+  %4 = alloca i32*, align 8
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  %10 = alloca i32, align 4
+  store i32* %0, i32** %4, align 8
+  store i32 %1, i32* %5, align 4
+  store i32 -1, i32* %6, align 4
+  %11 = load i32, i32* %5, align 4
+  %12 = sub nsw i32 %11, 2
+  store i32 %12, i32* %7, align 4
+  %13 = alloca i32
+  store i32 -1054802045, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %2, %128
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 -1054802045, label %17
+    i32 -829744824, label %21
+    i32 1321187911, label %35
+    i32 1138581549, label %37
+    i32 -1547429299, label %38
+    i32 -176609052, label %41
+    i32 1112677194, label %45
+    i32 109126439, label %46
+    i32 435518413, label %51
+    i32 -834727437, label %56
+    i32 -1959725095, label %69
+    i32 -1459569499, label %82
+    i32 1067431025, label %84
+    i32 -1851706037, label %85
+    i32 -473637638, label %88
+    i32 851038176, label %126
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %128
+
+; <label>:17:                                     ; preds = %14
+  %18 = load i32, i32* %7, align 4
+  %19 = icmp sge i32 %18, 0
+  %20 = select i1 %19, i32 -829744824, i32 -176609052
+  store i32 %20, i32* %13
+  br label %128
+
+; <label>:21:                                     ; preds = %14
+  %22 = load i32*, i32** %4, align 8
+  %23 = load i32, i32* %7, align 4
+  %24 = sext i32 %23 to i64
+  %25 = getelementptr inbounds i32, i32* %22, i64 %24
+  %26 = load i32, i32* %25, align 4
+  %27 = load i32*, i32** %4, align 8
+  %28 = load i32, i32* %7, align 4
+  %29 = add nsw i32 %28, 1
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds i32, i32* %27, i64 %30
+  %32 = load i32, i32* %31, align 4
+  %33 = icmp slt i32 %26, %32
+  %34 = select i1 %33, i32 1321187911, i32 1138581549
+  store i32 %34, i32* %13
+  br label %128
+
+; <label>:35:                                     ; preds = %14
+  %36 = load i32, i32* %7, align 4
+  store i32 %36, i32* %6, align 4
+  store i32 -176609052, i32* %13
+  br label %128
+
+; <label>:37:                                     ; preds = %14
+  store i32 -1547429299, i32* %13
+  br label %128
+
+; <label>:38:                                     ; preds = %14
+  %39 = load i32, i32* %7, align 4
+  %40 = add nsw i32 %39, -1
+  store i32 %40, i32* %7, align 4
+  store i32 -1054802045, i32* %13
+  br label %128
+
+; <label>:41:                                     ; preds = %14
+  %42 = load i32, i32* %6, align 4
+  %43 = icmp eq i32 %42, -1
+  %44 = select i1 %43, i32 1112677194, i32 109126439
+  store i32 %44, i32* %13
+  br label %128
+
+; <label>:45:                                     ; preds = %14
+  store i32 0, i32* %3, align 4
+  store i32 851038176, i32* %13
+  br label %128
+
+; <label>:46:                                     ; preds = %14
+  %47 = load i32, i32* %6, align 4
+  %48 = add nsw i32 %47, 1
+  store i32 %48, i32* %8, align 4
+  %49 = load i32, i32* %6, align 4
+  %50 = add nsw i32 %49, 2
+  store i32 %50, i32* %9, align 4
+  store i32 435518413, i32* %13
+  br label %128
+
+; <label>:51:                                     ; preds = %14
+  %52 = load i32, i32* %9, align 4
+  %53 = load i32, i32* %5, align 4
+  %54 = icmp slt i32 %52, %53
+  %55 = select i1 %54, i32 -834727437, i32 -473637638
+  store i32 %55, i32* %13
+  br label %128
+
+; <label>:56:                                     ; preds = %14
+  %57 = load i32*, i32** %4, align 8
+  %58 = load i32, i32* %9, align 4
+  %59 = sext i32 %58 to i64
+  %60 = getelementptr inbounds i32, i32* %57, i64 %59
+  %61 = load i32, i32* %60, align 4
+  %62 = load i32*, i32** %4, align 8
+  %63 = load i32, i32* %6, align 4
+  %64 = sext i32 %63 to i64
+  %65 = getelementptr inbounds i32, i32* %62, i64 %64
+  %66 = load i32, i32* %65, align 4
+  %67 = icmp sgt i32 %61, %66
+  %68 = select i1 %67, i32 -1959725095, i32 1067431025
+  store i32 %68, i32* %13
+  br label %128
+
+; <label>:69:                                     ; preds = %14
+  %70 = load i32*, i32** %4, align 8
+  %71 = load i32, i32* %9, align 4
+  %72 = sext i32 %71 to i64
+  %73 = getelementptr inbounds i32, i32* %70, i64 %72
+  %74 = load i32, i32* %73, align 4
+  %75 = load i32*, i32** %4, align 8
+  %76 = load i32, i32* %8, align 4
+  %77 = sext i32 %76 to i64
+  %78 = getelementptr inbounds i32, i32* %75, i64 %77
+  %79 = load i32, i32* %78, align 4
+  %80 = icmp slt i32 %74, %79
+  %81 = select i1 %80, i32 -1459569499, i32 1067431025
+  store i32 %81, i32* %13
+  br label %128
+
+; <label>:82:                                     ; preds = %14
+  %83 = load i32, i32* %9, align 4
+  store i32 %83, i32* %8, align 4
+  store i32 1067431025, i32* %13
+  br label %128
+
+; <label>:84:                                     ; preds = %14
+  store i32 -1851706037, i32* %13
+  br label %128
+
+; <label>:85:                                     ; preds = %14
+  %86 = load i32, i32* %9, align 4
+  %87 = add nsw i32 %86, 1
+  store i32 %87, i32* %9, align 4
+  store i32 435518413, i32* %13
+  br label %128
+
+; <label>:88:                                     ; preds = %14
+  %89 = load i32*, i32** %4, align 8
+  %90 = load i32, i32* %6, align 4
+  %91 = sext i32 %90 to i64
+  %92 = getelementptr inbounds i32, i32* %89, i64 %91
+  %93 = load i32, i32* %92, align 4
+  store i32 %93, i32* %10, align 4
+  %94 = load i32*, i32** %4, align 8
+  %95 = load i32, i32* %8, align 4
+  %96 = sext i32 %95 to i64
+  %97 = getelementptr inbounds i32, i32* %94, i64 %96
+  %98 = load i32, i32* %97, align 4
+  %99 = load i32*, i32** %4, align 8
+  %100 = load i32, i32* %6, align 4
+  %101 = sext i32 %100 to i64
+  %102 = getelementptr inbounds i32, i32* %99, i64 %101
+  store i32 %98, i32* %102, align 4
+  %103 = load i32, i32* %10, align 4
+  %104 = load i32*, i32** %4, align 8
+  %105 = load i32, i32* %8, align 4
+  %106 = sext i32 %105 to i64
+  %107 = getelementptr inbounds i32, i32* %104, i64 %106
+  store i32 %103, i32* %107, align 4
+  %108 = load i32*, i32** %4, align 8
+  %109 = load i32, i32* %6, align 4
+  %110 = add nsw i32 %109, 1
+  %111 = sext i32 %110 to i64
+  %112 = getelementptr inbounds i32, i32* %108, i64 %111
+  %113 = load i32*, i32** %4, align 8
+  %114 = load i32, i32* %6, align 4
+  %115 = add nsw i32 %114, 1
+  %116 = sext i32 %115 to i64
+  %117 = getelementptr inbounds i32, i32* %113, i64 %116
+  %118 = load i32, i32* %5, align 4
+  %119 = sext i32 %118 to i64
+  %120 = getelementptr inbounds i32, i32* %117, i64 %119
+  %121 = load i32, i32* %6, align 4
+  %122 = sext i32 %121 to i64
+  %123 = sub i64 0, %122
+  %124 = getelementptr inbounds i32, i32* %120, i64 %123
+  %125 = getelementptr inbounds i32, i32* %124, i64 -1
+  call void @_ZSt4sortIPiEvT_S1_(i32* %112, i32* %125)
+  store i32 1, i32* %3, align 4
+  store i32 851038176, i32* %13
+  br label %128
+
+; <label>:126:                                    ; preds = %14
+  %127 = load i32, i32* %3, align 4
+  ret i32 %127
+
+; <label>:128:                                    ; preds = %88, %85, %84, %82, %69, %56, %51, %46, %45, %41, %38, %37, %35, %21, %17, %16
+  br label %14
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt4sortIPiEvT_S1_(i32*, i32*) #0 comdat {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32*, align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %7 = load i32*, i32** %3, align 8
+  %8 = load i32*, i32** %4, align 8
+  call void @_ZN9__gnu_cxx5__ops16__iter_less_iterEv()
+  call void @_ZSt6__sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %7, i32* %8)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z12count_digitsx(i64) #1 {
+  %2 = alloca i64, align 8
+  %3 = alloca i32, align 4
+  store i64 %0, i64* %2, align 8
+  store i32 0, i32* %3, align 4
+  %4 = alloca i32
+  store i32 -188568922, i32* %4
+  br label %5
+
+; <label>:5:                                      ; preds = %1, %20
+  %6 = load i32, i32* %4
+  switch i32 %6, label %7 [
+    i32 -188568922, label %8
+    i32 1309298830, label %12
+    i32 -859117176, label %13
+    i32 1936829911, label %18
+  ]
+
+; <label>:7:                                      ; preds = %5
+  br label %20
+
+; <label>:8:                                      ; preds = %5
+  %9 = load i64, i64* %2, align 8
+  %10 = icmp eq i64 %9, 0
+  %11 = select i1 %10, i32 1309298830, i32 -859117176
+  store i32 %11, i32* %4
+  br label %20
+
+; <label>:12:                                     ; preds = %5
+  store i32 1936829911, i32* %4
+  br label %20
+
+; <label>:13:                                     ; preds = %5
+  %14 = load i32, i32* %3, align 4
+  %15 = add nsw i32 %14, 1
+  store i32 %15, i32* %3, align 4
+  %16 = load i64, i64* %2, align 8
+  %17 = sdiv i64 %16, 10
+  store i64 %17, i64* %2, align 8
+  store i32 -188568922, i32* %4
+  br label %20
+
+; <label>:18:                                     ; preds = %5
+  %19 = load i32, i32* %3, align 4
+  ret i32 %19
+
+; <label>:20:                                     ; preds = %13, %12, %8, %7
+  br label %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z9bs_existsPiii(i32*, i32, i32) #1 {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  store i32* %0, i32** %4, align 8
+  store i32 %1, i32* %5, align 4
+  store i32 %2, i32* %6, align 4
+  store i32 0, i32* %7, align 4
+  %10 = load i32, i32* %5, align 4
+  %11 = sub nsw i32 %10, 1
+  store i32 %11, i32* %8, align 4
+  %12 = alloca i32
+  store i32 1375042984, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %3, %43
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 1375042984, label %16
+    i32 1826608467, label %21
+    i32 115140489, label %35
+    i32 1693411343, label %37
+    i32 579935399, label %40
+    i32 280025768, label %41
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %43
+
+; <label>:16:                                     ; preds = %13
+  %17 = load i32, i32* %7, align 4
+  %18 = load i32, i32* %8, align 4
+  %19 = icmp slt i32 %17, %18
+  %20 = select i1 %19, i32 1826608467, i32 280025768
+  store i32 %20, i32* %12
+  br label %43
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32, i32* %7, align 4
+  %23 = load i32, i32* %8, align 4
+  %24 = add nsw i32 %22, %23
+  %25 = add nsw i32 %24, 1
+  %26 = ashr i32 %25, 1
+  store i32 %26, i32* %9, align 4
+  %27 = load i32*, i32** %4, align 8
+  %28 = load i32, i32* %9, align 4
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds i32, i32* %27, i64 %29
+  %31 = load i32, i32* %30, align 4
+  %32 = load i32, i32* %6, align 4
+  %33 = icmp sle i32 %31, %32
+  %34 = select i1 %33, i32 115140489, i32 1693411343
+  store i32 %34, i32* %12
+  br label %43
+
+; <label>:35:                                     ; preds = %13
+  %36 = load i32, i32* %9, align 4
+  store i32 %36, i32* %7, align 4
+  store i32 579935399, i32* %12
+  br label %43
+
+; <label>:37:                                     ; preds = %13
+  %38 = load i32, i32* %9, align 4
+  %39 = sub nsw i32 %38, 1
+  store i32 %39, i32* %8, align 4
+  store i32 579935399, i32* %12
+  br label %43
+
+; <label>:40:                                     ; preds = %13
+  store i32 1375042984, i32* %12
+  br label %43
+
+; <label>:41:                                     ; preds = %13
+  %42 = load i32, i32* %8, align 4
+  ret i32 %42
+
+; <label>:43:                                     ; preds = %40, %37, %35, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define void @_Z3dfsPiiS_iiiiiiii(i32*, i32, i32*, i32, i32, i32, i32, i32, i32, i32, i32) #0 {
+  %12 = alloca i32
+  %13 = alloca i32
+  %14 = alloca i32*, align 8
+  %15 = alloca i32, align 4
+  %16 = alloca i32*, align 8
+  %17 = alloca i32, align 4
+  %18 = alloca i32, align 4
+  %19 = alloca i32, align 4
+  %20 = alloca i32, align 4
+  %21 = alloca i32, align 4
+  %22 = alloca i32, align 4
+  %23 = alloca i32, align 4
+  %24 = alloca i32, align 4
+  %25 = alloca i32, align 4
+  store i32* %0, i32** %14, align 8
+  store i32 %1, i32* %15, align 4
+  store i32* %2, i32** %16, align 8
+  store i32 %3, i32* %17, align 4
+  store i32 %4, i32* %18, align 4
+  store i32 %5, i32* %19, align 4
+  store i32 %6, i32* %20, align 4
+  store i32 %7, i32* %21, align 4
+  store i32 %8, i32* %22, align 4
+  store i32 %9, i32* %23, align 4
+  store i32 %10, i32* %24, align 4
+  %26 = load i32, i32* %17, align 4
+  store i32 %26, i32* %13
+  %27 = load i32, i32* %18, align 4
+  store i32 %27, i32* %12
+  %28 = alloca i32
+  store i32 259378398, i32* %28
+  br label %29
+
+; <label>:29:                                     ; preds = %11, %144
+  %30 = load i32, i32* %28
+  switch i32 %30, label %31 [
+    i32 259378398, label %32
+    i32 2081867731, label %37
+    i32 -1131451614, label %45
+    i32 1269812727, label %46
+    i32 -371012160, label %69
+    i32 -2014374216, label %72
+    i32 -1196240235, label %73
+    i32 1656878770, label %143
+  ]
+
+; <label>:31:                                     ; preds = %29
+  br label %144
+
+; <label>:32:                                     ; preds = %29
+  %33 = load volatile i32, i32* %13
+  %34 = load volatile i32, i32* %12
+  %35 = icmp eq i32 %33, %34
+  %36 = select i1 %35, i32 2081867731, i32 -1196240235
+  store i32 %36, i32* %28
+  br label %144
+
+; <label>:37:                                     ; preds = %29
+  %38 = load i32, i32* %19, align 4
+  %39 = load i32, i32* %20, align 4
+  %40 = mul nsw i32 %38, %39
+  %41 = load i32, i32* %21, align 4
+  %42 = mul nsw i32 %40, %41
+  %43 = icmp eq i32 %42, 0
+  %44 = select i1 %43, i32 -1131451614, i32 1269812727
+  store i32 %44, i32* %28
+  br label %144
+
+; <label>:45:                                     ; preds = %29
+  store i32 1656878770, i32* %28
+  br label %144
+
+; <label>:46:                                     ; preds = %29
+  %47 = load i32, i32* %19, align 4
+  %48 = load i32, i32* %22, align 4
+  %49 = sub nsw i32 %47, %48
+  %50 = call i32 @abs(i32 %49) #8
+  %51 = load i32, i32* %20, align 4
+  %52 = load i32, i32* %23, align 4
+  %53 = sub nsw i32 %51, %52
+  %54 = call i32 @abs(i32 %53) #8
+  %55 = add nsw i32 %50, %54
+  %56 = load i32, i32* %21, align 4
+  %57 = load i32, i32* %24, align 4
+  %58 = sub nsw i32 %56, %57
+  %59 = call i32 @abs(i32 %58) #8
+  %60 = add nsw i32 %55, %59
+  store i32 %60, i32* %25, align 4
+  %61 = load i32, i32* %15, align 4
+  %62 = load i32, i32* %25, align 4
+  %63 = add nsw i32 %62, %61
+  store i32 %63, i32* %25, align 4
+  %64 = load i32, i32* %25, align 4
+  %65 = load i32*, i32** %14, align 8
+  %66 = load i32, i32* %65, align 4
+  %67 = icmp slt i32 %64, %66
+  %68 = select i1 %67, i32 -371012160, i32 -2014374216
+  store i32 %68, i32* %28
+  br label %144
+
+; <label>:69:                                     ; preds = %29
+  %70 = load i32, i32* %25, align 4
+  %71 = load i32*, i32** %14, align 8
+  store i32 %70, i32* %71, align 4
+  store i32 -2014374216, i32* %28
+  br label %144
+
+; <label>:72:                                     ; preds = %29
+  store i32 1656878770, i32* %28
+  br label %144
+
+; <label>:73:                                     ; preds = %29
+  %74 = load i32*, i32** %14, align 8
+  %75 = load i32, i32* %15, align 4
+  %76 = load i32*, i32** %16, align 8
+  %77 = load i32, i32* %17, align 4
+  %78 = add nsw i32 %77, 1
+  %79 = load i32, i32* %18, align 4
+  %80 = load i32, i32* %19, align 4
+  %81 = load i32, i32* %20, align 4
+  %82 = load i32, i32* %21, align 4
+  %83 = load i32, i32* %22, align 4
+  %84 = load i32, i32* %23, align 4
+  %85 = load i32, i32* %24, align 4
+  call void @_Z3dfsPiiS_iiiiiiii(i32* %74, i32 %75, i32* %76, i32 %78, i32 %79, i32 %80, i32 %81, i32 %82, i32 %83, i32 %84, i32 %85)
+  %86 = load i32*, i32** %14, align 8
+  %87 = load i32, i32* %15, align 4
+  %88 = add nsw i32 %87, 10
+  %89 = load i32*, i32** %16, align 8
+  %90 = load i32, i32* %17, align 4
+  %91 = add nsw i32 %90, 1
+  %92 = load i32, i32* %18, align 4
+  %93 = load i32, i32* %19, align 4
+  %94 = load i32*, i32** %16, align 8
+  %95 = load i32, i32* %17, align 4
+  %96 = sext i32 %95 to i64
+  %97 = getelementptr inbounds i32, i32* %94, i64 %96
+  %98 = load i32, i32* %97, align 4
+  %99 = add nsw i32 %93, %98
+  %100 = load i32, i32* %20, align 4
+  %101 = load i32, i32* %21, align 4
+  %102 = load i32, i32* %22, align 4
+  %103 = load i32, i32* %23, align 4
+  %104 = load i32, i32* %24, align 4
+  call void @_Z3dfsPiiS_iiiiiiii(i32* %86, i32 %88, i32* %89, i32 %91, i32 %92, i32 %99, i32 %100, i32 %101, i32 %102, i32 %103, i32 %104)
+  %105 = load i32*, i32** %14, align 8
+  %106 = load i32, i32* %15, align 4
+  %107 = add nsw i32 %106, 10
+  %108 = load i32*, i32** %16, align 8
+  %109 = load i32, i32* %17, align 4
+  %110 = add nsw i32 %109, 1
+  %111 = load i32, i32* %18, align 4
+  %112 = load i32, i32* %19, align 4
+  %113 = load i32, i32* %20, align 4
+  %114 = load i32*, i32** %16, align 8
+  %115 = load i32, i32* %17, align 4
+  %116 = sext i32 %115 to i64
+  %117 = getelementptr inbounds i32, i32* %114, i64 %116
+  %118 = load i32, i32* %117, align 4
+  %119 = add nsw i32 %113, %118
+  %120 = load i32, i32* %21, align 4
+  %121 = load i32, i32* %22, align 4
+  %122 = load i32, i32* %23, align 4
+  %123 = load i32, i32* %24, align 4
+  call void @_Z3dfsPiiS_iiiiiiii(i32* %105, i32 %107, i32* %108, i32 %110, i32 %111, i32 %112, i32 %119, i32 %120, i32 %121, i32 %122, i32 %123)
+  %124 = load i32*, i32** %14, align 8
+  %125 = load i32, i32* %15, align 4
+  %126 = add nsw i32 %125, 10
+  %127 = load i32*, i32** %16, align 8
+  %128 = load i32, i32* %17, align 4
+  %129 = add nsw i32 %128, 1
+  %130 = load i32, i32* %18, align 4
+  %131 = load i32, i32* %19, align 4
+  %132 = load i32, i32* %20, align 4
+  %133 = load i32, i32* %21, align 4
+  %134 = load i32*, i32** %16, align 8
+  %135 = load i32, i32* %17, align 4
+  %136 = sext i32 %135 to i64
+  %137 = getelementptr inbounds i32, i32* %134, i64 %136
+  %138 = load i32, i32* %137, align 4
+  %139 = add nsw i32 %133, %138
+  %140 = load i32, i32* %22, align 4
+  %141 = load i32, i32* %23, align 4
+  %142 = load i32, i32* %24, align 4
+  call void @_Z3dfsPiiS_iiiiiiii(i32* %124, i32 %126, i32* %127, i32 %129, i32 %130, i32 %131, i32 %132, i32 %139, i32 %140, i32 %141, i32 %142)
+  store i32 1656878770, i32* %28
+  br label %144
+
+; <label>:143:                                    ; preds = %29
+  ret void
+
+; <label>:144:                                    ; preds = %73, %72, %69, %46, %45, %37, %32, %31
+  br label %29
+}
+
+; Function Attrs: nounwind readnone
+declare i32 @abs(i32) #6
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #7 {
+  %1 = alloca %struct._IO_FILE*
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  store i32 0, i32* %2, align 4
+  %8 = call %struct._IO_FILE* @fopen(i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.6, i32 0, i32 0))
+  store %struct._IO_FILE* %8, %struct._IO_FILE** @_fin, align 8
+  %9 = load %struct._IO_FILE*, %struct._IO_FILE** @_fin, align 8
+  store %struct._IO_FILE* %9, %struct._IO_FILE** %1
+  %10 = alloca i32
+  store i32 -857220307, i32* %10
+  br label %11
+
+; <label>:11:                                     ; preds = %0, %34
+  %12 = load i32, i32* %10
+  switch i32 %12, label %13 [
+    i32 -857220307, label %14
+    i32 -1313360306, label %18
+    i32 189514678, label %20
+  ]
+
+; <label>:13:                                     ; preds = %11
+  br label %34
+
+; <label>:14:                                     ; preds = %11
+  %15 = load volatile %struct._IO_FILE*, %struct._IO_FILE** %1
+  %16 = icmp eq %struct._IO_FILE* %15, null
+  %17 = select i1 %16, i32 -1313360306, i32 189514678
+  store i32 %17, i32* %10
+  br label %34
+
+; <label>:18:                                     ; preds = %11
+  %19 = load %struct._IO_FILE*, %struct._IO_FILE** @stdin, align 8
+  store %struct._IO_FILE* %19, %struct._IO_FILE** @_fin, align 8
+  store i32 189514678, i32* %10
+  br label %34
+
+; <label>:20:                                     ; preds = %11
+  %21 = call i32 @_Z5readiv()
+  store i32 %21, i32* %3, align 4
+  %22 = call i32 @_Z5readiv()
+  store i32 %22, i32* %4, align 4
+  %23 = call i32 @_Z5readiv()
+  store i32 %23, i32* %5, align 4
+  %24 = call i32 @_Z5readiv()
+  store i32 %24, i32* %6, align 4
+  %25 = load i32, i32* %3, align 4
+  call void @_Z7repreadPii(i32* getelementptr inbounds ([10 x i32], [10 x i32]* @_ZZ4mainE1l, i32 0, i32 0), i32 %25)
+  store i32 1000000000, i32* %7, align 4
+  %26 = load i32, i32* %3, align 4
+  %27 = load i32, i32* %4, align 4
+  %28 = load i32, i32* %5, align 4
+  %29 = load i32, i32* %6, align 4
+  call void @_Z3dfsPiiS_iiiiiiii(i32* %7, i32 0, i32* getelementptr inbounds ([10 x i32], [10 x i32]* @_ZZ4mainE1l, i32 0, i32 0), i32 0, i32 %26, i32 0, i32 0, i32 0, i32 %27, i32 %28, i32 %29)
+  %30 = load %struct._IO_FILE*, %struct._IO_FILE** @_fout, align 8
+  %31 = load i32, i32* %7, align 4
+  %32 = sub nsw i32 %31, 30
+  %33 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %30, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.7, i32 0, i32 0), i32 %32)
+  ret i32 0
+
+; <label>:34:                                     ; preds = %18, %14, %13
+  br label %11
+}
+
+declare %struct._IO_FILE* @fopen(i8*, i8*) #3
+
+declare i32 @fprintf(%struct._IO_FILE*, i8*, ...) #3
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt6__sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i32*
+  %4 = alloca i32*
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %10 = load i32*, i32** %6, align 8
+  store i32* %10, i32** %4
+  %11 = load i32*, i32** %7, align 8
+  store i32* %11, i32** %3
+  %12 = alloca i32
+  store i32 1504131896, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %35
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 1504131896, label %16
+    i32 1113492266, label %21
+    i32 1000807485, label %34
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %35
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i32*, i32** %4
+  %18 = load volatile i32*, i32** %3
+  %19 = icmp ne i32* %17, %18
+  %20 = select i1 %19, i32 1113492266, i32 1000807485
+  store i32 %20, i32* %12
+  br label %35
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32*, i32** %6, align 8
+  %23 = load i32*, i32** %7, align 8
+  %24 = load i32*, i32** %7, align 8
+  %25 = load i32*, i32** %6, align 8
+  %26 = ptrtoint i32* %24 to i64
+  %27 = ptrtoint i32* %25 to i64
+  %28 = sub i64 %26, %27
+  %29 = sdiv exact i64 %28, 4
+  %30 = call i64 @_ZSt4__lgl(i64 %29)
+  %31 = mul nsw i64 %30, 2
+  call void @_ZSt16__introsort_loopIPilN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_(i32* %22, i32* %23, i64 %31)
+  %32 = load i32*, i32** %6, align 8
+  %33 = load i32*, i32** %7, align 8
+  call void @_ZSt22__final_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %32, i32* %33)
+  store i32 1000807485, i32* %12
+  br label %35
+
+; <label>:34:                                     ; preds = %13
+  ret void
+
+; <label>:35:                                     ; preds = %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops16__iter_less_iterEv() #1 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__introsort_loopIPilN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_(i32*, i32*, i64) #0 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca i32*, align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i64 %2, i64* %7, align 8
+  %12 = alloca i32
+  store i32 -94049403, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %3, %44
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -94049403, label %16
+    i32 314106333, label %25
+    i32 150745424, label %29
+    i32 -1505514181, label %33
+    i32 -405322654, label %43
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %44
+
+; <label>:16:                                     ; preds = %13
+  %17 = load i32*, i32** %6, align 8
+  %18 = load i32*, i32** %5, align 8
+  %19 = ptrtoint i32* %17 to i64
+  %20 = ptrtoint i32* %18 to i64
+  %21 = sub i64 %19, %20
+  %22 = sdiv exact i64 %21, 4
+  %23 = icmp sgt i64 %22, 16
+  %24 = select i1 %23, i32 314106333, i32 -405322654
+  store i32 %24, i32* %12
+  br label %44
+
+; <label>:25:                                     ; preds = %13
+  %26 = load i64, i64* %7, align 8
+  %27 = icmp eq i64 %26, 0
+  %28 = select i1 %27, i32 150745424, i32 -1505514181
+  store i32 %28, i32* %12
+  br label %44
+
+; <label>:29:                                     ; preds = %13
+  %30 = load i32*, i32** %5, align 8
+  %31 = load i32*, i32** %6, align 8
+  %32 = load i32*, i32** %6, align 8
+  call void @_ZSt14__partial_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32* %30, i32* %31, i32* %32)
+  store i32 -405322654, i32* %12
+  br label %44
+
+; <label>:33:                                     ; preds = %13
+  %34 = load i64, i64* %7, align 8
+  %35 = add nsw i64 %34, -1
+  store i64 %35, i64* %7, align 8
+  %36 = load i32*, i32** %5, align 8
+  %37 = load i32*, i32** %6, align 8
+  %38 = call i32* @_ZSt27__unguarded_partition_pivotIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_T0_(i32* %36, i32* %37)
+  store i32* %38, i32** %9, align 8
+  %39 = load i32*, i32** %9, align 8
+  %40 = load i32*, i32** %6, align 8
+  %41 = load i64, i64* %7, align 8
+  call void @_ZSt16__introsort_loopIPilN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_T1_(i32* %39, i32* %40, i64 %41)
+  %42 = load i32*, i32** %9, align 8
+  store i32* %42, i32** %6, align 8
+  store i32 -94049403, i32* %12
+  br label %44
+
+; <label>:43:                                     ; preds = %13
+  ret void
+
+; <label>:44:                                     ; preds = %33, %29, %25, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZSt4__lgl(i64) #1 comdat {
+  %2 = alloca i64, align 8
+  store i64 %0, i64* %2, align 8
+  %3 = load i64, i64* %2, align 8
+  %4 = call i64 @llvm.ctlz.i64(i64 %3, i1 true)
+  %5 = trunc i64 %4 to i32
+  %6 = sext i32 %5 to i64
+  %7 = sub i64 63, %6
+  ret i64 %7
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__final_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i64
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32*, i32** %5, align 8
+  %12 = ptrtoint i32* %10 to i64
+  %13 = ptrtoint i32* %11 to i64
+  %14 = sub i64 %12, %13
+  %15 = sdiv exact i64 %14, 4
+  store i64 %15, i64* %3
+  %16 = alloca i32
+  store i32 1153300735, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %35
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 1153300735, label %20
+    i32 423964588, label %24
+    i32 2087030511, label %31
+    i32 1374644720, label %34
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %35
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i64, i64* %3
+  %22 = icmp sgt i64 %21, 16
+  %23 = select i1 %22, i32 423964588, i32 2087030511
+  store i32 %23, i32* %16
+  br label %35
+
+; <label>:24:                                     ; preds = %17
+  %25 = load i32*, i32** %5, align 8
+  %26 = load i32*, i32** %5, align 8
+  %27 = getelementptr inbounds i32, i32* %26, i64 16
+  call void @_ZSt16__insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %25, i32* %27)
+  %28 = load i32*, i32** %5, align 8
+  %29 = getelementptr inbounds i32, i32* %28, i64 16
+  %30 = load i32*, i32** %6, align 8
+  call void @_ZSt26__unguarded_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %29, i32* %30)
+  store i32 1374644720, i32* %16
+  br label %35
+
+; <label>:31:                                     ; preds = %17
+  %32 = load i32*, i32** %5, align 8
+  %33 = load i32*, i32** %6, align 8
+  call void @_ZSt16__insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %32, i32* %33)
+  store i32 1374644720, i32* %16
+  br label %35
+
+; <label>:34:                                     ; preds = %17
+  ret void
+
+; <label>:35:                                     ; preds = %31, %24, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt14__partial_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %10 = load i32*, i32** %5, align 8
+  %11 = load i32*, i32** %6, align 8
+  %12 = load i32*, i32** %7, align 8
+  call void @_ZSt13__heap_selectIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32* %10, i32* %11, i32* %12)
+  %13 = load i32*, i32** %5, align 8
+  %14 = load i32*, i32** %6, align 8
+  call void @_ZSt11__sort_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %13, i32* %14)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt27__unguarded_partition_pivotIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  %9 = load i32*, i32** %4, align 8
+  %10 = load i32*, i32** %5, align 8
+  %11 = load i32*, i32** %4, align 8
+  %12 = ptrtoint i32* %10 to i64
+  %13 = ptrtoint i32* %11 to i64
+  %14 = sub i64 %12, %13
+  %15 = sdiv exact i64 %14, 4
+  %16 = sdiv i64 %15, 2
+  %17 = getelementptr inbounds i32, i32* %9, i64 %16
+  store i32* %17, i32** %6, align 8
+  %18 = load i32*, i32** %4, align 8
+  %19 = load i32*, i32** %4, align 8
+  %20 = getelementptr inbounds i32, i32* %19, i64 1
+  %21 = load i32*, i32** %6, align 8
+  %22 = load i32*, i32** %5, align 8
+  %23 = getelementptr inbounds i32, i32* %22, i64 -1
+  call void @_ZSt22__move_median_to_firstIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_S4_T0_(i32* %18, i32* %20, i32* %21, i32* %23)
+  %24 = load i32*, i32** %4, align 8
+  %25 = getelementptr inbounds i32, i32* %24, i64 1
+  %26 = load i32*, i32** %5, align 8
+  %27 = load i32*, i32** %4, align 8
+  %28 = call i32* @_ZSt21__unguarded_partitionIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_S4_T0_(i32* %25, i32* %26, i32* %27)
+  ret i32* %28
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__heap_selectIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca i32*, align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %11 = load i32*, i32** %5, align 8
+  %12 = load i32*, i32** %6, align 8
+  call void @_ZSt11__make_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32* %11, i32* %12)
+  %13 = load i32*, i32** %6, align 8
+  store i32* %13, i32** %9, align 8
+  %14 = alloca i32
+  store i32 -305852380, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %3, %37
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -305852380, label %18
+    i32 1839530257, label %23
+    i32 -779551694, label %28
+    i32 334507444, label %32
+    i32 887330822, label %33
+    i32 1673565614, label %36
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %37
+
+; <label>:18:                                     ; preds = %15
+  %19 = load i32*, i32** %9, align 8
+  %20 = load i32*, i32** %7, align 8
+  %21 = icmp ult i32* %19, %20
+  %22 = select i1 %21, i32 1839530257, i32 1673565614
+  store i32 %22, i32* %14
+  br label %37
+
+; <label>:23:                                     ; preds = %15
+  %24 = load i32*, i32** %9, align 8
+  %25 = load i32*, i32** %5, align 8
+  %26 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %4, i32* %24, i32* %25)
+  %27 = select i1 %26, i32 -779551694, i32 334507444
+  store i32 %27, i32* %14
+  br label %37
+
+; <label>:28:                                     ; preds = %15
+  %29 = load i32*, i32** %5, align 8
+  %30 = load i32*, i32** %6, align 8
+  %31 = load i32*, i32** %9, align 8
+  call void @_ZSt10__pop_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32* %29, i32* %30, i32* %31)
+  store i32 334507444, i32* %14
+  br label %37
+
+; <label>:32:                                     ; preds = %15
+  store i32 887330822, i32* %14
+  br label %37
+
+; <label>:33:                                     ; preds = %15
+  %34 = load i32*, i32** %9, align 8
+  %35 = getelementptr inbounds i32, i32* %34, i32 1
+  store i32* %35, i32** %9, align 8
+  store i32 -305852380, i32* %14
+  br label %37
+
+; <label>:36:                                     ; preds = %15
+  ret void
+
+; <label>:37:                                     ; preds = %33, %32, %28, %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__sort_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  %7 = alloca i32
+  store i32 -824589180, i32* %7
+  br label %8
+
+; <label>:8:                                      ; preds = %2, %27
+  %9 = load i32, i32* %7
+  switch i32 %9, label %10 [
+    i32 -824589180, label %11
+    i32 -1556850829, label %20
+    i32 1758140921, label %26
+  ]
+
+; <label>:10:                                     ; preds = %8
+  br label %27
+
+; <label>:11:                                     ; preds = %8
+  %12 = load i32*, i32** %5, align 8
+  %13 = load i32*, i32** %4, align 8
+  %14 = ptrtoint i32* %12 to i64
+  %15 = ptrtoint i32* %13 to i64
+  %16 = sub i64 %14, %15
+  %17 = sdiv exact i64 %16, 4
+  %18 = icmp sgt i64 %17, 1
+  %19 = select i1 %18, i32 -1556850829, i32 1758140921
+  store i32 %19, i32* %7
+  br label %27
+
+; <label>:20:                                     ; preds = %8
+  %21 = load i32*, i32** %5, align 8
+  %22 = getelementptr inbounds i32, i32* %21, i32 -1
+  store i32* %22, i32** %5, align 8
+  %23 = load i32*, i32** %4, align 8
+  %24 = load i32*, i32** %5, align 8
+  %25 = load i32*, i32** %5, align 8
+  call void @_ZSt10__pop_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32* %23, i32* %24, i32* %25)
+  store i32 -824589180, i32* %7
+  br label %27
+
+; <label>:26:                                     ; preds = %8
+  ret void
+
+; <label>:27:                                     ; preds = %20, %11, %10
+  br label %8
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__make_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i64
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i32, align 4
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  %11 = load i32*, i32** %6, align 8
+  %12 = load i32*, i32** %5, align 8
+  %13 = ptrtoint i32* %11 to i64
+  %14 = ptrtoint i32* %12 to i64
+  %15 = sub i64 %13, %14
+  %16 = sdiv exact i64 %15, 4
+  store i64 %16, i64* %3
+  %17 = alloca i32
+  store i32 -1464180066, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %2, %55
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 -1464180066, label %21
+    i32 -1358585199, label %25
+    i32 -1518563030, label %26
+    i32 743349496, label %36
+    i32 -1035327153, label %50
+    i32 57554723, label %51
+    i32 -760312572, label %54
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %55
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile i64, i64* %3
+  %23 = icmp slt i64 %22, 2
+  %24 = select i1 %23, i32 -1358585199, i32 -1518563030
+  store i32 %24, i32* %17
+  br label %55
+
+; <label>:25:                                     ; preds = %18
+  store i32 -760312572, i32* %17
+  br label %55
+
+; <label>:26:                                     ; preds = %18
+  %27 = load i32*, i32** %6, align 8
+  %28 = load i32*, i32** %5, align 8
+  %29 = ptrtoint i32* %27 to i64
+  %30 = ptrtoint i32* %28 to i64
+  %31 = sub i64 %29, %30
+  %32 = sdiv exact i64 %31, 4
+  store i64 %32, i64* %7, align 8
+  %33 = load i64, i64* %7, align 8
+  %34 = sub nsw i64 %33, 2
+  %35 = sdiv i64 %34, 2
+  store i64 %35, i64* %8, align 8
+  store i32 743349496, i32* %17
+  br label %55
+
+; <label>:36:                                     ; preds = %18
+  %37 = load i32*, i32** %5, align 8
+  %38 = load i64, i64* %8, align 8
+  %39 = getelementptr inbounds i32, i32* %37, i64 %38
+  %40 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %39) #10
+  %41 = load i32, i32* %40, align 4
+  store i32 %41, i32* %9, align 4
+  %42 = load i32*, i32** %5, align 8
+  %43 = load i64, i64* %8, align 8
+  %44 = load i64, i64* %7, align 8
+  %45 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #10
+  %46 = load i32, i32* %45, align 4
+  call void @_ZSt13__adjust_heapIPiliN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_(i32* %42, i64 %43, i64 %44, i32 %46)
+  %47 = load i64, i64* %8, align 8
+  %48 = icmp eq i64 %47, 0
+  %49 = select i1 %48, i32 -1035327153, i32 57554723
+  store i32 %49, i32* %17
+  br label %55
+
+; <label>:50:                                     ; preds = %18
+  store i32 -760312572, i32* %17
+  br label %55
+
+; <label>:51:                                     ; preds = %18
+  %52 = load i64, i64* %8, align 8
+  %53 = add nsw i64 %52, -1
+  store i64 %53, i64* %8, align 8
+  store i32 743349496, i32* %17
+  br label %55
+
+; <label>:54:                                     ; preds = %18
+  ret void
+
+; <label>:55:                                     ; preds = %51, %50, %36, %26, %25, %21, %20
+  br label %18
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"*, i32*, i32*) #1 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_less_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  %9 = load i32, i32* %8, align 4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  %12 = icmp slt i32 %9, %11
+  ret i1 %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt10__pop_heapIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca i32, align 4
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %10 = load i32*, i32** %7, align 8
+  %11 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %10) #10
+  %12 = load i32, i32* %11, align 4
+  store i32 %12, i32* %8, align 4
+  %13 = load i32*, i32** %5, align 8
+  %14 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %13) #10
+  %15 = load i32, i32* %14, align 4
+  %16 = load i32*, i32** %7, align 8
+  store i32 %15, i32* %16, align 4
+  %17 = load i32*, i32** %5, align 8
+  %18 = load i32*, i32** %6, align 8
+  %19 = load i32*, i32** %5, align 8
+  %20 = ptrtoint i32* %18 to i64
+  %21 = ptrtoint i32* %19 to i64
+  %22 = sub i64 %20, %21
+  %23 = sdiv exact i64 %22, 4
+  %24 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %8) #10
+  %25 = load i32, i32* %24, align 4
+  call void @_ZSt13__adjust_heapIPiliN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_(i32* %17, i64 0, i64 %23, i32 %25)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4)) #1 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  ret i32* %3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__adjust_heapIPiliN9__gnu_cxx5__ops15_Iter_less_iterEEvT_T0_S5_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca i32*, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i32, align 4
+  %10 = alloca i64, align 8
+  %11 = alloca i64, align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %13 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %14 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  store i32* %0, i32** %6, align 8
+  store i64 %1, i64* %7, align 8
+  store i64 %2, i64* %8, align 8
+  store i32 %3, i32* %9, align 4
+  %15 = load i64, i64* %7, align 8
+  store i64 %15, i64* %10, align 8
+  %16 = load i64, i64* %7, align 8
+  store i64 %16, i64* %11, align 8
+  %17 = alloca i32
+  store i32 -1874747850, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %4, %87
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 -1874747850, label %21
+    i32 1932293715, label %28
+    i32 536364745, label %41
+    i32 1922193496, label %44
+    i32 867370599, label %54
+    i32 1682739250, label %59
+    i32 1953959562, label %66
+    i32 -633810143, label %81
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %87
+
+; <label>:21:                                     ; preds = %18
+  %22 = load i64, i64* %11, align 8
+  %23 = load i64, i64* %8, align 8
+  %24 = sub nsw i64 %23, 1
+  %25 = sdiv i64 %24, 2
+  %26 = icmp slt i64 %22, %25
+  %27 = select i1 %26, i32 1932293715, i32 867370599
+  store i32 %27, i32* %17
+  br label %87
+
+; <label>:28:                                     ; preds = %18
+  %29 = load i64, i64* %11, align 8
+  %30 = add nsw i64 %29, 1
+  %31 = mul nsw i64 2, %30
+  store i64 %31, i64* %11, align 8
+  %32 = load i32*, i32** %6, align 8
+  %33 = load i64, i64* %11, align 8
+  %34 = getelementptr inbounds i32, i32* %32, i64 %33
+  %35 = load i32*, i32** %6, align 8
+  %36 = load i64, i64* %11, align 8
+  %37 = sub nsw i64 %36, 1
+  %38 = getelementptr inbounds i32, i32* %35, i64 %37
+  %39 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %5, i32* %34, i32* %38)
+  %40 = select i1 %39, i32 536364745, i32 1922193496
+  store i32 %40, i32* %17
+  br label %87
+
+; <label>:41:                                     ; preds = %18
+  %42 = load i64, i64* %11, align 8
+  %43 = add nsw i64 %42, -1
+  store i64 %43, i64* %11, align 8
+  store i32 1922193496, i32* %17
+  br label %87
+
+; <label>:44:                                     ; preds = %18
+  %45 = load i32*, i32** %6, align 8
+  %46 = load i64, i64* %11, align 8
+  %47 = getelementptr inbounds i32, i32* %45, i64 %46
+  %48 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %47) #10
+  %49 = load i32, i32* %48, align 4
+  %50 = load i32*, i32** %6, align 8
+  %51 = load i64, i64* %7, align 8
+  %52 = getelementptr inbounds i32, i32* %50, i64 %51
+  store i32 %49, i32* %52, align 4
+  %53 = load i64, i64* %11, align 8
+  store i64 %53, i64* %7, align 8
+  store i32 -1874747850, i32* %17
+  br label %87
+
+; <label>:54:                                     ; preds = %18
+  %55 = load i64, i64* %8, align 8
+  %56 = and i64 %55, 1
+  %57 = icmp eq i64 %56, 0
+  %58 = select i1 %57, i32 1682739250, i32 -633810143
+  store i32 %58, i32* %17
+  br label %87
+
+; <label>:59:                                     ; preds = %18
+  %60 = load i64, i64* %11, align 8
+  %61 = load i64, i64* %8, align 8
+  %62 = sub nsw i64 %61, 2
+  %63 = sdiv i64 %62, 2
+  %64 = icmp eq i64 %60, %63
+  %65 = select i1 %64, i32 1953959562, i32 -633810143
+  store i32 %65, i32* %17
+  br label %87
+
+; <label>:66:                                     ; preds = %18
+  %67 = load i64, i64* %11, align 8
+  %68 = add nsw i64 %67, 1
+  %69 = mul nsw i64 2, %68
+  store i64 %69, i64* %11, align 8
+  %70 = load i32*, i32** %6, align 8
+  %71 = load i64, i64* %11, align 8
+  %72 = sub nsw i64 %71, 1
+  %73 = getelementptr inbounds i32, i32* %70, i64 %72
+  %74 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %73) #10
+  %75 = load i32, i32* %74, align 4
+  %76 = load i32*, i32** %6, align 8
+  %77 = load i64, i64* %7, align 8
+  %78 = getelementptr inbounds i32, i32* %76, i64 %77
+  store i32 %75, i32* %78, align 4
+  %79 = load i64, i64* %11, align 8
+  %80 = sub nsw i64 %79, 1
+  store i64 %80, i64* %7, align 8
+  store i32 -633810143, i32* %17
+  br label %87
+
+; <label>:81:                                     ; preds = %18
+  %82 = load i32*, i32** %6, align 8
+  %83 = load i64, i64* %7, align 8
+  %84 = load i64, i64* %10, align 8
+  %85 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #10
+  %86 = load i32, i32* %85, align 4
+  call void @_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE()
+  call void @_ZSt11__push_heapIPiliN9__gnu_cxx5__ops14_Iter_less_valEEvT_T0_S5_T1_T2_(i32* %82, i64 %83, i64 %84, i32 %86)
+  ret void
+
+; <label>:87:                                     ; preds = %66, %59, %54, %44, %41, %28, %21, %20
+  br label %18
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__push_heapIPiliN9__gnu_cxx5__ops14_Iter_less_valEEvT_T0_S5_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %6 = alloca i32*, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i32, align 4
+  %10 = alloca i64, align 8
+  store i32* %0, i32** %6, align 8
+  store i64 %1, i64* %7, align 8
+  store i64 %2, i64* %8, align 8
+  store i32 %3, i32* %9, align 4
+  %11 = load i64, i64* %7, align 8
+  %12 = sub nsw i64 %11, 1
+  %13 = sdiv i64 %12, 2
+  store i64 %13, i64* %10, align 8
+  %14 = alloca i32
+  store i32 976287347, i32* %14
+  %15 = alloca i1
+  br label %16
+
+; <label>:16:                                     ; preds = %4, %51
+  %17 = load i32, i32* %14
+  switch i32 %17, label %18 [
+    i32 976287347, label %19
+    i32 1475333476, label %24
+    i32 2022642666, label %29
+    i32 -1745855241, label %32
+    i32 77421867, label %45
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %51
+
+; <label>:19:                                     ; preds = %16
+  %20 = load i64, i64* %7, align 8
+  %21 = load i64, i64* %8, align 8
+  %22 = icmp sgt i64 %20, %21
+  %23 = select i1 %22, i32 1475333476, i32 2022642666
+  store i32 %23, i32* %14
+  store i1 false, i1* %15
+  br label %51
+
+; <label>:24:                                     ; preds = %16
+  %25 = load i32*, i32** %6, align 8
+  %26 = load i64, i64* %10, align 8
+  %27 = getelementptr inbounds i32, i32* %25, i64 %26
+  %28 = call zeroext i1 @_ZNK9__gnu_cxx5__ops14_Iter_less_valclIPiiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_less_val"* %5, i32* %27, i32* dereferenceable(4) %9)
+  store i32 2022642666, i32* %14
+  store i1 %28, i1* %15
+  br label %51
+
+; <label>:29:                                     ; preds = %16
+  %30 = load i1, i1* %15
+  %31 = select i1 %30, i32 -1745855241, i32 77421867
+  store i32 %31, i32* %14
+  br label %51
+
+; <label>:32:                                     ; preds = %16
+  %33 = load i32*, i32** %6, align 8
+  %34 = load i64, i64* %10, align 8
+  %35 = getelementptr inbounds i32, i32* %33, i64 %34
+  %36 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %35) #10
+  %37 = load i32, i32* %36, align 4
+  %38 = load i32*, i32** %6, align 8
+  %39 = load i64, i64* %7, align 8
+  %40 = getelementptr inbounds i32, i32* %38, i64 %39
+  store i32 %37, i32* %40, align 4
+  %41 = load i64, i64* %10, align 8
+  store i64 %41, i64* %7, align 8
+  %42 = load i64, i64* %7, align 8
+  %43 = sub nsw i64 %42, 1
+  %44 = sdiv i64 %43, 2
+  store i64 %44, i64* %10, align 8
+  store i32 976287347, i32* %14
+  br label %51
+
+; <label>:45:                                     ; preds = %16
+  %46 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #10
+  %47 = load i32, i32* %46, align 4
+  %48 = load i32*, i32** %6, align 8
+  %49 = load i64, i64* %7, align 8
+  %50 = getelementptr inbounds i32, i32* %48, i64 %49
+  store i32 %47, i32* %50, align 4
+  ret void
+
+; <label>:51:                                     ; preds = %32, %29, %24, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE() #1 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops14_Iter_less_valclIPiiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_less_val"*, i32*, i32* dereferenceable(4)) #1 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_less_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load %"struct.__gnu_cxx::__ops::_Iter_less_val"*, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  %9 = load i32, i32* %8, align 4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  %12 = icmp slt i32 %9, %11
+  ret i1 %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__move_median_to_firstIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_S4_S4_T0_(i32*, i32*, i32*, i32*) #0 comdat {
+  %5 = alloca i32*
+  %6 = alloca i32*
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca i32*, align 8
+  %9 = alloca i32*, align 8
+  %10 = alloca i32*, align 8
+  %11 = alloca i32*, align 8
+  store i32* %0, i32** %8, align 8
+  store i32* %1, i32** %9, align 8
+  store i32* %2, i32** %10, align 8
+  store i32* %3, i32** %11, align 8
+  %12 = load i32*, i32** %9, align 8
+  store i32* %12, i32** %6
+  %13 = load i32*, i32** %10, align 8
+  store i32* %13, i32** %5
+  %14 = alloca i32
+  store i32 878905191, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %4, %66
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 878905191, label %18
+    i32 -1446027267, label %23
+    i32 983165404, label %28
+    i32 -725869540, label %31
+    i32 -182137396, label %36
+    i32 969528516, label %39
+    i32 1414732541, label %42
+    i32 154557706, label %43
+    i32 -1110870805, label %44
+    i32 -881912038, label %49
+    i32 700898484, label %52
+    i32 1489505501, label %57
+    i32 -1756770697, label %60
+    i32 2078607063, label %63
+    i32 50826930, label %64
+    i32 220504032, label %65
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %66
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i32*, i32** %6
+  %20 = load volatile i32*, i32** %5
+  %21 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %7, i32* %19, i32* %20)
+  %22 = select i1 %21, i32 -1446027267, i32 -1110870805
+  store i32 %22, i32* %14
+  br label %66
+
+; <label>:23:                                     ; preds = %15
+  %24 = load i32*, i32** %10, align 8
+  %25 = load i32*, i32** %11, align 8
+  %26 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %7, i32* %24, i32* %25)
+  %27 = select i1 %26, i32 983165404, i32 -725869540
+  store i32 %27, i32* %14
+  br label %66
+
+; <label>:28:                                     ; preds = %15
+  %29 = load i32*, i32** %8, align 8
+  %30 = load i32*, i32** %10, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %29, i32* %30)
+  store i32 154557706, i32* %14
+  br label %66
+
+; <label>:31:                                     ; preds = %15
+  %32 = load i32*, i32** %9, align 8
+  %33 = load i32*, i32** %11, align 8
+  %34 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %7, i32* %32, i32* %33)
+  %35 = select i1 %34, i32 -182137396, i32 969528516
+  store i32 %35, i32* %14
+  br label %66
+
+; <label>:36:                                     ; preds = %15
+  %37 = load i32*, i32** %8, align 8
+  %38 = load i32*, i32** %11, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %37, i32* %38)
+  store i32 1414732541, i32* %14
+  br label %66
+
+; <label>:39:                                     ; preds = %15
+  %40 = load i32*, i32** %8, align 8
+  %41 = load i32*, i32** %9, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %40, i32* %41)
+  store i32 1414732541, i32* %14
+  br label %66
+
+; <label>:42:                                     ; preds = %15
+  store i32 154557706, i32* %14
+  br label %66
+
+; <label>:43:                                     ; preds = %15
+  store i32 220504032, i32* %14
+  br label %66
+
+; <label>:44:                                     ; preds = %15
+  %45 = load i32*, i32** %9, align 8
+  %46 = load i32*, i32** %11, align 8
+  %47 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %7, i32* %45, i32* %46)
+  %48 = select i1 %47, i32 -881912038, i32 700898484
+  store i32 %48, i32* %14
+  br label %66
+
+; <label>:49:                                     ; preds = %15
+  %50 = load i32*, i32** %8, align 8
+  %51 = load i32*, i32** %9, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %50, i32* %51)
+  store i32 50826930, i32* %14
+  br label %66
+
+; <label>:52:                                     ; preds = %15
+  %53 = load i32*, i32** %10, align 8
+  %54 = load i32*, i32** %11, align 8
+  %55 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %7, i32* %53, i32* %54)
+  %56 = select i1 %55, i32 1489505501, i32 -1756770697
+  store i32 %56, i32* %14
+  br label %66
+
+; <label>:57:                                     ; preds = %15
+  %58 = load i32*, i32** %8, align 8
+  %59 = load i32*, i32** %11, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %58, i32* %59)
+  store i32 2078607063, i32* %14
+  br label %66
+
+; <label>:60:                                     ; preds = %15
+  %61 = load i32*, i32** %8, align 8
+  %62 = load i32*, i32** %10, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %61, i32* %62)
+  store i32 2078607063, i32* %14
+  br label %66
+
+; <label>:63:                                     ; preds = %15
+  store i32 50826930, i32* %14
+  br label %66
+
+; <label>:64:                                     ; preds = %15
+  store i32 220504032, i32* %14
+  br label %66
+
+; <label>:65:                                     ; preds = %15
+  ret void
+
+; <label>:66:                                     ; preds = %64, %63, %60, %57, %52, %49, %44, %43, %42, %39, %36, %31, %28, %23, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZSt21__unguarded_partitionIPiN9__gnu_cxx5__ops15_Iter_less_iterEET_S4_S4_S4_T0_(i32*, i32*, i32*) #1 comdat {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %8 = alloca i32
+  store i32 114114402, i32* %8
+  br label %9
+
+; <label>:9:                                      ; preds = %3, %44
+  %10 = load i32, i32* %8
+  switch i32 %10, label %11 [
+    i32 114114402, label %12
+    i32 -1405175948, label %13
+    i32 1537993148, label %18
+    i32 1601891665, label %21
+    i32 -14115657, label %24
+    i32 -1881913263, label %29
+    i32 -1403912856, label %32
+    i32 -1940678371, label %37
+    i32 -1240792832, label %39
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %44
+
+; <label>:12:                                     ; preds = %9
+  store i32 -1405175948, i32* %8
+  br label %44
+
+; <label>:13:                                     ; preds = %9
+  %14 = load i32*, i32** %5, align 8
+  %15 = load i32*, i32** %7, align 8
+  %16 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %4, i32* %14, i32* %15)
+  %17 = select i1 %16, i32 1537993148, i32 1601891665
+  store i32 %17, i32* %8
+  br label %44
+
+; <label>:18:                                     ; preds = %9
+  %19 = load i32*, i32** %5, align 8
+  %20 = getelementptr inbounds i32, i32* %19, i32 1
+  store i32* %20, i32** %5, align 8
+  store i32 -1405175948, i32* %8
+  br label %44
+
+; <label>:21:                                     ; preds = %9
+  %22 = load i32*, i32** %6, align 8
+  %23 = getelementptr inbounds i32, i32* %22, i32 -1
+  store i32* %23, i32** %6, align 8
+  store i32 -14115657, i32* %8
+  br label %44
+
+; <label>:24:                                     ; preds = %9
+  %25 = load i32*, i32** %7, align 8
+  %26 = load i32*, i32** %6, align 8
+  %27 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %4, i32* %25, i32* %26)
+  %28 = select i1 %27, i32 -1881913263, i32 -1403912856
+  store i32 %28, i32* %8
+  br label %44
+
+; <label>:29:                                     ; preds = %9
+  %30 = load i32*, i32** %6, align 8
+  %31 = getelementptr inbounds i32, i32* %30, i32 -1
+  store i32* %31, i32** %6, align 8
+  store i32 -14115657, i32* %8
+  br label %44
+
+; <label>:32:                                     ; preds = %9
+  %33 = load i32*, i32** %5, align 8
+  %34 = load i32*, i32** %6, align 8
+  %35 = icmp ult i32* %33, %34
+  %36 = select i1 %35, i32 -1240792832, i32 -1940678371
+  store i32 %36, i32* %8
+  br label %44
+
+; <label>:37:                                     ; preds = %9
+  %38 = load i32*, i32** %5, align 8
+  ret i32* %38
+
+; <label>:39:                                     ; preds = %9
+  %40 = load i32*, i32** %5, align 8
+  %41 = load i32*, i32** %6, align 8
+  call void @_ZSt9iter_swapIPiS0_EvT_T0_(i32* %40, i32* %41)
+  %42 = load i32*, i32** %5, align 8
+  %43 = getelementptr inbounds i32, i32* %42, i32 1
+  store i32* %43, i32** %5, align 8
+  store i32 114114402, i32* %8
+  br label %44
+
+; <label>:44:                                     ; preds = %39, %32, %29, %24, %21, %18, %13, %12, %11
+  br label %9
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt9iter_swapIPiS0_EvT_T0_(i32*, i32*) #1 comdat {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32*, align 8
+  store i32* %0, i32** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load i32*, i32** %3, align 8
+  %6 = load i32*, i32** %4, align 8
+  call void @_ZSt4swapIiEvRT_S1_(i32* dereferenceable(4) %5, i32* dereferenceable(4) %6) #10
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapIiEvRT_S1_(i32* dereferenceable(4), i32* dereferenceable(4)) #1 comdat {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32*, align 8
+  %5 = alloca i32, align 4
+  store i32* %0, i32** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %6 = load i32*, i32** %3, align 8
+  %7 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %6) #10
+  %8 = load i32, i32* %7, align 4
+  store i32 %8, i32* %5, align 4
+  %9 = load i32*, i32** %4, align 8
+  %10 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #10
+  %11 = load i32, i32* %10, align 4
+  %12 = load i32*, i32** %3, align 8
+  store i32 %11, i32* %12, align 4
+  %13 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %5) #10
+  %14 = load i32, i32* %13, align 4
+  %15 = load i32*, i32** %4, align 8
+  store i32 %14, i32* %15, align 4
+  ret void
+}
+
+; Function Attrs: nounwind readnone
+declare i64 @llvm.ctlz.i64(i64, i1) #8
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i32*
+  %4 = alloca i32*
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca i32*, align 8
+  %9 = alloca i32, align 4
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %13 = load i32*, i32** %6, align 8
+  store i32* %13, i32** %4
+  %14 = load i32*, i32** %7, align 8
+  store i32* %14, i32** %3
+  %15 = alloca i32
+  store i32 2094676889, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %57
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 2094676889, label %19
+    i32 -1468034643, label %24
+    i32 1493251943, label %25
+    i32 -946237098, label %28
+    i32 96467170, label %33
+    i32 -1468202314, label %38
+    i32 -1833075806, label %50
+    i32 -167070204, label %52
+    i32 1684654840, label %53
+    i32 -543981351, label %56
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %57
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i32*, i32** %4
+  %21 = load volatile i32*, i32** %3
+  %22 = icmp eq i32* %20, %21
+  %23 = select i1 %22, i32 -1468034643, i32 1493251943
+  store i32 %23, i32* %15
+  br label %57
+
+; <label>:24:                                     ; preds = %16
+  store i32 -543981351, i32* %15
+  br label %57
+
+; <label>:25:                                     ; preds = %16
+  %26 = load i32*, i32** %6, align 8
+  %27 = getelementptr inbounds i32, i32* %26, i64 1
+  store i32* %27, i32** %8, align 8
+  store i32 -946237098, i32* %15
+  br label %57
+
+; <label>:28:                                     ; preds = %16
+  %29 = load i32*, i32** %8, align 8
+  %30 = load i32*, i32** %7, align 8
+  %31 = icmp ne i32* %29, %30
+  %32 = select i1 %31, i32 96467170, i32 -543981351
+  store i32 %32, i32* %15
+  br label %57
+
+; <label>:33:                                     ; preds = %16
+  %34 = load i32*, i32** %8, align 8
+  %35 = load i32*, i32** %6, align 8
+  %36 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclIPiS3_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %5, i32* %34, i32* %35)
+  %37 = select i1 %36, i32 -1468202314, i32 -1833075806
+  store i32 %37, i32* %15
+  br label %57
+
+; <label>:38:                                     ; preds = %16
+  %39 = load i32*, i32** %8, align 8
+  %40 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %39) #10
+  %41 = load i32, i32* %40, align 4
+  store i32 %41, i32* %9, align 4
+  %42 = load i32*, i32** %6, align 8
+  %43 = load i32*, i32** %8, align 8
+  %44 = load i32*, i32** %8, align 8
+  %45 = getelementptr inbounds i32, i32* %44, i64 1
+  %46 = call i32* @_ZSt13move_backwardIPiS0_ET0_T_S2_S1_(i32* %42, i32* %43, i32* %45)
+  %47 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #10
+  %48 = load i32, i32* %47, align 4
+  %49 = load i32*, i32** %6, align 8
+  store i32 %48, i32* %49, align 4
+  store i32 -167070204, i32* %15
+  br label %57
+
+; <label>:50:                                     ; preds = %16
+  %51 = load i32*, i32** %8, align 8
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE()
+  call void @_ZSt25__unguarded_linear_insertIPiN9__gnu_cxx5__ops14_Val_less_iterEEvT_T0_(i32* %51)
+  store i32 -167070204, i32* %15
+  br label %57
+
+; <label>:52:                                     ; preds = %16
+  store i32 1684654840, i32* %15
+  br label %57
+
+; <label>:53:                                     ; preds = %16
+  %54 = load i32*, i32** %8, align 8
+  %55 = getelementptr inbounds i32, i32* %54, i32 1
+  store i32* %55, i32** %8, align 8
+  store i32 -946237098, i32* %15
+  br label %57
+
+; <label>:56:                                     ; preds = %16
+  ret void
+
+; <label>:57:                                     ; preds = %53, %52, %50, %38, %33, %28, %25, %24, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt26__unguarded_insertion_sortIPiN9__gnu_cxx5__ops15_Iter_less_iterEEvT_S4_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  %10 = load i32*, i32** %4, align 8
+  store i32* %10, i32** %6, align 8
+  %11 = alloca i32
+  store i32 1905290551, i32* %11
+  br label %12
+
+; <label>:12:                                     ; preds = %2, %26
+  %13 = load i32, i32* %11
+  switch i32 %13, label %14 [
+    i32 1905290551, label %15
+    i32 -1382978197, label %20
+    i32 1949406552, label %22
+    i32 -1124049297, label %25
+  ]
+
+; <label>:14:                                     ; preds = %12
+  br label %26
+
+; <label>:15:                                     ; preds = %12
+  %16 = load i32*, i32** %6, align 8
+  %17 = load i32*, i32** %5, align 8
+  %18 = icmp ne i32* %16, %17
+  %19 = select i1 %18, i32 -1382978197, i32 -1124049297
+  store i32 %19, i32* %11
+  br label %26
+
+; <label>:20:                                     ; preds = %12
+  %21 = load i32*, i32** %6, align 8
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE()
+  call void @_ZSt25__unguarded_linear_insertIPiN9__gnu_cxx5__ops14_Val_less_iterEEvT_T0_(i32* %21)
+  store i32 1949406552, i32* %11
+  br label %26
+
+; <label>:22:                                     ; preds = %12
+  %23 = load i32*, i32** %6, align 8
+  %24 = getelementptr inbounds i32, i32* %23, i32 1
+  store i32* %24, i32** %6, align 8
+  store i32 1905290551, i32* %11
+  br label %26
+
+; <label>:25:                                     ; preds = %12
+  ret void
+
+; <label>:26:                                     ; preds = %22, %20, %15, %14
+  br label %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt13move_backwardIPiS0_ET0_T_S2_S1_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load i32*, i32** %4, align 8
+  %8 = call i32* @_ZSt12__miter_baseIPiENSt11_Miter_baseIT_E13iterator_typeES2_(i32* %7)
+  %9 = load i32*, i32** %5, align 8
+  %10 = call i32* @_ZSt12__miter_baseIPiENSt11_Miter_baseIT_E13iterator_typeES2_(i32* %9)
+  %11 = load i32*, i32** %6, align 8
+  %12 = call i32* @_ZSt23__copy_move_backward_a2ILb1EPiS0_ET1_T0_S2_S1_(i32* %8, i32* %10, i32* %11)
+  ret i32* %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt25__unguarded_linear_insertIPiN9__gnu_cxx5__ops14_Val_less_iterEEvT_T0_(i32*) #0 comdat {
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %3 = alloca i32*, align 8
+  %4 = alloca i32, align 4
+  %5 = alloca i32*, align 8
+  store i32* %0, i32** %3, align 8
+  %6 = load i32*, i32** %3, align 8
+  %7 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %6) #10
+  %8 = load i32, i32* %7, align 4
+  store i32 %8, i32* %4, align 4
+  %9 = load i32*, i32** %3, align 8
+  store i32* %9, i32** %5, align 8
+  %10 = load i32*, i32** %5, align 8
+  %11 = getelementptr inbounds i32, i32* %10, i32 -1
+  store i32* %11, i32** %5, align 8
+  %12 = alloca i32
+  store i32 924208714, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %1, %32
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 924208714, label %16
+    i32 1220806193, label %20
+    i32 1685617227, label %28
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %32
+
+; <label>:16:                                     ; preds = %13
+  %17 = load i32*, i32** %5, align 8
+  %18 = call zeroext i1 @_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiPiEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_less_iter"* %2, i32* dereferenceable(4) %4, i32* %17)
+  %19 = select i1 %18, i32 1220806193, i32 1685617227
+  store i32 %19, i32* %12
+  br label %32
+
+; <label>:20:                                     ; preds = %13
+  %21 = load i32*, i32** %5, align 8
+  %22 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %21) #10
+  %23 = load i32, i32* %22, align 4
+  %24 = load i32*, i32** %3, align 8
+  store i32 %23, i32* %24, align 4
+  %25 = load i32*, i32** %5, align 8
+  store i32* %25, i32** %3, align 8
+  %26 = load i32*, i32** %5, align 8
+  %27 = getelementptr inbounds i32, i32* %26, i32 -1
+  store i32* %27, i32** %5, align 8
+  store i32 924208714, i32* %12
+  br label %32
+
+; <label>:28:                                     ; preds = %13
+  %29 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %4) #10
+  %30 = load i32, i32* %29, align 4
+  %31 = load i32*, i32** %3, align 8
+  store i32 %30, i32* %31, align 4
+  ret void
+
+; <label>:32:                                     ; preds = %20, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE() #1 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt23__copy_move_backward_a2ILb1EPiS0_ET1_T0_S2_S1_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load i32*, i32** %4, align 8
+  %8 = call i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32* %7)
+  %9 = load i32*, i32** %5, align 8
+  %10 = call i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32* %9)
+  %11 = load i32*, i32** %6, align 8
+  %12 = call i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32* %11)
+  %13 = call i32* @_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_(i32* %8, i32* %10, i32* %12)
+  ret i32* %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZSt12__miter_baseIPiENSt11_Miter_baseIT_E13iterator_typeES2_(i32*) #1 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  %4 = call i32* @_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_(i32* %3)
+  ret i32* %4
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i8, align 1
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  store i8 1, i8* %7, align 1
+  %8 = load i32*, i32** %4, align 8
+  %9 = load i32*, i32** %5, align 8
+  %10 = load i32*, i32** %6, align 8
+  %11 = call i32* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_(i32* %8, i32* %9, i32* %10)
+  ret i32* %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32*) #0 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  %4 = call i32* @_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_(i32* %3)
+  ret i32* %4
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_(i32*, i32*, i32*) #1 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca i64, align 8
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %9 = load i32*, i32** %6, align 8
+  %10 = load i32*, i32** %5, align 8
+  %11 = ptrtoint i32* %9 to i64
+  %12 = ptrtoint i32* %10 to i64
+  %13 = sub i64 %11, %12
+  %14 = sdiv exact i64 %13, 4
+  store i64 %14, i64* %8, align 8
+  %15 = load i64, i64* %8, align 8
+  store i64 %15, i64* %4
+  %16 = alloca i32
+  store i32 -1949845596, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %39
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -1949845596, label %20
+    i32 426483119, label %24
+    i32 -748220191, label %34
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %39
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i64, i64* %4
+  %22 = icmp ne i64 %21, 0
+  %23 = select i1 %22, i32 426483119, i32 -748220191
+  store i32 %23, i32* %16
+  br label %39
+
+; <label>:24:                                     ; preds = %17
+  %25 = load i32*, i32** %7, align 8
+  %26 = load i64, i64* %8, align 8
+  %27 = sub i64 0, %26
+  %28 = getelementptr inbounds i32, i32* %25, i64 %27
+  %29 = bitcast i32* %28 to i8*
+  %30 = load i32*, i32** %5, align 8
+  %31 = bitcast i32* %30 to i8*
+  %32 = load i64, i64* %8, align 8
+  %33 = mul i64 4, %32
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %29, i8* %31, i64 %33, i32 4, i1 false)
+  store i32 -748220191, i32* %16
+  br label %39
+
+; <label>:34:                                     ; preds = %17
+  %35 = load i32*, i32** %7, align 8
+  %36 = load i64, i64* %8, align 8
+  %37 = sub i64 0, %36
+  %38 = getelementptr inbounds i32, i32* %35, i64 %37
+  ret i32* %38
+
+; <label>:39:                                     ; preds = %24, %20, %19
+  br label %17
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memmove.p0i8.p0i8.i64(i8* nocapture, i8* nocapture readonly, i64, i32, i1) #2
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_(i32*) #1 comdat align 2 {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  ret i32* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiPiEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_less_iter"*, i32* dereferenceable(4), i32*) #1 comdat align 2 {
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_less_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load %"struct.__gnu_cxx::__ops::_Val_less_iter"*, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  %9 = load i32, i32* %8, align 4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  %12 = icmp slt i32 %9, %11
+  ret i1 %12
+}
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s973756338.cpp() #0 section ".text.startup" {
+  call void @__cxx_global_var_init()
+  call void @__cxx_global_var_init.1()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { argmemonly nounwind }
+attributes #3 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { nounwind readonly "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #6 = { nounwind readnone "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #7 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #8 = { nounwind readnone }
+attributes #9 = { nounwind readonly }
+attributes #10 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
