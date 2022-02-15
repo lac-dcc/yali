@@ -1,0 +1,11536 @@
+; ModuleID = 'Project_CodeNet_C++1400/p03718/s913628817.cpp'
+source_filename = "Project_CodeNet_C++1400/p03718/s913628817.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%struct.edge = type { i32, i32, i32, i32, i32 }
+%"class.std::queue" = type { %"class.std::deque" }
+%"class.std::deque" = type { %"class.std::_Deque_base" }
+%"class.std::_Deque_base" = type { %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl" }
+%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl" = type { i32**, i64, %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator" }
+%"struct.std::_Deque_iterator" = type { i32*, i32*, i32*, i32** }
+%"class.std::allocator" = type { i8 }
+%"class.__gnu_cxx::new_allocator" = type { i8 }
+%"class.std::allocator.0" = type { i8 }
+%"class.__gnu_cxx::new_allocator.1" = type { i8 }
+%"struct.std::integral_constant" = type { i8 }
+%"struct.__gnu_cxx::__allocator_always_compares_equal" = type { i8 }
+
+$_ZN4edgeC2Ev = comdat any
+
+$_ZN4edgeC2Eiiii = comdat any
+
+$_ZNSt5dequeIiSaIiEEC2Ev = comdat any
+
+$_ZNSt5queueIiSt5dequeIiSaIiEEEC2EOS2_ = comdat any
+
+$_ZNSt5dequeIiSaIiEED2Ev = comdat any
+
+$_ZNSt5queueIiSt5dequeIiSaIiEEED2Ev = comdat any
+
+$_ZNKSt5queueIiSt5dequeIiSaIiEEE5emptyEv = comdat any
+
+$_ZNSt5queueIiSt5dequeIiSaIiEEE3popEv = comdat any
+
+$_ZNSt5queueIiSt5dequeIiSaIiEEE4pushERKi = comdat any
+
+$_ZNSt5queueIiSt5dequeIiSaIiEEE5frontEv = comdat any
+
+$_ZSt3minIiERKT_S2_S2_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEEC2Ev = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2Ev = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEm = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev = comdat any
+
+$_ZNSaIiEC2Ev = comdat any
+
+$_ZNSt15_Deque_iteratorIiRiPiEC2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiEC2Ev = comdat any
+
+$_ZSt16__deque_buf_sizem = comdat any
+
+$_ZSt3maxImERKT_S2_S2_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE15_M_allocate_mapEm = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE15_M_create_nodesEPPiS3_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE17_M_deallocate_mapEPPim = comdat any
+
+$__clang_call_terminate = comdat any
+
+$_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_ = comdat any
+
+$_ZNKSt11_Deque_baseIiSaIiEE20_M_get_map_allocatorEv = comdat any
+
+$_ZNSt16allocator_traitsISaIPiEE8allocateERS1_m = comdat any
+
+$_ZNSaIPiED2Ev = comdat any
+
+$_ZNKSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv = comdat any
+
+$_ZNSaIPiEC2IiEERKSaIT_E = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPiEC2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPiE8allocateEmPKv = comdat any
+
+$_ZNK9__gnu_cxx13new_allocatorIPiE8max_sizeEv = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPiED2Ev = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE16_M_allocate_nodeEv = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE16_M_destroy_nodesEPPiS3_ = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE8allocateERS0_m = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv = comdat any
+
+$_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim = comdat any
+
+$_ZNSt16allocator_traitsISaIPiEE10deallocateERS1_PS0_m = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPiE10deallocateEPS1_m = comdat any
+
+$_ZNSt15_Deque_iteratorIiRiPiE14_S_buffer_sizeEv = comdat any
+
+$_ZNSaIiED2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiED2Ev = comdat any
+
+$_ZNSt5dequeIiSaIiEE15_M_destroy_dataESt15_Deque_iteratorIiRiPiES5_RKS0_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE5beginEv = comdat any
+
+$_ZNSt5dequeIiSaIiEE3endEv = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEED2Ev = comdat any
+
+$_ZNSt15_Deque_iteratorIiRiPiEC2ERKS2_ = comdat any
+
+$_ZSt4moveIRSt5dequeIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_ = comdat any
+
+$_ZNSt5dequeIiSaIiEEC2EOS1_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEEC2EOS1_ = comdat any
+
+$_ZSt4moveIRSt11_Deque_baseIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEEC2EOS1_St17integral_constantIbLb1EE = comdat any
+
+$_ZSt4moveIRSaIiEEONSt16remove_referenceIT_E4typeEOS3_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2EOS0_ = comdat any
+
+$_ZNSt11_Deque_baseIiSaIiEE11_Deque_impl12_M_swap_dataERS2_ = comdat any
+
+$_ZNSaIiEC2ERKS_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_ = comdat any
+
+$_ZSt4swapISt15_Deque_iteratorIiRiPiEEvRT_S5_ = comdat any
+
+$_ZSt4swapIPPiEvRT_S3_ = comdat any
+
+$_ZSt4swapImEvRT_S1_ = comdat any
+
+$_ZSt4moveIRSt15_Deque_iteratorIiRiPiEEONSt16remove_referenceIT_E4typeEOS6_ = comdat any
+
+$_ZSt4moveIRPPiEONSt16remove_referenceIT_E4typeEOS4_ = comdat any
+
+$_ZSt4moveIRmEONSt16remove_referenceIT_E4typeEOS2_ = comdat any
+
+$_ZNKSt5dequeIiSaIiEE5emptyEv = comdat any
+
+$_ZSteqIiRiPiEbRKSt15_Deque_iteratorIT_T0_T1_ES8_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE9pop_frontEv = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE7destroyIiEEvRS0_PT_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE16_M_pop_front_auxEv = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE7destroyIiEEvPT_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE9push_backERKi = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE9constructIiJRKiEEEvRS0_PT_DpOT0_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE16_M_push_back_auxIJRKiEEEvDpOT_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE9constructIiJRKiEEEvPT_DpOT0_ = comdat any
+
+$_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE = comdat any
+
+$_ZNSt5dequeIiSaIiEE22_M_reserve_map_at_backEm = comdat any
+
+$_ZNSt5dequeIiSaIiEE17_M_reallocate_mapEmb = comdat any
+
+$_ZSt4copyIPPiS1_ET0_T_S3_S2_ = comdat any
+
+$_ZSt13copy_backwardIPPiS1_ET0_T_S3_S2_ = comdat any
+
+$_ZSt14__copy_move_a2ILb0EPPiS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_ = comdat any
+
+$_ZSt13__copy_move_aILb0EPPiS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_ = comdat any
+
+$_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPiEEPT_PKS4_S7_S5_ = comdat any
+
+$_ZNSt10_Iter_baseIPPiLb0EE7_S_baseES1_ = comdat any
+
+$_ZSt23__copy_move_backward_a2ILb0EPPiS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZSt22__copy_move_backward_aILb0EPPiS1_ET1_T0_S3_S2_ = comdat any
+
+$_ZNSt20__copy_move_backwardILb0ELb1ESt26random_access_iterator_tagE13__copy_move_bIPiEEPT_PKS4_S7_S5_ = comdat any
+
+$_ZNSt5dequeIiSaIiEE5frontEv = comdat any
+
+$_ZNKSt15_Deque_iteratorIiRiPiEdeEv = comdat any
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@n = global i32 0, align 4
+@m = global i32 0, align 4
+@S = global i32 0, align 4
+@T = global i32 0, align 4
+@e = global [100009 x %struct.edge] zeroinitializer, align 16
+@head = global [10009 x i32] zeroinitializer, align 16
+@ecnt = global i32 1, align 4
+@dep = global [10009 x i32] zeroinitializer, align 16
+@q = global %"class.std::queue" zeroinitializer, align 8
+@.str = private unnamed_addr constant [3 x i8] c"-1\00", align 1
+@.str.3 = private unnamed_addr constant [4 x i8] c"%d\0A\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s913628817.cpp, i8* null }]
+@x = common global i32 0
+@y = common global i32 0
+@x.4 = common global i32 0
+@y.5 = common global i32 0
+@x.6 = common global i32 0
+@y.7 = common global i32 0
+@x.8 = common global i32 0
+@y.9 = common global i32 0
+@x.10 = common global i32 0
+@y.11 = common global i32 0
+@x.12 = common global i32 0
+@y.13 = common global i32 0
+@x.14 = common global i32 0
+@y.15 = common global i32 0
+@x.16 = common global i32 0
+@y.17 = common global i32 0
+@x.18 = common global i32 0
+@y.19 = common global i32 0
+@x.20 = common global i32 0
+@y.21 = common global i32 0
+@x.22 = common global i32 0
+@y.23 = common global i32 0
+@x.24 = common global i32 0
+@y.25 = common global i32 0
+@x.26 = common global i32 0
+@y.27 = common global i32 0
+@x.28 = common global i32 0
+@y.29 = common global i32 0
+@x.30 = common global i32 0
+@y.31 = common global i32 0
+@x.32 = common global i32 0
+@y.33 = common global i32 0
+@x.34 = common global i32 0
+@y.35 = common global i32 0
+@x.36 = common global i32 0
+@y.37 = common global i32 0
+@x.38 = common global i32 0
+@y.39 = common global i32 0
+@x.40 = common global i32 0
+@y.41 = common global i32 0
+@x.42 = common global i32 0
+@y.43 = common global i32 0
+@x.44 = common global i32 0
+@y.45 = common global i32 0
+@x.46 = common global i32 0
+@y.47 = common global i32 0
+@x.48 = common global i32 0
+@y.49 = common global i32 0
+@x.50 = common global i32 0
+@y.51 = common global i32 0
+@x.52 = common global i32 0
+@y.53 = common global i32 0
+@x.54 = common global i32 0
+@y.55 = common global i32 0
+@x.56 = common global i32 0
+@y.57 = common global i32 0
+@x.58 = common global i32 0
+@y.59 = common global i32 0
+@x.60 = common global i32 0
+@y.61 = common global i32 0
+@x.62 = common global i32 0
+@y.63 = common global i32 0
+@x.64 = common global i32 0
+@y.65 = common global i32 0
+@x.66 = common global i32 0
+@y.67 = common global i32 0
+@x.68 = common global i32 0
+@y.69 = common global i32 0
+@x.70 = common global i32 0
+@y.71 = common global i32 0
+@x.72 = common global i32 0
+@y.73 = common global i32 0
+@x.74 = common global i32 0
+@y.75 = common global i32 0
+@x.76 = common global i32 0
+@y.77 = common global i32 0
+@x.78 = common global i32 0
+@y.79 = common global i32 0
+@x.80 = common global i32 0
+@y.81 = common global i32 0
+@x.82 = common global i32 0
+@y.83 = common global i32 0
+@x.84 = common global i32 0
+@y.85 = common global i32 0
+@x.86 = common global i32 0
+@y.87 = common global i32 0
+@x.88 = common global i32 0
+@y.89 = common global i32 0
+@x.90 = common global i32 0
+@y.91 = common global i32 0
+@x.92 = common global i32 0
+@y.93 = common global i32 0
+@x.94 = common global i32 0
+@y.95 = common global i32 0
+@x.96 = common global i32 0
+@y.97 = common global i32 0
+@x.98 = common global i32 0
+@y.99 = common global i32 0
+@x.100 = common global i32 0
+@y.101 = common global i32 0
+@x.102 = common global i32 0
+@y.103 = common global i32 0
+@x.104 = common global i32 0
+@y.105 = common global i32 0
+@x.106 = common global i32 0
+@y.107 = common global i32 0
+@x.108 = common global i32 0
+@y.109 = common global i32 0
+@x.110 = common global i32 0
+@y.111 = common global i32 0
+@x.112 = common global i32 0
+@y.113 = common global i32 0
+@x.114 = common global i32 0
+@y.115 = common global i32 0
+@x.116 = common global i32 0
+@y.117 = common global i32 0
+@x.118 = common global i32 0
+@y.119 = common global i32 0
+@x.120 = common global i32 0
+@y.121 = common global i32 0
+@x.122 = common global i32 0
+@y.123 = common global i32 0
+@x.124 = common global i32 0
+@y.125 = common global i32 0
+@x.126 = common global i32 0
+@y.127 = common global i32 0
+@x.128 = common global i32 0
+@y.129 = common global i32 0
+@x.130 = common global i32 0
+@y.131 = common global i32 0
+@x.132 = common global i32 0
+@y.133 = common global i32 0
+@x.134 = common global i32 0
+@y.135 = common global i32 0
+@x.136 = common global i32 0
+@y.137 = common global i32 0
+@x.138 = common global i32 0
+@y.139 = common global i32 0
+@x.140 = common global i32 0
+@y.141 = common global i32 0
+@x.142 = common global i32 0
+@y.143 = common global i32 0
+@x.144 = common global i32 0
+@y.145 = common global i32 0
+@x.146 = common global i32 0
+@y.147 = common global i32 0
+@x.148 = common global i32 0
+@y.149 = common global i32 0
+@x.150 = common global i32 0
+@y.151 = common global i32 0
+@x.152 = common global i32 0
+@y.153 = common global i32 0
+@x.154 = common global i32 0
+@y.155 = common global i32 0
+@x.156 = common global i32 0
+@y.157 = common global i32 0
+@x.158 = common global i32 0
+@y.159 = common global i32 0
+@x.160 = common global i32 0
+@y.161 = common global i32 0
+@x.162 = common global i32 0
+@y.163 = common global i32 0
+@x.164 = common global i32 0
+@y.165 = common global i32 0
+@x.166 = common global i32 0
+@y.167 = common global i32 0
+@x.168 = common global i32 0
+@y.169 = common global i32 0
+@x.170 = common global i32 0
+@y.171 = common global i32 0
+@x.172 = common global i32 0
+@y.173 = common global i32 0
+@x.174 = common global i32 0
+@y.175 = common global i32 0
+@x.176 = common global i32 0
+@y.177 = common global i32 0
+@x.178 = common global i32 0
+@y.179 = common global i32 0
+@x.180 = common global i32 0
+@y.181 = common global i32 0
+@x.182 = common global i32 0
+@y.183 = common global i32 0
+@x.184 = common global i32 0
+@y.185 = common global i32 0
+@x.186 = common global i32 0
+@y.187 = common global i32 0
+@x.188 = common global i32 0
+@y.189 = common global i32 0
+@x.190 = common global i32 0
+@y.191 = common global i32 0
+@x.192 = common global i32 0
+@y.193 = common global i32 0
+@x.194 = common global i32 0
+@y.195 = common global i32 0
+@x.196 = common global i32 0
+@y.197 = common global i32 0
+@x.198 = common global i32 0
+@y.199 = common global i32 0
+@x.200 = common global i32 0
+@y.201 = common global i32 0
+@x.202 = common global i32 0
+@y.203 = common global i32 0
+@x.204 = common global i32 0
+@y.205 = common global i32 0
+@x.206 = common global i32 0
+@y.207 = common global i32 0
+@x.208 = common global i32 0
+@y.209 = common global i32 0
+@x.210 = common global i32 0
+@y.211 = common global i32 0
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  %1 = alloca i1
+  %2 = alloca i1
+  %3 = load i32, i32* @x
+  %4 = load i32, i32* @y
+  %5 = add i32 %3, 1554736447
+  %6 = sub i32 %5, 1
+  %7 = sub i32 %6, 1554736447
+  %8 = sub i32 %3, 1
+  %9 = mul i32 %3, %7
+  %10 = urem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  store i1 %11, i1* %2
+  %12 = icmp slt i32 %4, 10
+  store i1 %12, i1* %1
+  %13 = alloca i32
+  store i32 1367211908, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %0, %45
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 1367211908, label %17
+    i32 -1697069529, label %25
+    i32 -2046116879, label %42
+    i32 -1917423910, label %43
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %45
+
+; <label>:17:                                     ; preds = %14
+  %18 = load volatile i1, i1* %2
+  %19 = load volatile i1, i1* %1
+  %20 = and i1 %18, %19
+  %21 = xor i1 %18, %19
+  %22 = or i1 %20, %21
+  %23 = or i1 %18, %19
+  %24 = select i1 %22, i32 -1697069529, i32 -1917423910
+  store i32 %24, i32* %13
+  br label %45
+
+; <label>:25:                                     ; preds = %14
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %26 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #3
+  %27 = load i32, i32* @x
+  %28 = load i32, i32* @y
+  %29 = add i32 %27, -1719858384
+  %30 = sub i32 %29, 1
+  %31 = sub i32 %30, -1719858384
+  %32 = sub i32 %27, 1
+  %33 = mul i32 %27, %31
+  %34 = urem i32 %33, 2
+  %35 = icmp eq i32 %34, 0
+  %36 = icmp slt i32 %28, 10
+  %37 = and i1 %35, %36
+  %38 = xor i1 %35, %36
+  %39 = or i1 %37, %38
+  %40 = or i1 %35, %36
+  %41 = select i1 %39, i32 -2046116879, i32 -1917423910
+  store i32 %41, i32* %13
+  br label %45
+
+; <label>:42:                                     ; preds = %14
+  ret void
+
+; <label>:43:                                     ; preds = %14
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %44 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #3
+  store i32 -1697069529, i32* %13
+  br label %45
+
+; <label>:45:                                     ; preds = %43, %25, %17, %16
+  br label %14
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #3
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init.1() #0 section ".text.startup" {
+  %1 = alloca %struct.edge*
+  %2 = alloca i1
+  %3 = alloca %struct.edge*
+  %4 = alloca i32
+  store i32 -94646622, i32* %4
+  %5 = alloca %struct.edge*
+  store %struct.edge* getelementptr inbounds ([100009 x %struct.edge], [100009 x %struct.edge]* @e, i32 0, i32 0), %struct.edge** %5
+  br label %6
+
+; <label>:6:                                      ; preds = %0, %101
+  %7 = load i32, i32* %4
+  switch i32 %7, label %8 [
+    i32 -94646622, label %9
+    i32 -860868670, label %26
+    i32 655183304, label %59
+    i32 -1322190265, label %63
+    i32 520879734, label %78
+    i32 1366927196, label %94
+    i32 243481887, label %95
+    i32 1930949044, label %100
+  ]
+
+; <label>:8:                                      ; preds = %6
+  br label %101
+
+; <label>:9:                                      ; preds = %6
+  %10 = load %struct.edge*, %struct.edge** %5
+  store %struct.edge* %10, %struct.edge** %1
+  %11 = load i32, i32* @x.4
+  %12 = load i32, i32* @y.5
+  %13 = sub i32 %11, -596172422
+  %14 = sub i32 %13, 1
+  %15 = add i32 %14, -596172422
+  %16 = sub i32 %11, 1
+  %17 = mul i32 %11, %15
+  %18 = urem i32 %17, 2
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %12, 10
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 -860868670, i32 243481887
+  store i32 %25, i32* %4
+  br label %101
+
+; <label>:26:                                     ; preds = %6
+  %27 = load volatile %struct.edge*, %struct.edge** %1
+  call void @_ZN4edgeC2Ev(%struct.edge* %27)
+  %28 = load volatile %struct.edge*, %struct.edge** %1
+  %29 = getelementptr inbounds %struct.edge, %struct.edge* %28, i64 1
+  store %struct.edge* %29, %struct.edge** %3
+  %30 = load volatile %struct.edge*, %struct.edge** %3
+  %31 = icmp eq %struct.edge* %30, getelementptr inbounds (%struct.edge, %struct.edge* getelementptr inbounds ([100009 x %struct.edge], [100009 x %struct.edge]* @e, i32 0, i32 0), i64 100009)
+  store i1 %31, i1* %2
+  %32 = load i32, i32* @x.4
+  %33 = load i32, i32* @y.5
+  %34 = add i32 %32, 1277003377
+  %35 = sub i32 %34, 1
+  %36 = sub i32 %35, 1277003377
+  %37 = sub i32 %32, 1
+  %38 = mul i32 %32, %36
+  %39 = urem i32 %38, 2
+  %40 = icmp eq i32 %39, 0
+  %41 = icmp slt i32 %33, 10
+  %42 = xor i1 %40, true
+  %43 = xor i1 %41, true
+  %44 = xor i1 true, true
+  %45 = and i1 %42, true
+  %46 = and i1 %40, %44
+  %47 = and i1 %43, true
+  %48 = and i1 %41, %44
+  %49 = or i1 %45, %46
+  %50 = or i1 %47, %48
+  %51 = xor i1 %49, %50
+  %52 = or i1 %42, %43
+  %53 = xor i1 %52, true
+  %54 = or i1 true, %44
+  %55 = and i1 %53, %54
+  %56 = or i1 %51, %55
+  %57 = or i1 %40, %41
+  %58 = select i1 %56, i32 655183304, i32 243481887
+  store i32 %58, i32* %4
+  br label %101
+
+; <label>:59:                                     ; preds = %6
+  %60 = load volatile i1, i1* %2
+  %61 = select i1 %60, i32 -1322190265, i32 -94646622
+  store i32 %61, i32* %4
+  %62 = load volatile %struct.edge*, %struct.edge** %3
+  store %struct.edge* %62, %struct.edge** %5
+  br label %101
+
+; <label>:63:                                     ; preds = %6
+  %64 = load i32, i32* @x.4
+  %65 = load i32, i32* @y.5
+  %66 = sub i32 0, 1
+  %67 = add i32 %64, %66
+  %68 = sub i32 %64, 1
+  %69 = mul i32 %64, %67
+  %70 = urem i32 %69, 2
+  %71 = icmp eq i32 %70, 0
+  %72 = icmp slt i32 %65, 10
+  %73 = and i1 %71, %72
+  %74 = xor i1 %71, %72
+  %75 = or i1 %73, %74
+  %76 = or i1 %71, %72
+  %77 = select i1 %75, i32 520879734, i32 1930949044
+  store i32 %77, i32* %4
+  br label %101
+
+; <label>:78:                                     ; preds = %6
+  %79 = load i32, i32* @x.4
+  %80 = load i32, i32* @y.5
+  %81 = sub i32 %79, 482217390
+  %82 = sub i32 %81, 1
+  %83 = add i32 %82, 482217390
+  %84 = sub i32 %79, 1
+  %85 = mul i32 %79, %83
+  %86 = urem i32 %85, 2
+  %87 = icmp eq i32 %86, 0
+  %88 = icmp slt i32 %80, 10
+  %89 = and i1 %87, %88
+  %90 = xor i1 %87, %88
+  %91 = or i1 %89, %90
+  %92 = or i1 %87, %88
+  %93 = select i1 %91, i32 1366927196, i32 1930949044
+  store i32 %93, i32* %4
+  br label %101
+
+; <label>:94:                                     ; preds = %6
+  ret void
+
+; <label>:95:                                     ; preds = %6
+  %96 = load volatile %struct.edge*, %struct.edge** %1
+  call void @_ZN4edgeC2Ev(%struct.edge* %96)
+  %97 = load volatile %struct.edge*, %struct.edge** %1
+  %98 = getelementptr inbounds %struct.edge, %struct.edge* %97, i64 1
+  %99 = icmp eq %struct.edge* %98, getelementptr inbounds (%struct.edge, %struct.edge* getelementptr inbounds ([100009 x %struct.edge], [100009 x %struct.edge]* @e, i32 0, i32 0), i64 100009)
+  store i32 -860868670, i32* %4
+  br label %101
+
+; <label>:100:                                    ; preds = %6
+  store i32 520879734, i32* %4
+  br label %101
+
+; <label>:101:                                    ; preds = %100, %95, %78, %63, %59, %26, %9, %8
+  br label %6
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN4edgeC2Ev(%struct.edge*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %struct.edge*, align 8
+  store %struct.edge* %0, %struct.edge** %2, align 8
+  %3 = load %struct.edge*, %struct.edge** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define void @_Z7addedgeiii(i32, i32, i32) #0 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.8
+  %7 = load i32, i32* @y.9
+  %8 = add i32 %6, 167204878
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, 167204878
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 1135713451, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %112
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 1135713451, label %20
+    i32 893099247, label %28
+    i32 -300869547, label %81
+    i32 1388434235, label %82
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %112
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 893099247, i32 1388434235
+  store i32 %27, i32* %16
+  br label %112
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca i32, align 4
+  %30 = alloca i32, align 4
+  %31 = alloca i32, align 4
+  %32 = alloca %struct.edge, align 4
+  store i32 %0, i32* %29, align 4
+  store i32 %1, i32* %30, align 4
+  store i32 %2, i32* %31, align 4
+  %33 = load i32, i32* @ecnt, align 4
+  %34 = sub i32 %33, -1593064948
+  %35 = add i32 %34, 1
+  %36 = add i32 %35, -1593064948
+  %37 = add nsw i32 %33, 1
+  store i32 %36, i32* @ecnt, align 4
+  %38 = load i32, i32* %29, align 4
+  %39 = load i32, i32* %30, align 4
+  %40 = load i32, i32* %29, align 4
+  %41 = sext i32 %40 to i64
+  %42 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %41
+  %43 = load i32, i32* %42, align 4
+  %44 = load i32, i32* %31, align 4
+  call void @_ZN4edgeC2Eiiii(%struct.edge* %32, i32 %38, i32 %39, i32 %43, i32 %44)
+  %45 = load i32, i32* @ecnt, align 4
+  %46 = sext i32 %45 to i64
+  %47 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %46
+  %48 = bitcast %struct.edge* %47 to i8*
+  %49 = bitcast %struct.edge* %32 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %48, i8* %49, i64 20, i32 4, i1 false)
+  %50 = load i32, i32* @ecnt, align 4
+  %51 = load i32, i32* %29, align 4
+  %52 = sext i32 %51 to i64
+  %53 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %52
+  store i32 %50, i32* %53, align 4
+  %54 = load i32, i32* @x.8
+  %55 = load i32, i32* @y.9
+  %56 = add i32 %54, 37916094
+  %57 = sub i32 %56, 1
+  %58 = sub i32 %57, 37916094
+  %59 = sub i32 %54, 1
+  %60 = mul i32 %54, %58
+  %61 = urem i32 %60, 2
+  %62 = icmp eq i32 %61, 0
+  %63 = icmp slt i32 %55, 10
+  %64 = xor i1 %62, true
+  %65 = xor i1 %63, true
+  %66 = xor i1 false, true
+  %67 = and i1 %64, false
+  %68 = and i1 %62, %66
+  %69 = and i1 %65, false
+  %70 = and i1 %63, %66
+  %71 = or i1 %67, %68
+  %72 = or i1 %69, %70
+  %73 = xor i1 %71, %72
+  %74 = or i1 %64, %65
+  %75 = xor i1 %74, true
+  %76 = or i1 false, %66
+  %77 = and i1 %75, %76
+  %78 = or i1 %73, %77
+  %79 = or i1 %62, %63
+  %80 = select i1 %78, i32 -300869547, i32 1388434235
+  store i32 %80, i32* %16
+  br label %112
+
+; <label>:81:                                     ; preds = %17
+  ret void
+
+; <label>:82:                                     ; preds = %17
+  %83 = alloca i32, align 4
+  %84 = alloca i32, align 4
+  %85 = alloca i32, align 4
+  %86 = alloca %struct.edge, align 4
+  store i32 %0, i32* %83, align 4
+  store i32 %1, i32* %84, align 4
+  store i32 %2, i32* %85, align 4
+  %87 = load i32, i32* @ecnt, align 4
+  %88 = sub i32 0, 1
+  %89 = add i32 %87, %88
+  %90 = sub i32 %87, 1
+  %91 = mul i32 %89, 1
+  %92 = add i32 %87, -1061301723
+  %93 = add i32 %92, 1
+  %94 = sub i32 %93, -1061301723
+  %95 = add nsw i32 %87, 1
+  store i32 %94, i32* @ecnt, align 4
+  %96 = load i32, i32* %83, align 4
+  %97 = load i32, i32* %84, align 4
+  %98 = load i32, i32* %83, align 4
+  %99 = sext i32 %98 to i64
+  %100 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %99
+  %101 = load i32, i32* %100, align 4
+  %102 = load i32, i32* %85, align 4
+  call void @_ZN4edgeC2Eiiii(%struct.edge* %86, i32 %96, i32 %97, i32 %101, i32 %102)
+  %103 = load i32, i32* @ecnt, align 4
+  %104 = sext i32 %103 to i64
+  %105 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %104
+  %106 = bitcast %struct.edge* %105 to i8*
+  %107 = bitcast %struct.edge* %86 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %106, i8* %107, i64 20, i32 4, i1 false)
+  %108 = load i32, i32* @ecnt, align 4
+  %109 = load i32, i32* %83, align 4
+  %110 = sext i32 %109 to i64
+  %111 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %110
+  store i32 %108, i32* %111, align 4
+  store i32 893099247, i32* %16
+  br label %112
+
+; <label>:112:                                    ; preds = %82, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN4edgeC2Eiiii(%struct.edge*, i32, i32, i32, i32) unnamed_addr #4 comdat align 2 {
+  %6 = alloca i1
+  %7 = alloca i1
+  %8 = load i32, i32* @x.10
+  %9 = load i32, i32* @y.11
+  %10 = sub i32 0, 1
+  %11 = add i32 %8, %10
+  %12 = sub i32 %8, 1
+  %13 = mul i32 %8, %11
+  %14 = urem i32 %13, 2
+  %15 = icmp eq i32 %14, 0
+  store i1 %15, i1* %7
+  %16 = icmp slt i32 %9, 10
+  store i1 %16, i1* %6
+  %17 = alloca i32
+  store i32 -492607564, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %5, %89
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 -492607564, label %21
+    i32 1246033524, label %29
+    i32 -2124592457, label %72
+    i32 -1850463090, label %73
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %89
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile i1, i1* %7
+  %23 = load volatile i1, i1* %6
+  %24 = and i1 %22, %23
+  %25 = xor i1 %22, %23
+  %26 = or i1 %24, %25
+  %27 = or i1 %22, %23
+  %28 = select i1 %26, i32 1246033524, i32 -1850463090
+  store i32 %28, i32* %17
+  br label %89
+
+; <label>:29:                                     ; preds = %18
+  %30 = alloca %struct.edge*, align 8
+  %31 = alloca i32, align 4
+  %32 = alloca i32, align 4
+  %33 = alloca i32, align 4
+  %34 = alloca i32, align 4
+  store %struct.edge* %0, %struct.edge** %30, align 8
+  store i32 %1, i32* %31, align 4
+  store i32 %2, i32* %32, align 4
+  store i32 %3, i32* %33, align 4
+  store i32 %4, i32* %34, align 4
+  %35 = load %struct.edge*, %struct.edge** %30, align 8
+  %36 = load i32, i32* %31, align 4
+  %37 = getelementptr inbounds %struct.edge, %struct.edge* %35, i32 0, i32 0
+  store i32 %36, i32* %37, align 4
+  %38 = load i32, i32* %32, align 4
+  %39 = getelementptr inbounds %struct.edge, %struct.edge* %35, i32 0, i32 1
+  store i32 %38, i32* %39, align 4
+  %40 = load i32, i32* %33, align 4
+  %41 = getelementptr inbounds %struct.edge, %struct.edge* %35, i32 0, i32 2
+  store i32 %40, i32* %41, align 4
+  %42 = load i32, i32* %34, align 4
+  %43 = getelementptr inbounds %struct.edge, %struct.edge* %35, i32 0, i32 3
+  store i32 %42, i32* %43, align 4
+  %44 = getelementptr inbounds %struct.edge, %struct.edge* %35, i32 0, i32 4
+  store i32 0, i32* %44, align 4
+  %45 = load i32, i32* @x.10
+  %46 = load i32, i32* @y.11
+  %47 = add i32 %45, 437423029
+  %48 = sub i32 %47, 1
+  %49 = sub i32 %48, 437423029
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 true, true
+  %58 = and i1 %55, true
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, true
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 true, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  %71 = select i1 %69, i32 -2124592457, i32 -1850463090
+  store i32 %71, i32* %17
+  br label %89
+
+; <label>:72:                                     ; preds = %18
+  ret void
+
+; <label>:73:                                     ; preds = %18
+  %74 = alloca %struct.edge*, align 8
+  %75 = alloca i32, align 4
+  %76 = alloca i32, align 4
+  %77 = alloca i32, align 4
+  %78 = alloca i32, align 4
+  store %struct.edge* %0, %struct.edge** %74, align 8
+  store i32 %1, i32* %75, align 4
+  store i32 %2, i32* %76, align 4
+  store i32 %3, i32* %77, align 4
+  store i32 %4, i32* %78, align 4
+  %79 = load %struct.edge*, %struct.edge** %74, align 8
+  %80 = load i32, i32* %75, align 4
+  %81 = getelementptr inbounds %struct.edge, %struct.edge* %79, i32 0, i32 0
+  store i32 %80, i32* %81, align 4
+  %82 = load i32, i32* %76, align 4
+  %83 = getelementptr inbounds %struct.edge, %struct.edge* %79, i32 0, i32 1
+  store i32 %82, i32* %83, align 4
+  %84 = load i32, i32* %77, align 4
+  %85 = getelementptr inbounds %struct.edge, %struct.edge* %79, i32 0, i32 2
+  store i32 %84, i32* %85, align 4
+  %86 = load i32, i32* %78, align 4
+  %87 = getelementptr inbounds %struct.edge, %struct.edge* %79, i32 0, i32 3
+  store i32 %86, i32* %87, align 4
+  %88 = getelementptr inbounds %struct.edge, %struct.edge* %79, i32 0, i32 4
+  store i32 0, i32* %88, align 4
+  store i32 1246033524, i32* %17
+  br label %89
+
+; <label>:89:                                     ; preds = %73, %29, %21, %20
+  br label %18
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #5
+
+; Function Attrs: noinline uwtable
+define void @_Z2aeiii(i32, i32, i32) #0 {
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i32 %0, i32* %4, align 4
+  store i32 %1, i32* %5, align 4
+  store i32 %2, i32* %6, align 4
+  %7 = load i32, i32* %4, align 4
+  %8 = load i32, i32* %5, align 4
+  %9 = load i32, i32* %6, align 4
+  call void @_Z7addedgeiii(i32 %7, i32 %8, i32 %9)
+  %10 = load i32, i32* %5, align 4
+  %11 = load i32, i32* %4, align 4
+  call void @_Z7addedgeiii(i32 %10, i32 %11, i32 0)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init.2() #0 section ".text.startup" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca %"class.std::deque", align 8
+  %2 = alloca i8*
+  %3 = alloca i32
+  call void @_ZNSt5dequeIiSaIiEEC2Ev(%"class.std::deque"* %1)
+  invoke void @_ZNSt5queueIiSt5dequeIiSaIiEEEC2EOS2_(%"class.std::queue"* @q, %"class.std::deque"* dereferenceable(80) %1)
+          to label %4 unwind label %6
+
+; <label>:4:                                      ; preds = %0
+  call void @_ZNSt5dequeIiSaIiEED2Ev(%"class.std::deque"* %1) #3
+  %5 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::queue"*)* @_ZNSt5queueIiSt5dequeIiSaIiEEED2Ev to void (i8*)*), i8* bitcast (%"class.std::queue"* @q to i8*), i8* @__dso_handle) #3
+  ret void
+
+; <label>:6:                                      ; preds = %0
+  %7 = landingpad { i8*, i32 }
+          cleanup
+  %8 = extractvalue { i8*, i32 } %7, 0
+  store i8* %8, i8** %2, align 8
+  %9 = extractvalue { i8*, i32 } %7, 1
+  store i32 %9, i32* %3, align 4
+  call void @_ZNSt5dequeIiSaIiEED2Ev(%"class.std::deque"* %1) #3
+  br label %10
+
+; <label>:10:                                     ; preds = %6
+  %11 = load i32, i32* @x.14
+  %12 = load i32, i32* @y.15
+  %13 = add i32 %11, -891285458
+  %14 = sub i32 %13, 1
+  %15 = sub i32 %14, -891285458
+  %16 = sub i32 %11, 1
+  %17 = mul i32 %11, %15
+  %18 = urem i32 %17, 2
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %12, 10
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  br i1 %23, label %25, label %57
+
+; <label>:25:                                     ; preds = %10, %57
+  %26 = load i8*, i8** %2, align 8
+  %27 = load i32, i32* %3, align 4
+  %28 = insertvalue { i8*, i32 } undef, i8* %26, 0
+  %29 = insertvalue { i8*, i32 } %28, i32 %27, 1
+  %30 = load i32, i32* @x.14
+  %31 = load i32, i32* @y.15
+  %32 = sub i32 %30, 443472507
+  %33 = sub i32 %32, 1
+  %34 = add i32 %33, 443472507
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = xor i1 %38, true
+  %41 = xor i1 %39, true
+  %42 = xor i1 true, true
+  %43 = and i1 %40, true
+  %44 = and i1 %38, %42
+  %45 = and i1 %41, true
+  %46 = and i1 %39, %42
+  %47 = or i1 %43, %44
+  %48 = or i1 %45, %46
+  %49 = xor i1 %47, %48
+  %50 = or i1 %40, %41
+  %51 = xor i1 %50, true
+  %52 = or i1 true, %42
+  %53 = and i1 %51, %52
+  %54 = or i1 %49, %53
+  %55 = or i1 %38, %39
+  br i1 %54, label %56, label %57
+
+; <label>:56:                                     ; preds = %25
+  resume { i8*, i32 } %29
+
+; <label>:57:                                     ; preds = %25, %10
+  %58 = load i8*, i8** %2, align 8
+  %59 = load i32, i32* %3, align 4
+  %60 = insertvalue { i8*, i32 } undef, i8* %58, 0
+  %61 = insertvalue { i8*, i32 } %60, i32 %59, 1
+  br label %25
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEEC2Ev(%"class.std::deque"*) unnamed_addr #0 comdat align 2 {
+  %2 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %3 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  %4 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  call void @_ZNSt11_Deque_baseIiSaIiEEC2Ev(%"class.std::_Deque_base"* %4)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5queueIiSt5dequeIiSaIiEEEC2EOS2_(%"class.std::queue"*, %"class.std::deque"* dereferenceable(80)) unnamed_addr #0 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.18
+  %6 = load i32, i32* @y.19
+  %7 = add i32 %5, 1705447174
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 1705447174
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 2095841275, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %69
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 2095841275, label %19
+    i32 -1396276115, label %27
+    i32 -126671039, label %61
+    i32 -725846953, label %62
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %69
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 -1396276115, i32 -725846953
+  store i32 %26, i32* %15
+  br label %69
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca %"class.std::queue"*, align 8
+  %29 = alloca %"class.std::deque"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %28, align 8
+  store %"class.std::deque"* %1, %"class.std::deque"** %29, align 8
+  %30 = load %"class.std::queue"*, %"class.std::queue"** %28, align 8
+  %31 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %30, i32 0, i32 0
+  %32 = load %"class.std::deque"*, %"class.std::deque"** %29, align 8
+  %33 = call dereferenceable(80) %"class.std::deque"* @_ZSt4moveIRSt5dequeIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::deque"* dereferenceable(80) %32) #3
+  call void @_ZNSt5dequeIiSaIiEEC2EOS1_(%"class.std::deque"* %31, %"class.std::deque"* dereferenceable(80) %33)
+  %34 = load i32, i32* @x.18
+  %35 = load i32, i32* @y.19
+  %36 = add i32 %34, 1227112892
+  %37 = sub i32 %36, 1
+  %38 = sub i32 %37, 1227112892
+  %39 = sub i32 %34, 1
+  %40 = mul i32 %34, %38
+  %41 = urem i32 %40, 2
+  %42 = icmp eq i32 %41, 0
+  %43 = icmp slt i32 %35, 10
+  %44 = xor i1 %42, true
+  %45 = xor i1 %43, true
+  %46 = xor i1 false, true
+  %47 = and i1 %44, false
+  %48 = and i1 %42, %46
+  %49 = and i1 %45, false
+  %50 = and i1 %43, %46
+  %51 = or i1 %47, %48
+  %52 = or i1 %49, %50
+  %53 = xor i1 %51, %52
+  %54 = or i1 %44, %45
+  %55 = xor i1 %54, true
+  %56 = or i1 false, %46
+  %57 = and i1 %55, %56
+  %58 = or i1 %53, %57
+  %59 = or i1 %42, %43
+  %60 = select i1 %58, i32 -126671039, i32 -725846953
+  store i32 %60, i32* %15
+  br label %69
+
+; <label>:61:                                     ; preds = %16
+  ret void
+
+; <label>:62:                                     ; preds = %16
+  %63 = alloca %"class.std::queue"*, align 8
+  %64 = alloca %"class.std::deque"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %63, align 8
+  store %"class.std::deque"* %1, %"class.std::deque"** %64, align 8
+  %65 = load %"class.std::queue"*, %"class.std::queue"** %63, align 8
+  %66 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %65, i32 0, i32 0
+  %67 = load %"class.std::deque"*, %"class.std::deque"** %64, align 8
+  %68 = call dereferenceable(80) %"class.std::deque"* @_ZSt4moveIRSt5dequeIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::deque"* dereferenceable(80) %67) #3
+  call void @_ZNSt5dequeIiSaIiEEC2EOS1_(%"class.std::deque"* %66, %"class.std::deque"* dereferenceable(80) %68)
+  store i32 -1396276115, i32* %15
+  br label %69
+
+; <label>:69:                                     ; preds = %62, %27, %19, %18
+  br label %16
+}
+
+declare i32 @__gxx_personality_v0(...)
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEED2Ev(%"class.std::deque"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"class.std::deque"*, align 8
+  %3 = alloca %"struct.std::_Deque_iterator", align 8
+  %4 = alloca %"struct.std::_Deque_iterator", align 8
+  %5 = alloca i8*
+  %6 = alloca i32
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %7 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  call void @_ZNSt5dequeIiSaIiEE5beginEv(%"struct.std::_Deque_iterator"* sret %3, %"class.std::deque"* %7) #3
+  call void @_ZNSt5dequeIiSaIiEE3endEv(%"struct.std::_Deque_iterator"* sret %4, %"class.std::deque"* %7) #3
+  %8 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %9 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"* %8) #3
+  invoke void @_ZNSt5dequeIiSaIiEE15_M_destroy_dataESt15_Deque_iteratorIiRiPiES5_RKS0_(%"class.std::deque"* %7, %"struct.std::_Deque_iterator"* %3, %"struct.std::_Deque_iterator"* %4, %"class.std::allocator"* dereferenceable(1) %9)
+          to label %10 unwind label %41
+
+; <label>:10:                                     ; preds = %1
+  %11 = load i32, i32* @x.20
+  %12 = load i32, i32* @y.21
+  %13 = sub i32 %11, 46504857
+  %14 = sub i32 %13, 1
+  %15 = add i32 %14, 46504857
+  %16 = sub i32 %11, 1
+  %17 = mul i32 %11, %15
+  %18 = urem i32 %17, 2
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %12, 10
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  br i1 %23, label %25, label %48
+
+; <label>:25:                                     ; preds = %10, %48
+  %26 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  call void @_ZNSt11_Deque_baseIiSaIiEED2Ev(%"class.std::_Deque_base"* %26) #3
+  %27 = load i32, i32* @x.20
+  %28 = load i32, i32* @y.21
+  %29 = sub i32 0, 1
+  %30 = add i32 %27, %29
+  %31 = sub i32 %27, 1
+  %32 = mul i32 %27, %30
+  %33 = urem i32 %32, 2
+  %34 = icmp eq i32 %33, 0
+  %35 = icmp slt i32 %28, 10
+  %36 = and i1 %34, %35
+  %37 = xor i1 %34, %35
+  %38 = or i1 %36, %37
+  %39 = or i1 %34, %35
+  br i1 %38, label %40, label %48
+
+; <label>:40:                                     ; preds = %25
+  ret void
+
+; <label>:41:                                     ; preds = %1
+  %42 = landingpad { i8*, i32 }
+          catch i8* null
+  %43 = extractvalue { i8*, i32 } %42, 0
+  store i8* %43, i8** %5, align 8
+  %44 = extractvalue { i8*, i32 } %42, 1
+  store i32 %44, i32* %6, align 4
+  %45 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  call void @_ZNSt11_Deque_baseIiSaIiEED2Ev(%"class.std::_Deque_base"* %45) #3
+  br label %46
+
+; <label>:46:                                     ; preds = %41
+  %47 = load i8*, i8** %5, align 8
+  call void @__clang_call_terminate(i8* %47) #11
+  unreachable
+
+; <label>:48:                                     ; preds = %25, %10
+  %49 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  call void @_ZNSt11_Deque_baseIiSaIiEED2Ev(%"class.std::_Deque_base"* %49) #3
+  br label %25
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5queueIiSt5dequeIiSaIiEEED2Ev(%"class.std::queue"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::queue"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %2, align 8
+  %3 = load %"class.std::queue"*, %"class.std::queue"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %3, i32 0, i32 0
+  call void @_ZNSt5dequeIiSaIiEED2Ev(%"class.std::deque"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define zeroext i1 @_Z3bfsv() #0 {
+  %1 = alloca i1
+  %2 = alloca i1, align 1
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32
+  store i32 -865266841, i32* %6
+  br label %7
+
+; <label>:7:                                      ; preds = %0, %223
+  %8 = load i32, i32* %6
+  switch i32 %8, label %9 [
+    i32 -865266841, label %10
+    i32 -910503862, label %19
+    i32 -1061998588, label %20
+    i32 2008676720, label %24
+    i32 2064852460, label %52
+    i32 -1643226072, label %75
+    i32 470096474, label %78
+    i32 1871888410, label %94
+    i32 56829036, label %128
+    i32 -1820282815, label %129
+    i32 -436208043, label %133
+    i32 1290389346, label %145
+    i32 94911281, label %161
+    i32 361179816, label %173
+    i32 1649928647, label %174
+    i32 -1454158481, label %180
+    i32 -1443258404, label %181
+    i32 -1985808586, label %188
+    i32 1132971660, label %189
+    i32 -1488431520, label %190
+    i32 767366257, label %192
+    i32 325303987, label %216
+  ]
+
+; <label>:9:                                      ; preds = %7
+  br label %223
+
+; <label>:10:                                     ; preds = %7
+  %11 = call zeroext i1 @_ZNKSt5queueIiSt5dequeIiSaIiEEE5emptyEv(%"class.std::queue"* @q)
+  %12 = xor i1 %11, true
+  %13 = and i1 true, %12
+  %14 = xor i1 true, true
+  %15 = and i1 %11, %14
+  %16 = or i1 %13, %15
+  %17 = xor i1 %11, true
+  %18 = select i1 %16, i32 -910503862, i32 -1061998588
+  store i32 %18, i32* %6
+  br label %223
+
+; <label>:19:                                     ; preds = %7
+  call void @_ZNSt5queueIiSt5dequeIiSaIiEEE3popEv(%"class.std::queue"* @q)
+  store i32 -865266841, i32* %6
+  br label %223
+
+; <label>:20:                                     ; preds = %7
+  call void @llvm.memset.p0i8.i64(i8* bitcast ([10009 x i32]* @dep to i8*), i8 -1, i64 40036, i32 16, i1 false)
+  %21 = load i32, i32* @S, align 4
+  %22 = sext i32 %21 to i64
+  %23 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %22
+  store i32 1, i32* %23, align 4
+  call void @_ZNSt5queueIiSt5dequeIiSaIiEEE4pushERKi(%"class.std::queue"* @q, i32* dereferenceable(4) @S)
+  store i32 2008676720, i32* %6
+  br label %223
+
+; <label>:24:                                     ; preds = %7
+  %25 = load i32, i32* @x.24
+  %26 = load i32, i32* @y.25
+  %27 = add i32 %25, -1834836612
+  %28 = sub i32 %27, 1
+  %29 = sub i32 %28, -1834836612
+  %30 = sub i32 %25, 1
+  %31 = mul i32 %25, %29
+  %32 = urem i32 %31, 2
+  %33 = icmp eq i32 %32, 0
+  %34 = icmp slt i32 %26, 10
+  %35 = xor i1 %33, true
+  %36 = xor i1 %34, true
+  %37 = xor i1 false, true
+  %38 = and i1 %35, false
+  %39 = and i1 %33, %37
+  %40 = and i1 %36, false
+  %41 = and i1 %34, %37
+  %42 = or i1 %38, %39
+  %43 = or i1 %40, %41
+  %44 = xor i1 %42, %43
+  %45 = or i1 %35, %36
+  %46 = xor i1 %45, true
+  %47 = or i1 false, %37
+  %48 = and i1 %46, %47
+  %49 = or i1 %44, %48
+  %50 = or i1 %33, %34
+  %51 = select i1 %49, i32 2064852460, i32 767366257
+  store i32 %51, i32* %6
+  br label %223
+
+; <label>:52:                                     ; preds = %7
+  %53 = call zeroext i1 @_ZNKSt5queueIiSt5dequeIiSaIiEEE5emptyEv(%"class.std::queue"* @q)
+  %54 = xor i1 %53, true
+  %55 = and i1 true, %54
+  %56 = xor i1 true, true
+  %57 = and i1 %53, %56
+  %58 = or i1 %55, %57
+  %59 = xor i1 %53, true
+  store i1 %58, i1* %1
+  %60 = load i32, i32* @x.24
+  %61 = load i32, i32* @y.25
+  %62 = add i32 %60, -1273191939
+  %63 = sub i32 %62, 1
+  %64 = sub i32 %63, -1273191939
+  %65 = sub i32 %60, 1
+  %66 = mul i32 %60, %64
+  %67 = urem i32 %66, 2
+  %68 = icmp eq i32 %67, 0
+  %69 = icmp slt i32 %61, 10
+  %70 = and i1 %68, %69
+  %71 = xor i1 %68, %69
+  %72 = or i1 %70, %71
+  %73 = or i1 %68, %69
+  %74 = select i1 %72, i32 -1643226072, i32 767366257
+  store i32 %74, i32* %6
+  br label %223
+
+; <label>:75:                                     ; preds = %7
+  %76 = load volatile i1, i1* %1
+  %77 = select i1 %76, i32 470096474, i32 -1443258404
+  store i32 %77, i32* %6
+  br label %223
+
+; <label>:78:                                     ; preds = %7
+  %79 = load i32, i32* @x.24
+  %80 = load i32, i32* @y.25
+  %81 = sub i32 %79, -775050495
+  %82 = sub i32 %81, 1
+  %83 = add i32 %82, -775050495
+  %84 = sub i32 %79, 1
+  %85 = mul i32 %79, %83
+  %86 = urem i32 %85, 2
+  %87 = icmp eq i32 %86, 0
+  %88 = icmp slt i32 %80, 10
+  %89 = and i1 %87, %88
+  %90 = xor i1 %87, %88
+  %91 = or i1 %89, %90
+  %92 = or i1 %87, %88
+  %93 = select i1 %91, i32 1871888410, i32 325303987
+  store i32 %93, i32* %6
+  br label %223
+
+; <label>:94:                                     ; preds = %7
+  %95 = call dereferenceable(4) i32* @_ZNSt5queueIiSt5dequeIiSaIiEEE5frontEv(%"class.std::queue"* @q)
+  %96 = load i32, i32* %95, align 4
+  store i32 %96, i32* %3, align 4
+  call void @_ZNSt5queueIiSt5dequeIiSaIiEEE3popEv(%"class.std::queue"* @q)
+  %97 = load i32, i32* %3, align 4
+  %98 = sext i32 %97 to i64
+  %99 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %98
+  %100 = load i32, i32* %99, align 4
+  store i32 %100, i32* %4, align 4
+  %101 = load i32, i32* @x.24
+  %102 = load i32, i32* @y.25
+  %103 = sub i32 %101, -1796976051
+  %104 = sub i32 %103, 1
+  %105 = add i32 %104, -1796976051
+  %106 = sub i32 %101, 1
+  %107 = mul i32 %101, %105
+  %108 = urem i32 %107, 2
+  %109 = icmp eq i32 %108, 0
+  %110 = icmp slt i32 %102, 10
+  %111 = xor i1 %109, true
+  %112 = xor i1 %110, true
+  %113 = xor i1 true, true
+  %114 = and i1 %111, true
+  %115 = and i1 %109, %113
+  %116 = and i1 %112, true
+  %117 = and i1 %110, %113
+  %118 = or i1 %114, %115
+  %119 = or i1 %116, %117
+  %120 = xor i1 %118, %119
+  %121 = or i1 %111, %112
+  %122 = xor i1 %121, true
+  %123 = or i1 true, %113
+  %124 = and i1 %122, %123
+  %125 = or i1 %120, %124
+  %126 = or i1 %109, %110
+  %127 = select i1 %125, i32 56829036, i32 325303987
+  store i32 %127, i32* %6
+  br label %223
+
+; <label>:128:                                    ; preds = %7
+  store i32 -1820282815, i32* %6
+  br label %223
+
+; <label>:129:                                    ; preds = %7
+  %130 = load i32, i32* %4, align 4
+  %131 = icmp ne i32 %130, 0
+  %132 = select i1 %131, i32 -436208043, i32 -1454158481
+  store i32 %132, i32* %6
+  br label %223
+
+; <label>:133:                                    ; preds = %7
+  %134 = load i32, i32* %4, align 4
+  %135 = sext i32 %134 to i64
+  %136 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %135
+  %137 = getelementptr inbounds %struct.edge, %struct.edge* %136, i32 0, i32 1
+  %138 = load i32, i32* %137, align 4
+  store i32 %138, i32* %5, align 4
+  %139 = load i32, i32* %5, align 4
+  %140 = sext i32 %139 to i64
+  %141 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %140
+  %142 = load i32, i32* %141, align 4
+  %143 = icmp eq i32 %142, -1
+  %144 = select i1 %143, i32 1290389346, i32 361179816
+  store i32 %144, i32* %6
+  br label %223
+
+; <label>:145:                                    ; preds = %7
+  %146 = load i32, i32* %4, align 4
+  %147 = sext i32 %146 to i64
+  %148 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %147
+  %149 = getelementptr inbounds %struct.edge, %struct.edge* %148, i32 0, i32 3
+  %150 = load i32, i32* %149, align 4
+  %151 = load i32, i32* %4, align 4
+  %152 = sext i32 %151 to i64
+  %153 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %152
+  %154 = getelementptr inbounds %struct.edge, %struct.edge* %153, i32 0, i32 4
+  %155 = load i32, i32* %154, align 4
+  %156 = sub i32 0, %155
+  %157 = add i32 %150, %156
+  %158 = sub nsw i32 %150, %155
+  %159 = icmp sgt i32 %157, 0
+  %160 = select i1 %159, i32 94911281, i32 361179816
+  store i32 %160, i32* %6
+  br label %223
+
+; <label>:161:                                    ; preds = %7
+  %162 = load i32, i32* %3, align 4
+  %163 = sext i32 %162 to i64
+  %164 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %163
+  %165 = load i32, i32* %164, align 4
+  %166 = add i32 %165, -337611503
+  %167 = add i32 %166, 1
+  %168 = sub i32 %167, -337611503
+  %169 = add nsw i32 %165, 1
+  %170 = load i32, i32* %5, align 4
+  %171 = sext i32 %170 to i64
+  %172 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %171
+  store i32 %168, i32* %172, align 4
+  call void @_ZNSt5queueIiSt5dequeIiSaIiEEE4pushERKi(%"class.std::queue"* @q, i32* dereferenceable(4) %5)
+  store i32 361179816, i32* %6
+  br label %223
+
+; <label>:173:                                    ; preds = %7
+  store i32 1649928647, i32* %6
+  br label %223
+
+; <label>:174:                                    ; preds = %7
+  %175 = load i32, i32* %4, align 4
+  %176 = sext i32 %175 to i64
+  %177 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %176
+  %178 = getelementptr inbounds %struct.edge, %struct.edge* %177, i32 0, i32 2
+  %179 = load i32, i32* %178, align 4
+  store i32 %179, i32* %4, align 4
+  store i32 -1820282815, i32* %6
+  br label %223
+
+; <label>:180:                                    ; preds = %7
+  store i32 2008676720, i32* %6
+  br label %223
+
+; <label>:181:                                    ; preds = %7
+  %182 = load i32, i32* @T, align 4
+  %183 = sext i32 %182 to i64
+  %184 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %183
+  %185 = load i32, i32* %184, align 4
+  %186 = icmp eq i32 %185, -1
+  %187 = select i1 %186, i32 -1985808586, i32 1132971660
+  store i32 %187, i32* %6
+  br label %223
+
+; <label>:188:                                    ; preds = %7
+  store i1 false, i1* %2, align 1
+  store i32 -1488431520, i32* %6
+  br label %223
+
+; <label>:189:                                    ; preds = %7
+  store i1 true, i1* %2, align 1
+  store i32 -1488431520, i32* %6
+  br label %223
+
+; <label>:190:                                    ; preds = %7
+  %191 = load i1, i1* %2, align 1
+  ret i1 %191
+
+; <label>:192:                                    ; preds = %7
+  %193 = call zeroext i1 @_ZNKSt5queueIiSt5dequeIiSaIiEEE5emptyEv(%"class.std::queue"* @q)
+  %194 = sub i1 false, false
+  %195 = sub i1 %194, %193
+  %196 = add i1 %195, false
+  %197 = sub i1 false, %193
+  %198 = add i1 %196, true
+  %199 = add i1 %198, true
+  %200 = sub i1 %199, true
+  %201 = add i1 %196, true
+  %202 = shl i1 %193, true
+  %203 = shl i1 %193, true
+  %204 = sub i1 false, true
+  %205 = add i1 %193, %204
+  %206 = sub i1 %193, true
+  %207 = mul i1 %205, true
+  %208 = shl i1 %193, true
+  %209 = shl i1 %193, true
+  %210 = xor i1 %193, true
+  %211 = and i1 true, %210
+  %212 = xor i1 true, true
+  %213 = and i1 %193, %212
+  %214 = or i1 %211, %213
+  %215 = xor i1 %193, true
+  store i32 2064852460, i32* %6
+  br label %223
+
+; <label>:216:                                    ; preds = %7
+  %217 = call dereferenceable(4) i32* @_ZNSt5queueIiSt5dequeIiSaIiEEE5frontEv(%"class.std::queue"* @q)
+  %218 = load i32, i32* %217, align 4
+  store i32 %218, i32* %3, align 4
+  call void @_ZNSt5queueIiSt5dequeIiSaIiEEE3popEv(%"class.std::queue"* @q)
+  %219 = load i32, i32* %3, align 4
+  %220 = sext i32 %219 to i64
+  %221 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %220
+  %222 = load i32, i32* %221, align 4
+  store i32 %222, i32* %4, align 4
+  store i32 1871888410, i32* %6
+  br label %223
+
+; <label>:223:                                    ; preds = %216, %192, %189, %188, %181, %180, %174, %173, %161, %145, %133, %129, %128, %94, %78, %75, %52, %24, %20, %19, %10, %9
+  br label %7
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNKSt5queueIiSt5dequeIiSaIiEEE5emptyEv(%"class.std::queue"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::queue"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %2, align 8
+  %3 = load %"class.std::queue"*, %"class.std::queue"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %3, i32 0, i32 0
+  %5 = call zeroext i1 @_ZNKSt5dequeIiSaIiEE5emptyEv(%"class.std::deque"* %4) #3
+  ret i1 %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5queueIiSt5dequeIiSaIiEEE3popEv(%"class.std::queue"*) #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.28
+  %5 = load i32, i32* @y.29
+  %6 = sub i32 %4, -1394526284
+  %7 = sub i32 %6, 1
+  %8 = add i32 %7, -1394526284
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 1622370796, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %49
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 1622370796, label %18
+    i32 -959067849, label %26
+    i32 -1270103946, label %44
+    i32 400259991, label %45
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %49
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 -959067849, i32 400259991
+  store i32 %25, i32* %14
+  br label %49
+
+; <label>:26:                                     ; preds = %15
+  %27 = alloca %"class.std::queue"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %27, align 8
+  %28 = load %"class.std::queue"*, %"class.std::queue"** %27, align 8
+  %29 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %28, i32 0, i32 0
+  call void @_ZNSt5dequeIiSaIiEE9pop_frontEv(%"class.std::deque"* %29) #3
+  %30 = load i32, i32* @x.28
+  %31 = load i32, i32* @y.29
+  %32 = sub i32 0, 1
+  %33 = add i32 %30, %32
+  %34 = sub i32 %30, 1
+  %35 = mul i32 %30, %33
+  %36 = urem i32 %35, 2
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %31, 10
+  %39 = and i1 %37, %38
+  %40 = xor i1 %37, %38
+  %41 = or i1 %39, %40
+  %42 = or i1 %37, %38
+  %43 = select i1 %41, i32 -1270103946, i32 400259991
+  store i32 %43, i32* %14
+  br label %49
+
+; <label>:44:                                     ; preds = %15
+  ret void
+
+; <label>:45:                                     ; preds = %15
+  %46 = alloca %"class.std::queue"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %46, align 8
+  %47 = load %"class.std::queue"*, %"class.std::queue"** %46, align 8
+  %48 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %47, i32 0, i32 0
+  call void @_ZNSt5dequeIiSaIiEE9pop_frontEv(%"class.std::deque"* %48) #3
+  store i32 -959067849, i32* %14
+  br label %49
+
+; <label>:49:                                     ; preds = %45, %26, %18, %17
+  br label %15
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #5
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5queueIiSt5dequeIiSaIiEEE4pushERKi(%"class.std::queue"*, i32* dereferenceable(4)) #0 comdat align 2 {
+  %3 = alloca %"class.std::queue"*, align 8
+  %4 = alloca i32*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load %"class.std::queue"*, %"class.std::queue"** %3, align 8
+  %6 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %5, i32 0, i32 0
+  %7 = load i32*, i32** %4, align 8
+  call void @_ZNSt5dequeIiSaIiEE9push_backERKi(%"class.std::deque"* %6, i32* dereferenceable(4) %7)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZNSt5queueIiSt5dequeIiSaIiEEE5frontEv(%"class.std::queue"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::queue"*, align 8
+  store %"class.std::queue"* %0, %"class.std::queue"** %2, align 8
+  %3 = load %"class.std::queue"*, %"class.std::queue"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::queue", %"class.std::queue"* %3, i32 0, i32 0
+  %5 = call dereferenceable(4) i32* @_ZNSt5dequeIiSaIiEE5frontEv(%"class.std::deque"* %4) #3
+  ret i32* %5
+}
+
+; Function Attrs: noinline uwtable
+define i32 @_Z3dfsii(i32, i32) #0 {
+  %3 = alloca i32
+  %4 = alloca i1
+  %5 = alloca i32*
+  %6 = alloca i32*
+  %7 = alloca i32*
+  %8 = alloca i32*
+  %9 = alloca i32*
+  %10 = alloca i32*
+  %11 = alloca i32*
+  %12 = alloca i32*
+  %13 = alloca i1
+  %14 = alloca i1
+  %15 = load i32, i32* @x.34
+  %16 = load i32, i32* @y.35
+  %17 = sub i32 %15, -1962714689
+  %18 = sub i32 %17, 1
+  %19 = add i32 %18, -1962714689
+  %20 = sub i32 %15, 1
+  %21 = mul i32 %15, %19
+  %22 = urem i32 %21, 2
+  %23 = icmp eq i32 %22, 0
+  store i1 %23, i1* %14
+  %24 = icmp slt i32 %16, 10
+  store i1 %24, i1* %13
+  %25 = alloca i32
+  store i32 2025074593, i32* %25
+  br label %26
+
+; <label>:26:                                     ; preds = %2, %452
+  %27 = load i32, i32* %25
+  switch i32 %27, label %28 [
+    i32 2025074593, label %29
+    i32 -1253620548, label %49
+    i32 213178299, label %78
+    i32 1167246384, label %81
+    i32 -1527528054, label %109
+    i32 -1207860890, label %138
+    i32 1698960186, label %139
+    i32 1609246706, label %145
+    i32 -1880529595, label %149
+    i32 1276173778, label %165
+    i32 2138610780, label %200
+    i32 764018278, label %201
+    i32 -260575320, label %206
+    i32 -647060000, label %230
+    i32 -815888893, label %260
+    i32 2055141688, label %309
+    i32 1879429941, label %310
+    i32 307853088, label %338
+    i32 -910367562, label %366
+    i32 -267622218, label %367
+    i32 62122414, label %375
+    i32 -154042643, label %379
+    i32 828001523, label %395
+    i32 1004110380, label %425
+    i32 -627509281, label %427
+    i32 771640962, label %438
+    i32 689450730, label %440
+    i32 -1533274454, label %448
+    i32 -1469254093, label %449
+  ]
+
+; <label>:28:                                     ; preds = %26
+  br label %452
+
+; <label>:29:                                     ; preds = %26
+  %30 = load volatile i1, i1* %14
+  %31 = load volatile i1, i1* %13
+  %32 = xor i1 %30, true
+  %33 = xor i1 %31, true
+  %34 = xor i1 true, true
+  %35 = and i1 %32, true
+  %36 = and i1 %30, %34
+  %37 = and i1 %33, true
+  %38 = and i1 %31, %34
+  %39 = or i1 %35, %36
+  %40 = or i1 %37, %38
+  %41 = xor i1 %39, %40
+  %42 = or i1 %32, %33
+  %43 = xor i1 %42, true
+  %44 = or i1 true, %34
+  %45 = and i1 %43, %44
+  %46 = or i1 %41, %45
+  %47 = or i1 %30, %31
+  %48 = select i1 %46, i32 -1253620548, i32 -627509281
+  store i32 %48, i32* %25
+  br label %452
+
+; <label>:49:                                     ; preds = %26
+  %50 = alloca i32, align 4
+  store i32* %50, i32** %12
+  %51 = alloca i32, align 4
+  store i32* %51, i32** %11
+  %52 = alloca i32, align 4
+  store i32* %52, i32** %10
+  %53 = alloca i32, align 4
+  store i32* %53, i32** %9
+  %54 = alloca i32, align 4
+  store i32* %54, i32** %8
+  %55 = alloca i32, align 4
+  store i32* %55, i32** %7
+  %56 = alloca i32, align 4
+  store i32* %56, i32** %6
+  %57 = alloca i32, align 4
+  store i32* %57, i32** %5
+  %58 = load volatile i32*, i32** %11
+  store i32 %0, i32* %58, align 4
+  %59 = load volatile i32*, i32** %10
+  store i32 %1, i32* %59, align 4
+  %60 = load volatile i32*, i32** %10
+  %61 = load i32, i32* %60, align 4
+  %62 = icmp eq i32 %61, 0
+  store i1 %62, i1* %4
+  %63 = load i32, i32* @x.34
+  %64 = load i32, i32* @y.35
+  %65 = add i32 %63, -1266201239
+  %66 = sub i32 %65, 1
+  %67 = sub i32 %66, -1266201239
+  %68 = sub i32 %63, 1
+  %69 = mul i32 %63, %67
+  %70 = urem i32 %69, 2
+  %71 = icmp eq i32 %70, 0
+  %72 = icmp slt i32 %64, 10
+  %73 = and i1 %71, %72
+  %74 = xor i1 %71, %72
+  %75 = or i1 %73, %74
+  %76 = or i1 %71, %72
+  %77 = select i1 %75, i32 213178299, i32 -627509281
+  store i32 %77, i32* %25
+  br label %452
+
+; <label>:78:                                     ; preds = %26
+  %79 = load volatile i1, i1* %4
+  %80 = select i1 %79, i32 1167246384, i32 1698960186
+  store i32 %80, i32* %25
+  br label %452
+
+; <label>:81:                                     ; preds = %26
+  %82 = load i32, i32* @x.34
+  %83 = load i32, i32* @y.35
+  %84 = sub i32 %82, 1420479028
+  %85 = sub i32 %84, 1
+  %86 = add i32 %85, 1420479028
+  %87 = sub i32 %82, 1
+  %88 = mul i32 %82, %86
+  %89 = urem i32 %88, 2
+  %90 = icmp eq i32 %89, 0
+  %91 = icmp slt i32 %83, 10
+  %92 = xor i1 %90, true
+  %93 = xor i1 %91, true
+  %94 = xor i1 true, true
+  %95 = and i1 %92, true
+  %96 = and i1 %90, %94
+  %97 = and i1 %93, true
+  %98 = and i1 %91, %94
+  %99 = or i1 %95, %96
+  %100 = or i1 %97, %98
+  %101 = xor i1 %99, %100
+  %102 = or i1 %92, %93
+  %103 = xor i1 %102, true
+  %104 = or i1 true, %94
+  %105 = and i1 %103, %104
+  %106 = or i1 %101, %105
+  %107 = or i1 %90, %91
+  %108 = select i1 %106, i32 -1527528054, i32 771640962
+  store i32 %108, i32* %25
+  br label %452
+
+; <label>:109:                                    ; preds = %26
+  %110 = load volatile i32*, i32** %12
+  store i32 0, i32* %110, align 4
+  %111 = load i32, i32* @x.34
+  %112 = load i32, i32* @y.35
+  %113 = sub i32 %111, -537191724
+  %114 = sub i32 %113, 1
+  %115 = add i32 %114, -537191724
+  %116 = sub i32 %111, 1
+  %117 = mul i32 %111, %115
+  %118 = urem i32 %117, 2
+  %119 = icmp eq i32 %118, 0
+  %120 = icmp slt i32 %112, 10
+  %121 = xor i1 %119, true
+  %122 = xor i1 %120, true
+  %123 = xor i1 true, true
+  %124 = and i1 %121, true
+  %125 = and i1 %119, %123
+  %126 = and i1 %122, true
+  %127 = and i1 %120, %123
+  %128 = or i1 %124, %125
+  %129 = or i1 %126, %127
+  %130 = xor i1 %128, %129
+  %131 = or i1 %121, %122
+  %132 = xor i1 %131, true
+  %133 = or i1 true, %123
+  %134 = and i1 %132, %133
+  %135 = or i1 %130, %134
+  %136 = or i1 %119, %120
+  %137 = select i1 %135, i32 -1207860890, i32 771640962
+  store i32 %137, i32* %25
+  br label %452
+
+; <label>:138:                                    ; preds = %26
+  store i32 -154042643, i32* %25
+  br label %452
+
+; <label>:139:                                    ; preds = %26
+  %140 = load volatile i32*, i32** %11
+  %141 = load i32, i32* %140, align 4
+  %142 = load i32, i32* @T, align 4
+  %143 = icmp eq i32 %141, %142
+  %144 = select i1 %143, i32 1609246706, i32 -1880529595
+  store i32 %144, i32* %25
+  br label %452
+
+; <label>:145:                                    ; preds = %26
+  %146 = load volatile i32*, i32** %10
+  %147 = load i32, i32* %146, align 4
+  %148 = load volatile i32*, i32** %12
+  store i32 %147, i32* %148, align 4
+  store i32 -154042643, i32* %25
+  br label %452
+
+; <label>:149:                                    ; preds = %26
+  %150 = load i32, i32* @x.34
+  %151 = load i32, i32* @y.35
+  %152 = sub i32 %150, -659491709
+  %153 = sub i32 %152, 1
+  %154 = add i32 %153, -659491709
+  %155 = sub i32 %150, 1
+  %156 = mul i32 %150, %154
+  %157 = urem i32 %156, 2
+  %158 = icmp eq i32 %157, 0
+  %159 = icmp slt i32 %151, 10
+  %160 = and i1 %158, %159
+  %161 = xor i1 %158, %159
+  %162 = or i1 %160, %161
+  %163 = or i1 %158, %159
+  %164 = select i1 %162, i32 1276173778, i32 689450730
+  store i32 %164, i32* %25
+  br label %452
+
+; <label>:165:                                    ; preds = %26
+  %166 = load volatile i32*, i32** %9
+  store i32 0, i32* %166, align 4
+  %167 = load volatile i32*, i32** %11
+  %168 = load i32, i32* %167, align 4
+  %169 = sext i32 %168 to i64
+  %170 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %169
+  %171 = load i32, i32* %170, align 4
+  %172 = load volatile i32*, i32** %8
+  store i32 %171, i32* %172, align 4
+  %173 = load i32, i32* @x.34
+  %174 = load i32, i32* @y.35
+  %175 = add i32 %173, -1103106605
+  %176 = sub i32 %175, 1
+  %177 = sub i32 %176, -1103106605
+  %178 = sub i32 %173, 1
+  %179 = mul i32 %173, %177
+  %180 = urem i32 %179, 2
+  %181 = icmp eq i32 %180, 0
+  %182 = icmp slt i32 %174, 10
+  %183 = xor i1 %181, true
+  %184 = xor i1 %182, true
+  %185 = xor i1 false, true
+  %186 = and i1 %183, false
+  %187 = and i1 %181, %185
+  %188 = and i1 %184, false
+  %189 = and i1 %182, %185
+  %190 = or i1 %186, %187
+  %191 = or i1 %188, %189
+  %192 = xor i1 %190, %191
+  %193 = or i1 %183, %184
+  %194 = xor i1 %193, true
+  %195 = or i1 false, %185
+  %196 = and i1 %194, %195
+  %197 = or i1 %192, %196
+  %198 = or i1 %181, %182
+  %199 = select i1 %197, i32 2138610780, i32 689450730
+  store i32 %199, i32* %25
+  br label %452
+
+; <label>:200:                                    ; preds = %26
+  store i32 764018278, i32* %25
+  br label %452
+
+; <label>:201:                                    ; preds = %26
+  %202 = load volatile i32*, i32** %8
+  %203 = load i32, i32* %202, align 4
+  %204 = icmp ne i32 %203, 0
+  %205 = select i1 %204, i32 -260575320, i32 62122414
+  store i32 %205, i32* %25
+  br label %452
+
+; <label>:206:                                    ; preds = %26
+  %207 = load volatile i32*, i32** %8
+  %208 = load i32, i32* %207, align 4
+  %209 = sext i32 %208 to i64
+  %210 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %209
+  %211 = getelementptr inbounds %struct.edge, %struct.edge* %210, i32 0, i32 1
+  %212 = load i32, i32* %211, align 4
+  %213 = load volatile i32*, i32** %7
+  store i32 %212, i32* %213, align 4
+  %214 = load volatile i32*, i32** %7
+  %215 = load i32, i32* %214, align 4
+  %216 = sext i32 %215 to i64
+  %217 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %216
+  %218 = load i32, i32* %217, align 4
+  %219 = load volatile i32*, i32** %11
+  %220 = load i32, i32* %219, align 4
+  %221 = sext i32 %220 to i64
+  %222 = getelementptr inbounds [10009 x i32], [10009 x i32]* @dep, i64 0, i64 %221
+  %223 = load i32, i32* %222, align 4
+  %224 = sub i32 %223, -1421925766
+  %225 = add i32 %224, 1
+  %226 = add i32 %225, -1421925766
+  %227 = add nsw i32 %223, 1
+  %228 = icmp eq i32 %218, %226
+  %229 = select i1 %228, i32 -647060000, i32 1879429941
+  store i32 %229, i32* %25
+  br label %452
+
+; <label>:230:                                    ; preds = %26
+  %231 = load volatile i32*, i32** %7
+  %232 = load i32, i32* %231, align 4
+  %233 = load volatile i32*, i32** %8
+  %234 = load i32, i32* %233, align 4
+  %235 = sext i32 %234 to i64
+  %236 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %235
+  %237 = getelementptr inbounds %struct.edge, %struct.edge* %236, i32 0, i32 3
+  %238 = load i32, i32* %237, align 4
+  %239 = load volatile i32*, i32** %8
+  %240 = load i32, i32* %239, align 4
+  %241 = sext i32 %240 to i64
+  %242 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %241
+  %243 = getelementptr inbounds %struct.edge, %struct.edge* %242, i32 0, i32 4
+  %244 = load i32, i32* %243, align 4
+  %245 = sub i32 %238, 1698035698
+  %246 = sub i32 %245, %244
+  %247 = add i32 %246, 1698035698
+  %248 = sub nsw i32 %238, %244
+  %249 = load volatile i32*, i32** %5
+  store i32 %247, i32* %249, align 4
+  %250 = load volatile i32*, i32** %10
+  %251 = load volatile i32*, i32** %5
+  %252 = call dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4) %250, i32* dereferenceable(4) %251)
+  %253 = load i32, i32* %252, align 4
+  %254 = call i32 @_Z3dfsii(i32 %232, i32 %253)
+  %255 = load volatile i32*, i32** %6
+  store i32 %254, i32* %255, align 4
+  %256 = load volatile i32*, i32** %6
+  %257 = load i32, i32* %256, align 4
+  %258 = icmp ne i32 %257, 0
+  %259 = select i1 %258, i32 -815888893, i32 2055141688
+  store i32 %259, i32* %25
+  br label %452
+
+; <label>:260:                                    ; preds = %26
+  %261 = load volatile i32*, i32** %6
+  %262 = load i32, i32* %261, align 4
+  %263 = load volatile i32*, i32** %8
+  %264 = load i32, i32* %263, align 4
+  %265 = sext i32 %264 to i64
+  %266 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %265
+  %267 = getelementptr inbounds %struct.edge, %struct.edge* %266, i32 0, i32 4
+  %268 = load i32, i32* %267, align 4
+  %269 = sub i32 %268, 668708612
+  %270 = add i32 %269, %262
+  %271 = add i32 %270, 668708612
+  %272 = add nsw i32 %268, %262
+  store i32 %271, i32* %267, align 4
+  %273 = load volatile i32*, i32** %6
+  %274 = load i32, i32* %273, align 4
+  %275 = load volatile i32*, i32** %8
+  %276 = load i32, i32* %275, align 4
+  %277 = xor i32 %276, -1
+  %278 = and i32 1, %277
+  %279 = xor i32 1, -1
+  %280 = and i32 %276, %279
+  %281 = or i32 %278, %280
+  %282 = xor i32 %276, 1
+  %283 = sext i32 %281 to i64
+  %284 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %283
+  %285 = getelementptr inbounds %struct.edge, %struct.edge* %284, i32 0, i32 4
+  %286 = load i32, i32* %285, align 4
+  %287 = sub i32 %286, -223477662
+  %288 = sub i32 %287, %274
+  %289 = add i32 %288, -223477662
+  %290 = sub nsw i32 %286, %274
+  store i32 %289, i32* %285, align 4
+  %291 = load volatile i32*, i32** %6
+  %292 = load i32, i32* %291, align 4
+  %293 = load volatile i32*, i32** %10
+  %294 = load i32, i32* %293, align 4
+  %295 = sub i32 0, %292
+  %296 = add i32 %294, %295
+  %297 = sub nsw i32 %294, %292
+  %298 = load volatile i32*, i32** %10
+  store i32 %296, i32* %298, align 4
+  %299 = load volatile i32*, i32** %6
+  %300 = load i32, i32* %299, align 4
+  %301 = load volatile i32*, i32** %9
+  %302 = load i32, i32* %301, align 4
+  %303 = sub i32 0, %302
+  %304 = sub i32 0, %300
+  %305 = add i32 %303, %304
+  %306 = sub i32 0, %305
+  %307 = add nsw i32 %302, %300
+  %308 = load volatile i32*, i32** %9
+  store i32 %306, i32* %308, align 4
+  store i32 2055141688, i32* %25
+  br label %452
+
+; <label>:309:                                    ; preds = %26
+  store i32 1879429941, i32* %25
+  br label %452
+
+; <label>:310:                                    ; preds = %26
+  %311 = load i32, i32* @x.34
+  %312 = load i32, i32* @y.35
+  %313 = sub i32 %311, -693430869
+  %314 = sub i32 %313, 1
+  %315 = add i32 %314, -693430869
+  %316 = sub i32 %311, 1
+  %317 = mul i32 %311, %315
+  %318 = urem i32 %317, 2
+  %319 = icmp eq i32 %318, 0
+  %320 = icmp slt i32 %312, 10
+  %321 = xor i1 %319, true
+  %322 = xor i1 %320, true
+  %323 = xor i1 false, true
+  %324 = and i1 %321, false
+  %325 = and i1 %319, %323
+  %326 = and i1 %322, false
+  %327 = and i1 %320, %323
+  %328 = or i1 %324, %325
+  %329 = or i1 %326, %327
+  %330 = xor i1 %328, %329
+  %331 = or i1 %321, %322
+  %332 = xor i1 %331, true
+  %333 = or i1 false, %323
+  %334 = and i1 %332, %333
+  %335 = or i1 %330, %334
+  %336 = or i1 %319, %320
+  %337 = select i1 %335, i32 307853088, i32 -1533274454
+  store i32 %337, i32* %25
+  br label %452
+
+; <label>:338:                                    ; preds = %26
+  %339 = load i32, i32* @x.34
+  %340 = load i32, i32* @y.35
+  %341 = add i32 %339, -435528925
+  %342 = sub i32 %341, 1
+  %343 = sub i32 %342, -435528925
+  %344 = sub i32 %339, 1
+  %345 = mul i32 %339, %343
+  %346 = urem i32 %345, 2
+  %347 = icmp eq i32 %346, 0
+  %348 = icmp slt i32 %340, 10
+  %349 = xor i1 %347, true
+  %350 = xor i1 %348, true
+  %351 = xor i1 false, true
+  %352 = and i1 %349, false
+  %353 = and i1 %347, %351
+  %354 = and i1 %350, false
+  %355 = and i1 %348, %351
+  %356 = or i1 %352, %353
+  %357 = or i1 %354, %355
+  %358 = xor i1 %356, %357
+  %359 = or i1 %349, %350
+  %360 = xor i1 %359, true
+  %361 = or i1 false, %351
+  %362 = and i1 %360, %361
+  %363 = or i1 %358, %362
+  %364 = or i1 %347, %348
+  %365 = select i1 %363, i32 -910367562, i32 -1533274454
+  store i32 %365, i32* %25
+  br label %452
+
+; <label>:366:                                    ; preds = %26
+  store i32 -267622218, i32* %25
+  br label %452
+
+; <label>:367:                                    ; preds = %26
+  %368 = load volatile i32*, i32** %8
+  %369 = load i32, i32* %368, align 4
+  %370 = sext i32 %369 to i64
+  %371 = getelementptr inbounds [100009 x %struct.edge], [100009 x %struct.edge]* @e, i64 0, i64 %370
+  %372 = getelementptr inbounds %struct.edge, %struct.edge* %371, i32 0, i32 2
+  %373 = load i32, i32* %372, align 4
+  %374 = load volatile i32*, i32** %8
+  store i32 %373, i32* %374, align 4
+  store i32 764018278, i32* %25
+  br label %452
+
+; <label>:375:                                    ; preds = %26
+  %376 = load volatile i32*, i32** %9
+  %377 = load i32, i32* %376, align 4
+  %378 = load volatile i32*, i32** %12
+  store i32 %377, i32* %378, align 4
+  store i32 -154042643, i32* %25
+  br label %452
+
+; <label>:379:                                    ; preds = %26
+  %380 = load i32, i32* @x.34
+  %381 = load i32, i32* @y.35
+  %382 = sub i32 %380, -1026198779
+  %383 = sub i32 %382, 1
+  %384 = add i32 %383, -1026198779
+  %385 = sub i32 %380, 1
+  %386 = mul i32 %380, %384
+  %387 = urem i32 %386, 2
+  %388 = icmp eq i32 %387, 0
+  %389 = icmp slt i32 %381, 10
+  %390 = and i1 %388, %389
+  %391 = xor i1 %388, %389
+  %392 = or i1 %390, %391
+  %393 = or i1 %388, %389
+  %394 = select i1 %392, i32 828001523, i32 -1469254093
+  store i32 %394, i32* %25
+  br label %452
+
+; <label>:395:                                    ; preds = %26
+  %396 = load volatile i32*, i32** %12
+  %397 = load i32, i32* %396, align 4
+  store i32 %397, i32* %3
+  %398 = load i32, i32* @x.34
+  %399 = load i32, i32* @y.35
+  %400 = sub i32 %398, -1390198692
+  %401 = sub i32 %400, 1
+  %402 = add i32 %401, -1390198692
+  %403 = sub i32 %398, 1
+  %404 = mul i32 %398, %402
+  %405 = urem i32 %404, 2
+  %406 = icmp eq i32 %405, 0
+  %407 = icmp slt i32 %399, 10
+  %408 = xor i1 %406, true
+  %409 = xor i1 %407, true
+  %410 = xor i1 false, true
+  %411 = and i1 %408, false
+  %412 = and i1 %406, %410
+  %413 = and i1 %409, false
+  %414 = and i1 %407, %410
+  %415 = or i1 %411, %412
+  %416 = or i1 %413, %414
+  %417 = xor i1 %415, %416
+  %418 = or i1 %408, %409
+  %419 = xor i1 %418, true
+  %420 = or i1 false, %410
+  %421 = and i1 %419, %420
+  %422 = or i1 %417, %421
+  %423 = or i1 %406, %407
+  %424 = select i1 %422, i32 1004110380, i32 -1469254093
+  store i32 %424, i32* %25
+  br label %452
+
+; <label>:425:                                    ; preds = %26
+  %426 = load volatile i32, i32* %3
+  ret i32 %426
+
+; <label>:427:                                    ; preds = %26
+  %428 = alloca i32, align 4
+  %429 = alloca i32, align 4
+  %430 = alloca i32, align 4
+  %431 = alloca i32, align 4
+  %432 = alloca i32, align 4
+  %433 = alloca i32, align 4
+  %434 = alloca i32, align 4
+  %435 = alloca i32, align 4
+  store i32 %0, i32* %429, align 4
+  store i32 %1, i32* %430, align 4
+  %436 = load i32, i32* %430, align 4
+  %437 = icmp eq i32 %436, 0
+  store i32 -1253620548, i32* %25
+  br label %452
+
+; <label>:438:                                    ; preds = %26
+  %439 = load volatile i32*, i32** %12
+  store i32 0, i32* %439, align 4
+  store i32 -1527528054, i32* %25
+  br label %452
+
+; <label>:440:                                    ; preds = %26
+  %441 = load volatile i32*, i32** %9
+  store i32 0, i32* %441, align 4
+  %442 = load volatile i32*, i32** %11
+  %443 = load i32, i32* %442, align 4
+  %444 = sext i32 %443 to i64
+  %445 = getelementptr inbounds [10009 x i32], [10009 x i32]* @head, i64 0, i64 %444
+  %446 = load i32, i32* %445, align 4
+  %447 = load volatile i32*, i32** %8
+  store i32 %446, i32* %447, align 4
+  store i32 1276173778, i32* %25
+  br label %452
+
+; <label>:448:                                    ; preds = %26
+  store i32 307853088, i32* %25
+  br label %452
+
+; <label>:449:                                    ; preds = %26
+  %450 = load volatile i32*, i32** %12
+  %451 = load i32, i32* %450, align 4
+  store i32 828001523, i32* %25
+  br label %452
+
+; <label>:452:                                    ; preds = %449, %448, %440, %438, %427, %395, %379, %375, %367, %366, %338, %310, %309, %260, %230, %206, %201, %200, %165, %149, %145, %139, %138, %109, %81, %78, %49, %29, %28
+  br label %26
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4), i32* dereferenceable(4)) #4 comdat {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %8 = load i32*, i32** %7, align 8
+  %9 = load i32, i32* %8, align 4
+  store i32 %9, i32* %4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  store i32 %11, i32* %3
+  %12 = alloca i32
+  store i32 1770248024, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %27
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 1770248024, label %16
+    i32 -1444447425, label %21
+    i32 -1118221516, label %23
+    i32 1839889270, label %25
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %27
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i32, i32* %4
+  %18 = load volatile i32, i32* %3
+  %19 = icmp slt i32 %17, %18
+  %20 = select i1 %19, i32 -1444447425, i32 -1118221516
+  store i32 %20, i32* %12
+  br label %27
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32*, i32** %7, align 8
+  store i32* %22, i32** %5, align 8
+  store i32 1839889270, i32* %12
+  br label %27
+
+; <label>:23:                                     ; preds = %13
+  %24 = load i32*, i32** %6, align 8
+  store i32* %24, i32** %5, align 8
+  store i32 1839889270, i32* %12
+  br label %27
+
+; <label>:25:                                     ; preds = %13
+  %26 = load i32*, i32** %5, align 8
+  ret i32* %26
+
+; <label>:27:                                     ; preds = %23, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define i32 @_Z5dinicv() #0 {
+  %1 = alloca i1
+  %2 = alloca i32*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.38
+  %6 = load i32, i32* @y.39
+  %7 = add i32 %5, 263199487
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 263199487
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 907387406, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %0, %119
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 907387406, label %19
+    i32 822103397, label %27
+    i32 -1172322812, label %57
+    i32 2009669619, label %58
+    i32 -1308384694, label %74
+    i32 -1312514194, label %91
+    i32 1037666960, label %94
+    i32 822428842, label %105
+    i32 76324776, label %110
+    i32 442512162, label %112
+    i32 -1633797317, label %115
+    i32 -1214696134, label %117
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %119
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 822103397, i32 -1633797317
+  store i32 %26, i32* %15
+  br label %119
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca i32, align 4
+  store i32* %28, i32** %2
+  %29 = load volatile i32*, i32** %2
+  store i32 0, i32* %29, align 4
+  %30 = load i32, i32* @x.38
+  %31 = load i32, i32* @y.39
+  %32 = add i32 %30, -672482858
+  %33 = sub i32 %32, 1
+  %34 = sub i32 %33, -672482858
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = xor i1 %38, true
+  %41 = xor i1 %39, true
+  %42 = xor i1 true, true
+  %43 = and i1 %40, true
+  %44 = and i1 %38, %42
+  %45 = and i1 %41, true
+  %46 = and i1 %39, %42
+  %47 = or i1 %43, %44
+  %48 = or i1 %45, %46
+  %49 = xor i1 %47, %48
+  %50 = or i1 %40, %41
+  %51 = xor i1 %50, true
+  %52 = or i1 true, %42
+  %53 = and i1 %51, %52
+  %54 = or i1 %49, %53
+  %55 = or i1 %38, %39
+  %56 = select i1 %54, i32 -1172322812, i32 -1633797317
+  store i32 %56, i32* %15
+  br label %119
+
+; <label>:57:                                     ; preds = %16
+  store i32 2009669619, i32* %15
+  br label %119
+
+; <label>:58:                                     ; preds = %16
+  %59 = load i32, i32* @x.38
+  %60 = load i32, i32* @y.39
+  %61 = add i32 %59, -275124239
+  %62 = sub i32 %61, 1
+  %63 = sub i32 %62, -275124239
+  %64 = sub i32 %59, 1
+  %65 = mul i32 %59, %63
+  %66 = urem i32 %65, 2
+  %67 = icmp eq i32 %66, 0
+  %68 = icmp slt i32 %60, 10
+  %69 = and i1 %67, %68
+  %70 = xor i1 %67, %68
+  %71 = or i1 %69, %70
+  %72 = or i1 %67, %68
+  %73 = select i1 %71, i32 -1308384694, i32 -1214696134
+  store i32 %73, i32* %15
+  br label %119
+
+; <label>:74:                                     ; preds = %16
+  %75 = call zeroext i1 @_Z3bfsv()
+  store i1 %75, i1* %1
+  %76 = load i32, i32* @x.38
+  %77 = load i32, i32* @y.39
+  %78 = add i32 %76, 300679752
+  %79 = sub i32 %78, 1
+  %80 = sub i32 %79, 300679752
+  %81 = sub i32 %76, 1
+  %82 = mul i32 %76, %80
+  %83 = urem i32 %82, 2
+  %84 = icmp eq i32 %83, 0
+  %85 = icmp slt i32 %77, 10
+  %86 = and i1 %84, %85
+  %87 = xor i1 %84, %85
+  %88 = or i1 %86, %87
+  %89 = or i1 %84, %85
+  %90 = select i1 %88, i32 -1312514194, i32 -1214696134
+  store i32 %90, i32* %15
+  br label %119
+
+; <label>:91:                                     ; preds = %16
+  %92 = load volatile i1, i1* %1
+  %93 = select i1 %92, i32 1037666960, i32 822428842
+  store i32 %93, i32* %15
+  br label %119
+
+; <label>:94:                                     ; preds = %16
+  %95 = load i32, i32* @S, align 4
+  %96 = call i32 @_Z3dfsii(i32 %95, i32 2000000000)
+  %97 = load volatile i32*, i32** %2
+  %98 = load i32, i32* %97, align 4
+  %99 = sub i32 0, %98
+  %100 = sub i32 0, %96
+  %101 = add i32 %99, %100
+  %102 = sub i32 0, %101
+  %103 = add nsw i32 %98, %96
+  %104 = load volatile i32*, i32** %2
+  store i32 %102, i32* %104, align 4
+  store i32 2009669619, i32* %15
+  br label %119
+
+; <label>:105:                                    ; preds = %16
+  %106 = load volatile i32*, i32** %2
+  %107 = load i32, i32* %106, align 4
+  %108 = icmp sge i32 %107, 2000000000
+  %109 = select i1 %108, i32 76324776, i32 442512162
+  store i32 %109, i32* %15
+  br label %119
+
+; <label>:110:                                    ; preds = %16
+  %111 = load volatile i32*, i32** %2
+  store i32 -1, i32* %111, align 4
+  store i32 442512162, i32* %15
+  br label %119
+
+; <label>:112:                                    ; preds = %16
+  %113 = load volatile i32*, i32** %2
+  %114 = load i32, i32* %113, align 4
+  ret i32 %114
+
+; <label>:115:                                    ; preds = %16
+  %116 = alloca i32, align 4
+  store i32 0, i32* %116, align 4
+  store i32 822103397, i32* %15
+  br label %119
+
+; <label>:117:                                    ; preds = %16
+  %118 = call zeroext i1 @_Z3bfsv()
+  store i32 -1308384694, i32* %15
+  br label %119
+
+; <label>:119:                                    ; preds = %117, %115, %110, %105, %94, %91, %74, %58, %57, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #6 {
+  %1 = alloca i1
+  %2 = alloca i32
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = alloca i1
+  %8 = alloca i1
+  %9 = alloca i1
+  %10 = alloca i1
+  %11 = alloca i1
+  %12 = alloca i32, align 4
+  %13 = alloca i8, align 1
+  %14 = alloca i32, align 4
+  %15 = alloca i8, align 1
+  %16 = alloca i32, align 4
+  %17 = alloca i8, align 1
+  %18 = alloca i32, align 4
+  %19 = alloca i32, align 4
+  %20 = alloca i32, align 4
+  %21 = alloca i32, align 4
+  %22 = alloca i32, align 4
+  %23 = alloca i32, align 4
+  %24 = alloca i32, align 4
+  store i32 0, i32* %12, align 4
+  store i32 0, i32* @n, align 4
+  store i32 0, i32* %14, align 4
+  %25 = alloca i32
+  store i32 -995004283, i32* %25
+  %26 = alloca i1
+  %27 = alloca i1
+  %28 = alloca i1
+  %29 = alloca i1
+  %30 = alloca i1
+  br label %31
+
+; <label>:31:                                     ; preds = %0, %1369
+  %32 = load i32, i32* %25
+  switch i32 %32, label %33 [
+    i32 -995004283, label %34
+    i32 -2065269361, label %41
+    i32 -232452858, label %42
+    i32 1680905790, label %43
+    i32 353842038, label %59
+    i32 1836552964, label %78
+    i32 -401837005, label %81
+    i32 167148038, label %85
+    i32 -264218200, label %114
+    i32 -626643313, label %142
+    i32 1017861605, label %145
+    i32 -710332950, label %161
+    i32 2003085155, label %177
+    i32 -191845235, label %178
+    i32 2123120622, label %183
+    i32 2058675103, label %199
+    i32 -346937281, label %217
+    i32 695732491, label %219
+    i32 452885408, label %222
+    i32 -866598387, label %244
+    i32 -1155364146, label %260
+    i32 189029505, label %277
+    i32 -1916401875, label %280
+    i32 -1999675978, label %285
+    i32 520093292, label %286
+    i32 218078158, label %293
+    i32 1173603218, label %294
+    i32 -1519358182, label %310
+    i32 26784510, label %326
+    i32 -1415841227, label %327
+    i32 430441740, label %355
+    i32 339815912, label %386
+    i32 283714523, label %389
+    i32 -1705393735, label %393
+    i32 192162501, label %396
+    i32 -1441541222, label %397
+    i32 -136168444, label %413
+    i32 -179998124, label %432
+    i32 47493281, label %435
+    i32 1187107465, label %439
+    i32 1548562770, label %442
+    i32 840329033, label %457
+    i32 -52461050, label %492
+    i32 451623876, label %493
+    i32 -1031256009, label %497
+    i32 -1710917522, label %503
+    i32 654528819, label %516
+    i32 -463242132, label %521
+    i32 -1341043830, label %522
+    i32 1274882421, label %527
+    i32 475771289, label %530
+    i32 -1776837060, label %546
+    i32 1180852600, label %576
+    i32 -530425053, label %579
+    i32 -1860271398, label %595
+    i32 1189748532, label %625
+    i32 -94570996, label %628
+    i32 1399268687, label %633
+    i32 -680127889, label %637
+    i32 -471952540, label %640
+    i32 373930810, label %643
+    i32 1202945245, label %648
+    i32 -1089810077, label %664
+    i32 1010862798, label %704
+    i32 313246410, label %705
+    i32 399182673, label %710
+    i32 257281145, label %723
+    i32 2075943538, label %750
+    i32 1270047138, label %768
+    i32 -924401592, label %771
+    i32 -664921331, label %799
+    i32 1993721914, label %836
+    i32 -897782713, label %837
+    i32 -1064923313, label %838
+    i32 791243600, label %854
+    i32 -24890176, label %870
+    i32 -545556148, label %871
+    i32 643121484, label %872
+    i32 -451218373, label %900
+    i32 -1690433188, label %932
+    i32 -1256884931, label %933
+    i32 -414807646, label %934
+    i32 1238918630, label %950
+    i32 -69165888, label %983
+    i32 -667459236, label %984
+    i32 1825315771, label %1000
+    i32 -1016957439, label %1031
+    i32 1411896636, label %1034
+    i32 884081959, label %1039
+    i32 -1524198953, label %1041
+    i32 -519376583, label %1057
+    i32 -460149041, label %1076
+    i32 -492497342, label %1077
+    i32 -1612403759, label %1105
+    i32 13197756, label %1122
+    i32 2022171874, label %1124
+    i32 -1884972767, label %1128
+    i32 -1836990374, label %1129
+    i32 1128849341, label %1130
+    i32 -753949602, label %1134
+    i32 577036497, label %1137
+    i32 -980060567, label %1138
+    i32 1767428242, label %1142
+    i32 -1231197764, label %1146
+    i32 358721819, label %1252
+    i32 -106837620, label %1256
+    i32 345009900, label %1260
+    i32 1598517127, label %1300
+    i32 -87519209, label %1304
+    i32 1559151506, label %1320
+    i32 850101692, label %1321
+    i32 -1509876724, label %1345
+    i32 429455600, label %1359
+    i32 -1449215922, label %1363
+    i32 696437456, label %1367
+  ]
+
+; <label>:33:                                     ; preds = %31
+  br label %1369
+
+; <label>:34:                                     ; preds = %31
+  %35 = call i32 @getchar()
+  %36 = trunc i32 %35 to i8
+  store i8 %36, i8* %13, align 1
+  %37 = load i8, i8* %13, align 1
+  %38 = sext i8 %37 to i32
+  %39 = icmp eq i32 %38, 45
+  %40 = select i1 %39, i32 -2065269361, i32 -232452858
+  store i32 %40, i32* %25
+  br label %1369
+
+; <label>:41:                                     ; preds = %31
+  store i32 1, i32* %14, align 4
+  store i32 -232452858, i32* %25
+  br label %1369
+
+; <label>:42:                                     ; preds = %31
+  store i32 1680905790, i32* %25
+  br label %1369
+
+; <label>:43:                                     ; preds = %31
+  %44 = load i32, i32* @x.40
+  %45 = load i32, i32* @y.41
+  %46 = add i32 %44, -147594486
+  %47 = sub i32 %46, 1
+  %48 = sub i32 %47, -147594486
+  %49 = sub i32 %44, 1
+  %50 = mul i32 %44, %48
+  %51 = urem i32 %50, 2
+  %52 = icmp eq i32 %51, 0
+  %53 = icmp slt i32 %45, 10
+  %54 = and i1 %52, %53
+  %55 = xor i1 %52, %53
+  %56 = or i1 %54, %55
+  %57 = or i1 %52, %53
+  %58 = select i1 %56, i32 353842038, i32 2022171874
+  store i32 %58, i32* %25
+  br label %1369
+
+; <label>:59:                                     ; preds = %31
+  %60 = load i8, i8* %13, align 1
+  %61 = sext i8 %60 to i32
+  %62 = icmp slt i32 %61, 48
+  store i1 %62, i1* %11
+  %63 = load i32, i32* @x.40
+  %64 = load i32, i32* @y.41
+  %65 = sub i32 %63, -1792154051
+  %66 = sub i32 %65, 1
+  %67 = add i32 %66, -1792154051
+  %68 = sub i32 %63, 1
+  %69 = mul i32 %63, %67
+  %70 = urem i32 %69, 2
+  %71 = icmp eq i32 %70, 0
+  %72 = icmp slt i32 %64, 10
+  %73 = and i1 %71, %72
+  %74 = xor i1 %71, %72
+  %75 = or i1 %73, %74
+  %76 = or i1 %71, %72
+  %77 = select i1 %75, i32 1836552964, i32 2022171874
+  store i32 %77, i32* %25
+  br label %1369
+
+; <label>:78:                                     ; preds = %31
+  %79 = load volatile i1, i1* %11
+  %80 = select i1 %79, i32 167148038, i32 -401837005
+  store i32 %80, i32* %25
+  store i1 true, i1* %26
+  br label %1369
+
+; <label>:81:                                     ; preds = %31
+  %82 = load i8, i8* %13, align 1
+  %83 = sext i8 %82 to i32
+  %84 = icmp sgt i32 %83, 57
+  store i32 167148038, i32* %25
+  store i1 %84, i1* %26
+  br label %1369
+
+; <label>:85:                                     ; preds = %31
+  %86 = load i1, i1* %26
+  store i1 %86, i1* %1
+  %87 = load i32, i32* @x.40
+  %88 = load i32, i32* @y.41
+  %89 = add i32 %87, -204070235
+  %90 = sub i32 %89, 1
+  %91 = sub i32 %90, -204070235
+  %92 = sub i32 %87, 1
+  %93 = mul i32 %87, %91
+  %94 = urem i32 %93, 2
+  %95 = icmp eq i32 %94, 0
+  %96 = icmp slt i32 %88, 10
+  %97 = xor i1 %95, true
+  %98 = xor i1 %96, true
+  %99 = xor i1 false, true
+  %100 = and i1 %97, false
+  %101 = and i1 %95, %99
+  %102 = and i1 %98, false
+  %103 = and i1 %96, %99
+  %104 = or i1 %100, %101
+  %105 = or i1 %102, %103
+  %106 = xor i1 %104, %105
+  %107 = or i1 %97, %98
+  %108 = xor i1 %107, true
+  %109 = or i1 false, %99
+  %110 = and i1 %108, %109
+  %111 = or i1 %106, %110
+  %112 = or i1 %95, %96
+  %113 = select i1 %111, i32 -264218200, i32 -1884972767
+  store i32 %113, i32* %25
+  br label %1369
+
+; <label>:114:                                    ; preds = %31
+  %115 = load i32, i32* @x.40
+  %116 = load i32, i32* @y.41
+  %117 = add i32 %115, -1119149171
+  %118 = sub i32 %117, 1
+  %119 = sub i32 %118, -1119149171
+  %120 = sub i32 %115, 1
+  %121 = mul i32 %115, %119
+  %122 = urem i32 %121, 2
+  %123 = icmp eq i32 %122, 0
+  %124 = icmp slt i32 %116, 10
+  %125 = xor i1 %123, true
+  %126 = xor i1 %124, true
+  %127 = xor i1 false, true
+  %128 = and i1 %125, false
+  %129 = and i1 %123, %127
+  %130 = and i1 %126, false
+  %131 = and i1 %124, %127
+  %132 = or i1 %128, %129
+  %133 = or i1 %130, %131
+  %134 = xor i1 %132, %133
+  %135 = or i1 %125, %126
+  %136 = xor i1 %135, true
+  %137 = or i1 false, %127
+  %138 = and i1 %136, %137
+  %139 = or i1 %134, %138
+  %140 = or i1 %123, %124
+  %141 = select i1 %139, i32 -626643313, i32 -1884972767
+  store i32 %141, i32* %25
+  br label %1369
+
+; <label>:142:                                    ; preds = %31
+  %143 = load volatile i1, i1* %1
+  %144 = select i1 %143, i32 -995004283, i32 1017861605
+  store i32 %144, i32* %25
+  br label %1369
+
+; <label>:145:                                    ; preds = %31
+  %146 = load i32, i32* @x.40
+  %147 = load i32, i32* @y.41
+  %148 = sub i32 %146, 1222190109
+  %149 = sub i32 %148, 1
+  %150 = add i32 %149, 1222190109
+  %151 = sub i32 %146, 1
+  %152 = mul i32 %146, %150
+  %153 = urem i32 %152, 2
+  %154 = icmp eq i32 %153, 0
+  %155 = icmp slt i32 %147, 10
+  %156 = and i1 %154, %155
+  %157 = xor i1 %154, %155
+  %158 = or i1 %156, %157
+  %159 = or i1 %154, %155
+  %160 = select i1 %158, i32 -710332950, i32 -1836990374
+  store i32 %160, i32* %25
+  br label %1369
+
+; <label>:161:                                    ; preds = %31
+  %162 = load i32, i32* @x.40
+  %163 = load i32, i32* @y.41
+  %164 = add i32 %162, 1600687240
+  %165 = sub i32 %164, 1
+  %166 = sub i32 %165, 1600687240
+  %167 = sub i32 %162, 1
+  %168 = mul i32 %162, %166
+  %169 = urem i32 %168, 2
+  %170 = icmp eq i32 %169, 0
+  %171 = icmp slt i32 %163, 10
+  %172 = and i1 %170, %171
+  %173 = xor i1 %170, %171
+  %174 = or i1 %172, %173
+  %175 = or i1 %170, %171
+  %176 = select i1 %174, i32 2003085155, i32 -1836990374
+  store i32 %176, i32* %25
+  br label %1369
+
+; <label>:177:                                    ; preds = %31
+  store i32 -191845235, i32* %25
+  br label %1369
+
+; <label>:178:                                    ; preds = %31
+  %179 = load i8, i8* %13, align 1
+  %180 = sext i8 %179 to i32
+  %181 = icmp sle i32 48, %180
+  %182 = select i1 %181, i32 2123120622, i32 695732491
+  store i32 %182, i32* %25
+  store i1 false, i1* %27
+  br label %1369
+
+; <label>:183:                                    ; preds = %31
+  %184 = load i32, i32* @x.40
+  %185 = load i32, i32* @y.41
+  %186 = sub i32 %184, 19920615
+  %187 = sub i32 %186, 1
+  %188 = add i32 %187, 19920615
+  %189 = sub i32 %184, 1
+  %190 = mul i32 %184, %188
+  %191 = urem i32 %190, 2
+  %192 = icmp eq i32 %191, 0
+  %193 = icmp slt i32 %185, 10
+  %194 = and i1 %192, %193
+  %195 = xor i1 %192, %193
+  %196 = or i1 %194, %195
+  %197 = or i1 %192, %193
+  %198 = select i1 %196, i32 2058675103, i32 1128849341
+  store i32 %198, i32* %25
+  br label %1369
+
+; <label>:199:                                    ; preds = %31
+  %200 = load i8, i8* %13, align 1
+  %201 = sext i8 %200 to i32
+  %202 = icmp sle i32 %201, 57
+  store i1 %202, i1* %10
+  %203 = load i32, i32* @x.40
+  %204 = load i32, i32* @y.41
+  %205 = sub i32 0, 1
+  %206 = add i32 %203, %205
+  %207 = sub i32 %203, 1
+  %208 = mul i32 %203, %206
+  %209 = urem i32 %208, 2
+  %210 = icmp eq i32 %209, 0
+  %211 = icmp slt i32 %204, 10
+  %212 = and i1 %210, %211
+  %213 = xor i1 %210, %211
+  %214 = or i1 %212, %213
+  %215 = or i1 %210, %211
+  %216 = select i1 %214, i32 -346937281, i32 1128849341
+  store i32 %216, i32* %25
+  br label %1369
+
+; <label>:217:                                    ; preds = %31
+  store i32 695732491, i32* %25
+  %218 = load volatile i1, i1* %10
+  store i1 %218, i1* %27
+  br label %1369
+
+; <label>:219:                                    ; preds = %31
+  %220 = load i1, i1* %27
+  %221 = select i1 %220, i32 452885408, i32 -866598387
+  store i32 %221, i32* %25
+  br label %1369
+
+; <label>:222:                                    ; preds = %31
+  %223 = load i32, i32* @n, align 4
+  %224 = shl i32 %223, 1
+  %225 = load i32, i32* @n, align 4
+  %226 = shl i32 %225, 3
+  %227 = sub i32 0, %224
+  %228 = sub i32 0, %226
+  %229 = add i32 %227, %228
+  %230 = sub i32 0, %229
+  %231 = add nsw i32 %224, %226
+  %232 = load i8, i8* %13, align 1
+  %233 = sext i8 %232 to i32
+  %234 = add i32 %230, -1149171263
+  %235 = add i32 %234, %233
+  %236 = sub i32 %235, -1149171263
+  %237 = add nsw i32 %230, %233
+  %238 = sub i32 %236, -1757040348
+  %239 = sub i32 %238, 48
+  %240 = add i32 %239, -1757040348
+  %241 = sub nsw i32 %236, 48
+  store i32 %240, i32* @n, align 4
+  %242 = call i32 @getchar()
+  %243 = trunc i32 %242 to i8
+  store i8 %243, i8* %13, align 1
+  store i32 -191845235, i32* %25
+  br label %1369
+
+; <label>:244:                                    ; preds = %31
+  %245 = load i32, i32* @x.40
+  %246 = load i32, i32* @y.41
+  %247 = add i32 %245, 1645583236
+  %248 = sub i32 %247, 1
+  %249 = sub i32 %248, 1645583236
+  %250 = sub i32 %245, 1
+  %251 = mul i32 %245, %249
+  %252 = urem i32 %251, 2
+  %253 = icmp eq i32 %252, 0
+  %254 = icmp slt i32 %246, 10
+  %255 = and i1 %253, %254
+  %256 = xor i1 %253, %254
+  %257 = or i1 %255, %256
+  %258 = or i1 %253, %254
+  %259 = select i1 %257, i32 -1155364146, i32 -753949602
+  store i32 %259, i32* %25
+  br label %1369
+
+; <label>:260:                                    ; preds = %31
+  %261 = load i32, i32* %14, align 4
+  %262 = icmp ne i32 %261, 0
+  store i1 %262, i1* %9
+  %263 = load i32, i32* @x.40
+  %264 = load i32, i32* @y.41
+  %265 = sub i32 0, 1
+  %266 = add i32 %263, %265
+  %267 = sub i32 %263, 1
+  %268 = mul i32 %263, %266
+  %269 = urem i32 %268, 2
+  %270 = icmp eq i32 %269, 0
+  %271 = icmp slt i32 %264, 10
+  %272 = and i1 %270, %271
+  %273 = xor i1 %270, %271
+  %274 = or i1 %272, %273
+  %275 = or i1 %270, %271
+  %276 = select i1 %274, i32 189029505, i32 -753949602
+  store i32 %276, i32* %25
+  br label %1369
+
+; <label>:277:                                    ; preds = %31
+  %278 = load volatile i1, i1* %9
+  %279 = select i1 %278, i32 -1916401875, i32 -1999675978
+  store i32 %279, i32* %25
+  br label %1369
+
+; <label>:280:                                    ; preds = %31
+  %281 = load i32, i32* @n, align 4
+  %282 = sub i32 0, %281
+  %283 = add i32 0, %282
+  %284 = sub nsw i32 0, %281
+  store i32 %283, i32* @n, align 4
+  store i32 -1999675978, i32* %25
+  br label %1369
+
+; <label>:285:                                    ; preds = %31
+  store i32 0, i32* @m, align 4
+  store i32 0, i32* %16, align 4
+  store i32 520093292, i32* %25
+  br label %1369
+
+; <label>:286:                                    ; preds = %31
+  %287 = call i32 @getchar()
+  %288 = trunc i32 %287 to i8
+  store i8 %288, i8* %15, align 1
+  %289 = load i8, i8* %15, align 1
+  %290 = sext i8 %289 to i32
+  %291 = icmp eq i32 %290, 45
+  %292 = select i1 %291, i32 218078158, i32 1173603218
+  store i32 %292, i32* %25
+  br label %1369
+
+; <label>:293:                                    ; preds = %31
+  store i32 1, i32* %16, align 4
+  store i32 1173603218, i32* %25
+  br label %1369
+
+; <label>:294:                                    ; preds = %31
+  %295 = load i32, i32* @x.40
+  %296 = load i32, i32* @y.41
+  %297 = add i32 %295, -1698004386
+  %298 = sub i32 %297, 1
+  %299 = sub i32 %298, -1698004386
+  %300 = sub i32 %295, 1
+  %301 = mul i32 %295, %299
+  %302 = urem i32 %301, 2
+  %303 = icmp eq i32 %302, 0
+  %304 = icmp slt i32 %296, 10
+  %305 = and i1 %303, %304
+  %306 = xor i1 %303, %304
+  %307 = or i1 %305, %306
+  %308 = or i1 %303, %304
+  %309 = select i1 %307, i32 -1519358182, i32 577036497
+  store i32 %309, i32* %25
+  br label %1369
+
+; <label>:310:                                    ; preds = %31
+  %311 = load i32, i32* @x.40
+  %312 = load i32, i32* @y.41
+  %313 = sub i32 %311, 572372517
+  %314 = sub i32 %313, 1
+  %315 = add i32 %314, 572372517
+  %316 = sub i32 %311, 1
+  %317 = mul i32 %311, %315
+  %318 = urem i32 %317, 2
+  %319 = icmp eq i32 %318, 0
+  %320 = icmp slt i32 %312, 10
+  %321 = and i1 %319, %320
+  %322 = xor i1 %319, %320
+  %323 = or i1 %321, %322
+  %324 = or i1 %319, %320
+  %325 = select i1 %323, i32 26784510, i32 577036497
+  store i32 %325, i32* %25
+  br label %1369
+
+; <label>:326:                                    ; preds = %31
+  store i32 -1415841227, i32* %25
+  br label %1369
+
+; <label>:327:                                    ; preds = %31
+  %328 = load i32, i32* @x.40
+  %329 = load i32, i32* @y.41
+  %330 = sub i32 %328, 1199040168
+  %331 = sub i32 %330, 1
+  %332 = add i32 %331, 1199040168
+  %333 = sub i32 %328, 1
+  %334 = mul i32 %328, %332
+  %335 = urem i32 %334, 2
+  %336 = icmp eq i32 %335, 0
+  %337 = icmp slt i32 %329, 10
+  %338 = xor i1 %336, true
+  %339 = xor i1 %337, true
+  %340 = xor i1 false, true
+  %341 = and i1 %338, false
+  %342 = and i1 %336, %340
+  %343 = and i1 %339, false
+  %344 = and i1 %337, %340
+  %345 = or i1 %341, %342
+  %346 = or i1 %343, %344
+  %347 = xor i1 %345, %346
+  %348 = or i1 %338, %339
+  %349 = xor i1 %348, true
+  %350 = or i1 false, %340
+  %351 = and i1 %349, %350
+  %352 = or i1 %347, %351
+  %353 = or i1 %336, %337
+  %354 = select i1 %352, i32 430441740, i32 -980060567
+  store i32 %354, i32* %25
+  br label %1369
+
+; <label>:355:                                    ; preds = %31
+  %356 = load i8, i8* %15, align 1
+  %357 = sext i8 %356 to i32
+  %358 = icmp slt i32 %357, 48
+  store i1 %358, i1* %8
+  %359 = load i32, i32* @x.40
+  %360 = load i32, i32* @y.41
+  %361 = sub i32 %359, -1381380245
+  %362 = sub i32 %361, 1
+  %363 = add i32 %362, -1381380245
+  %364 = sub i32 %359, 1
+  %365 = mul i32 %359, %363
+  %366 = urem i32 %365, 2
+  %367 = icmp eq i32 %366, 0
+  %368 = icmp slt i32 %360, 10
+  %369 = xor i1 %367, true
+  %370 = xor i1 %368, true
+  %371 = xor i1 false, true
+  %372 = and i1 %369, false
+  %373 = and i1 %367, %371
+  %374 = and i1 %370, false
+  %375 = and i1 %368, %371
+  %376 = or i1 %372, %373
+  %377 = or i1 %374, %375
+  %378 = xor i1 %376, %377
+  %379 = or i1 %369, %370
+  %380 = xor i1 %379, true
+  %381 = or i1 false, %371
+  %382 = and i1 %380, %381
+  %383 = or i1 %378, %382
+  %384 = or i1 %367, %368
+  %385 = select i1 %383, i32 339815912, i32 -980060567
+  store i32 %385, i32* %25
+  br label %1369
+
+; <label>:386:                                    ; preds = %31
+  %387 = load volatile i1, i1* %8
+  %388 = select i1 %387, i32 -1705393735, i32 283714523
+  store i32 %388, i32* %25
+  store i1 true, i1* %28
+  br label %1369
+
+; <label>:389:                                    ; preds = %31
+  %390 = load i8, i8* %15, align 1
+  %391 = sext i8 %390 to i32
+  %392 = icmp sgt i32 %391, 57
+  store i32 -1705393735, i32* %25
+  store i1 %392, i1* %28
+  br label %1369
+
+; <label>:393:                                    ; preds = %31
+  %394 = load i1, i1* %28
+  %395 = select i1 %394, i32 520093292, i32 192162501
+  store i32 %395, i32* %25
+  br label %1369
+
+; <label>:396:                                    ; preds = %31
+  store i32 -1441541222, i32* %25
+  br label %1369
+
+; <label>:397:                                    ; preds = %31
+  %398 = load i32, i32* @x.40
+  %399 = load i32, i32* @y.41
+  %400 = sub i32 %398, -2004080033
+  %401 = sub i32 %400, 1
+  %402 = add i32 %401, -2004080033
+  %403 = sub i32 %398, 1
+  %404 = mul i32 %398, %402
+  %405 = urem i32 %404, 2
+  %406 = icmp eq i32 %405, 0
+  %407 = icmp slt i32 %399, 10
+  %408 = and i1 %406, %407
+  %409 = xor i1 %406, %407
+  %410 = or i1 %408, %409
+  %411 = or i1 %406, %407
+  %412 = select i1 %410, i32 -136168444, i32 1767428242
+  store i32 %412, i32* %25
+  br label %1369
+
+; <label>:413:                                    ; preds = %31
+  %414 = load i8, i8* %15, align 1
+  %415 = sext i8 %414 to i32
+  %416 = icmp sle i32 48, %415
+  store i1 %416, i1* %7
+  %417 = load i32, i32* @x.40
+  %418 = load i32, i32* @y.41
+  %419 = add i32 %417, -2048607685
+  %420 = sub i32 %419, 1
+  %421 = sub i32 %420, -2048607685
+  %422 = sub i32 %417, 1
+  %423 = mul i32 %417, %421
+  %424 = urem i32 %423, 2
+  %425 = icmp eq i32 %424, 0
+  %426 = icmp slt i32 %418, 10
+  %427 = and i1 %425, %426
+  %428 = xor i1 %425, %426
+  %429 = or i1 %427, %428
+  %430 = or i1 %425, %426
+  %431 = select i1 %429, i32 -179998124, i32 1767428242
+  store i32 %431, i32* %25
+  br label %1369
+
+; <label>:432:                                    ; preds = %31
+  %433 = load volatile i1, i1* %7
+  %434 = select i1 %433, i32 47493281, i32 1187107465
+  store i32 %434, i32* %25
+  store i1 false, i1* %29
+  br label %1369
+
+; <label>:435:                                    ; preds = %31
+  %436 = load i8, i8* %15, align 1
+  %437 = sext i8 %436 to i32
+  %438 = icmp sle i32 %437, 57
+  store i32 1187107465, i32* %25
+  store i1 %438, i1* %29
+  br label %1369
+
+; <label>:439:                                    ; preds = %31
+  %440 = load i1, i1* %29
+  %441 = select i1 %440, i32 1548562770, i32 451623876
+  store i32 %441, i32* %25
+  br label %1369
+
+; <label>:442:                                    ; preds = %31
+  %443 = load i32, i32* @x.40
+  %444 = load i32, i32* @y.41
+  %445 = sub i32 0, 1
+  %446 = add i32 %443, %445
+  %447 = sub i32 %443, 1
+  %448 = mul i32 %443, %446
+  %449 = urem i32 %448, 2
+  %450 = icmp eq i32 %449, 0
+  %451 = icmp slt i32 %444, 10
+  %452 = and i1 %450, %451
+  %453 = xor i1 %450, %451
+  %454 = or i1 %452, %453
+  %455 = or i1 %450, %451
+  %456 = select i1 %454, i32 840329033, i32 -1231197764
+  store i32 %456, i32* %25
+  br label %1369
+
+; <label>:457:                                    ; preds = %31
+  %458 = load i32, i32* @m, align 4
+  %459 = shl i32 %458, 1
+  %460 = load i32, i32* @m, align 4
+  %461 = shl i32 %460, 3
+  %462 = sub i32 %459, 516628337
+  %463 = add i32 %462, %461
+  %464 = add i32 %463, 516628337
+  %465 = add nsw i32 %459, %461
+  %466 = load i8, i8* %15, align 1
+  %467 = sext i8 %466 to i32
+  %468 = add i32 %464, -1810191270
+  %469 = add i32 %468, %467
+  %470 = sub i32 %469, -1810191270
+  %471 = add nsw i32 %464, %467
+  %472 = sub i32 0, 48
+  %473 = add i32 %470, %472
+  %474 = sub nsw i32 %470, 48
+  store i32 %473, i32* @m, align 4
+  %475 = call i32 @getchar()
+  %476 = trunc i32 %475 to i8
+  store i8 %476, i8* %15, align 1
+  %477 = load i32, i32* @x.40
+  %478 = load i32, i32* @y.41
+  %479 = sub i32 %477, -1070759748
+  %480 = sub i32 %479, 1
+  %481 = add i32 %480, -1070759748
+  %482 = sub i32 %477, 1
+  %483 = mul i32 %477, %481
+  %484 = urem i32 %483, 2
+  %485 = icmp eq i32 %484, 0
+  %486 = icmp slt i32 %478, 10
+  %487 = and i1 %485, %486
+  %488 = xor i1 %485, %486
+  %489 = or i1 %487, %488
+  %490 = or i1 %485, %486
+  %491 = select i1 %489, i32 -52461050, i32 -1231197764
+  store i32 %491, i32* %25
+  br label %1369
+
+; <label>:492:                                    ; preds = %31
+  store i32 -1441541222, i32* %25
+  br label %1369
+
+; <label>:493:                                    ; preds = %31
+  %494 = load i32, i32* %16, align 4
+  %495 = icmp ne i32 %494, 0
+  %496 = select i1 %495, i32 -1031256009, i32 -1710917522
+  store i32 %496, i32* %25
+  br label %1369
+
+; <label>:497:                                    ; preds = %31
+  %498 = load i32, i32* @m, align 4
+  %499 = sub i32 0, 212575192
+  %500 = sub i32 %499, %498
+  %501 = add i32 %500, 212575192
+  %502 = sub nsw i32 0, %498
+  store i32 %501, i32* @m, align 4
+  store i32 -1710917522, i32* %25
+  br label %1369
+
+; <label>:503:                                    ; preds = %31
+  store i32 0, i32* @S, align 4
+  %504 = load i32, i32* @n, align 4
+  %505 = load i32, i32* @m, align 4
+  %506 = sub i32 0, %504
+  %507 = sub i32 0, %505
+  %508 = add i32 %506, %507
+  %509 = sub i32 0, %508
+  %510 = add nsw i32 %504, %505
+  %511 = sub i32 0, %509
+  %512 = sub i32 0, 1
+  %513 = add i32 %511, %512
+  %514 = sub i32 0, %513
+  %515 = add nsw i32 %509, 1
+  store i32 %514, i32* @T, align 4
+  store i32 1, i32* %22, align 4
+  store i32 654528819, i32* %25
+  br label %1369
+
+; <label>:516:                                    ; preds = %31
+  %517 = load i32, i32* %22, align 4
+  %518 = load i32, i32* @n, align 4
+  %519 = icmp sle i32 %517, %518
+  %520 = select i1 %519, i32 -463242132, i32 -667459236
+  store i32 %520, i32* %25
+  br label %1369
+
+; <label>:521:                                    ; preds = %31
+  store i32 1, i32* %23, align 4
+  store i32 -1341043830, i32* %25
+  br label %1369
+
+; <label>:522:                                    ; preds = %31
+  %523 = load i32, i32* %23, align 4
+  %524 = load i32, i32* @m, align 4
+  %525 = icmp sle i32 %523, %524
+  %526 = select i1 %525, i32 1274882421, i32 -1256884931
+  store i32 %526, i32* %25
+  br label %1369
+
+; <label>:527:                                    ; preds = %31
+  %528 = call i32 @getchar()
+  %529 = trunc i32 %528 to i8
+  store i8 %529, i8* %17, align 1
+  store i32 475771289, i32* %25
+  br label %1369
+
+; <label>:530:                                    ; preds = %31
+  %531 = load i32, i32* @x.40
+  %532 = load i32, i32* @y.41
+  %533 = add i32 %531, 937901738
+  %534 = sub i32 %533, 1
+  %535 = sub i32 %534, 937901738
+  %536 = sub i32 %531, 1
+  %537 = mul i32 %531, %535
+  %538 = urem i32 %537, 2
+  %539 = icmp eq i32 %538, 0
+  %540 = icmp slt i32 %532, 10
+  %541 = and i1 %539, %540
+  %542 = xor i1 %539, %540
+  %543 = or i1 %541, %542
+  %544 = or i1 %539, %540
+  %545 = select i1 %543, i32 -1776837060, i32 358721819
+  store i32 %545, i32* %25
+  br label %1369
+
+; <label>:546:                                    ; preds = %31
+  %547 = load i8, i8* %17, align 1
+  %548 = sext i8 %547 to i32
+  %549 = icmp ne i32 %548, 46
+  store i1 %549, i1* %6
+  %550 = load i32, i32* @x.40
+  %551 = load i32, i32* @y.41
+  %552 = sub i32 0, 1
+  %553 = add i32 %550, %552
+  %554 = sub i32 %550, 1
+  %555 = mul i32 %550, %553
+  %556 = urem i32 %555, 2
+  %557 = icmp eq i32 %556, 0
+  %558 = icmp slt i32 %551, 10
+  %559 = xor i1 %557, true
+  %560 = xor i1 %558, true
+  %561 = xor i1 false, true
+  %562 = and i1 %559, false
+  %563 = and i1 %557, %561
+  %564 = and i1 %560, false
+  %565 = and i1 %558, %561
+  %566 = or i1 %562, %563
+  %567 = or i1 %564, %565
+  %568 = xor i1 %566, %567
+  %569 = or i1 %559, %560
+  %570 = xor i1 %569, true
+  %571 = or i1 false, %561
+  %572 = and i1 %570, %571
+  %573 = or i1 %568, %572
+  %574 = or i1 %557, %558
+  %575 = select i1 %573, i32 1180852600, i32 358721819
+  store i32 %575, i32* %25
+  br label %1369
+
+; <label>:576:                                    ; preds = %31
+  %577 = load volatile i1, i1* %6
+  %578 = select i1 %577, i32 -530425053, i32 -680127889
+  store i32 %578, i32* %25
+  store i1 false, i1* %30
+  br label %1369
+
+; <label>:579:                                    ; preds = %31
+  %580 = load i32, i32* @x.40
+  %581 = load i32, i32* @y.41
+  %582 = add i32 %580, 366128272
+  %583 = sub i32 %582, 1
+  %584 = sub i32 %583, 366128272
+  %585 = sub i32 %580, 1
+  %586 = mul i32 %580, %584
+  %587 = urem i32 %586, 2
+  %588 = icmp eq i32 %587, 0
+  %589 = icmp slt i32 %581, 10
+  %590 = and i1 %588, %589
+  %591 = xor i1 %588, %589
+  %592 = or i1 %590, %591
+  %593 = or i1 %588, %589
+  %594 = select i1 %592, i32 -1860271398, i32 -106837620
+  store i32 %594, i32* %25
+  br label %1369
+
+; <label>:595:                                    ; preds = %31
+  %596 = load i8, i8* %17, align 1
+  %597 = sext i8 %596 to i32
+  %598 = icmp ne i32 %597, 111
+  store i1 %598, i1* %5
+  %599 = load i32, i32* @x.40
+  %600 = load i32, i32* @y.41
+  %601 = sub i32 0, 1
+  %602 = add i32 %599, %601
+  %603 = sub i32 %599, 1
+  %604 = mul i32 %599, %602
+  %605 = urem i32 %604, 2
+  %606 = icmp eq i32 %605, 0
+  %607 = icmp slt i32 %600, 10
+  %608 = xor i1 %606, true
+  %609 = xor i1 %607, true
+  %610 = xor i1 false, true
+  %611 = and i1 %608, false
+  %612 = and i1 %606, %610
+  %613 = and i1 %609, false
+  %614 = and i1 %607, %610
+  %615 = or i1 %611, %612
+  %616 = or i1 %613, %614
+  %617 = xor i1 %615, %616
+  %618 = or i1 %608, %609
+  %619 = xor i1 %618, true
+  %620 = or i1 false, %610
+  %621 = and i1 %619, %620
+  %622 = or i1 %617, %621
+  %623 = or i1 %606, %607
+  %624 = select i1 %622, i32 1189748532, i32 -106837620
+  store i32 %624, i32* %25
+  br label %1369
+
+; <label>:625:                                    ; preds = %31
+  %626 = load volatile i1, i1* %5
+  %627 = select i1 %626, i32 -94570996, i32 -680127889
+  store i32 %627, i32* %25
+  store i1 false, i1* %30
+  br label %1369
+
+; <label>:628:                                    ; preds = %31
+  %629 = load i8, i8* %17, align 1
+  %630 = sext i8 %629 to i32
+  %631 = icmp ne i32 %630, 84
+  %632 = select i1 %631, i32 1399268687, i32 -680127889
+  store i32 %632, i32* %25
+  store i1 false, i1* %30
+  br label %1369
+
+; <label>:633:                                    ; preds = %31
+  %634 = load i8, i8* %17, align 1
+  %635 = sext i8 %634 to i32
+  %636 = icmp ne i32 %635, 83
+  store i32 -680127889, i32* %25
+  store i1 %636, i1* %30
+  br label %1369
+
+; <label>:637:                                    ; preds = %31
+  %638 = load i1, i1* %30
+  %639 = select i1 %638, i32 -471952540, i32 373930810
+  store i32 %639, i32* %25
+  br label %1369
+
+; <label>:640:                                    ; preds = %31
+  %641 = call i32 @getchar()
+  %642 = trunc i32 %641 to i8
+  store i8 %642, i8* %17, align 1
+  store i32 475771289, i32* %25
+  br label %1369
+
+; <label>:643:                                    ; preds = %31
+  %644 = load i8, i8* %17, align 1
+  %645 = sext i8 %644 to i32
+  %646 = icmp eq i32 %645, 111
+  %647 = select i1 %646, i32 1202945245, i32 313246410
+  store i32 %647, i32* %25
+  br label %1369
+
+; <label>:648:                                    ; preds = %31
+  %649 = load i32, i32* @x.40
+  %650 = load i32, i32* @y.41
+  %651 = add i32 %649, 1707279492
+  %652 = sub i32 %651, 1
+  %653 = sub i32 %652, 1707279492
+  %654 = sub i32 %649, 1
+  %655 = mul i32 %649, %653
+  %656 = urem i32 %655, 2
+  %657 = icmp eq i32 %656, 0
+  %658 = icmp slt i32 %650, 10
+  %659 = and i1 %657, %658
+  %660 = xor i1 %657, %658
+  %661 = or i1 %659, %660
+  %662 = or i1 %657, %658
+  %663 = select i1 %661, i32 -1089810077, i32 345009900
+  store i32 %663, i32* %25
+  br label %1369
+
+; <label>:664:                                    ; preds = %31
+  %665 = load i32, i32* %22, align 4
+  %666 = load i32, i32* %23, align 4
+  %667 = load i32, i32* @n, align 4
+  %668 = sub i32 0, %667
+  %669 = sub i32 %666, %668
+  %670 = add nsw i32 %666, %667
+  call void @_Z2aeiii(i32 %665, i32 %669, i32 1)
+  %671 = load i32, i32* %23, align 4
+  %672 = load i32, i32* @n, align 4
+  %673 = sub i32 %671, 535158973
+  %674 = add i32 %673, %672
+  %675 = add i32 %674, 535158973
+  %676 = add nsw i32 %671, %672
+  %677 = load i32, i32* %22, align 4
+  call void @_Z2aeiii(i32 %675, i32 %677, i32 1)
+  %678 = load i32, i32* @x.40
+  %679 = load i32, i32* @y.41
+  %680 = sub i32 0, 1
+  %681 = add i32 %678, %680
+  %682 = sub i32 %678, 1
+  %683 = mul i32 %678, %681
+  %684 = urem i32 %683, 2
+  %685 = icmp eq i32 %684, 0
+  %686 = icmp slt i32 %679, 10
+  %687 = xor i1 %685, true
+  %688 = xor i1 %686, true
+  %689 = xor i1 false, true
+  %690 = and i1 %687, false
+  %691 = and i1 %685, %689
+  %692 = and i1 %688, false
+  %693 = and i1 %686, %689
+  %694 = or i1 %690, %691
+  %695 = or i1 %692, %693
+  %696 = xor i1 %694, %695
+  %697 = or i1 %687, %688
+  %698 = xor i1 %697, true
+  %699 = or i1 false, %689
+  %700 = and i1 %698, %699
+  %701 = or i1 %696, %700
+  %702 = or i1 %685, %686
+  %703 = select i1 %701, i32 1010862798, i32 345009900
+  store i32 %703, i32* %25
+  br label %1369
+
+; <label>:704:                                    ; preds = %31
+  store i32 -545556148, i32* %25
+  br label %1369
+
+; <label>:705:                                    ; preds = %31
+  %706 = load i8, i8* %17, align 1
+  %707 = sext i8 %706 to i32
+  %708 = icmp eq i32 %707, 83
+  %709 = select i1 %708, i32 399182673, i32 257281145
+  store i32 %709, i32* %25
+  br label %1369
+
+; <label>:710:                                    ; preds = %31
+  %711 = load i32, i32* @S, align 4
+  %712 = load i32, i32* %22, align 4
+  call void @_Z2aeiii(i32 %711, i32 %712, i32 2000000000)
+  %713 = load i32, i32* @S, align 4
+  %714 = load i32, i32* %23, align 4
+  %715 = load i32, i32* @n, align 4
+  %716 = sub i32 0, %714
+  %717 = sub i32 0, %715
+  %718 = add i32 %716, %717
+  %719 = sub i32 0, %718
+  %720 = add nsw i32 %714, %715
+  call void @_Z2aeiii(i32 %713, i32 %719, i32 2000000000)
+  %721 = load i32, i32* %22, align 4
+  store i32 %721, i32* %18, align 4
+  %722 = load i32, i32* %23, align 4
+  store i32 %722, i32* %19, align 4
+  store i32 -1064923313, i32* %25
+  br label %1369
+
+; <label>:723:                                    ; preds = %31
+  %724 = load i32, i32* @x.40
+  %725 = load i32, i32* @y.41
+  %726 = sub i32 0, 1
+  %727 = add i32 %724, %726
+  %728 = sub i32 %724, 1
+  %729 = mul i32 %724, %727
+  %730 = urem i32 %729, 2
+  %731 = icmp eq i32 %730, 0
+  %732 = icmp slt i32 %725, 10
+  %733 = xor i1 %731, true
+  %734 = xor i1 %732, true
+  %735 = xor i1 false, true
+  %736 = and i1 %733, false
+  %737 = and i1 %731, %735
+  %738 = and i1 %734, false
+  %739 = and i1 %732, %735
+  %740 = or i1 %736, %737
+  %741 = or i1 %738, %739
+  %742 = xor i1 %740, %741
+  %743 = or i1 %733, %734
+  %744 = xor i1 %743, true
+  %745 = or i1 false, %735
+  %746 = and i1 %744, %745
+  %747 = or i1 %742, %746
+  %748 = or i1 %731, %732
+  %749 = select i1 %747, i32 2075943538, i32 1598517127
+  store i32 %749, i32* %25
+  br label %1369
+
+; <label>:750:                                    ; preds = %31
+  %751 = load i8, i8* %17, align 1
+  %752 = sext i8 %751 to i32
+  %753 = icmp eq i32 %752, 84
+  store i1 %753, i1* %4
+  %754 = load i32, i32* @x.40
+  %755 = load i32, i32* @y.41
+  %756 = sub i32 0, 1
+  %757 = add i32 %754, %756
+  %758 = sub i32 %754, 1
+  %759 = mul i32 %754, %757
+  %760 = urem i32 %759, 2
+  %761 = icmp eq i32 %760, 0
+  %762 = icmp slt i32 %755, 10
+  %763 = and i1 %761, %762
+  %764 = xor i1 %761, %762
+  %765 = or i1 %763, %764
+  %766 = or i1 %761, %762
+  %767 = select i1 %765, i32 1270047138, i32 1598517127
+  store i32 %767, i32* %25
+  br label %1369
+
+; <label>:768:                                    ; preds = %31
+  %769 = load volatile i1, i1* %4
+  %770 = select i1 %769, i32 -924401592, i32 -897782713
+  store i32 %770, i32* %25
+  br label %1369
+
+; <label>:771:                                    ; preds = %31
+  %772 = load i32, i32* @x.40
+  %773 = load i32, i32* @y.41
+  %774 = sub i32 %772, -49985835
+  %775 = sub i32 %774, 1
+  %776 = add i32 %775, -49985835
+  %777 = sub i32 %772, 1
+  %778 = mul i32 %772, %776
+  %779 = urem i32 %778, 2
+  %780 = icmp eq i32 %779, 0
+  %781 = icmp slt i32 %773, 10
+  %782 = xor i1 %780, true
+  %783 = xor i1 %781, true
+  %784 = xor i1 false, true
+  %785 = and i1 %782, false
+  %786 = and i1 %780, %784
+  %787 = and i1 %783, false
+  %788 = and i1 %781, %784
+  %789 = or i1 %785, %786
+  %790 = or i1 %787, %788
+  %791 = xor i1 %789, %790
+  %792 = or i1 %782, %783
+  %793 = xor i1 %792, true
+  %794 = or i1 false, %784
+  %795 = and i1 %793, %794
+  %796 = or i1 %791, %795
+  %797 = or i1 %780, %781
+  %798 = select i1 %796, i32 -664921331, i32 -87519209
+  store i32 %798, i32* %25
+  br label %1369
+
+; <label>:799:                                    ; preds = %31
+  %800 = load i32, i32* %22, align 4
+  %801 = load i32, i32* @T, align 4
+  call void @_Z2aeiii(i32 %800, i32 %801, i32 2000000000)
+  %802 = load i32, i32* %23, align 4
+  %803 = load i32, i32* @n, align 4
+  %804 = sub i32 0, %803
+  %805 = sub i32 %802, %804
+  %806 = add nsw i32 %802, %803
+  %807 = load i32, i32* @T, align 4
+  call void @_Z2aeiii(i32 %805, i32 %807, i32 2000000000)
+  %808 = load i32, i32* %22, align 4
+  store i32 %808, i32* %20, align 4
+  %809 = load i32, i32* %23, align 4
+  store i32 %809, i32* %21, align 4
+  %810 = load i32, i32* @x.40
+  %811 = load i32, i32* @y.41
+  %812 = sub i32 0, 1
+  %813 = add i32 %810, %812
+  %814 = sub i32 %810, 1
+  %815 = mul i32 %810, %813
+  %816 = urem i32 %815, 2
+  %817 = icmp eq i32 %816, 0
+  %818 = icmp slt i32 %811, 10
+  %819 = xor i1 %817, true
+  %820 = xor i1 %818, true
+  %821 = xor i1 true, true
+  %822 = and i1 %819, true
+  %823 = and i1 %817, %821
+  %824 = and i1 %820, true
+  %825 = and i1 %818, %821
+  %826 = or i1 %822, %823
+  %827 = or i1 %824, %825
+  %828 = xor i1 %826, %827
+  %829 = or i1 %819, %820
+  %830 = xor i1 %829, true
+  %831 = or i1 true, %821
+  %832 = and i1 %830, %831
+  %833 = or i1 %828, %832
+  %834 = or i1 %817, %818
+  %835 = select i1 %833, i32 1993721914, i32 -87519209
+  store i32 %835, i32* %25
+  br label %1369
+
+; <label>:836:                                    ; preds = %31
+  store i32 -897782713, i32* %25
+  br label %1369
+
+; <label>:837:                                    ; preds = %31
+  store i32 -1064923313, i32* %25
+  br label %1369
+
+; <label>:838:                                    ; preds = %31
+  %839 = load i32, i32* @x.40
+  %840 = load i32, i32* @y.41
+  %841 = sub i32 %839, 532406809
+  %842 = sub i32 %841, 1
+  %843 = add i32 %842, 532406809
+  %844 = sub i32 %839, 1
+  %845 = mul i32 %839, %843
+  %846 = urem i32 %845, 2
+  %847 = icmp eq i32 %846, 0
+  %848 = icmp slt i32 %840, 10
+  %849 = and i1 %847, %848
+  %850 = xor i1 %847, %848
+  %851 = or i1 %849, %850
+  %852 = or i1 %847, %848
+  %853 = select i1 %851, i32 791243600, i32 1559151506
+  store i32 %853, i32* %25
+  br label %1369
+
+; <label>:854:                                    ; preds = %31
+  %855 = load i32, i32* @x.40
+  %856 = load i32, i32* @y.41
+  %857 = sub i32 %855, -1697398216
+  %858 = sub i32 %857, 1
+  %859 = add i32 %858, -1697398216
+  %860 = sub i32 %855, 1
+  %861 = mul i32 %855, %859
+  %862 = urem i32 %861, 2
+  %863 = icmp eq i32 %862, 0
+  %864 = icmp slt i32 %856, 10
+  %865 = and i1 %863, %864
+  %866 = xor i1 %863, %864
+  %867 = or i1 %865, %866
+  %868 = or i1 %863, %864
+  %869 = select i1 %867, i32 -24890176, i32 1559151506
+  store i32 %869, i32* %25
+  br label %1369
+
+; <label>:870:                                    ; preds = %31
+  store i32 -545556148, i32* %25
+  br label %1369
+
+; <label>:871:                                    ; preds = %31
+  store i32 643121484, i32* %25
+  br label %1369
+
+; <label>:872:                                    ; preds = %31
+  %873 = load i32, i32* @x.40
+  %874 = load i32, i32* @y.41
+  %875 = sub i32 %873, 1089915735
+  %876 = sub i32 %875, 1
+  %877 = add i32 %876, 1089915735
+  %878 = sub i32 %873, 1
+  %879 = mul i32 %873, %877
+  %880 = urem i32 %879, 2
+  %881 = icmp eq i32 %880, 0
+  %882 = icmp slt i32 %874, 10
+  %883 = xor i1 %881, true
+  %884 = xor i1 %882, true
+  %885 = xor i1 false, true
+  %886 = and i1 %883, false
+  %887 = and i1 %881, %885
+  %888 = and i1 %884, false
+  %889 = and i1 %882, %885
+  %890 = or i1 %886, %887
+  %891 = or i1 %888, %889
+  %892 = xor i1 %890, %891
+  %893 = or i1 %883, %884
+  %894 = xor i1 %893, true
+  %895 = or i1 false, %885
+  %896 = and i1 %894, %895
+  %897 = or i1 %892, %896
+  %898 = or i1 %881, %882
+  %899 = select i1 %897, i32 -451218373, i32 850101692
+  store i32 %899, i32* %25
+  br label %1369
+
+; <label>:900:                                    ; preds = %31
+  %901 = load i32, i32* %23, align 4
+  %902 = sub i32 %901, -26557292
+  %903 = add i32 %902, 1
+  %904 = add i32 %903, -26557292
+  %905 = add nsw i32 %901, 1
+  store i32 %904, i32* %23, align 4
+  %906 = load i32, i32* @x.40
+  %907 = load i32, i32* @y.41
+  %908 = sub i32 0, 1
+  %909 = add i32 %906, %908
+  %910 = sub i32 %906, 1
+  %911 = mul i32 %906, %909
+  %912 = urem i32 %911, 2
+  %913 = icmp eq i32 %912, 0
+  %914 = icmp slt i32 %907, 10
+  %915 = xor i1 %913, true
+  %916 = xor i1 %914, true
+  %917 = xor i1 false, true
+  %918 = and i1 %915, false
+  %919 = and i1 %913, %917
+  %920 = and i1 %916, false
+  %921 = and i1 %914, %917
+  %922 = or i1 %918, %919
+  %923 = or i1 %920, %921
+  %924 = xor i1 %922, %923
+  %925 = or i1 %915, %916
+  %926 = xor i1 %925, true
+  %927 = or i1 false, %917
+  %928 = and i1 %926, %927
+  %929 = or i1 %924, %928
+  %930 = or i1 %913, %914
+  %931 = select i1 %929, i32 -1690433188, i32 850101692
+  store i32 %931, i32* %25
+  br label %1369
+
+; <label>:932:                                    ; preds = %31
+  store i32 -1341043830, i32* %25
+  br label %1369
+
+; <label>:933:                                    ; preds = %31
+  store i32 -414807646, i32* %25
+  br label %1369
+
+; <label>:934:                                    ; preds = %31
+  %935 = load i32, i32* @x.40
+  %936 = load i32, i32* @y.41
+  %937 = sub i32 %935, 1903259024
+  %938 = sub i32 %937, 1
+  %939 = add i32 %938, 1903259024
+  %940 = sub i32 %935, 1
+  %941 = mul i32 %935, %939
+  %942 = urem i32 %941, 2
+  %943 = icmp eq i32 %942, 0
+  %944 = icmp slt i32 %936, 10
+  %945 = and i1 %943, %944
+  %946 = xor i1 %943, %944
+  %947 = or i1 %945, %946
+  %948 = or i1 %943, %944
+  %949 = select i1 %947, i32 1238918630, i32 -1509876724
+  store i32 %949, i32* %25
+  br label %1369
+
+; <label>:950:                                    ; preds = %31
+  %951 = load i32, i32* %22, align 4
+  %952 = sub i32 0, %951
+  %953 = sub i32 0, 1
+  %954 = add i32 %952, %953
+  %955 = sub i32 0, %954
+  %956 = add nsw i32 %951, 1
+  store i32 %955, i32* %22, align 4
+  %957 = load i32, i32* @x.40
+  %958 = load i32, i32* @y.41
+  %959 = sub i32 0, 1
+  %960 = add i32 %957, %959
+  %961 = sub i32 %957, 1
+  %962 = mul i32 %957, %960
+  %963 = urem i32 %962, 2
+  %964 = icmp eq i32 %963, 0
+  %965 = icmp slt i32 %958, 10
+  %966 = xor i1 %964, true
+  %967 = xor i1 %965, true
+  %968 = xor i1 true, true
+  %969 = and i1 %966, true
+  %970 = and i1 %964, %968
+  %971 = and i1 %967, true
+  %972 = and i1 %965, %968
+  %973 = or i1 %969, %970
+  %974 = or i1 %971, %972
+  %975 = xor i1 %973, %974
+  %976 = or i1 %966, %967
+  %977 = xor i1 %976, true
+  %978 = or i1 true, %968
+  %979 = and i1 %977, %978
+  %980 = or i1 %975, %979
+  %981 = or i1 %964, %965
+  %982 = select i1 %980, i32 -69165888, i32 -1509876724
+  store i32 %982, i32* %25
+  br label %1369
+
+; <label>:983:                                    ; preds = %31
+  store i32 654528819, i32* %25
+  br label %1369
+
+; <label>:984:                                    ; preds = %31
+  %985 = load i32, i32* @x.40
+  %986 = load i32, i32* @y.41
+  %987 = sub i32 %985, 1267728883
+  %988 = sub i32 %987, 1
+  %989 = add i32 %988, 1267728883
+  %990 = sub i32 %985, 1
+  %991 = mul i32 %985, %989
+  %992 = urem i32 %991, 2
+  %993 = icmp eq i32 %992, 0
+  %994 = icmp slt i32 %986, 10
+  %995 = and i1 %993, %994
+  %996 = xor i1 %993, %994
+  %997 = or i1 %995, %996
+  %998 = or i1 %993, %994
+  %999 = select i1 %997, i32 1825315771, i32 429455600
+  store i32 %999, i32* %25
+  br label %1369
+
+; <label>:1000:                                   ; preds = %31
+  %1001 = load i32, i32* %18, align 4
+  %1002 = load i32, i32* %20, align 4
+  %1003 = icmp eq i32 %1001, %1002
+  store i1 %1003, i1* %3
+  %1004 = load i32, i32* @x.40
+  %1005 = load i32, i32* @y.41
+  %1006 = add i32 %1004, -1069404960
+  %1007 = sub i32 %1006, 1
+  %1008 = sub i32 %1007, -1069404960
+  %1009 = sub i32 %1004, 1
+  %1010 = mul i32 %1004, %1008
+  %1011 = urem i32 %1010, 2
+  %1012 = icmp eq i32 %1011, 0
+  %1013 = icmp slt i32 %1005, 10
+  %1014 = xor i1 %1012, true
+  %1015 = xor i1 %1013, true
+  %1016 = xor i1 true, true
+  %1017 = and i1 %1014, true
+  %1018 = and i1 %1012, %1016
+  %1019 = and i1 %1015, true
+  %1020 = and i1 %1013, %1016
+  %1021 = or i1 %1017, %1018
+  %1022 = or i1 %1019, %1020
+  %1023 = xor i1 %1021, %1022
+  %1024 = or i1 %1014, %1015
+  %1025 = xor i1 %1024, true
+  %1026 = or i1 true, %1016
+  %1027 = and i1 %1025, %1026
+  %1028 = or i1 %1023, %1027
+  %1029 = or i1 %1012, %1013
+  %1030 = select i1 %1028, i32 -1016957439, i32 429455600
+  store i32 %1030, i32* %25
+  br label %1369
+
+; <label>:1031:                                   ; preds = %31
+  %1032 = load volatile i1, i1* %3
+  %1033 = select i1 %1032, i32 884081959, i32 1411896636
+  store i32 %1033, i32* %25
+  br label %1369
+
+; <label>:1034:                                   ; preds = %31
+  %1035 = load i32, i32* %19, align 4
+  %1036 = load i32, i32* %21, align 4
+  %1037 = icmp eq i32 %1035, %1036
+  %1038 = select i1 %1037, i32 884081959, i32 -1524198953
+  store i32 %1038, i32* %25
+  br label %1369
+
+; <label>:1039:                                   ; preds = %31
+  %1040 = call i32 @puts(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0))
+  store i32 0, i32* %12, align 4
+  store i32 -492497342, i32* %25
+  br label %1369
+
+; <label>:1041:                                   ; preds = %31
+  %1042 = load i32, i32* @x.40
+  %1043 = load i32, i32* @y.41
+  %1044 = sub i32 %1042, -2132766007
+  %1045 = sub i32 %1044, 1
+  %1046 = add i32 %1045, -2132766007
+  %1047 = sub i32 %1042, 1
+  %1048 = mul i32 %1042, %1046
+  %1049 = urem i32 %1048, 2
+  %1050 = icmp eq i32 %1049, 0
+  %1051 = icmp slt i32 %1043, 10
+  %1052 = and i1 %1050, %1051
+  %1053 = xor i1 %1050, %1051
+  %1054 = or i1 %1052, %1053
+  %1055 = or i1 %1050, %1051
+  %1056 = select i1 %1054, i32 -519376583, i32 -1449215922
+  store i32 %1056, i32* %25
+  br label %1369
+
+; <label>:1057:                                   ; preds = %31
+  %1058 = call i32 @_Z5dinicv()
+  store i32 %1058, i32* %24, align 4
+  %1059 = load i32, i32* %24, align 4
+  %1060 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0), i32 %1059)
+  store i32 0, i32* %12, align 4
+  %1061 = load i32, i32* @x.40
+  %1062 = load i32, i32* @y.41
+  %1063 = sub i32 %1061, -1247003004
+  %1064 = sub i32 %1063, 1
+  %1065 = add i32 %1064, -1247003004
+  %1066 = sub i32 %1061, 1
+  %1067 = mul i32 %1061, %1065
+  %1068 = urem i32 %1067, 2
+  %1069 = icmp eq i32 %1068, 0
+  %1070 = icmp slt i32 %1062, 10
+  %1071 = and i1 %1069, %1070
+  %1072 = xor i1 %1069, %1070
+  %1073 = or i1 %1071, %1072
+  %1074 = or i1 %1069, %1070
+  %1075 = select i1 %1073, i32 -460149041, i32 -1449215922
+  store i32 %1075, i32* %25
+  br label %1369
+
+; <label>:1076:                                   ; preds = %31
+  store i32 -492497342, i32* %25
+  br label %1369
+
+; <label>:1077:                                   ; preds = %31
+  %1078 = load i32, i32* @x.40
+  %1079 = load i32, i32* @y.41
+  %1080 = add i32 %1078, -95230242
+  %1081 = sub i32 %1080, 1
+  %1082 = sub i32 %1081, -95230242
+  %1083 = sub i32 %1078, 1
+  %1084 = mul i32 %1078, %1082
+  %1085 = urem i32 %1084, 2
+  %1086 = icmp eq i32 %1085, 0
+  %1087 = icmp slt i32 %1079, 10
+  %1088 = xor i1 %1086, true
+  %1089 = xor i1 %1087, true
+  %1090 = xor i1 false, true
+  %1091 = and i1 %1088, false
+  %1092 = and i1 %1086, %1090
+  %1093 = and i1 %1089, false
+  %1094 = and i1 %1087, %1090
+  %1095 = or i1 %1091, %1092
+  %1096 = or i1 %1093, %1094
+  %1097 = xor i1 %1095, %1096
+  %1098 = or i1 %1088, %1089
+  %1099 = xor i1 %1098, true
+  %1100 = or i1 false, %1090
+  %1101 = and i1 %1099, %1100
+  %1102 = or i1 %1097, %1101
+  %1103 = or i1 %1086, %1087
+  %1104 = select i1 %1102, i32 -1612403759, i32 696437456
+  store i32 %1104, i32* %25
+  br label %1369
+
+; <label>:1105:                                   ; preds = %31
+  %1106 = load i32, i32* %12, align 4
+  store i32 %1106, i32* %2
+  %1107 = load i32, i32* @x.40
+  %1108 = load i32, i32* @y.41
+  %1109 = sub i32 %1107, 133095093
+  %1110 = sub i32 %1109, 1
+  %1111 = add i32 %1110, 133095093
+  %1112 = sub i32 %1107, 1
+  %1113 = mul i32 %1107, %1111
+  %1114 = urem i32 %1113, 2
+  %1115 = icmp eq i32 %1114, 0
+  %1116 = icmp slt i32 %1108, 10
+  %1117 = and i1 %1115, %1116
+  %1118 = xor i1 %1115, %1116
+  %1119 = or i1 %1117, %1118
+  %1120 = or i1 %1115, %1116
+  %1121 = select i1 %1119, i32 13197756, i32 696437456
+  store i32 %1121, i32* %25
+  br label %1369
+
+; <label>:1122:                                   ; preds = %31
+  %1123 = load volatile i32, i32* %2
+  ret i32 %1123
+
+; <label>:1124:                                   ; preds = %31
+  %1125 = load i8, i8* %13, align 1
+  %1126 = sext i8 %1125 to i32
+  %1127 = icmp slt i32 %1126, 48
+  store i32 353842038, i32* %25
+  br label %1369
+
+; <label>:1128:                                   ; preds = %31
+  store i32 -264218200, i32* %25
+  br label %1369
+
+; <label>:1129:                                   ; preds = %31
+  store i32 -710332950, i32* %25
+  br label %1369
+
+; <label>:1130:                                   ; preds = %31
+  %1131 = load i8, i8* %13, align 1
+  %1132 = sext i8 %1131 to i32
+  %1133 = icmp sle i32 %1132, 57
+  store i32 2058675103, i32* %25
+  br label %1369
+
+; <label>:1134:                                   ; preds = %31
+  %1135 = load i32, i32* %14, align 4
+  %1136 = icmp ne i32 %1135, 0
+  store i32 -1155364146, i32* %25
+  br label %1369
+
+; <label>:1137:                                   ; preds = %31
+  store i32 -1519358182, i32* %25
+  br label %1369
+
+; <label>:1138:                                   ; preds = %31
+  %1139 = load i8, i8* %15, align 1
+  %1140 = sext i8 %1139 to i32
+  %1141 = icmp slt i32 %1140, 48
+  store i32 430441740, i32* %25
+  br label %1369
+
+; <label>:1142:                                   ; preds = %31
+  %1143 = load i8, i8* %15, align 1
+  %1144 = sext i8 %1143 to i32
+  %1145 = icmp sle i32 48, %1144
+  store i32 -136168444, i32* %25
+  br label %1369
+
+; <label>:1146:                                   ; preds = %31
+  %1147 = load i32, i32* @m, align 4
+  %1148 = add i32 %1147, 1800742963
+  %1149 = sub i32 %1148, 1
+  %1150 = sub i32 %1149, 1800742963
+  %1151 = sub i32 %1147, 1
+  %1152 = mul i32 %1150, 1
+  %1153 = shl i32 %1147, 1
+  %1154 = shl i32 %1147, 1
+  %1155 = sub i32 0, 1
+  %1156 = add i32 %1147, %1155
+  %1157 = sub i32 %1147, 1
+  %1158 = mul i32 %1156, 1
+  %1159 = sub i32 0, %1147
+  %1160 = add i32 0, %1159
+  %1161 = sub i32 0, %1147
+  %1162 = sub i32 0, %1160
+  %1163 = sub i32 0, 1
+  %1164 = add i32 %1162, %1163
+  %1165 = sub i32 0, %1164
+  %1166 = add i32 %1160, 1
+  %1167 = add i32 %1147, 740296948
+  %1168 = sub i32 %1167, 1
+  %1169 = sub i32 %1168, 740296948
+  %1170 = sub i32 %1147, 1
+  %1171 = mul i32 %1169, 1
+  %1172 = shl i32 %1147, 1
+  %1173 = load i32, i32* @m, align 4
+  %1174 = add i32 %1173, -1928753589
+  %1175 = sub i32 %1174, 3
+  %1176 = sub i32 %1175, -1928753589
+  %1177 = sub i32 %1173, 3
+  %1178 = mul i32 %1176, 3
+  %1179 = sub i32 0, %1173
+  %1180 = add i32 0, %1179
+  %1181 = sub i32 0, %1173
+  %1182 = sub i32 0, 3
+  %1183 = sub i32 %1180, %1182
+  %1184 = add i32 %1180, 3
+  %1185 = shl i32 %1173, 3
+  %1186 = sub i32 0, %1172
+  %1187 = add i32 0, %1186
+  %1188 = sub i32 0, %1172
+  %1189 = sub i32 0, %1187
+  %1190 = sub i32 0, %1185
+  %1191 = add i32 %1189, %1190
+  %1192 = sub i32 0, %1191
+  %1193 = add i32 %1187, %1185
+  %1194 = sub i32 0, -1954371443
+  %1195 = sub i32 %1194, %1172
+  %1196 = add i32 %1195, -1954371443
+  %1197 = sub i32 0, %1172
+  %1198 = sub i32 %1196, -2125881674
+  %1199 = add i32 %1198, %1185
+  %1200 = add i32 %1199, -2125881674
+  %1201 = add i32 %1196, %1185
+  %1202 = sub i32 %1172, 1021363666
+  %1203 = add i32 %1202, %1185
+  %1204 = add i32 %1203, 1021363666
+  %1205 = add nsw i32 %1172, %1185
+  %1206 = load i8, i8* %15, align 1
+  %1207 = sext i8 %1206 to i32
+  %1208 = shl i32 %1204, %1207
+  %1209 = shl i32 %1204, %1207
+  %1210 = add i32 0, -1663881919
+  %1211 = sub i32 %1210, %1204
+  %1212 = sub i32 %1211, -1663881919
+  %1213 = sub i32 0, %1204
+  %1214 = sub i32 %1212, -1172687805
+  %1215 = add i32 %1214, %1207
+  %1216 = add i32 %1215, -1172687805
+  %1217 = add i32 %1212, %1207
+  %1218 = add i32 %1204, -289255854
+  %1219 = sub i32 %1218, %1207
+  %1220 = sub i32 %1219, -289255854
+  %1221 = sub i32 %1204, %1207
+  %1222 = mul i32 %1220, %1207
+  %1223 = add i32 %1204, -1800597454
+  %1224 = sub i32 %1223, %1207
+  %1225 = sub i32 %1224, -1800597454
+  %1226 = sub i32 %1204, %1207
+  %1227 = mul i32 %1225, %1207
+  %1228 = add i32 0, -588664284
+  %1229 = sub i32 %1228, %1204
+  %1230 = sub i32 %1229, -588664284
+  %1231 = sub i32 0, %1204
+  %1232 = sub i32 0, %1207
+  %1233 = sub i32 %1230, %1232
+  %1234 = add i32 %1230, %1207
+  %1235 = shl i32 %1204, %1207
+  %1236 = shl i32 %1204, %1207
+  %1237 = sub i32 0, %1207
+  %1238 = sub i32 %1204, %1237
+  %1239 = add nsw i32 %1204, %1207
+  %1240 = shl i32 %1238, 48
+  %1241 = shl i32 %1238, 48
+  %1242 = sub i32 0, 48
+  %1243 = add i32 %1238, %1242
+  %1244 = sub i32 %1238, 48
+  %1245 = mul i32 %1243, 48
+  %1246 = sub i32 %1238, 2075339886
+  %1247 = sub i32 %1246, 48
+  %1248 = add i32 %1247, 2075339886
+  %1249 = sub nsw i32 %1238, 48
+  store i32 %1248, i32* @m, align 4
+  %1250 = call i32 @getchar()
+  %1251 = trunc i32 %1250 to i8
+  store i8 %1251, i8* %15, align 1
+  store i32 840329033, i32* %25
+  br label %1369
+
+; <label>:1252:                                   ; preds = %31
+  %1253 = load i8, i8* %17, align 1
+  %1254 = sext i8 %1253 to i32
+  %1255 = icmp ne i32 %1254, 46
+  store i32 -1776837060, i32* %25
+  br label %1369
+
+; <label>:1256:                                   ; preds = %31
+  %1257 = load i8, i8* %17, align 1
+  %1258 = sext i8 %1257 to i32
+  %1259 = icmp ne i32 %1258, 111
+  store i32 -1860271398, i32* %25
+  br label %1369
+
+; <label>:1260:                                   ; preds = %31
+  %1261 = load i32, i32* %22, align 4
+  %1262 = load i32, i32* %23, align 4
+  %1263 = load i32, i32* @n, align 4
+  %1264 = sub i32 0, -1558740650
+  %1265 = sub i32 %1264, %1262
+  %1266 = add i32 %1265, -1558740650
+  %1267 = sub i32 0, %1262
+  %1268 = add i32 %1266, 624602218
+  %1269 = add i32 %1268, %1263
+  %1270 = sub i32 %1269, 624602218
+  %1271 = add i32 %1266, %1263
+  %1272 = sub i32 0, %1263
+  %1273 = sub i32 %1262, %1272
+  %1274 = add nsw i32 %1262, %1263
+  call void @_Z2aeiii(i32 %1261, i32 %1273, i32 1)
+  %1275 = load i32, i32* %23, align 4
+  %1276 = load i32, i32* @n, align 4
+  %1277 = sub i32 %1275, -837299378
+  %1278 = sub i32 %1277, %1276
+  %1279 = add i32 %1278, -837299378
+  %1280 = sub i32 %1275, %1276
+  %1281 = mul i32 %1279, %1276
+  %1282 = shl i32 %1275, %1276
+  %1283 = shl i32 %1275, %1276
+  %1284 = sub i32 0, %1275
+  %1285 = add i32 0, %1284
+  %1286 = sub i32 0, %1275
+  %1287 = sub i32 0, %1276
+  %1288 = sub i32 %1285, %1287
+  %1289 = add i32 %1285, %1276
+  %1290 = sub i32 %1275, 1350616558
+  %1291 = sub i32 %1290, %1276
+  %1292 = add i32 %1291, 1350616558
+  %1293 = sub i32 %1275, %1276
+  %1294 = mul i32 %1292, %1276
+  %1295 = sub i32 %1275, -2018419346
+  %1296 = add i32 %1295, %1276
+  %1297 = add i32 %1296, -2018419346
+  %1298 = add nsw i32 %1275, %1276
+  %1299 = load i32, i32* %22, align 4
+  call void @_Z2aeiii(i32 %1297, i32 %1299, i32 1)
+  store i32 -1089810077, i32* %25
+  br label %1369
+
+; <label>:1300:                                   ; preds = %31
+  %1301 = load i8, i8* %17, align 1
+  %1302 = sext i8 %1301 to i32
+  %1303 = icmp eq i32 %1302, 84
+  store i32 2075943538, i32* %25
+  br label %1369
+
+; <label>:1304:                                   ; preds = %31
+  %1305 = load i32, i32* %22, align 4
+  %1306 = load i32, i32* @T, align 4
+  call void @_Z2aeiii(i32 %1305, i32 %1306, i32 2000000000)
+  %1307 = load i32, i32* %23, align 4
+  %1308 = load i32, i32* @n, align 4
+  %1309 = sub i32 0, %1308
+  %1310 = add i32 %1307, %1309
+  %1311 = sub i32 %1307, %1308
+  %1312 = mul i32 %1310, %1308
+  %1313 = sub i32 %1307, -524692711
+  %1314 = add i32 %1313, %1308
+  %1315 = add i32 %1314, -524692711
+  %1316 = add nsw i32 %1307, %1308
+  %1317 = load i32, i32* @T, align 4
+  call void @_Z2aeiii(i32 %1315, i32 %1317, i32 2000000000)
+  %1318 = load i32, i32* %22, align 4
+  store i32 %1318, i32* %20, align 4
+  %1319 = load i32, i32* %23, align 4
+  store i32 %1319, i32* %21, align 4
+  store i32 -664921331, i32* %25
+  br label %1369
+
+; <label>:1320:                                   ; preds = %31
+  store i32 791243600, i32* %25
+  br label %1369
+
+; <label>:1321:                                   ; preds = %31
+  %1322 = load i32, i32* %23, align 4
+  %1323 = add i32 %1322, 1027039756
+  %1324 = sub i32 %1323, 1
+  %1325 = sub i32 %1324, 1027039756
+  %1326 = sub i32 %1322, 1
+  %1327 = mul i32 %1325, 1
+  %1328 = shl i32 %1322, 1
+  %1329 = shl i32 %1322, 1
+  %1330 = sub i32 0, 232959992
+  %1331 = sub i32 %1330, %1322
+  %1332 = add i32 %1331, 232959992
+  %1333 = sub i32 0, %1322
+  %1334 = sub i32 0, 1
+  %1335 = sub i32 %1332, %1334
+  %1336 = add i32 %1332, 1
+  %1337 = sub i32 0, 1
+  %1338 = add i32 %1322, %1337
+  %1339 = sub i32 %1322, 1
+  %1340 = mul i32 %1338, 1
+  %1341 = add i32 %1322, 1947500695
+  %1342 = add i32 %1341, 1
+  %1343 = sub i32 %1342, 1947500695
+  %1344 = add nsw i32 %1322, 1
+  store i32 %1343, i32* %23, align 4
+  store i32 -451218373, i32* %25
+  br label %1369
+
+; <label>:1345:                                   ; preds = %31
+  %1346 = load i32, i32* %22, align 4
+  %1347 = sub i32 0, 1
+  %1348 = add i32 %1346, %1347
+  %1349 = sub i32 %1346, 1
+  %1350 = mul i32 %1348, 1
+  %1351 = shl i32 %1346, 1
+  %1352 = sub i32 0, 1
+  %1353 = add i32 %1346, %1352
+  %1354 = sub i32 %1346, 1
+  %1355 = mul i32 %1353, 1
+  %1356 = sub i32 0, 1
+  %1357 = sub i32 %1346, %1356
+  %1358 = add nsw i32 %1346, 1
+  store i32 %1357, i32* %22, align 4
+  store i32 1238918630, i32* %25
+  br label %1369
+
+; <label>:1359:                                   ; preds = %31
+  %1360 = load i32, i32* %18, align 4
+  %1361 = load i32, i32* %20, align 4
+  %1362 = icmp eq i32 %1360, %1361
+  store i32 1825315771, i32* %25
+  br label %1369
+
+; <label>:1363:                                   ; preds = %31
+  %1364 = call i32 @_Z5dinicv()
+  store i32 %1364, i32* %24, align 4
+  %1365 = load i32, i32* %24, align 4
+  %1366 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0), i32 %1365)
+  store i32 0, i32* %12, align 4
+  store i32 -519376583, i32* %25
+  br label %1369
+
+; <label>:1367:                                   ; preds = %31
+  %1368 = load i32, i32* %12, align 4
+  store i32 -1612403759, i32* %25
+  br label %1369
+
+; <label>:1369:                                   ; preds = %1367, %1363, %1359, %1345, %1321, %1320, %1304, %1300, %1260, %1256, %1252, %1146, %1142, %1138, %1137, %1134, %1130, %1129, %1128, %1124, %1105, %1077, %1076, %1057, %1041, %1039, %1034, %1031, %1000, %984, %983, %950, %934, %933, %932, %900, %872, %871, %870, %854, %838, %837, %836, %799, %771, %768, %750, %723, %710, %705, %704, %664, %648, %643, %640, %637, %633, %628, %625, %595, %579, %576, %546, %530, %527, %522, %521, %516, %503, %497, %493, %492, %457, %442, %439, %435, %432, %413, %397, %396, %393, %389, %386, %355, %327, %326, %310, %294, %293, %286, %285, %280, %277, %260, %244, %222, %219, %217, %199, %183, %178, %177, %161, %145, %142, %114, %85, %81, %78, %59, %43, %42, %41, %34, %33
+  br label %31
+}
+
+declare i32 @getchar() #1
+
+declare i32 @puts(i8*) #1
+
+declare i32 @printf(i8*, ...) #1
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEEC2Ev(%"class.std::_Deque_base"*) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.42
+  %3 = load i32, i32* @y.43
+  %4 = sub i32 0, 1
+  %5 = add i32 %2, %4
+  %6 = sub i32 %2, 1
+  %7 = mul i32 %2, %5
+  %8 = urem i32 %7, 2
+  %9 = icmp eq i32 %8, 0
+  %10 = icmp slt i32 %3, 10
+  %11 = and i1 %9, %10
+  %12 = xor i1 %9, %10
+  %13 = or i1 %11, %12
+  %14 = or i1 %9, %10
+  br i1 %13, label %15, label %46
+
+; <label>:15:                                     ; preds = %1, %46
+  %16 = alloca %"class.std::_Deque_base"*, align 8
+  %17 = alloca i8*
+  %18 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %16, align 8
+  %19 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %16, align 8
+  %20 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %19, i32 0, i32 0
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %20)
+  %21 = load i32, i32* @x.42
+  %22 = load i32, i32* @y.43
+  %23 = add i32 %21, -1748636991
+  %24 = sub i32 %23, 1
+  %25 = sub i32 %24, -1748636991
+  %26 = sub i32 %21, 1
+  %27 = mul i32 %21, %25
+  %28 = urem i32 %27, 2
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %22, 10
+  %31 = and i1 %29, %30
+  %32 = xor i1 %29, %30
+  %33 = or i1 %31, %32
+  %34 = or i1 %29, %30
+  br i1 %33, label %35, label %46
+
+; <label>:35:                                     ; preds = %15
+  invoke void @_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEm(%"class.std::_Deque_base"* %19, i64 0)
+          to label %36 unwind label %37
+
+; <label>:36:                                     ; preds = %35
+  ret void
+
+; <label>:37:                                     ; preds = %35
+  %38 = landingpad { i8*, i32 }
+          cleanup
+  %39 = extractvalue { i8*, i32 } %38, 0
+  store i8* %39, i8** %17, align 8
+  %40 = extractvalue { i8*, i32 } %38, 1
+  store i32 %40, i32* %18, align 4
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %20) #3
+  br label %41
+
+; <label>:41:                                     ; preds = %37
+  %42 = load i8*, i8** %17, align 8
+  %43 = load i32, i32* %18, align 4
+  %44 = insertvalue { i8*, i32 } undef, i8* %42, 0
+  %45 = insertvalue { i8*, i32 } %44, i32 %43, 1
+  resume { i8*, i32 } %45
+
+; <label>:46:                                     ; preds = %15, %1
+  %47 = alloca %"class.std::_Deque_base"*, align 8
+  %48 = alloca i8*
+  %49 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %47, align 8
+  %50 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %47, align 8
+  %51 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %50, i32 0, i32 0
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %51)
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %0, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %2, align 8
+  %3 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %2, align 8
+  %4 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3 to %"class.std::allocator"*
+  call void @_ZNSaIiEC2Ev(%"class.std::allocator"* %4) #3
+  %5 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3, i32 0, i32 0
+  store i32** null, i32*** %5, align 8
+  %6 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3, i32 0, i32 1
+  store i64 0, i64* %6, align 8
+  %7 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3, i32 0, i32 2
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %7) #3
+  %8 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3, i32 0, i32 3
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %8) #3
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEm(%"class.std::_Deque_base"*, i64) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = load i32, i32* @x.46
+  %4 = load i32, i32* @y.47
+  %5 = sub i32 %3, -484156746
+  %6 = sub i32 %5, 1
+  %7 = add i32 %6, -484156746
+  %8 = sub i32 %3, 1
+  %9 = mul i32 %3, %7
+  %10 = urem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  %12 = icmp slt i32 %4, 10
+  %13 = and i1 %11, %12
+  %14 = xor i1 %11, %12
+  %15 = or i1 %13, %14
+  %16 = or i1 %11, %12
+  br i1 %15, label %17, label %287
+
+; <label>:17:                                     ; preds = %2, %287
+  %18 = alloca %"class.std::_Deque_base"*, align 8
+  %19 = alloca i64, align 8
+  %20 = alloca i64, align 8
+  %21 = alloca i64, align 8
+  %22 = alloca i64, align 8
+  %23 = alloca i32**, align 8
+  %24 = alloca i32**, align 8
+  %25 = alloca i8*
+  %26 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %18, align 8
+  store i64 %1, i64* %19, align 8
+  %27 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %18, align 8
+  %28 = load i64, i64* %19, align 8
+  %29 = call i64 @_ZSt16__deque_buf_sizem(i64 4)
+  %30 = udiv i64 %28, %29
+  %31 = sub i64 0, 1
+  %32 = sub i64 %30, %31
+  %33 = add i64 %30, 1
+  store i64 %32, i64* %20, align 8
+  store i64 8, i64* %21, align 8
+  %34 = load i64, i64* %20, align 8
+  %35 = add i64 %34, -1941937875403247523
+  %36 = add i64 %35, 2
+  %37 = sub i64 %36, -1941937875403247523
+  %38 = add i64 %34, 2
+  store i64 %37, i64* %22, align 8
+  %39 = call dereferenceable(8) i64* @_ZSt3maxImERKT_S2_S2_(i64* dereferenceable(8) %21, i64* dereferenceable(8) %22)
+  %40 = load i64, i64* %39, align 8
+  %41 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %42 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %41, i32 0, i32 1
+  store i64 %40, i64* %42, align 8
+  %43 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %44 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %43, i32 0, i32 1
+  %45 = load i64, i64* %44, align 8
+  %46 = call i32** @_ZNSt11_Deque_baseIiSaIiEE15_M_allocate_mapEm(%"class.std::_Deque_base"* %27, i64 %45)
+  %47 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %48 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %47, i32 0, i32 0
+  store i32** %46, i32*** %48, align 8
+  %49 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %50 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %49, i32 0, i32 0
+  %51 = load i32**, i32*** %50, align 8
+  %52 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %53 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %52, i32 0, i32 1
+  %54 = load i64, i64* %53, align 8
+  %55 = load i64, i64* %20, align 8
+  %56 = add i64 %54, 2205192313054616220
+  %57 = sub i64 %56, %55
+  %58 = sub i64 %57, 2205192313054616220
+  %59 = sub i64 %54, %55
+  %60 = udiv i64 %58, 2
+  %61 = getelementptr inbounds i32*, i32** %51, i64 %60
+  store i32** %61, i32*** %23, align 8
+  %62 = load i32**, i32*** %23, align 8
+  %63 = load i64, i64* %20, align 8
+  %64 = getelementptr inbounds i32*, i32** %62, i64 %63
+  store i32** %64, i32*** %24, align 8
+  %65 = load i32**, i32*** %23, align 8
+  %66 = load i32**, i32*** %24, align 8
+  %67 = load i32, i32* @x.46
+  %68 = load i32, i32* @y.47
+  %69 = sub i32 0, 1
+  %70 = add i32 %67, %69
+  %71 = sub i32 %67, 1
+  %72 = mul i32 %67, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %68, 10
+  %76 = and i1 %74, %75
+  %77 = xor i1 %74, %75
+  %78 = or i1 %76, %77
+  %79 = or i1 %74, %75
+  br i1 %78, label %80, label %287
+
+; <label>:80:                                     ; preds = %17
+  invoke void @_ZNSt11_Deque_baseIiSaIiEE15_M_create_nodesEPPiS3_(%"class.std::_Deque_base"* %27, i32** %65, i32** %66)
+          to label %81 unwind label %82
+
+; <label>:81:                                     ; preds = %80
+  br label %158
+
+; <label>:82:                                     ; preds = %80
+  %83 = load i32, i32* @x.46
+  %84 = load i32, i32* @y.47
+  %85 = add i32 %83, 741020207
+  %86 = sub i32 %85, 1
+  %87 = sub i32 %86, 741020207
+  %88 = sub i32 %83, 1
+  %89 = mul i32 %83, %87
+  %90 = urem i32 %89, 2
+  %91 = icmp eq i32 %90, 0
+  %92 = icmp slt i32 %84, 10
+  %93 = xor i1 %91, true
+  %94 = xor i1 %92, true
+  %95 = xor i1 true, true
+  %96 = and i1 %93, true
+  %97 = and i1 %91, %95
+  %98 = and i1 %94, true
+  %99 = and i1 %92, %95
+  %100 = or i1 %96, %97
+  %101 = or i1 %98, %99
+  %102 = xor i1 %100, %101
+  %103 = or i1 %93, %94
+  %104 = xor i1 %103, true
+  %105 = or i1 true, %95
+  %106 = and i1 %104, %105
+  %107 = or i1 %102, %106
+  %108 = or i1 %91, %92
+  br i1 %107, label %109, label %411
+
+; <label>:109:                                    ; preds = %82, %411
+  %110 = landingpad { i8*, i32 }
+          catch i8* null
+  %111 = extractvalue { i8*, i32 } %110, 0
+  store i8* %111, i8** %25, align 8
+  %112 = extractvalue { i8*, i32 } %110, 1
+  store i32 %112, i32* %26, align 4
+  %113 = load i32, i32* @x.46
+  %114 = load i32, i32* @y.47
+  %115 = add i32 %113, 1211966230
+  %116 = sub i32 %115, 1
+  %117 = sub i32 %116, 1211966230
+  %118 = sub i32 %113, 1
+  %119 = mul i32 %113, %117
+  %120 = urem i32 %119, 2
+  %121 = icmp eq i32 %120, 0
+  %122 = icmp slt i32 %114, 10
+  %123 = xor i1 %121, true
+  %124 = xor i1 %122, true
+  %125 = xor i1 true, true
+  %126 = and i1 %123, true
+  %127 = and i1 %121, %125
+  %128 = and i1 %124, true
+  %129 = and i1 %122, %125
+  %130 = or i1 %126, %127
+  %131 = or i1 %128, %129
+  %132 = xor i1 %130, %131
+  %133 = or i1 %123, %124
+  %134 = xor i1 %133, true
+  %135 = or i1 true, %125
+  %136 = and i1 %134, %135
+  %137 = or i1 %132, %136
+  %138 = or i1 %121, %122
+  br i1 %137, label %139, label %411
+
+; <label>:139:                                    ; preds = %109
+  br label %140
+
+; <label>:140:                                    ; preds = %139
+  %141 = load i8*, i8** %25, align 8
+  %142 = call i8* @__cxa_begin_catch(i8* %141) #3
+  %143 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %144 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %143, i32 0, i32 0
+  %145 = load i32**, i32*** %144, align 8
+  %146 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %147 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %146, i32 0, i32 1
+  %148 = load i64, i64* %147, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE17_M_deallocate_mapEPPim(%"class.std::_Deque_base"* %27, i32** %145, i64 %148) #3
+  %149 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %150 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %149, i32 0, i32 0
+  store i32** null, i32*** %150, align 8
+  %151 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %152 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %151, i32 0, i32 1
+  store i64 0, i64* %152, align 8
+  invoke void @__cxa_rethrow() #12
+          to label %246 unwind label %153
+
+; <label>:153:                                    ; preds = %140
+  %154 = landingpad { i8*, i32 }
+          cleanup
+  %155 = extractvalue { i8*, i32 } %154, 0
+  store i8* %155, i8** %25, align 8
+  %156 = extractvalue { i8*, i32 } %154, 1
+  store i32 %156, i32* %26, align 4
+  invoke void @__cxa_end_catch()
+          to label %157 unwind label %243
+
+; <label>:157:                                    ; preds = %153
+  br label %184
+
+; <label>:158:                                    ; preds = %81
+  %159 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %160 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %159, i32 0, i32 2
+  %161 = load i32**, i32*** %23, align 8
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %160, i32** %161) #3
+  %162 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %163 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %162, i32 0, i32 3
+  %164 = load i32**, i32*** %24, align 8
+  %165 = getelementptr inbounds i32*, i32** %164, i64 -1
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %163, i32** %165) #3
+  %166 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %167 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %166, i32 0, i32 2
+  %168 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %167, i32 0, i32 1
+  %169 = load i32*, i32** %168, align 8
+  %170 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %171 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %170, i32 0, i32 2
+  %172 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %171, i32 0, i32 0
+  store i32* %169, i32** %172, align 8
+  %173 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %174 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %173, i32 0, i32 3
+  %175 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %174, i32 0, i32 1
+  %176 = load i32*, i32** %175, align 8
+  %177 = load i64, i64* %19, align 8
+  %178 = call i64 @_ZSt16__deque_buf_sizem(i64 4)
+  %179 = urem i64 %177, %178
+  %180 = getelementptr inbounds i32, i32* %176, i64 %179
+  %181 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %182 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %181, i32 0, i32 3
+  %183 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %182, i32 0, i32 0
+  store i32* %180, i32** %183, align 8
+  ret void
+
+; <label>:184:                                    ; preds = %157
+  %185 = load i32, i32* @x.46
+  %186 = load i32, i32* @y.47
+  %187 = add i32 %185, 137843313
+  %188 = sub i32 %187, 1
+  %189 = sub i32 %188, 137843313
+  %190 = sub i32 %185, 1
+  %191 = mul i32 %185, %189
+  %192 = urem i32 %191, 2
+  %193 = icmp eq i32 %192, 0
+  %194 = icmp slt i32 %186, 10
+  %195 = xor i1 %193, true
+  %196 = xor i1 %194, true
+  %197 = xor i1 true, true
+  %198 = and i1 %195, true
+  %199 = and i1 %193, %197
+  %200 = and i1 %196, true
+  %201 = and i1 %194, %197
+  %202 = or i1 %198, %199
+  %203 = or i1 %200, %201
+  %204 = xor i1 %202, %203
+  %205 = or i1 %195, %196
+  %206 = xor i1 %205, true
+  %207 = or i1 true, %197
+  %208 = and i1 %206, %207
+  %209 = or i1 %204, %208
+  %210 = or i1 %193, %194
+  br i1 %209, label %211, label %415
+
+; <label>:211:                                    ; preds = %184, %415
+  %212 = load i8*, i8** %25, align 8
+  %213 = load i32, i32* %26, align 4
+  %214 = insertvalue { i8*, i32 } undef, i8* %212, 0
+  %215 = insertvalue { i8*, i32 } %214, i32 %213, 1
+  %216 = load i32, i32* @x.46
+  %217 = load i32, i32* @y.47
+  %218 = sub i32 %216, -1048206187
+  %219 = sub i32 %218, 1
+  %220 = add i32 %219, -1048206187
+  %221 = sub i32 %216, 1
+  %222 = mul i32 %216, %220
+  %223 = urem i32 %222, 2
+  %224 = icmp eq i32 %223, 0
+  %225 = icmp slt i32 %217, 10
+  %226 = xor i1 %224, true
+  %227 = xor i1 %225, true
+  %228 = xor i1 true, true
+  %229 = and i1 %226, true
+  %230 = and i1 %224, %228
+  %231 = and i1 %227, true
+  %232 = and i1 %225, %228
+  %233 = or i1 %229, %230
+  %234 = or i1 %231, %232
+  %235 = xor i1 %233, %234
+  %236 = or i1 %226, %227
+  %237 = xor i1 %236, true
+  %238 = or i1 true, %228
+  %239 = and i1 %237, %238
+  %240 = or i1 %235, %239
+  %241 = or i1 %224, %225
+  br i1 %240, label %242, label %415
+
+; <label>:242:                                    ; preds = %211
+  resume { i8*, i32 } %215
+
+; <label>:243:                                    ; preds = %153
+  %244 = landingpad { i8*, i32 }
+          catch i8* null
+  %245 = extractvalue { i8*, i32 } %244, 0
+  call void @__clang_call_terminate(i8* %245) #11
+  unreachable
+
+; <label>:246:                                    ; preds = %140
+  %247 = load i32, i32* @x.46
+  %248 = load i32, i32* @y.47
+  %249 = sub i32 0, 1
+  %250 = add i32 %247, %249
+  %251 = sub i32 %247, 1
+  %252 = mul i32 %247, %250
+  %253 = urem i32 %252, 2
+  %254 = icmp eq i32 %253, 0
+  %255 = icmp slt i32 %248, 10
+  %256 = and i1 %254, %255
+  %257 = xor i1 %254, %255
+  %258 = or i1 %256, %257
+  %259 = or i1 %254, %255
+  br i1 %258, label %260, label %420
+
+; <label>:260:                                    ; preds = %246, %420
+  %261 = load i32, i32* @x.46
+  %262 = load i32, i32* @y.47
+  %263 = sub i32 0, 1
+  %264 = add i32 %261, %263
+  %265 = sub i32 %261, 1
+  %266 = mul i32 %261, %264
+  %267 = urem i32 %266, 2
+  %268 = icmp eq i32 %267, 0
+  %269 = icmp slt i32 %262, 10
+  %270 = xor i1 %268, true
+  %271 = xor i1 %269, true
+  %272 = xor i1 false, true
+  %273 = and i1 %270, false
+  %274 = and i1 %268, %272
+  %275 = and i1 %271, false
+  %276 = and i1 %269, %272
+  %277 = or i1 %273, %274
+  %278 = or i1 %275, %276
+  %279 = xor i1 %277, %278
+  %280 = or i1 %270, %271
+  %281 = xor i1 %280, true
+  %282 = or i1 false, %272
+  %283 = and i1 %281, %282
+  %284 = or i1 %279, %283
+  %285 = or i1 %268, %269
+  br i1 %284, label %286, label %420
+
+; <label>:286:                                    ; preds = %260
+  unreachable
+
+; <label>:287:                                    ; preds = %17, %2
+  %288 = alloca %"class.std::_Deque_base"*, align 8
+  %289 = alloca i64, align 8
+  %290 = alloca i64, align 8
+  %291 = alloca i64, align 8
+  %292 = alloca i64, align 8
+  %293 = alloca i32**, align 8
+  %294 = alloca i32**, align 8
+  %295 = alloca i8*
+  %296 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %288, align 8
+  store i64 %1, i64* %289, align 8
+  %297 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %288, align 8
+  %298 = load i64, i64* %289, align 8
+  %299 = call i64 @_ZSt16__deque_buf_sizem(i64 4)
+  %300 = sub i64 0, -3865523900319931728
+  %301 = sub i64 %300, %298
+  %302 = add i64 %301, -3865523900319931728
+  %303 = sub i64 0, %298
+  %304 = sub i64 0, %299
+  %305 = sub i64 %302, %304
+  %306 = add i64 %302, %299
+  %307 = sub i64 0, %298
+  %308 = add i64 0, %307
+  %309 = sub i64 0, %298
+  %310 = add i64 %308, 6991143525068022406
+  %311 = add i64 %310, %299
+  %312 = sub i64 %311, 6991143525068022406
+  %313 = add i64 %308, %299
+  %314 = sub i64 0, %299
+  %315 = add i64 %298, %314
+  %316 = sub i64 %298, %299
+  %317 = mul i64 %315, %299
+  %318 = shl i64 %298, %299
+  %319 = add i64 0, 7344883690633784782
+  %320 = sub i64 %319, %298
+  %321 = sub i64 %320, 7344883690633784782
+  %322 = sub i64 0, %298
+  %323 = sub i64 0, %321
+  %324 = sub i64 0, %299
+  %325 = add i64 %323, %324
+  %326 = sub i64 0, %325
+  %327 = add i64 %321, %299
+  %328 = shl i64 %298, %299
+  %329 = udiv i64 %298, %299
+  %330 = shl i64 %329, 1
+  %331 = add i64 0, -9136355679400889760
+  %332 = sub i64 %331, %329
+  %333 = sub i64 %332, -9136355679400889760
+  %334 = sub i64 0, %329
+  %335 = sub i64 %333, 8518231895027974589
+  %336 = add i64 %335, 1
+  %337 = add i64 %336, 8518231895027974589
+  %338 = add i64 %333, 1
+  %339 = shl i64 %329, 1
+  %340 = shl i64 %329, 1
+  %341 = sub i64 0, %329
+  %342 = sub i64 0, 1
+  %343 = add i64 %341, %342
+  %344 = sub i64 0, %343
+  %345 = add i64 %329, 1
+  store i64 %344, i64* %290, align 8
+  store i64 8, i64* %291, align 8
+  %346 = load i64, i64* %290, align 8
+  %347 = sub i64 0, 2
+  %348 = add i64 %346, %347
+  %349 = sub i64 %346, 2
+  %350 = mul i64 %348, 2
+  %351 = add i64 %346, -4456087382685388488
+  %352 = sub i64 %351, 2
+  %353 = sub i64 %352, -4456087382685388488
+  %354 = sub i64 %346, 2
+  %355 = mul i64 %353, 2
+  %356 = sub i64 %346, -487901956375015434
+  %357 = add i64 %356, 2
+  %358 = add i64 %357, -487901956375015434
+  %359 = add i64 %346, 2
+  store i64 %358, i64* %292, align 8
+  %360 = call dereferenceable(8) i64* @_ZSt3maxImERKT_S2_S2_(i64* dereferenceable(8) %291, i64* dereferenceable(8) %292)
+  %361 = load i64, i64* %360, align 8
+  %362 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %297, i32 0, i32 0
+  %363 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %362, i32 0, i32 1
+  store i64 %361, i64* %363, align 8
+  %364 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %297, i32 0, i32 0
+  %365 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %364, i32 0, i32 1
+  %366 = load i64, i64* %365, align 8
+  %367 = call i32** @_ZNSt11_Deque_baseIiSaIiEE15_M_allocate_mapEm(%"class.std::_Deque_base"* %297, i64 %366)
+  %368 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %297, i32 0, i32 0
+  %369 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %368, i32 0, i32 0
+  store i32** %367, i32*** %369, align 8
+  %370 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %297, i32 0, i32 0
+  %371 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %370, i32 0, i32 0
+  %372 = load i32**, i32*** %371, align 8
+  %373 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %297, i32 0, i32 0
+  %374 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %373, i32 0, i32 1
+  %375 = load i64, i64* %374, align 8
+  %376 = load i64, i64* %290, align 8
+  %377 = add i64 %375, -7856544687809720362
+  %378 = sub i64 %377, %376
+  %379 = sub i64 %378, -7856544687809720362
+  %380 = sub i64 %375, %376
+  %381 = mul i64 %379, %376
+  %382 = sub i64 0, -8319331351016819485
+  %383 = sub i64 %382, %375
+  %384 = add i64 %383, -8319331351016819485
+  %385 = sub i64 0, %375
+  %386 = sub i64 0, %376
+  %387 = sub i64 %384, %386
+  %388 = add i64 %384, %376
+  %389 = sub i64 %375, -7392620405557822394
+  %390 = sub i64 %389, %376
+  %391 = add i64 %390, -7392620405557822394
+  %392 = sub i64 %375, %376
+  %393 = shl i64 %391, 2
+  %394 = sub i64 0, 2
+  %395 = add i64 %391, %394
+  %396 = sub i64 %391, 2
+  %397 = mul i64 %395, 2
+  %398 = sub i64 0, 2
+  %399 = add i64 %391, %398
+  %400 = sub i64 %391, 2
+  %401 = mul i64 %399, 2
+  %402 = shl i64 %391, 2
+  %403 = shl i64 %391, 2
+  %404 = udiv i64 %391, 2
+  %405 = getelementptr inbounds i32*, i32** %372, i64 %404
+  store i32** %405, i32*** %293, align 8
+  %406 = load i32**, i32*** %293, align 8
+  %407 = load i64, i64* %290, align 8
+  %408 = getelementptr inbounds i32*, i32** %406, i64 %407
+  store i32** %408, i32*** %294, align 8
+  %409 = load i32**, i32*** %293, align 8
+  %410 = load i32**, i32*** %294, align 8
+  br label %17
+
+; <label>:411:                                    ; preds = %109, %82
+  %412 = landingpad { i8*, i32 }
+          catch i8* null
+  %413 = extractvalue { i8*, i32 } %412, 0
+  store i8* %413, i8** %25, align 8
+  %414 = extractvalue { i8*, i32 } %412, 1
+  store i32 %414, i32* %26, align 4
+  br label %109
+
+; <label>:415:                                    ; preds = %211, %184
+  %416 = load i8*, i8** %25, align 8
+  %417 = load i32, i32* %26, align 4
+  %418 = insertvalue { i8*, i32 } undef, i8* %416, 0
+  %419 = insertvalue { i8*, i32 } %418, i32 %417, 1
+  br label %211
+
+; <label>:420:                                    ; preds = %260, %246
+  br label %260
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %0, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %2, align 8
+  %3 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %2, align 8
+  %4 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %3 to %"class.std::allocator"*
+  call void @_ZNSaIiED2Ev(%"class.std::allocator"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiEC2Ev(%"class.std::allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %2, align 8
+  %3 = load %"class.std::allocator"*, %"class.std::allocator"** %2, align 8
+  %4 = bitcast %"class.std::allocator"* %3 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiEC2Ev(%"class.__gnu_cxx::new_allocator"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %2, align 8
+  %3 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %2, align 8
+  %4 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %3, i32 0, i32 0
+  store i32* null, i32** %4, align 8
+  %5 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %3, i32 0, i32 1
+  store i32* null, i32** %5, align 8
+  %6 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %3, i32 0, i32 2
+  store i32* null, i32** %6, align 8
+  %7 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %3, i32 0, i32 3
+  store i32** null, i32*** %7, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiEC2Ev(%"class.__gnu_cxx::new_allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZSt16__deque_buf_sizem(i64) #4 comdat {
+  %2 = alloca i64
+  %3 = alloca i64
+  %4 = alloca i64
+  %5 = alloca i64, align 8
+  store i64 %0, i64* %5, align 8
+  %6 = load i64, i64* %5, align 8
+  store i64 %6, i64* %4
+  %7 = alloca i32
+  store i32 481151643, i32* %7
+  %8 = alloca i64
+  br label %9
+
+; <label>:9:                                      ; preds = %1, %169
+  %10 = load i32, i32* %7
+  switch i32 %10, label %11 [
+    i32 481151643, label %12
+    i32 1018343348, label %16
+    i32 -1992420081, label %31
+    i32 444749454, label %61
+    i32 2037682328, label %63
+    i32 1227010695, label %79
+    i32 578279540, label %107
+    i32 -1464706522, label %108
+    i32 -219598402, label %125
+    i32 -3049314, label %140
+    i32 -367785673, label %142
+    i32 204173656, label %167
+    i32 -4617774, label %168
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %169
+
+; <label>:12:                                     ; preds = %9
+  %13 = load volatile i64, i64* %4
+  %14 = icmp ult i64 %13, 512
+  %15 = select i1 %14, i32 1018343348, i32 2037682328
+  store i32 %15, i32* %7
+  br label %169
+
+; <label>:16:                                     ; preds = %9
+  %17 = load i32, i32* @x.56
+  %18 = load i32, i32* @y.57
+  %19 = sub i32 0, 1
+  %20 = add i32 %17, %19
+  %21 = sub i32 %17, 1
+  %22 = mul i32 %17, %20
+  %23 = urem i32 %22, 2
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %18, 10
+  %26 = and i1 %24, %25
+  %27 = xor i1 %24, %25
+  %28 = or i1 %26, %27
+  %29 = or i1 %24, %25
+  %30 = select i1 %28, i32 -1992420081, i32 -367785673
+  store i32 %30, i32* %7
+  br label %169
+
+; <label>:31:                                     ; preds = %9
+  %32 = load i64, i64* %5, align 8
+  %33 = udiv i64 512, %32
+  store i64 %33, i64* %3
+  %34 = load i32, i32* @x.56
+  %35 = load i32, i32* @y.57
+  %36 = sub i32 %34, -300324095
+  %37 = sub i32 %36, 1
+  %38 = add i32 %37, -300324095
+  %39 = sub i32 %34, 1
+  %40 = mul i32 %34, %38
+  %41 = urem i32 %40, 2
+  %42 = icmp eq i32 %41, 0
+  %43 = icmp slt i32 %35, 10
+  %44 = xor i1 %42, true
+  %45 = xor i1 %43, true
+  %46 = xor i1 false, true
+  %47 = and i1 %44, false
+  %48 = and i1 %42, %46
+  %49 = and i1 %45, false
+  %50 = and i1 %43, %46
+  %51 = or i1 %47, %48
+  %52 = or i1 %49, %50
+  %53 = xor i1 %51, %52
+  %54 = or i1 %44, %45
+  %55 = xor i1 %54, true
+  %56 = or i1 false, %46
+  %57 = and i1 %55, %56
+  %58 = or i1 %53, %57
+  %59 = or i1 %42, %43
+  %60 = select i1 %58, i32 444749454, i32 -367785673
+  store i32 %60, i32* %7
+  br label %169
+
+; <label>:61:                                     ; preds = %9
+  store i32 -1464706522, i32* %7
+  %62 = load volatile i64, i64* %3
+  store i64 %62, i64* %8
+  br label %169
+
+; <label>:63:                                     ; preds = %9
+  %64 = load i32, i32* @x.56
+  %65 = load i32, i32* @y.57
+  %66 = sub i32 %64, 1542473008
+  %67 = sub i32 %66, 1
+  %68 = add i32 %67, 1542473008
+  %69 = sub i32 %64, 1
+  %70 = mul i32 %64, %68
+  %71 = urem i32 %70, 2
+  %72 = icmp eq i32 %71, 0
+  %73 = icmp slt i32 %65, 10
+  %74 = and i1 %72, %73
+  %75 = xor i1 %72, %73
+  %76 = or i1 %74, %75
+  %77 = or i1 %72, %73
+  %78 = select i1 %76, i32 1227010695, i32 204173656
+  store i32 %78, i32* %7
+  br label %169
+
+; <label>:79:                                     ; preds = %9
+  %80 = load i32, i32* @x.56
+  %81 = load i32, i32* @y.57
+  %82 = sub i32 %80, 500953009
+  %83 = sub i32 %82, 1
+  %84 = add i32 %83, 500953009
+  %85 = sub i32 %80, 1
+  %86 = mul i32 %80, %84
+  %87 = urem i32 %86, 2
+  %88 = icmp eq i32 %87, 0
+  %89 = icmp slt i32 %81, 10
+  %90 = xor i1 %88, true
+  %91 = xor i1 %89, true
+  %92 = xor i1 false, true
+  %93 = and i1 %90, false
+  %94 = and i1 %88, %92
+  %95 = and i1 %91, false
+  %96 = and i1 %89, %92
+  %97 = or i1 %93, %94
+  %98 = or i1 %95, %96
+  %99 = xor i1 %97, %98
+  %100 = or i1 %90, %91
+  %101 = xor i1 %100, true
+  %102 = or i1 false, %92
+  %103 = and i1 %101, %102
+  %104 = or i1 %99, %103
+  %105 = or i1 %88, %89
+  %106 = select i1 %104, i32 578279540, i32 204173656
+  store i32 %106, i32* %7
+  br label %169
+
+; <label>:107:                                    ; preds = %9
+  store i32 -1464706522, i32* %7
+  store i64 1, i64* %8
+  br label %169
+
+; <label>:108:                                    ; preds = %9
+  %109 = load i64, i64* %8
+  store i64 %109, i64* %2
+  %110 = load i32, i32* @x.56
+  %111 = load i32, i32* @y.57
+  %112 = add i32 %110, 512506176
+  %113 = sub i32 %112, 1
+  %114 = sub i32 %113, 512506176
+  %115 = sub i32 %110, 1
+  %116 = mul i32 %110, %114
+  %117 = urem i32 %116, 2
+  %118 = icmp eq i32 %117, 0
+  %119 = icmp slt i32 %111, 10
+  %120 = and i1 %118, %119
+  %121 = xor i1 %118, %119
+  %122 = or i1 %120, %121
+  %123 = or i1 %118, %119
+  %124 = select i1 %122, i32 -219598402, i32 -4617774
+  store i32 %124, i32* %7
+  br label %169
+
+; <label>:125:                                    ; preds = %9
+  %126 = load i32, i32* @x.56
+  %127 = load i32, i32* @y.57
+  %128 = sub i32 0, 1
+  %129 = add i32 %126, %128
+  %130 = sub i32 %126, 1
+  %131 = mul i32 %126, %129
+  %132 = urem i32 %131, 2
+  %133 = icmp eq i32 %132, 0
+  %134 = icmp slt i32 %127, 10
+  %135 = and i1 %133, %134
+  %136 = xor i1 %133, %134
+  %137 = or i1 %135, %136
+  %138 = or i1 %133, %134
+  %139 = select i1 %137, i32 -3049314, i32 -4617774
+  store i32 %139, i32* %7
+  br label %169
+
+; <label>:140:                                    ; preds = %9
+  %141 = load volatile i64, i64* %2
+  ret i64 %141
+
+; <label>:142:                                    ; preds = %9
+  %143 = load i64, i64* %5, align 8
+  %144 = sub i64 512, 8877561460145615345
+  %145 = sub i64 %144, %143
+  %146 = add i64 %145, 8877561460145615345
+  %147 = sub i64 512, %143
+  %148 = mul i64 %146, %143
+  %149 = shl i64 512, %143
+  %150 = shl i64 512, %143
+  %151 = shl i64 512, %143
+  %152 = sub i64 512, 8360955013164366708
+  %153 = sub i64 %152, %143
+  %154 = add i64 %153, 8360955013164366708
+  %155 = sub i64 512, %143
+  %156 = mul i64 %154, %143
+  %157 = add i64 512, 2856431354193354441
+  %158 = sub i64 %157, %143
+  %159 = sub i64 %158, 2856431354193354441
+  %160 = sub i64 512, %143
+  %161 = mul i64 %159, %143
+  %162 = sub i64 0, %143
+  %163 = add i64 512, %162
+  %164 = sub i64 512, %143
+  %165 = mul i64 %163, %143
+  %166 = udiv i64 512, %143
+  store i32 -1992420081, i32* %7
+  br label %169
+
+; <label>:167:                                    ; preds = %9
+  store i32 1227010695, i32* %7
+  br label %169
+
+; <label>:168:                                    ; preds = %9
+  store i32 -219598402, i32* %7
+  br label %169
+
+; <label>:169:                                    ; preds = %168, %167, %142, %125, %108, %107, %79, %63, %61, %31, %16, %12, %11
+  br label %9
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64* @_ZSt3maxImERKT_S2_S2_(i64* dereferenceable(8), i64* dereferenceable(8)) #4 comdat {
+  %3 = alloca i64
+  %4 = alloca i64
+  %5 = alloca i64*, align 8
+  %6 = alloca i64*, align 8
+  %7 = alloca i64*, align 8
+  store i64* %0, i64** %6, align 8
+  store i64* %1, i64** %7, align 8
+  %8 = load i64*, i64** %6, align 8
+  %9 = load i64, i64* %8, align 8
+  store i64 %9, i64* %4
+  %10 = load i64*, i64** %7, align 8
+  %11 = load i64, i64* %10, align 8
+  store i64 %11, i64* %3
+  %12 = alloca i32
+  store i32 -569585440, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %105
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -569585440, label %16
+    i32 -289241778, label %21
+    i32 -390182942, label %36
+    i32 229277533, label %53
+    i32 1378803099, label %54
+    i32 1931885032, label %82
+    i32 370716988, label %98
+    i32 -1660758837, label %99
+    i32 1594428549, label %101
+    i32 160137865, label %103
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %105
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i64, i64* %4
+  %18 = load volatile i64, i64* %3
+  %19 = icmp ult i64 %17, %18
+  %20 = select i1 %19, i32 -289241778, i32 1378803099
+  store i32 %20, i32* %12
+  br label %105
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32, i32* @x.58
+  %23 = load i32, i32* @y.59
+  %24 = sub i32 0, 1
+  %25 = add i32 %22, %24
+  %26 = sub i32 %22, 1
+  %27 = mul i32 %22, %25
+  %28 = urem i32 %27, 2
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %23, 10
+  %31 = and i1 %29, %30
+  %32 = xor i1 %29, %30
+  %33 = or i1 %31, %32
+  %34 = or i1 %29, %30
+  %35 = select i1 %33, i32 -390182942, i32 1594428549
+  store i32 %35, i32* %12
+  br label %105
+
+; <label>:36:                                     ; preds = %13
+  %37 = load i64*, i64** %7, align 8
+  store i64* %37, i64** %5, align 8
+  %38 = load i32, i32* @x.58
+  %39 = load i32, i32* @y.59
+  %40 = add i32 %38, -1053540331
+  %41 = sub i32 %40, 1
+  %42 = sub i32 %41, -1053540331
+  %43 = sub i32 %38, 1
+  %44 = mul i32 %38, %42
+  %45 = urem i32 %44, 2
+  %46 = icmp eq i32 %45, 0
+  %47 = icmp slt i32 %39, 10
+  %48 = and i1 %46, %47
+  %49 = xor i1 %46, %47
+  %50 = or i1 %48, %49
+  %51 = or i1 %46, %47
+  %52 = select i1 %50, i32 229277533, i32 1594428549
+  store i32 %52, i32* %12
+  br label %105
+
+; <label>:53:                                     ; preds = %13
+  store i32 -1660758837, i32* %12
+  br label %105
+
+; <label>:54:                                     ; preds = %13
+  %55 = load i32, i32* @x.58
+  %56 = load i32, i32* @y.59
+  %57 = add i32 %55, -1776547328
+  %58 = sub i32 %57, 1
+  %59 = sub i32 %58, -1776547328
+  %60 = sub i32 %55, 1
+  %61 = mul i32 %55, %59
+  %62 = urem i32 %61, 2
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %56, 10
+  %65 = xor i1 %63, true
+  %66 = xor i1 %64, true
+  %67 = xor i1 true, true
+  %68 = and i1 %65, true
+  %69 = and i1 %63, %67
+  %70 = and i1 %66, true
+  %71 = and i1 %64, %67
+  %72 = or i1 %68, %69
+  %73 = or i1 %70, %71
+  %74 = xor i1 %72, %73
+  %75 = or i1 %65, %66
+  %76 = xor i1 %75, true
+  %77 = or i1 true, %67
+  %78 = and i1 %76, %77
+  %79 = or i1 %74, %78
+  %80 = or i1 %63, %64
+  %81 = select i1 %79, i32 1931885032, i32 160137865
+  store i32 %81, i32* %12
+  br label %105
+
+; <label>:82:                                     ; preds = %13
+  %83 = load i64*, i64** %6, align 8
+  store i64* %83, i64** %5, align 8
+  %84 = load i32, i32* @x.58
+  %85 = load i32, i32* @y.59
+  %86 = sub i32 0, 1
+  %87 = add i32 %84, %86
+  %88 = sub i32 %84, 1
+  %89 = mul i32 %84, %87
+  %90 = urem i32 %89, 2
+  %91 = icmp eq i32 %90, 0
+  %92 = icmp slt i32 %85, 10
+  %93 = and i1 %91, %92
+  %94 = xor i1 %91, %92
+  %95 = or i1 %93, %94
+  %96 = or i1 %91, %92
+  %97 = select i1 %95, i32 370716988, i32 160137865
+  store i32 %97, i32* %12
+  br label %105
+
+; <label>:98:                                     ; preds = %13
+  store i32 -1660758837, i32* %12
+  br label %105
+
+; <label>:99:                                     ; preds = %13
+  %100 = load i64*, i64** %5, align 8
+  ret i64* %100
+
+; <label>:101:                                    ; preds = %13
+  %102 = load i64*, i64** %7, align 8
+  store i64* %102, i64** %5, align 8
+  store i32 -390182942, i32* %12
+  br label %105
+
+; <label>:103:                                    ; preds = %13
+  %104 = load i64*, i64** %6, align 8
+  store i64* %104, i64** %5, align 8
+  store i32 1931885032, i32* %12
+  br label %105
+
+; <label>:105:                                    ; preds = %103, %101, %98, %82, %54, %53, %36, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZNSt11_Deque_baseIiSaIiEE15_M_allocate_mapEm(%"class.std::_Deque_base"*, i64) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = alloca %"class.std::_Deque_base"*, align 8
+  %4 = alloca i64, align 8
+  %5 = alloca %"class.std::allocator.0", align 1
+  %6 = alloca i8*
+  %7 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %3, align 8
+  store i64 %1, i64* %4, align 8
+  %8 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3, align 8
+  call void @_ZNKSt11_Deque_baseIiSaIiEE20_M_get_map_allocatorEv(%"class.std::allocator.0"* sret %5, %"class.std::_Deque_base"* %8) #3
+  %9 = load i64, i64* %4, align 8
+  %10 = invoke i32** @_ZNSt16allocator_traitsISaIPiEE8allocateERS1_m(%"class.std::allocator.0"* dereferenceable(1) %5, i64 %9)
+          to label %11 unwind label %12
+
+; <label>:11:                                     ; preds = %2
+  call void @_ZNSaIPiED2Ev(%"class.std::allocator.0"* %5) #3
+  ret i32** %10
+
+; <label>:12:                                     ; preds = %2
+  %13 = landingpad { i8*, i32 }
+          cleanup
+  %14 = extractvalue { i8*, i32 } %13, 0
+  store i8* %14, i8** %6, align 8
+  %15 = extractvalue { i8*, i32 } %13, 1
+  store i32 %15, i32* %7, align 4
+  call void @_ZNSaIPiED2Ev(%"class.std::allocator.0"* %5) #3
+  br label %16
+
+; <label>:16:                                     ; preds = %12
+  %17 = load i8*, i8** %6, align 8
+  %18 = load i32, i32* %7, align 4
+  %19 = insertvalue { i8*, i32 } undef, i8* %17, 0
+  %20 = insertvalue { i8*, i32 } %19, i32 %18, 1
+  resume { i8*, i32 } %20
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE15_M_create_nodesEPPiS3_(%"class.std::_Deque_base"*, i32**, i32**) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = alloca %"class.std::_Deque_base"*, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i32**, align 8
+  %7 = alloca i32**, align 8
+  %8 = alloca i8*
+  %9 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i32** %2, i32*** %6, align 8
+  %10 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %4, align 8
+  %11 = load i32**, i32*** %5, align 8
+  store i32** %11, i32*** %7, align 8
+  br label %12
+
+; <label>:12:                                     ; preds = %20, %3
+  %13 = load i32**, i32*** %7, align 8
+  %14 = load i32**, i32*** %6, align 8
+  %15 = icmp ult i32** %13, %14
+  br i1 %15, label %16, label %32
+
+; <label>:16:                                     ; preds = %12
+  %17 = invoke i32* @_ZNSt11_Deque_baseIiSaIiEE16_M_allocate_nodeEv(%"class.std::_Deque_base"* %10)
+          to label %18 unwind label %23
+
+; <label>:18:                                     ; preds = %16
+  %19 = load i32**, i32*** %7, align 8
+  store i32* %17, i32** %19, align 8
+  br label %20
+
+; <label>:20:                                     ; preds = %18
+  %21 = load i32**, i32*** %7, align 8
+  %22 = getelementptr inbounds i32*, i32** %21, i32 1
+  store i32** %22, i32*** %7, align 8
+  br label %12
+
+; <label>:23:                                     ; preds = %16
+  %24 = landingpad { i8*, i32 }
+          catch i8* null
+  %25 = extractvalue { i8*, i32 } %24, 0
+  store i8* %25, i8** %8, align 8
+  %26 = extractvalue { i8*, i32 } %24, 1
+  store i32 %26, i32* %9, align 4
+  br label %27
+
+; <label>:27:                                     ; preds = %23
+  %28 = load i8*, i8** %8, align 8
+  %29 = call i8* @__cxa_begin_catch(i8* %28) #3
+  %30 = load i32**, i32*** %5, align 8
+  %31 = load i32**, i32*** %7, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE16_M_destroy_nodesEPPiS3_(%"class.std::_Deque_base"* %10, i32** %30, i32** %31) #3
+  invoke void @__cxa_rethrow() #12
+          to label %142 unwind label %33
+
+; <label>:32:                                     ; preds = %12
+  br label %38
+
+; <label>:33:                                     ; preds = %27
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %8, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %9, align 4
+  invoke void @__cxa_end_catch()
+          to label %37 unwind label %98
+
+; <label>:37:                                     ; preds = %33
+  br label %39
+
+; <label>:38:                                     ; preds = %32
+  ret void
+
+; <label>:39:                                     ; preds = %37
+  %40 = load i32, i32* @x.62
+  %41 = load i32, i32* @y.63
+  %42 = add i32 %40, 81071601
+  %43 = sub i32 %42, 1
+  %44 = sub i32 %43, 81071601
+  %45 = sub i32 %40, 1
+  %46 = mul i32 %40, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %41, 10
+  %50 = xor i1 %48, true
+  %51 = xor i1 %49, true
+  %52 = xor i1 false, true
+  %53 = and i1 %50, false
+  %54 = and i1 %48, %52
+  %55 = and i1 %51, false
+  %56 = and i1 %49, %52
+  %57 = or i1 %53, %54
+  %58 = or i1 %55, %56
+  %59 = xor i1 %57, %58
+  %60 = or i1 %50, %51
+  %61 = xor i1 %60, true
+  %62 = or i1 false, %52
+  %63 = and i1 %61, %62
+  %64 = or i1 %59, %63
+  %65 = or i1 %48, %49
+  br i1 %64, label %66, label %143
+
+; <label>:66:                                     ; preds = %39, %143
+  %67 = load i8*, i8** %8, align 8
+  %68 = load i32, i32* %9, align 4
+  %69 = insertvalue { i8*, i32 } undef, i8* %67, 0
+  %70 = insertvalue { i8*, i32 } %69, i32 %68, 1
+  %71 = load i32, i32* @x.62
+  %72 = load i32, i32* @y.63
+  %73 = add i32 %71, 1431869657
+  %74 = sub i32 %73, 1
+  %75 = sub i32 %74, 1431869657
+  %76 = sub i32 %71, 1
+  %77 = mul i32 %71, %75
+  %78 = urem i32 %77, 2
+  %79 = icmp eq i32 %78, 0
+  %80 = icmp slt i32 %72, 10
+  %81 = xor i1 %79, true
+  %82 = xor i1 %80, true
+  %83 = xor i1 true, true
+  %84 = and i1 %81, true
+  %85 = and i1 %79, %83
+  %86 = and i1 %82, true
+  %87 = and i1 %80, %83
+  %88 = or i1 %84, %85
+  %89 = or i1 %86, %87
+  %90 = xor i1 %88, %89
+  %91 = or i1 %81, %82
+  %92 = xor i1 %91, true
+  %93 = or i1 true, %83
+  %94 = and i1 %92, %93
+  %95 = or i1 %90, %94
+  %96 = or i1 %79, %80
+  br i1 %95, label %97, label %143
+
+; <label>:97:                                     ; preds = %66
+  resume { i8*, i32 } %70
+
+; <label>:98:                                     ; preds = %33
+  %99 = load i32, i32* @x.62
+  %100 = load i32, i32* @y.63
+  %101 = sub i32 %99, 1792203490
+  %102 = sub i32 %101, 1
+  %103 = add i32 %102, 1792203490
+  %104 = sub i32 %99, 1
+  %105 = mul i32 %99, %103
+  %106 = urem i32 %105, 2
+  %107 = icmp eq i32 %106, 0
+  %108 = icmp slt i32 %100, 10
+  %109 = and i1 %107, %108
+  %110 = xor i1 %107, %108
+  %111 = or i1 %109, %110
+  %112 = or i1 %107, %108
+  br i1 %111, label %113, label %148
+
+; <label>:113:                                    ; preds = %98, %148
+  %114 = landingpad { i8*, i32 }
+          catch i8* null
+  %115 = extractvalue { i8*, i32 } %114, 0
+  call void @__clang_call_terminate(i8* %115) #11
+  %116 = load i32, i32* @x.62
+  %117 = load i32, i32* @y.63
+  %118 = sub i32 0, 1
+  %119 = add i32 %116, %118
+  %120 = sub i32 %116, 1
+  %121 = mul i32 %116, %119
+  %122 = urem i32 %121, 2
+  %123 = icmp eq i32 %122, 0
+  %124 = icmp slt i32 %117, 10
+  %125 = xor i1 %123, true
+  %126 = xor i1 %124, true
+  %127 = xor i1 false, true
+  %128 = and i1 %125, false
+  %129 = and i1 %123, %127
+  %130 = and i1 %126, false
+  %131 = and i1 %124, %127
+  %132 = or i1 %128, %129
+  %133 = or i1 %130, %131
+  %134 = xor i1 %132, %133
+  %135 = or i1 %125, %126
+  %136 = xor i1 %135, true
+  %137 = or i1 false, %127
+  %138 = and i1 %136, %137
+  %139 = or i1 %134, %138
+  %140 = or i1 %123, %124
+  br i1 %139, label %141, label %148
+
+; <label>:141:                                    ; preds = %113
+  unreachable
+
+; <label>:142:                                    ; preds = %27
+  unreachable
+
+; <label>:143:                                    ; preds = %66, %39
+  %144 = load i8*, i8** %8, align 8
+  %145 = load i32, i32* %9, align 4
+  %146 = insertvalue { i8*, i32 } undef, i8* %144, 0
+  %147 = insertvalue { i8*, i32 } %146, i32 %145, 1
+  br label %66
+
+; <label>:148:                                    ; preds = %113, %98
+  %149 = landingpad { i8*, i32 }
+          catch i8* null
+  %150 = extractvalue { i8*, i32 } %149, 0
+  call void @__clang_call_terminate(i8* %150) #11
+  br label %113
+}
+
+declare i8* @__cxa_begin_catch(i8*)
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE17_M_deallocate_mapEPPim(%"class.std::_Deque_base"*, i32**, i64) #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = alloca %"class.std::_Deque_base"*, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca %"class.std::allocator.0", align 1
+  %8 = alloca i8*
+  %9 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %10 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %4, align 8
+  call void @_ZNKSt11_Deque_baseIiSaIiEE20_M_get_map_allocatorEv(%"class.std::allocator.0"* sret %7, %"class.std::_Deque_base"* %10) #3
+  %11 = load i32**, i32*** %5, align 8
+  %12 = load i64, i64* %6, align 8
+  invoke void @_ZNSt16allocator_traitsISaIPiEE10deallocateERS1_PS0_m(%"class.std::allocator.0"* dereferenceable(1) %7, i32** %11, i64 %12)
+          to label %13 unwind label %66
+
+; <label>:13:                                     ; preds = %3
+  %14 = load i32, i32* @x.64
+  %15 = load i32, i32* @y.65
+  %16 = sub i32 0, 1
+  %17 = add i32 %14, %16
+  %18 = sub i32 %14, 1
+  %19 = mul i32 %14, %17
+  %20 = urem i32 %19, 2
+  %21 = icmp eq i32 %20, 0
+  %22 = icmp slt i32 %15, 10
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 true, true
+  %26 = and i1 %23, true
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, true
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 true, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  br i1 %37, label %39, label %126
+
+; <label>:39:                                     ; preds = %13, %126
+  call void @_ZNSaIPiED2Ev(%"class.std::allocator.0"* %7) #3
+  %40 = load i32, i32* @x.64
+  %41 = load i32, i32* @y.65
+  %42 = sub i32 0, 1
+  %43 = add i32 %40, %42
+  %44 = sub i32 %40, 1
+  %45 = mul i32 %40, %43
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %41, 10
+  %49 = xor i1 %47, true
+  %50 = xor i1 %48, true
+  %51 = xor i1 true, true
+  %52 = and i1 %49, true
+  %53 = and i1 %47, %51
+  %54 = and i1 %50, true
+  %55 = and i1 %48, %51
+  %56 = or i1 %52, %53
+  %57 = or i1 %54, %55
+  %58 = xor i1 %56, %57
+  %59 = or i1 %49, %50
+  %60 = xor i1 %59, true
+  %61 = or i1 true, %51
+  %62 = and i1 %60, %61
+  %63 = or i1 %58, %62
+  %64 = or i1 %47, %48
+  br i1 %63, label %65, label %126
+
+; <label>:65:                                     ; preds = %39
+  ret void
+
+; <label>:66:                                     ; preds = %3
+  %67 = landingpad { i8*, i32 }
+          catch i8* null
+  %68 = extractvalue { i8*, i32 } %67, 0
+  store i8* %68, i8** %8, align 8
+  %69 = extractvalue { i8*, i32 } %67, 1
+  store i32 %69, i32* %9, align 4
+  call void @_ZNSaIPiED2Ev(%"class.std::allocator.0"* %7) #3
+  br label %70
+
+; <label>:70:                                     ; preds = %66
+  %71 = load i32, i32* @x.64
+  %72 = load i32, i32* @y.65
+  %73 = add i32 %71, -756149896
+  %74 = sub i32 %73, 1
+  %75 = sub i32 %74, -756149896
+  %76 = sub i32 %71, 1
+  %77 = mul i32 %71, %75
+  %78 = urem i32 %77, 2
+  %79 = icmp eq i32 %78, 0
+  %80 = icmp slt i32 %72, 10
+  %81 = xor i1 %79, true
+  %82 = xor i1 %80, true
+  %83 = xor i1 false, true
+  %84 = and i1 %81, false
+  %85 = and i1 %79, %83
+  %86 = and i1 %82, false
+  %87 = and i1 %80, %83
+  %88 = or i1 %84, %85
+  %89 = or i1 %86, %87
+  %90 = xor i1 %88, %89
+  %91 = or i1 %81, %82
+  %92 = xor i1 %91, true
+  %93 = or i1 false, %83
+  %94 = and i1 %92, %93
+  %95 = or i1 %90, %94
+  %96 = or i1 %79, %80
+  br i1 %95, label %97, label %127
+
+; <label>:97:                                     ; preds = %70, %127
+  %98 = load i8*, i8** %8, align 8
+  call void @__clang_call_terminate(i8* %98) #11
+  %99 = load i32, i32* @x.64
+  %100 = load i32, i32* @y.65
+  %101 = sub i32 %99, 1365005284
+  %102 = sub i32 %101, 1
+  %103 = add i32 %102, 1365005284
+  %104 = sub i32 %99, 1
+  %105 = mul i32 %99, %103
+  %106 = urem i32 %105, 2
+  %107 = icmp eq i32 %106, 0
+  %108 = icmp slt i32 %100, 10
+  %109 = xor i1 %107, true
+  %110 = xor i1 %108, true
+  %111 = xor i1 true, true
+  %112 = and i1 %109, true
+  %113 = and i1 %107, %111
+  %114 = and i1 %110, true
+  %115 = and i1 %108, %111
+  %116 = or i1 %112, %113
+  %117 = or i1 %114, %115
+  %118 = xor i1 %116, %117
+  %119 = or i1 %109, %110
+  %120 = xor i1 %119, true
+  %121 = or i1 true, %111
+  %122 = and i1 %120, %121
+  %123 = or i1 %118, %122
+  %124 = or i1 %107, %108
+  br i1 %123, label %125, label %127
+
+; <label>:125:                                    ; preds = %97
+  unreachable
+
+; <label>:126:                                    ; preds = %39, %13
+  call void @_ZNSaIPiED2Ev(%"class.std::allocator.0"* %7) #3
+  br label %39
+
+; <label>:127:                                    ; preds = %97, %70
+  %128 = load i8*, i8** %8, align 8
+  call void @__clang_call_terminate(i8* %128) #11
+  br label %97
+}
+
+declare void @__cxa_rethrow()
+
+declare void @__cxa_end_catch()
+
+; Function Attrs: noinline noreturn nounwind
+define linkonce_odr hidden void @__clang_call_terminate(i8*) #7 comdat {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.66
+  %5 = load i32, i32* @y.67
+  %6 = sub i32 %4, 172380048
+  %7 = sub i32 %6, 1
+  %8 = add i32 %7, 172380048
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 291140493, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %46
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 291140493, label %18
+    i32 569623178, label %26
+    i32 1358125642, label %43
+    i32 440764947, label %44
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %46
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 569623178, i32 440764947
+  store i32 %25, i32* %14
+  br label %46
+
+; <label>:26:                                     ; preds = %15
+  %27 = call i8* @__cxa_begin_catch(i8* %0) #3
+  call void @_ZSt9terminatev() #11
+  %28 = load i32, i32* @x.66
+  %29 = load i32, i32* @y.67
+  %30 = sub i32 %28, 1518076261
+  %31 = sub i32 %30, 1
+  %32 = add i32 %31, 1518076261
+  %33 = sub i32 %28, 1
+  %34 = mul i32 %28, %32
+  %35 = urem i32 %34, 2
+  %36 = icmp eq i32 %35, 0
+  %37 = icmp slt i32 %29, 10
+  %38 = and i1 %36, %37
+  %39 = xor i1 %36, %37
+  %40 = or i1 %38, %39
+  %41 = or i1 %36, %37
+  %42 = select i1 %40, i32 1358125642, i32 440764947
+  store i32 %42, i32* %14
+  br label %46
+
+; <label>:43:                                     ; preds = %15
+  unreachable
+
+; <label>:44:                                     ; preds = %15
+  %45 = call i8* @__cxa_begin_catch(i8* %0) #3
+  call void @_ZSt9terminatev() #11
+  store i32 569623178, i32* %14
+  br label %46
+
+; <label>:46:                                     ; preds = %44, %26, %18, %17
+  br label %15
+}
+
+declare void @_ZSt9terminatev()
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"*, i32**) #4 comdat align 2 {
+  %3 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %4 = alloca i32**, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %3, align 8
+  store i32** %1, i32*** %4, align 8
+  %5 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %3, align 8
+  %6 = load i32**, i32*** %4, align 8
+  %7 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %5, i32 0, i32 3
+  store i32** %6, i32*** %7, align 8
+  %8 = load i32**, i32*** %4, align 8
+  %9 = load i32*, i32** %8, align 8
+  %10 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %5, i32 0, i32 1
+  store i32* %9, i32** %10, align 8
+  %11 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %5, i32 0, i32 1
+  %12 = load i32*, i32** %11, align 8
+  %13 = call i64 @_ZNSt15_Deque_iteratorIiRiPiE14_S_buffer_sizeEv() #3
+  %14 = getelementptr inbounds i32, i32* %12, i64 %13
+  %15 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %5, i32 0, i32 2
+  store i32* %14, i32** %15, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNKSt11_Deque_baseIiSaIiEE20_M_get_map_allocatorEv(%"class.std::allocator.0"* noalias sret, %"class.std::_Deque_base"*) #4 comdat align 2 {
+  %3 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %1, %"class.std::_Deque_base"** %3, align 8
+  %4 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3, align 8
+  %5 = call dereferenceable(1) %"class.std::allocator"* @_ZNKSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"* %4) #3
+  call void @_ZNSaIPiEC2IiEERKSaIT_E(%"class.std::allocator.0"* %0, %"class.std::allocator"* dereferenceable(1) %5) #3
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZNSt16allocator_traitsISaIPiEE8allocateERS1_m(%"class.std::allocator.0"* dereferenceable(1), i64) #0 comdat align 2 {
+  %3 = alloca i32**
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.72
+  %7 = load i32, i32* @y.73
+  %8 = sub i32 %6, -536641281
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -536641281
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 -1752009672, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %70
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -1752009672, label %20
+    i32 -2123800315, label %28
+    i32 -488977363, label %61
+    i32 687484334, label %63
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %70
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 -2123800315, i32 687484334
+  store i32 %27, i32* %16
+  br label %70
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca %"class.std::allocator.0"*, align 8
+  %30 = alloca i64, align 8
+  store %"class.std::allocator.0"* %0, %"class.std::allocator.0"** %29, align 8
+  store i64 %1, i64* %30, align 8
+  %31 = load %"class.std::allocator.0"*, %"class.std::allocator.0"** %29, align 8
+  %32 = bitcast %"class.std::allocator.0"* %31 to %"class.__gnu_cxx::new_allocator.1"*
+  %33 = load i64, i64* %30, align 8
+  %34 = call i32** @_ZN9__gnu_cxx13new_allocatorIPiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.1"* %32, i64 %33, i8* null)
+  store i32** %34, i32*** %3
+  %35 = load i32, i32* @x.72
+  %36 = load i32, i32* @y.73
+  %37 = sub i32 0, 1
+  %38 = add i32 %35, %37
+  %39 = sub i32 %35, 1
+  %40 = mul i32 %35, %38
+  %41 = urem i32 %40, 2
+  %42 = icmp eq i32 %41, 0
+  %43 = icmp slt i32 %36, 10
+  %44 = xor i1 %42, true
+  %45 = xor i1 %43, true
+  %46 = xor i1 false, true
+  %47 = and i1 %44, false
+  %48 = and i1 %42, %46
+  %49 = and i1 %45, false
+  %50 = and i1 %43, %46
+  %51 = or i1 %47, %48
+  %52 = or i1 %49, %50
+  %53 = xor i1 %51, %52
+  %54 = or i1 %44, %45
+  %55 = xor i1 %54, true
+  %56 = or i1 false, %46
+  %57 = and i1 %55, %56
+  %58 = or i1 %53, %57
+  %59 = or i1 %42, %43
+  %60 = select i1 %58, i32 -488977363, i32 687484334
+  store i32 %60, i32* %16
+  br label %70
+
+; <label>:61:                                     ; preds = %17
+  %62 = load volatile i32**, i32*** %3
+  ret i32** %62
+
+; <label>:63:                                     ; preds = %17
+  %64 = alloca %"class.std::allocator.0"*, align 8
+  %65 = alloca i64, align 8
+  store %"class.std::allocator.0"* %0, %"class.std::allocator.0"** %64, align 8
+  store i64 %1, i64* %65, align 8
+  %66 = load %"class.std::allocator.0"*, %"class.std::allocator.0"** %64, align 8
+  %67 = bitcast %"class.std::allocator.0"* %66 to %"class.__gnu_cxx::new_allocator.1"*
+  %68 = load i64, i64* %65, align 8
+  %69 = call i32** @_ZN9__gnu_cxx13new_allocatorIPiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.1"* %67, i64 %68, i8* null)
+  store i32 -2123800315, i32* %16
+  br label %70
+
+; <label>:70:                                     ; preds = %63, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIPiED2Ev(%"class.std::allocator.0"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator.0"*, align 8
+  store %"class.std::allocator.0"* %0, %"class.std::allocator.0"** %2, align 8
+  %3 = load %"class.std::allocator.0"*, %"class.std::allocator.0"** %2, align 8
+  %4 = bitcast %"class.std::allocator.0"* %3 to %"class.__gnu_cxx::new_allocator.1"*
+  call void @_ZN9__gnu_cxx13new_allocatorIPiED2Ev(%"class.__gnu_cxx::new_allocator.1"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator"* @_ZNKSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %2, align 8
+  %3 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %3, i32 0, i32 0
+  %5 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %4 to %"class.std::allocator"*
+  ret %"class.std::allocator"* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIPiEC2IiEERKSaIT_E(%"class.std::allocator.0"*, %"class.std::allocator"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca %"class.std::allocator.0"*, align 8
+  %4 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator.0"* %0, %"class.std::allocator.0"** %3, align 8
+  store %"class.std::allocator"* %1, %"class.std::allocator"** %4, align 8
+  %5 = load %"class.std::allocator.0"*, %"class.std::allocator.0"** %3, align 8
+  %6 = bitcast %"class.std::allocator.0"* %5 to %"class.__gnu_cxx::new_allocator.1"*
+  call void @_ZN9__gnu_cxx13new_allocatorIPiEC2Ev(%"class.__gnu_cxx::new_allocator.1"* %6) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIPiEC2Ev(%"class.__gnu_cxx::new_allocator.1"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZN9__gnu_cxx13new_allocatorIPiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.1"*, i64, i8*) #0 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca i64
+  %6 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  %7 = alloca i64, align 8
+  %8 = alloca i8*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %6, align 8
+  store i64 %1, i64* %7, align 8
+  store i8* %2, i8** %8, align 8
+  %9 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %6, align 8
+  %10 = load i64, i64* %7, align 8
+  store i64 %10, i64* %5
+  %11 = call i64 @_ZNK9__gnu_cxx13new_allocatorIPiE8max_sizeEv(%"class.__gnu_cxx::new_allocator.1"* %9) #3
+  store i64 %11, i64* %4
+  %12 = alloca i32
+  store i32 11430271, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %3, %27
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 11430271, label %16
+    i32 593925015, label %21
+    i32 -1768388833, label %22
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %27
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i64, i64* %5
+  %18 = load volatile i64, i64* %4
+  %19 = icmp ugt i64 %17, %18
+  %20 = select i1 %19, i32 593925015, i32 -1768388833
+  store i32 %20, i32* %12
+  br label %27
+
+; <label>:21:                                     ; preds = %13
+  call void @_ZSt17__throw_bad_allocv() #12
+  unreachable
+
+; <label>:22:                                     ; preds = %13
+  %23 = load i64, i64* %7, align 8
+  %24 = mul i64 %23, 8
+  %25 = call i8* @_Znwm(i64 %24)
+  %26 = bitcast i8* %25 to i32**
+  ret i32** %26
+
+; <label>:27:                                     ; preds = %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNK9__gnu_cxx13new_allocatorIPiE8max_sizeEv(%"class.__gnu_cxx::new_allocator.1"*) #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.84
+  %5 = load i32, i32* @y.85
+  %6 = add i32 %4, -1152932777
+  %7 = sub i32 %6, 1
+  %8 = sub i32 %7, -1152932777
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 -615083472, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %72
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -615083472, label %18
+    i32 -2110946570, label %38
+    i32 -750242573, label %68
+    i32 -1305830725, label %69
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %72
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 false, true
+  %24 = and i1 %21, false
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, false
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 false, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 -2110946570, i32 -1305830725
+  store i32 %37, i32* %14
+  br label %72
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %39, align 8
+  %40 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %39, align 8
+  %41 = load i32, i32* @x.84
+  %42 = load i32, i32* @y.85
+  %43 = sub i32 %41, -1905237554
+  %44 = sub i32 %43, 1
+  %45 = add i32 %44, -1905237554
+  %46 = sub i32 %41, 1
+  %47 = mul i32 %41, %45
+  %48 = urem i32 %47, 2
+  %49 = icmp eq i32 %48, 0
+  %50 = icmp slt i32 %42, 10
+  %51 = xor i1 %49, true
+  %52 = xor i1 %50, true
+  %53 = xor i1 false, true
+  %54 = and i1 %51, false
+  %55 = and i1 %49, %53
+  %56 = and i1 %52, false
+  %57 = and i1 %50, %53
+  %58 = or i1 %54, %55
+  %59 = or i1 %56, %57
+  %60 = xor i1 %58, %59
+  %61 = or i1 %51, %52
+  %62 = xor i1 %61, true
+  %63 = or i1 false, %53
+  %64 = and i1 %62, %63
+  %65 = or i1 %60, %64
+  %66 = or i1 %49, %50
+  %67 = select i1 %65, i32 -750242573, i32 -1305830725
+  store i32 %67, i32* %14
+  br label %72
+
+; <label>:68:                                     ; preds = %15
+  ret i64 2305843009213693951
+
+; <label>:69:                                     ; preds = %15
+  %70 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %70, align 8
+  %71 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %70, align 8
+  store i32 -2110946570, i32* %14
+  br label %72
+
+; <label>:72:                                     ; preds = %69, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noreturn
+declare void @_ZSt17__throw_bad_allocv() #8
+
+; Function Attrs: nobuiltin
+declare noalias i8* @_Znwm(i64) #9
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIPiED2Ev(%"class.__gnu_cxx::new_allocator.1"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.86
+  %5 = load i32, i32* @y.87
+  %6 = add i32 %4, 1455154548
+  %7 = sub i32 %6, 1
+  %8 = sub i32 %7, 1455154548
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 -626701927, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %72
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -626701927, label %18
+    i32 -780377019, label %38
+    i32 751851710, label %68
+    i32 -106123023, label %69
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %72
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 false, true
+  %24 = and i1 %21, false
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, false
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 false, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 -780377019, i32 -106123023
+  store i32 %37, i32* %14
+  br label %72
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %39, align 8
+  %40 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %39, align 8
+  %41 = load i32, i32* @x.86
+  %42 = load i32, i32* @y.87
+  %43 = add i32 %41, -1050514513
+  %44 = sub i32 %43, 1
+  %45 = sub i32 %44, -1050514513
+  %46 = sub i32 %41, 1
+  %47 = mul i32 %41, %45
+  %48 = urem i32 %47, 2
+  %49 = icmp eq i32 %48, 0
+  %50 = icmp slt i32 %42, 10
+  %51 = xor i1 %49, true
+  %52 = xor i1 %50, true
+  %53 = xor i1 true, true
+  %54 = and i1 %51, true
+  %55 = and i1 %49, %53
+  %56 = and i1 %52, true
+  %57 = and i1 %50, %53
+  %58 = or i1 %54, %55
+  %59 = or i1 %56, %57
+  %60 = xor i1 %58, %59
+  %61 = or i1 %51, %52
+  %62 = xor i1 %61, true
+  %63 = or i1 true, %53
+  %64 = and i1 %62, %63
+  %65 = or i1 %60, %64
+  %66 = or i1 %49, %50
+  %67 = select i1 %65, i32 751851710, i32 -106123023
+  store i32 %67, i32* %14
+  br label %72
+
+; <label>:68:                                     ; preds = %15
+  ret void
+
+; <label>:69:                                     ; preds = %15
+  %70 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %70, align 8
+  %71 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %70, align 8
+  store i32 -780377019, i32* %14
+  br label %72
+
+; <label>:72:                                     ; preds = %69, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZNSt11_Deque_baseIiSaIiEE16_M_allocate_nodeEv(%"class.std::_Deque_base"*) #0 comdat align 2 {
+  %2 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %2, align 8
+  %3 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %3, i32 0, i32 0
+  %5 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %4 to %"class.std::allocator"*
+  %6 = call i64 @_ZSt16__deque_buf_sizem(i64 4)
+  %7 = call i32* @_ZNSt16allocator_traitsISaIiEE8allocateERS0_m(%"class.std::allocator"* dereferenceable(1) %5, i64 %6)
+  ret i32* %7
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE16_M_destroy_nodesEPPiS3_(%"class.std::_Deque_base"*, i32**, i32**) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca %"class.std::_Deque_base"*
+  %6 = alloca %"class.std::_Deque_base"*, align 8
+  %7 = alloca i32**, align 8
+  %8 = alloca i32**, align 8
+  %9 = alloca i32**, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %6, align 8
+  store i32** %1, i32*** %7, align 8
+  store i32** %2, i32*** %8, align 8
+  %10 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %6, align 8
+  store %"class.std::_Deque_base"* %10, %"class.std::_Deque_base"** %5
+  %11 = load i32**, i32*** %7, align 8
+  store i32** %11, i32*** %9, align 8
+  %12 = alloca i32
+  store i32 -1470476134, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %3, %148
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -1470476134, label %16
+    i32 87976630, label %44
+    i32 -480040952, label %75
+    i32 -942486021, label %78
+    i32 1517103097, label %82
+    i32 1708288491, label %110
+    i32 319048332, label %139
+    i32 -1718369806, label %140
+    i32 -151161659, label %141
+    i32 1178529962, label %145
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %148
+
+; <label>:16:                                     ; preds = %13
+  %17 = load i32, i32* @x.90
+  %18 = load i32, i32* @y.91
+  %19 = add i32 %17, -1260953728
+  %20 = sub i32 %19, 1
+  %21 = sub i32 %20, -1260953728
+  %22 = sub i32 %17, 1
+  %23 = mul i32 %17, %21
+  %24 = urem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  %26 = icmp slt i32 %18, 10
+  %27 = xor i1 %25, true
+  %28 = xor i1 %26, true
+  %29 = xor i1 false, true
+  %30 = and i1 %27, false
+  %31 = and i1 %25, %29
+  %32 = and i1 %28, false
+  %33 = and i1 %26, %29
+  %34 = or i1 %30, %31
+  %35 = or i1 %32, %33
+  %36 = xor i1 %34, %35
+  %37 = or i1 %27, %28
+  %38 = xor i1 %37, true
+  %39 = or i1 false, %29
+  %40 = and i1 %38, %39
+  %41 = or i1 %36, %40
+  %42 = or i1 %25, %26
+  %43 = select i1 %41, i32 87976630, i32 -151161659
+  store i32 %43, i32* %12
+  br label %148
+
+; <label>:44:                                     ; preds = %13
+  %45 = load i32**, i32*** %9, align 8
+  %46 = load i32**, i32*** %8, align 8
+  %47 = icmp ult i32** %45, %46
+  store i1 %47, i1* %4
+  %48 = load i32, i32* @x.90
+  %49 = load i32, i32* @y.91
+  %50 = sub i32 %48, 308918784
+  %51 = sub i32 %50, 1
+  %52 = add i32 %51, 308918784
+  %53 = sub i32 %48, 1
+  %54 = mul i32 %48, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %49, 10
+  %58 = xor i1 %56, true
+  %59 = xor i1 %57, true
+  %60 = xor i1 false, true
+  %61 = and i1 %58, false
+  %62 = and i1 %56, %60
+  %63 = and i1 %59, false
+  %64 = and i1 %57, %60
+  %65 = or i1 %61, %62
+  %66 = or i1 %63, %64
+  %67 = xor i1 %65, %66
+  %68 = or i1 %58, %59
+  %69 = xor i1 %68, true
+  %70 = or i1 false, %60
+  %71 = and i1 %69, %70
+  %72 = or i1 %67, %71
+  %73 = or i1 %56, %57
+  %74 = select i1 %72, i32 -480040952, i32 -151161659
+  store i32 %74, i32* %12
+  br label %148
+
+; <label>:75:                                     ; preds = %13
+  %76 = load volatile i1, i1* %4
+  %77 = select i1 %76, i32 -942486021, i32 -1718369806
+  store i32 %77, i32* %12
+  br label %148
+
+; <label>:78:                                     ; preds = %13
+  %79 = load i32**, i32*** %9, align 8
+  %80 = load i32*, i32** %79, align 8
+  %81 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5
+  call void @_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi(%"class.std::_Deque_base"* %81, i32* %80) #3
+  store i32 1517103097, i32* %12
+  br label %148
+
+; <label>:82:                                     ; preds = %13
+  %83 = load i32, i32* @x.90
+  %84 = load i32, i32* @y.91
+  %85 = add i32 %83, -159243165
+  %86 = sub i32 %85, 1
+  %87 = sub i32 %86, -159243165
+  %88 = sub i32 %83, 1
+  %89 = mul i32 %83, %87
+  %90 = urem i32 %89, 2
+  %91 = icmp eq i32 %90, 0
+  %92 = icmp slt i32 %84, 10
+  %93 = xor i1 %91, true
+  %94 = xor i1 %92, true
+  %95 = xor i1 true, true
+  %96 = and i1 %93, true
+  %97 = and i1 %91, %95
+  %98 = and i1 %94, true
+  %99 = and i1 %92, %95
+  %100 = or i1 %96, %97
+  %101 = or i1 %98, %99
+  %102 = xor i1 %100, %101
+  %103 = or i1 %93, %94
+  %104 = xor i1 %103, true
+  %105 = or i1 true, %95
+  %106 = and i1 %104, %105
+  %107 = or i1 %102, %106
+  %108 = or i1 %91, %92
+  %109 = select i1 %107, i32 1708288491, i32 1178529962
+  store i32 %109, i32* %12
+  br label %148
+
+; <label>:110:                                    ; preds = %13
+  %111 = load i32**, i32*** %9, align 8
+  %112 = getelementptr inbounds i32*, i32** %111, i32 1
+  store i32** %112, i32*** %9, align 8
+  %113 = load i32, i32* @x.90
+  %114 = load i32, i32* @y.91
+  %115 = sub i32 0, 1
+  %116 = add i32 %113, %115
+  %117 = sub i32 %113, 1
+  %118 = mul i32 %113, %116
+  %119 = urem i32 %118, 2
+  %120 = icmp eq i32 %119, 0
+  %121 = icmp slt i32 %114, 10
+  %122 = xor i1 %120, true
+  %123 = xor i1 %121, true
+  %124 = xor i1 true, true
+  %125 = and i1 %122, true
+  %126 = and i1 %120, %124
+  %127 = and i1 %123, true
+  %128 = and i1 %121, %124
+  %129 = or i1 %125, %126
+  %130 = or i1 %127, %128
+  %131 = xor i1 %129, %130
+  %132 = or i1 %122, %123
+  %133 = xor i1 %132, true
+  %134 = or i1 true, %124
+  %135 = and i1 %133, %134
+  %136 = or i1 %131, %135
+  %137 = or i1 %120, %121
+  %138 = select i1 %136, i32 319048332, i32 1178529962
+  store i32 %138, i32* %12
+  br label %148
+
+; <label>:139:                                    ; preds = %13
+  store i32 -1470476134, i32* %12
+  br label %148
+
+; <label>:140:                                    ; preds = %13
+  ret void
+
+; <label>:141:                                    ; preds = %13
+  %142 = load i32**, i32*** %9, align 8
+  %143 = load i32**, i32*** %8, align 8
+  %144 = icmp ult i32** %142, %143
+  store i32 87976630, i32* %12
+  br label %148
+
+; <label>:145:                                    ; preds = %13
+  %146 = load i32**, i32*** %9, align 8
+  %147 = getelementptr inbounds i32*, i32** %146, i32 1
+  store i32** %147, i32*** %9, align 8
+  store i32 1708288491, i32* %12
+  br label %148
+
+; <label>:148:                                    ; preds = %145, %141, %139, %110, %82, %78, %75, %44, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZNSt16allocator_traitsISaIiEE8allocateERS0_m(%"class.std::allocator"* dereferenceable(1), i64) #0 comdat align 2 {
+  %3 = alloca %"class.std::allocator"*, align 8
+  %4 = alloca i64, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %3, align 8
+  store i64 %1, i64* %4, align 8
+  %5 = load %"class.std::allocator"*, %"class.std::allocator"** %3, align 8
+  %6 = bitcast %"class.std::allocator"* %5 to %"class.__gnu_cxx::new_allocator"*
+  %7 = load i64, i64* %4, align 8
+  %8 = call i32* @_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"* %6, i64 %7, i8* null)
+  ret i32* %8
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"*, i64, i8*) #0 comdat align 2 {
+  %4 = alloca i32*
+  %5 = alloca i1
+  %6 = alloca i64*
+  %7 = alloca i1
+  %8 = alloca i1
+  %9 = load i32, i32* @x.94
+  %10 = load i32, i32* @y.95
+  %11 = sub i32 0, 1
+  %12 = add i32 %9, %11
+  %13 = sub i32 %9, 1
+  %14 = mul i32 %9, %12
+  %15 = urem i32 %14, 2
+  %16 = icmp eq i32 %15, 0
+  store i1 %16, i1* %8
+  %17 = icmp slt i32 %10, 10
+  store i1 %17, i1* %7
+  %18 = alloca i32
+  store i32 427575518, i32* %18
+  br label %19
+
+; <label>:19:                                     ; preds = %3, %177
+  %20 = load i32, i32* %18
+  switch i32 %20, label %21 [
+    i32 427575518, label %22
+    i32 427038159, label %30
+    i32 783811338, label %54
+    i32 1403482946, label %57
+    i32 -183232704, label %85
+    i32 -754813173, label %101
+    i32 -1722361777, label %102
+    i32 127979413, label %117
+    i32 1237801920, label %150
+    i32 559854935, label %152
+    i32 1997937516, label %160
+    i32 -315453268, label %161
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %177
+
+; <label>:22:                                     ; preds = %19
+  %23 = load volatile i1, i1* %8
+  %24 = load volatile i1, i1* %7
+  %25 = and i1 %23, %24
+  %26 = xor i1 %23, %24
+  %27 = or i1 %25, %26
+  %28 = or i1 %23, %24
+  %29 = select i1 %27, i32 427038159, i32 559854935
+  store i32 %29, i32* %18
+  br label %177
+
+; <label>:30:                                     ; preds = %19
+  %31 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %32 = alloca i64, align 8
+  store i64* %32, i64** %6
+  %33 = alloca i8*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %31, align 8
+  %34 = load volatile i64*, i64** %6
+  store i64 %1, i64* %34, align 8
+  store i8* %2, i8** %33, align 8
+  %35 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %31, align 8
+  %36 = load volatile i64*, i64** %6
+  %37 = load i64, i64* %36, align 8
+  %38 = call i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator"* %35) #3
+  %39 = icmp ugt i64 %37, %38
+  store i1 %39, i1* %5
+  %40 = load i32, i32* @x.94
+  %41 = load i32, i32* @y.95
+  %42 = sub i32 0, 1
+  %43 = add i32 %40, %42
+  %44 = sub i32 %40, 1
+  %45 = mul i32 %40, %43
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %41, 10
+  %49 = and i1 %47, %48
+  %50 = xor i1 %47, %48
+  %51 = or i1 %49, %50
+  %52 = or i1 %47, %48
+  %53 = select i1 %51, i32 783811338, i32 559854935
+  store i32 %53, i32* %18
+  br label %177
+
+; <label>:54:                                     ; preds = %19
+  %55 = load volatile i1, i1* %5
+  %56 = select i1 %55, i32 1403482946, i32 -1722361777
+  store i32 %56, i32* %18
+  br label %177
+
+; <label>:57:                                     ; preds = %19
+  %58 = load i32, i32* @x.94
+  %59 = load i32, i32* @y.95
+  %60 = add i32 %58, -304798626
+  %61 = sub i32 %60, 1
+  %62 = sub i32 %61, -304798626
+  %63 = sub i32 %58, 1
+  %64 = mul i32 %58, %62
+  %65 = urem i32 %64, 2
+  %66 = icmp eq i32 %65, 0
+  %67 = icmp slt i32 %59, 10
+  %68 = xor i1 %66, true
+  %69 = xor i1 %67, true
+  %70 = xor i1 true, true
+  %71 = and i1 %68, true
+  %72 = and i1 %66, %70
+  %73 = and i1 %69, true
+  %74 = and i1 %67, %70
+  %75 = or i1 %71, %72
+  %76 = or i1 %73, %74
+  %77 = xor i1 %75, %76
+  %78 = or i1 %68, %69
+  %79 = xor i1 %78, true
+  %80 = or i1 true, %70
+  %81 = and i1 %79, %80
+  %82 = or i1 %77, %81
+  %83 = or i1 %66, %67
+  %84 = select i1 %82, i32 -183232704, i32 1997937516
+  store i32 %84, i32* %18
+  br label %177
+
+; <label>:85:                                     ; preds = %19
+  call void @_ZSt17__throw_bad_allocv() #12
+  %86 = load i32, i32* @x.94
+  %87 = load i32, i32* @y.95
+  %88 = add i32 %86, -1243074185
+  %89 = sub i32 %88, 1
+  %90 = sub i32 %89, -1243074185
+  %91 = sub i32 %86, 1
+  %92 = mul i32 %86, %90
+  %93 = urem i32 %92, 2
+  %94 = icmp eq i32 %93, 0
+  %95 = icmp slt i32 %87, 10
+  %96 = and i1 %94, %95
+  %97 = xor i1 %94, %95
+  %98 = or i1 %96, %97
+  %99 = or i1 %94, %95
+  %100 = select i1 %98, i32 -754813173, i32 1997937516
+  store i32 %100, i32* %18
+  br label %177
+
+; <label>:101:                                    ; preds = %19
+  unreachable
+
+; <label>:102:                                    ; preds = %19
+  %103 = load i32, i32* @x.94
+  %104 = load i32, i32* @y.95
+  %105 = sub i32 0, 1
+  %106 = add i32 %103, %105
+  %107 = sub i32 %103, 1
+  %108 = mul i32 %103, %106
+  %109 = urem i32 %108, 2
+  %110 = icmp eq i32 %109, 0
+  %111 = icmp slt i32 %104, 10
+  %112 = and i1 %110, %111
+  %113 = xor i1 %110, %111
+  %114 = or i1 %112, %113
+  %115 = or i1 %110, %111
+  %116 = select i1 %114, i32 127979413, i32 -315453268
+  store i32 %116, i32* %18
+  br label %177
+
+; <label>:117:                                    ; preds = %19
+  %118 = load volatile i64*, i64** %6
+  %119 = load i64, i64* %118, align 8
+  %120 = mul i64 %119, 4
+  %121 = call i8* @_Znwm(i64 %120)
+  %122 = bitcast i8* %121 to i32*
+  store i32* %122, i32** %4
+  %123 = load i32, i32* @x.94
+  %124 = load i32, i32* @y.95
+  %125 = add i32 %123, 299781182
+  %126 = sub i32 %125, 1
+  %127 = sub i32 %126, 299781182
+  %128 = sub i32 %123, 1
+  %129 = mul i32 %123, %127
+  %130 = urem i32 %129, 2
+  %131 = icmp eq i32 %130, 0
+  %132 = icmp slt i32 %124, 10
+  %133 = xor i1 %131, true
+  %134 = xor i1 %132, true
+  %135 = xor i1 true, true
+  %136 = and i1 %133, true
+  %137 = and i1 %131, %135
+  %138 = and i1 %134, true
+  %139 = and i1 %132, %135
+  %140 = or i1 %136, %137
+  %141 = or i1 %138, %139
+  %142 = xor i1 %140, %141
+  %143 = or i1 %133, %134
+  %144 = xor i1 %143, true
+  %145 = or i1 true, %135
+  %146 = and i1 %144, %145
+  %147 = or i1 %142, %146
+  %148 = or i1 %131, %132
+  %149 = select i1 %147, i32 1237801920, i32 -315453268
+  store i32 %149, i32* %18
+  br label %177
+
+; <label>:150:                                    ; preds = %19
+  %151 = load volatile i32*, i32** %4
+  ret i32* %151
+
+; <label>:152:                                    ; preds = %19
+  %153 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %154 = alloca i64, align 8
+  %155 = alloca i8*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %153, align 8
+  store i64 %1, i64* %154, align 8
+  store i8* %2, i8** %155, align 8
+  %156 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %153, align 8
+  %157 = load i64, i64* %154, align 8
+  %158 = call i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator"* %156) #3
+  %159 = icmp ugt i64 %157, %158
+  store i32 427038159, i32* %18
+  br label %177
+
+; <label>:160:                                    ; preds = %19
+  call void @_ZSt17__throw_bad_allocv() #12
+  store i32 -183232704, i32* %18
+  br label %177
+
+; <label>:161:                                    ; preds = %19
+  %162 = load volatile i64*, i64** %6
+  %163 = load i64, i64* %162, align 8
+  %164 = sub i64 0, 4
+  %165 = add i64 %163, %164
+  %166 = sub i64 %163, 4
+  %167 = mul i64 %165, 4
+  %168 = shl i64 %163, 4
+  %169 = sub i64 %163, -6521659489686602896
+  %170 = sub i64 %169, 4
+  %171 = add i64 %170, -6521659489686602896
+  %172 = sub i64 %163, 4
+  %173 = mul i64 %171, 4
+  %174 = mul i64 %163, 4
+  %175 = call i8* @_Znwm(i64 %174)
+  %176 = bitcast i8* %175 to i32*
+  store i32 127979413, i32* %18
+  br label %177
+
+; <label>:177:                                    ; preds = %161, %160, %152, %117, %102, %85, %57, %54, %30, %22, %21
+  br label %19
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  ret i64 4611686018427387903
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi(%"class.std::_Deque_base"*, i32*) #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = load i32, i32* @x.98
+  %4 = load i32, i32* @y.99
+  %5 = add i32 %3, 418063423
+  %6 = sub i32 %5, 1
+  %7 = sub i32 %6, 418063423
+  %8 = sub i32 %3, 1
+  %9 = mul i32 %3, %7
+  %10 = urem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  %12 = icmp slt i32 %4, 10
+  %13 = and i1 %11, %12
+  %14 = xor i1 %11, %12
+  %15 = or i1 %13, %14
+  %16 = or i1 %11, %12
+  br i1 %15, label %17, label %138
+
+; <label>:17:                                     ; preds = %2, %138
+  %18 = alloca %"class.std::_Deque_base"*, align 8
+  %19 = alloca i32*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %18, align 8
+  store i32* %1, i32** %19, align 8
+  %20 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %18, align 8
+  %21 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %20, i32 0, i32 0
+  %22 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %21 to %"class.std::allocator"*
+  %23 = load i32*, i32** %19, align 8
+  %24 = load i32, i32* @x.98
+  %25 = load i32, i32* @y.99
+  %26 = sub i32 0, 1
+  %27 = add i32 %24, %26
+  %28 = sub i32 %24, 1
+  %29 = mul i32 %24, %27
+  %30 = urem i32 %29, 2
+  %31 = icmp eq i32 %30, 0
+  %32 = icmp slt i32 %25, 10
+  %33 = and i1 %31, %32
+  %34 = xor i1 %31, %32
+  %35 = or i1 %33, %34
+  %36 = or i1 %31, %32
+  br i1 %35, label %37, label %138
+
+; <label>:37:                                     ; preds = %17
+  %38 = invoke i64 @_ZSt16__deque_buf_sizem(i64 4)
+          to label %39 unwind label %94
+
+; <label>:39:                                     ; preds = %37
+  %40 = load i32, i32* @x.98
+  %41 = load i32, i32* @y.99
+  %42 = sub i32 0, 1
+  %43 = add i32 %40, %42
+  %44 = sub i32 %40, 1
+  %45 = mul i32 %40, %43
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %41, 10
+  %49 = xor i1 %47, true
+  %50 = xor i1 %48, true
+  %51 = xor i1 false, true
+  %52 = and i1 %49, false
+  %53 = and i1 %47, %51
+  %54 = and i1 %50, false
+  %55 = and i1 %48, %51
+  %56 = or i1 %52, %53
+  %57 = or i1 %54, %55
+  %58 = xor i1 %56, %57
+  %59 = or i1 %49, %50
+  %60 = xor i1 %59, true
+  %61 = or i1 false, %51
+  %62 = and i1 %60, %61
+  %63 = or i1 %58, %62
+  %64 = or i1 %47, %48
+  br i1 %63, label %65, label %145
+
+; <label>:65:                                     ; preds = %39, %145
+  %66 = load i32, i32* @x.98
+  %67 = load i32, i32* @y.99
+  %68 = sub i32 %66, 3787211
+  %69 = sub i32 %68, 1
+  %70 = add i32 %69, 3787211
+  %71 = sub i32 %66, 1
+  %72 = mul i32 %66, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %67, 10
+  %76 = xor i1 %74, true
+  %77 = xor i1 %75, true
+  %78 = xor i1 true, true
+  %79 = and i1 %76, true
+  %80 = and i1 %74, %78
+  %81 = and i1 %77, true
+  %82 = and i1 %75, %78
+  %83 = or i1 %79, %80
+  %84 = or i1 %81, %82
+  %85 = xor i1 %83, %84
+  %86 = or i1 %76, %77
+  %87 = xor i1 %86, true
+  %88 = or i1 true, %78
+  %89 = and i1 %87, %88
+  %90 = or i1 %85, %89
+  %91 = or i1 %74, %75
+  br i1 %90, label %92, label %145
+
+; <label>:92:                                     ; preds = %65
+  invoke void @_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim(%"class.std::allocator"* dereferenceable(1) %22, i32* %23, i64 %38)
+          to label %93 unwind label %94
+
+; <label>:93:                                     ; preds = %92
+  ret void
+
+; <label>:94:                                     ; preds = %92, %37
+  %95 = load i32, i32* @x.98
+  %96 = load i32, i32* @y.99
+  %97 = sub i32 0, 1
+  %98 = add i32 %95, %97
+  %99 = sub i32 %95, 1
+  %100 = mul i32 %95, %98
+  %101 = urem i32 %100, 2
+  %102 = icmp eq i32 %101, 0
+  %103 = icmp slt i32 %96, 10
+  %104 = and i1 %102, %103
+  %105 = xor i1 %102, %103
+  %106 = or i1 %104, %105
+  %107 = or i1 %102, %103
+  br i1 %106, label %108, label %146
+
+; <label>:108:                                    ; preds = %94, %146
+  %109 = landingpad { i8*, i32 }
+          catch i8* null
+  %110 = extractvalue { i8*, i32 } %109, 0
+  call void @__clang_call_terminate(i8* %110) #11
+  %111 = load i32, i32* @x.98
+  %112 = load i32, i32* @y.99
+  %113 = add i32 %111, -1065815662
+  %114 = sub i32 %113, 1
+  %115 = sub i32 %114, -1065815662
+  %116 = sub i32 %111, 1
+  %117 = mul i32 %111, %115
+  %118 = urem i32 %117, 2
+  %119 = icmp eq i32 %118, 0
+  %120 = icmp slt i32 %112, 10
+  %121 = xor i1 %119, true
+  %122 = xor i1 %120, true
+  %123 = xor i1 false, true
+  %124 = and i1 %121, false
+  %125 = and i1 %119, %123
+  %126 = and i1 %122, false
+  %127 = and i1 %120, %123
+  %128 = or i1 %124, %125
+  %129 = or i1 %126, %127
+  %130 = xor i1 %128, %129
+  %131 = or i1 %121, %122
+  %132 = xor i1 %131, true
+  %133 = or i1 false, %123
+  %134 = and i1 %132, %133
+  %135 = or i1 %130, %134
+  %136 = or i1 %119, %120
+  br i1 %135, label %137, label %146
+
+; <label>:137:                                    ; preds = %108
+  unreachable
+
+; <label>:138:                                    ; preds = %17, %2
+  %139 = alloca %"class.std::_Deque_base"*, align 8
+  %140 = alloca i32*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %139, align 8
+  store i32* %1, i32** %140, align 8
+  %141 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %139, align 8
+  %142 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %141, i32 0, i32 0
+  %143 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %142 to %"class.std::allocator"*
+  %144 = load i32*, i32** %140, align 8
+  br label %17
+
+; <label>:145:                                    ; preds = %65, %39
+  br label %65
+
+; <label>:146:                                    ; preds = %108, %94
+  %147 = landingpad { i8*, i32 }
+          catch i8* null
+  %148 = extractvalue { i8*, i32 } %147, 0
+  call void @__clang_call_terminate(i8* %148) #11
+  br label %108
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim(%"class.std::allocator"* dereferenceable(1), i32*, i64) #0 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.100
+  %7 = load i32, i32* @y.101
+  %8 = add i32 %6, 287026254
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, 287026254
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 323173270, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %72
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 323173270, label %20
+    i32 -1126013887, label %40
+    i32 212039492, label %63
+    i32 -1108260696, label %64
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %72
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 -1126013887, i32 -1108260696
+  store i32 %39, i32* %16
+  br label %72
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.std::allocator"*, align 8
+  %42 = alloca i32*, align 8
+  %43 = alloca i64, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %41, align 8
+  store i32* %1, i32** %42, align 8
+  store i64 %2, i64* %43, align 8
+  %44 = load %"class.std::allocator"*, %"class.std::allocator"** %41, align 8
+  %45 = bitcast %"class.std::allocator"* %44 to %"class.__gnu_cxx::new_allocator"*
+  %46 = load i32*, i32** %42, align 8
+  %47 = load i64, i64* %43, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim(%"class.__gnu_cxx::new_allocator"* %45, i32* %46, i64 %47)
+  %48 = load i32, i32* @x.100
+  %49 = load i32, i32* @y.101
+  %50 = sub i32 %48, 1878126109
+  %51 = sub i32 %50, 1
+  %52 = add i32 %51, 1878126109
+  %53 = sub i32 %48, 1
+  %54 = mul i32 %48, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %49, 10
+  %58 = and i1 %56, %57
+  %59 = xor i1 %56, %57
+  %60 = or i1 %58, %59
+  %61 = or i1 %56, %57
+  %62 = select i1 %60, i32 212039492, i32 -1108260696
+  store i32 %62, i32* %16
+  br label %72
+
+; <label>:63:                                     ; preds = %17
+  ret void
+
+; <label>:64:                                     ; preds = %17
+  %65 = alloca %"class.std::allocator"*, align 8
+  %66 = alloca i32*, align 8
+  %67 = alloca i64, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %65, align 8
+  store i32* %1, i32** %66, align 8
+  store i64 %2, i64* %67, align 8
+  %68 = load %"class.std::allocator"*, %"class.std::allocator"** %65, align 8
+  %69 = bitcast %"class.std::allocator"* %68 to %"class.__gnu_cxx::new_allocator"*
+  %70 = load i32*, i32** %66, align 8
+  %71 = load i64, i64* %67, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim(%"class.__gnu_cxx::new_allocator"* %69, i32* %70, i64 %71)
+  store i32 -1126013887, i32* %16
+  br label %72
+
+; <label>:72:                                     ; preds = %64, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim(%"class.__gnu_cxx::new_allocator"*, i32*, i64) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  %9 = bitcast i32* %8 to i8*
+  call void @_ZdlPv(i8* %9) #3
+  ret void
+}
+
+; Function Attrs: nobuiltin nounwind
+declare void @_ZdlPv(i8*) #10
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIPiEE10deallocateERS1_PS0_m(%"class.std::allocator.0"* dereferenceable(1), i32**, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::allocator.0"*, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::allocator.0"* %0, %"class.std::allocator.0"** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::allocator.0"*, %"class.std::allocator.0"** %4, align 8
+  %8 = bitcast %"class.std::allocator.0"* %7 to %"class.__gnu_cxx::new_allocator.1"*
+  %9 = load i32**, i32*** %5, align 8
+  %10 = load i64, i64* %6, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIPiE10deallocateEPS1_m(%"class.__gnu_cxx::new_allocator.1"* %8, i32** %9, i64 %10)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIPiE10deallocateEPS1_m(%"class.__gnu_cxx::new_allocator.1"*, i32**, i64) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.106
+  %7 = load i32, i32* @y.107
+  %8 = add i32 %6, 984757660
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, 984757660
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 890553346, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %70
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 890553346, label %20
+    i32 -322683736, label %40
+    i32 -850975599, label %62
+    i32 500316451, label %63
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %70
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 -322683736, i32 500316451
+  store i32 %39, i32* %16
+  br label %70
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  %42 = alloca i32**, align 8
+  %43 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %41, align 8
+  store i32** %1, i32*** %42, align 8
+  store i64 %2, i64* %43, align 8
+  %44 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %41, align 8
+  %45 = load i32**, i32*** %42, align 8
+  %46 = bitcast i32** %45 to i8*
+  call void @_ZdlPv(i8* %46) #3
+  %47 = load i32, i32* @x.106
+  %48 = load i32, i32* @y.107
+  %49 = add i32 %47, 277996819
+  %50 = sub i32 %49, 1
+  %51 = sub i32 %50, 277996819
+  %52 = sub i32 %47, 1
+  %53 = mul i32 %47, %51
+  %54 = urem i32 %53, 2
+  %55 = icmp eq i32 %54, 0
+  %56 = icmp slt i32 %48, 10
+  %57 = and i1 %55, %56
+  %58 = xor i1 %55, %56
+  %59 = or i1 %57, %58
+  %60 = or i1 %55, %56
+  %61 = select i1 %59, i32 -850975599, i32 500316451
+  store i32 %61, i32* %16
+  br label %70
+
+; <label>:62:                                     ; preds = %17
+  ret void
+
+; <label>:63:                                     ; preds = %17
+  %64 = alloca %"class.__gnu_cxx::new_allocator.1"*, align 8
+  %65 = alloca i32**, align 8
+  %66 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.1"* %0, %"class.__gnu_cxx::new_allocator.1"** %64, align 8
+  store i32** %1, i32*** %65, align 8
+  store i64 %2, i64* %66, align 8
+  %67 = load %"class.__gnu_cxx::new_allocator.1"*, %"class.__gnu_cxx::new_allocator.1"** %64, align 8
+  %68 = load i32**, i32*** %65, align 8
+  %69 = bitcast i32** %68 to i8*
+  call void @_ZdlPv(i8* %69) #3
+  store i32 -322683736, i32* %16
+  br label %70
+
+; <label>:70:                                     ; preds = %63, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNSt15_Deque_iteratorIiRiPiE14_S_buffer_sizeEv() #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = load i32, i32* @x.108
+  %2 = load i32, i32* @y.109
+  %3 = sub i32 0, 1
+  %4 = add i32 %1, %3
+  %5 = sub i32 %1, 1
+  %6 = mul i32 %1, %4
+  %7 = urem i32 %6, 2
+  %8 = icmp eq i32 %7, 0
+  %9 = icmp slt i32 %2, 10
+  %10 = xor i1 %8, true
+  %11 = xor i1 %9, true
+  %12 = xor i1 false, true
+  %13 = and i1 %10, false
+  %14 = and i1 %8, %12
+  %15 = and i1 %11, false
+  %16 = and i1 %9, %12
+  %17 = or i1 %13, %14
+  %18 = or i1 %15, %16
+  %19 = xor i1 %17, %18
+  %20 = or i1 %10, %11
+  %21 = xor i1 %20, true
+  %22 = or i1 false, %12
+  %23 = and i1 %21, %22
+  %24 = or i1 %19, %23
+  %25 = or i1 %8, %9
+  br i1 %24, label %26, label %99
+
+; <label>:26:                                     ; preds = %0, %99
+  %27 = load i32, i32* @x.108
+  %28 = load i32, i32* @y.109
+  %29 = sub i32 0, 1
+  %30 = add i32 %27, %29
+  %31 = sub i32 %27, 1
+  %32 = mul i32 %27, %30
+  %33 = urem i32 %32, 2
+  %34 = icmp eq i32 %33, 0
+  %35 = icmp slt i32 %28, 10
+  %36 = and i1 %34, %35
+  %37 = xor i1 %34, %35
+  %38 = or i1 %36, %37
+  %39 = or i1 %34, %35
+  br i1 %38, label %40, label %99
+
+; <label>:40:                                     ; preds = %26
+  %41 = invoke i64 @_ZSt16__deque_buf_sizem(i64 4)
+          to label %42 unwind label %43
+
+; <label>:42:                                     ; preds = %40
+  ret i64 %41
+
+; <label>:43:                                     ; preds = %40
+  %44 = load i32, i32* @x.108
+  %45 = load i32, i32* @y.109
+  %46 = sub i32 0, 1
+  %47 = add i32 %44, %46
+  %48 = sub i32 %44, 1
+  %49 = mul i32 %44, %47
+  %50 = urem i32 %49, 2
+  %51 = icmp eq i32 %50, 0
+  %52 = icmp slt i32 %45, 10
+  %53 = xor i1 %51, true
+  %54 = xor i1 %52, true
+  %55 = xor i1 false, true
+  %56 = and i1 %53, false
+  %57 = and i1 %51, %55
+  %58 = and i1 %54, false
+  %59 = and i1 %52, %55
+  %60 = or i1 %56, %57
+  %61 = or i1 %58, %59
+  %62 = xor i1 %60, %61
+  %63 = or i1 %53, %54
+  %64 = xor i1 %63, true
+  %65 = or i1 false, %55
+  %66 = and i1 %64, %65
+  %67 = or i1 %62, %66
+  %68 = or i1 %51, %52
+  br i1 %67, label %69, label %100
+
+; <label>:69:                                     ; preds = %43, %100
+  %70 = landingpad { i8*, i32 }
+          catch i8* null
+  %71 = extractvalue { i8*, i32 } %70, 0
+  call void @__clang_call_terminate(i8* %71) #11
+  %72 = load i32, i32* @x.108
+  %73 = load i32, i32* @y.109
+  %74 = add i32 %72, -624739661
+  %75 = sub i32 %74, 1
+  %76 = sub i32 %75, -624739661
+  %77 = sub i32 %72, 1
+  %78 = mul i32 %72, %76
+  %79 = urem i32 %78, 2
+  %80 = icmp eq i32 %79, 0
+  %81 = icmp slt i32 %73, 10
+  %82 = xor i1 %80, true
+  %83 = xor i1 %81, true
+  %84 = xor i1 true, true
+  %85 = and i1 %82, true
+  %86 = and i1 %80, %84
+  %87 = and i1 %83, true
+  %88 = and i1 %81, %84
+  %89 = or i1 %85, %86
+  %90 = or i1 %87, %88
+  %91 = xor i1 %89, %90
+  %92 = or i1 %82, %83
+  %93 = xor i1 %92, true
+  %94 = or i1 true, %84
+  %95 = and i1 %93, %94
+  %96 = or i1 %91, %95
+  %97 = or i1 %80, %81
+  br i1 %96, label %98, label %100
+
+; <label>:98:                                     ; preds = %69
+  unreachable
+
+; <label>:99:                                     ; preds = %26, %0
+  br label %26
+
+; <label>:100:                                    ; preds = %69, %43
+  %101 = landingpad { i8*, i32 }
+          catch i8* null
+  %102 = extractvalue { i8*, i32 } %101, 0
+  call void @__clang_call_terminate(i8* %102) #11
+  br label %69
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiED2Ev(%"class.std::allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %2, align 8
+  %3 = load %"class.std::allocator"*, %"class.std::allocator"** %2, align 8
+  %4 = bitcast %"class.std::allocator"* %3 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiED2Ev(%"class.__gnu_cxx::new_allocator"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiED2Ev(%"class.__gnu_cxx::new_allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE15_M_destroy_dataESt15_Deque_iteratorIiRiPiES5_RKS0_(%"class.std::deque"*, %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"*, %"class.std::allocator"* dereferenceable(1)) #4 comdat align 2 {
+  %5 = alloca %"class.std::deque"*, align 8
+  %6 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %5, align 8
+  store %"class.std::allocator"* %3, %"class.std::allocator"** %6, align 8
+  %7 = load %"class.std::deque"*, %"class.std::deque"** %5, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE5beginEv(%"struct.std::_Deque_iterator"* noalias sret, %"class.std::deque"*) #4 comdat align 2 {
+  %3 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %1, %"class.std::deque"** %3, align 8
+  %4 = load %"class.std::deque"*, %"class.std::deque"** %3, align 8
+  %5 = bitcast %"class.std::deque"* %4 to %"class.std::_Deque_base"*
+  %6 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %5, i32 0, i32 0
+  %7 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %6, i32 0, i32 2
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2ERKS2_(%"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"* dereferenceable(32) %7) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE3endEv(%"struct.std::_Deque_iterator"* noalias sret, %"class.std::deque"*) #4 comdat align 2 {
+  %3 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %1, %"class.std::deque"** %3, align 8
+  %4 = load %"class.std::deque"*, %"class.std::deque"** %3, align 8
+  %5 = bitcast %"class.std::deque"* %4 to %"class.std::_Deque_base"*
+  %6 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %5, i32 0, i32 0
+  %7 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %6, i32 0, i32 3
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2ERKS2_(%"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"* dereferenceable(32) %7) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator"* @_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %2, align 8
+  %3 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %3, i32 0, i32 0
+  %5 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %4 to %"class.std::allocator"*
+  ret %"class.std::allocator"* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEED2Ev(%"class.std::_Deque_base"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca %"class.std::_Deque_base"*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.122
+  %7 = load i32, i32* @y.123
+  %8 = sub i32 %6, -1721289477
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -1721289477
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 -399677791, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %1, %97
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -399677791, label %20
+    i32 -580776249, label %40
+    i32 -1995868175, label %62
+    i32 -1075272638, label %65
+    i32 1379585576, label %87
+    i32 -2106721016, label %90
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %97
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 true, true
+  %26 = and i1 %23, true
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, true
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 true, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 -580776249, i32 -2106721016
+  store i32 %39, i32* %16
+  br label %97
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %41, align 8
+  %42 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %41, align 8
+  store %"class.std::_Deque_base"* %42, %"class.std::_Deque_base"** %3
+  %43 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %44 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %43, i32 0, i32 0
+  %45 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %44, i32 0, i32 0
+  %46 = load i32**, i32*** %45, align 8
+  %47 = icmp ne i32** %46, null
+  store i1 %47, i1* %2
+  %48 = load i32, i32* @x.122
+  %49 = load i32, i32* @y.123
+  %50 = sub i32 0, 1
+  %51 = add i32 %48, %50
+  %52 = sub i32 %48, 1
+  %53 = mul i32 %48, %51
+  %54 = urem i32 %53, 2
+  %55 = icmp eq i32 %54, 0
+  %56 = icmp slt i32 %49, 10
+  %57 = and i1 %55, %56
+  %58 = xor i1 %55, %56
+  %59 = or i1 %57, %58
+  %60 = or i1 %55, %56
+  %61 = select i1 %59, i32 -1995868175, i32 -2106721016
+  store i32 %61, i32* %16
+  br label %97
+
+; <label>:62:                                     ; preds = %17
+  %63 = load volatile i1, i1* %2
+  %64 = select i1 %63, i32 -1075272638, i32 1379585576
+  store i32 %64, i32* %16
+  br label %97
+
+; <label>:65:                                     ; preds = %17
+  %66 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %67 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %66, i32 0, i32 0
+  %68 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %67, i32 0, i32 2
+  %69 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %68, i32 0, i32 3
+  %70 = load i32**, i32*** %69, align 8
+  %71 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %72 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %71, i32 0, i32 0
+  %73 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %72, i32 0, i32 3
+  %74 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %73, i32 0, i32 3
+  %75 = load i32**, i32*** %74, align 8
+  %76 = getelementptr inbounds i32*, i32** %75, i64 1
+  %77 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  call void @_ZNSt11_Deque_baseIiSaIiEE16_M_destroy_nodesEPPiS3_(%"class.std::_Deque_base"* %77, i32** %70, i32** %76) #3
+  %78 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %79 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %78, i32 0, i32 0
+  %80 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %79, i32 0, i32 0
+  %81 = load i32**, i32*** %80, align 8
+  %82 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %83 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %82, i32 0, i32 0
+  %84 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %83, i32 0, i32 1
+  %85 = load i64, i64* %84, align 8
+  %86 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  call void @_ZNSt11_Deque_baseIiSaIiEE17_M_deallocate_mapEPPim(%"class.std::_Deque_base"* %86, i32** %81, i64 %85) #3
+  store i32 1379585576, i32* %16
+  br label %97
+
+; <label>:87:                                     ; preds = %17
+  %88 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3
+  %89 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %88, i32 0, i32 0
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %89) #3
+  ret void
+
+; <label>:90:                                     ; preds = %17
+  %91 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %91, align 8
+  %92 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %91, align 8
+  %93 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %92, i32 0, i32 0
+  %94 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %93, i32 0, i32 0
+  %95 = load i32**, i32*** %94, align 8
+  %96 = icmp ne i32** %95, null
+  store i32 -580776249, i32* %16
+  br label %97
+
+; <label>:97:                                     ; preds = %90, %65, %62, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt15_Deque_iteratorIiRiPiEC2ERKS2_(%"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"* dereferenceable(32)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.124
+  %6 = load i32, i32* @y.125
+  %7 = add i32 %5, -389224629
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, -389224629
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 85005825, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %107
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 85005825, label %19
+    i32 -911644905, label %39
+    i32 -529577073, label %86
+    i32 -413072336, label %87
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %107
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -911644905, i32 -413072336
+  store i32 %38, i32* %15
+  br label %107
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %41 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %40, align 8
+  store %"struct.std::_Deque_iterator"* %1, %"struct.std::_Deque_iterator"** %41, align 8
+  %42 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %40, align 8
+  %43 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %42, i32 0, i32 0
+  %44 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %41, align 8
+  %45 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %44, i32 0, i32 0
+  %46 = load i32*, i32** %45, align 8
+  store i32* %46, i32** %43, align 8
+  %47 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %42, i32 0, i32 1
+  %48 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %41, align 8
+  %49 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %48, i32 0, i32 1
+  %50 = load i32*, i32** %49, align 8
+  store i32* %50, i32** %47, align 8
+  %51 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %42, i32 0, i32 2
+  %52 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %41, align 8
+  %53 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %52, i32 0, i32 2
+  %54 = load i32*, i32** %53, align 8
+  store i32* %54, i32** %51, align 8
+  %55 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %42, i32 0, i32 3
+  %56 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %41, align 8
+  %57 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %56, i32 0, i32 3
+  %58 = load i32**, i32*** %57, align 8
+  store i32** %58, i32*** %55, align 8
+  %59 = load i32, i32* @x.124
+  %60 = load i32, i32* @y.125
+  %61 = sub i32 %59, 1924310540
+  %62 = sub i32 %61, 1
+  %63 = add i32 %62, 1924310540
+  %64 = sub i32 %59, 1
+  %65 = mul i32 %59, %63
+  %66 = urem i32 %65, 2
+  %67 = icmp eq i32 %66, 0
+  %68 = icmp slt i32 %60, 10
+  %69 = xor i1 %67, true
+  %70 = xor i1 %68, true
+  %71 = xor i1 false, true
+  %72 = and i1 %69, false
+  %73 = and i1 %67, %71
+  %74 = and i1 %70, false
+  %75 = and i1 %68, %71
+  %76 = or i1 %72, %73
+  %77 = or i1 %74, %75
+  %78 = xor i1 %76, %77
+  %79 = or i1 %69, %70
+  %80 = xor i1 %79, true
+  %81 = or i1 false, %71
+  %82 = and i1 %80, %81
+  %83 = or i1 %78, %82
+  %84 = or i1 %67, %68
+  %85 = select i1 %83, i32 -529577073, i32 -413072336
+  store i32 %85, i32* %15
+  br label %107
+
+; <label>:86:                                     ; preds = %16
+  ret void
+
+; <label>:87:                                     ; preds = %16
+  %88 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %89 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %88, align 8
+  store %"struct.std::_Deque_iterator"* %1, %"struct.std::_Deque_iterator"** %89, align 8
+  %90 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %88, align 8
+  %91 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %90, i32 0, i32 0
+  %92 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %89, align 8
+  %93 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %92, i32 0, i32 0
+  %94 = load i32*, i32** %93, align 8
+  store i32* %94, i32** %91, align 8
+  %95 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %90, i32 0, i32 1
+  %96 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %89, align 8
+  %97 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %96, i32 0, i32 1
+  %98 = load i32*, i32** %97, align 8
+  store i32* %98, i32** %95, align 8
+  %99 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %90, i32 0, i32 2
+  %100 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %89, align 8
+  %101 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %100, i32 0, i32 2
+  %102 = load i32*, i32** %101, align 8
+  store i32* %102, i32** %99, align 8
+  %103 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %90, i32 0, i32 3
+  %104 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %89, align 8
+  %105 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %104, i32 0, i32 3
+  %106 = load i32**, i32*** %105, align 8
+  store i32** %106, i32*** %103, align 8
+  store i32 -911644905, i32* %15
+  br label %107
+
+; <label>:107:                                    ; preds = %87, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(80) %"class.std::deque"* @_ZSt4moveIRSt5dequeIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::deque"* dereferenceable(80)) #4 comdat {
+  %2 = alloca %"class.std::deque"*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.126
+  %6 = load i32, i32* @y.127
+  %7 = sub i32 %5, -634363877
+  %8 = sub i32 %7, 1
+  %9 = add i32 %8, -634363877
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -1941199364, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %62
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -1941199364, label %19
+    i32 -2056156501, label %39
+    i32 -624034262, label %57
+    i32 521120205, label %59
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %62
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -2056156501, i32 521120205
+  store i32 %38, i32* %15
+  br label %62
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %40, align 8
+  %41 = load %"class.std::deque"*, %"class.std::deque"** %40, align 8
+  store %"class.std::deque"* %41, %"class.std::deque"** %2
+  %42 = load i32, i32* @x.126
+  %43 = load i32, i32* @y.127
+  %44 = sub i32 %42, -1961593595
+  %45 = sub i32 %44, 1
+  %46 = add i32 %45, -1961593595
+  %47 = sub i32 %42, 1
+  %48 = mul i32 %42, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %43, 10
+  %52 = and i1 %50, %51
+  %53 = xor i1 %50, %51
+  %54 = or i1 %52, %53
+  %55 = or i1 %50, %51
+  %56 = select i1 %54, i32 -624034262, i32 521120205
+  store i32 %56, i32* %15
+  br label %62
+
+; <label>:57:                                     ; preds = %16
+  %58 = load volatile %"class.std::deque"*, %"class.std::deque"** %2
+  ret %"class.std::deque"* %58
+
+; <label>:59:                                     ; preds = %16
+  %60 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %60, align 8
+  %61 = load %"class.std::deque"*, %"class.std::deque"** %60, align 8
+  store i32 -2056156501, i32* %15
+  br label %62
+
+; <label>:62:                                     ; preds = %59, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEEC2EOS1_(%"class.std::deque"*, %"class.std::deque"* dereferenceable(80)) unnamed_addr #0 comdat align 2 {
+  %3 = alloca %"class.std::deque"*, align 8
+  %4 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %3, align 8
+  store %"class.std::deque"* %1, %"class.std::deque"** %4, align 8
+  %5 = load %"class.std::deque"*, %"class.std::deque"** %3, align 8
+  %6 = bitcast %"class.std::deque"* %5 to %"class.std::_Deque_base"*
+  %7 = load %"class.std::deque"*, %"class.std::deque"** %4, align 8
+  %8 = call dereferenceable(80) %"class.std::deque"* @_ZSt4moveIRSt5dequeIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::deque"* dereferenceable(80) %7) #3
+  %9 = bitcast %"class.std::deque"* %8 to %"class.std::_Deque_base"*
+  call void @_ZNSt11_Deque_baseIiSaIiEEC2EOS1_(%"class.std::_Deque_base"* %6, %"class.std::_Deque_base"* dereferenceable(80) %9)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEEC2EOS1_(%"class.std::_Deque_base"*, %"class.std::_Deque_base"* dereferenceable(80)) unnamed_addr #0 comdat align 2 {
+  %3 = alloca %"class.std::_Deque_base"*, align 8
+  %4 = alloca %"class.std::_Deque_base"*, align 8
+  %5 = alloca %"struct.std::integral_constant", align 1
+  %6 = alloca %"struct.__gnu_cxx::__allocator_always_compares_equal", align 1
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %3, align 8
+  store %"class.std::_Deque_base"* %1, %"class.std::_Deque_base"** %4, align 8
+  %7 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %3, align 8
+  %8 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %4, align 8
+  %9 = call dereferenceable(80) %"class.std::_Deque_base"* @_ZSt4moveIRSt11_Deque_baseIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::_Deque_base"* dereferenceable(80) %8) #3
+  %10 = bitcast %"struct.__gnu_cxx::__allocator_always_compares_equal"* %6 to %"struct.std::integral_constant"*
+  call void @_ZNSt11_Deque_baseIiSaIiEEC2EOS1_St17integral_constantIbLb1EE(%"class.std::_Deque_base"* %7, %"class.std::_Deque_base"* dereferenceable(80) %9)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(80) %"class.std::_Deque_base"* @_ZSt4moveIRSt11_Deque_baseIiSaIiEEEONSt16remove_referenceIT_E4typeEOS5_(%"class.std::_Deque_base"* dereferenceable(80)) #4 comdat {
+  %2 = alloca %"class.std::_Deque_base"*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.132
+  %6 = load i32, i32* @y.133
+  %7 = add i32 %5, -1157305739
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, -1157305739
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -1191020323, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %62
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -1191020323, label %19
+    i32 -1397616543, label %39
+    i32 -1756376218, label %57
+    i32 -1173325561, label %59
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %62
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -1397616543, i32 -1173325561
+  store i32 %38, i32* %15
+  br label %62
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %40, align 8
+  %41 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %40, align 8
+  store %"class.std::_Deque_base"* %41, %"class.std::_Deque_base"** %2
+  %42 = load i32, i32* @x.132
+  %43 = load i32, i32* @y.133
+  %44 = add i32 %42, 1145580665
+  %45 = sub i32 %44, 1
+  %46 = sub i32 %45, 1145580665
+  %47 = sub i32 %42, 1
+  %48 = mul i32 %42, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %43, 10
+  %52 = and i1 %50, %51
+  %53 = xor i1 %50, %51
+  %54 = or i1 %52, %53
+  %55 = or i1 %50, %51
+  %56 = select i1 %54, i32 -1756376218, i32 -1173325561
+  store i32 %56, i32* %15
+  br label %62
+
+; <label>:57:                                     ; preds = %16
+  %58 = load volatile %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %2
+  ret %"class.std::_Deque_base"* %58
+
+; <label>:59:                                     ; preds = %16
+  %60 = alloca %"class.std::_Deque_base"*, align 8
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %60, align 8
+  %61 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %60, align 8
+  store i32 -1397616543, i32* %15
+  br label %62
+
+; <label>:62:                                     ; preds = %59, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEEC2EOS1_St17integral_constantIbLb1EE(%"class.std::_Deque_base"*, %"class.std::_Deque_base"* dereferenceable(80)) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = alloca %"struct.std::integral_constant", align 1
+  %4 = alloca %"class.std::_Deque_base"*, align 8
+  %5 = alloca %"class.std::_Deque_base"*, align 8
+  %6 = alloca i8*
+  %7 = alloca i32
+  store %"class.std::_Deque_base"* %0, %"class.std::_Deque_base"** %4, align 8
+  store %"class.std::_Deque_base"* %1, %"class.std::_Deque_base"** %5, align 8
+  %8 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %4, align 8
+  %9 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %8, i32 0, i32 0
+  %10 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5, align 8
+  %11 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"* %10) #3
+  %12 = call dereferenceable(1) %"class.std::allocator"* @_ZSt4moveIRSaIiEEONSt16remove_referenceIT_E4typeEOS3_(%"class.std::allocator"* dereferenceable(1) %11) #3
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2EOS0_(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %9, %"class.std::allocator"* dereferenceable(1) %12) #3
+  invoke void @_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEm(%"class.std::_Deque_base"* %8, i64 0)
+          to label %13 unwind label %94
+
+; <label>:13:                                     ; preds = %2
+  %14 = load i32, i32* @x.134
+  %15 = load i32, i32* @y.135
+  %16 = add i32 %14, -732647483
+  %17 = sub i32 %16, 1
+  %18 = sub i32 %17, -732647483
+  %19 = sub i32 %14, 1
+  %20 = mul i32 %14, %18
+  %21 = urem i32 %20, 2
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %15, 10
+  %24 = xor i1 %22, true
+  %25 = xor i1 %23, true
+  %26 = xor i1 true, true
+  %27 = and i1 %24, true
+  %28 = and i1 %22, %26
+  %29 = and i1 %25, true
+  %30 = and i1 %23, %26
+  %31 = or i1 %27, %28
+  %32 = or i1 %29, %30
+  %33 = xor i1 %31, %32
+  %34 = or i1 %24, %25
+  %35 = xor i1 %34, true
+  %36 = or i1 true, %26
+  %37 = and i1 %35, %36
+  %38 = or i1 %33, %37
+  %39 = or i1 %22, %23
+  br i1 %38, label %40, label %158
+
+; <label>:40:                                     ; preds = %13, %158
+  %41 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5, align 8
+  %42 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %41, i32 0, i32 0
+  %43 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 0
+  %44 = load i32**, i32*** %43, align 8
+  %45 = icmp ne i32** %44, null
+  %46 = load i32, i32* @x.134
+  %47 = load i32, i32* @y.135
+  %48 = add i32 %46, -947515273
+  %49 = sub i32 %48, 1
+  %50 = sub i32 %49, -947515273
+  %51 = sub i32 %46, 1
+  %52 = mul i32 %46, %50
+  %53 = urem i32 %52, 2
+  %54 = icmp eq i32 %53, 0
+  %55 = icmp slt i32 %47, 10
+  %56 = and i1 %54, %55
+  %57 = xor i1 %54, %55
+  %58 = or i1 %56, %57
+  %59 = or i1 %54, %55
+  br i1 %58, label %60, label %158
+
+; <label>:60:                                     ; preds = %40
+  br i1 %45, label %61, label %152
+
+; <label>:61:                                     ; preds = %60
+  %62 = load i32, i32* @x.134
+  %63 = load i32, i32* @y.135
+  %64 = sub i32 0, 1
+  %65 = add i32 %62, %64
+  %66 = sub i32 %62, 1
+  %67 = mul i32 %62, %65
+  %68 = urem i32 %67, 2
+  %69 = icmp eq i32 %68, 0
+  %70 = icmp slt i32 %63, 10
+  %71 = and i1 %69, %70
+  %72 = xor i1 %69, %70
+  %73 = or i1 %71, %72
+  %74 = or i1 %69, %70
+  br i1 %73, label %75, label %164
+
+; <label>:75:                                     ; preds = %61, %164
+  %76 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %8, i32 0, i32 0
+  %77 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5, align 8
+  %78 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %77, i32 0, i32 0
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_impl12_M_swap_dataERS2_(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %76, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* dereferenceable(80) %78) #3
+  %79 = load i32, i32* @x.134
+  %80 = load i32, i32* @y.135
+  %81 = sub i32 %79, -973867676
+  %82 = sub i32 %81, 1
+  %83 = add i32 %82, -973867676
+  %84 = sub i32 %79, 1
+  %85 = mul i32 %79, %83
+  %86 = urem i32 %85, 2
+  %87 = icmp eq i32 %86, 0
+  %88 = icmp slt i32 %80, 10
+  %89 = and i1 %87, %88
+  %90 = xor i1 %87, %88
+  %91 = or i1 %89, %90
+  %92 = or i1 %87, %88
+  br i1 %91, label %93, label %164
+
+; <label>:93:                                     ; preds = %75
+  br label %152
+
+; <label>:94:                                     ; preds = %2
+  %95 = load i32, i32* @x.134
+  %96 = load i32, i32* @y.135
+  %97 = sub i32 %95, 348922027
+  %98 = sub i32 %97, 1
+  %99 = add i32 %98, 348922027
+  %100 = sub i32 %95, 1
+  %101 = mul i32 %95, %99
+  %102 = urem i32 %101, 2
+  %103 = icmp eq i32 %102, 0
+  %104 = icmp slt i32 %96, 10
+  %105 = xor i1 %103, true
+  %106 = xor i1 %104, true
+  %107 = xor i1 false, true
+  %108 = and i1 %105, false
+  %109 = and i1 %103, %107
+  %110 = and i1 %106, false
+  %111 = and i1 %104, %107
+  %112 = or i1 %108, %109
+  %113 = or i1 %110, %111
+  %114 = xor i1 %112, %113
+  %115 = or i1 %105, %106
+  %116 = xor i1 %115, true
+  %117 = or i1 false, %107
+  %118 = and i1 %116, %117
+  %119 = or i1 %114, %118
+  %120 = or i1 %103, %104
+  br i1 %119, label %121, label %168
+
+; <label>:121:                                    ; preds = %94, %168
+  %122 = landingpad { i8*, i32 }
+          cleanup
+  %123 = extractvalue { i8*, i32 } %122, 0
+  store i8* %123, i8** %6, align 8
+  %124 = extractvalue { i8*, i32 } %122, 1
+  store i32 %124, i32* %7, align 4
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %9) #3
+  %125 = load i32, i32* @x.134
+  %126 = load i32, i32* @y.135
+  %127 = sub i32 %125, 409179498
+  %128 = sub i32 %127, 1
+  %129 = add i32 %128, 409179498
+  %130 = sub i32 %125, 1
+  %131 = mul i32 %125, %129
+  %132 = urem i32 %131, 2
+  %133 = icmp eq i32 %132, 0
+  %134 = icmp slt i32 %126, 10
+  %135 = xor i1 %133, true
+  %136 = xor i1 %134, true
+  %137 = xor i1 false, true
+  %138 = and i1 %135, false
+  %139 = and i1 %133, %137
+  %140 = and i1 %136, false
+  %141 = and i1 %134, %137
+  %142 = or i1 %138, %139
+  %143 = or i1 %140, %141
+  %144 = xor i1 %142, %143
+  %145 = or i1 %135, %136
+  %146 = xor i1 %145, true
+  %147 = or i1 false, %137
+  %148 = and i1 %146, %147
+  %149 = or i1 %144, %148
+  %150 = or i1 %133, %134
+  br i1 %149, label %151, label %168
+
+; <label>:151:                                    ; preds = %121
+  br label %153
+
+; <label>:152:                                    ; preds = %93, %60
+  ret void
+
+; <label>:153:                                    ; preds = %151
+  %154 = load i8*, i8** %6, align 8
+  %155 = load i32, i32* %7, align 4
+  %156 = insertvalue { i8*, i32 } undef, i8* %154, 0
+  %157 = insertvalue { i8*, i32 } %156, i32 %155, 1
+  resume { i8*, i32 } %157
+
+; <label>:158:                                    ; preds = %40, %13
+  %159 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5, align 8
+  %160 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %159, i32 0, i32 0
+  %161 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %160, i32 0, i32 0
+  %162 = load i32**, i32*** %161, align 8
+  %163 = icmp ne i32** %162, null
+  br label %40
+
+; <label>:164:                                    ; preds = %75, %61
+  %165 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %8, i32 0, i32 0
+  %166 = load %"class.std::_Deque_base"*, %"class.std::_Deque_base"** %5, align 8
+  %167 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %166, i32 0, i32 0
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_impl12_M_swap_dataERS2_(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %165, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* dereferenceable(80) %167) #3
+  br label %75
+
+; <label>:168:                                    ; preds = %121, %94
+  %169 = landingpad { i8*, i32 }
+          cleanup
+  %170 = extractvalue { i8*, i32 } %169, 0
+  store i8* %170, i8** %6, align 8
+  %171 = extractvalue { i8*, i32 } %169, 1
+  store i32 %171, i32* %7, align 4
+  call void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implD2Ev(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %9) #3
+  br label %121
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator"* @_ZSt4moveIRSaIiEEONSt16remove_referenceIT_E4typeEOS3_(%"class.std::allocator"* dereferenceable(1)) #4 comdat {
+  %2 = alloca %"class.std::allocator"*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.136
+  %6 = load i32, i32* @y.137
+  %7 = add i32 %5, -262933063
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, -262933063
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -781446154, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %50
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -781446154, label %19
+    i32 -1212876160, label %27
+    i32 903329578, label %45
+    i32 -86203538, label %47
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %50
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 -1212876160, i32 -86203538
+  store i32 %26, i32* %15
+  br label %50
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %28, align 8
+  %29 = load %"class.std::allocator"*, %"class.std::allocator"** %28, align 8
+  store %"class.std::allocator"* %29, %"class.std::allocator"** %2
+  %30 = load i32, i32* @x.136
+  %31 = load i32, i32* @y.137
+  %32 = sub i32 %30, 1550404386
+  %33 = sub i32 %32, 1
+  %34 = add i32 %33, 1550404386
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = and i1 %38, %39
+  %41 = xor i1 %38, %39
+  %42 = or i1 %40, %41
+  %43 = or i1 %38, %39
+  %44 = select i1 %42, i32 903329578, i32 -86203538
+  store i32 %44, i32* %15
+  br label %50
+
+; <label>:45:                                     ; preds = %16
+  %46 = load volatile %"class.std::allocator"*, %"class.std::allocator"** %2
+  ret %"class.std::allocator"* %46
+
+; <label>:47:                                     ; preds = %16
+  %48 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %48, align 8
+  %49 = load %"class.std::allocator"*, %"class.std::allocator"** %48, align 8
+  store i32 -1212876160, i32* %15
+  br label %50
+
+; <label>:50:                                     ; preds = %47, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_implC2EOS0_(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"class.std::allocator"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.138
+  %6 = load i32, i32* @y.139
+  %7 = add i32 %5, 1585187417
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 1585187417
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -277357566, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %89
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -277357566, label %19
+    i32 -1498034170, label %39
+    i32 519325367, label %77
+    i32 1465977869, label %78
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %89
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -1498034170, i32 1465977869
+  store i32 %38, i32* %15
+  br label %89
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  %41 = alloca %"class.std::allocator"*, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %0, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %40, align 8
+  store %"class.std::allocator"* %1, %"class.std::allocator"** %41, align 8
+  %42 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %40, align 8
+  %43 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42 to %"class.std::allocator"*
+  %44 = load %"class.std::allocator"*, %"class.std::allocator"** %41, align 8
+  %45 = call dereferenceable(1) %"class.std::allocator"* @_ZSt4moveIRSaIiEEONSt16remove_referenceIT_E4typeEOS3_(%"class.std::allocator"* dereferenceable(1) %44) #3
+  call void @_ZNSaIiEC2ERKS_(%"class.std::allocator"* %43, %"class.std::allocator"* dereferenceable(1) %45) #3
+  %46 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 0
+  store i32** null, i32*** %46, align 8
+  %47 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 1
+  store i64 0, i64* %47, align 8
+  %48 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 2
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %48) #3
+  %49 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 3
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %49) #3
+  %50 = load i32, i32* @x.138
+  %51 = load i32, i32* @y.139
+  %52 = add i32 %50, 1990362439
+  %53 = sub i32 %52, 1
+  %54 = sub i32 %53, 1990362439
+  %55 = sub i32 %50, 1
+  %56 = mul i32 %50, %54
+  %57 = urem i32 %56, 2
+  %58 = icmp eq i32 %57, 0
+  %59 = icmp slt i32 %51, 10
+  %60 = xor i1 %58, true
+  %61 = xor i1 %59, true
+  %62 = xor i1 false, true
+  %63 = and i1 %60, false
+  %64 = and i1 %58, %62
+  %65 = and i1 %61, false
+  %66 = and i1 %59, %62
+  %67 = or i1 %63, %64
+  %68 = or i1 %65, %66
+  %69 = xor i1 %67, %68
+  %70 = or i1 %60, %61
+  %71 = xor i1 %70, true
+  %72 = or i1 false, %62
+  %73 = and i1 %71, %72
+  %74 = or i1 %69, %73
+  %75 = or i1 %58, %59
+  %76 = select i1 %74, i32 519325367, i32 1465977869
+  store i32 %76, i32* %15
+  br label %89
+
+; <label>:77:                                     ; preds = %16
+  ret void
+
+; <label>:78:                                     ; preds = %16
+  %79 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  %80 = alloca %"class.std::allocator"*, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %0, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %79, align 8
+  store %"class.std::allocator"* %1, %"class.std::allocator"** %80, align 8
+  %81 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %79, align 8
+  %82 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %81 to %"class.std::allocator"*
+  %83 = load %"class.std::allocator"*, %"class.std::allocator"** %80, align 8
+  %84 = call dereferenceable(1) %"class.std::allocator"* @_ZSt4moveIRSaIiEEONSt16remove_referenceIT_E4typeEOS3_(%"class.std::allocator"* dereferenceable(1) %83) #3
+  call void @_ZNSaIiEC2ERKS_(%"class.std::allocator"* %82, %"class.std::allocator"* dereferenceable(1) %84) #3
+  %85 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %81, i32 0, i32 0
+  store i32** null, i32*** %85, align 8
+  %86 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %81, i32 0, i32 1
+  store i64 0, i64* %86, align 8
+  %87 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %81, i32 0, i32 2
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %87) #3
+  %88 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %81, i32 0, i32 3
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2Ev(%"struct.std::_Deque_iterator"* %88) #3
+  store i32 -1498034170, i32* %15
+  br label %89
+
+; <label>:89:                                     ; preds = %78, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt11_Deque_baseIiSaIiEE11_Deque_impl12_M_swap_dataERS2_(%"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* dereferenceable(80)) #4 comdat align 2 {
+  %3 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  %4 = alloca %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %0, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %3, align 8
+  store %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %1, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %4, align 8
+  %5 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %3, align 8
+  %6 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 2
+  %7 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %4, align 8
+  %8 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %7, i32 0, i32 2
+  call void @_ZSt4swapISt15_Deque_iteratorIiRiPiEEvRT_S5_(%"struct.std::_Deque_iterator"* dereferenceable(32) %6, %"struct.std::_Deque_iterator"* dereferenceable(32) %8) #3
+  %9 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 3
+  %10 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %4, align 8
+  %11 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %10, i32 0, i32 3
+  call void @_ZSt4swapISt15_Deque_iteratorIiRiPiEEvRT_S5_(%"struct.std::_Deque_iterator"* dereferenceable(32) %9, %"struct.std::_Deque_iterator"* dereferenceable(32) %11) #3
+  %12 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 0
+  %13 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %4, align 8
+  %14 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %13, i32 0, i32 0
+  call void @_ZSt4swapIPPiEvRT_S3_(i32*** dereferenceable(8) %12, i32*** dereferenceable(8) %14) #3
+  %15 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 1
+  %16 = load %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"*, %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"** %4, align 8
+  %17 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %16, i32 0, i32 1
+  call void @_ZSt4swapImEvRT_S1_(i64* dereferenceable(8) %15, i64* dereferenceable(8) %17) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiEC2ERKS_(%"class.std::allocator"*, %"class.std::allocator"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca %"class.std::allocator"*, align 8
+  %4 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %3, align 8
+  store %"class.std::allocator"* %1, %"class.std::allocator"** %4, align 8
+  %5 = load %"class.std::allocator"*, %"class.std::allocator"** %3, align 8
+  %6 = bitcast %"class.std::allocator"* %5 to %"class.__gnu_cxx::new_allocator"*
+  %7 = load %"class.std::allocator"*, %"class.std::allocator"** %4, align 8
+  %8 = bitcast %"class.std::allocator"* %7 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_(%"class.__gnu_cxx::new_allocator"* %6, %"class.__gnu_cxx::new_allocator"* dereferenceable(1) %8) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_(%"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.144
+  %6 = load i32, i32* @y.145
+  %7 = add i32 %5, -1896102761
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, -1896102761
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 2049645871, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %74
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 2049645871, label %19
+    i32 1379119331, label %39
+    i32 558716491, label %69
+    i32 1423013346, label %70
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %74
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 1379119331, i32 1423013346
+  store i32 %38, i32* %15
+  br label %74
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %41 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %40, align 8
+  store %"class.__gnu_cxx::new_allocator"* %1, %"class.__gnu_cxx::new_allocator"** %41, align 8
+  %42 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %40, align 8
+  %43 = load i32, i32* @x.144
+  %44 = load i32, i32* @y.145
+  %45 = sub i32 0, 1
+  %46 = add i32 %43, %45
+  %47 = sub i32 %43, 1
+  %48 = mul i32 %43, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %44, 10
+  %52 = xor i1 %50, true
+  %53 = xor i1 %51, true
+  %54 = xor i1 true, true
+  %55 = and i1 %52, true
+  %56 = and i1 %50, %54
+  %57 = and i1 %53, true
+  %58 = and i1 %51, %54
+  %59 = or i1 %55, %56
+  %60 = or i1 %57, %58
+  %61 = xor i1 %59, %60
+  %62 = or i1 %52, %53
+  %63 = xor i1 %62, true
+  %64 = or i1 true, %54
+  %65 = and i1 %63, %64
+  %66 = or i1 %61, %65
+  %67 = or i1 %50, %51
+  %68 = select i1 %66, i32 558716491, i32 1423013346
+  store i32 %68, i32* %15
+  br label %74
+
+; <label>:69:                                     ; preds = %16
+  ret void
+
+; <label>:70:                                     ; preds = %16
+  %71 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %72 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %71, align 8
+  store %"class.__gnu_cxx::new_allocator"* %1, %"class.__gnu_cxx::new_allocator"** %72, align 8
+  %73 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %71, align 8
+  store i32 1379119331, i32* %15
+  br label %74
+
+; <label>:74:                                     ; preds = %70, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapISt15_Deque_iteratorIiRiPiEEvRT_S5_(%"struct.std::_Deque_iterator"* dereferenceable(32), %"struct.std::_Deque_iterator"* dereferenceable(32)) #4 comdat {
+  %3 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %4 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %5 = alloca %"struct.std::_Deque_iterator", align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %3, align 8
+  store %"struct.std::_Deque_iterator"* %1, %"struct.std::_Deque_iterator"** %4, align 8
+  %6 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %3, align 8
+  %7 = call dereferenceable(32) %"struct.std::_Deque_iterator"* @_ZSt4moveIRSt15_Deque_iteratorIiRiPiEEONSt16remove_referenceIT_E4typeEOS6_(%"struct.std::_Deque_iterator"* dereferenceable(32) %6) #3
+  call void @_ZNSt15_Deque_iteratorIiRiPiEC2ERKS2_(%"struct.std::_Deque_iterator"* %5, %"struct.std::_Deque_iterator"* dereferenceable(32) %7) #3
+  %8 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %4, align 8
+  %9 = call dereferenceable(32) %"struct.std::_Deque_iterator"* @_ZSt4moveIRSt15_Deque_iteratorIiRiPiEEONSt16remove_referenceIT_E4typeEOS6_(%"struct.std::_Deque_iterator"* dereferenceable(32) %8) #3
+  %10 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %3, align 8
+  %11 = bitcast %"struct.std::_Deque_iterator"* %10 to i8*
+  %12 = bitcast %"struct.std::_Deque_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %11, i8* %12, i64 32, i32 8, i1 false)
+  %13 = call dereferenceable(32) %"struct.std::_Deque_iterator"* @_ZSt4moveIRSt15_Deque_iteratorIiRiPiEEONSt16remove_referenceIT_E4typeEOS6_(%"struct.std::_Deque_iterator"* dereferenceable(32) %5) #3
+  %14 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %4, align 8
+  %15 = bitcast %"struct.std::_Deque_iterator"* %14 to i8*
+  %16 = bitcast %"struct.std::_Deque_iterator"* %13 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 32, i32 8, i1 false)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapIPPiEvRT_S3_(i32*** dereferenceable(8), i32*** dereferenceable(8)) #4 comdat {
+  %3 = alloca i32***, align 8
+  %4 = alloca i32***, align 8
+  %5 = alloca i32**, align 8
+  store i32*** %0, i32**** %3, align 8
+  store i32*** %1, i32**** %4, align 8
+  %6 = load i32***, i32**** %3, align 8
+  %7 = call dereferenceable(8) i32*** @_ZSt4moveIRPPiEONSt16remove_referenceIT_E4typeEOS4_(i32*** dereferenceable(8) %6) #3
+  %8 = load i32**, i32*** %7, align 8
+  store i32** %8, i32*** %5, align 8
+  %9 = load i32***, i32**** %4, align 8
+  %10 = call dereferenceable(8) i32*** @_ZSt4moveIRPPiEONSt16remove_referenceIT_E4typeEOS4_(i32*** dereferenceable(8) %9) #3
+  %11 = load i32**, i32*** %10, align 8
+  %12 = load i32***, i32**** %3, align 8
+  store i32** %11, i32*** %12, align 8
+  %13 = call dereferenceable(8) i32*** @_ZSt4moveIRPPiEONSt16remove_referenceIT_E4typeEOS4_(i32*** dereferenceable(8) %5) #3
+  %14 = load i32**, i32*** %13, align 8
+  %15 = load i32***, i32**** %4, align 8
+  store i32** %14, i32*** %15, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapImEvRT_S1_(i64* dereferenceable(8), i64* dereferenceable(8)) #4 comdat {
+  %3 = alloca i64*, align 8
+  %4 = alloca i64*, align 8
+  %5 = alloca i64, align 8
+  store i64* %0, i64** %3, align 8
+  store i64* %1, i64** %4, align 8
+  %6 = load i64*, i64** %3, align 8
+  %7 = call dereferenceable(8) i64* @_ZSt4moveIRmEONSt16remove_referenceIT_E4typeEOS2_(i64* dereferenceable(8) %6) #3
+  %8 = load i64, i64* %7, align 8
+  store i64 %8, i64* %5, align 8
+  %9 = load i64*, i64** %4, align 8
+  %10 = call dereferenceable(8) i64* @_ZSt4moveIRmEONSt16remove_referenceIT_E4typeEOS2_(i64* dereferenceable(8) %9) #3
+  %11 = load i64, i64* %10, align 8
+  %12 = load i64*, i64** %3, align 8
+  store i64 %11, i64* %12, align 8
+  %13 = call dereferenceable(8) i64* @_ZSt4moveIRmEONSt16remove_referenceIT_E4typeEOS2_(i64* dereferenceable(8) %5) #3
+  %14 = load i64, i64* %13, align 8
+  %15 = load i64*, i64** %4, align 8
+  store i64 %14, i64* %15, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(32) %"struct.std::_Deque_iterator"* @_ZSt4moveIRSt15_Deque_iteratorIiRiPiEEONSt16remove_referenceIT_E4typeEOS6_(%"struct.std::_Deque_iterator"* dereferenceable(32)) #4 comdat {
+  %2 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %2, align 8
+  %3 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %2, align 8
+  ret %"struct.std::_Deque_iterator"* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i32*** @_ZSt4moveIRPPiEONSt16remove_referenceIT_E4typeEOS4_(i32*** dereferenceable(8)) #4 comdat {
+  %2 = alloca i32***, align 8
+  store i32*** %0, i32**** %2, align 8
+  %3 = load i32***, i32**** %2, align 8
+  ret i32*** %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64* @_ZSt4moveIRmEONSt16remove_referenceIT_E4typeEOS2_(i64* dereferenceable(8)) #4 comdat {
+  %2 = alloca i64*, align 8
+  store i64* %0, i64** %2, align 8
+  %3 = load i64*, i64** %2, align 8
+  ret i64* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNKSt5dequeIiSaIiEE5emptyEv(%"class.std::deque"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %3 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  %4 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %5 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %4, i32 0, i32 0
+  %6 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 3
+  %7 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %8 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %7, i32 0, i32 0
+  %9 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %8, i32 0, i32 2
+  %10 = call zeroext i1 @_ZSteqIiRiPiEbRKSt15_Deque_iteratorIT_T0_T1_ES8_(%"struct.std::_Deque_iterator"* dereferenceable(32) %6, %"struct.std::_Deque_iterator"* dereferenceable(32) %9) #3
+  ret i1 %10
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZSteqIiRiPiEbRKSt15_Deque_iteratorIT_T0_T1_ES8_(%"struct.std::_Deque_iterator"* dereferenceable(32), %"struct.std::_Deque_iterator"* dereferenceable(32)) #4 comdat {
+  %3 = alloca %"struct.std::_Deque_iterator"*, align 8
+  %4 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %3, align 8
+  store %"struct.std::_Deque_iterator"* %1, %"struct.std::_Deque_iterator"** %4, align 8
+  %5 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %3, align 8
+  %6 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %5, i32 0, i32 0
+  %7 = load i32*, i32** %6, align 8
+  %8 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %4, align 8
+  %9 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %8, i32 0, i32 0
+  %10 = load i32*, i32** %9, align 8
+  %11 = icmp eq i32* %7, %10
+  ret i1 %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE9pop_frontEv(%"class.std::deque"*) #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %3 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  %4 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %5 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %4, i32 0, i32 0
+  %6 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %5, i32 0, i32 2
+  %7 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %6, i32 0, i32 0
+  %8 = load i32*, i32** %7, align 8
+  %9 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %10 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %9, i32 0, i32 0
+  %11 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %10, i32 0, i32 2
+  %12 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %11, i32 0, i32 2
+  %13 = load i32*, i32** %12, align 8
+  %14 = getelementptr inbounds i32, i32* %13, i64 -1
+  %15 = icmp ne i32* %8, %14
+  br i1 %15, label %16, label %128
+
+; <label>:16:                                     ; preds = %1
+  %17 = load i32, i32* @x.162
+  %18 = load i32, i32* @y.163
+  %19 = add i32 %17, -2130553607
+  %20 = sub i32 %19, 1
+  %21 = sub i32 %20, -2130553607
+  %22 = sub i32 %17, 1
+  %23 = mul i32 %17, %21
+  %24 = urem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  %26 = icmp slt i32 %18, 10
+  %27 = xor i1 %25, true
+  %28 = xor i1 %26, true
+  %29 = xor i1 false, true
+  %30 = and i1 %27, false
+  %31 = and i1 %25, %29
+  %32 = and i1 %28, false
+  %33 = and i1 %26, %29
+  %34 = or i1 %30, %31
+  %35 = or i1 %32, %33
+  %36 = xor i1 %34, %35
+  %37 = or i1 %27, %28
+  %38 = xor i1 %37, true
+  %39 = or i1 false, %29
+  %40 = and i1 %38, %39
+  %41 = or i1 %36, %40
+  %42 = or i1 %25, %26
+  br i1 %41, label %43, label %217
+
+; <label>:43:                                     ; preds = %16, %217
+  %44 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %45 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %44, i32 0, i32 0
+  %46 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %45 to %"class.std::allocator"*
+  %47 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %48 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %47, i32 0, i32 0
+  %49 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %48, i32 0, i32 2
+  %50 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %49, i32 0, i32 0
+  %51 = load i32*, i32** %50, align 8
+  %52 = load i32, i32* @x.162
+  %53 = load i32, i32* @y.163
+  %54 = sub i32 %52, 535640421
+  %55 = sub i32 %54, 1
+  %56 = add i32 %55, 535640421
+  %57 = sub i32 %52, 1
+  %58 = mul i32 %52, %56
+  %59 = urem i32 %58, 2
+  %60 = icmp eq i32 %59, 0
+  %61 = icmp slt i32 %53, 10
+  %62 = xor i1 %60, true
+  %63 = xor i1 %61, true
+  %64 = xor i1 false, true
+  %65 = and i1 %62, false
+  %66 = and i1 %60, %64
+  %67 = and i1 %63, false
+  %68 = and i1 %61, %64
+  %69 = or i1 %65, %66
+  %70 = or i1 %67, %68
+  %71 = xor i1 %69, %70
+  %72 = or i1 %62, %63
+  %73 = xor i1 %72, true
+  %74 = or i1 false, %64
+  %75 = and i1 %73, %74
+  %76 = or i1 %71, %75
+  %77 = or i1 %60, %61
+  br i1 %76, label %78, label %217
+
+; <label>:78:                                     ; preds = %43
+  invoke void @_ZNSt16allocator_traitsISaIiEE7destroyIiEEvRS0_PT_(%"class.std::allocator"* dereferenceable(1) %46, i32* %51)
+          to label %79 unwind label %214
+
+; <label>:79:                                     ; preds = %78
+  %80 = load i32, i32* @x.162
+  %81 = load i32, i32* @y.163
+  %82 = add i32 %80, 195456427
+  %83 = sub i32 %82, 1
+  %84 = sub i32 %83, 195456427
+  %85 = sub i32 %80, 1
+  %86 = mul i32 %80, %84
+  %87 = urem i32 %86, 2
+  %88 = icmp eq i32 %87, 0
+  %89 = icmp slt i32 %81, 10
+  %90 = xor i1 %88, true
+  %91 = xor i1 %89, true
+  %92 = xor i1 false, true
+  %93 = and i1 %90, false
+  %94 = and i1 %88, %92
+  %95 = and i1 %91, false
+  %96 = and i1 %89, %92
+  %97 = or i1 %93, %94
+  %98 = or i1 %95, %96
+  %99 = xor i1 %97, %98
+  %100 = or i1 %90, %91
+  %101 = xor i1 %100, true
+  %102 = or i1 false, %92
+  %103 = and i1 %101, %102
+  %104 = or i1 %99, %103
+  %105 = or i1 %88, %89
+  br i1 %104, label %106, label %226
+
+; <label>:106:                                    ; preds = %79, %226
+  %107 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %108 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %107, i32 0, i32 0
+  %109 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %108, i32 0, i32 2
+  %110 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %109, i32 0, i32 0
+  %111 = load i32*, i32** %110, align 8
+  %112 = getelementptr inbounds i32, i32* %111, i32 1
+  store i32* %112, i32** %110, align 8
+  %113 = load i32, i32* @x.162
+  %114 = load i32, i32* @y.163
+  %115 = sub i32 %113, 1926254221
+  %116 = sub i32 %115, 1
+  %117 = add i32 %116, 1926254221
+  %118 = sub i32 %113, 1
+  %119 = mul i32 %113, %117
+  %120 = urem i32 %119, 2
+  %121 = icmp eq i32 %120, 0
+  %122 = icmp slt i32 %114, 10
+  %123 = and i1 %121, %122
+  %124 = xor i1 %121, %122
+  %125 = or i1 %123, %124
+  %126 = or i1 %121, %122
+  br i1 %125, label %127, label %226
+
+; <label>:127:                                    ; preds = %106
+  br label %160
+
+; <label>:128:                                    ; preds = %1
+  %129 = load i32, i32* @x.162
+  %130 = load i32, i32* @y.163
+  %131 = sub i32 %129, -579128576
+  %132 = sub i32 %131, 1
+  %133 = add i32 %132, -579128576
+  %134 = sub i32 %129, 1
+  %135 = mul i32 %129, %133
+  %136 = urem i32 %135, 2
+  %137 = icmp eq i32 %136, 0
+  %138 = icmp slt i32 %130, 10
+  %139 = and i1 %137, %138
+  %140 = xor i1 %137, %138
+  %141 = or i1 %139, %140
+  %142 = or i1 %137, %138
+  br i1 %141, label %143, label %233
+
+; <label>:143:                                    ; preds = %128, %233
+  %144 = load i32, i32* @x.162
+  %145 = load i32, i32* @y.163
+  %146 = add i32 %144, -1992345072
+  %147 = sub i32 %146, 1
+  %148 = sub i32 %147, -1992345072
+  %149 = sub i32 %144, 1
+  %150 = mul i32 %144, %148
+  %151 = urem i32 %150, 2
+  %152 = icmp eq i32 %151, 0
+  %153 = icmp slt i32 %145, 10
+  %154 = and i1 %152, %153
+  %155 = xor i1 %152, %153
+  %156 = or i1 %154, %155
+  %157 = or i1 %152, %153
+  br i1 %156, label %158, label %233
+
+; <label>:158:                                    ; preds = %143
+  invoke void @_ZNSt5dequeIiSaIiEE16_M_pop_front_auxEv(%"class.std::deque"* %3)
+          to label %159 unwind label %214
+
+; <label>:159:                                    ; preds = %158
+  br label %160
+
+; <label>:160:                                    ; preds = %159, %127
+  %161 = load i32, i32* @x.162
+  %162 = load i32, i32* @y.163
+  %163 = sub i32 0, 1
+  %164 = add i32 %161, %163
+  %165 = sub i32 %161, 1
+  %166 = mul i32 %161, %164
+  %167 = urem i32 %166, 2
+  %168 = icmp eq i32 %167, 0
+  %169 = icmp slt i32 %162, 10
+  %170 = xor i1 %168, true
+  %171 = xor i1 %169, true
+  %172 = xor i1 false, true
+  %173 = and i1 %170, false
+  %174 = and i1 %168, %172
+  %175 = and i1 %171, false
+  %176 = and i1 %169, %172
+  %177 = or i1 %173, %174
+  %178 = or i1 %175, %176
+  %179 = xor i1 %177, %178
+  %180 = or i1 %170, %171
+  %181 = xor i1 %180, true
+  %182 = or i1 false, %172
+  %183 = and i1 %181, %182
+  %184 = or i1 %179, %183
+  %185 = or i1 %168, %169
+  br i1 %184, label %186, label %234
+
+; <label>:186:                                    ; preds = %160, %234
+  %187 = load i32, i32* @x.162
+  %188 = load i32, i32* @y.163
+  %189 = add i32 %187, -1651303643
+  %190 = sub i32 %189, 1
+  %191 = sub i32 %190, -1651303643
+  %192 = sub i32 %187, 1
+  %193 = mul i32 %187, %191
+  %194 = urem i32 %193, 2
+  %195 = icmp eq i32 %194, 0
+  %196 = icmp slt i32 %188, 10
+  %197 = xor i1 %195, true
+  %198 = xor i1 %196, true
+  %199 = xor i1 false, true
+  %200 = and i1 %197, false
+  %201 = and i1 %195, %199
+  %202 = and i1 %198, false
+  %203 = and i1 %196, %199
+  %204 = or i1 %200, %201
+  %205 = or i1 %202, %203
+  %206 = xor i1 %204, %205
+  %207 = or i1 %197, %198
+  %208 = xor i1 %207, true
+  %209 = or i1 false, %199
+  %210 = and i1 %208, %209
+  %211 = or i1 %206, %210
+  %212 = or i1 %195, %196
+  br i1 %211, label %213, label %234
+
+; <label>:213:                                    ; preds = %186
+  ret void
+
+; <label>:214:                                    ; preds = %158, %78
+  %215 = landingpad { i8*, i32 }
+          catch i8* null
+  %216 = extractvalue { i8*, i32 } %215, 0
+  call void @__clang_call_terminate(i8* %216) #11
+  unreachable
+
+; <label>:217:                                    ; preds = %43, %16
+  %218 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %219 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %218, i32 0, i32 0
+  %220 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %219 to %"class.std::allocator"*
+  %221 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %222 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %221, i32 0, i32 0
+  %223 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %222, i32 0, i32 2
+  %224 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %223, i32 0, i32 0
+  %225 = load i32*, i32** %224, align 8
+  br label %43
+
+; <label>:226:                                    ; preds = %106, %79
+  %227 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %228 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %227, i32 0, i32 0
+  %229 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %228, i32 0, i32 2
+  %230 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %229, i32 0, i32 0
+  %231 = load i32*, i32** %230, align 8
+  %232 = getelementptr inbounds i32, i32* %231, i32 1
+  store i32* %232, i32** %230, align 8
+  br label %106
+
+; <label>:233:                                    ; preds = %143, %128
+  br label %143
+
+; <label>:234:                                    ; preds = %186, %160
+  br label %186
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIiEE7destroyIiEEvRS0_PT_(%"class.std::allocator"* dereferenceable(1), i32*) #0 comdat align 2 {
+  %3 = alloca %"class.std::allocator"*, align 8
+  %4 = alloca i32*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load %"class.std::allocator"*, %"class.std::allocator"** %3, align 8
+  %6 = bitcast %"class.std::allocator"* %5 to %"class.__gnu_cxx::new_allocator"*
+  %7 = load i32*, i32** %4, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIiE7destroyIiEEvPT_(%"class.__gnu_cxx::new_allocator"* %6, i32* %7)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE16_M_pop_front_auxEv(%"class.std::deque"*) #0 comdat align 2 {
+  %2 = alloca %"class.std::deque"*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %3 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  %4 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %5 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt11_Deque_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"class.std::_Deque_base"* %4) #3
+  %6 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %7 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %6, i32 0, i32 0
+  %8 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %7, i32 0, i32 2
+  %9 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %8, i32 0, i32 0
+  %10 = load i32*, i32** %9, align 8
+  call void @_ZNSt16allocator_traitsISaIiEE7destroyIiEEvRS0_PT_(%"class.std::allocator"* dereferenceable(1) %5, i32* %10)
+  %11 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %12 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %13 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %12, i32 0, i32 0
+  %14 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %13, i32 0, i32 2
+  %15 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %14, i32 0, i32 1
+  %16 = load i32*, i32** %15, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi(%"class.std::_Deque_base"* %11, i32* %16) #3
+  %17 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %18 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %17, i32 0, i32 0
+  %19 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %18, i32 0, i32 2
+  %20 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %21 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %20, i32 0, i32 0
+  %22 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %21, i32 0, i32 2
+  %23 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %22, i32 0, i32 3
+  %24 = load i32**, i32*** %23, align 8
+  %25 = getelementptr inbounds i32*, i32** %24, i64 1
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %19, i32** %25) #3
+  %26 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %27 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %26, i32 0, i32 0
+  %28 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %27, i32 0, i32 2
+  %29 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %28, i32 0, i32 1
+  %30 = load i32*, i32** %29, align 8
+  %31 = bitcast %"class.std::deque"* %3 to %"class.std::_Deque_base"*
+  %32 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %31, i32 0, i32 0
+  %33 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %32, i32 0, i32 2
+  %34 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %33, i32 0, i32 0
+  store i32* %30, i32** %34, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiE7destroyIiEEvPT_(%"class.__gnu_cxx::new_allocator"*, i32*) #4 comdat align 2 {
+  %3 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %4 = alloca i32*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %3, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE9push_backERKi(%"class.std::deque"*, i32* dereferenceable(4)) #0 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca %"class.std::deque"*
+  %5 = alloca i32**
+  %6 = alloca i1
+  %7 = alloca i1
+  %8 = load i32, i32* @x.170
+  %9 = load i32, i32* @y.171
+  %10 = add i32 %8, -354545255
+  %11 = sub i32 %10, 1
+  %12 = sub i32 %11, -354545255
+  %13 = sub i32 %8, 1
+  %14 = mul i32 %8, %12
+  %15 = urem i32 %14, 2
+  %16 = icmp eq i32 %15, 0
+  store i1 %16, i1* %7
+  %17 = icmp slt i32 %9, 10
+  store i1 %17, i1* %6
+  %18 = alloca i32
+  store i32 -1540663694, i32* %18
+  br label %19
+
+; <label>:19:                                     ; preds = %2, %230
+  %20 = load i32, i32* %18
+  switch i32 %20, label %21 [
+    i32 -1540663694, label %22
+    i32 822057634, label %42
+    i32 1889326904, label %88
+    i32 -698625997, label %91
+    i32 -1030726887, label %107
+    i32 1926384164, label %141
+    i32 -266736396, label %142
+    i32 1817940533, label %170
+    i32 -1778709020, label %188
+    i32 1996864724, label %189
+    i32 621920548, label %190
+    i32 -268944488, label %206
+    i32 -1172967690, label %226
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %230
+
+; <label>:22:                                     ; preds = %19
+  %23 = load volatile i1, i1* %7
+  %24 = load volatile i1, i1* %6
+  %25 = xor i1 %23, true
+  %26 = xor i1 %24, true
+  %27 = xor i1 false, true
+  %28 = and i1 %25, false
+  %29 = and i1 %23, %27
+  %30 = and i1 %26, false
+  %31 = and i1 %24, %27
+  %32 = or i1 %28, %29
+  %33 = or i1 %30, %31
+  %34 = xor i1 %32, %33
+  %35 = or i1 %25, %26
+  %36 = xor i1 %35, true
+  %37 = or i1 false, %27
+  %38 = and i1 %36, %37
+  %39 = or i1 %34, %38
+  %40 = or i1 %23, %24
+  %41 = select i1 %39, i32 822057634, i32 621920548
+  store i32 %41, i32* %18
+  br label %230
+
+; <label>:42:                                     ; preds = %19
+  %43 = alloca %"class.std::deque"*, align 8
+  %44 = alloca i32*, align 8
+  store i32** %44, i32*** %5
+  store %"class.std::deque"* %0, %"class.std::deque"** %43, align 8
+  %45 = load volatile i32**, i32*** %5
+  store i32* %1, i32** %45, align 8
+  %46 = load %"class.std::deque"*, %"class.std::deque"** %43, align 8
+  store %"class.std::deque"* %46, %"class.std::deque"** %4
+  %47 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %48 = bitcast %"class.std::deque"* %47 to %"class.std::_Deque_base"*
+  %49 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %48, i32 0, i32 0
+  %50 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %49, i32 0, i32 3
+  %51 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %50, i32 0, i32 0
+  %52 = load i32*, i32** %51, align 8
+  %53 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %54 = bitcast %"class.std::deque"* %53 to %"class.std::_Deque_base"*
+  %55 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %54, i32 0, i32 0
+  %56 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %55, i32 0, i32 3
+  %57 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %56, i32 0, i32 2
+  %58 = load i32*, i32** %57, align 8
+  %59 = getelementptr inbounds i32, i32* %58, i64 -1
+  %60 = icmp ne i32* %52, %59
+  store i1 %60, i1* %3
+  %61 = load i32, i32* @x.170
+  %62 = load i32, i32* @y.171
+  %63 = sub i32 %61, 1459324159
+  %64 = sub i32 %63, 1
+  %65 = add i32 %64, 1459324159
+  %66 = sub i32 %61, 1
+  %67 = mul i32 %61, %65
+  %68 = urem i32 %67, 2
+  %69 = icmp eq i32 %68, 0
+  %70 = icmp slt i32 %62, 10
+  %71 = xor i1 %69, true
+  %72 = xor i1 %70, true
+  %73 = xor i1 true, true
+  %74 = and i1 %71, true
+  %75 = and i1 %69, %73
+  %76 = and i1 %72, true
+  %77 = and i1 %70, %73
+  %78 = or i1 %74, %75
+  %79 = or i1 %76, %77
+  %80 = xor i1 %78, %79
+  %81 = or i1 %71, %72
+  %82 = xor i1 %81, true
+  %83 = or i1 true, %73
+  %84 = and i1 %82, %83
+  %85 = or i1 %80, %84
+  %86 = or i1 %69, %70
+  %87 = select i1 %85, i32 1889326904, i32 621920548
+  store i32 %87, i32* %18
+  br label %230
+
+; <label>:88:                                     ; preds = %19
+  %89 = load volatile i1, i1* %3
+  %90 = select i1 %89, i32 -698625997, i32 -266736396
+  store i32 %90, i32* %18
+  br label %230
+
+; <label>:91:                                     ; preds = %19
+  %92 = load i32, i32* @x.170
+  %93 = load i32, i32* @y.171
+  %94 = sub i32 %92, -1409274391
+  %95 = sub i32 %94, 1
+  %96 = add i32 %95, -1409274391
+  %97 = sub i32 %92, 1
+  %98 = mul i32 %92, %96
+  %99 = urem i32 %98, 2
+  %100 = icmp eq i32 %99, 0
+  %101 = icmp slt i32 %93, 10
+  %102 = and i1 %100, %101
+  %103 = xor i1 %100, %101
+  %104 = or i1 %102, %103
+  %105 = or i1 %100, %101
+  %106 = select i1 %104, i32 -1030726887, i32 -268944488
+  store i32 %106, i32* %18
+  br label %230
+
+; <label>:107:                                    ; preds = %19
+  %108 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %109 = bitcast %"class.std::deque"* %108 to %"class.std::_Deque_base"*
+  %110 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %109, i32 0, i32 0
+  %111 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %110 to %"class.std::allocator"*
+  %112 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %113 = bitcast %"class.std::deque"* %112 to %"class.std::_Deque_base"*
+  %114 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %113, i32 0, i32 0
+  %115 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %114, i32 0, i32 3
+  %116 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %115, i32 0, i32 0
+  %117 = load i32*, i32** %116, align 8
+  %118 = load volatile i32**, i32*** %5
+  %119 = load i32*, i32** %118, align 8
+  call void @_ZNSt16allocator_traitsISaIiEE9constructIiJRKiEEEvRS0_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1) %111, i32* %117, i32* dereferenceable(4) %119)
+  %120 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %121 = bitcast %"class.std::deque"* %120 to %"class.std::_Deque_base"*
+  %122 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %121, i32 0, i32 0
+  %123 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %122, i32 0, i32 3
+  %124 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %123, i32 0, i32 0
+  %125 = load i32*, i32** %124, align 8
+  %126 = getelementptr inbounds i32, i32* %125, i32 1
+  store i32* %126, i32** %124, align 8
+  %127 = load i32, i32* @x.170
+  %128 = load i32, i32* @y.171
+  %129 = sub i32 0, 1
+  %130 = add i32 %127, %129
+  %131 = sub i32 %127, 1
+  %132 = mul i32 %127, %130
+  %133 = urem i32 %132, 2
+  %134 = icmp eq i32 %133, 0
+  %135 = icmp slt i32 %128, 10
+  %136 = and i1 %134, %135
+  %137 = xor i1 %134, %135
+  %138 = or i1 %136, %137
+  %139 = or i1 %134, %135
+  %140 = select i1 %138, i32 1926384164, i32 -268944488
+  store i32 %140, i32* %18
+  br label %230
+
+; <label>:141:                                    ; preds = %19
+  store i32 1996864724, i32* %18
+  br label %230
+
+; <label>:142:                                    ; preds = %19
+  %143 = load i32, i32* @x.170
+  %144 = load i32, i32* @y.171
+  %145 = add i32 %143, -155561844
+  %146 = sub i32 %145, 1
+  %147 = sub i32 %146, -155561844
+  %148 = sub i32 %143, 1
+  %149 = mul i32 %143, %147
+  %150 = urem i32 %149, 2
+  %151 = icmp eq i32 %150, 0
+  %152 = icmp slt i32 %144, 10
+  %153 = xor i1 %151, true
+  %154 = xor i1 %152, true
+  %155 = xor i1 false, true
+  %156 = and i1 %153, false
+  %157 = and i1 %151, %155
+  %158 = and i1 %154, false
+  %159 = and i1 %152, %155
+  %160 = or i1 %156, %157
+  %161 = or i1 %158, %159
+  %162 = xor i1 %160, %161
+  %163 = or i1 %153, %154
+  %164 = xor i1 %163, true
+  %165 = or i1 false, %155
+  %166 = and i1 %164, %165
+  %167 = or i1 %162, %166
+  %168 = or i1 %151, %152
+  %169 = select i1 %167, i32 1817940533, i32 -1172967690
+  store i32 %169, i32* %18
+  br label %230
+
+; <label>:170:                                    ; preds = %19
+  %171 = load volatile i32**, i32*** %5
+  %172 = load i32*, i32** %171, align 8
+  %173 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  call void @_ZNSt5dequeIiSaIiEE16_M_push_back_auxIJRKiEEEvDpOT_(%"class.std::deque"* %173, i32* dereferenceable(4) %172)
+  %174 = load i32, i32* @x.170
+  %175 = load i32, i32* @y.171
+  %176 = sub i32 0, 1
+  %177 = add i32 %174, %176
+  %178 = sub i32 %174, 1
+  %179 = mul i32 %174, %177
+  %180 = urem i32 %179, 2
+  %181 = icmp eq i32 %180, 0
+  %182 = icmp slt i32 %175, 10
+  %183 = and i1 %181, %182
+  %184 = xor i1 %181, %182
+  %185 = or i1 %183, %184
+  %186 = or i1 %181, %182
+  %187 = select i1 %185, i32 -1778709020, i32 -1172967690
+  store i32 %187, i32* %18
+  br label %230
+
+; <label>:188:                                    ; preds = %19
+  store i32 1996864724, i32* %18
+  br label %230
+
+; <label>:189:                                    ; preds = %19
+  ret void
+
+; <label>:190:                                    ; preds = %19
+  %191 = alloca %"class.std::deque"*, align 8
+  %192 = alloca i32*, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %191, align 8
+  store i32* %1, i32** %192, align 8
+  %193 = load %"class.std::deque"*, %"class.std::deque"** %191, align 8
+  %194 = bitcast %"class.std::deque"* %193 to %"class.std::_Deque_base"*
+  %195 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %194, i32 0, i32 0
+  %196 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %195, i32 0, i32 3
+  %197 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %196, i32 0, i32 0
+  %198 = load i32*, i32** %197, align 8
+  %199 = bitcast %"class.std::deque"* %193 to %"class.std::_Deque_base"*
+  %200 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %199, i32 0, i32 0
+  %201 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %200, i32 0, i32 3
+  %202 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %201, i32 0, i32 2
+  %203 = load i32*, i32** %202, align 8
+  %204 = getelementptr inbounds i32, i32* %203, i64 -1
+  %205 = icmp ne i32* %198, %204
+  store i32 822057634, i32* %18
+  br label %230
+
+; <label>:206:                                    ; preds = %19
+  %207 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %208 = bitcast %"class.std::deque"* %207 to %"class.std::_Deque_base"*
+  %209 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %208, i32 0, i32 0
+  %210 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %209 to %"class.std::allocator"*
+  %211 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %212 = bitcast %"class.std::deque"* %211 to %"class.std::_Deque_base"*
+  %213 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %212, i32 0, i32 0
+  %214 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %213, i32 0, i32 3
+  %215 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %214, i32 0, i32 0
+  %216 = load i32*, i32** %215, align 8
+  %217 = load volatile i32**, i32*** %5
+  %218 = load i32*, i32** %217, align 8
+  call void @_ZNSt16allocator_traitsISaIiEE9constructIiJRKiEEEvRS0_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1) %210, i32* %216, i32* dereferenceable(4) %218)
+  %219 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  %220 = bitcast %"class.std::deque"* %219 to %"class.std::_Deque_base"*
+  %221 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %220, i32 0, i32 0
+  %222 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %221, i32 0, i32 3
+  %223 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %222, i32 0, i32 0
+  %224 = load i32*, i32** %223, align 8
+  %225 = getelementptr inbounds i32, i32* %224, i32 1
+  store i32* %225, i32** %223, align 8
+  store i32 -1030726887, i32* %18
+  br label %230
+
+; <label>:226:                                    ; preds = %19
+  %227 = load volatile i32**, i32*** %5
+  %228 = load i32*, i32** %227, align 8
+  %229 = load volatile %"class.std::deque"*, %"class.std::deque"** %4
+  call void @_ZNSt5dequeIiSaIiEE16_M_push_back_auxIJRKiEEEvDpOT_(%"class.std::deque"* %229, i32* dereferenceable(4) %228)
+  store i32 1817940533, i32* %18
+  br label %230
+
+; <label>:230:                                    ; preds = %226, %206, %190, %188, %170, %142, %141, %107, %91, %88, %42, %22, %21
+  br label %19
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIiEE9constructIiJRKiEEEvRS0_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1), i32*, i32* dereferenceable(4)) #0 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.172
+  %7 = load i32, i32* @y.173
+  %8 = sub i32 0, 1
+  %9 = add i32 %6, %8
+  %10 = sub i32 %6, 1
+  %11 = mul i32 %6, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %5
+  %14 = icmp slt i32 %7, 10
+  store i1 %14, i1* %4
+  %15 = alloca i32
+  store i32 -612231701, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %3, %73
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -612231701, label %19
+    i32 1422225934, label %39
+    i32 -899926021, label %63
+    i32 -2009077482, label %64
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %73
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %5
+  %21 = load volatile i1, i1* %4
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 true, true
+  %25 = and i1 %22, true
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, true
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 true, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 1422225934, i32 -2009077482
+  store i32 %38, i32* %15
+  br label %73
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.std::allocator"*, align 8
+  %41 = alloca i32*, align 8
+  %42 = alloca i32*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %40, align 8
+  store i32* %1, i32** %41, align 8
+  store i32* %2, i32** %42, align 8
+  %43 = load %"class.std::allocator"*, %"class.std::allocator"** %40, align 8
+  %44 = bitcast %"class.std::allocator"* %43 to %"class.__gnu_cxx::new_allocator"*
+  %45 = load i32*, i32** %41, align 8
+  %46 = load i32*, i32** %42, align 8
+  %47 = call dereferenceable(4) i32* @_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %46) #3
+  call void @_ZN9__gnu_cxx13new_allocatorIiE9constructIiJRKiEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"* %44, i32* %45, i32* dereferenceable(4) %47)
+  %48 = load i32, i32* @x.172
+  %49 = load i32, i32* @y.173
+  %50 = add i32 %48, -1292012189
+  %51 = sub i32 %50, 1
+  %52 = sub i32 %51, -1292012189
+  %53 = sub i32 %48, 1
+  %54 = mul i32 %48, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %49, 10
+  %58 = and i1 %56, %57
+  %59 = xor i1 %56, %57
+  %60 = or i1 %58, %59
+  %61 = or i1 %56, %57
+  %62 = select i1 %60, i32 -899926021, i32 -2009077482
+  store i32 %62, i32* %15
+  br label %73
+
+; <label>:63:                                     ; preds = %16
+  ret void
+
+; <label>:64:                                     ; preds = %16
+  %65 = alloca %"class.std::allocator"*, align 8
+  %66 = alloca i32*, align 8
+  %67 = alloca i32*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %65, align 8
+  store i32* %1, i32** %66, align 8
+  store i32* %2, i32** %67, align 8
+  %68 = load %"class.std::allocator"*, %"class.std::allocator"** %65, align 8
+  %69 = bitcast %"class.std::allocator"* %68 to %"class.__gnu_cxx::new_allocator"*
+  %70 = load i32*, i32** %66, align 8
+  %71 = load i32*, i32** %67, align 8
+  %72 = call dereferenceable(4) i32* @_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %71) #3
+  call void @_ZN9__gnu_cxx13new_allocatorIiE9constructIiJRKiEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"* %69, i32* %70, i32* dereferenceable(4) %72)
+  store i32 1422225934, i32* %15
+  br label %73
+
+; <label>:73:                                     ; preds = %64, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE16_M_push_back_auxIJRKiEEEvDpOT_(%"class.std::deque"*, i32* dereferenceable(4)) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = alloca %"class.std::deque"*, align 8
+  %4 = alloca i32*, align 8
+  %5 = alloca i8*
+  %6 = alloca i32
+  store %"class.std::deque"* %0, %"class.std::deque"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %7 = load %"class.std::deque"*, %"class.std::deque"** %3, align 8
+  call void @_ZNSt5dequeIiSaIiEE22_M_reserve_map_at_backEm(%"class.std::deque"* %7, i64 1)
+  %8 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %9 = call i32* @_ZNSt11_Deque_baseIiSaIiEE16_M_allocate_nodeEv(%"class.std::_Deque_base"* %8)
+  %10 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %11 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %10, i32 0, i32 0
+  %12 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %11, i32 0, i32 3
+  %13 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %12, i32 0, i32 3
+  %14 = load i32**, i32*** %13, align 8
+  %15 = getelementptr inbounds i32*, i32** %14, i64 1
+  store i32* %9, i32** %15, align 8
+  %16 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %17 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %16, i32 0, i32 0
+  %18 = bitcast %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %17 to %"class.std::allocator"*
+  %19 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %20 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %19, i32 0, i32 0
+  %21 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %20, i32 0, i32 3
+  %22 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %21, i32 0, i32 0
+  %23 = load i32*, i32** %22, align 8
+  %24 = load i32*, i32** %4, align 8
+  %25 = call dereferenceable(4) i32* @_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %24) #3
+  invoke void @_ZNSt16allocator_traitsISaIiEE9constructIiJRKiEEEvRS0_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1) %18, i32* %23, i32* dereferenceable(4) %25)
+          to label %26 unwind label %45
+
+; <label>:26:                                     ; preds = %2
+  %27 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %28 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %29 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %28, i32 0, i32 3
+  %30 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %31 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %30, i32 0, i32 0
+  %32 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %31, i32 0, i32 3
+  %33 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %32, i32 0, i32 3
+  %34 = load i32**, i32*** %33, align 8
+  %35 = getelementptr inbounds i32*, i32** %34, i64 1
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %29, i32** %35) #3
+  %36 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %37 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %36, i32 0, i32 0
+  %38 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %37, i32 0, i32 3
+  %39 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %38, i32 0, i32 1
+  %40 = load i32*, i32** %39, align 8
+  %41 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %42 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %41, i32 0, i32 0
+  %43 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %42, i32 0, i32 3
+  %44 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %43, i32 0, i32 0
+  store i32* %40, i32** %44, align 8
+  br label %200
+
+; <label>:45:                                     ; preds = %2
+  %46 = load i32, i32* @x.174
+  %47 = load i32, i32* @y.175
+  %48 = sub i32 0, 1
+  %49 = add i32 %46, %48
+  %50 = sub i32 %46, 1
+  %51 = mul i32 %46, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %47, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 true, true
+  %58 = and i1 %55, true
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, true
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 true, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  br i1 %69, label %71, label %252
+
+; <label>:71:                                     ; preds = %45, %252
+  %72 = landingpad { i8*, i32 }
+          catch i8* null
+  %73 = extractvalue { i8*, i32 } %72, 0
+  store i8* %73, i8** %5, align 8
+  %74 = extractvalue { i8*, i32 } %72, 1
+  store i32 %74, i32* %6, align 4
+  %75 = load i32, i32* @x.174
+  %76 = load i32, i32* @y.175
+  %77 = add i32 %75, 2012392048
+  %78 = sub i32 %77, 1
+  %79 = sub i32 %78, 2012392048
+  %80 = sub i32 %75, 1
+  %81 = mul i32 %75, %79
+  %82 = urem i32 %81, 2
+  %83 = icmp eq i32 %82, 0
+  %84 = icmp slt i32 %76, 10
+  %85 = xor i1 %83, true
+  %86 = xor i1 %84, true
+  %87 = xor i1 false, true
+  %88 = and i1 %85, false
+  %89 = and i1 %83, %87
+  %90 = and i1 %86, false
+  %91 = and i1 %84, %87
+  %92 = or i1 %88, %89
+  %93 = or i1 %90, %91
+  %94 = xor i1 %92, %93
+  %95 = or i1 %85, %86
+  %96 = xor i1 %95, true
+  %97 = or i1 false, %87
+  %98 = and i1 %96, %97
+  %99 = or i1 %94, %98
+  %100 = or i1 %83, %84
+  br i1 %99, label %101, label %252
+
+; <label>:101:                                    ; preds = %71
+  br label %102
+
+; <label>:102:                                    ; preds = %101
+  %103 = load i32, i32* @x.174
+  %104 = load i32, i32* @y.175
+  %105 = add i32 %103, 894145512
+  %106 = sub i32 %105, 1
+  %107 = sub i32 %106, 894145512
+  %108 = sub i32 %103, 1
+  %109 = mul i32 %103, %107
+  %110 = urem i32 %109, 2
+  %111 = icmp eq i32 %110, 0
+  %112 = icmp slt i32 %104, 10
+  %113 = xor i1 %111, true
+  %114 = xor i1 %112, true
+  %115 = xor i1 false, true
+  %116 = and i1 %113, false
+  %117 = and i1 %111, %115
+  %118 = and i1 %114, false
+  %119 = and i1 %112, %115
+  %120 = or i1 %116, %117
+  %121 = or i1 %118, %119
+  %122 = xor i1 %120, %121
+  %123 = or i1 %113, %114
+  %124 = xor i1 %123, true
+  %125 = or i1 false, %115
+  %126 = and i1 %124, %125
+  %127 = or i1 %122, %126
+  %128 = or i1 %111, %112
+  br i1 %127, label %129, label %256
+
+; <label>:129:                                    ; preds = %102, %256
+  %130 = load i8*, i8** %5, align 8
+  %131 = call i8* @__cxa_begin_catch(i8* %130) #3
+  %132 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %133 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %134 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %133, i32 0, i32 0
+  %135 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %134, i32 0, i32 3
+  %136 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %135, i32 0, i32 3
+  %137 = load i32**, i32*** %136, align 8
+  %138 = getelementptr inbounds i32*, i32** %137, i64 1
+  %139 = load i32*, i32** %138, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi(%"class.std::_Deque_base"* %132, i32* %139) #3
+  %140 = load i32, i32* @x.174
+  %141 = load i32, i32* @y.175
+  %142 = sub i32 0, 1
+  %143 = add i32 %140, %142
+  %144 = sub i32 %140, 1
+  %145 = mul i32 %140, %143
+  %146 = urem i32 %145, 2
+  %147 = icmp eq i32 %146, 0
+  %148 = icmp slt i32 %141, 10
+  %149 = and i1 %147, %148
+  %150 = xor i1 %147, %148
+  %151 = or i1 %149, %150
+  %152 = or i1 %147, %148
+  br i1 %151, label %153, label %256
+
+; <label>:153:                                    ; preds = %129
+  invoke void @__cxa_rethrow() #12
+          to label %209 unwind label %154
+
+; <label>:154:                                    ; preds = %153
+  %155 = landingpad { i8*, i32 }
+          cleanup
+  %156 = extractvalue { i8*, i32 } %155, 0
+  store i8* %156, i8** %5, align 8
+  %157 = extractvalue { i8*, i32 } %155, 1
+  store i32 %157, i32* %6, align 4
+  invoke void @__cxa_end_catch()
+          to label %158 unwind label %206
+
+; <label>:158:                                    ; preds = %154
+  %159 = load i32, i32* @x.174
+  %160 = load i32, i32* @y.175
+  %161 = sub i32 0, 1
+  %162 = add i32 %159, %161
+  %163 = sub i32 %159, 1
+  %164 = mul i32 %159, %162
+  %165 = urem i32 %164, 2
+  %166 = icmp eq i32 %165, 0
+  %167 = icmp slt i32 %160, 10
+  %168 = and i1 %166, %167
+  %169 = xor i1 %166, %167
+  %170 = or i1 %168, %169
+  %171 = or i1 %166, %167
+  br i1 %170, label %172, label %267
+
+; <label>:172:                                    ; preds = %158, %267
+  %173 = load i32, i32* @x.174
+  %174 = load i32, i32* @y.175
+  %175 = add i32 %173, -572424066
+  %176 = sub i32 %175, 1
+  %177 = sub i32 %176, -572424066
+  %178 = sub i32 %173, 1
+  %179 = mul i32 %173, %177
+  %180 = urem i32 %179, 2
+  %181 = icmp eq i32 %180, 0
+  %182 = icmp slt i32 %174, 10
+  %183 = xor i1 %181, true
+  %184 = xor i1 %182, true
+  %185 = xor i1 true, true
+  %186 = and i1 %183, true
+  %187 = and i1 %181, %185
+  %188 = and i1 %184, true
+  %189 = and i1 %182, %185
+  %190 = or i1 %186, %187
+  %191 = or i1 %188, %189
+  %192 = xor i1 %190, %191
+  %193 = or i1 %183, %184
+  %194 = xor i1 %193, true
+  %195 = or i1 true, %185
+  %196 = and i1 %194, %195
+  %197 = or i1 %192, %196
+  %198 = or i1 %181, %182
+  br i1 %197, label %199, label %267
+
+; <label>:199:                                    ; preds = %172
+  br label %201
+
+; <label>:200:                                    ; preds = %26
+  ret void
+
+; <label>:201:                                    ; preds = %199
+  %202 = load i8*, i8** %5, align 8
+  %203 = load i32, i32* %6, align 4
+  %204 = insertvalue { i8*, i32 } undef, i8* %202, 0
+  %205 = insertvalue { i8*, i32 } %204, i32 %203, 1
+  resume { i8*, i32 } %205
+
+; <label>:206:                                    ; preds = %154
+  %207 = landingpad { i8*, i32 }
+          catch i8* null
+  %208 = extractvalue { i8*, i32 } %207, 0
+  call void @__clang_call_terminate(i8* %208) #11
+  unreachable
+
+; <label>:209:                                    ; preds = %153
+  %210 = load i32, i32* @x.174
+  %211 = load i32, i32* @y.175
+  %212 = sub i32 %210, -780758136
+  %213 = sub i32 %212, 1
+  %214 = add i32 %213, -780758136
+  %215 = sub i32 %210, 1
+  %216 = mul i32 %210, %214
+  %217 = urem i32 %216, 2
+  %218 = icmp eq i32 %217, 0
+  %219 = icmp slt i32 %211, 10
+  %220 = and i1 %218, %219
+  %221 = xor i1 %218, %219
+  %222 = or i1 %220, %221
+  %223 = or i1 %218, %219
+  br i1 %222, label %224, label %268
+
+; <label>:224:                                    ; preds = %209, %268
+  %225 = load i32, i32* @x.174
+  %226 = load i32, i32* @y.175
+  %227 = sub i32 %225, 804920419
+  %228 = sub i32 %227, 1
+  %229 = add i32 %228, 804920419
+  %230 = sub i32 %225, 1
+  %231 = mul i32 %225, %229
+  %232 = urem i32 %231, 2
+  %233 = icmp eq i32 %232, 0
+  %234 = icmp slt i32 %226, 10
+  %235 = xor i1 %233, true
+  %236 = xor i1 %234, true
+  %237 = xor i1 false, true
+  %238 = and i1 %235, false
+  %239 = and i1 %233, %237
+  %240 = and i1 %236, false
+  %241 = and i1 %234, %237
+  %242 = or i1 %238, %239
+  %243 = or i1 %240, %241
+  %244 = xor i1 %242, %243
+  %245 = or i1 %235, %236
+  %246 = xor i1 %245, true
+  %247 = or i1 false, %237
+  %248 = and i1 %246, %247
+  %249 = or i1 %244, %248
+  %250 = or i1 %233, %234
+  br i1 %249, label %251, label %268
+
+; <label>:251:                                    ; preds = %224
+  unreachable
+
+; <label>:252:                                    ; preds = %71, %45
+  %253 = landingpad { i8*, i32 }
+          catch i8* null
+  %254 = extractvalue { i8*, i32 } %253, 0
+  store i8* %254, i8** %5, align 8
+  %255 = extractvalue { i8*, i32 } %253, 1
+  store i32 %255, i32* %6, align 4
+  br label %71
+
+; <label>:256:                                    ; preds = %129, %102
+  %257 = load i8*, i8** %5, align 8
+  %258 = call i8* @__cxa_begin_catch(i8* %257) #3
+  %259 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %260 = bitcast %"class.std::deque"* %7 to %"class.std::_Deque_base"*
+  %261 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %260, i32 0, i32 0
+  %262 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %261, i32 0, i32 3
+  %263 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %262, i32 0, i32 3
+  %264 = load i32**, i32*** %263, align 8
+  %265 = getelementptr inbounds i32*, i32** %264, i64 1
+  %266 = load i32*, i32** %265, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE18_M_deallocate_nodeEPi(%"class.std::_Deque_base"* %259, i32* %266) #3
+  br label %129
+
+; <label>:267:                                    ; preds = %172, %158
+  br label %172
+
+; <label>:268:                                    ; preds = %224, %209
+  br label %224
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiE9constructIiJRKiEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"*, i32*, i32* dereferenceable(4)) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  %9 = bitcast i32* %8 to i8*
+  %10 = bitcast i8* %9 to i32*
+  %11 = load i32*, i32** %6, align 8
+  %12 = call dereferenceable(4) i32* @_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %11) #3
+  %13 = load i32, i32* %12, align 4
+  store i32 %13, i32* %10, align 4
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4)) #4 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  ret i32* %3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE22_M_reserve_map_at_backEm(%"class.std::deque"*, i64) #0 comdat align 2 {
+  %3 = alloca i64
+  %4 = alloca i64
+  %5 = alloca %"class.std::deque"*
+  %6 = alloca %"class.std::deque"*, align 8
+  %7 = alloca i64, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %6, align 8
+  store i64 %1, i64* %7, align 8
+  %8 = load %"class.std::deque"*, %"class.std::deque"** %6, align 8
+  store %"class.std::deque"* %8, %"class.std::deque"** %5
+  %9 = load i64, i64* %7, align 8
+  %10 = sub i64 %9, -7235934917719776282
+  %11 = add i64 %10, 1
+  %12 = add i64 %11, -7235934917719776282
+  %13 = add i64 %9, 1
+  store i64 %12, i64* %4
+  %14 = load volatile %"class.std::deque"*, %"class.std::deque"** %5
+  %15 = bitcast %"class.std::deque"* %14 to %"class.std::_Deque_base"*
+  %16 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %15, i32 0, i32 0
+  %17 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %16, i32 0, i32 1
+  %18 = load i64, i64* %17, align 8
+  %19 = load volatile %"class.std::deque"*, %"class.std::deque"** %5
+  %20 = bitcast %"class.std::deque"* %19 to %"class.std::_Deque_base"*
+  %21 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %20, i32 0, i32 0
+  %22 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %21, i32 0, i32 3
+  %23 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %22, i32 0, i32 3
+  %24 = load i32**, i32*** %23, align 8
+  %25 = load volatile %"class.std::deque"*, %"class.std::deque"** %5
+  %26 = bitcast %"class.std::deque"* %25 to %"class.std::_Deque_base"*
+  %27 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %26, i32 0, i32 0
+  %28 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %27, i32 0, i32 0
+  %29 = load i32**, i32*** %28, align 8
+  %30 = ptrtoint i32** %24 to i64
+  %31 = ptrtoint i32** %29 to i64
+  %32 = sub i64 0, %31
+  %33 = add i64 %30, %32
+  %34 = sub i64 %30, %31
+  %35 = sdiv exact i64 %33, 8
+  %36 = sub i64 0, %35
+  %37 = add i64 %18, %36
+  %38 = sub i64 %18, %35
+  store i64 %37, i64* %3
+  %39 = alloca i32
+  store i32 -2040947411, i32* %39
+  br label %40
+
+; <label>:40:                                     ; preds = %2, %97
+  %41 = load i32, i32* %39
+  switch i32 %41, label %42 [
+    i32 -2040947411, label %43
+    i32 556815243, label %48
+    i32 2069059831, label %75
+    i32 1729167155, label %92
+    i32 590090568, label %93
+    i32 1009899847, label %94
+  ]
+
+; <label>:42:                                     ; preds = %40
+  br label %97
+
+; <label>:43:                                     ; preds = %40
+  %44 = load volatile i64, i64* %4
+  %45 = load volatile i64, i64* %3
+  %46 = icmp ugt i64 %44, %45
+  %47 = select i1 %46, i32 556815243, i32 590090568
+  store i32 %47, i32* %39
+  br label %97
+
+; <label>:48:                                     ; preds = %40
+  %49 = load i32, i32* @x.180
+  %50 = load i32, i32* @y.181
+  %51 = sub i32 0, 1
+  %52 = add i32 %49, %51
+  %53 = sub i32 %49, 1
+  %54 = mul i32 %49, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %50, 10
+  %58 = xor i1 %56, true
+  %59 = xor i1 %57, true
+  %60 = xor i1 false, true
+  %61 = and i1 %58, false
+  %62 = and i1 %56, %60
+  %63 = and i1 %59, false
+  %64 = and i1 %57, %60
+  %65 = or i1 %61, %62
+  %66 = or i1 %63, %64
+  %67 = xor i1 %65, %66
+  %68 = or i1 %58, %59
+  %69 = xor i1 %68, true
+  %70 = or i1 false, %60
+  %71 = and i1 %69, %70
+  %72 = or i1 %67, %71
+  %73 = or i1 %56, %57
+  %74 = select i1 %72, i32 2069059831, i32 1009899847
+  store i32 %74, i32* %39
+  br label %97
+
+; <label>:75:                                     ; preds = %40
+  %76 = load i64, i64* %7, align 8
+  %77 = load volatile %"class.std::deque"*, %"class.std::deque"** %5
+  call void @_ZNSt5dequeIiSaIiEE17_M_reallocate_mapEmb(%"class.std::deque"* %77, i64 %76, i1 zeroext false)
+  %78 = load i32, i32* @x.180
+  %79 = load i32, i32* @y.181
+  %80 = sub i32 0, 1
+  %81 = add i32 %78, %80
+  %82 = sub i32 %78, 1
+  %83 = mul i32 %78, %81
+  %84 = urem i32 %83, 2
+  %85 = icmp eq i32 %84, 0
+  %86 = icmp slt i32 %79, 10
+  %87 = and i1 %85, %86
+  %88 = xor i1 %85, %86
+  %89 = or i1 %87, %88
+  %90 = or i1 %85, %86
+  %91 = select i1 %89, i32 1729167155, i32 1009899847
+  store i32 %91, i32* %39
+  br label %97
+
+; <label>:92:                                     ; preds = %40
+  store i32 590090568, i32* %39
+  br label %97
+
+; <label>:93:                                     ; preds = %40
+  ret void
+
+; <label>:94:                                     ; preds = %40
+  %95 = load i64, i64* %7, align 8
+  %96 = load volatile %"class.std::deque"*, %"class.std::deque"** %5
+  call void @_ZNSt5dequeIiSaIiEE17_M_reallocate_mapEmb(%"class.std::deque"* %96, i64 %95, i1 zeroext false)
+  store i32 2069059831, i32* %39
+  br label %97
+
+; <label>:97:                                     ; preds = %94, %92, %75, %48, %43, %42
+  br label %40
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt5dequeIiSaIiEE17_M_reallocate_mapEmb(%"class.std::deque"*, i64, i1 zeroext) #0 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca i32**
+  %6 = alloca i32**
+  %7 = alloca i64
+  %8 = alloca i64
+  %9 = alloca %"class.std::deque"*
+  %10 = alloca %"class.std::deque"*, align 8
+  %11 = alloca i64, align 8
+  %12 = alloca i8, align 1
+  %13 = alloca i64, align 8
+  %14 = alloca i64, align 8
+  %15 = alloca i32**, align 8
+  %16 = alloca i64, align 8
+  %17 = alloca i32**, align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %10, align 8
+  store i64 %1, i64* %11, align 8
+  %18 = zext i1 %2 to i8
+  store i8 %18, i8* %12, align 1
+  %19 = load %"class.std::deque"*, %"class.std::deque"** %10, align 8
+  store %"class.std::deque"* %19, %"class.std::deque"** %9
+  %20 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %21 = bitcast %"class.std::deque"* %20 to %"class.std::_Deque_base"*
+  %22 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %21, i32 0, i32 0
+  %23 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %22, i32 0, i32 3
+  %24 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %23, i32 0, i32 3
+  %25 = load i32**, i32*** %24, align 8
+  %26 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %27 = bitcast %"class.std::deque"* %26 to %"class.std::_Deque_base"*
+  %28 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %27, i32 0, i32 0
+  %29 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %28, i32 0, i32 2
+  %30 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %29, i32 0, i32 3
+  %31 = load i32**, i32*** %30, align 8
+  %32 = ptrtoint i32** %25 to i64
+  %33 = ptrtoint i32** %31 to i64
+  %34 = sub i64 0, %33
+  %35 = add i64 %32, %34
+  %36 = sub i64 %32, %33
+  %37 = sdiv exact i64 %35, 8
+  %38 = sub i64 0, 1
+  %39 = sub i64 %37, %38
+  %40 = add nsw i64 %37, 1
+  store i64 %39, i64* %13, align 8
+  %41 = load i64, i64* %13, align 8
+  %42 = load i64, i64* %11, align 8
+  %43 = sub i64 0, %42
+  %44 = sub i64 %41, %43
+  %45 = add i64 %41, %42
+  store i64 %44, i64* %14, align 8
+  %46 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %47 = bitcast %"class.std::deque"* %46 to %"class.std::_Deque_base"*
+  %48 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %47, i32 0, i32 0
+  %49 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %48, i32 0, i32 1
+  %50 = load i64, i64* %49, align 8
+  store i64 %50, i64* %8
+  %51 = load i64, i64* %14, align 8
+  %52 = mul i64 2, %51
+  store i64 %52, i64* %7
+  %53 = alloca i32
+  store i32 1489272672, i32* %53
+  %54 = alloca i64
+  %55 = alloca i64
+  br label %56
+
+; <label>:56:                                     ; preds = %3, %367
+  %57 = load i32, i32* %53
+  switch i32 %57, label %58 [
+    i32 1489272672, label %59
+    i32 1128739592, label %64
+    i32 1565807988, label %85
+    i32 54367051, label %87
+    i32 -1124277529, label %103
+    i32 1219557737, label %131
+    i32 -1527606273, label %132
+    i32 -1015280354, label %145
+    i32 -79804708, label %161
+    i32 -83165279, label %179
+    i32 253858383, label %180
+    i32 400313464, label %216
+    i32 -1194589141, label %232
+    i32 165157329, label %249
+    i32 1694810024, label %251
+    i32 -747132567, label %252
+    i32 -199994529, label %293
+    i32 -128611917, label %309
+    i32 -431161638, label %349
+    i32 1103841631, label %350
+    i32 172350427, label %351
+    i32 -1854049719, label %353
+  ]
+
+; <label>:58:                                     ; preds = %56
+  br label %367
+
+; <label>:59:                                     ; preds = %56
+  %60 = load volatile i64, i64* %8
+  %61 = load volatile i64, i64* %7
+  %62 = icmp ugt i64 %60, %61
+  %63 = select i1 %62, i32 1128739592, i32 253858383
+  store i32 %63, i32* %53
+  br label %367
+
+; <label>:64:                                     ; preds = %56
+  %65 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %66 = bitcast %"class.std::deque"* %65 to %"class.std::_Deque_base"*
+  %67 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %66, i32 0, i32 0
+  %68 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %67, i32 0, i32 0
+  %69 = load i32**, i32*** %68, align 8
+  %70 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %71 = bitcast %"class.std::deque"* %70 to %"class.std::_Deque_base"*
+  %72 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %71, i32 0, i32 0
+  %73 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %72, i32 0, i32 1
+  %74 = load i64, i64* %73, align 8
+  %75 = load i64, i64* %14, align 8
+  %76 = add i64 %74, 2016901271244110350
+  %77 = sub i64 %76, %75
+  %78 = sub i64 %77, 2016901271244110350
+  %79 = sub i64 %74, %75
+  %80 = udiv i64 %78, 2
+  %81 = getelementptr inbounds i32*, i32** %69, i64 %80
+  store i32** %81, i32*** %6
+  %82 = load i8, i8* %12, align 1
+  %83 = trunc i8 %82 to i1
+  %84 = select i1 %83, i32 1565807988, i32 54367051
+  store i32 %84, i32* %53
+  br label %367
+
+; <label>:85:                                     ; preds = %56
+  %86 = load i64, i64* %11, align 8
+  store i32 -1527606273, i32* %53
+  store i64 %86, i64* %54
+  br label %367
+
+; <label>:87:                                     ; preds = %56
+  %88 = load i32, i32* @x.182
+  %89 = load i32, i32* @y.183
+  %90 = sub i32 %88, -404632536
+  %91 = sub i32 %90, 1
+  %92 = add i32 %91, -404632536
+  %93 = sub i32 %88, 1
+  %94 = mul i32 %88, %92
+  %95 = urem i32 %94, 2
+  %96 = icmp eq i32 %95, 0
+  %97 = icmp slt i32 %89, 10
+  %98 = and i1 %96, %97
+  %99 = xor i1 %96, %97
+  %100 = or i1 %98, %99
+  %101 = or i1 %96, %97
+  %102 = select i1 %100, i32 -1124277529, i32 1103841631
+  store i32 %102, i32* %53
+  br label %367
+
+; <label>:103:                                    ; preds = %56
+  %104 = load i32, i32* @x.182
+  %105 = load i32, i32* @y.183
+  %106 = add i32 %104, 1173708271
+  %107 = sub i32 %106, 1
+  %108 = sub i32 %107, 1173708271
+  %109 = sub i32 %104, 1
+  %110 = mul i32 %104, %108
+  %111 = urem i32 %110, 2
+  %112 = icmp eq i32 %111, 0
+  %113 = icmp slt i32 %105, 10
+  %114 = xor i1 %112, true
+  %115 = xor i1 %113, true
+  %116 = xor i1 false, true
+  %117 = and i1 %114, false
+  %118 = and i1 %112, %116
+  %119 = and i1 %115, false
+  %120 = and i1 %113, %116
+  %121 = or i1 %117, %118
+  %122 = or i1 %119, %120
+  %123 = xor i1 %121, %122
+  %124 = or i1 %114, %115
+  %125 = xor i1 %124, true
+  %126 = or i1 false, %116
+  %127 = and i1 %125, %126
+  %128 = or i1 %123, %127
+  %129 = or i1 %112, %113
+  %130 = select i1 %128, i32 1219557737, i32 1103841631
+  store i32 %130, i32* %53
+  br label %367
+
+; <label>:131:                                    ; preds = %56
+  store i32 -1527606273, i32* %53
+  store i64 0, i64* %54
+  br label %367
+
+; <label>:132:                                    ; preds = %56
+  %133 = load i64, i64* %54
+  %134 = load volatile i32**, i32*** %6
+  %135 = getelementptr inbounds i32*, i32** %134, i64 %133
+  store i32** %135, i32*** %15, align 8
+  %136 = load i32**, i32*** %15, align 8
+  %137 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %138 = bitcast %"class.std::deque"* %137 to %"class.std::_Deque_base"*
+  %139 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %138, i32 0, i32 0
+  %140 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %139, i32 0, i32 2
+  %141 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %140, i32 0, i32 3
+  %142 = load i32**, i32*** %141, align 8
+  %143 = icmp ult i32** %136, %142
+  %144 = select i1 %143, i32 -1015280354, i32 -79804708
+  store i32 %144, i32* %53
+  br label %367
+
+; <label>:145:                                    ; preds = %56
+  %146 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %147 = bitcast %"class.std::deque"* %146 to %"class.std::_Deque_base"*
+  %148 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %147, i32 0, i32 0
+  %149 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %148, i32 0, i32 2
+  %150 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %149, i32 0, i32 3
+  %151 = load i32**, i32*** %150, align 8
+  %152 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %153 = bitcast %"class.std::deque"* %152 to %"class.std::_Deque_base"*
+  %154 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %153, i32 0, i32 0
+  %155 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %154, i32 0, i32 3
+  %156 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %155, i32 0, i32 3
+  %157 = load i32**, i32*** %156, align 8
+  %158 = getelementptr inbounds i32*, i32** %157, i64 1
+  %159 = load i32**, i32*** %15, align 8
+  %160 = call i32** @_ZSt4copyIPPiS1_ET0_T_S3_S2_(i32** %151, i32** %158, i32** %159)
+  store i32 -83165279, i32* %53
+  br label %367
+
+; <label>:161:                                    ; preds = %56
+  %162 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %163 = bitcast %"class.std::deque"* %162 to %"class.std::_Deque_base"*
+  %164 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %163, i32 0, i32 0
+  %165 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %164, i32 0, i32 2
+  %166 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %165, i32 0, i32 3
+  %167 = load i32**, i32*** %166, align 8
+  %168 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %169 = bitcast %"class.std::deque"* %168 to %"class.std::_Deque_base"*
+  %170 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %169, i32 0, i32 0
+  %171 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %170, i32 0, i32 3
+  %172 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %171, i32 0, i32 3
+  %173 = load i32**, i32*** %172, align 8
+  %174 = getelementptr inbounds i32*, i32** %173, i64 1
+  %175 = load i32**, i32*** %15, align 8
+  %176 = load i64, i64* %13, align 8
+  %177 = getelementptr inbounds i32*, i32** %175, i64 %176
+  %178 = call i32** @_ZSt13copy_backwardIPPiS1_ET0_T_S3_S2_(i32** %167, i32** %174, i32** %177)
+  store i32 -83165279, i32* %53
+  br label %367
+
+; <label>:179:                                    ; preds = %56
+  store i32 -199994529, i32* %53
+  br label %367
+
+; <label>:180:                                    ; preds = %56
+  %181 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %182 = bitcast %"class.std::deque"* %181 to %"class.std::_Deque_base"*
+  %183 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %182, i32 0, i32 0
+  %184 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %183, i32 0, i32 1
+  %185 = load i64, i64* %184, align 8
+  %186 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %187 = bitcast %"class.std::deque"* %186 to %"class.std::_Deque_base"*
+  %188 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %187, i32 0, i32 0
+  %189 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %188, i32 0, i32 1
+  %190 = call dereferenceable(8) i64* @_ZSt3maxImERKT_S2_S2_(i64* dereferenceable(8) %189, i64* dereferenceable(8) %11)
+  %191 = load i64, i64* %190, align 8
+  %192 = sub i64 0, %185
+  %193 = sub i64 0, %191
+  %194 = add i64 %192, %193
+  %195 = sub i64 0, %194
+  %196 = add i64 %185, %191
+  %197 = sub i64 %195, 8302906074697981048
+  %198 = add i64 %197, 2
+  %199 = add i64 %198, 8302906074697981048
+  %200 = add i64 %195, 2
+  store i64 %199, i64* %16, align 8
+  %201 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %202 = bitcast %"class.std::deque"* %201 to %"class.std::_Deque_base"*
+  %203 = load i64, i64* %16, align 8
+  %204 = call i32** @_ZNSt11_Deque_baseIiSaIiEE15_M_allocate_mapEm(%"class.std::_Deque_base"* %202, i64 %203)
+  store i32** %204, i32*** %17, align 8
+  %205 = load i32**, i32*** %17, align 8
+  %206 = load i64, i64* %16, align 8
+  %207 = load i64, i64* %14, align 8
+  %208 = sub i64 0, %207
+  %209 = add i64 %206, %208
+  %210 = sub i64 %206, %207
+  %211 = udiv i64 %209, 2
+  %212 = getelementptr inbounds i32*, i32** %205, i64 %211
+  store i32** %212, i32*** %5
+  %213 = load i8, i8* %12, align 1
+  %214 = trunc i8 %213 to i1
+  %215 = select i1 %214, i32 400313464, i32 1694810024
+  store i32 %215, i32* %53
+  br label %367
+
+; <label>:216:                                    ; preds = %56
+  %217 = load i32, i32* @x.182
+  %218 = load i32, i32* @y.183
+  %219 = sub i32 %217, 668531235
+  %220 = sub i32 %219, 1
+  %221 = add i32 %220, 668531235
+  %222 = sub i32 %217, 1
+  %223 = mul i32 %217, %221
+  %224 = urem i32 %223, 2
+  %225 = icmp eq i32 %224, 0
+  %226 = icmp slt i32 %218, 10
+  %227 = and i1 %225, %226
+  %228 = xor i1 %225, %226
+  %229 = or i1 %227, %228
+  %230 = or i1 %225, %226
+  %231 = select i1 %229, i32 -1194589141, i32 172350427
+  store i32 %231, i32* %53
+  br label %367
+
+; <label>:232:                                    ; preds = %56
+  %233 = load i64, i64* %11, align 8
+  store i64 %233, i64* %4
+  %234 = load i32, i32* @x.182
+  %235 = load i32, i32* @y.183
+  %236 = add i32 %234, -335746004
+  %237 = sub i32 %236, 1
+  %238 = sub i32 %237, -335746004
+  %239 = sub i32 %234, 1
+  %240 = mul i32 %234, %238
+  %241 = urem i32 %240, 2
+  %242 = icmp eq i32 %241, 0
+  %243 = icmp slt i32 %235, 10
+  %244 = and i1 %242, %243
+  %245 = xor i1 %242, %243
+  %246 = or i1 %244, %245
+  %247 = or i1 %242, %243
+  %248 = select i1 %246, i32 165157329, i32 172350427
+  store i32 %248, i32* %53
+  br label %367
+
+; <label>:249:                                    ; preds = %56
+  store i32 -747132567, i32* %53
+  %250 = load volatile i64, i64* %4
+  store i64 %250, i64* %55
+  br label %367
+
+; <label>:251:                                    ; preds = %56
+  store i32 -747132567, i32* %53
+  store i64 0, i64* %55
+  br label %367
+
+; <label>:252:                                    ; preds = %56
+  %253 = load i64, i64* %55
+  %254 = load volatile i32**, i32*** %5
+  %255 = getelementptr inbounds i32*, i32** %254, i64 %253
+  store i32** %255, i32*** %15, align 8
+  %256 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %257 = bitcast %"class.std::deque"* %256 to %"class.std::_Deque_base"*
+  %258 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %257, i32 0, i32 0
+  %259 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %258, i32 0, i32 2
+  %260 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %259, i32 0, i32 3
+  %261 = load i32**, i32*** %260, align 8
+  %262 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %263 = bitcast %"class.std::deque"* %262 to %"class.std::_Deque_base"*
+  %264 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %263, i32 0, i32 0
+  %265 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %264, i32 0, i32 3
+  %266 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %265, i32 0, i32 3
+  %267 = load i32**, i32*** %266, align 8
+  %268 = getelementptr inbounds i32*, i32** %267, i64 1
+  %269 = load i32**, i32*** %15, align 8
+  %270 = call i32** @_ZSt4copyIPPiS1_ET0_T_S3_S2_(i32** %261, i32** %268, i32** %269)
+  %271 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %272 = bitcast %"class.std::deque"* %271 to %"class.std::_Deque_base"*
+  %273 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %274 = bitcast %"class.std::deque"* %273 to %"class.std::_Deque_base"*
+  %275 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %274, i32 0, i32 0
+  %276 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %275, i32 0, i32 0
+  %277 = load i32**, i32*** %276, align 8
+  %278 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %279 = bitcast %"class.std::deque"* %278 to %"class.std::_Deque_base"*
+  %280 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %279, i32 0, i32 0
+  %281 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %280, i32 0, i32 1
+  %282 = load i64, i64* %281, align 8
+  call void @_ZNSt11_Deque_baseIiSaIiEE17_M_deallocate_mapEPPim(%"class.std::_Deque_base"* %272, i32** %277, i64 %282) #3
+  %283 = load i32**, i32*** %17, align 8
+  %284 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %285 = bitcast %"class.std::deque"* %284 to %"class.std::_Deque_base"*
+  %286 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %285, i32 0, i32 0
+  %287 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %286, i32 0, i32 0
+  store i32** %283, i32*** %287, align 8
+  %288 = load i64, i64* %16, align 8
+  %289 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %290 = bitcast %"class.std::deque"* %289 to %"class.std::_Deque_base"*
+  %291 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %290, i32 0, i32 0
+  %292 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %291, i32 0, i32 1
+  store i64 %288, i64* %292, align 8
+  store i32 -199994529, i32* %53
+  br label %367
+
+; <label>:293:                                    ; preds = %56
+  %294 = load i32, i32* @x.182
+  %295 = load i32, i32* @y.183
+  %296 = add i32 %294, 1089584425
+  %297 = sub i32 %296, 1
+  %298 = sub i32 %297, 1089584425
+  %299 = sub i32 %294, 1
+  %300 = mul i32 %294, %298
+  %301 = urem i32 %300, 2
+  %302 = icmp eq i32 %301, 0
+  %303 = icmp slt i32 %295, 10
+  %304 = and i1 %302, %303
+  %305 = xor i1 %302, %303
+  %306 = or i1 %304, %305
+  %307 = or i1 %302, %303
+  %308 = select i1 %306, i32 -128611917, i32 -1854049719
+  store i32 %308, i32* %53
+  br label %367
+
+; <label>:309:                                    ; preds = %56
+  %310 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %311 = bitcast %"class.std::deque"* %310 to %"class.std::_Deque_base"*
+  %312 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %311, i32 0, i32 0
+  %313 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %312, i32 0, i32 2
+  %314 = load i32**, i32*** %15, align 8
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %313, i32** %314) #3
+  %315 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %316 = bitcast %"class.std::deque"* %315 to %"class.std::_Deque_base"*
+  %317 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %316, i32 0, i32 0
+  %318 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %317, i32 0, i32 3
+  %319 = load i32**, i32*** %15, align 8
+  %320 = load i64, i64* %13, align 8
+  %321 = getelementptr inbounds i32*, i32** %319, i64 %320
+  %322 = getelementptr inbounds i32*, i32** %321, i64 -1
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %318, i32** %322) #3
+  %323 = load i32, i32* @x.182
+  %324 = load i32, i32* @y.183
+  %325 = sub i32 0, 1
+  %326 = add i32 %323, %325
+  %327 = sub i32 %323, 1
+  %328 = mul i32 %323, %326
+  %329 = urem i32 %328, 2
+  %330 = icmp eq i32 %329, 0
+  %331 = icmp slt i32 %324, 10
+  %332 = xor i1 %330, true
+  %333 = xor i1 %331, true
+  %334 = xor i1 false, true
+  %335 = and i1 %332, false
+  %336 = and i1 %330, %334
+  %337 = and i1 %333, false
+  %338 = and i1 %331, %334
+  %339 = or i1 %335, %336
+  %340 = or i1 %337, %338
+  %341 = xor i1 %339, %340
+  %342 = or i1 %332, %333
+  %343 = xor i1 %342, true
+  %344 = or i1 false, %334
+  %345 = and i1 %343, %344
+  %346 = or i1 %341, %345
+  %347 = or i1 %330, %331
+  %348 = select i1 %346, i32 -431161638, i32 -1854049719
+  store i32 %348, i32* %53
+  br label %367
+
+; <label>:349:                                    ; preds = %56
+  ret void
+
+; <label>:350:                                    ; preds = %56
+  store i32 -1124277529, i32* %53
+  br label %367
+
+; <label>:351:                                    ; preds = %56
+  %352 = load i64, i64* %11, align 8
+  store i32 -1194589141, i32* %53
+  br label %367
+
+; <label>:353:                                    ; preds = %56
+  %354 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %355 = bitcast %"class.std::deque"* %354 to %"class.std::_Deque_base"*
+  %356 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %355, i32 0, i32 0
+  %357 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %356, i32 0, i32 2
+  %358 = load i32**, i32*** %15, align 8
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %357, i32** %358) #3
+  %359 = load volatile %"class.std::deque"*, %"class.std::deque"** %9
+  %360 = bitcast %"class.std::deque"* %359 to %"class.std::_Deque_base"*
+  %361 = getelementptr inbounds %"class.std::_Deque_base", %"class.std::_Deque_base"* %360, i32 0, i32 0
+  %362 = getelementptr inbounds %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl", %"struct.std::_Deque_base<int, std::allocator<int> >::_Deque_impl"* %361, i32 0, i32 3
+  %363 = load i32**, i32*** %15, align 8
+  %364 = load i64, i64* %13, align 8
+  %365 = getelementptr inbounds i32*, i32** %363, i64 %364
+  %366 = getelementptr inbounds i32*, i32** %365, i64 -1
+  call void @_ZNSt15_Deque_iteratorIiRiPiE11_M_set_nodeEPS1_(%"struct.std::_Deque_iterator"* %362, i32** %366) #3
+  store i32 -128611917, i32* %53
+  br label %367
+
+; <label>:367:                                    ; preds = %353, %351, %350, %309, %293, %252, %251, %249, %232, %216, %180, %179, %161, %145, %132, %131, %103, %87, %85, %64, %59, %58
+  br label %56
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt4copyIPPiS1_ET0_T_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i32**, align 8
+  store i32** %0, i32*** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i32** %2, i32*** %6, align 8
+  %7 = load i32**, i32*** %4, align 8
+  %8 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %7)
+  %9 = load i32**, i32*** %5, align 8
+  %10 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %9)
+  %11 = load i32**, i32*** %6, align 8
+  %12 = call i32** @_ZSt14__copy_move_a2ILb0EPPiS1_ET1_T0_S3_S2_(i32** %8, i32** %10, i32** %11)
+  ret i32** %12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt13copy_backwardIPPiS1_ET0_T_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.186
+  %8 = load i32, i32* @y.187
+  %9 = sub i32 0, 1
+  %10 = add i32 %7, %9
+  %11 = sub i32 %7, 1
+  %12 = mul i32 %7, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %6
+  %15 = icmp slt i32 %8, 10
+  store i1 %15, i1* %5
+  %16 = alloca i32
+  store i32 -372765520, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %65
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -372765520, label %20
+    i32 1840730424, label %28
+    i32 1251329012, label %53
+    i32 40386407, label %55
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %65
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %6
+  %22 = load volatile i1, i1* %5
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 1840730424, i32 40386407
+  store i32 %27, i32* %16
+  br label %65
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca i32**, align 8
+  %30 = alloca i32**, align 8
+  %31 = alloca i32**, align 8
+  store i32** %0, i32*** %29, align 8
+  store i32** %1, i32*** %30, align 8
+  store i32** %2, i32*** %31, align 8
+  %32 = load i32**, i32*** %29, align 8
+  %33 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %32)
+  %34 = load i32**, i32*** %30, align 8
+  %35 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %34)
+  %36 = load i32**, i32*** %31, align 8
+  %37 = call i32** @_ZSt23__copy_move_backward_a2ILb0EPPiS1_ET1_T0_S3_S2_(i32** %33, i32** %35, i32** %36)
+  store i32** %37, i32*** %4
+  %38 = load i32, i32* @x.186
+  %39 = load i32, i32* @y.187
+  %40 = sub i32 %38, -1594870794
+  %41 = sub i32 %40, 1
+  %42 = add i32 %41, -1594870794
+  %43 = sub i32 %38, 1
+  %44 = mul i32 %38, %42
+  %45 = urem i32 %44, 2
+  %46 = icmp eq i32 %45, 0
+  %47 = icmp slt i32 %39, 10
+  %48 = and i1 %46, %47
+  %49 = xor i1 %46, %47
+  %50 = or i1 %48, %49
+  %51 = or i1 %46, %47
+  %52 = select i1 %50, i32 1251329012, i32 40386407
+  store i32 %52, i32* %16
+  br label %65
+
+; <label>:53:                                     ; preds = %17
+  %54 = load volatile i32**, i32*** %4
+  ret i32** %54
+
+; <label>:55:                                     ; preds = %17
+  %56 = alloca i32**, align 8
+  %57 = alloca i32**, align 8
+  %58 = alloca i32**, align 8
+  store i32** %0, i32*** %56, align 8
+  store i32** %1, i32*** %57, align 8
+  store i32** %2, i32*** %58, align 8
+  %59 = load i32**, i32*** %56, align 8
+  %60 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %59)
+  %61 = load i32**, i32*** %57, align 8
+  %62 = call i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32** %61)
+  %63 = load i32**, i32*** %58, align 8
+  %64 = call i32** @_ZSt23__copy_move_backward_a2ILb0EPPiS1_ET1_T0_S3_S2_(i32** %60, i32** %62, i32** %63)
+  store i32 1840730424, i32* %16
+  br label %65
+
+; <label>:65:                                     ; preds = %55, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt14__copy_move_a2ILb0EPPiS1_ET1_T0_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.188
+  %8 = load i32, i32* @y.189
+  %9 = sub i32 0, 1
+  %10 = add i32 %7, %9
+  %11 = sub i32 %7, 1
+  %12 = mul i32 %7, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %6
+  %15 = icmp slt i32 %8, 10
+  store i1 %15, i1* %5
+  %16 = alloca i32
+  store i32 -939554117, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %79
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -939554117, label %20
+    i32 1360481913, label %28
+    i32 -418584521, label %66
+    i32 -1133027751, label %68
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %79
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %6
+  %22 = load volatile i1, i1* %5
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 1360481913, i32 -1133027751
+  store i32 %27, i32* %16
+  br label %79
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca i32**, align 8
+  %30 = alloca i32**, align 8
+  %31 = alloca i32**, align 8
+  store i32** %0, i32*** %29, align 8
+  store i32** %1, i32*** %30, align 8
+  store i32** %2, i32*** %31, align 8
+  %32 = load i32**, i32*** %29, align 8
+  %33 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %32)
+  %34 = load i32**, i32*** %30, align 8
+  %35 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %34)
+  %36 = load i32**, i32*** %31, align 8
+  %37 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %36)
+  %38 = call i32** @_ZSt13__copy_move_aILb0EPPiS1_ET1_T0_S3_S2_(i32** %33, i32** %35, i32** %37)
+  store i32** %38, i32*** %4
+  %39 = load i32, i32* @x.188
+  %40 = load i32, i32* @y.189
+  %41 = sub i32 %39, 2061421431
+  %42 = sub i32 %41, 1
+  %43 = add i32 %42, 2061421431
+  %44 = sub i32 %39, 1
+  %45 = mul i32 %39, %43
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %40, 10
+  %49 = xor i1 %47, true
+  %50 = xor i1 %48, true
+  %51 = xor i1 false, true
+  %52 = and i1 %49, false
+  %53 = and i1 %47, %51
+  %54 = and i1 %50, false
+  %55 = and i1 %48, %51
+  %56 = or i1 %52, %53
+  %57 = or i1 %54, %55
+  %58 = xor i1 %56, %57
+  %59 = or i1 %49, %50
+  %60 = xor i1 %59, true
+  %61 = or i1 false, %51
+  %62 = and i1 %60, %61
+  %63 = or i1 %58, %62
+  %64 = or i1 %47, %48
+  %65 = select i1 %63, i32 -418584521, i32 -1133027751
+  store i32 %65, i32* %16
+  br label %79
+
+; <label>:66:                                     ; preds = %17
+  %67 = load volatile i32**, i32*** %4
+  ret i32** %67
+
+; <label>:68:                                     ; preds = %17
+  %69 = alloca i32**, align 8
+  %70 = alloca i32**, align 8
+  %71 = alloca i32**, align 8
+  store i32** %0, i32*** %69, align 8
+  store i32** %1, i32*** %70, align 8
+  store i32** %2, i32*** %71, align 8
+  %72 = load i32**, i32*** %69, align 8
+  %73 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %72)
+  %74 = load i32**, i32*** %70, align 8
+  %75 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %74)
+  %76 = load i32**, i32*** %71, align 8
+  %77 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %76)
+  %78 = call i32** @_ZSt13__copy_move_aILb0EPPiS1_ET1_T0_S3_S2_(i32** %73, i32** %75, i32** %77)
+  store i32 1360481913, i32* %16
+  br label %79
+
+; <label>:79:                                     ; preds = %68, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32** @_ZSt12__miter_baseIPPiENSt11_Miter_baseIT_E13iterator_typeES3_(i32**) #4 comdat {
+  %2 = alloca i32**, align 8
+  store i32** %0, i32*** %2, align 8
+  %3 = load i32**, i32*** %2, align 8
+  %4 = call i32** @_ZNSt10_Iter_baseIPPiLb0EE7_S_baseES1_(i32** %3)
+  ret i32** %4
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt13__copy_move_aILb0EPPiS1_ET1_T0_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i32**, align 8
+  %7 = alloca i8, align 1
+  store i32** %0, i32*** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i32** %2, i32*** %6, align 8
+  store i8 1, i8* %7, align 1
+  %8 = load i32**, i32*** %4, align 8
+  %9 = load i32**, i32*** %5, align 8
+  %10 = load i32**, i32*** %6, align 8
+  %11 = call i32** @_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPiEEPT_PKS4_S7_S5_(i32** %8, i32** %9, i32** %10)
+  ret i32** %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32**) #0 comdat {
+  %2 = alloca i32**, align 8
+  store i32** %0, i32*** %2, align 8
+  %3 = load i32**, i32*** %2, align 8
+  %4 = call i32** @_ZNSt10_Iter_baseIPPiLb0EE7_S_baseES1_(i32** %3)
+  ret i32** %4
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32** @_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIPiEEPT_PKS4_S7_S5_(i32**, i32**, i32**) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i64*
+  %6 = alloca i32***
+  %7 = alloca i32***
+  %8 = alloca i1
+  %9 = alloca i1
+  %10 = load i32, i32* @x.196
+  %11 = load i32, i32* @y.197
+  %12 = sub i32 0, 1
+  %13 = add i32 %10, %12
+  %14 = sub i32 %10, 1
+  %15 = mul i32 %10, %13
+  %16 = urem i32 %15, 2
+  %17 = icmp eq i32 %16, 0
+  store i1 %17, i1* %9
+  %18 = icmp slt i32 %11, 10
+  store i1 %18, i1* %8
+  %19 = alloca i32
+  store i32 1869089624, i32* %19
+  br label %20
+
+; <label>:20:                                     ; preds = %3, %222
+  %21 = load i32, i32* %19
+  switch i32 %21, label %22 [
+    i32 1869089624, label %23
+    i32 294612677, label %31
+    i32 -629351057, label %79
+    i32 1544269902, label %82
+    i32 -1838680092, label %98
+    i32 -270403389, label %135
+    i32 1548133817, label %136
+    i32 -1581685246, label %142
+    i32 1264147131, label %198
+  ]
+
+; <label>:22:                                     ; preds = %20
+  br label %222
+
+; <label>:23:                                     ; preds = %20
+  %24 = load volatile i1, i1* %9
+  %25 = load volatile i1, i1* %8
+  %26 = and i1 %24, %25
+  %27 = xor i1 %24, %25
+  %28 = or i1 %26, %27
+  %29 = or i1 %24, %25
+  %30 = select i1 %28, i32 294612677, i32 -1581685246
+  store i32 %30, i32* %19
+  br label %222
+
+; <label>:31:                                     ; preds = %20
+  %32 = alloca i32**, align 8
+  store i32*** %32, i32**** %7
+  %33 = alloca i32**, align 8
+  %34 = alloca i32**, align 8
+  store i32*** %34, i32**** %6
+  %35 = alloca i64, align 8
+  store i64* %35, i64** %5
+  %36 = load volatile i32***, i32**** %7
+  store i32** %0, i32*** %36, align 8
+  store i32** %1, i32*** %33, align 8
+  %37 = load volatile i32***, i32**** %6
+  store i32** %2, i32*** %37, align 8
+  %38 = load i32**, i32*** %33, align 8
+  %39 = load volatile i32***, i32**** %7
+  %40 = load i32**, i32*** %39, align 8
+  %41 = ptrtoint i32** %38 to i64
+  %42 = ptrtoint i32** %40 to i64
+  %43 = add i64 %41, -516429429187784293
+  %44 = sub i64 %43, %42
+  %45 = sub i64 %44, -516429429187784293
+  %46 = sub i64 %41, %42
+  %47 = sdiv exact i64 %45, 8
+  %48 = load volatile i64*, i64** %5
+  store i64 %47, i64* %48, align 8
+  %49 = load volatile i64*, i64** %5
+  %50 = load i64, i64* %49, align 8
+  %51 = icmp ne i64 %50, 0
+  store i1 %51, i1* %4
+  %52 = load i32, i32* @x.196
+  %53 = load i32, i32* @y.197
+  %54 = add i32 %52, -2103874872
+  %55 = sub i32 %54, 1
+  %56 = sub i32 %55, -2103874872
+  %57 = sub i32 %52, 1
+  %58 = mul i32 %52, %56
+  %59 = urem i32 %58, 2
+  %60 = icmp eq i32 %59, 0
+  %61 = icmp slt i32 %53, 10
+  %62 = xor i1 %60, true
+  %63 = xor i1 %61, true
+  %64 = xor i1 true, true
+  %65 = and i1 %62, true
+  %66 = and i1 %60, %64
+  %67 = and i1 %63, true
+  %68 = and i1 %61, %64
+  %69 = or i1 %65, %66
+  %70 = or i1 %67, %68
+  %71 = xor i1 %69, %70
+  %72 = or i1 %62, %63
+  %73 = xor i1 %72, true
+  %74 = or i1 true, %64
+  %75 = and i1 %73, %74
+  %76 = or i1 %71, %75
+  %77 = or i1 %60, %61
+  %78 = select i1 %76, i32 -629351057, i32 -1581685246
+  store i32 %78, i32* %19
+  br label %222
+
+; <label>:79:                                     ; preds = %20
+  %80 = load volatile i1, i1* %4
+  %81 = select i1 %80, i32 1544269902, i32 1548133817
+  store i32 %81, i32* %19
+  br label %222
+
+; <label>:82:                                     ; preds = %20
+  %83 = load i32, i32* @x.196
+  %84 = load i32, i32* @y.197
+  %85 = add i32 %83, -1900134949
+  %86 = sub i32 %85, 1
+  %87 = sub i32 %86, -1900134949
+  %88 = sub i32 %83, 1
+  %89 = mul i32 %83, %87
+  %90 = urem i32 %89, 2
+  %91 = icmp eq i32 %90, 0
+  %92 = icmp slt i32 %84, 10
+  %93 = and i1 %91, %92
+  %94 = xor i1 %91, %92
+  %95 = or i1 %93, %94
+  %96 = or i1 %91, %92
+  %97 = select i1 %95, i32 -1838680092, i32 1264147131
+  store i32 %97, i32* %19
+  br label %222
+
+; <label>:98:                                     ; preds = %20
+  %99 = load volatile i32***, i32**** %6
+  %100 = load i32**, i32*** %99, align 8
+  %101 = bitcast i32** %100 to i8*
+  %102 = load volatile i32***, i32**** %7
+  %103 = load i32**, i32*** %102, align 8
+  %104 = bitcast i32** %103 to i8*
+  %105 = load volatile i64*, i64** %5
+  %106 = load i64, i64* %105, align 8
+  %107 = mul i64 8, %106
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %101, i8* %104, i64 %107, i32 8, i1 false)
+  %108 = load i32, i32* @x.196
+  %109 = load i32, i32* @y.197
+  %110 = sub i32 %108, -49931757
+  %111 = sub i32 %110, 1
+  %112 = add i32 %111, -49931757
+  %113 = sub i32 %108, 1
+  %114 = mul i32 %108, %112
+  %115 = urem i32 %114, 2
+  %116 = icmp eq i32 %115, 0
+  %117 = icmp slt i32 %109, 10
+  %118 = xor i1 %116, true
+  %119 = xor i1 %117, true
+  %120 = xor i1 false, true
+  %121 = and i1 %118, false
+  %122 = and i1 %116, %120
+  %123 = and i1 %119, false
+  %124 = and i1 %117, %120
+  %125 = or i1 %121, %122
+  %126 = or i1 %123, %124
+  %127 = xor i1 %125, %126
+  %128 = or i1 %118, %119
+  %129 = xor i1 %128, true
+  %130 = or i1 false, %120
+  %131 = and i1 %129, %130
+  %132 = or i1 %127, %131
+  %133 = or i1 %116, %117
+  %134 = select i1 %132, i32 -270403389, i32 1264147131
+  store i32 %134, i32* %19
+  br label %222
+
+; <label>:135:                                    ; preds = %20
+  store i32 1548133817, i32* %19
+  br label %222
+
+; <label>:136:                                    ; preds = %20
+  %137 = load volatile i32***, i32**** %6
+  %138 = load i32**, i32*** %137, align 8
+  %139 = load volatile i64*, i64** %5
+  %140 = load i64, i64* %139, align 8
+  %141 = getelementptr inbounds i32*, i32** %138, i64 %140
+  ret i32** %141
+
+; <label>:142:                                    ; preds = %20
+  %143 = alloca i32**, align 8
+  %144 = alloca i32**, align 8
+  %145 = alloca i32**, align 8
+  %146 = alloca i64, align 8
+  store i32** %0, i32*** %143, align 8
+  store i32** %1, i32*** %144, align 8
+  store i32** %2, i32*** %145, align 8
+  %147 = load i32**, i32*** %144, align 8
+  %148 = load i32**, i32*** %143, align 8
+  %149 = ptrtoint i32** %147 to i64
+  %150 = ptrtoint i32** %148 to i64
+  %151 = shl i64 %149, %150
+  %152 = sub i64 %149, -8289465471668162440
+  %153 = sub i64 %152, %150
+  %154 = add i64 %153, -8289465471668162440
+  %155 = sub i64 %149, %150
+  %156 = mul i64 %154, %150
+  %157 = sub i64 0, %150
+  %158 = add i64 %149, %157
+  %159 = sub i64 %149, %150
+  %160 = mul i64 %158, %150
+  %161 = add i64 0, -6599307322909381599
+  %162 = sub i64 %161, %149
+  %163 = sub i64 %162, -6599307322909381599
+  %164 = sub i64 0, %149
+  %165 = sub i64 0, %163
+  %166 = sub i64 0, %150
+  %167 = add i64 %165, %166
+  %168 = sub i64 0, %167
+  %169 = add i64 %163, %150
+  %170 = shl i64 %149, %150
+  %171 = add i64 0, 8365874988620872559
+  %172 = sub i64 %171, %149
+  %173 = sub i64 %172, 8365874988620872559
+  %174 = sub i64 0, %149
+  %175 = sub i64 %173, 1056597848295300928
+  %176 = add i64 %175, %150
+  %177 = add i64 %176, 1056597848295300928
+  %178 = add i64 %173, %150
+  %179 = sub i64 0, %150
+  %180 = add i64 %149, %179
+  %181 = sub i64 %149, %150
+  %182 = sub i64 %180, -6624946122388854543
+  %183 = sub i64 %182, 8
+  %184 = add i64 %183, -6624946122388854543
+  %185 = sub i64 %180, 8
+  %186 = mul i64 %184, 8
+  %187 = sub i64 0, -2290011698994181171
+  %188 = sub i64 %187, %180
+  %189 = add i64 %188, -2290011698994181171
+  %190 = sub i64 0, %180
+  %191 = sub i64 %189, 6097472361200545759
+  %192 = add i64 %191, 8
+  %193 = add i64 %192, 6097472361200545759
+  %194 = add i64 %189, 8
+  %195 = sdiv exact i64 %180, 8
+  store i64 %195, i64* %146, align 8
+  %196 = load i64, i64* %146, align 8
+  %197 = icmp ne i64 %196, 0
+  store i32 294612677, i32* %19
+  br label %222
+
+; <label>:198:                                    ; preds = %20
+  %199 = load volatile i32***, i32**** %6
+  %200 = load i32**, i32*** %199, align 8
+  %201 = bitcast i32** %200 to i8*
+  %202 = load volatile i32***, i32**** %7
+  %203 = load i32**, i32*** %202, align 8
+  %204 = bitcast i32** %203 to i8*
+  %205 = load volatile i64*, i64** %5
+  %206 = load i64, i64* %205, align 8
+  %207 = shl i64 8, %206
+  %208 = add i64 0, 1110473272534718507
+  %209 = sub i64 %208, 8
+  %210 = sub i64 %209, 1110473272534718507
+  %211 = sub i64 0, 8
+  %212 = sub i64 0, %206
+  %213 = sub i64 %210, %212
+  %214 = add i64 %210, %206
+  %215 = sub i64 0, %206
+  %216 = add i64 8, %215
+  %217 = sub i64 8, %206
+  %218 = mul i64 %216, %206
+  %219 = shl i64 8, %206
+  %220 = shl i64 8, %206
+  %221 = mul i64 8, %206
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %201, i8* %204, i64 %221, i32 8, i1 false)
+  store i32 -1838680092, i32* %19
+  br label %222
+
+; <label>:222:                                    ; preds = %198, %142, %135, %98, %82, %79, %31, %23, %22
+  br label %20
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memmove.p0i8.p0i8.i64(i8* nocapture, i8* nocapture readonly, i64, i32, i1) #5
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32** @_ZNSt10_Iter_baseIPPiLb0EE7_S_baseES1_(i32**) #4 comdat align 2 {
+  %2 = alloca i32**
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.198
+  %6 = load i32, i32* @y.199
+  %7 = add i32 %5, 1496455185
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 1496455185
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 801551111, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %49
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 801551111, label %19
+    i32 -1651640853, label %27
+    i32 737744859, label %44
+    i32 1724128475, label %46
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %49
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 -1651640853, i32 1724128475
+  store i32 %26, i32* %15
+  br label %49
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca i32**, align 8
+  store i32** %0, i32*** %28, align 8
+  %29 = load i32**, i32*** %28, align 8
+  store i32** %29, i32*** %2
+  %30 = load i32, i32* @x.198
+  %31 = load i32, i32* @y.199
+  %32 = sub i32 0, 1
+  %33 = add i32 %30, %32
+  %34 = sub i32 %30, 1
+  %35 = mul i32 %30, %33
+  %36 = urem i32 %35, 2
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %31, 10
+  %39 = and i1 %37, %38
+  %40 = xor i1 %37, %38
+  %41 = or i1 %39, %40
+  %42 = or i1 %37, %38
+  %43 = select i1 %41, i32 737744859, i32 1724128475
+  store i32 %43, i32* %15
+  br label %49
+
+; <label>:44:                                     ; preds = %16
+  %45 = load volatile i32**, i32*** %2
+  ret i32** %45
+
+; <label>:46:                                     ; preds = %16
+  %47 = alloca i32**, align 8
+  store i32** %0, i32*** %47, align 8
+  %48 = load i32**, i32*** %47, align 8
+  store i32 -1651640853, i32* %15
+  br label %49
+
+; <label>:49:                                     ; preds = %46, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt23__copy_move_backward_a2ILb0EPPiS1_ET1_T0_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.200
+  %8 = load i32, i32* @y.201
+  %9 = sub i32 0, 1
+  %10 = add i32 %7, %9
+  %11 = sub i32 %7, 1
+  %12 = mul i32 %7, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %6
+  %15 = icmp slt i32 %8, 10
+  store i1 %15, i1* %5
+  %16 = alloca i32
+  store i32 -548176567, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %91
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -548176567, label %20
+    i32 502263306, label %40
+    i32 494310668, label %78
+    i32 -873248295, label %80
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %91
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %6
+  %22 = load volatile i1, i1* %5
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 true, true
+  %26 = and i1 %23, true
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, true
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 true, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 502263306, i32 -873248295
+  store i32 %39, i32* %16
+  br label %91
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca i32**, align 8
+  %42 = alloca i32**, align 8
+  %43 = alloca i32**, align 8
+  store i32** %0, i32*** %41, align 8
+  store i32** %1, i32*** %42, align 8
+  store i32** %2, i32*** %43, align 8
+  %44 = load i32**, i32*** %41, align 8
+  %45 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %44)
+  %46 = load i32**, i32*** %42, align 8
+  %47 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %46)
+  %48 = load i32**, i32*** %43, align 8
+  %49 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %48)
+  %50 = call i32** @_ZSt22__copy_move_backward_aILb0EPPiS1_ET1_T0_S3_S2_(i32** %45, i32** %47, i32** %49)
+  store i32** %50, i32*** %4
+  %51 = load i32, i32* @x.200
+  %52 = load i32, i32* @y.201
+  %53 = add i32 %51, 357854034
+  %54 = sub i32 %53, 1
+  %55 = sub i32 %54, 357854034
+  %56 = sub i32 %51, 1
+  %57 = mul i32 %51, %55
+  %58 = urem i32 %57, 2
+  %59 = icmp eq i32 %58, 0
+  %60 = icmp slt i32 %52, 10
+  %61 = xor i1 %59, true
+  %62 = xor i1 %60, true
+  %63 = xor i1 true, true
+  %64 = and i1 %61, true
+  %65 = and i1 %59, %63
+  %66 = and i1 %62, true
+  %67 = and i1 %60, %63
+  %68 = or i1 %64, %65
+  %69 = or i1 %66, %67
+  %70 = xor i1 %68, %69
+  %71 = or i1 %61, %62
+  %72 = xor i1 %71, true
+  %73 = or i1 true, %63
+  %74 = and i1 %72, %73
+  %75 = or i1 %70, %74
+  %76 = or i1 %59, %60
+  %77 = select i1 %75, i32 494310668, i32 -873248295
+  store i32 %77, i32* %16
+  br label %91
+
+; <label>:78:                                     ; preds = %17
+  %79 = load volatile i32**, i32*** %4
+  ret i32** %79
+
+; <label>:80:                                     ; preds = %17
+  %81 = alloca i32**, align 8
+  %82 = alloca i32**, align 8
+  %83 = alloca i32**, align 8
+  store i32** %0, i32*** %81, align 8
+  store i32** %1, i32*** %82, align 8
+  store i32** %2, i32*** %83, align 8
+  %84 = load i32**, i32*** %81, align 8
+  %85 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %84)
+  %86 = load i32**, i32*** %82, align 8
+  %87 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %86)
+  %88 = load i32**, i32*** %83, align 8
+  %89 = call i32** @_ZSt12__niter_baseIPPiENSt11_Niter_baseIT_E13iterator_typeES3_(i32** %88)
+  %90 = call i32** @_ZSt22__copy_move_backward_aILb0EPPiS1_ET1_T0_S3_S2_(i32** %85, i32** %87, i32** %89)
+  store i32 502263306, i32* %16
+  br label %91
+
+; <label>:91:                                     ; preds = %80, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32** @_ZSt22__copy_move_backward_aILb0EPPiS1_ET1_T0_S3_S2_(i32**, i32**, i32**) #0 comdat {
+  %4 = alloca i32**, align 8
+  %5 = alloca i32**, align 8
+  %6 = alloca i32**, align 8
+  %7 = alloca i8, align 1
+  store i32** %0, i32*** %4, align 8
+  store i32** %1, i32*** %5, align 8
+  store i32** %2, i32*** %6, align 8
+  store i8 1, i8* %7, align 1
+  %8 = load i32**, i32*** %4, align 8
+  %9 = load i32**, i32*** %5, align 8
+  %10 = load i32**, i32*** %6, align 8
+  %11 = call i32** @_ZNSt20__copy_move_backwardILb0ELb1ESt26random_access_iterator_tagE13__copy_move_bIPiEEPT_PKS4_S7_S5_(i32** %8, i32** %9, i32** %10)
+  ret i32** %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32** @_ZNSt20__copy_move_backwardILb0ELb1ESt26random_access_iterator_tagE13__copy_move_bIPiEEPT_PKS4_S7_S5_(i32**, i32**, i32**) #4 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca i32**, align 8
+  %6 = alloca i32**, align 8
+  %7 = alloca i32**, align 8
+  %8 = alloca i64, align 8
+  store i32** %0, i32*** %5, align 8
+  store i32** %1, i32*** %6, align 8
+  store i32** %2, i32*** %7, align 8
+  %9 = load i32**, i32*** %6, align 8
+  %10 = load i32**, i32*** %5, align 8
+  %11 = ptrtoint i32** %9 to i64
+  %12 = ptrtoint i32** %10 to i64
+  %13 = add i64 %11, 4734357415220281460
+  %14 = sub i64 %13, %12
+  %15 = sub i64 %14, 4734357415220281460
+  %16 = sub i64 %11, %12
+  %17 = sdiv exact i64 %15, 8
+  store i64 %17, i64* %8, align 8
+  %18 = load i64, i64* %8, align 8
+  store i64 %18, i64* %4
+  %19 = alloca i32
+  store i32 157218025, i32* %19
+  br label %20
+
+; <label>:20:                                     ; preds = %3, %48
+  %21 = load i32, i32* %19
+  switch i32 %21, label %22 [
+    i32 157218025, label %23
+    i32 1785710543, label %27
+    i32 18501309, label %40
+  ]
+
+; <label>:22:                                     ; preds = %20
+  br label %48
+
+; <label>:23:                                     ; preds = %20
+  %24 = load volatile i64, i64* %4
+  %25 = icmp ne i64 %24, 0
+  %26 = select i1 %25, i32 1785710543, i32 18501309
+  store i32 %26, i32* %19
+  br label %48
+
+; <label>:27:                                     ; preds = %20
+  %28 = load i32**, i32*** %7, align 8
+  %29 = load i64, i64* %8, align 8
+  %30 = sub i64 0, 5712967892511956965
+  %31 = sub i64 %30, %29
+  %32 = add i64 %31, 5712967892511956965
+  %33 = sub i64 0, %29
+  %34 = getelementptr inbounds i32*, i32** %28, i64 %32
+  %35 = bitcast i32** %34 to i8*
+  %36 = load i32**, i32*** %5, align 8
+  %37 = bitcast i32** %36 to i8*
+  %38 = load i64, i64* %8, align 8
+  %39 = mul i64 8, %38
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %35, i8* %37, i64 %39, i32 8, i1 false)
+  store i32 18501309, i32* %19
+  br label %48
+
+; <label>:40:                                     ; preds = %20
+  %41 = load i32**, i32*** %7, align 8
+  %42 = load i64, i64* %8, align 8
+  %43 = add i64 0, 7677077234760754822
+  %44 = sub i64 %43, %42
+  %45 = sub i64 %44, 7677077234760754822
+  %46 = sub i64 0, %42
+  %47 = getelementptr inbounds i32*, i32** %41, i64 %45
+  ret i32** %47
+
+; <label>:48:                                     ; preds = %27, %23, %22
+  br label %20
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZNSt5dequeIiSaIiEE5frontEv(%"class.std::deque"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::deque"*, align 8
+  %3 = alloca %"struct.std::_Deque_iterator", align 8
+  store %"class.std::deque"* %0, %"class.std::deque"** %2, align 8
+  %4 = load %"class.std::deque"*, %"class.std::deque"** %2, align 8
+  call void @_ZNSt5dequeIiSaIiEE5beginEv(%"struct.std::_Deque_iterator"* sret %3, %"class.std::deque"* %4) #3
+  %5 = call dereferenceable(4) i32* @_ZNKSt15_Deque_iteratorIiRiPiEdeEv(%"struct.std::_Deque_iterator"* %3) #3
+  ret i32* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZNKSt15_Deque_iteratorIiRiPiEdeEv(%"struct.std::_Deque_iterator"*) #4 comdat align 2 {
+  %2 = alloca i32*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.208
+  %6 = load i32, i32* @y.209
+  %7 = sub i32 0, 1
+  %8 = add i32 %5, %7
+  %9 = sub i32 %5, 1
+  %10 = mul i32 %5, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %4
+  %13 = icmp slt i32 %6, 10
+  store i1 %13, i1* %3
+  %14 = alloca i32
+  store i32 -2116104653, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %76
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -2116104653, label %18
+    i32 -905829896, label %38
+    i32 1115803964, label %69
+    i32 -1247878737, label %71
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %76
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %4
+  %20 = load volatile i1, i1* %3
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 true, true
+  %24 = and i1 %21, true
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, true
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 true, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 -905829896, i32 -1247878737
+  store i32 %37, i32* %14
+  br label %76
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %39, align 8
+  %40 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %39, align 8
+  %41 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %40, i32 0, i32 0
+  %42 = load i32*, i32** %41, align 8
+  store i32* %42, i32** %2
+  %43 = load i32, i32* @x.208
+  %44 = load i32, i32* @y.209
+  %45 = sub i32 0, 1
+  %46 = add i32 %43, %45
+  %47 = sub i32 %43, 1
+  %48 = mul i32 %43, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %44, 10
+  %52 = xor i1 %50, true
+  %53 = xor i1 %51, true
+  %54 = xor i1 true, true
+  %55 = and i1 %52, true
+  %56 = and i1 %50, %54
+  %57 = and i1 %53, true
+  %58 = and i1 %51, %54
+  %59 = or i1 %55, %56
+  %60 = or i1 %57, %58
+  %61 = xor i1 %59, %60
+  %62 = or i1 %52, %53
+  %63 = xor i1 %62, true
+  %64 = or i1 true, %54
+  %65 = and i1 %63, %64
+  %66 = or i1 %61, %65
+  %67 = or i1 %50, %51
+  %68 = select i1 %66, i32 1115803964, i32 -1247878737
+  store i32 %68, i32* %14
+  br label %76
+
+; <label>:69:                                     ; preds = %15
+  %70 = load volatile i32*, i32** %2
+  ret i32* %70
+
+; <label>:71:                                     ; preds = %15
+  %72 = alloca %"struct.std::_Deque_iterator"*, align 8
+  store %"struct.std::_Deque_iterator"* %0, %"struct.std::_Deque_iterator"** %72, align 8
+  %73 = load %"struct.std::_Deque_iterator"*, %"struct.std::_Deque_iterator"** %72, align 8
+  %74 = getelementptr inbounds %"struct.std::_Deque_iterator", %"struct.std::_Deque_iterator"* %73, i32 0, i32 0
+  %75 = load i32*, i32** %74, align 8
+  store i32 -905829896, i32* %14
+  br label %76
+
+; <label>:76:                                     ; preds = %71, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s913628817.cpp() #0 section ".text.startup" {
+  call void @__cxx_global_var_init()
+  call void @__cxx_global_var_init.1()
+  call void @__cxx_global_var_init.2()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { argmemonly nounwind }
+attributes #6 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #7 = { noinline noreturn nounwind }
+attributes #8 = { noreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #9 = { nobuiltin "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #10 = { nobuiltin nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #11 = { noreturn nounwind }
+attributes #12 = { noreturn }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

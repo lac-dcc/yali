@@ -1,0 +1,15461 @@
+; ModuleID = 'Project_CodeNet_C++1400/p03251/s640405057.cpp'
+source_filename = "Project_CodeNet_C++1400/p03251/s640405057.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::vector" = type { %"struct.std::_Vector_base" }
+%"struct.std::_Vector_base" = type { %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl" }
+%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl" = type { i64*, i64*, i64* }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::allocator" = type { i8 }
+%"class.std::vector.0" = type { %"struct.std::_Vector_base.1" }
+%"struct.std::_Vector_base.1" = type { %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl" }
+%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl" = type { i32*, i32*, i32* }
+%"class.std::allocator.2" = type { i8 }
+%"class.__gnu_cxx::__normal_iterator" = type { i32* }
+%"struct.std::greater" = type { i8 }
+%"class.__gnu_cxx::new_allocator.3" = type { i8 }
+%"struct.__gnu_cxx::__ops::_Iter_comp_iter" = type { %"struct.std::greater" }
+%"struct.__gnu_cxx::__ops::_Iter_less_iter" = type { i8 }
+%"class.__gnu_cxx::new_allocator" = type { i8 }
+%"struct.__gnu_cxx::__ops::_Iter_comp_val" = type { %"struct.std::greater" }
+%"struct.__gnu_cxx::__ops::_Val_comp_iter" = type { %"struct.std::greater" }
+%"struct.__gnu_cxx::__ops::_Iter_less_val" = type { i8 }
+%"struct.__gnu_cxx::__ops::_Val_less_iter" = type { i8 }
+
+$_ZSt3minIiERKT_S2_S2_ = comdat any
+
+$_ZNSt6vectorIxSaIxEEC2Ev = comdat any
+
+$_ZNSt6vectorIxSaIxEED2Ev = comdat any
+
+$_ZNSaIiEC2Ev = comdat any
+
+$_ZNSt6vectorIiSaIiEEC2EmRKS0_ = comdat any
+
+$_ZNSaIiED2Ev = comdat any
+
+$_ZNSt6vectorIiSaIiEEixEm = comdat any
+
+$_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEESt7greaterIiEEvT_S9_T0_ = comdat any
+
+$_ZNSt6vectorIiSaIiEE5beginEv = comdat any
+
+$_ZNSt6vectorIiSaIiEE3endEv = comdat any
+
+$_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEEvT_S7_ = comdat any
+
+$_ZNSt6vectorIiSaIiEED2Ev = comdat any
+
+$_ZSt8_DestroyIPiiEvT_S1_RSaIT0_E = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEED2Ev = comdat any
+
+$__clang_call_terminate = comdat any
+
+$_ZSt8_DestroyIPiEvT_S1_ = comdat any
+
+$_ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_ = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPim = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiED2Ev = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEEC2Ev = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev = comdat any
+
+$_ZNSaIxEC2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxEC2Ev = comdat any
+
+$_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEED2Ev = comdat any
+
+$_ZSt8_DestroyIPxEvT_S1_ = comdat any
+
+$_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev = comdat any
+
+$_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm = comdat any
+
+$_ZNSaIxED2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxED2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiEC2Ev = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEEC2EmRKS0_ = comdat any
+
+$_ZNSt6vectorIiSaIiEE21_M_default_initializeEm = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC2ERKS0_ = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE17_M_create_storageEm = comdat any
+
+$_ZNSaIiEC2ERKS_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_ = comdat any
+
+$_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEm = comdat any
+
+$_ZNSt16allocator_traitsISaIiEE8allocateERS0_m = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv = comdat any
+
+$_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv = comdat any
+
+$_ZSt27__uninitialized_default_n_aIPimiET_S1_T0_RSaIT1_E = comdat any
+
+$_ZSt25__uninitialized_default_nIPimET_S1_T0_ = comdat any
+
+$_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_ = comdat any
+
+$_ZSt6fill_nIPimiET_S1_T0_RKT1_ = comdat any
+
+$_ZSt10__fill_n_aIPimiEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_ = comdat any
+
+$_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_ = comdat any
+
+$_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_ = comdat any
+
+$_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_ = comdat any
+
+$_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops16__iter_comp_iterISt7greaterIiEEENS0_15_Iter_comp_iterIT_EES5_ = comdat any
+
+$_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_ = comdat any
+
+$_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_T1_ = comdat any
+
+$_ZSt4__lgl = comdat any
+
+$_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_ = comdat any
+
+$_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv = comdat any
+
+$_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_ = comdat any
+
+$_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_T0_ = comdat any
+
+$_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_ = comdat any
+
+$_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_ = comdat any
+
+$_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_ = comdat any
+
+$_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv = comdat any
+
+$_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_ = comdat any
+
+$_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl = comdat any
+
+$_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv = comdat any
+
+$_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_T0_SD_T1_T2_ = comdat any
+
+$_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_comp_valISt7greaterIiEEEEvT_T0_SD_T1_T2_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__iter_comp_valISt7greaterIiEEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS5_EE = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_ = comdat any
+
+$_ZNKSt7greaterIiEclERKiS2_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEC2ES3_ = comdat any
+
+$_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv = comdat any
+
+$_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_SC_T0_ = comdat any
+
+$_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmiEl = comdat any
+
+$_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_SC_T0_ = comdat any
+
+$_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_ = comdat any
+
+$_ZSt4swapIiEvRT_S1_ = comdat any
+
+$_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_ = comdat any
+
+$_ZN9__gnu_cxxeqIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_ = comdat any
+
+$_ZSt13move_backwardIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET0_T_S8_S7_ = comdat any
+
+$_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_comp_iterISt7greaterIiEEEEvT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__val_comp_iterISt7greaterIiEEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS5_EE = comdat any
+
+$_ZSt23__copy_move_backward_a2ILb1EN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET1_T0_S8_S7_ = comdat any
+
+$_ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Miter_baseIT_E13iterator_typeES8_ = comdat any
+
+$_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_ = comdat any
+
+$_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Niter_baseIT_E13iterator_typeES8_ = comdat any
+
+$_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_ = comdat any
+
+$_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb1EE7_S_baseES6_ = comdat any
+
+$_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb0EE7_S_baseES6_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEC2ES3_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEC2ES3_ = comdat any
+
+$_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops16__iter_less_iterEv = comdat any
+
+$_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_ = comdat any
+
+$_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_ = comdat any
+
+$_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_T0_ = comdat any
+
+$_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_ = comdat any
+
+$_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_ = comdat any
+
+$_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_ = comdat any
+
+$_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_less_iterEEvT_T0_SA_T1_T2_ = comdat any
+
+$_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_less_valEEvT_T0_SA_T1_T2_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE = comdat any
+
+$_ZNK9__gnu_cxx5__ops14_Iter_less_valclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_ = comdat any
+
+$_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_S9_T0_ = comdat any
+
+$_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_S9_T0_ = comdat any
+
+$_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_ = comdat any
+
+$_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_less_iterEEvT_T0_ = comdat any
+
+$_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE = comdat any
+
+$_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_ = comdat any
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@mod = global i64 1000000007, align 8
+@memo = global [110000 x i32] zeroinitializer, align 16
+@a = global [12 x [12 x i32]] zeroinitializer, align 16
+@D = global i32 0, align 4
+@G = global i64 0, align 8
+@P = global %"class.std::vector" zeroinitializer, align 8
+@C = global %"class.std::vector" zeroinitializer, align 8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@.str = private unnamed_addr constant [7 x i8] c"No War\00", align 1
+@.str.3 = private unnamed_addr constant [4 x i8] c"War\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s640405057.cpp, i8* null }]
+@x = common global i32 0
+@y = common global i32 0
+@x.4 = common global i32 0
+@y.5 = common global i32 0
+@x.6 = common global i32 0
+@y.7 = common global i32 0
+@x.8 = common global i32 0
+@y.9 = common global i32 0
+@x.10 = common global i32 0
+@y.11 = common global i32 0
+@x.12 = common global i32 0
+@y.13 = common global i32 0
+@x.14 = common global i32 0
+@y.15 = common global i32 0
+@x.16 = common global i32 0
+@y.17 = common global i32 0
+@x.18 = common global i32 0
+@y.19 = common global i32 0
+@x.20 = common global i32 0
+@y.21 = common global i32 0
+@x.22 = common global i32 0
+@y.23 = common global i32 0
+@x.24 = common global i32 0
+@y.25 = common global i32 0
+@x.26 = common global i32 0
+@y.27 = common global i32 0
+@x.28 = common global i32 0
+@y.29 = common global i32 0
+@x.30 = common global i32 0
+@y.31 = common global i32 0
+@x.32 = common global i32 0
+@y.33 = common global i32 0
+@x.34 = common global i32 0
+@y.35 = common global i32 0
+@x.36 = common global i32 0
+@y.37 = common global i32 0
+@x.38 = common global i32 0
+@y.39 = common global i32 0
+@x.40 = common global i32 0
+@y.41 = common global i32 0
+@x.42 = common global i32 0
+@y.43 = common global i32 0
+@x.44 = common global i32 0
+@y.45 = common global i32 0
+@x.46 = common global i32 0
+@y.47 = common global i32 0
+@x.48 = common global i32 0
+@y.49 = common global i32 0
+@x.50 = common global i32 0
+@y.51 = common global i32 0
+@x.52 = common global i32 0
+@y.53 = common global i32 0
+@x.54 = common global i32 0
+@y.55 = common global i32 0
+@x.56 = common global i32 0
+@y.57 = common global i32 0
+@x.58 = common global i32 0
+@y.59 = common global i32 0
+@x.60 = common global i32 0
+@y.61 = common global i32 0
+@x.62 = common global i32 0
+@y.63 = common global i32 0
+@x.64 = common global i32 0
+@y.65 = common global i32 0
+@x.66 = common global i32 0
+@y.67 = common global i32 0
+@x.68 = common global i32 0
+@y.69 = common global i32 0
+@x.70 = common global i32 0
+@y.71 = common global i32 0
+@x.72 = common global i32 0
+@y.73 = common global i32 0
+@x.74 = common global i32 0
+@y.75 = common global i32 0
+@x.76 = common global i32 0
+@y.77 = common global i32 0
+@x.78 = common global i32 0
+@y.79 = common global i32 0
+@x.80 = common global i32 0
+@y.81 = common global i32 0
+@x.82 = common global i32 0
+@y.83 = common global i32 0
+@x.84 = common global i32 0
+@y.85 = common global i32 0
+@x.86 = common global i32 0
+@y.87 = common global i32 0
+@x.88 = common global i32 0
+@y.89 = common global i32 0
+@x.90 = common global i32 0
+@y.91 = common global i32 0
+@x.92 = common global i32 0
+@y.93 = common global i32 0
+@x.94 = common global i32 0
+@y.95 = common global i32 0
+@x.96 = common global i32 0
+@y.97 = common global i32 0
+@x.98 = common global i32 0
+@y.99 = common global i32 0
+@x.100 = common global i32 0
+@y.101 = common global i32 0
+@x.102 = common global i32 0
+@y.103 = common global i32 0
+@x.104 = common global i32 0
+@y.105 = common global i32 0
+@x.106 = common global i32 0
+@y.107 = common global i32 0
+@x.108 = common global i32 0
+@y.109 = common global i32 0
+@x.110 = common global i32 0
+@y.111 = common global i32 0
+@x.112 = common global i32 0
+@y.113 = common global i32 0
+@x.114 = common global i32 0
+@y.115 = common global i32 0
+@x.116 = common global i32 0
+@y.117 = common global i32 0
+@x.118 = common global i32 0
+@y.119 = common global i32 0
+@x.120 = common global i32 0
+@y.121 = common global i32 0
+@x.122 = common global i32 0
+@y.123 = common global i32 0
+@x.124 = common global i32 0
+@y.125 = common global i32 0
+@x.126 = common global i32 0
+@y.127 = common global i32 0
+@x.128 = common global i32 0
+@y.129 = common global i32 0
+@x.130 = common global i32 0
+@y.131 = common global i32 0
+@x.132 = common global i32 0
+@y.133 = common global i32 0
+@x.134 = common global i32 0
+@y.135 = common global i32 0
+@x.136 = common global i32 0
+@y.137 = common global i32 0
+@x.138 = common global i32 0
+@y.139 = common global i32 0
+@x.140 = common global i32 0
+@y.141 = common global i32 0
+@x.142 = common global i32 0
+@y.143 = common global i32 0
+@x.144 = common global i32 0
+@y.145 = common global i32 0
+@x.146 = common global i32 0
+@y.147 = common global i32 0
+@x.148 = common global i32 0
+@y.149 = common global i32 0
+@x.150 = common global i32 0
+@y.151 = common global i32 0
+@x.152 = common global i32 0
+@y.153 = common global i32 0
+@x.154 = common global i32 0
+@y.155 = common global i32 0
+@x.156 = common global i32 0
+@y.157 = common global i32 0
+@x.158 = common global i32 0
+@y.159 = common global i32 0
+@x.160 = common global i32 0
+@y.161 = common global i32 0
+@x.162 = common global i32 0
+@y.163 = common global i32 0
+@x.164 = common global i32 0
+@y.165 = common global i32 0
+@x.166 = common global i32 0
+@y.167 = common global i32 0
+@x.168 = common global i32 0
+@y.169 = common global i32 0
+@x.170 = common global i32 0
+@y.171 = common global i32 0
+@x.172 = common global i32 0
+@y.173 = common global i32 0
+@x.174 = common global i32 0
+@y.175 = common global i32 0
+@x.176 = common global i32 0
+@y.177 = common global i32 0
+@x.178 = common global i32 0
+@y.179 = common global i32 0
+@x.180 = common global i32 0
+@y.181 = common global i32 0
+@x.182 = common global i32 0
+@y.183 = common global i32 0
+@x.184 = common global i32 0
+@y.185 = common global i32 0
+@x.186 = common global i32 0
+@y.187 = common global i32 0
+@x.188 = common global i32 0
+@y.189 = common global i32 0
+@x.190 = common global i32 0
+@y.191 = common global i32 0
+@x.192 = common global i32 0
+@y.193 = common global i32 0
+@x.194 = common global i32 0
+@y.195 = common global i32 0
+@x.196 = common global i32 0
+@y.197 = common global i32 0
+@x.198 = common global i32 0
+@y.199 = common global i32 0
+@x.200 = common global i32 0
+@y.201 = common global i32 0
+@x.202 = common global i32 0
+@y.203 = common global i32 0
+@x.204 = common global i32 0
+@y.205 = common global i32 0
+@x.206 = common global i32 0
+@y.207 = common global i32 0
+@x.208 = common global i32 0
+@y.209 = common global i32 0
+@x.210 = common global i32 0
+@y.211 = common global i32 0
+@x.212 = common global i32 0
+@y.213 = common global i32 0
+@x.214 = common global i32 0
+@y.215 = common global i32 0
+@x.216 = common global i32 0
+@y.217 = common global i32 0
+@x.218 = common global i32 0
+@y.219 = common global i32 0
+@x.220 = common global i32 0
+@y.221 = common global i32 0
+@x.222 = common global i32 0
+@y.223 = common global i32 0
+@x.224 = common global i32 0
+@y.225 = common global i32 0
+@x.226 = common global i32 0
+@y.227 = common global i32 0
+@x.228 = common global i32 0
+@y.229 = common global i32 0
+@x.230 = common global i32 0
+@y.231 = common global i32 0
+@x.232 = common global i32 0
+@y.233 = common global i32 0
+@x.234 = common global i32 0
+@y.235 = common global i32 0
+@x.236 = common global i32 0
+@y.237 = common global i32 0
+@x.238 = common global i32 0
+@y.239 = common global i32 0
+@x.240 = common global i32 0
+@y.241 = common global i32 0
+@x.242 = common global i32 0
+@y.243 = common global i32 0
+@x.244 = common global i32 0
+@y.245 = common global i32 0
+@x.246 = common global i32 0
+@y.247 = common global i32 0
+@x.248 = common global i32 0
+@y.249 = common global i32 0
+@x.250 = common global i32 0
+@y.251 = common global i32 0
+@x.252 = common global i32 0
+@y.253 = common global i32 0
+@x.254 = common global i32 0
+@y.255 = common global i32 0
+@x.256 = common global i32 0
+@y.257 = common global i32 0
+@x.258 = common global i32 0
+@y.259 = common global i32 0
+@x.260 = common global i32 0
+@y.261 = common global i32 0
+@x.262 = common global i32 0
+@y.263 = common global i32 0
+@x.264 = common global i32 0
+@y.265 = common global i32 0
+@x.266 = common global i32 0
+@y.267 = common global i32 0
+@x.268 = common global i32 0
+@y.269 = common global i32 0
+@x.270 = common global i32 0
+@y.271 = common global i32 0
+@x.272 = common global i32 0
+@y.273 = common global i32 0
+@x.274 = common global i32 0
+@y.275 = common global i32 0
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #3
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #3
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z9cnt_digitx(i64) #4 {
+  %2 = alloca i64, align 8
+  %3 = alloca i32, align 4
+  store i64 %0, i64* %2, align 8
+  store i32 0, i32* %3, align 4
+  %4 = alloca i32
+  store i32 -1833396775, i32* %4
+  br label %5
+
+; <label>:5:                                      ; preds = %1, %22
+  %6 = load i32, i32* %4
+  switch i32 %6, label %7 [
+    i32 -1833396775, label %8
+    i32 450592058, label %12
+    i32 -887882042, label %20
+  ]
+
+; <label>:7:                                      ; preds = %5
+  br label %22
+
+; <label>:8:                                      ; preds = %5
+  %9 = load i64, i64* %2, align 8
+  %10 = icmp sgt i64 %9, 0
+  %11 = select i1 %10, i32 450592058, i32 -887882042
+  store i32 %11, i32* %4
+  br label %22
+
+; <label>:12:                                     ; preds = %5
+  %13 = load i64, i64* %2, align 8
+  %14 = sdiv i64 %13, 10
+  store i64 %14, i64* %2, align 8
+  %15 = load i32, i32* %3, align 4
+  %16 = add i32 %15, -230102564
+  %17 = add i32 %16, 1
+  %18 = sub i32 %17, -230102564
+  %19 = add nsw i32 %15, 1
+  store i32 %18, i32* %3, align 4
+  store i32 -1833396775, i32* %4
+  br label %22
+
+; <label>:20:                                     ; preds = %5
+  %21 = load i32, i32* %3, align 4
+  ret i32 %21
+
+; <label>:22:                                     ; preds = %12, %8, %7
+  br label %5
+}
+
+; Function Attrs: noinline uwtable
+define i64 @_Z3gcdxx(i64, i64) #0 {
+  %3 = alloca i64
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i64, align 8
+  store i64 %0, i64* %5, align 8
+  store i64 %1, i64* %6, align 8
+  %7 = load i64, i64* %6, align 8
+  store i64 %7, i64* %3
+  %8 = alloca i32
+  store i32 -857588804, i32* %8
+  br label %9
+
+; <label>:9:                                      ; preds = %2, %26
+  %10 = load i32, i32* %8
+  switch i32 %10, label %11 [
+    i32 -857588804, label %12
+    i32 1548652101, label %16
+    i32 1667543586, label %18
+    i32 -335216391, label %24
+  ]
+
+; <label>:11:                                     ; preds = %9
+  br label %26
+
+; <label>:12:                                     ; preds = %9
+  %13 = load volatile i64, i64* %3
+  %14 = icmp eq i64 %13, 0
+  %15 = select i1 %14, i32 1548652101, i32 1667543586
+  store i32 %15, i32* %8
+  br label %26
+
+; <label>:16:                                     ; preds = %9
+  %17 = load i64, i64* %5, align 8
+  store i64 %17, i64* %4, align 8
+  store i32 -335216391, i32* %8
+  br label %26
+
+; <label>:18:                                     ; preds = %9
+  %19 = load i64, i64* %6, align 8
+  %20 = load i64, i64* %5, align 8
+  %21 = load i64, i64* %6, align 8
+  %22 = srem i64 %20, %21
+  %23 = call i64 @_Z3gcdxx(i64 %19, i64 %22)
+  store i64 %23, i64* %4, align 8
+  store i32 -335216391, i32* %8
+  br label %26
+
+; <label>:24:                                     ; preds = %9
+  %25 = load i64, i64* %4, align 8
+  ret i64 %25
+
+; <label>:26:                                     ; preds = %18, %16, %12, %11
+  br label %9
+}
+
+; Function Attrs: noinline uwtable
+define i64 @_Z3lcmxx(i64, i64) #0 {
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  store i64 %0, i64* %3, align 8
+  store i64 %1, i64* %4, align 8
+  %6 = load i64, i64* %3, align 8
+  %7 = load i64, i64* %4, align 8
+  %8 = call i64 @_Z3gcdxx(i64 %6, i64 %7)
+  store i64 %8, i64* %5, align 8
+  %9 = load i64, i64* %3, align 8
+  %10 = load i64, i64* %5, align 8
+  %11 = sdiv i64 %9, %10
+  %12 = load i64, i64* %4, align 8
+  %13 = mul nsw i64 %11, %12
+  ret i64 %13
+}
+
+; Function Attrs: noinline uwtable
+define i32 @_Z3reci(i32) #0 {
+  %2 = alloca i32
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  store i32 %0, i32* %4, align 4
+  %10 = load i32, i32* %4, align 4
+  store i32 %10, i32* %2
+  %11 = alloca i32
+  store i32 1550829747, i32* %11
+  br label %12
+
+; <label>:12:                                     ; preds = %1, %85
+  %13 = load i32, i32* %11
+  switch i32 %13, label %14 [
+    i32 1550829747, label %15
+    i32 -1829411559, label %19
+    i32 -717995181, label %20
+    i32 -201553876, label %27
+    i32 414036434, label %32
+    i32 -1634459667, label %34
+    i32 2110611987, label %39
+    i32 1548433726, label %53
+    i32 -1557725236, label %56
+    i32 -1086973174, label %57
+    i32 1596769321, label %62
+    i32 -1283317987, label %75
+    i32 2046673698, label %78
+    i32 -383861614, label %83
+  ]
+
+; <label>:14:                                     ; preds = %12
+  br label %85
+
+; <label>:15:                                     ; preds = %12
+  %16 = load volatile i32, i32* %2
+  %17 = icmp eq i32 %16, 0
+  %18 = select i1 %17, i32 -1829411559, i32 -717995181
+  store i32 %18, i32* %11
+  br label %85
+
+; <label>:19:                                     ; preds = %12
+  store i32 0, i32* %3, align 4
+  store i32 -383861614, i32* %11
+  br label %85
+
+; <label>:20:                                     ; preds = %12
+  %21 = load i32, i32* %4, align 4
+  %22 = sext i32 %21 to i64
+  %23 = getelementptr inbounds [110000 x i32], [110000 x i32]* @memo, i64 0, i64 %22
+  %24 = load i32, i32* %23, align 4
+  %25 = icmp ne i32 %24, -1
+  %26 = select i1 %25, i32 -201553876, i32 414036434
+  store i32 %26, i32* %11
+  br label %85
+
+; <label>:27:                                     ; preds = %12
+  %28 = load i32, i32* %4, align 4
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds [110000 x i32], [110000 x i32]* @memo, i64 0, i64 %29
+  %31 = load i32, i32* %30, align 4
+  store i32 %31, i32* %3, align 4
+  store i32 -383861614, i32* %11
+  br label %85
+
+; <label>:32:                                     ; preds = %12
+  %33 = load i32, i32* %4, align 4
+  store i32 %33, i32* %5, align 4
+  store i32 1, i32* %6, align 4
+  store i32 -1634459667, i32* %11
+  br label %85
+
+; <label>:34:                                     ; preds = %12
+  %35 = load i32, i32* %6, align 4
+  %36 = load i32, i32* %4, align 4
+  %37 = icmp sle i32 %35, %36
+  %38 = select i1 %37, i32 2110611987, i32 -1557725236
+  store i32 %38, i32* %11
+  br label %85
+
+; <label>:39:                                     ; preds = %12
+  %40 = load i32, i32* %4, align 4
+  %41 = load i32, i32* %6, align 4
+  %42 = add i32 %40, 273014041
+  %43 = sub i32 %42, %41
+  %44 = sub i32 %43, 273014041
+  %45 = sub nsw i32 %40, %41
+  %46 = call i32 @_Z3reci(i32 %44)
+  %47 = add i32 %46, 1323107898
+  %48 = add i32 %47, 1
+  %49 = sub i32 %48, 1323107898
+  %50 = add nsw i32 %46, 1
+  store i32 %49, i32* %7, align 4
+  %51 = call dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4) %5, i32* dereferenceable(4) %7)
+  %52 = load i32, i32* %51, align 4
+  store i32 %52, i32* %5, align 4
+  store i32 1548433726, i32* %11
+  br label %85
+
+; <label>:53:                                     ; preds = %12
+  %54 = load i32, i32* %6, align 4
+  %55 = mul nsw i32 %54, 6
+  store i32 %55, i32* %6, align 4
+  store i32 -1634459667, i32* %11
+  br label %85
+
+; <label>:56:                                     ; preds = %12
+  store i32 1, i32* %8, align 4
+  store i32 -1086973174, i32* %11
+  br label %85
+
+; <label>:57:                                     ; preds = %12
+  %58 = load i32, i32* %8, align 4
+  %59 = load i32, i32* %4, align 4
+  %60 = icmp sle i32 %58, %59
+  %61 = select i1 %60, i32 1596769321, i32 2046673698
+  store i32 %61, i32* %11
+  br label %85
+
+; <label>:62:                                     ; preds = %12
+  %63 = load i32, i32* %4, align 4
+  %64 = load i32, i32* %8, align 4
+  %65 = sub i32 0, %64
+  %66 = add i32 %63, %65
+  %67 = sub nsw i32 %63, %64
+  %68 = call i32 @_Z3reci(i32 %66)
+  %69 = sub i32 %68, -95774472
+  %70 = add i32 %69, 1
+  %71 = add i32 %70, -95774472
+  %72 = add nsw i32 %68, 1
+  store i32 %71, i32* %9, align 4
+  %73 = call dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4) %5, i32* dereferenceable(4) %9)
+  %74 = load i32, i32* %73, align 4
+  store i32 %74, i32* %5, align 4
+  store i32 -1283317987, i32* %11
+  br label %85
+
+; <label>:75:                                     ; preds = %12
+  %76 = load i32, i32* %8, align 4
+  %77 = mul nsw i32 %76, 9
+  store i32 %77, i32* %8, align 4
+  store i32 -1086973174, i32* %11
+  br label %85
+
+; <label>:78:                                     ; preds = %12
+  %79 = load i32, i32* %5, align 4
+  %80 = load i32, i32* %4, align 4
+  %81 = sext i32 %80 to i64
+  %82 = getelementptr inbounds [110000 x i32], [110000 x i32]* @memo, i64 0, i64 %81
+  store i32 %79, i32* %82, align 4
+  store i32 %79, i32* %3, align 4
+  store i32 -383861614, i32* %11
+  br label %85
+
+; <label>:83:                                     ; preds = %12
+  %84 = load i32, i32* %3, align 4
+  ret i32 %84
+
+; <label>:85:                                     ; preds = %78, %75, %62, %57, %56, %53, %39, %34, %32, %27, %20, %19, %15, %14
+  br label %12
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt3minIiERKT_S2_S2_(i32* dereferenceable(4), i32* dereferenceable(4)) #4 comdat {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  store i32* %0, i32** %6, align 8
+  store i32* %1, i32** %7, align 8
+  %8 = load i32*, i32** %7, align 8
+  %9 = load i32, i32* %8, align 4
+  store i32 %9, i32* %4
+  %10 = load i32*, i32** %6, align 8
+  %11 = load i32, i32* %10, align 4
+  store i32 %11, i32* %3
+  %12 = alloca i32
+  store i32 -255227622, i32* %12
+  br label %13
+
+; <label>:13:                                     ; preds = %2, %27
+  %14 = load i32, i32* %12
+  switch i32 %14, label %15 [
+    i32 -255227622, label %16
+    i32 -1755535369, label %21
+    i32 -1450444169, label %23
+    i32 -492867405, label %25
+  ]
+
+; <label>:15:                                     ; preds = %13
+  br label %27
+
+; <label>:16:                                     ; preds = %13
+  %17 = load volatile i32, i32* %4
+  %18 = load volatile i32, i32* %3
+  %19 = icmp slt i32 %17, %18
+  %20 = select i1 %19, i32 -1755535369, i32 -1450444169
+  store i32 %20, i32* %12
+  br label %27
+
+; <label>:21:                                     ; preds = %13
+  %22 = load i32*, i32** %7, align 8
+  store i32* %22, i32** %5, align 8
+  store i32 -492867405, i32* %12
+  br label %27
+
+; <label>:23:                                     ; preds = %13
+  %24 = load i32*, i32** %6, align 8
+  store i32* %24, i32** %5, align 8
+  store i32 -492867405, i32* %12
+  br label %27
+
+; <label>:25:                                     ; preds = %13
+  %26 = load i32*, i32** %5, align 8
+  ret i32* %26
+
+; <label>:27:                                     ; preds = %23, %21, %16, %15
+  br label %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @_Z4calci(i32) #4 {
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  store i32 %0, i32* %2, align 4
+  store i32 0, i32* %3, align 4
+  %4 = alloca i32
+  store i32 -717453918, i32* %4
+  br label %5
+
+; <label>:5:                                      ; preds = %1, %92
+  %6 = load i32, i32* %4
+  switch i32 %6, label %7 [
+    i32 -717453918, label %8
+    i32 1723578202, label %13
+    i32 373662382, label %29
+    i32 94053845, label %63
+    i32 2116081693, label %64
+    i32 379086884, label %66
+  ]
+
+; <label>:7:                                      ; preds = %5
+  br label %92
+
+; <label>:8:                                      ; preds = %5
+  %9 = load i32, i32* %2, align 4
+  %10 = srem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  %12 = select i1 %11, i32 1723578202, i32 2116081693
+  store i32 %12, i32* %4
+  br label %92
+
+; <label>:13:                                     ; preds = %5
+  %14 = load i32, i32* @x.14
+  %15 = load i32, i32* @y.15
+  %16 = add i32 %14, -2062858511
+  %17 = sub i32 %16, 1
+  %18 = sub i32 %17, -2062858511
+  %19 = sub i32 %14, 1
+  %20 = mul i32 %14, %18
+  %21 = urem i32 %20, 2
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %15, 10
+  %24 = and i1 %22, %23
+  %25 = xor i1 %22, %23
+  %26 = or i1 %24, %25
+  %27 = or i1 %22, %23
+  %28 = select i1 %26, i32 373662382, i32 379086884
+  store i32 %28, i32* %4
+  br label %92
+
+; <label>:29:                                     ; preds = %5
+  %30 = load i32, i32* %2, align 4
+  %31 = sdiv i32 %30, 2
+  store i32 %31, i32* %2, align 4
+  %32 = load i32, i32* %3, align 4
+  %33 = sub i32 0, 1
+  %34 = sub i32 %32, %33
+  %35 = add nsw i32 %32, 1
+  store i32 %34, i32* %3, align 4
+  %36 = load i32, i32* @x.14
+  %37 = load i32, i32* @y.15
+  %38 = add i32 %36, -1413468470
+  %39 = sub i32 %38, 1
+  %40 = sub i32 %39, -1413468470
+  %41 = sub i32 %36, 1
+  %42 = mul i32 %36, %40
+  %43 = urem i32 %42, 2
+  %44 = icmp eq i32 %43, 0
+  %45 = icmp slt i32 %37, 10
+  %46 = xor i1 %44, true
+  %47 = xor i1 %45, true
+  %48 = xor i1 true, true
+  %49 = and i1 %46, true
+  %50 = and i1 %44, %48
+  %51 = and i1 %47, true
+  %52 = and i1 %45, %48
+  %53 = or i1 %49, %50
+  %54 = or i1 %51, %52
+  %55 = xor i1 %53, %54
+  %56 = or i1 %46, %47
+  %57 = xor i1 %56, true
+  %58 = or i1 true, %48
+  %59 = and i1 %57, %58
+  %60 = or i1 %55, %59
+  %61 = or i1 %44, %45
+  %62 = select i1 %60, i32 94053845, i32 379086884
+  store i32 %62, i32* %4
+  br label %92
+
+; <label>:63:                                     ; preds = %5
+  store i32 -717453918, i32* %4
+  br label %92
+
+; <label>:64:                                     ; preds = %5
+  %65 = load i32, i32* %3, align 4
+  ret i32 %65
+
+; <label>:66:                                     ; preds = %5
+  %67 = load i32, i32* %2, align 4
+  %68 = sub i32 %67, -1921833479
+  %69 = sub i32 %68, 2
+  %70 = add i32 %69, -1921833479
+  %71 = sub i32 %67, 2
+  %72 = mul i32 %70, 2
+  %73 = shl i32 %67, 2
+  %74 = sdiv i32 %67, 2
+  store i32 %74, i32* %2, align 4
+  %75 = load i32, i32* %3, align 4
+  %76 = add i32 %75, 1294546497
+  %77 = sub i32 %76, 1
+  %78 = sub i32 %77, 1294546497
+  %79 = sub i32 %75, 1
+  %80 = mul i32 %78, 1
+  %81 = sub i32 0, %75
+  %82 = add i32 0, %81
+  %83 = sub i32 0, %75
+  %84 = sub i32 0, 1
+  %85 = sub i32 %82, %84
+  %86 = add i32 %82, 1
+  %87 = sub i32 0, %75
+  %88 = sub i32 0, 1
+  %89 = add i32 %87, %88
+  %90 = sub i32 0, %89
+  %91 = add nsw i32 %75, 1
+  store i32 %90, i32* %3, align 4
+  store i32 373662382, i32* %4
+  br label %92
+
+; <label>:92:                                     ; preds = %66, %63, %29, %13, %8, %7
+  br label %5
+}
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init.1() #0 section ".text.startup" {
+  call void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"* @P) #3
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector"*)* @_ZNSt6vectorIxSaIxEED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector"* @P to i8*), i8* @__dso_handle) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"class.std::vector"*, align 8
+  store %"class.std::vector"* %0, %"class.std::vector"** %2, align 8
+  %3 = load %"class.std::vector"*, %"class.std::vector"** %2, align 8
+  %4 = bitcast %"class.std::vector"* %3 to %"struct.std::_Vector_base"*
+  invoke void @_ZNSt12_Vector_baseIxSaIxEEC2Ev(%"struct.std::_Vector_base"* %4)
+          to label %5 unwind label %6
+
+; <label>:5:                                      ; preds = %1
+  ret void
+
+; <label>:6:                                      ; preds = %1
+  %7 = landingpad { i8*, i32 }
+          catch i8* null
+  %8 = extractvalue { i8*, i32 } %7, 0
+  call void @__clang_call_terminate(i8* %8) #12
+  unreachable
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.20
+  %3 = load i32, i32* @y.21
+  %4 = sub i32 %2, 239044426
+  %5 = sub i32 %4, 1
+  %6 = add i32 %5, 239044426
+  %7 = sub i32 %2, 1
+  %8 = mul i32 %2, %6
+  %9 = urem i32 %8, 2
+  %10 = icmp eq i32 %9, 0
+  %11 = icmp slt i32 %3, 10
+  %12 = xor i1 %10, true
+  %13 = xor i1 %11, true
+  %14 = xor i1 true, true
+  %15 = and i1 %12, true
+  %16 = and i1 %10, %14
+  %17 = and i1 %13, true
+  %18 = and i1 %11, %14
+  %19 = or i1 %15, %16
+  %20 = or i1 %17, %18
+  %21 = xor i1 %19, %20
+  %22 = or i1 %12, %13
+  %23 = xor i1 %22, true
+  %24 = or i1 true, %14
+  %25 = and i1 %23, %24
+  %26 = or i1 %21, %25
+  %27 = or i1 %10, %11
+  br i1 %26, label %28, label %149
+
+; <label>:28:                                     ; preds = %1, %149
+  %29 = alloca %"class.std::vector"*, align 8
+  %30 = alloca i8*
+  %31 = alloca i32
+  store %"class.std::vector"* %0, %"class.std::vector"** %29, align 8
+  %32 = load %"class.std::vector"*, %"class.std::vector"** %29, align 8
+  %33 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  %34 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %33, i32 0, i32 0
+  %35 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %34, i32 0, i32 0
+  %36 = load i64*, i64** %35, align 8
+  %37 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  %38 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %37, i32 0, i32 0
+  %39 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %38, i32 0, i32 1
+  %40 = load i64*, i64** %39, align 8
+  %41 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  %42 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %41) #3
+  %43 = load i32, i32* @x.20
+  %44 = load i32, i32* @y.21
+  %45 = sub i32 0, 1
+  %46 = add i32 %43, %45
+  %47 = sub i32 %43, 1
+  %48 = mul i32 %43, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %44, 10
+  %52 = and i1 %50, %51
+  %53 = xor i1 %50, %51
+  %54 = or i1 %52, %53
+  %55 = or i1 %50, %51
+  br i1 %54, label %56, label %149
+
+; <label>:56:                                     ; preds = %28
+  invoke void @_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E(i64* %36, i64* %40, %"class.std::allocator"* dereferenceable(1) %42)
+          to label %57 unwind label %100
+
+; <label>:57:                                     ; preds = %56
+  %58 = load i32, i32* @x.20
+  %59 = load i32, i32* @y.21
+  %60 = add i32 %58, -214714518
+  %61 = sub i32 %60, 1
+  %62 = sub i32 %61, -214714518
+  %63 = sub i32 %58, 1
+  %64 = mul i32 %58, %62
+  %65 = urem i32 %64, 2
+  %66 = icmp eq i32 %65, 0
+  %67 = icmp slt i32 %59, 10
+  %68 = and i1 %66, %67
+  %69 = xor i1 %66, %67
+  %70 = or i1 %68, %69
+  %71 = or i1 %66, %67
+  br i1 %70, label %72, label %164
+
+; <label>:72:                                     ; preds = %57, %164
+  %73 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %73) #3
+  %74 = load i32, i32* @x.20
+  %75 = load i32, i32* @y.21
+  %76 = sub i32 0, 1
+  %77 = add i32 %74, %76
+  %78 = sub i32 %74, 1
+  %79 = mul i32 %74, %77
+  %80 = urem i32 %79, 2
+  %81 = icmp eq i32 %80, 0
+  %82 = icmp slt i32 %75, 10
+  %83 = xor i1 %81, true
+  %84 = xor i1 %82, true
+  %85 = xor i1 true, true
+  %86 = and i1 %83, true
+  %87 = and i1 %81, %85
+  %88 = and i1 %84, true
+  %89 = and i1 %82, %85
+  %90 = or i1 %86, %87
+  %91 = or i1 %88, %89
+  %92 = xor i1 %90, %91
+  %93 = or i1 %83, %84
+  %94 = xor i1 %93, true
+  %95 = or i1 true, %85
+  %96 = and i1 %94, %95
+  %97 = or i1 %92, %96
+  %98 = or i1 %81, %82
+  br i1 %97, label %99, label %164
+
+; <label>:99:                                     ; preds = %72
+  ret void
+
+; <label>:100:                                    ; preds = %56
+  %101 = load i32, i32* @x.20
+  %102 = load i32, i32* @y.21
+  %103 = add i32 %101, 850652725
+  %104 = sub i32 %103, 1
+  %105 = sub i32 %104, 850652725
+  %106 = sub i32 %101, 1
+  %107 = mul i32 %101, %105
+  %108 = urem i32 %107, 2
+  %109 = icmp eq i32 %108, 0
+  %110 = icmp slt i32 %102, 10
+  %111 = and i1 %109, %110
+  %112 = xor i1 %109, %110
+  %113 = or i1 %111, %112
+  %114 = or i1 %109, %110
+  br i1 %113, label %115, label %166
+
+; <label>:115:                                    ; preds = %100, %166
+  %116 = landingpad { i8*, i32 }
+          catch i8* null
+  %117 = extractvalue { i8*, i32 } %116, 0
+  store i8* %117, i8** %30, align 8
+  %118 = extractvalue { i8*, i32 } %116, 1
+  store i32 %118, i32* %31, align 4
+  %119 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %119) #3
+  %120 = load i32, i32* @x.20
+  %121 = load i32, i32* @y.21
+  %122 = sub i32 %120, -6776799
+  %123 = sub i32 %122, 1
+  %124 = add i32 %123, -6776799
+  %125 = sub i32 %120, 1
+  %126 = mul i32 %120, %124
+  %127 = urem i32 %126, 2
+  %128 = icmp eq i32 %127, 0
+  %129 = icmp slt i32 %121, 10
+  %130 = xor i1 %128, true
+  %131 = xor i1 %129, true
+  %132 = xor i1 true, true
+  %133 = and i1 %130, true
+  %134 = and i1 %128, %132
+  %135 = and i1 %131, true
+  %136 = and i1 %129, %132
+  %137 = or i1 %133, %134
+  %138 = or i1 %135, %136
+  %139 = xor i1 %137, %138
+  %140 = or i1 %130, %131
+  %141 = xor i1 %140, true
+  %142 = or i1 true, %132
+  %143 = and i1 %141, %142
+  %144 = or i1 %139, %143
+  %145 = or i1 %128, %129
+  br i1 %144, label %146, label %166
+
+; <label>:146:                                    ; preds = %115
+  br label %147
+
+; <label>:147:                                    ; preds = %146
+  %148 = load i8*, i8** %30, align 8
+  call void @__clang_call_terminate(i8* %148) #12
+  unreachable
+
+; <label>:149:                                    ; preds = %28, %1
+  %150 = alloca %"class.std::vector"*, align 8
+  %151 = alloca i8*
+  %152 = alloca i32
+  store %"class.std::vector"* %0, %"class.std::vector"** %150, align 8
+  %153 = load %"class.std::vector"*, %"class.std::vector"** %150, align 8
+  %154 = bitcast %"class.std::vector"* %153 to %"struct.std::_Vector_base"*
+  %155 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %154, i32 0, i32 0
+  %156 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %155, i32 0, i32 0
+  %157 = load i64*, i64** %156, align 8
+  %158 = bitcast %"class.std::vector"* %153 to %"struct.std::_Vector_base"*
+  %159 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %158, i32 0, i32 0
+  %160 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %159, i32 0, i32 1
+  %161 = load i64*, i64** %160, align 8
+  %162 = bitcast %"class.std::vector"* %153 to %"struct.std::_Vector_base"*
+  %163 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %162) #3
+  br label %28
+
+; <label>:164:                                    ; preds = %72, %57
+  %165 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %165) #3
+  br label %72
+
+; <label>:166:                                    ; preds = %115, %100
+  %167 = landingpad { i8*, i32 }
+          catch i8* null
+  %168 = extractvalue { i8*, i32 } %167, 0
+  store i8* %168, i8** %30, align 8
+  %169 = extractvalue { i8*, i32 } %167, 1
+  store i32 %169, i32* %31, align 4
+  %170 = bitcast %"class.std::vector"* %32 to %"struct.std::_Vector_base"*
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %170) #3
+  br label %115
+}
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init.2() #0 section ".text.startup" {
+  call void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"* @C) #3
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector"*)* @_ZNSt6vectorIxSaIxEED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector"* @C to i8*), i8* @__dso_handle) #3
+  ret void
+}
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #5 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca %"class.std::vector.0", align 8
+  %7 = alloca %"class.std::allocator.2", align 1
+  %8 = alloca i8*
+  %9 = alloca i32
+  %10 = alloca %"class.std::vector.0", align 8
+  %11 = alloca %"class.std::allocator.2", align 1
+  %12 = alloca i32, align 4
+  %13 = alloca i32, align 4
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"struct.std::greater", align 1
+  %17 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %19 = alloca i8, align 1
+  store i32 0, i32* %1, align 4
+  %20 = load i8*, i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**), align 8
+  %21 = getelementptr i8, i8* %20, i64 -24
+  %22 = bitcast i8* %21 to i64*
+  %23 = load i64, i64* %22, align 8
+  %24 = getelementptr inbounds i8, i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %23
+  %25 = bitcast i8* %24 to %"class.std::basic_ios"*
+  %26 = call %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"* %25, %"class.std::basic_ostream"* null)
+  %27 = call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %28 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* dereferenceable(4) %2)
+  %29 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %28, i32* dereferenceable(4) %3)
+  %30 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %29, i32* dereferenceable(4) %4)
+  %31 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* %30, i32* dereferenceable(4) %5)
+  %32 = load i32, i32* %2, align 4
+  %33 = sext i32 %32 to i64
+  call void @_ZNSaIiEC2Ev(%"class.std::allocator.2"* %7) #3
+  invoke void @_ZNSt6vectorIiSaIiEEC2EmRKS0_(%"class.std::vector.0"* %6, i64 %33, %"class.std::allocator.2"* dereferenceable(1) %7)
+          to label %34 unwind label %106
+
+; <label>:34:                                     ; preds = %0
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %7) #3
+  %35 = load i32, i32* %3, align 4
+  %36 = sext i32 %35 to i64
+  call void @_ZNSaIiEC2Ev(%"class.std::allocator.2"* %11) #3
+  invoke void @_ZNSt6vectorIiSaIiEEC2EmRKS0_(%"class.std::vector.0"* %10, i64 %36, %"class.std::allocator.2"* dereferenceable(1) %11)
+          to label %37 unwind label %150
+
+; <label>:37:                                     ; preds = %34
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %11) #3
+  store i32 0, i32* %12, align 4
+  br label %38
+
+; <label>:38:                                     ; preds = %101, %37
+  %39 = load i32, i32* @x.24
+  %40 = load i32, i32* @y.25
+  %41 = sub i32 %39, -58689536
+  %42 = sub i32 %41, 1
+  %43 = add i32 %42, -58689536
+  %44 = sub i32 %39, 1
+  %45 = mul i32 %39, %43
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %40, 10
+  %49 = xor i1 %47, true
+  %50 = xor i1 %48, true
+  %51 = xor i1 false, true
+  %52 = and i1 %49, false
+  %53 = and i1 %47, %51
+  %54 = and i1 %50, false
+  %55 = and i1 %48, %51
+  %56 = or i1 %52, %53
+  %57 = or i1 %54, %55
+  %58 = xor i1 %56, %57
+  %59 = or i1 %49, %50
+  %60 = xor i1 %59, true
+  %61 = or i1 false, %51
+  %62 = and i1 %60, %61
+  %63 = or i1 %58, %62
+  %64 = or i1 %47, %48
+  br i1 %63, label %65, label %583
+
+; <label>:65:                                     ; preds = %38, %583
+  %66 = load i32, i32* %12, align 4
+  %67 = load i32, i32* %2, align 4
+  %68 = icmp slt i32 %66, %67
+  %69 = load i32, i32* @x.24
+  %70 = load i32, i32* @y.25
+  %71 = sub i32 0, 1
+  %72 = add i32 %69, %71
+  %73 = sub i32 %69, 1
+  %74 = mul i32 %69, %72
+  %75 = urem i32 %74, 2
+  %76 = icmp eq i32 %75, 0
+  %77 = icmp slt i32 %70, 10
+  %78 = xor i1 %76, true
+  %79 = xor i1 %77, true
+  %80 = xor i1 true, true
+  %81 = and i1 %78, true
+  %82 = and i1 %76, %80
+  %83 = and i1 %79, true
+  %84 = and i1 %77, %80
+  %85 = or i1 %81, %82
+  %86 = or i1 %83, %84
+  %87 = xor i1 %85, %86
+  %88 = or i1 %78, %79
+  %89 = xor i1 %88, true
+  %90 = or i1 true, %80
+  %91 = and i1 %89, %90
+  %92 = or i1 %87, %91
+  %93 = or i1 %76, %77
+  br i1 %92, label %94, label %583
+
+; <label>:94:                                     ; preds = %65
+  br i1 %68, label %95, label %158
+
+; <label>:95:                                     ; preds = %94
+  %96 = load i32, i32* %12, align 4
+  %97 = sext i32 %96 to i64
+  %98 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %6, i64 %97) #3
+  %99 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* dereferenceable(4) %98)
+          to label %100 unwind label %154
+
+; <label>:100:                                    ; preds = %95
+  br label %101
+
+; <label>:101:                                    ; preds = %100
+  %102 = load i32, i32* %12, align 4
+  %103 = sub i32 0, 1
+  %104 = sub i32 %102, %103
+  %105 = add nsw i32 %102, 1
+  store i32 %104, i32* %12, align 4
+  br label %38
+
+; <label>:106:                                    ; preds = %0
+  %107 = load i32, i32* @x.24
+  %108 = load i32, i32* @y.25
+  %109 = sub i32 0, 1
+  %110 = add i32 %107, %109
+  %111 = sub i32 %107, 1
+  %112 = mul i32 %107, %110
+  %113 = urem i32 %112, 2
+  %114 = icmp eq i32 %113, 0
+  %115 = icmp slt i32 %108, 10
+  %116 = and i1 %114, %115
+  %117 = xor i1 %114, %115
+  %118 = or i1 %116, %117
+  %119 = or i1 %114, %115
+  br i1 %118, label %120, label %587
+
+; <label>:120:                                    ; preds = %106, %587
+  %121 = landingpad { i8*, i32 }
+          cleanup
+  %122 = extractvalue { i8*, i32 } %121, 0
+  store i8* %122, i8** %8, align 8
+  %123 = extractvalue { i8*, i32 } %121, 1
+  store i32 %123, i32* %9, align 4
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %7) #3
+  %124 = load i32, i32* @x.24
+  %125 = load i32, i32* @y.25
+  %126 = sub i32 0, 1
+  %127 = add i32 %124, %126
+  %128 = sub i32 %124, 1
+  %129 = mul i32 %124, %127
+  %130 = urem i32 %129, 2
+  %131 = icmp eq i32 %130, 0
+  %132 = icmp slt i32 %125, 10
+  %133 = xor i1 %131, true
+  %134 = xor i1 %132, true
+  %135 = xor i1 true, true
+  %136 = and i1 %133, true
+  %137 = and i1 %131, %135
+  %138 = and i1 %134, true
+  %139 = and i1 %132, %135
+  %140 = or i1 %136, %137
+  %141 = or i1 %138, %139
+  %142 = xor i1 %140, %141
+  %143 = or i1 %133, %134
+  %144 = xor i1 %143, true
+  %145 = or i1 true, %135
+  %146 = and i1 %144, %145
+  %147 = or i1 %142, %146
+  %148 = or i1 %131, %132
+  br i1 %147, label %149, label %587
+
+; <label>:149:                                    ; preds = %120
+  br label %578
+
+; <label>:150:                                    ; preds = %34
+  %151 = landingpad { i8*, i32 }
+          cleanup
+  %152 = extractvalue { i8*, i32 } %151, 0
+  store i8* %152, i8** %8, align 8
+  %153 = extractvalue { i8*, i32 } %151, 1
+  store i32 %153, i32* %9, align 4
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %11) #3
+  br label %577
+
+; <label>:154:                                    ; preds = %572, %570, %514, %458, %318, %317, %260, %95
+  %155 = landingpad { i8*, i32 }
+          cleanup
+  %156 = extractvalue { i8*, i32 } %155, 0
+  store i8* %156, i8** %8, align 8
+  %157 = extractvalue { i8*, i32 } %155, 1
+  store i32 %157, i32* %9, align 4
+  call void @_ZNSt6vectorIiSaIiEED2Ev(%"class.std::vector.0"* %10) #3
+  br label %577
+
+; <label>:158:                                    ; preds = %94
+  store i32 0, i32* %13, align 4
+  br label %159
+
+; <label>:159:                                    ; preds = %263, %158
+  %160 = load i32, i32* @x.24
+  %161 = load i32, i32* @y.25
+  %162 = sub i32 %160, 1769393733
+  %163 = sub i32 %162, 1
+  %164 = add i32 %163, 1769393733
+  %165 = sub i32 %160, 1
+  %166 = mul i32 %160, %164
+  %167 = urem i32 %166, 2
+  %168 = icmp eq i32 %167, 0
+  %169 = icmp slt i32 %161, 10
+  %170 = xor i1 %168, true
+  %171 = xor i1 %169, true
+  %172 = xor i1 true, true
+  %173 = and i1 %170, true
+  %174 = and i1 %168, %172
+  %175 = and i1 %171, true
+  %176 = and i1 %169, %172
+  %177 = or i1 %173, %174
+  %178 = or i1 %175, %176
+  %179 = xor i1 %177, %178
+  %180 = or i1 %170, %171
+  %181 = xor i1 %180, true
+  %182 = or i1 true, %172
+  %183 = and i1 %181, %182
+  %184 = or i1 %179, %183
+  %185 = or i1 %168, %169
+  br i1 %184, label %186, label %591
+
+; <label>:186:                                    ; preds = %159, %591
+  %187 = load i32, i32* %13, align 4
+  %188 = load i32, i32* %3, align 4
+  %189 = icmp slt i32 %187, %188
+  %190 = load i32, i32* @x.24
+  %191 = load i32, i32* @y.25
+  %192 = add i32 %190, 1392138950
+  %193 = sub i32 %192, 1
+  %194 = sub i32 %193, 1392138950
+  %195 = sub i32 %190, 1
+  %196 = mul i32 %190, %194
+  %197 = urem i32 %196, 2
+  %198 = icmp eq i32 %197, 0
+  %199 = icmp slt i32 %191, 10
+  %200 = xor i1 %198, true
+  %201 = xor i1 %199, true
+  %202 = xor i1 false, true
+  %203 = and i1 %200, false
+  %204 = and i1 %198, %202
+  %205 = and i1 %201, false
+  %206 = and i1 %199, %202
+  %207 = or i1 %203, %204
+  %208 = or i1 %205, %206
+  %209 = xor i1 %207, %208
+  %210 = or i1 %200, %201
+  %211 = xor i1 %210, true
+  %212 = or i1 false, %202
+  %213 = and i1 %211, %212
+  %214 = or i1 %209, %213
+  %215 = or i1 %198, %199
+  br i1 %214, label %216, label %591
+
+; <label>:216:                                    ; preds = %186
+  br i1 %189, label %217, label %268
+
+; <label>:217:                                    ; preds = %216
+  %218 = load i32, i32* @x.24
+  %219 = load i32, i32* @y.25
+  %220 = sub i32 0, 1
+  %221 = add i32 %218, %220
+  %222 = sub i32 %218, 1
+  %223 = mul i32 %218, %221
+  %224 = urem i32 %223, 2
+  %225 = icmp eq i32 %224, 0
+  %226 = icmp slt i32 %219, 10
+  %227 = xor i1 %225, true
+  %228 = xor i1 %226, true
+  %229 = xor i1 true, true
+  %230 = and i1 %227, true
+  %231 = and i1 %225, %229
+  %232 = and i1 %228, true
+  %233 = and i1 %226, %229
+  %234 = or i1 %230, %231
+  %235 = or i1 %232, %233
+  %236 = xor i1 %234, %235
+  %237 = or i1 %227, %228
+  %238 = xor i1 %237, true
+  %239 = or i1 true, %229
+  %240 = and i1 %238, %239
+  %241 = or i1 %236, %240
+  %242 = or i1 %225, %226
+  br i1 %241, label %243, label %595
+
+; <label>:243:                                    ; preds = %217, %595
+  %244 = load i32, i32* %13, align 4
+  %245 = sext i32 %244 to i64
+  %246 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %10, i64 %245) #3
+  %247 = load i32, i32* @x.24
+  %248 = load i32, i32* @y.25
+  %249 = sub i32 0, 1
+  %250 = add i32 %247, %249
+  %251 = sub i32 %247, 1
+  %252 = mul i32 %247, %250
+  %253 = urem i32 %252, 2
+  %254 = icmp eq i32 %253, 0
+  %255 = icmp slt i32 %248, 10
+  %256 = and i1 %254, %255
+  %257 = xor i1 %254, %255
+  %258 = or i1 %256, %257
+  %259 = or i1 %254, %255
+  br i1 %258, label %260, label %595
+
+; <label>:260:                                    ; preds = %243
+  %261 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* @_ZSt3cin, i32* dereferenceable(4) %246)
+          to label %262 unwind label %154
+
+; <label>:262:                                    ; preds = %260
+  br label %263
+
+; <label>:263:                                    ; preds = %262
+  %264 = load i32, i32* %13, align 4
+  %265 = sub i32 0, 1
+  %266 = sub i32 %264, %265
+  %267 = add nsw i32 %264, 1
+  store i32 %266, i32* %13, align 4
+  br label %159
+
+; <label>:268:                                    ; preds = %216
+  %269 = load i32, i32* @x.24
+  %270 = load i32, i32* @y.25
+  %271 = sub i32 0, 1
+  %272 = add i32 %269, %271
+  %273 = sub i32 %269, 1
+  %274 = mul i32 %269, %272
+  %275 = urem i32 %274, 2
+  %276 = icmp eq i32 %275, 0
+  %277 = icmp slt i32 %270, 10
+  %278 = and i1 %276, %277
+  %279 = xor i1 %276, %277
+  %280 = or i1 %278, %279
+  %281 = or i1 %276, %277
+  br i1 %280, label %282, label %599
+
+; <label>:282:                                    ; preds = %268, %599
+  %283 = call i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector.0"* %6) #3
+  %284 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %283, i32** %284, align 8
+  %285 = call i32* @_ZNSt6vectorIiSaIiEE3endEv(%"class.std::vector.0"* %6) #3
+  %286 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %285, i32** %286, align 8
+  %287 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %288 = load i32*, i32** %287, align 8
+  %289 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %290 = load i32*, i32** %289, align 8
+  %291 = load i32, i32* @x.24
+  %292 = load i32, i32* @y.25
+  %293 = add i32 %291, 372703582
+  %294 = sub i32 %293, 1
+  %295 = sub i32 %294, 372703582
+  %296 = sub i32 %291, 1
+  %297 = mul i32 %291, %295
+  %298 = urem i32 %297, 2
+  %299 = icmp eq i32 %298, 0
+  %300 = icmp slt i32 %292, 10
+  %301 = xor i1 %299, true
+  %302 = xor i1 %300, true
+  %303 = xor i1 false, true
+  %304 = and i1 %301, false
+  %305 = and i1 %299, %303
+  %306 = and i1 %302, false
+  %307 = and i1 %300, %303
+  %308 = or i1 %304, %305
+  %309 = or i1 %306, %307
+  %310 = xor i1 %308, %309
+  %311 = or i1 %301, %302
+  %312 = xor i1 %311, true
+  %313 = or i1 false, %303
+  %314 = and i1 %312, %313
+  %315 = or i1 %310, %314
+  %316 = or i1 %299, %300
+  br i1 %315, label %317, label %599
+
+; <label>:317:                                    ; preds = %282
+  invoke void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEESt7greaterIiEEvT_S9_T0_(i32* %288, i32* %290)
+          to label %318 unwind label %154
+
+; <label>:318:                                    ; preds = %317
+  %319 = call i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector.0"* %10) #3
+  %320 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %17, i32 0, i32 0
+  store i32* %319, i32** %320, align 8
+  %321 = call i32* @_ZNSt6vectorIiSaIiEE3endEv(%"class.std::vector.0"* %10) #3
+  %322 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %18, i32 0, i32 0
+  store i32* %321, i32** %322, align 8
+  %323 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %17, i32 0, i32 0
+  %324 = load i32*, i32** %323, align 8
+  %325 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %18, i32 0, i32 0
+  %326 = load i32*, i32** %325, align 8
+  invoke void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEEvT_S7_(i32* %324, i32* %326)
+          to label %327 unwind label %154
+
+; <label>:327:                                    ; preds = %318
+  store i8 1, i8* %19, align 1
+  %328 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %6, i64 0) #3
+  %329 = load i32, i32* %328, align 4
+  %330 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %10, i64 0) #3
+  %331 = load i32, i32* %330, align 4
+  %332 = icmp sge i32 %329, %331
+  br i1 %332, label %333, label %375
+
+; <label>:333:                                    ; preds = %327
+  %334 = load i32, i32* @x.24
+  %335 = load i32, i32* @y.25
+  %336 = sub i32 0, 1
+  %337 = add i32 %334, %336
+  %338 = sub i32 %334, 1
+  %339 = mul i32 %334, %337
+  %340 = urem i32 %339, 2
+  %341 = icmp eq i32 %340, 0
+  %342 = icmp slt i32 %335, 10
+  %343 = and i1 %341, %342
+  %344 = xor i1 %341, %342
+  %345 = or i1 %343, %344
+  %346 = or i1 %341, %342
+  br i1 %345, label %347, label %608
+
+; <label>:347:                                    ; preds = %333, %608
+  store i8 0, i8* %19, align 1
+  %348 = load i32, i32* @x.24
+  %349 = load i32, i32* @y.25
+  %350 = sub i32 %348, -484824612
+  %351 = sub i32 %350, 1
+  %352 = add i32 %351, -484824612
+  %353 = sub i32 %348, 1
+  %354 = mul i32 %348, %352
+  %355 = urem i32 %354, 2
+  %356 = icmp eq i32 %355, 0
+  %357 = icmp slt i32 %349, 10
+  %358 = xor i1 %356, true
+  %359 = xor i1 %357, true
+  %360 = xor i1 false, true
+  %361 = and i1 %358, false
+  %362 = and i1 %356, %360
+  %363 = and i1 %359, false
+  %364 = and i1 %357, %360
+  %365 = or i1 %361, %362
+  %366 = or i1 %363, %364
+  %367 = xor i1 %365, %366
+  %368 = or i1 %358, %359
+  %369 = xor i1 %368, true
+  %370 = or i1 false, %360
+  %371 = and i1 %369, %370
+  %372 = or i1 %367, %371
+  %373 = or i1 %356, %357
+  br i1 %372, label %374, label %608
+
+; <label>:374:                                    ; preds = %347
+  br label %375
+
+; <label>:375:                                    ; preds = %374, %327
+  %376 = load i32, i32* @x.24
+  %377 = load i32, i32* @y.25
+  %378 = add i32 %376, -1045109263
+  %379 = sub i32 %378, 1
+  %380 = sub i32 %379, -1045109263
+  %381 = sub i32 %376, 1
+  %382 = mul i32 %376, %380
+  %383 = urem i32 %382, 2
+  %384 = icmp eq i32 %383, 0
+  %385 = icmp slt i32 %377, 10
+  %386 = and i1 %384, %385
+  %387 = xor i1 %384, %385
+  %388 = or i1 %386, %387
+  %389 = or i1 %384, %385
+  br i1 %388, label %390, label %609
+
+; <label>:390:                                    ; preds = %375, %609
+  %391 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %10, i64 0) #3
+  %392 = load i32, i32* %391, align 4
+  %393 = load i32, i32* %4, align 4
+  %394 = icmp sle i32 %392, %393
+  %395 = load i32, i32* @x.24
+  %396 = load i32, i32* @y.25
+  %397 = sub i32 0, 1
+  %398 = add i32 %395, %397
+  %399 = sub i32 %395, 1
+  %400 = mul i32 %395, %398
+  %401 = urem i32 %400, 2
+  %402 = icmp eq i32 %401, 0
+  %403 = icmp slt i32 %396, 10
+  %404 = and i1 %402, %403
+  %405 = xor i1 %402, %403
+  %406 = or i1 %404, %405
+  %407 = or i1 %402, %403
+  br i1 %406, label %408, label %609
+
+; <label>:408:                                    ; preds = %390
+  br i1 %394, label %414, label %409
+
+; <label>:409:                                    ; preds = %408
+  %410 = load i32, i32* %5, align 4
+  %411 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %6, i64 0) #3
+  %412 = load i32, i32* %411, align 4
+  %413 = icmp sle i32 %410, %412
+  br i1 %413, label %414, label %455
+
+; <label>:414:                                    ; preds = %409, %408
+  %415 = load i32, i32* @x.24
+  %416 = load i32, i32* @y.25
+  %417 = sub i32 0, 1
+  %418 = add i32 %415, %417
+  %419 = sub i32 %415, 1
+  %420 = mul i32 %415, %418
+  %421 = urem i32 %420, 2
+  %422 = icmp eq i32 %421, 0
+  %423 = icmp slt i32 %416, 10
+  %424 = xor i1 %422, true
+  %425 = xor i1 %423, true
+  %426 = xor i1 false, true
+  %427 = and i1 %424, false
+  %428 = and i1 %422, %426
+  %429 = and i1 %425, false
+  %430 = and i1 %423, %426
+  %431 = or i1 %427, %428
+  %432 = or i1 %429, %430
+  %433 = xor i1 %431, %432
+  %434 = or i1 %424, %425
+  %435 = xor i1 %434, true
+  %436 = or i1 false, %426
+  %437 = and i1 %435, %436
+  %438 = or i1 %433, %437
+  %439 = or i1 %422, %423
+  br i1 %438, label %440, label %614
+
+; <label>:440:                                    ; preds = %414, %614
+  store i8 0, i8* %19, align 1
+  %441 = load i32, i32* @x.24
+  %442 = load i32, i32* @y.25
+  %443 = sub i32 0, 1
+  %444 = add i32 %441, %443
+  %445 = sub i32 %441, 1
+  %446 = mul i32 %441, %444
+  %447 = urem i32 %446, 2
+  %448 = icmp eq i32 %447, 0
+  %449 = icmp slt i32 %442, 10
+  %450 = and i1 %448, %449
+  %451 = xor i1 %448, %449
+  %452 = or i1 %450, %451
+  %453 = or i1 %448, %449
+  br i1 %452, label %454, label %614
+
+; <label>:454:                                    ; preds = %440
+  br label %455
+
+; <label>:455:                                    ; preds = %454, %409
+  %456 = load i8, i8* %19, align 1
+  %457 = trunc i8 %456 to i1
+  br i1 %457, label %458, label %517
+
+; <label>:458:                                    ; preds = %455
+  %459 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str, i32 0, i32 0))
+          to label %460 unwind label %154
+
+; <label>:460:                                    ; preds = %458
+  %461 = load i32, i32* @x.24
+  %462 = load i32, i32* @y.25
+  %463 = sub i32 %461, -473342338
+  %464 = sub i32 %463, 1
+  %465 = add i32 %464, -473342338
+  %466 = sub i32 %461, 1
+  %467 = mul i32 %461, %465
+  %468 = urem i32 %467, 2
+  %469 = icmp eq i32 %468, 0
+  %470 = icmp slt i32 %462, 10
+  %471 = xor i1 %469, true
+  %472 = xor i1 %470, true
+  %473 = xor i1 true, true
+  %474 = and i1 %471, true
+  %475 = and i1 %469, %473
+  %476 = and i1 %472, true
+  %477 = and i1 %470, %473
+  %478 = or i1 %474, %475
+  %479 = or i1 %476, %477
+  %480 = xor i1 %478, %479
+  %481 = or i1 %471, %472
+  %482 = xor i1 %481, true
+  %483 = or i1 true, %473
+  %484 = and i1 %482, %483
+  %485 = or i1 %480, %484
+  %486 = or i1 %469, %470
+  br i1 %485, label %487, label %615
+
+; <label>:487:                                    ; preds = %460, %615
+  %488 = load i32, i32* @x.24
+  %489 = load i32, i32* @y.25
+  %490 = sub i32 %488, 1367825227
+  %491 = sub i32 %490, 1
+  %492 = add i32 %491, 1367825227
+  %493 = sub i32 %488, 1
+  %494 = mul i32 %488, %492
+  %495 = urem i32 %494, 2
+  %496 = icmp eq i32 %495, 0
+  %497 = icmp slt i32 %489, 10
+  %498 = xor i1 %496, true
+  %499 = xor i1 %497, true
+  %500 = xor i1 false, true
+  %501 = and i1 %498, false
+  %502 = and i1 %496, %500
+  %503 = and i1 %499, false
+  %504 = and i1 %497, %500
+  %505 = or i1 %501, %502
+  %506 = or i1 %503, %504
+  %507 = xor i1 %505, %506
+  %508 = or i1 %498, %499
+  %509 = xor i1 %508, true
+  %510 = or i1 false, %500
+  %511 = and i1 %509, %510
+  %512 = or i1 %507, %511
+  %513 = or i1 %496, %497
+  br i1 %512, label %514, label %615
+
+; <label>:514:                                    ; preds = %487
+  %515 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %459, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %516 unwind label %154
+
+; <label>:516:                                    ; preds = %514
+  br label %575
+
+; <label>:517:                                    ; preds = %455
+  %518 = load i32, i32* @x.24
+  %519 = load i32, i32* @y.25
+  %520 = sub i32 0, 1
+  %521 = add i32 %518, %520
+  %522 = sub i32 %518, 1
+  %523 = mul i32 %518, %521
+  %524 = urem i32 %523, 2
+  %525 = icmp eq i32 %524, 0
+  %526 = icmp slt i32 %519, 10
+  %527 = xor i1 %525, true
+  %528 = xor i1 %526, true
+  %529 = xor i1 true, true
+  %530 = and i1 %527, true
+  %531 = and i1 %525, %529
+  %532 = and i1 %528, true
+  %533 = and i1 %526, %529
+  %534 = or i1 %530, %531
+  %535 = or i1 %532, %533
+  %536 = xor i1 %534, %535
+  %537 = or i1 %527, %528
+  %538 = xor i1 %537, true
+  %539 = or i1 true, %529
+  %540 = and i1 %538, %539
+  %541 = or i1 %536, %540
+  %542 = or i1 %525, %526
+  br i1 %541, label %543, label %616
+
+; <label>:543:                                    ; preds = %517, %616
+  %544 = load i32, i32* @x.24
+  %545 = load i32, i32* @y.25
+  %546 = add i32 %544, 317609901
+  %547 = sub i32 %546, 1
+  %548 = sub i32 %547, 317609901
+  %549 = sub i32 %544, 1
+  %550 = mul i32 %544, %548
+  %551 = urem i32 %550, 2
+  %552 = icmp eq i32 %551, 0
+  %553 = icmp slt i32 %545, 10
+  %554 = xor i1 %552, true
+  %555 = xor i1 %553, true
+  %556 = xor i1 false, true
+  %557 = and i1 %554, false
+  %558 = and i1 %552, %556
+  %559 = and i1 %555, false
+  %560 = and i1 %553, %556
+  %561 = or i1 %557, %558
+  %562 = or i1 %559, %560
+  %563 = xor i1 %561, %562
+  %564 = or i1 %554, %555
+  %565 = xor i1 %564, true
+  %566 = or i1 false, %556
+  %567 = and i1 %565, %566
+  %568 = or i1 %563, %567
+  %569 = or i1 %552, %553
+  br i1 %568, label %570, label %616
+
+; <label>:570:                                    ; preds = %543
+  %571 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0))
+          to label %572 unwind label %154
+
+; <label>:572:                                    ; preds = %570
+  %573 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* %571, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %574 unwind label %154
+
+; <label>:574:                                    ; preds = %572
+  br label %575
+
+; <label>:575:                                    ; preds = %574, %516
+  call void @_ZNSt6vectorIiSaIiEED2Ev(%"class.std::vector.0"* %10) #3
+  call void @_ZNSt6vectorIiSaIiEED2Ev(%"class.std::vector.0"* %6) #3
+  %576 = load i32, i32* %1, align 4
+  ret i32 %576
+
+; <label>:577:                                    ; preds = %154, %150
+  call void @_ZNSt6vectorIiSaIiEED2Ev(%"class.std::vector.0"* %6) #3
+  br label %578
+
+; <label>:578:                                    ; preds = %577, %149
+  %579 = load i8*, i8** %8, align 8
+  %580 = load i32, i32* %9, align 4
+  %581 = insertvalue { i8*, i32 } undef, i8* %579, 0
+  %582 = insertvalue { i8*, i32 } %581, i32 %580, 1
+  resume { i8*, i32 } %582
+
+; <label>:583:                                    ; preds = %65, %38
+  %584 = load i32, i32* %12, align 4
+  %585 = load i32, i32* %2, align 4
+  %586 = icmp slt i32 %584, %585
+  br label %65
+
+; <label>:587:                                    ; preds = %120, %106
+  %588 = landingpad { i8*, i32 }
+          cleanup
+  %589 = extractvalue { i8*, i32 } %588, 0
+  store i8* %589, i8** %8, align 8
+  %590 = extractvalue { i8*, i32 } %588, 1
+  store i32 %590, i32* %9, align 4
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %7) #3
+  br label %120
+
+; <label>:591:                                    ; preds = %186, %159
+  %592 = load i32, i32* %13, align 4
+  %593 = load i32, i32* %3, align 4
+  %594 = icmp slt i32 %592, %593
+  br label %186
+
+; <label>:595:                                    ; preds = %243, %217
+  %596 = load i32, i32* %13, align 4
+  %597 = sext i32 %596 to i64
+  %598 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %10, i64 %597) #3
+  br label %243
+
+; <label>:599:                                    ; preds = %282, %268
+  %600 = call i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector.0"* %6) #3
+  %601 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %600, i32** %601, align 8
+  %602 = call i32* @_ZNSt6vectorIiSaIiEE3endEv(%"class.std::vector.0"* %6) #3
+  %603 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %602, i32** %603, align 8
+  %604 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %605 = load i32*, i32** %604, align 8
+  %606 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %607 = load i32*, i32** %606, align 8
+  br label %282
+
+; <label>:608:                                    ; preds = %347, %333
+  store i8 0, i8* %19, align 1
+  br label %347
+
+; <label>:609:                                    ; preds = %390, %375
+  %610 = call dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"* %10, i64 0) #3
+  %611 = load i32, i32* %610, align 4
+  %612 = load i32, i32* %4, align 4
+  %613 = icmp sle i32 %611, %612
+  br label %390
+
+; <label>:614:                                    ; preds = %440, %414
+  store i8 0, i8* %19, align 1
+  br label %440
+
+; <label>:615:                                    ; preds = %487, %460
+  br label %487
+
+; <label>:616:                                    ; preds = %543, %517
+  br label %543
+}
+
+declare %"class.std::basic_ostream"* @_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo(%"class.std::basic_ios"*, %"class.std::basic_ostream"*) #1
+
+declare zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext) #1
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"*, i32* dereferenceable(4)) #1
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiEC2Ev(%"class.std::allocator.2"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator.2"*, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %2, align 8
+  %3 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %2, align 8
+  %4 = bitcast %"class.std::allocator.2"* %3 to %"class.__gnu_cxx::new_allocator.3"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiEC2Ev(%"class.__gnu_cxx::new_allocator.3"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIiSaIiEEC2EmRKS0_(%"class.std::vector.0"*, i64, %"class.std::allocator.2"* dereferenceable(1)) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = alloca %"class.std::vector.0"*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca %"class.std::allocator.2"*, align 8
+  %7 = alloca i8*
+  %8 = alloca i32
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %4, align 8
+  store i64 %1, i64* %5, align 8
+  store %"class.std::allocator.2"* %2, %"class.std::allocator.2"** %6, align 8
+  %9 = load %"class.std::vector.0"*, %"class.std::vector.0"** %4, align 8
+  %10 = bitcast %"class.std::vector.0"* %9 to %"struct.std::_Vector_base.1"*
+  %11 = load i64, i64* %5, align 8
+  %12 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %6, align 8
+  call void @_ZNSt12_Vector_baseIiSaIiEEC2EmRKS0_(%"struct.std::_Vector_base.1"* %10, i64 %11, %"class.std::allocator.2"* dereferenceable(1) %12)
+  %13 = load i64, i64* %5, align 8
+  invoke void @_ZNSt6vectorIiSaIiEE21_M_default_initializeEm(%"class.std::vector.0"* %9, i64 %13)
+          to label %14 unwind label %44
+
+; <label>:14:                                     ; preds = %3
+  %15 = load i32, i32* @x.28
+  %16 = load i32, i32* @y.29
+  %17 = sub i32 %15, 1275387034
+  %18 = sub i32 %17, 1
+  %19 = add i32 %18, 1275387034
+  %20 = sub i32 %15, 1
+  %21 = mul i32 %15, %19
+  %22 = urem i32 %21, 2
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %16, 10
+  %25 = and i1 %23, %24
+  %26 = xor i1 %23, %24
+  %27 = or i1 %25, %26
+  %28 = or i1 %23, %24
+  br i1 %27, label %29, label %96
+
+; <label>:29:                                     ; preds = %14, %96
+  %30 = load i32, i32* @x.28
+  %31 = load i32, i32* @y.29
+  %32 = sub i32 0, 1
+  %33 = add i32 %30, %32
+  %34 = sub i32 %30, 1
+  %35 = mul i32 %30, %33
+  %36 = urem i32 %35, 2
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %31, 10
+  %39 = and i1 %37, %38
+  %40 = xor i1 %37, %38
+  %41 = or i1 %39, %40
+  %42 = or i1 %37, %38
+  br i1 %41, label %43, label %96
+
+; <label>:43:                                     ; preds = %29
+  ret void
+
+; <label>:44:                                     ; preds = %3
+  %45 = load i32, i32* @x.28
+  %46 = load i32, i32* @y.29
+  %47 = add i32 %45, 621566027
+  %48 = sub i32 %47, 1
+  %49 = sub i32 %48, 621566027
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = and i1 %53, %54
+  %56 = xor i1 %53, %54
+  %57 = or i1 %55, %56
+  %58 = or i1 %53, %54
+  br i1 %57, label %59, label %97
+
+; <label>:59:                                     ; preds = %44, %97
+  %60 = landingpad { i8*, i32 }
+          cleanup
+  %61 = extractvalue { i8*, i32 } %60, 0
+  store i8* %61, i8** %7, align 8
+  %62 = extractvalue { i8*, i32 } %60, 1
+  store i32 %62, i32* %8, align 4
+  %63 = bitcast %"class.std::vector.0"* %9 to %"struct.std::_Vector_base.1"*
+  call void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"* %63) #3
+  %64 = load i32, i32* @x.28
+  %65 = load i32, i32* @y.29
+  %66 = sub i32 %64, -67022142
+  %67 = sub i32 %66, 1
+  %68 = add i32 %67, -67022142
+  %69 = sub i32 %64, 1
+  %70 = mul i32 %64, %68
+  %71 = urem i32 %70, 2
+  %72 = icmp eq i32 %71, 0
+  %73 = icmp slt i32 %65, 10
+  %74 = xor i1 %72, true
+  %75 = xor i1 %73, true
+  %76 = xor i1 true, true
+  %77 = and i1 %74, true
+  %78 = and i1 %72, %76
+  %79 = and i1 %75, true
+  %80 = and i1 %73, %76
+  %81 = or i1 %77, %78
+  %82 = or i1 %79, %80
+  %83 = xor i1 %81, %82
+  %84 = or i1 %74, %75
+  %85 = xor i1 %84, true
+  %86 = or i1 true, %76
+  %87 = and i1 %85, %86
+  %88 = or i1 %83, %87
+  %89 = or i1 %72, %73
+  br i1 %88, label %90, label %97
+
+; <label>:90:                                     ; preds = %59
+  br label %91
+
+; <label>:91:                                     ; preds = %90
+  %92 = load i8*, i8** %7, align 8
+  %93 = load i32, i32* %8, align 4
+  %94 = insertvalue { i8*, i32 } undef, i8* %92, 0
+  %95 = insertvalue { i8*, i32 } %94, i32 %93, 1
+  resume { i8*, i32 } %95
+
+; <label>:96:                                     ; preds = %29, %14
+  br label %29
+
+; <label>:97:                                     ; preds = %59, %44
+  %98 = landingpad { i8*, i32 }
+          cleanup
+  %99 = extractvalue { i8*, i32 } %98, 0
+  store i8* %99, i8** %7, align 8
+  %100 = extractvalue { i8*, i32 } %98, 1
+  store i32 %100, i32* %8, align 4
+  %101 = bitcast %"class.std::vector.0"* %9 to %"struct.std::_Vector_base.1"*
+  call void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"* %101) #3
+  br label %59
+}
+
+declare i32 @__gxx_personality_v0(...)
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiED2Ev(%"class.std::allocator.2"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator.2"*, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %2, align 8
+  %3 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %2, align 8
+  %4 = bitcast %"class.std::allocator.2"* %3 to %"class.__gnu_cxx::new_allocator.3"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiED2Ev(%"class.__gnu_cxx::new_allocator.3"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZNSt6vectorIiSaIiEEixEm(%"class.std::vector.0"*, i64) #4 comdat align 2 {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.32
+  %7 = load i32, i32* @y.33
+  %8 = add i32 %6, -1919942855
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, -1919942855
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 -1630908088, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %76
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -1630908088, label %20
+    i32 -922865063, label %40
+    i32 -35790093, label %64
+    i32 507516302, label %66
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %76
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 true, true
+  %26 = and i1 %23, true
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, true
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 true, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 -922865063, i32 507516302
+  store i32 %39, i32* %16
+  br label %76
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.std::vector.0"*, align 8
+  %42 = alloca i64, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %41, align 8
+  store i64 %1, i64* %42, align 8
+  %43 = load %"class.std::vector.0"*, %"class.std::vector.0"** %41, align 8
+  %44 = bitcast %"class.std::vector.0"* %43 to %"struct.std::_Vector_base.1"*
+  %45 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %44, i32 0, i32 0
+  %46 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %45, i32 0, i32 0
+  %47 = load i32*, i32** %46, align 8
+  %48 = load i64, i64* %42, align 8
+  %49 = getelementptr inbounds i32, i32* %47, i64 %48
+  store i32* %49, i32** %3
+  %50 = load i32, i32* @x.32
+  %51 = load i32, i32* @y.33
+  %52 = sub i32 0, 1
+  %53 = add i32 %50, %52
+  %54 = sub i32 %50, 1
+  %55 = mul i32 %50, %53
+  %56 = urem i32 %55, 2
+  %57 = icmp eq i32 %56, 0
+  %58 = icmp slt i32 %51, 10
+  %59 = and i1 %57, %58
+  %60 = xor i1 %57, %58
+  %61 = or i1 %59, %60
+  %62 = or i1 %57, %58
+  %63 = select i1 %61, i32 -35790093, i32 507516302
+  store i32 %63, i32* %16
+  br label %76
+
+; <label>:64:                                     ; preds = %17
+  %65 = load volatile i32*, i32** %3
+  ret i32* %65
+
+; <label>:66:                                     ; preds = %17
+  %67 = alloca %"class.std::vector.0"*, align 8
+  %68 = alloca i64, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %67, align 8
+  store i64 %1, i64* %68, align 8
+  %69 = load %"class.std::vector.0"*, %"class.std::vector.0"** %67, align 8
+  %70 = bitcast %"class.std::vector.0"* %69 to %"struct.std::_Vector_base.1"*
+  %71 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %70, i32 0, i32 0
+  %72 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %71, i32 0, i32 0
+  %73 = load i32*, i32** %72, align 8
+  %74 = load i64, i64* %68, align 8
+  %75 = getelementptr inbounds i32, i32* %73, i64 %74
+  store i32 -922865063, i32* %16
+  br label %76
+
+; <label>:76:                                     ; preds = %66, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEESt7greaterIiEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.std::greater", align 1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %9 = alloca %"struct.std::greater", align 1
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %12, align 8
+  %13 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %14 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 8, i1 false)
+  %15 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %16 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 8, i32 8, i1 false)
+  call void @_ZN9__gnu_cxx5__ops16__iter_comp_iterISt7greaterIiEEENS0_15_Iter_comp_iterIT_EES5_()
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  %18 = load i32*, i32** %17, align 8
+  %19 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %20 = load i32*, i32** %19, align 8
+  call void @_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %18, i32* %20)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt6vectorIiSaIiEE5beginEv(%"class.std::vector.0"*) #4 comdat align 2 {
+  %2 = alloca i32*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.36
+  %6 = load i32, i32* @y.37
+  %7 = sub i32 %5, 417724608
+  %8 = sub i32 %7, 1
+  %9 = add i32 %8, 417724608
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 1789766851, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %74
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 1789766851, label %19
+    i32 -212395432, label %39
+    i32 -1403876772, label %63
+    i32 1183115630, label %65
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %74
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 false, true
+  %25 = and i1 %22, false
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, false
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 false, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -212395432, i32 1183115630
+  store i32 %38, i32* %15
+  br label %74
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %41 = alloca %"class.std::vector.0"*, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %41, align 8
+  %42 = load %"class.std::vector.0"*, %"class.std::vector.0"** %41, align 8
+  %43 = bitcast %"class.std::vector.0"* %42 to %"struct.std::_Vector_base.1"*
+  %44 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %43, i32 0, i32 0
+  %45 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %44, i32 0, i32 0
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %40, i32** dereferenceable(8) %45) #3
+  %46 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %40, i32 0, i32 0
+  %47 = load i32*, i32** %46, align 8
+  store i32* %47, i32** %2
+  %48 = load i32, i32* @x.36
+  %49 = load i32, i32* @y.37
+  %50 = add i32 %48, -1435123104
+  %51 = sub i32 %50, 1
+  %52 = sub i32 %51, -1435123104
+  %53 = sub i32 %48, 1
+  %54 = mul i32 %48, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %49, 10
+  %58 = and i1 %56, %57
+  %59 = xor i1 %56, %57
+  %60 = or i1 %58, %59
+  %61 = or i1 %56, %57
+  %62 = select i1 %60, i32 -1403876772, i32 1183115630
+  store i32 %62, i32* %15
+  br label %74
+
+; <label>:63:                                     ; preds = %16
+  %64 = load volatile i32*, i32** %2
+  ret i32* %64
+
+; <label>:65:                                     ; preds = %16
+  %66 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %67 = alloca %"class.std::vector.0"*, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %67, align 8
+  %68 = load %"class.std::vector.0"*, %"class.std::vector.0"** %67, align 8
+  %69 = bitcast %"class.std::vector.0"* %68 to %"struct.std::_Vector_base.1"*
+  %70 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %69, i32 0, i32 0
+  %71 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %70, i32 0, i32 0
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %66, i32** dereferenceable(8) %71) #3
+  %72 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %66, i32 0, i32 0
+  %73 = load i32*, i32** %72, align 8
+  store i32 -212395432, i32* %15
+  br label %74
+
+; <label>:74:                                     ; preds = %65, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt6vectorIiSaIiEE3endEv(%"class.std::vector.0"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = alloca %"class.std::vector.0"*, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %3, align 8
+  %4 = load %"class.std::vector.0"*, %"class.std::vector.0"** %3, align 8
+  %5 = bitcast %"class.std::vector.0"* %4 to %"struct.std::_Vector_base.1"*
+  %6 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %7 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %6, i32 0, i32 1
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %2, i32** dereferenceable(8) %7) #3
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  ret i32* %9
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt4sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEEvT_S7_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %9, align 8
+  %10 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %10, align 8
+  %11 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  %12 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %11, i8* %12, i64 8, i32 8, i1 false)
+  %13 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %14 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 8, i1 false)
+  call void @_ZN9__gnu_cxx5__ops16__iter_less_iterEv()
+  %15 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  %16 = load i32*, i32** %15, align 8
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  %18 = load i32*, i32** %17, align 8
+  call void @_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %16, i32* %18)
+  ret void
+}
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272), i8*) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"*, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)*) #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%"class.std::basic_ostream"* dereferenceable(272)) #1
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIiSaIiEED2Ev(%"class.std::vector.0"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"class.std::vector.0"*, align 8
+  %3 = alloca i8*
+  %4 = alloca i32
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %2, align 8
+  %5 = load %"class.std::vector.0"*, %"class.std::vector.0"** %2, align 8
+  %6 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %7 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %6, i32 0, i32 0
+  %8 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %7, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  %10 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %11 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %10, i32 0, i32 0
+  %12 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %11, i32 0, i32 1
+  %13 = load i32*, i32** %12, align 8
+  %14 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %15 = call dereferenceable(1) %"class.std::allocator.2"* @_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base.1"* %14) #3
+  invoke void @_ZSt8_DestroyIPiiEvT_S1_RSaIT0_E(i32* %9, i32* %13, %"class.std::allocator.2"* dereferenceable(1) %15)
+          to label %16 unwind label %60
+
+; <label>:16:                                     ; preds = %1
+  %17 = load i32, i32* @x.42
+  %18 = load i32, i32* @y.43
+  %19 = sub i32 %17, 1771557292
+  %20 = sub i32 %19, 1
+  %21 = add i32 %20, 1771557292
+  %22 = sub i32 %17, 1
+  %23 = mul i32 %17, %21
+  %24 = urem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  %26 = icmp slt i32 %18, 10
+  %27 = xor i1 %25, true
+  %28 = xor i1 %26, true
+  %29 = xor i1 false, true
+  %30 = and i1 %27, false
+  %31 = and i1 %25, %29
+  %32 = and i1 %28, false
+  %33 = and i1 %26, %29
+  %34 = or i1 %30, %31
+  %35 = or i1 %32, %33
+  %36 = xor i1 %34, %35
+  %37 = or i1 %27, %28
+  %38 = xor i1 %37, true
+  %39 = or i1 false, %29
+  %40 = and i1 %38, %39
+  %41 = or i1 %36, %40
+  %42 = or i1 %25, %26
+  br i1 %41, label %43, label %109
+
+; <label>:43:                                     ; preds = %16, %109
+  %44 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  call void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"* %44) #3
+  %45 = load i32, i32* @x.42
+  %46 = load i32, i32* @y.43
+  %47 = sub i32 %45, 1740362454
+  %48 = sub i32 %47, 1
+  %49 = add i32 %48, 1740362454
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = and i1 %53, %54
+  %56 = xor i1 %53, %54
+  %57 = or i1 %55, %56
+  %58 = or i1 %53, %54
+  br i1 %57, label %59, label %109
+
+; <label>:59:                                     ; preds = %43
+  ret void
+
+; <label>:60:                                     ; preds = %1
+  %61 = landingpad { i8*, i32 }
+          catch i8* null
+  %62 = extractvalue { i8*, i32 } %61, 0
+  store i8* %62, i8** %3, align 8
+  %63 = extractvalue { i8*, i32 } %61, 1
+  store i32 %63, i32* %4, align 4
+  %64 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  call void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"* %64) #3
+  br label %65
+
+; <label>:65:                                     ; preds = %60
+  %66 = load i32, i32* @x.42
+  %67 = load i32, i32* @y.43
+  %68 = add i32 %66, 1098294380
+  %69 = sub i32 %68, 1
+  %70 = sub i32 %69, 1098294380
+  %71 = sub i32 %66, 1
+  %72 = mul i32 %66, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %67, 10
+  %76 = xor i1 %74, true
+  %77 = xor i1 %75, true
+  %78 = xor i1 false, true
+  %79 = and i1 %76, false
+  %80 = and i1 %74, %78
+  %81 = and i1 %77, false
+  %82 = and i1 %75, %78
+  %83 = or i1 %79, %80
+  %84 = or i1 %81, %82
+  %85 = xor i1 %83, %84
+  %86 = or i1 %76, %77
+  %87 = xor i1 %86, true
+  %88 = or i1 false, %78
+  %89 = and i1 %87, %88
+  %90 = or i1 %85, %89
+  %91 = or i1 %74, %75
+  br i1 %90, label %92, label %111
+
+; <label>:92:                                     ; preds = %65, %111
+  %93 = load i8*, i8** %3, align 8
+  call void @__clang_call_terminate(i8* %93) #12
+  %94 = load i32, i32* @x.42
+  %95 = load i32, i32* @y.43
+  %96 = sub i32 %94, 802964243
+  %97 = sub i32 %96, 1
+  %98 = add i32 %97, 802964243
+  %99 = sub i32 %94, 1
+  %100 = mul i32 %94, %98
+  %101 = urem i32 %100, 2
+  %102 = icmp eq i32 %101, 0
+  %103 = icmp slt i32 %95, 10
+  %104 = and i1 %102, %103
+  %105 = xor i1 %102, %103
+  %106 = or i1 %104, %105
+  %107 = or i1 %102, %103
+  br i1 %106, label %108, label %111
+
+; <label>:108:                                    ; preds = %92
+  unreachable
+
+; <label>:109:                                    ; preds = %43, %16
+  %110 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  call void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"* %110) #3
+  br label %43
+
+; <label>:111:                                    ; preds = %92, %65
+  %112 = load i8*, i8** %3, align 8
+  call void @__clang_call_terminate(i8* %112) #12
+  br label %92
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPiiEvT_S1_RSaIT0_E(i32*, i32*, %"class.std::allocator.2"* dereferenceable(1)) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca %"class.std::allocator.2"*, align 8
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store %"class.std::allocator.2"* %2, %"class.std::allocator.2"** %6, align 8
+  %7 = load i32*, i32** %4, align 8
+  %8 = load i32*, i32** %5, align 8
+  call void @_ZSt8_DestroyIPiEvT_S1_(i32* %7, i32* %8)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator.2"* @_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base.1"*) #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator.2"*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.46
+  %6 = load i32, i32* @y.47
+  %7 = sub i32 0, 1
+  %8 = add i32 %5, %7
+  %9 = sub i32 %5, 1
+  %10 = mul i32 %5, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %4
+  %13 = icmp slt i32 %6, 10
+  store i1 %13, i1* %3
+  %14 = alloca i32
+  store i32 -96970372, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %65
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -96970372, label %18
+    i32 1804834967, label %26
+    i32 -353170832, label %58
+    i32 -1177438127, label %60
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %65
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %4
+  %20 = load volatile i1, i1* %3
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 1804834967, i32 -1177438127
+  store i32 %25, i32* %14
+  br label %65
+
+; <label>:26:                                     ; preds = %15
+  %27 = alloca %"struct.std::_Vector_base.1"*, align 8
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %27, align 8
+  %28 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %27, align 8
+  %29 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %28, i32 0, i32 0
+  %30 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %29 to %"class.std::allocator.2"*
+  store %"class.std::allocator.2"* %30, %"class.std::allocator.2"** %2
+  %31 = load i32, i32* @x.46
+  %32 = load i32, i32* @y.47
+  %33 = sub i32 %31, 523073940
+  %34 = sub i32 %33, 1
+  %35 = add i32 %34, 523073940
+  %36 = sub i32 %31, 1
+  %37 = mul i32 %31, %35
+  %38 = urem i32 %37, 2
+  %39 = icmp eq i32 %38, 0
+  %40 = icmp slt i32 %32, 10
+  %41 = xor i1 %39, true
+  %42 = xor i1 %40, true
+  %43 = xor i1 true, true
+  %44 = and i1 %41, true
+  %45 = and i1 %39, %43
+  %46 = and i1 %42, true
+  %47 = and i1 %40, %43
+  %48 = or i1 %44, %45
+  %49 = or i1 %46, %47
+  %50 = xor i1 %48, %49
+  %51 = or i1 %41, %42
+  %52 = xor i1 %51, true
+  %53 = or i1 true, %43
+  %54 = and i1 %52, %53
+  %55 = or i1 %50, %54
+  %56 = or i1 %39, %40
+  %57 = select i1 %55, i32 -353170832, i32 -1177438127
+  store i32 %57, i32* %14
+  br label %65
+
+; <label>:58:                                     ; preds = %15
+  %59 = load volatile %"class.std::allocator.2"*, %"class.std::allocator.2"** %2
+  ret %"class.std::allocator.2"* %59
+
+; <label>:60:                                     ; preds = %15
+  %61 = alloca %"struct.std::_Vector_base.1"*, align 8
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %61, align 8
+  %62 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %61, align 8
+  %63 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %62, i32 0, i32 0
+  %64 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %63 to %"class.std::allocator.2"*
+  store i32 1804834967, i32* %14
+  br label %65
+
+; <label>:65:                                     ; preds = %60, %26, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEED2Ev(%"struct.std::_Vector_base.1"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.48
+  %3 = load i32, i32* @y.49
+  %4 = add i32 %2, -1276019563
+  %5 = sub i32 %4, 1
+  %6 = sub i32 %5, -1276019563
+  %7 = sub i32 %2, 1
+  %8 = mul i32 %2, %6
+  %9 = urem i32 %8, 2
+  %10 = icmp eq i32 %9, 0
+  %11 = icmp slt i32 %3, 10
+  %12 = and i1 %10, %11
+  %13 = xor i1 %10, %11
+  %14 = or i1 %12, %13
+  %15 = or i1 %10, %11
+  br i1 %14, label %16, label %90
+
+; <label>:16:                                     ; preds = %1, %90
+  %17 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %18 = alloca i8*
+  %19 = alloca i32
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %17, align 8
+  %20 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %17, align 8
+  %21 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  %22 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %21, i32 0, i32 0
+  %23 = load i32*, i32** %22, align 8
+  %24 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  %25 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %24, i32 0, i32 2
+  %26 = load i32*, i32** %25, align 8
+  %27 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  %28 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %27, i32 0, i32 0
+  %29 = load i32*, i32** %28, align 8
+  %30 = ptrtoint i32* %26 to i64
+  %31 = ptrtoint i32* %29 to i64
+  %32 = sub i64 %30, 751025666246391230
+  %33 = sub i64 %32, %31
+  %34 = add i64 %33, 751025666246391230
+  %35 = sub i64 %30, %31
+  %36 = sdiv exact i64 %34, 4
+  %37 = load i32, i32* @x.48
+  %38 = load i32, i32* @y.49
+  %39 = add i32 %37, 267507506
+  %40 = sub i32 %39, 1
+  %41 = sub i32 %40, 267507506
+  %42 = sub i32 %37, 1
+  %43 = mul i32 %37, %41
+  %44 = urem i32 %43, 2
+  %45 = icmp eq i32 %44, 0
+  %46 = icmp slt i32 %38, 10
+  %47 = and i1 %45, %46
+  %48 = xor i1 %45, %46
+  %49 = or i1 %47, %48
+  %50 = or i1 %45, %46
+  br i1 %49, label %51, label %90
+
+; <label>:51:                                     ; preds = %16
+  invoke void @_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPim(%"struct.std::_Vector_base.1"* %20, i32* %23, i64 %36)
+          to label %52 unwind label %54
+
+; <label>:52:                                     ; preds = %51
+  %53 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %53) #3
+  ret void
+
+; <label>:54:                                     ; preds = %51
+  %55 = load i32, i32* @x.48
+  %56 = load i32, i32* @y.49
+  %57 = sub i32 0, 1
+  %58 = add i32 %55, %57
+  %59 = sub i32 %55, 1
+  %60 = mul i32 %55, %58
+  %61 = urem i32 %60, 2
+  %62 = icmp eq i32 %61, 0
+  %63 = icmp slt i32 %56, 10
+  %64 = and i1 %62, %63
+  %65 = xor i1 %62, %63
+  %66 = or i1 %64, %65
+  %67 = or i1 %62, %63
+  br i1 %66, label %68, label %162
+
+; <label>:68:                                     ; preds = %54, %162
+  %69 = landingpad { i8*, i32 }
+          catch i8* null
+  %70 = extractvalue { i8*, i32 } %69, 0
+  store i8* %70, i8** %18, align 8
+  %71 = extractvalue { i8*, i32 } %69, 1
+  store i32 %71, i32* %19, align 4
+  %72 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %72) #3
+  %73 = load i32, i32* @x.48
+  %74 = load i32, i32* @y.49
+  %75 = sub i32 %73, -1488471533
+  %76 = sub i32 %75, 1
+  %77 = add i32 %76, -1488471533
+  %78 = sub i32 %73, 1
+  %79 = mul i32 %73, %77
+  %80 = urem i32 %79, 2
+  %81 = icmp eq i32 %80, 0
+  %82 = icmp slt i32 %74, 10
+  %83 = and i1 %81, %82
+  %84 = xor i1 %81, %82
+  %85 = or i1 %83, %84
+  %86 = or i1 %81, %82
+  br i1 %85, label %87, label %162
+
+; <label>:87:                                     ; preds = %68
+  br label %88
+
+; <label>:88:                                     ; preds = %87
+  %89 = load i8*, i8** %18, align 8
+  call void @__clang_call_terminate(i8* %89) #12
+  unreachable
+
+; <label>:90:                                     ; preds = %16, %1
+  %91 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %92 = alloca i8*
+  %93 = alloca i32
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %91, align 8
+  %94 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %91, align 8
+  %95 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %94, i32 0, i32 0
+  %96 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %95, i32 0, i32 0
+  %97 = load i32*, i32** %96, align 8
+  %98 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %94, i32 0, i32 0
+  %99 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %98, i32 0, i32 2
+  %100 = load i32*, i32** %99, align 8
+  %101 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %94, i32 0, i32 0
+  %102 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %101, i32 0, i32 0
+  %103 = load i32*, i32** %102, align 8
+  %104 = ptrtoint i32* %100 to i64
+  %105 = ptrtoint i32* %103 to i64
+  %106 = sub i64 0, %104
+  %107 = add i64 0, %106
+  %108 = sub i64 0, %104
+  %109 = sub i64 0, %107
+  %110 = sub i64 0, %105
+  %111 = add i64 %109, %110
+  %112 = sub i64 0, %111
+  %113 = add i64 %107, %105
+  %114 = sub i64 0, %105
+  %115 = add i64 %104, %114
+  %116 = sub i64 %104, %105
+  %117 = mul i64 %115, %105
+  %118 = sub i64 0, %105
+  %119 = add i64 %104, %118
+  %120 = sub i64 %104, %105
+  %121 = mul i64 %119, %105
+  %122 = add i64 %104, -8654088923696536741
+  %123 = sub i64 %122, %105
+  %124 = sub i64 %123, -8654088923696536741
+  %125 = sub i64 %104, %105
+  %126 = sub i64 0, -7481500817249884051
+  %127 = sub i64 %126, %124
+  %128 = add i64 %127, -7481500817249884051
+  %129 = sub i64 0, %124
+  %130 = add i64 %128, 335707371795243632
+  %131 = add i64 %130, 4
+  %132 = sub i64 %131, 335707371795243632
+  %133 = add i64 %128, 4
+  %134 = add i64 0, -6126359164259949800
+  %135 = sub i64 %134, %124
+  %136 = sub i64 %135, -6126359164259949800
+  %137 = sub i64 0, %124
+  %138 = add i64 %136, -6292027256289510072
+  %139 = add i64 %138, 4
+  %140 = sub i64 %139, -6292027256289510072
+  %141 = add i64 %136, 4
+  %142 = sub i64 0, -4723655470260018205
+  %143 = sub i64 %142, %124
+  %144 = add i64 %143, -4723655470260018205
+  %145 = sub i64 0, %124
+  %146 = add i64 %144, 8067598666379476019
+  %147 = add i64 %146, 4
+  %148 = sub i64 %147, 8067598666379476019
+  %149 = add i64 %144, 4
+  %150 = sub i64 %124, -5148887511204828411
+  %151 = sub i64 %150, 4
+  %152 = add i64 %151, -5148887511204828411
+  %153 = sub i64 %124, 4
+  %154 = mul i64 %152, 4
+  %155 = sub i64 0, %124
+  %156 = add i64 0, %155
+  %157 = sub i64 0, %124
+  %158 = sub i64 0, 4
+  %159 = sub i64 %156, %158
+  %160 = add i64 %156, 4
+  %161 = sdiv exact i64 %124, 4
+  br label %16
+
+; <label>:162:                                    ; preds = %68, %54
+  %163 = landingpad { i8*, i32 }
+          catch i8* null
+  %164 = extractvalue { i8*, i32 } %163, 0
+  store i8* %164, i8** %18, align 8
+  %165 = extractvalue { i8*, i32 } %163, 1
+  store i32 %165, i32* %19, align 4
+  %166 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %20, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %166) #3
+  br label %68
+}
+
+; Function Attrs: noinline noreturn nounwind
+define linkonce_odr hidden void @__clang_call_terminate(i8*) #6 comdat {
+  %2 = call i8* @__cxa_begin_catch(i8* %0) #3
+  call void @_ZSt9terminatev() #12
+  unreachable
+}
+
+declare i8* @__cxa_begin_catch(i8*)
+
+declare void @_ZSt9terminatev()
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPiEvT_S1_(i32*, i32*) #0 comdat {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32*, align 8
+  store i32* %0, i32** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load i32*, i32** %3, align 8
+  %6 = load i32*, i32** %4, align 8
+  call void @_ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_(i32* %5, i32* %6)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_(i32*, i32*) #4 comdat align 2 {
+  %3 = alloca i32*, align 8
+  %4 = alloca i32*, align 8
+  store i32* %0, i32** %3, align 8
+  store i32* %1, i32** %4, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPim(%"struct.std::_Vector_base.1"*, i32*, i64) #0 comdat align 2 {
+  %4 = alloca i32*
+  %5 = alloca %"struct.std::_Vector_base.1"*
+  %6 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca i64, align 8
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %6, align 8
+  store i32* %1, i32** %7, align 8
+  store i64 %2, i64* %8, align 8
+  %9 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %6, align 8
+  store %"struct.std::_Vector_base.1"* %9, %"struct.std::_Vector_base.1"** %5
+  %10 = load i32*, i32** %7, align 8
+  store i32* %10, i32** %4
+  %11 = alloca i32
+  store i32 860335314, i32* %11
+  br label %12
+
+; <label>:12:                                     ; preds = %3, %108
+  %13 = load i32, i32* %11
+  switch i32 %13, label %14 [
+    i32 860335314, label %15
+    i32 -2061193053, label %19
+    i32 1022287233, label %35
+    i32 -1994285850, label %68
+    i32 794927308, label %69
+    i32 -1855088951, label %85
+    i32 474527308, label %100
+    i32 1010102131, label %101
+    i32 555628408, label %107
+  ]
+
+; <label>:14:                                     ; preds = %12
+  br label %108
+
+; <label>:15:                                     ; preds = %12
+  %16 = load volatile i32*, i32** %4
+  %17 = icmp ne i32* %16, null
+  %18 = select i1 %17, i32 -2061193053, i32 794927308
+  store i32 %18, i32* %11
+  br label %108
+
+; <label>:19:                                     ; preds = %12
+  %20 = load i32, i32* @x.56
+  %21 = load i32, i32* @y.57
+  %22 = add i32 %20, 991349654
+  %23 = sub i32 %22, 1
+  %24 = sub i32 %23, 991349654
+  %25 = sub i32 %20, 1
+  %26 = mul i32 %20, %24
+  %27 = urem i32 %26, 2
+  %28 = icmp eq i32 %27, 0
+  %29 = icmp slt i32 %21, 10
+  %30 = and i1 %28, %29
+  %31 = xor i1 %28, %29
+  %32 = or i1 %30, %31
+  %33 = or i1 %28, %29
+  %34 = select i1 %32, i32 1022287233, i32 1010102131
+  store i32 %34, i32* %11
+  br label %108
+
+; <label>:35:                                     ; preds = %12
+  %36 = load volatile %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %5
+  %37 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %36, i32 0, i32 0
+  %38 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %37 to %"class.std::allocator.2"*
+  %39 = load i32*, i32** %7, align 8
+  %40 = load i64, i64* %8, align 8
+  call void @_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim(%"class.std::allocator.2"* dereferenceable(1) %38, i32* %39, i64 %40)
+  %41 = load i32, i32* @x.56
+  %42 = load i32, i32* @y.57
+  %43 = sub i32 %41, -24088374
+  %44 = sub i32 %43, 1
+  %45 = add i32 %44, -24088374
+  %46 = sub i32 %41, 1
+  %47 = mul i32 %41, %45
+  %48 = urem i32 %47, 2
+  %49 = icmp eq i32 %48, 0
+  %50 = icmp slt i32 %42, 10
+  %51 = xor i1 %49, true
+  %52 = xor i1 %50, true
+  %53 = xor i1 true, true
+  %54 = and i1 %51, true
+  %55 = and i1 %49, %53
+  %56 = and i1 %52, true
+  %57 = and i1 %50, %53
+  %58 = or i1 %54, %55
+  %59 = or i1 %56, %57
+  %60 = xor i1 %58, %59
+  %61 = or i1 %51, %52
+  %62 = xor i1 %61, true
+  %63 = or i1 true, %53
+  %64 = and i1 %62, %63
+  %65 = or i1 %60, %64
+  %66 = or i1 %49, %50
+  %67 = select i1 %65, i32 -1994285850, i32 1010102131
+  store i32 %67, i32* %11
+  br label %108
+
+; <label>:68:                                     ; preds = %12
+  store i32 794927308, i32* %11
+  br label %108
+
+; <label>:69:                                     ; preds = %12
+  %70 = load i32, i32* @x.56
+  %71 = load i32, i32* @y.57
+  %72 = sub i32 %70, -504647100
+  %73 = sub i32 %72, 1
+  %74 = add i32 %73, -504647100
+  %75 = sub i32 %70, 1
+  %76 = mul i32 %70, %74
+  %77 = urem i32 %76, 2
+  %78 = icmp eq i32 %77, 0
+  %79 = icmp slt i32 %71, 10
+  %80 = and i1 %78, %79
+  %81 = xor i1 %78, %79
+  %82 = or i1 %80, %81
+  %83 = or i1 %78, %79
+  %84 = select i1 %82, i32 -1855088951, i32 555628408
+  store i32 %84, i32* %11
+  br label %108
+
+; <label>:85:                                     ; preds = %12
+  %86 = load i32, i32* @x.56
+  %87 = load i32, i32* @y.57
+  %88 = sub i32 0, 1
+  %89 = add i32 %86, %88
+  %90 = sub i32 %86, 1
+  %91 = mul i32 %86, %89
+  %92 = urem i32 %91, 2
+  %93 = icmp eq i32 %92, 0
+  %94 = icmp slt i32 %87, 10
+  %95 = and i1 %93, %94
+  %96 = xor i1 %93, %94
+  %97 = or i1 %95, %96
+  %98 = or i1 %93, %94
+  %99 = select i1 %97, i32 474527308, i32 555628408
+  store i32 %99, i32* %11
+  br label %108
+
+; <label>:100:                                    ; preds = %12
+  ret void
+
+; <label>:101:                                    ; preds = %12
+  %102 = load volatile %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %5
+  %103 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %102, i32 0, i32 0
+  %104 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %103 to %"class.std::allocator.2"*
+  %105 = load i32*, i32** %7, align 8
+  %106 = load i64, i64* %8, align 8
+  call void @_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim(%"class.std::allocator.2"* dereferenceable(1) %104, i32* %105, i64 %106)
+  store i32 1022287233, i32* %11
+  br label %108
+
+; <label>:107:                                    ; preds = %12
+  store i32 -1855088951, i32* %11
+  br label %108
+
+; <label>:108:                                    ; preds = %107, %101, %85, %69, %68, %35, %19, %15, %14
+  br label %12
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.58
+  %5 = load i32, i32* @y.59
+  %6 = add i32 %4, 1397138884
+  %7 = sub i32 %6, 1
+  %8 = sub i32 %7, 1397138884
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 51752395, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %62
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 51752395, label %18
+    i32 431310362, label %26
+    i32 -918558089, label %57
+    i32 -218977677, label %58
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %62
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 431310362, i32 -218977677
+  store i32 %25, i32* %14
+  br label %62
+
+; <label>:26:                                     ; preds = %15
+  %27 = alloca %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, align 8
+  store %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %0, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %27, align 8
+  %28 = load %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %27, align 8
+  %29 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %28 to %"class.std::allocator.2"*
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %29) #3
+  %30 = load i32, i32* @x.58
+  %31 = load i32, i32* @y.59
+  %32 = sub i32 %30, 1088891121
+  %33 = sub i32 %32, 1
+  %34 = add i32 %33, 1088891121
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = xor i1 %38, true
+  %41 = xor i1 %39, true
+  %42 = xor i1 false, true
+  %43 = and i1 %40, false
+  %44 = and i1 %38, %42
+  %45 = and i1 %41, false
+  %46 = and i1 %39, %42
+  %47 = or i1 %43, %44
+  %48 = or i1 %45, %46
+  %49 = xor i1 %47, %48
+  %50 = or i1 %40, %41
+  %51 = xor i1 %50, true
+  %52 = or i1 false, %42
+  %53 = and i1 %51, %52
+  %54 = or i1 %49, %53
+  %55 = or i1 %38, %39
+  %56 = select i1 %54, i32 -918558089, i32 -218977677
+  store i32 %56, i32* %14
+  br label %62
+
+; <label>:57:                                     ; preds = %15
+  ret void
+
+; <label>:58:                                     ; preds = %15
+  %59 = alloca %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, align 8
+  store %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %0, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %59, align 8
+  %60 = load %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %59, align 8
+  %61 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %60 to %"class.std::allocator.2"*
+  call void @_ZNSaIiED2Ev(%"class.std::allocator.2"* %61) #3
+  store i32 431310362, i32* %14
+  br label %62
+
+; <label>:62:                                     ; preds = %58, %26, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIiEE10deallocateERS0_Pim(%"class.std::allocator.2"* dereferenceable(1), i32*, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::allocator.2"*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %4, align 8
+  %8 = bitcast %"class.std::allocator.2"* %7 to %"class.__gnu_cxx::new_allocator.3"*
+  %9 = load i32*, i32** %5, align 8
+  %10 = load i64, i64* %6, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim(%"class.__gnu_cxx::new_allocator.3"* %8, i32* %9, i64 %10)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim(%"class.__gnu_cxx::new_allocator.3"*, i32*, i64) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.62
+  %7 = load i32, i32* @y.63
+  %8 = add i32 %6, 256188540
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, 256188540
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 2004632183, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %69
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 2004632183, label %20
+    i32 1496201588, label %40
+    i32 841675119, label %61
+    i32 1662007305, label %62
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %69
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 1496201588, i32 1662007305
+  store i32 %39, i32* %16
+  br label %69
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  %42 = alloca i32*, align 8
+  %43 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %41, align 8
+  store i32* %1, i32** %42, align 8
+  store i64 %2, i64* %43, align 8
+  %44 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %41, align 8
+  %45 = load i32*, i32** %42, align 8
+  %46 = bitcast i32* %45 to i8*
+  call void @_ZdlPv(i8* %46) #3
+  %47 = load i32, i32* @x.62
+  %48 = load i32, i32* @y.63
+  %49 = sub i32 0, 1
+  %50 = add i32 %47, %49
+  %51 = sub i32 %47, 1
+  %52 = mul i32 %47, %50
+  %53 = urem i32 %52, 2
+  %54 = icmp eq i32 %53, 0
+  %55 = icmp slt i32 %48, 10
+  %56 = and i1 %54, %55
+  %57 = xor i1 %54, %55
+  %58 = or i1 %56, %57
+  %59 = or i1 %54, %55
+  %60 = select i1 %58, i32 841675119, i32 1662007305
+  store i32 %60, i32* %16
+  br label %69
+
+; <label>:61:                                     ; preds = %17
+  ret void
+
+; <label>:62:                                     ; preds = %17
+  %63 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  %64 = alloca i32*, align 8
+  %65 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %63, align 8
+  store i32* %1, i32** %64, align 8
+  store i64 %2, i64* %65, align 8
+  %66 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %63, align 8
+  %67 = load i32*, i32** %64, align 8
+  %68 = bitcast i32* %67 to i8*
+  call void @_ZdlPv(i8* %68) #3
+  store i32 1496201588, i32* %16
+  br label %69
+
+; <label>:69:                                     ; preds = %62, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: nobuiltin nounwind
+declare void @_ZdlPv(i8*) #7
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiED2Ev(%"class.__gnu_cxx::new_allocator.3"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEEC2Ev(%"struct.std::_Vector_base"*) unnamed_addr #0 comdat align 2 {
+  %2 = alloca %"struct.std::_Vector_base"*, align 8
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %2, align 8
+  %3 = load %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %2, align 8
+  %4 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %3, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %4)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, align 8
+  store %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %2, align 8
+  %3 = load %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %2, align 8
+  %4 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %3 to %"class.std::allocator"*
+  call void @_ZNSaIxEC2Ev(%"class.std::allocator"* %4) #3
+  %5 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %3, i32 0, i32 0
+  store i64* null, i64** %5, align 8
+  %6 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %3, i32 0, i32 1
+  store i64* null, i64** %6, align 8
+  %7 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %3, i32 0, i32 2
+  store i64* null, i64** %7, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIxEC2Ev(%"class.std::allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %2, align 8
+  %3 = load %"class.std::allocator"*, %"class.std::allocator"** %2, align 8
+  %4 = bitcast %"class.std::allocator"* %3 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIxEC2Ev(%"class.__gnu_cxx::new_allocator"* %4) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxEC2Ev(%"class.__gnu_cxx::new_allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E(i64*, i64*, %"class.std::allocator"* dereferenceable(1)) #0 comdat {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.74
+  %7 = load i32, i32* @y.75
+  %8 = sub i32 %6, -2038338711
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -2038338711
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 -1851902011, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %68
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -1851902011, label %20
+    i32 -1944816711, label %40
+    i32 1717661317, label %61
+    i32 -1839723248, label %62
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %68
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 -1944816711, i32 -1839723248
+  store i32 %39, i32* %16
+  br label %68
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca i64*, align 8
+  %42 = alloca i64*, align 8
+  %43 = alloca %"class.std::allocator"*, align 8
+  store i64* %0, i64** %41, align 8
+  store i64* %1, i64** %42, align 8
+  store %"class.std::allocator"* %2, %"class.std::allocator"** %43, align 8
+  %44 = load i64*, i64** %41, align 8
+  %45 = load i64*, i64** %42, align 8
+  call void @_ZSt8_DestroyIPxEvT_S1_(i64* %44, i64* %45)
+  %46 = load i32, i32* @x.74
+  %47 = load i32, i32* @y.75
+  %48 = sub i32 %46, 1562387781
+  %49 = sub i32 %48, 1
+  %50 = add i32 %49, 1562387781
+  %51 = sub i32 %46, 1
+  %52 = mul i32 %46, %50
+  %53 = urem i32 %52, 2
+  %54 = icmp eq i32 %53, 0
+  %55 = icmp slt i32 %47, 10
+  %56 = and i1 %54, %55
+  %57 = xor i1 %54, %55
+  %58 = or i1 %56, %57
+  %59 = or i1 %54, %55
+  %60 = select i1 %58, i32 1717661317, i32 -1839723248
+  store i32 %60, i32* %16
+  br label %68
+
+; <label>:61:                                     ; preds = %17
+  ret void
+
+; <label>:62:                                     ; preds = %17
+  %63 = alloca i64*, align 8
+  %64 = alloca i64*, align 8
+  %65 = alloca %"class.std::allocator"*, align 8
+  store i64* %0, i64** %63, align 8
+  store i64* %1, i64** %64, align 8
+  store %"class.std::allocator"* %2, %"class.std::allocator"** %65, align 8
+  %66 = load i64*, i64** %63, align 8
+  %67 = load i64*, i64** %64, align 8
+  call void @_ZSt8_DestroyIPxEvT_S1_(i64* %66, i64* %67)
+  store i32 -1944816711, i32* %16
+  br label %68
+
+; <label>:68:                                     ; preds = %62, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"*) #4 comdat align 2 {
+  %2 = alloca %"struct.std::_Vector_base"*, align 8
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %2, align 8
+  %3 = load %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %2, align 8
+  %4 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %3, i32 0, i32 0
+  %5 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %4 to %"class.std::allocator"*
+  ret %"class.std::allocator"* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"*) unnamed_addr #4 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"struct.std::_Vector_base"*, align 8
+  %3 = alloca i8*
+  %4 = alloca i32
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %2, align 8
+  %5 = load %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %2, align 8
+  %6 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %5, i32 0, i32 0
+  %7 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %6, i32 0, i32 0
+  %8 = load i64*, i64** %7, align 8
+  %9 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %5, i32 0, i32 0
+  %10 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %9, i32 0, i32 2
+  %11 = load i64*, i64** %10, align 8
+  %12 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %5, i32 0, i32 0
+  %13 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %12, i32 0, i32 0
+  %14 = load i64*, i64** %13, align 8
+  %15 = ptrtoint i64* %11 to i64
+  %16 = ptrtoint i64* %14 to i64
+  %17 = add i64 %15, -3986556992597603347
+  %18 = sub i64 %17, %16
+  %19 = sub i64 %18, -3986556992597603347
+  %20 = sub i64 %15, %16
+  %21 = sdiv exact i64 %19, 8
+  invoke void @_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm(%"struct.std::_Vector_base"* %5, i64* %8, i64 %21)
+          to label %22 unwind label %24
+
+; <label>:22:                                     ; preds = %1
+  %23 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %5, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %23) #3
+  ret void
+
+; <label>:24:                                     ; preds = %1
+  %25 = landingpad { i8*, i32 }
+          catch i8* null
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %3, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %4, align 4
+  %28 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %5, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %28) #3
+  br label %29
+
+; <label>:29:                                     ; preds = %24
+  %30 = load i8*, i8** %3, align 8
+  call void @__clang_call_terminate(i8* %30) #12
+  unreachable
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPxEvT_S1_(i64*, i64*) #0 comdat {
+  %3 = alloca i64*, align 8
+  %4 = alloca i64*, align 8
+  store i64* %0, i64** %3, align 8
+  store i64* %1, i64** %4, align 8
+  %5 = load i64*, i64** %3, align 8
+  %6 = load i64*, i64** %4, align 8
+  call void @_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_(i64* %5, i64* %6)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_(i64*, i64*) #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.82
+  %6 = load i32, i32* @y.83
+  %7 = add i32 %5, 285974601
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 285974601
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -858552476, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %73
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -858552476, label %19
+    i32 -1564500711, label %39
+    i32 -118975995, label %69
+    i32 1584870794, label %70
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %73
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 true, true
+  %25 = and i1 %22, true
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, true
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 true, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 -1564500711, i32 1584870794
+  store i32 %38, i32* %15
+  br label %73
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca i64*, align 8
+  %41 = alloca i64*, align 8
+  store i64* %0, i64** %40, align 8
+  store i64* %1, i64** %41, align 8
+  %42 = load i32, i32* @x.82
+  %43 = load i32, i32* @y.83
+  %44 = add i32 %42, -1669659178
+  %45 = sub i32 %44, 1
+  %46 = sub i32 %45, -1669659178
+  %47 = sub i32 %42, 1
+  %48 = mul i32 %42, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %43, 10
+  %52 = xor i1 %50, true
+  %53 = xor i1 %51, true
+  %54 = xor i1 true, true
+  %55 = and i1 %52, true
+  %56 = and i1 %50, %54
+  %57 = and i1 %53, true
+  %58 = and i1 %51, %54
+  %59 = or i1 %55, %56
+  %60 = or i1 %57, %58
+  %61 = xor i1 %59, %60
+  %62 = or i1 %52, %53
+  %63 = xor i1 %62, true
+  %64 = or i1 true, %54
+  %65 = and i1 %63, %64
+  %66 = or i1 %61, %65
+  %67 = or i1 %50, %51
+  %68 = select i1 %66, i32 -118975995, i32 1584870794
+  store i32 %68, i32* %15
+  br label %73
+
+; <label>:69:                                     ; preds = %16
+  ret void
+
+; <label>:70:                                     ; preds = %16
+  %71 = alloca i64*, align 8
+  %72 = alloca i64*, align 8
+  store i64* %0, i64** %71, align 8
+  store i64* %1, i64** %72, align 8
+  store i32 -1564500711, i32* %15
+  br label %73
+
+; <label>:73:                                     ; preds = %70, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm(%"struct.std::_Vector_base"*, i64*, i64) #0 comdat align 2 {
+  %4 = alloca i64*
+  %5 = alloca %"struct.std::_Vector_base"*
+  %6 = alloca %"struct.std::_Vector_base"*, align 8
+  %7 = alloca i64*, align 8
+  %8 = alloca i64, align 8
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %6, align 8
+  store i64* %1, i64** %7, align 8
+  store i64 %2, i64* %8, align 8
+  %9 = load %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %6, align 8
+  store %"struct.std::_Vector_base"* %9, %"struct.std::_Vector_base"** %5
+  %10 = load i64*, i64** %7, align 8
+  store i64* %10, i64** %4
+  %11 = alloca i32
+  store i32 1819355301, i32* %11
+  br label %12
+
+; <label>:12:                                     ; preds = %3, %70
+  %13 = load i32, i32* %11
+  switch i32 %13, label %14 [
+    i32 1819355301, label %15
+    i32 -25604004, label %19
+    i32 -538763918, label %25
+    i32 -868515418, label %41
+    i32 1063209504, label %68
+    i32 -686214291, label %69
+  ]
+
+; <label>:14:                                     ; preds = %12
+  br label %70
+
+; <label>:15:                                     ; preds = %12
+  %16 = load volatile i64*, i64** %4
+  %17 = icmp ne i64* %16, null
+  %18 = select i1 %17, i32 -25604004, i32 -538763918
+  store i32 %18, i32* %11
+  br label %70
+
+; <label>:19:                                     ; preds = %12
+  %20 = load volatile %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %5
+  %21 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %20, i32 0, i32 0
+  %22 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %21 to %"class.std::allocator"*
+  %23 = load i64*, i64** %7, align 8
+  %24 = load i64, i64* %8, align 8
+  call void @_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm(%"class.std::allocator"* dereferenceable(1) %22, i64* %23, i64 %24)
+  store i32 -538763918, i32* %11
+  br label %70
+
+; <label>:25:                                     ; preds = %12
+  %26 = load i32, i32* @x.84
+  %27 = load i32, i32* @y.85
+  %28 = add i32 %26, -1051957126
+  %29 = sub i32 %28, 1
+  %30 = sub i32 %29, -1051957126
+  %31 = sub i32 %26, 1
+  %32 = mul i32 %26, %30
+  %33 = urem i32 %32, 2
+  %34 = icmp eq i32 %33, 0
+  %35 = icmp slt i32 %27, 10
+  %36 = and i1 %34, %35
+  %37 = xor i1 %34, %35
+  %38 = or i1 %36, %37
+  %39 = or i1 %34, %35
+  %40 = select i1 %38, i32 -868515418, i32 -686214291
+  store i32 %40, i32* %11
+  br label %70
+
+; <label>:41:                                     ; preds = %12
+  %42 = load i32, i32* @x.84
+  %43 = load i32, i32* @y.85
+  %44 = sub i32 0, 1
+  %45 = add i32 %42, %44
+  %46 = sub i32 %42, 1
+  %47 = mul i32 %42, %45
+  %48 = urem i32 %47, 2
+  %49 = icmp eq i32 %48, 0
+  %50 = icmp slt i32 %43, 10
+  %51 = xor i1 %49, true
+  %52 = xor i1 %50, true
+  %53 = xor i1 false, true
+  %54 = and i1 %51, false
+  %55 = and i1 %49, %53
+  %56 = and i1 %52, false
+  %57 = and i1 %50, %53
+  %58 = or i1 %54, %55
+  %59 = or i1 %56, %57
+  %60 = xor i1 %58, %59
+  %61 = or i1 %51, %52
+  %62 = xor i1 %61, true
+  %63 = or i1 false, %53
+  %64 = and i1 %62, %63
+  %65 = or i1 %60, %64
+  %66 = or i1 %49, %50
+  %67 = select i1 %65, i32 1063209504, i32 -686214291
+  store i32 %67, i32* %11
+  br label %70
+
+; <label>:68:                                     ; preds = %12
+  ret void
+
+; <label>:69:                                     ; preds = %12
+  store i32 -868515418, i32* %11
+  br label %70
+
+; <label>:70:                                     ; preds = %69, %41, %25, %19, %15, %14
+  br label %12
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.86
+  %5 = load i32, i32* @y.87
+  %6 = sub i32 %4, 99547212
+  %7 = sub i32 %6, 1
+  %8 = add i32 %7, 99547212
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 1351154529, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %62
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 1351154529, label %18
+    i32 -1126962298, label %26
+    i32 945155401, label %57
+    i32 73573344, label %58
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %62
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = and i1 %19, %20
+  %22 = xor i1 %19, %20
+  %23 = or i1 %21, %22
+  %24 = or i1 %19, %20
+  %25 = select i1 %23, i32 -1126962298, i32 73573344
+  store i32 %25, i32* %14
+  br label %62
+
+; <label>:26:                                     ; preds = %15
+  %27 = alloca %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, align 8
+  store %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %27, align 8
+  %28 = load %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %27, align 8
+  %29 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %28 to %"class.std::allocator"*
+  call void @_ZNSaIxED2Ev(%"class.std::allocator"* %29) #3
+  %30 = load i32, i32* @x.86
+  %31 = load i32, i32* @y.87
+  %32 = sub i32 %30, -143042498
+  %33 = sub i32 %32, 1
+  %34 = add i32 %33, -143042498
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = xor i1 %38, true
+  %41 = xor i1 %39, true
+  %42 = xor i1 true, true
+  %43 = and i1 %40, true
+  %44 = and i1 %38, %42
+  %45 = and i1 %41, true
+  %46 = and i1 %39, %42
+  %47 = or i1 %43, %44
+  %48 = or i1 %45, %46
+  %49 = xor i1 %47, %48
+  %50 = or i1 %40, %41
+  %51 = xor i1 %50, true
+  %52 = or i1 true, %42
+  %53 = and i1 %51, %52
+  %54 = or i1 %49, %53
+  %55 = or i1 %38, %39
+  %56 = select i1 %54, i32 945155401, i32 73573344
+  store i32 %56, i32* %14
+  br label %62
+
+; <label>:57:                                     ; preds = %15
+  ret void
+
+; <label>:58:                                     ; preds = %15
+  %59 = alloca %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, align 8
+  store %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %59, align 8
+  %60 = load %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"*, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"** %59, align 8
+  %61 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %60 to %"class.std::allocator"*
+  call void @_ZNSaIxED2Ev(%"class.std::allocator"* %61) #3
+  store i32 -1126962298, i32* %14
+  br label %62
+
+; <label>:62:                                     ; preds = %58, %26, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm(%"class.std::allocator"* dereferenceable(1), i64*, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::allocator"*, align 8
+  %5 = alloca i64*, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %4, align 8
+  store i64* %1, i64** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::allocator"*, %"class.std::allocator"** %4, align 8
+  %8 = bitcast %"class.std::allocator"* %7 to %"class.__gnu_cxx::new_allocator"*
+  %9 = load i64*, i64** %5, align 8
+  %10 = load i64, i64* %6, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm(%"class.__gnu_cxx::new_allocator"* %8, i64* %9, i64 %10)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm(%"class.__gnu_cxx::new_allocator"*, i64*, i64) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  %5 = alloca i64*, align 8
+  %6 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  store i64* %1, i64** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %4, align 8
+  %8 = load i64*, i64** %5, align 8
+  %9 = bitcast i64* %8 to i8*
+  call void @_ZdlPv(i8* %9) #3
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIxED2Ev(%"class.std::allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.92
+  %5 = load i32, i32* @y.93
+  %6 = sub i32 0, 1
+  %7 = add i32 %4, %6
+  %8 = sub i32 %4, 1
+  %9 = mul i32 %4, %7
+  %10 = urem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  store i1 %11, i1* %3
+  %12 = icmp slt i32 %5, 10
+  store i1 %12, i1* %2
+  %13 = alloca i32
+  store i32 -1395630727, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %1, %49
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 -1395630727, label %17
+    i32 1433684079, label %25
+    i32 631141073, label %44
+    i32 1341331397, label %45
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %49
+
+; <label>:17:                                     ; preds = %14
+  %18 = load volatile i1, i1* %3
+  %19 = load volatile i1, i1* %2
+  %20 = and i1 %18, %19
+  %21 = xor i1 %18, %19
+  %22 = or i1 %20, %21
+  %23 = or i1 %18, %19
+  %24 = select i1 %22, i32 1433684079, i32 1341331397
+  store i32 %24, i32* %13
+  br label %49
+
+; <label>:25:                                     ; preds = %14
+  %26 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %26, align 8
+  %27 = load %"class.std::allocator"*, %"class.std::allocator"** %26, align 8
+  %28 = bitcast %"class.std::allocator"* %27 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"* %28) #3
+  %29 = load i32, i32* @x.92
+  %30 = load i32, i32* @y.93
+  %31 = sub i32 %29, 247082731
+  %32 = sub i32 %31, 1
+  %33 = add i32 %32, 247082731
+  %34 = sub i32 %29, 1
+  %35 = mul i32 %29, %33
+  %36 = urem i32 %35, 2
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %30, 10
+  %39 = and i1 %37, %38
+  %40 = xor i1 %37, %38
+  %41 = or i1 %39, %40
+  %42 = or i1 %37, %38
+  %43 = select i1 %41, i32 631141073, i32 1341331397
+  store i32 %43, i32* %13
+  br label %49
+
+; <label>:44:                                     ; preds = %14
+  ret void
+
+; <label>:45:                                     ; preds = %14
+  %46 = alloca %"class.std::allocator"*, align 8
+  store %"class.std::allocator"* %0, %"class.std::allocator"** %46, align 8
+  %47 = load %"class.std::allocator"*, %"class.std::allocator"** %46, align 8
+  %48 = bitcast %"class.std::allocator"* %47 to %"class.__gnu_cxx::new_allocator"*
+  call void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"* %48) #3
+  store i32 1433684079, i32* %13
+  br label %49
+
+; <label>:49:                                     ; preds = %45, %25, %17, %16
+  br label %14
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.94
+  %5 = load i32, i32* @y.95
+  %6 = add i32 %4, 810062903
+  %7 = sub i32 %6, 1
+  %8 = sub i32 %7, 810062903
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 -862272916, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %59
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -862272916, label %18
+    i32 -1623992329, label %38
+    i32 813560722, label %55
+    i32 -843496319, label %56
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %59
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 true, true
+  %24 = and i1 %21, true
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, true
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 true, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 -1623992329, i32 -843496319
+  store i32 %37, i32* %14
+  br label %59
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %39, align 8
+  %40 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %39, align 8
+  %41 = load i32, i32* @x.94
+  %42 = load i32, i32* @y.95
+  %43 = sub i32 0, 1
+  %44 = add i32 %41, %43
+  %45 = sub i32 %41, 1
+  %46 = mul i32 %41, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %42, 10
+  %50 = and i1 %48, %49
+  %51 = xor i1 %48, %49
+  %52 = or i1 %50, %51
+  %53 = or i1 %48, %49
+  %54 = select i1 %52, i32 813560722, i32 -843496319
+  store i32 %54, i32* %14
+  br label %59
+
+; <label>:55:                                     ; preds = %15
+  ret void
+
+; <label>:56:                                     ; preds = %15
+  %57 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
+  store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %57, align 8
+  %58 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %57, align 8
+  store i32 -1623992329, i32* %14
+  br label %59
+
+; <label>:59:                                     ; preds = %56, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiEC2Ev(%"class.__gnu_cxx::new_allocator.3"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEEC2EmRKS0_(%"struct.std::_Vector_base.1"*, i64, %"class.std::allocator.2"* dereferenceable(1)) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca %"class.std::allocator.2"*, align 8
+  %7 = alloca i8*
+  %8 = alloca i32
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %4, align 8
+  store i64 %1, i64* %5, align 8
+  store %"class.std::allocator.2"* %2, %"class.std::allocator.2"** %6, align 8
+  %9 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %4, align 8
+  %10 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %9, i32 0, i32 0
+  %11 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %6, align 8
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC2ERKS0_(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %10, %"class.std::allocator.2"* dereferenceable(1) %11) #3
+  %12 = load i64, i64* %5, align 8
+  invoke void @_ZNSt12_Vector_baseIiSaIiEE17_M_create_storageEm(%"struct.std::_Vector_base.1"* %9, i64 %12)
+          to label %13 unwind label %14
+
+; <label>:13:                                     ; preds = %3
+  ret void
+
+; <label>:14:                                     ; preds = %3
+  %15 = load i32, i32* @x.98
+  %16 = load i32, i32* @y.99
+  %17 = sub i32 %15, -297646375
+  %18 = sub i32 %17, 1
+  %19 = add i32 %18, -297646375
+  %20 = sub i32 %15, 1
+  %21 = mul i32 %15, %19
+  %22 = urem i32 %21, 2
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %16, 10
+  %25 = xor i1 %23, true
+  %26 = xor i1 %24, true
+  %27 = xor i1 false, true
+  %28 = and i1 %25, false
+  %29 = and i1 %23, %27
+  %30 = and i1 %26, false
+  %31 = and i1 %24, %27
+  %32 = or i1 %28, %29
+  %33 = or i1 %30, %31
+  %34 = xor i1 %32, %33
+  %35 = or i1 %25, %26
+  %36 = xor i1 %35, true
+  %37 = or i1 false, %27
+  %38 = and i1 %36, %37
+  %39 = or i1 %34, %38
+  %40 = or i1 %23, %24
+  br i1 %39, label %41, label %77
+
+; <label>:41:                                     ; preds = %14, %77
+  %42 = landingpad { i8*, i32 }
+          cleanup
+  %43 = extractvalue { i8*, i32 } %42, 0
+  store i8* %43, i8** %7, align 8
+  %44 = extractvalue { i8*, i32 } %42, 1
+  store i32 %44, i32* %8, align 4
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %10) #3
+  %45 = load i32, i32* @x.98
+  %46 = load i32, i32* @y.99
+  %47 = sub i32 %45, 979664503
+  %48 = sub i32 %47, 1
+  %49 = add i32 %48, 979664503
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 true, true
+  %58 = and i1 %55, true
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, true
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 true, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  br i1 %69, label %71, label %77
+
+; <label>:71:                                     ; preds = %41
+  br label %72
+
+; <label>:72:                                     ; preds = %71
+  %73 = load i8*, i8** %7, align 8
+  %74 = load i32, i32* %8, align 4
+  %75 = insertvalue { i8*, i32 } undef, i8* %73, 0
+  %76 = insertvalue { i8*, i32 } %75, i32 %74, 1
+  resume { i8*, i32 } %76
+
+; <label>:77:                                     ; preds = %41, %14
+  %78 = landingpad { i8*, i32 }
+          cleanup
+  %79 = extractvalue { i8*, i32 } %78, 0
+  store i8* %79, i8** %7, align 8
+  %80 = extractvalue { i8*, i32 } %78, 1
+  store i32 %80, i32* %8, align 4
+  call void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implD2Ev(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %10) #3
+  br label %41
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIiSaIiEE21_M_default_initializeEm(%"class.std::vector.0"*, i64) #0 comdat align 2 {
+  %3 = alloca %"class.std::vector.0"*, align 8
+  %4 = alloca i64, align 8
+  store %"class.std::vector.0"* %0, %"class.std::vector.0"** %3, align 8
+  store i64 %1, i64* %4, align 8
+  %5 = load %"class.std::vector.0"*, %"class.std::vector.0"** %3, align 8
+  %6 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %7 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %6, i32 0, i32 0
+  %8 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %7, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  %10 = load i64, i64* %4, align 8
+  %11 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %12 = call dereferenceable(1) %"class.std::allocator.2"* @_ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base.1"* %11) #3
+  %13 = call i32* @_ZSt27__uninitialized_default_n_aIPimiET_S1_T0_RSaIT1_E(i32* %9, i64 %10, %"class.std::allocator.2"* dereferenceable(1) %12)
+  %14 = bitcast %"class.std::vector.0"* %5 to %"struct.std::_Vector_base.1"*
+  %15 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %14, i32 0, i32 0
+  %16 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %15, i32 0, i32 1
+  store i32* %13, i32** %16, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEE12_Vector_implC2ERKS0_(%"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, %"class.std::allocator.2"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, align 8
+  %4 = alloca %"class.std::allocator.2"*, align 8
+  store %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %0, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %3, align 8
+  store %"class.std::allocator.2"* %1, %"class.std::allocator.2"** %4, align 8
+  %5 = load %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"*, %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"** %3, align 8
+  %6 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %5 to %"class.std::allocator.2"*
+  %7 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %4, align 8
+  call void @_ZNSaIiEC2ERKS_(%"class.std::allocator.2"* %6, %"class.std::allocator.2"* dereferenceable(1) %7) #3
+  %8 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %5, i32 0, i32 0
+  store i32* null, i32** %8, align 8
+  %9 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %5, i32 0, i32 1
+  store i32* null, i32** %9, align 8
+  %10 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %5, i32 0, i32 2
+  store i32* null, i32** %10, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIiSaIiEE17_M_create_storageEm(%"struct.std::_Vector_base.1"*, i64) #0 comdat align 2 {
+  %3 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %4 = alloca i64, align 8
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %3, align 8
+  store i64 %1, i64* %4, align 8
+  %5 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %3, align 8
+  %6 = load i64, i64* %4, align 8
+  %7 = call i32* @_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEm(%"struct.std::_Vector_base.1"* %5, i64 %6)
+  %8 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %9 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %8, i32 0, i32 0
+  store i32* %7, i32** %9, align 8
+  %10 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %11 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %10, i32 0, i32 0
+  %12 = load i32*, i32** %11, align 8
+  %13 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %14 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %13, i32 0, i32 1
+  store i32* %12, i32** %14, align 8
+  %15 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %16 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %15, i32 0, i32 0
+  %17 = load i32*, i32** %16, align 8
+  %18 = load i64, i64* %4, align 8
+  %19 = getelementptr inbounds i32, i32* %17, i64 %18
+  %20 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %5, i32 0, i32 0
+  %21 = getelementptr inbounds %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl", %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %20, i32 0, i32 2
+  store i32* %19, i32** %21, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIiEC2ERKS_(%"class.std::allocator.2"*, %"class.std::allocator.2"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.106
+  %6 = load i32, i32* @y.107
+  %7 = sub i32 %5, 2106267573
+  %8 = sub i32 %7, 1
+  %9 = add i32 %8, 2106267573
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 1002247995, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %56
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 1002247995, label %19
+    i32 -1016780489, label %27
+    i32 469154922, label %48
+    i32 23026540, label %49
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %56
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 -1016780489, i32 23026540
+  store i32 %26, i32* %15
+  br label %56
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca %"class.std::allocator.2"*, align 8
+  %29 = alloca %"class.std::allocator.2"*, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %28, align 8
+  store %"class.std::allocator.2"* %1, %"class.std::allocator.2"** %29, align 8
+  %30 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %28, align 8
+  %31 = bitcast %"class.std::allocator.2"* %30 to %"class.__gnu_cxx::new_allocator.3"*
+  %32 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %29, align 8
+  %33 = bitcast %"class.std::allocator.2"* %32 to %"class.__gnu_cxx::new_allocator.3"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_(%"class.__gnu_cxx::new_allocator.3"* %31, %"class.__gnu_cxx::new_allocator.3"* dereferenceable(1) %33) #3
+  %34 = load i32, i32* @x.106
+  %35 = load i32, i32* @y.107
+  %36 = sub i32 0, 1
+  %37 = add i32 %34, %36
+  %38 = sub i32 %34, 1
+  %39 = mul i32 %34, %37
+  %40 = urem i32 %39, 2
+  %41 = icmp eq i32 %40, 0
+  %42 = icmp slt i32 %35, 10
+  %43 = and i1 %41, %42
+  %44 = xor i1 %41, %42
+  %45 = or i1 %43, %44
+  %46 = or i1 %41, %42
+  %47 = select i1 %45, i32 469154922, i32 23026540
+  store i32 %47, i32* %15
+  br label %56
+
+; <label>:48:                                     ; preds = %16
+  ret void
+
+; <label>:49:                                     ; preds = %16
+  %50 = alloca %"class.std::allocator.2"*, align 8
+  %51 = alloca %"class.std::allocator.2"*, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %50, align 8
+  store %"class.std::allocator.2"* %1, %"class.std::allocator.2"** %51, align 8
+  %52 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %50, align 8
+  %53 = bitcast %"class.std::allocator.2"* %52 to %"class.__gnu_cxx::new_allocator.3"*
+  %54 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %51, align 8
+  %55 = bitcast %"class.std::allocator.2"* %54 to %"class.__gnu_cxx::new_allocator.3"*
+  call void @_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_(%"class.__gnu_cxx::new_allocator.3"* %53, %"class.__gnu_cxx::new_allocator.3"* dereferenceable(1) %55) #3
+  store i32 -1016780489, i32* %15
+  br label %56
+
+; <label>:56:                                     ; preds = %49, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIiEC2ERKS1_(%"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"* dereferenceable(1)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  %4 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %3, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %1, %"class.__gnu_cxx::new_allocator.3"** %4, align 8
+  %5 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %3, align 8
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZNSt12_Vector_baseIiSaIiEE11_M_allocateEm(%"struct.std::_Vector_base.1"*, i64) #0 comdat align 2 {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca %"struct.std::_Vector_base.1"*
+  %6 = alloca i64*
+  %7 = alloca i1
+  %8 = alloca i1
+  %9 = load i32, i32* @x.110
+  %10 = load i32, i32* @y.111
+  %11 = sub i32 %9, -518757360
+  %12 = sub i32 %11, 1
+  %13 = add i32 %12, -518757360
+  %14 = sub i32 %9, 1
+  %15 = mul i32 %9, %13
+  %16 = urem i32 %15, 2
+  %17 = icmp eq i32 %16, 0
+  store i1 %17, i1* %8
+  %18 = icmp slt i32 %10, 10
+  store i1 %18, i1* %7
+  %19 = alloca i32
+  store i32 -1184575123, i32* %19
+  %20 = alloca i32*
+  br label %21
+
+; <label>:21:                                     ; preds = %2, %119
+  %22 = load i32, i32* %19
+  switch i32 %22, label %23 [
+    i32 -1184575123, label %24
+    i32 1274604658, label %32
+    i32 -769380025, label %67
+    i32 1332139858, label %70
+    i32 1558913728, label %77
+    i32 2083968499, label %78
+    i32 -472742203, label %94
+    i32 1757782920, label %110
+    i32 -1449472488, label %112
+    i32 1726781983, label %118
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %119
+
+; <label>:24:                                     ; preds = %21
+  %25 = load volatile i1, i1* %8
+  %26 = load volatile i1, i1* %7
+  %27 = and i1 %25, %26
+  %28 = xor i1 %25, %26
+  %29 = or i1 %27, %28
+  %30 = or i1 %25, %26
+  %31 = select i1 %29, i32 1274604658, i32 -1449472488
+  store i32 %31, i32* %19
+  br label %119
+
+; <label>:32:                                     ; preds = %21
+  %33 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %34 = alloca i64, align 8
+  store i64* %34, i64** %6
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %33, align 8
+  %35 = load volatile i64*, i64** %6
+  store i64 %1, i64* %35, align 8
+  %36 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %33, align 8
+  store %"struct.std::_Vector_base.1"* %36, %"struct.std::_Vector_base.1"** %5
+  %37 = load volatile i64*, i64** %6
+  %38 = load i64, i64* %37, align 8
+  %39 = icmp ne i64 %38, 0
+  store i1 %39, i1* %4
+  %40 = load i32, i32* @x.110
+  %41 = load i32, i32* @y.111
+  %42 = add i32 %40, 1066108299
+  %43 = sub i32 %42, 1
+  %44 = sub i32 %43, 1066108299
+  %45 = sub i32 %40, 1
+  %46 = mul i32 %40, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %41, 10
+  %50 = xor i1 %48, true
+  %51 = xor i1 %49, true
+  %52 = xor i1 true, true
+  %53 = and i1 %50, true
+  %54 = and i1 %48, %52
+  %55 = and i1 %51, true
+  %56 = and i1 %49, %52
+  %57 = or i1 %53, %54
+  %58 = or i1 %55, %56
+  %59 = xor i1 %57, %58
+  %60 = or i1 %50, %51
+  %61 = xor i1 %60, true
+  %62 = or i1 true, %52
+  %63 = and i1 %61, %62
+  %64 = or i1 %59, %63
+  %65 = or i1 %48, %49
+  %66 = select i1 %64, i32 -769380025, i32 -1449472488
+  store i32 %66, i32* %19
+  br label %119
+
+; <label>:67:                                     ; preds = %21
+  %68 = load volatile i1, i1* %4
+  %69 = select i1 %68, i32 1332139858, i32 1558913728
+  store i32 %69, i32* %19
+  br label %119
+
+; <label>:70:                                     ; preds = %21
+  %71 = load volatile %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %5
+  %72 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %71, i32 0, i32 0
+  %73 = bitcast %"struct.std::_Vector_base<int, std::allocator<int> >::_Vector_impl"* %72 to %"class.std::allocator.2"*
+  %74 = load volatile i64*, i64** %6
+  %75 = load i64, i64* %74, align 8
+  %76 = call i32* @_ZNSt16allocator_traitsISaIiEE8allocateERS0_m(%"class.std::allocator.2"* dereferenceable(1) %73, i64 %75)
+  store i32 2083968499, i32* %19
+  store i32* %76, i32** %20
+  br label %119
+
+; <label>:77:                                     ; preds = %21
+  store i32 2083968499, i32* %19
+  store i32* null, i32** %20
+  br label %119
+
+; <label>:78:                                     ; preds = %21
+  %79 = load i32*, i32** %20
+  store i32* %79, i32** %3
+  %80 = load i32, i32* @x.110
+  %81 = load i32, i32* @y.111
+  %82 = sub i32 0, 1
+  %83 = add i32 %80, %82
+  %84 = sub i32 %80, 1
+  %85 = mul i32 %80, %83
+  %86 = urem i32 %85, 2
+  %87 = icmp eq i32 %86, 0
+  %88 = icmp slt i32 %81, 10
+  %89 = and i1 %87, %88
+  %90 = xor i1 %87, %88
+  %91 = or i1 %89, %90
+  %92 = or i1 %87, %88
+  %93 = select i1 %91, i32 -472742203, i32 1726781983
+  store i32 %93, i32* %19
+  br label %119
+
+; <label>:94:                                     ; preds = %21
+  %95 = load i32, i32* @x.110
+  %96 = load i32, i32* @y.111
+  %97 = add i32 %95, -1707992058
+  %98 = sub i32 %97, 1
+  %99 = sub i32 %98, -1707992058
+  %100 = sub i32 %95, 1
+  %101 = mul i32 %95, %99
+  %102 = urem i32 %101, 2
+  %103 = icmp eq i32 %102, 0
+  %104 = icmp slt i32 %96, 10
+  %105 = and i1 %103, %104
+  %106 = xor i1 %103, %104
+  %107 = or i1 %105, %106
+  %108 = or i1 %103, %104
+  %109 = select i1 %107, i32 1757782920, i32 1726781983
+  store i32 %109, i32* %19
+  br label %119
+
+; <label>:110:                                    ; preds = %21
+  %111 = load volatile i32*, i32** %3
+  ret i32* %111
+
+; <label>:112:                                    ; preds = %21
+  %113 = alloca %"struct.std::_Vector_base.1"*, align 8
+  %114 = alloca i64, align 8
+  store %"struct.std::_Vector_base.1"* %0, %"struct.std::_Vector_base.1"** %113, align 8
+  store i64 %1, i64* %114, align 8
+  %115 = load %"struct.std::_Vector_base.1"*, %"struct.std::_Vector_base.1"** %113, align 8
+  %116 = load i64, i64* %114, align 8
+  %117 = icmp ne i64 %116, 0
+  store i32 1274604658, i32* %19
+  br label %119
+
+; <label>:118:                                    ; preds = %21
+  store i32 -472742203, i32* %19
+  br label %119
+
+; <label>:119:                                    ; preds = %118, %112, %94, %78, %77, %70, %67, %32, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZNSt16allocator_traitsISaIiEE8allocateERS0_m(%"class.std::allocator.2"* dereferenceable(1), i64) #0 comdat align 2 {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.112
+  %7 = load i32, i32* @y.113
+  %8 = sub i32 %6, -1667561214
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -1667561214
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 898745463, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %59
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 898745463, label %20
+    i32 -1875984814, label %28
+    i32 246413925, label %50
+    i32 -1569971707, label %52
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %59
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 -1875984814, i32 -1569971707
+  store i32 %27, i32* %16
+  br label %59
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca %"class.std::allocator.2"*, align 8
+  %30 = alloca i64, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %29, align 8
+  store i64 %1, i64* %30, align 8
+  %31 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %29, align 8
+  %32 = bitcast %"class.std::allocator.2"* %31 to %"class.__gnu_cxx::new_allocator.3"*
+  %33 = load i64, i64* %30, align 8
+  %34 = call i32* @_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.3"* %32, i64 %33, i8* null)
+  store i32* %34, i32** %3
+  %35 = load i32, i32* @x.112
+  %36 = load i32, i32* @y.113
+  %37 = sub i32 %35, -1052841696
+  %38 = sub i32 %37, 1
+  %39 = add i32 %38, -1052841696
+  %40 = sub i32 %35, 1
+  %41 = mul i32 %35, %39
+  %42 = urem i32 %41, 2
+  %43 = icmp eq i32 %42, 0
+  %44 = icmp slt i32 %36, 10
+  %45 = and i1 %43, %44
+  %46 = xor i1 %43, %44
+  %47 = or i1 %45, %46
+  %48 = or i1 %43, %44
+  %49 = select i1 %47, i32 246413925, i32 -1569971707
+  store i32 %49, i32* %16
+  br label %59
+
+; <label>:50:                                     ; preds = %17
+  %51 = load volatile i32*, i32** %3
+  ret i32* %51
+
+; <label>:52:                                     ; preds = %17
+  %53 = alloca %"class.std::allocator.2"*, align 8
+  %54 = alloca i64, align 8
+  store %"class.std::allocator.2"* %0, %"class.std::allocator.2"** %53, align 8
+  store i64 %1, i64* %54, align 8
+  %55 = load %"class.std::allocator.2"*, %"class.std::allocator.2"** %53, align 8
+  %56 = bitcast %"class.std::allocator.2"* %55 to %"class.__gnu_cxx::new_allocator.3"*
+  %57 = load i64, i64* %54, align 8
+  %58 = call i32* @_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.3"* %56, i64 %57, i8* null)
+  store i32 -1875984814, i32* %16
+  br label %59
+
+; <label>:59:                                     ; preds = %52, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.3"*, i64, i8*) #0 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i64*
+  %6 = alloca i1
+  %7 = alloca i1
+  %8 = load i32, i32* @x.114
+  %9 = load i32, i32* @y.115
+  %10 = add i32 %8, -1690401567
+  %11 = sub i32 %10, 1
+  %12 = sub i32 %11, -1690401567
+  %13 = sub i32 %8, 1
+  %14 = mul i32 %8, %12
+  %15 = urem i32 %14, 2
+  %16 = icmp eq i32 %15, 0
+  store i1 %16, i1* %7
+  %17 = icmp slt i32 %9, 10
+  store i1 %17, i1* %6
+  %18 = alloca i32
+  store i32 1109975927, i32* %18
+  br label %19
+
+; <label>:19:                                     ; preds = %3, %84
+  %20 = load i32, i32* %18
+  switch i32 %20, label %21 [
+    i32 1109975927, label %22
+    i32 -523780593, label %42
+    i32 -1914395454, label %66
+    i32 197831925, label %69
+    i32 577037052, label %70
+    i32 384547065, label %76
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %84
+
+; <label>:22:                                     ; preds = %19
+  %23 = load volatile i1, i1* %7
+  %24 = load volatile i1, i1* %6
+  %25 = xor i1 %23, true
+  %26 = xor i1 %24, true
+  %27 = xor i1 false, true
+  %28 = and i1 %25, false
+  %29 = and i1 %23, %27
+  %30 = and i1 %26, false
+  %31 = and i1 %24, %27
+  %32 = or i1 %28, %29
+  %33 = or i1 %30, %31
+  %34 = xor i1 %32, %33
+  %35 = or i1 %25, %26
+  %36 = xor i1 %35, true
+  %37 = or i1 false, %27
+  %38 = and i1 %36, %37
+  %39 = or i1 %34, %38
+  %40 = or i1 %23, %24
+  %41 = select i1 %39, i32 -523780593, i32 384547065
+  store i32 %41, i32* %18
+  br label %84
+
+; <label>:42:                                     ; preds = %19
+  %43 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  %44 = alloca i64, align 8
+  store i64* %44, i64** %5
+  %45 = alloca i8*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %43, align 8
+  %46 = load volatile i64*, i64** %5
+  store i64 %1, i64* %46, align 8
+  store i8* %2, i8** %45, align 8
+  %47 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %43, align 8
+  %48 = load volatile i64*, i64** %5
+  %49 = load i64, i64* %48, align 8
+  %50 = call i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator.3"* %47) #3
+  %51 = icmp ugt i64 %49, %50
+  store i1 %51, i1* %4
+  %52 = load i32, i32* @x.114
+  %53 = load i32, i32* @y.115
+  %54 = sub i32 0, 1
+  %55 = add i32 %52, %54
+  %56 = sub i32 %52, 1
+  %57 = mul i32 %52, %55
+  %58 = urem i32 %57, 2
+  %59 = icmp eq i32 %58, 0
+  %60 = icmp slt i32 %53, 10
+  %61 = and i1 %59, %60
+  %62 = xor i1 %59, %60
+  %63 = or i1 %61, %62
+  %64 = or i1 %59, %60
+  %65 = select i1 %63, i32 -1914395454, i32 384547065
+  store i32 %65, i32* %18
+  br label %84
+
+; <label>:66:                                     ; preds = %19
+  %67 = load volatile i1, i1* %4
+  %68 = select i1 %67, i32 197831925, i32 577037052
+  store i32 %68, i32* %18
+  br label %84
+
+; <label>:69:                                     ; preds = %19
+  call void @_ZSt17__throw_bad_allocv() #13
+  unreachable
+
+; <label>:70:                                     ; preds = %19
+  %71 = load volatile i64*, i64** %5
+  %72 = load i64, i64* %71, align 8
+  %73 = mul i64 %72, 4
+  %74 = call i8* @_Znwm(i64 %73)
+  %75 = bitcast i8* %74 to i32*
+  ret i32* %75
+
+; <label>:76:                                     ; preds = %19
+  %77 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  %78 = alloca i64, align 8
+  %79 = alloca i8*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %77, align 8
+  store i64 %1, i64* %78, align 8
+  store i8* %2, i8** %79, align 8
+  %80 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %77, align 8
+  %81 = load i64, i64* %78, align 8
+  %82 = call i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator.3"* %80) #3
+  %83 = icmp ugt i64 %81, %82
+  store i32 -523780593, i32* %18
+  br label %84
+
+; <label>:84:                                     ; preds = %76, %66, %42, %22, %21
+  br label %19
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNK9__gnu_cxx13new_allocatorIiE8max_sizeEv(%"class.__gnu_cxx::new_allocator.3"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.3"*, align 8
+  store %"class.__gnu_cxx::new_allocator.3"* %0, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.3"*, %"class.__gnu_cxx::new_allocator.3"** %2, align 8
+  ret i64 4611686018427387903
+}
+
+; Function Attrs: noreturn
+declare void @_ZSt17__throw_bad_allocv() #8
+
+; Function Attrs: nobuiltin
+declare noalias i8* @_Znwm(i64) #9
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt27__uninitialized_default_n_aIPimiET_S1_T0_RSaIT1_E(i32*, i64, %"class.std::allocator.2"* dereferenceable(1)) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca %"class.std::allocator.2"*, align 8
+  store i32* %0, i32** %4, align 8
+  store i64 %1, i64* %5, align 8
+  store %"class.std::allocator.2"* %2, %"class.std::allocator.2"** %6, align 8
+  %7 = load i32*, i32** %4, align 8
+  %8 = load i64, i64* %5, align 8
+  %9 = call i32* @_ZSt25__uninitialized_default_nIPimET_S1_T0_(i32* %7, i64 %8)
+  ret i32* %9
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt25__uninitialized_default_nIPimET_S1_T0_(i32*, i64) #0 comdat {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.120
+  %7 = load i32, i32* @y.121
+  %8 = sub i32 %6, -563304293
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -563304293
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 2097604604, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %83
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 2097604604, label %20
+    i32 1133722032, label %40
+    i32 1622414053, label %74
+    i32 1870182174, label %76
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %83
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 1133722032, i32 1870182174
+  store i32 %39, i32* %16
+  br label %83
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca i32*, align 8
+  %42 = alloca i64, align 8
+  %43 = alloca i8, align 1
+  store i32* %0, i32** %41, align 8
+  store i64 %1, i64* %42, align 8
+  store i8 1, i8* %43, align 1
+  %44 = load i32*, i32** %41, align 8
+  %45 = load i64, i64* %42, align 8
+  %46 = call i32* @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_(i32* %44, i64 %45)
+  store i32* %46, i32** %3
+  %47 = load i32, i32* @x.120
+  %48 = load i32, i32* @y.121
+  %49 = sub i32 %47, -650479969
+  %50 = sub i32 %49, 1
+  %51 = add i32 %50, -650479969
+  %52 = sub i32 %47, 1
+  %53 = mul i32 %47, %51
+  %54 = urem i32 %53, 2
+  %55 = icmp eq i32 %54, 0
+  %56 = icmp slt i32 %48, 10
+  %57 = xor i1 %55, true
+  %58 = xor i1 %56, true
+  %59 = xor i1 true, true
+  %60 = and i1 %57, true
+  %61 = and i1 %55, %59
+  %62 = and i1 %58, true
+  %63 = and i1 %56, %59
+  %64 = or i1 %60, %61
+  %65 = or i1 %62, %63
+  %66 = xor i1 %64, %65
+  %67 = or i1 %57, %58
+  %68 = xor i1 %67, true
+  %69 = or i1 true, %59
+  %70 = and i1 %68, %69
+  %71 = or i1 %66, %70
+  %72 = or i1 %55, %56
+  %73 = select i1 %71, i32 1622414053, i32 1870182174
+  store i32 %73, i32* %16
+  br label %83
+
+; <label>:74:                                     ; preds = %17
+  %75 = load volatile i32*, i32** %3
+  ret i32* %75
+
+; <label>:76:                                     ; preds = %17
+  %77 = alloca i32*, align 8
+  %78 = alloca i64, align 8
+  %79 = alloca i8, align 1
+  store i32* %0, i32** %77, align 8
+  store i64 %1, i64* %78, align 8
+  store i8 1, i8* %79, align 1
+  %80 = load i32*, i32** %77, align 8
+  %81 = load i64, i64* %78, align 8
+  %82 = call i32* @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_(i32* %80, i64 %81)
+  store i32 1133722032, i32* %16
+  br label %83
+
+; <label>:83:                                     ; preds = %76, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPimEET_S3_T0_(i32*, i64) #0 comdat align 2 {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.122
+  %7 = load i32, i32* @y.123
+  %8 = sub i32 0, 1
+  %9 = add i32 %6, %8
+  %10 = sub i32 %6, 1
+  %11 = mul i32 %6, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %5
+  %14 = icmp slt i32 %7, 10
+  store i1 %14, i1* %4
+  %15 = alloca i32
+  store i32 -1041326553, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %69
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -1041326553, label %19
+    i32 1825176093, label %27
+    i32 1340951982, label %60
+    i32 881765090, label %62
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %69
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %5
+  %21 = load volatile i1, i1* %4
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 1825176093, i32 881765090
+  store i32 %26, i32* %15
+  br label %69
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca i32*, align 8
+  %29 = alloca i64, align 8
+  %30 = alloca i32, align 4
+  store i32* %0, i32** %28, align 8
+  store i64 %1, i64* %29, align 8
+  %31 = load i32*, i32** %28, align 8
+  %32 = load i64, i64* %29, align 8
+  store i32 0, i32* %30, align 4
+  %33 = call i32* @_ZSt6fill_nIPimiET_S1_T0_RKT1_(i32* %31, i64 %32, i32* dereferenceable(4) %30)
+  store i32* %33, i32** %3
+  %34 = load i32, i32* @x.122
+  %35 = load i32, i32* @y.123
+  %36 = sub i32 0, 1
+  %37 = add i32 %34, %36
+  %38 = sub i32 %34, 1
+  %39 = mul i32 %34, %37
+  %40 = urem i32 %39, 2
+  %41 = icmp eq i32 %40, 0
+  %42 = icmp slt i32 %35, 10
+  %43 = xor i1 %41, true
+  %44 = xor i1 %42, true
+  %45 = xor i1 true, true
+  %46 = and i1 %43, true
+  %47 = and i1 %41, %45
+  %48 = and i1 %44, true
+  %49 = and i1 %42, %45
+  %50 = or i1 %46, %47
+  %51 = or i1 %48, %49
+  %52 = xor i1 %50, %51
+  %53 = or i1 %43, %44
+  %54 = xor i1 %53, true
+  %55 = or i1 true, %45
+  %56 = and i1 %54, %55
+  %57 = or i1 %52, %56
+  %58 = or i1 %41, %42
+  %59 = select i1 %57, i32 1340951982, i32 881765090
+  store i32 %59, i32* %15
+  br label %69
+
+; <label>:60:                                     ; preds = %16
+  %61 = load volatile i32*, i32** %3
+  ret i32* %61
+
+; <label>:62:                                     ; preds = %16
+  %63 = alloca i32*, align 8
+  %64 = alloca i64, align 8
+  %65 = alloca i32, align 4
+  store i32* %0, i32** %63, align 8
+  store i64 %1, i64* %64, align 8
+  %66 = load i32*, i32** %63, align 8
+  %67 = load i64, i64* %64, align 8
+  store i32 0, i32* %65, align 4
+  %68 = call i32* @_ZSt6fill_nIPimiET_S1_T0_RKT1_(i32* %66, i64 %67, i32* dereferenceable(4) %65)
+  store i32 1825176093, i32* %15
+  br label %69
+
+; <label>:69:                                     ; preds = %62, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt6fill_nIPimiET_S1_T0_RKT1_(i32*, i64, i32* dereferenceable(4)) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i32*, align 8
+  store i32* %0, i32** %4, align 8
+  store i64 %1, i64* %5, align 8
+  store i32* %2, i32** %6, align 8
+  %7 = load i32*, i32** %4, align 8
+  %8 = call i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32* %7)
+  %9 = load i64, i64* %5, align 8
+  %10 = load i32*, i32** %6, align 8
+  %11 = call i32* @_ZSt10__fill_n_aIPimiEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_(i32* %8, i64 %9, i32* dereferenceable(4) %10)
+  ret i32* %11
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZSt10__fill_n_aIPimiEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_(i32*, i64, i32* dereferenceable(4)) #4 comdat {
+  %4 = alloca i32*
+  %5 = alloca i64*
+  %6 = alloca i32*
+  %7 = alloca i32**
+  %8 = alloca i1
+  %9 = alloca i1
+  %10 = load i32, i32* @x.126
+  %11 = load i32, i32* @y.127
+  %12 = add i32 %10, 2001064874
+  %13 = sub i32 %12, 1
+  %14 = sub i32 %13, 2001064874
+  %15 = sub i32 %10, 1
+  %16 = mul i32 %10, %14
+  %17 = urem i32 %16, 2
+  %18 = icmp eq i32 %17, 0
+  store i1 %18, i1* %9
+  %19 = icmp slt i32 %11, 10
+  store i1 %19, i1* %8
+  %20 = alloca i32
+  store i32 -1354208919, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %3, %260
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 -1354208919, label %24
+    i32 -1503551184, label %32
+    i32 817243538, label %71
+    i32 -974706300, label %72
+    i32 792669865, label %77
+    i32 -173578478, label %104
+    i32 1613008025, label %124
+    i32 -653998932, label %125
+    i32 1193471406, label %141
+    i32 -1021734057, label %169
+    i32 177967660, label %170
+    i32 1580016679, label %198
+    i32 -2004999339, label %215
+    i32 -1334728666, label %217
+    i32 -50919066, label %226
+    i32 -582246769, label %231
+    i32 -55891026, label %257
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %260
+
+; <label>:24:                                     ; preds = %21
+  %25 = load volatile i1, i1* %9
+  %26 = load volatile i1, i1* %8
+  %27 = and i1 %25, %26
+  %28 = xor i1 %25, %26
+  %29 = or i1 %27, %28
+  %30 = or i1 %25, %26
+  %31 = select i1 %29, i32 -1503551184, i32 -1334728666
+  store i32 %31, i32* %20
+  br label %260
+
+; <label>:32:                                     ; preds = %21
+  %33 = alloca i32*, align 8
+  store i32** %33, i32*** %7
+  %34 = alloca i64, align 8
+  %35 = alloca i32*, align 8
+  %36 = alloca i32, align 4
+  store i32* %36, i32** %6
+  %37 = alloca i64, align 8
+  store i64* %37, i64** %5
+  %38 = load volatile i32**, i32*** %7
+  store i32* %0, i32** %38, align 8
+  store i64 %1, i64* %34, align 8
+  store i32* %2, i32** %35, align 8
+  %39 = load i32*, i32** %35, align 8
+  %40 = load i32, i32* %39, align 4
+  %41 = load volatile i32*, i32** %6
+  store i32 %40, i32* %41, align 4
+  %42 = load i64, i64* %34, align 8
+  %43 = load volatile i64*, i64** %5
+  store i64 %42, i64* %43, align 8
+  %44 = load i32, i32* @x.126
+  %45 = load i32, i32* @y.127
+  %46 = add i32 %44, -1322987890
+  %47 = sub i32 %46, 1
+  %48 = sub i32 %47, -1322987890
+  %49 = sub i32 %44, 1
+  %50 = mul i32 %44, %48
+  %51 = urem i32 %50, 2
+  %52 = icmp eq i32 %51, 0
+  %53 = icmp slt i32 %45, 10
+  %54 = xor i1 %52, true
+  %55 = xor i1 %53, true
+  %56 = xor i1 false, true
+  %57 = and i1 %54, false
+  %58 = and i1 %52, %56
+  %59 = and i1 %55, false
+  %60 = and i1 %53, %56
+  %61 = or i1 %57, %58
+  %62 = or i1 %59, %60
+  %63 = xor i1 %61, %62
+  %64 = or i1 %54, %55
+  %65 = xor i1 %64, true
+  %66 = or i1 false, %56
+  %67 = and i1 %65, %66
+  %68 = or i1 %63, %67
+  %69 = or i1 %52, %53
+  %70 = select i1 %68, i32 817243538, i32 -1334728666
+  store i32 %70, i32* %20
+  br label %260
+
+; <label>:71:                                     ; preds = %21
+  store i32 -974706300, i32* %20
+  br label %260
+
+; <label>:72:                                     ; preds = %21
+  %73 = load volatile i64*, i64** %5
+  %74 = load i64, i64* %73, align 8
+  %75 = icmp ugt i64 %74, 0
+  %76 = select i1 %75, i32 792669865, i32 177967660
+  store i32 %76, i32* %20
+  br label %260
+
+; <label>:77:                                     ; preds = %21
+  %78 = load i32, i32* @x.126
+  %79 = load i32, i32* @y.127
+  %80 = sub i32 0, 1
+  %81 = add i32 %78, %80
+  %82 = sub i32 %78, 1
+  %83 = mul i32 %78, %81
+  %84 = urem i32 %83, 2
+  %85 = icmp eq i32 %84, 0
+  %86 = icmp slt i32 %79, 10
+  %87 = xor i1 %85, true
+  %88 = xor i1 %86, true
+  %89 = xor i1 false, true
+  %90 = and i1 %87, false
+  %91 = and i1 %85, %89
+  %92 = and i1 %88, false
+  %93 = and i1 %86, %89
+  %94 = or i1 %90, %91
+  %95 = or i1 %92, %93
+  %96 = xor i1 %94, %95
+  %97 = or i1 %87, %88
+  %98 = xor i1 %97, true
+  %99 = or i1 false, %89
+  %100 = and i1 %98, %99
+  %101 = or i1 %96, %100
+  %102 = or i1 %85, %86
+  %103 = select i1 %101, i32 -173578478, i32 -50919066
+  store i32 %103, i32* %20
+  br label %260
+
+; <label>:104:                                    ; preds = %21
+  %105 = load volatile i32*, i32** %6
+  %106 = load i32, i32* %105, align 4
+  %107 = load volatile i32**, i32*** %7
+  %108 = load i32*, i32** %107, align 8
+  store i32 %106, i32* %108, align 4
+  %109 = load i32, i32* @x.126
+  %110 = load i32, i32* @y.127
+  %111 = sub i32 %109, 1747187564
+  %112 = sub i32 %111, 1
+  %113 = add i32 %112, 1747187564
+  %114 = sub i32 %109, 1
+  %115 = mul i32 %109, %113
+  %116 = urem i32 %115, 2
+  %117 = icmp eq i32 %116, 0
+  %118 = icmp slt i32 %110, 10
+  %119 = and i1 %117, %118
+  %120 = xor i1 %117, %118
+  %121 = or i1 %119, %120
+  %122 = or i1 %117, %118
+  %123 = select i1 %121, i32 1613008025, i32 -50919066
+  store i32 %123, i32* %20
+  br label %260
+
+; <label>:124:                                    ; preds = %21
+  store i32 -653998932, i32* %20
+  br label %260
+
+; <label>:125:                                    ; preds = %21
+  %126 = load i32, i32* @x.126
+  %127 = load i32, i32* @y.127
+  %128 = add i32 %126, -1228278800
+  %129 = sub i32 %128, 1
+  %130 = sub i32 %129, -1228278800
+  %131 = sub i32 %126, 1
+  %132 = mul i32 %126, %130
+  %133 = urem i32 %132, 2
+  %134 = icmp eq i32 %133, 0
+  %135 = icmp slt i32 %127, 10
+  %136 = and i1 %134, %135
+  %137 = xor i1 %134, %135
+  %138 = or i1 %136, %137
+  %139 = or i1 %134, %135
+  %140 = select i1 %138, i32 1193471406, i32 -582246769
+  store i32 %140, i32* %20
+  br label %260
+
+; <label>:141:                                    ; preds = %21
+  %142 = load volatile i64*, i64** %5
+  %143 = load i64, i64* %142, align 8
+  %144 = sub i64 0, %143
+  %145 = sub i64 0, -1
+  %146 = add i64 %144, %145
+  %147 = sub i64 0, %146
+  %148 = add i64 %143, -1
+  %149 = load volatile i64*, i64** %5
+  store i64 %147, i64* %149, align 8
+  %150 = load volatile i32**, i32*** %7
+  %151 = load i32*, i32** %150, align 8
+  %152 = getelementptr inbounds i32, i32* %151, i32 1
+  %153 = load volatile i32**, i32*** %7
+  store i32* %152, i32** %153, align 8
+  %154 = load i32, i32* @x.126
+  %155 = load i32, i32* @y.127
+  %156 = add i32 %154, 712642376
+  %157 = sub i32 %156, 1
+  %158 = sub i32 %157, 712642376
+  %159 = sub i32 %154, 1
+  %160 = mul i32 %154, %158
+  %161 = urem i32 %160, 2
+  %162 = icmp eq i32 %161, 0
+  %163 = icmp slt i32 %155, 10
+  %164 = and i1 %162, %163
+  %165 = xor i1 %162, %163
+  %166 = or i1 %164, %165
+  %167 = or i1 %162, %163
+  %168 = select i1 %166, i32 -1021734057, i32 -582246769
+  store i32 %168, i32* %20
+  br label %260
+
+; <label>:169:                                    ; preds = %21
+  store i32 -974706300, i32* %20
+  br label %260
+
+; <label>:170:                                    ; preds = %21
+  %171 = load i32, i32* @x.126
+  %172 = load i32, i32* @y.127
+  %173 = sub i32 %171, -107853024
+  %174 = sub i32 %173, 1
+  %175 = add i32 %174, -107853024
+  %176 = sub i32 %171, 1
+  %177 = mul i32 %171, %175
+  %178 = urem i32 %177, 2
+  %179 = icmp eq i32 %178, 0
+  %180 = icmp slt i32 %172, 10
+  %181 = xor i1 %179, true
+  %182 = xor i1 %180, true
+  %183 = xor i1 true, true
+  %184 = and i1 %181, true
+  %185 = and i1 %179, %183
+  %186 = and i1 %182, true
+  %187 = and i1 %180, %183
+  %188 = or i1 %184, %185
+  %189 = or i1 %186, %187
+  %190 = xor i1 %188, %189
+  %191 = or i1 %181, %182
+  %192 = xor i1 %191, true
+  %193 = or i1 true, %183
+  %194 = and i1 %192, %193
+  %195 = or i1 %190, %194
+  %196 = or i1 %179, %180
+  %197 = select i1 %195, i32 1580016679, i32 -55891026
+  store i32 %197, i32* %20
+  br label %260
+
+; <label>:198:                                    ; preds = %21
+  %199 = load volatile i32**, i32*** %7
+  %200 = load i32*, i32** %199, align 8
+  store i32* %200, i32** %4
+  %201 = load i32, i32* @x.126
+  %202 = load i32, i32* @y.127
+  %203 = sub i32 0, 1
+  %204 = add i32 %201, %203
+  %205 = sub i32 %201, 1
+  %206 = mul i32 %201, %204
+  %207 = urem i32 %206, 2
+  %208 = icmp eq i32 %207, 0
+  %209 = icmp slt i32 %202, 10
+  %210 = and i1 %208, %209
+  %211 = xor i1 %208, %209
+  %212 = or i1 %210, %211
+  %213 = or i1 %208, %209
+  %214 = select i1 %212, i32 -2004999339, i32 -55891026
+  store i32 %214, i32* %20
+  br label %260
+
+; <label>:215:                                    ; preds = %21
+  %216 = load volatile i32*, i32** %4
+  ret i32* %216
+
+; <label>:217:                                    ; preds = %21
+  %218 = alloca i32*, align 8
+  %219 = alloca i64, align 8
+  %220 = alloca i32*, align 8
+  %221 = alloca i32, align 4
+  %222 = alloca i64, align 8
+  store i32* %0, i32** %218, align 8
+  store i64 %1, i64* %219, align 8
+  store i32* %2, i32** %220, align 8
+  %223 = load i32*, i32** %220, align 8
+  %224 = load i32, i32* %223, align 4
+  store i32 %224, i32* %221, align 4
+  %225 = load i64, i64* %219, align 8
+  store i64 %225, i64* %222, align 8
+  store i32 -1503551184, i32* %20
+  br label %260
+
+; <label>:226:                                    ; preds = %21
+  %227 = load volatile i32*, i32** %6
+  %228 = load i32, i32* %227, align 4
+  %229 = load volatile i32**, i32*** %7
+  %230 = load i32*, i32** %229, align 8
+  store i32 %228, i32* %230, align 4
+  store i32 -173578478, i32* %20
+  br label %260
+
+; <label>:231:                                    ; preds = %21
+  %232 = load volatile i64*, i64** %5
+  %233 = load i64, i64* %232, align 8
+  %234 = shl i64 %233, -1
+  %235 = sub i64 0, %233
+  %236 = add i64 0, %235
+  %237 = sub i64 0, %233
+  %238 = sub i64 0, %236
+  %239 = sub i64 0, -1
+  %240 = add i64 %238, %239
+  %241 = sub i64 0, %240
+  %242 = add i64 %236, -1
+  %243 = sub i64 0, %233
+  %244 = add i64 0, %243
+  %245 = sub i64 0, %233
+  %246 = sub i64 0, -1
+  %247 = sub i64 %244, %246
+  %248 = add i64 %244, -1
+  %249 = sub i64 0, -1
+  %250 = sub i64 %233, %249
+  %251 = add i64 %233, -1
+  %252 = load volatile i64*, i64** %5
+  store i64 %250, i64* %252, align 8
+  %253 = load volatile i32**, i32*** %7
+  %254 = load i32*, i32** %253, align 8
+  %255 = getelementptr inbounds i32, i32* %254, i32 1
+  %256 = load volatile i32**, i32*** %7
+  store i32* %255, i32** %256, align 8
+  store i32 1193471406, i32* %20
+  br label %260
+
+; <label>:257:                                    ; preds = %21
+  %258 = load volatile i32**, i32*** %7
+  %259 = load i32*, i32** %258, align 8
+  store i32 1580016679, i32* %20
+  br label %260
+
+; <label>:260:                                    ; preds = %257, %231, %226, %217, %198, %170, %169, %141, %125, %124, %104, %77, %72, %71, %32, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt12__niter_baseIPiENSt11_Niter_baseIT_E13iterator_typeES2_(i32*) #0 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  %4 = call i32* @_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_(i32* %3)
+  ret i32* %4
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt10_Iter_baseIPiLb0EE7_S_baseES0_(i32*) #4 comdat align 2 {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  ret i32* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"*, i32** dereferenceable(8)) unnamed_addr #4 comdat align 2 {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.132
+  %6 = load i32, i32* @y.133
+  %7 = sub i32 %5, 1573284197
+  %8 = sub i32 %7, 1
+  %9 = add i32 %8, 1573284197
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 -787673989, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %80
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -787673989, label %19
+    i32 1998169264, label %39
+    i32 144172018, label %72
+    i32 -2057778906, label %73
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %80
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 true, true
+  %25 = and i1 %22, true
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, true
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 true, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 1998169264, i32 -2057778906
+  store i32 %38, i32* %15
+  br label %80
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %41 = alloca i32**, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %40, align 8
+  store i32** %1, i32*** %41, align 8
+  %42 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %40, align 8
+  %43 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %42, i32 0, i32 0
+  %44 = load i32**, i32*** %41, align 8
+  %45 = load i32*, i32** %44, align 8
+  store i32* %45, i32** %43, align 8
+  %46 = load i32, i32* @x.132
+  %47 = load i32, i32* @y.133
+  %48 = sub i32 0, 1
+  %49 = add i32 %46, %48
+  %50 = sub i32 %46, 1
+  %51 = mul i32 %46, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %47, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 false, true
+  %58 = and i1 %55, false
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, false
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 false, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  %71 = select i1 %69, i32 144172018, i32 -2057778906
+  store i32 %71, i32* %15
+  br label %80
+
+; <label>:72:                                     ; preds = %16
+  ret void
+
+; <label>:73:                                     ; preds = %16
+  %74 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %75 = alloca i32**, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %74, align 8
+  store i32** %1, i32*** %75, align 8
+  %76 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %74, align 8
+  %77 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %76, i32 0, i32 0
+  %78 = load i32**, i32*** %75, align 8
+  %79 = load i32*, i32** %78, align 8
+  store i32* %79, i32** %77, align 8
+  store i32 1998169264, i32* %15
+  br label %80
+
+; <label>:80:                                     ; preds = %73, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %12, align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %13, align 8
+  %14 = alloca i32
+  store i32 -580592315, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %134
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -580592315, label %18
+    i32 -778491068, label %21
+    i32 712423607, label %37
+    i32 1403952768, label %75
+    i32 -1792744736, label %76
+    i32 -103722701, label %77
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %134
+
+; <label>:18:                                     ; preds = %15
+  %19 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %20 = select i1 %19, i32 -778491068, i32 -1792744736
+  store i32 %20, i32* %14
+  br label %134
+
+; <label>:21:                                     ; preds = %15
+  %22 = load i32, i32* @x.134
+  %23 = load i32, i32* @y.135
+  %24 = sub i32 %22, 708274685
+  %25 = sub i32 %24, 1
+  %26 = add i32 %25, 708274685
+  %27 = sub i32 %22, 1
+  %28 = mul i32 %22, %26
+  %29 = urem i32 %28, 2
+  %30 = icmp eq i32 %29, 0
+  %31 = icmp slt i32 %23, 10
+  %32 = and i1 %30, %31
+  %33 = xor i1 %30, %31
+  %34 = or i1 %32, %33
+  %35 = or i1 %30, %31
+  %36 = select i1 %34, i32 712423607, i32 -103722701
+  store i32 %36, i32* %14
+  br label %134
+
+; <label>:37:                                     ; preds = %15
+  %38 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %39 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %38, i8* %39, i64 8, i32 8, i1 false)
+  %40 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %41 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %40, i8* %41, i64 8, i32 8, i1 false)
+  %42 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3) #3
+  %43 = call i64 @_ZSt4__lgl(i64 %42)
+  %44 = mul nsw i64 %43, 2
+  %45 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8 to i8*
+  %46 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %45, i8* %46, i64 1, i32 1, i1 false)
+  %47 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  %48 = load i32*, i32** %47, align 8
+  %49 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %50 = load i32*, i32** %49, align 8
+  call void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_T1_(i32* %48, i32* %50, i64 %44)
+  %51 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %52 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %51, i8* %52, i64 8, i32 8, i1 false)
+  %53 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %54 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %53, i8* %54, i64 8, i32 8, i1 false)
+  %55 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %56 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %55, i8* %56, i64 1, i32 1, i1 false)
+  %57 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %58 = load i32*, i32** %57, align 8
+  %59 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %60 = load i32*, i32** %59, align 8
+  call void @_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %58, i32* %60)
+  %61 = load i32, i32* @x.134
+  %62 = load i32, i32* @y.135
+  %63 = sub i32 0, 1
+  %64 = add i32 %61, %63
+  %65 = sub i32 %61, 1
+  %66 = mul i32 %61, %64
+  %67 = urem i32 %66, 2
+  %68 = icmp eq i32 %67, 0
+  %69 = icmp slt i32 %62, 10
+  %70 = and i1 %68, %69
+  %71 = xor i1 %68, %69
+  %72 = or i1 %70, %71
+  %73 = or i1 %68, %69
+  %74 = select i1 %72, i32 1403952768, i32 -103722701
+  store i32 %74, i32* %14
+  br label %134
+
+; <label>:75:                                     ; preds = %15
+  store i32 -1792744736, i32* %14
+  br label %134
+
+; <label>:76:                                     ; preds = %15
+  ret void
+
+; <label>:77:                                     ; preds = %15
+  %78 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %79 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %78, i8* %79, i64 8, i32 8, i1 false)
+  %80 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %81 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %80, i8* %81, i64 8, i32 8, i1 false)
+  %82 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3) #3
+  %83 = call i64 @_ZSt4__lgl(i64 %82)
+  %84 = shl i64 %83, 2
+  %85 = add i64 %83, -2335733566911236051
+  %86 = sub i64 %85, 2
+  %87 = sub i64 %86, -2335733566911236051
+  %88 = sub i64 %83, 2
+  %89 = mul i64 %87, 2
+  %90 = add i64 0, -4894726826857000961
+  %91 = sub i64 %90, %83
+  %92 = sub i64 %91, -4894726826857000961
+  %93 = sub i64 0, %83
+  %94 = sub i64 0, 2
+  %95 = sub i64 %92, %94
+  %96 = add i64 %92, 2
+  %97 = sub i64 0, 2
+  %98 = add i64 %83, %97
+  %99 = sub i64 %83, 2
+  %100 = mul i64 %98, 2
+  %101 = add i64 0, 7989680574991408830
+  %102 = sub i64 %101, %83
+  %103 = sub i64 %102, 7989680574991408830
+  %104 = sub i64 0, %83
+  %105 = sub i64 0, 2
+  %106 = sub i64 %103, %105
+  %107 = add i64 %103, 2
+  %108 = add i64 0, 109687658455462982
+  %109 = sub i64 %108, %83
+  %110 = sub i64 %109, 109687658455462982
+  %111 = sub i64 0, %83
+  %112 = sub i64 0, 2
+  %113 = sub i64 %110, %112
+  %114 = add i64 %110, 2
+  %115 = shl i64 %83, 2
+  %116 = shl i64 %83, 2
+  %117 = mul nsw i64 %83, 2
+  %118 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %8 to i8*
+  %119 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %118, i8* %119, i64 1, i32 1, i1 false)
+  %120 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  %121 = load i32*, i32** %120, align 8
+  %122 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %123 = load i32*, i32** %122, align 8
+  call void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_T1_(i32* %121, i32* %123, i64 %117)
+  %124 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %125 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %124, i8* %125, i64 8, i32 8, i1 false)
+  %126 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %127 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %126, i8* %127, i64 8, i32 8, i1 false)
+  %128 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %129 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %128, i8* %129, i64 1, i32 1, i1 false)
+  %130 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %131 = load i32*, i32** %130, align 8
+  %132 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %133 = load i32*, i32** %132, align 8
+  call void @_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %131, i32* %133)
+  store i32 712423607, i32* %14
+  br label %134
+
+; <label>:134:                                    ; preds = %77, %75, %37, %21, %18, %17
+  br label %15
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #10
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops16__iter_comp_iterISt7greaterIiEEENS0_15_Iter_comp_iterIT_EES5_() #0 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %2 = alloca %"struct.std::greater", align 1
+  %3 = alloca %"struct.std::greater", align 1
+  call void @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %1)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8), %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8)) #4 comdat {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.138
+  %7 = load i32, i32* @y.139
+  %8 = sub i32 0, 1
+  %9 = add i32 %6, %8
+  %10 = sub i32 %6, 1
+  %11 = mul i32 %6, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %5
+  %14 = icmp slt i32 %7, 10
+  store i1 %14, i1* %4
+  %15 = alloca i32
+  store i32 527848810, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %76
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 527848810, label %19
+    i32 42244227, label %39
+    i32 747317812, label %64
+    i32 -355802878, label %66
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %76
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %5
+  %21 = load volatile i1, i1* %4
+  %22 = xor i1 %20, true
+  %23 = xor i1 %21, true
+  %24 = xor i1 true, true
+  %25 = and i1 %22, true
+  %26 = and i1 %20, %24
+  %27 = and i1 %23, true
+  %28 = and i1 %21, %24
+  %29 = or i1 %25, %26
+  %30 = or i1 %27, %28
+  %31 = xor i1 %29, %30
+  %32 = or i1 %22, %23
+  %33 = xor i1 %32, true
+  %34 = or i1 true, %24
+  %35 = and i1 %33, %34
+  %36 = or i1 %31, %35
+  %37 = or i1 %20, %21
+  %38 = select i1 %36, i32 42244227, i32 -355802878
+  store i32 %38, i32* %15
+  br label %76
+
+; <label>:39:                                     ; preds = %16
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %40, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %41, align 8
+  %42 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %40, align 8
+  %43 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %42) #3
+  %44 = load i32*, i32** %43, align 8
+  %45 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %41, align 8
+  %46 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %45) #3
+  %47 = load i32*, i32** %46, align 8
+  %48 = icmp ne i32* %44, %47
+  store i1 %48, i1* %3
+  %49 = load i32, i32* @x.138
+  %50 = load i32, i32* @y.139
+  %51 = add i32 %49, 347853673
+  %52 = sub i32 %51, 1
+  %53 = sub i32 %52, 347853673
+  %54 = sub i32 %49, 1
+  %55 = mul i32 %49, %53
+  %56 = urem i32 %55, 2
+  %57 = icmp eq i32 %56, 0
+  %58 = icmp slt i32 %50, 10
+  %59 = and i1 %57, %58
+  %60 = xor i1 %57, %58
+  %61 = or i1 %59, %60
+  %62 = or i1 %57, %58
+  %63 = select i1 %61, i32 747317812, i32 -355802878
+  store i32 %63, i32* %15
+  br label %76
+
+; <label>:64:                                     ; preds = %16
+  %65 = load volatile i1, i1* %3
+  ret i1 %65
+
+; <label>:66:                                     ; preds = %16
+  %67 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %68 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %67, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %68, align 8
+  %69 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %67, align 8
+  %70 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %69) #3
+  %71 = load i32*, i32** %70, align 8
+  %72 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %68, align 8
+  %73 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %72) #3
+  %74 = load i32*, i32** %73, align 8
+  %75 = icmp ne i32* %71, %74
+  store i32 42244227, i32* %15
+  br label %76
+
+; <label>:76:                                     ; preds = %66, %39, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_T1_(i32*, i32*, i64) #0 comdat {
+  %4 = alloca i1
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %16 = alloca i64*
+  %17 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %19 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %20 = alloca i1
+  %21 = alloca i1
+  %22 = load i32, i32* @x.140
+  %23 = load i32, i32* @y.141
+  %24 = sub i32 0, 1
+  %25 = add i32 %22, %24
+  %26 = sub i32 %22, 1
+  %27 = mul i32 %22, %25
+  %28 = urem i32 %27, 2
+  %29 = icmp eq i32 %28, 0
+  store i1 %29, i1* %21
+  %30 = icmp slt i32 %23, 10
+  store i1 %30, i1* %20
+  %31 = alloca i32
+  store i32 1731056431, i32* %31
+  br label %32
+
+; <label>:32:                                     ; preds = %3, %238
+  %33 = load i32, i32* %31
+  switch i32 %33, label %34 [
+    i32 1731056431, label %35
+    i32 -771387314, label %55
+    i32 -808940005, label %91
+    i32 1018414222, label %92
+    i32 -1215127826, label %98
+    i32 -1558682350, label %114
+    i32 923475282, label %133
+    i32 -1445071212, label %136
+    i32 -1576623613, label %162
+    i32 1669132217, label %215
+    i32 1588836831, label %216
+    i32 -1935925908, label %234
+  ]
+
+; <label>:34:                                     ; preds = %32
+  br label %238
+
+; <label>:35:                                     ; preds = %32
+  %36 = load volatile i1, i1* %21
+  %37 = load volatile i1, i1* %20
+  %38 = xor i1 %36, true
+  %39 = xor i1 %37, true
+  %40 = xor i1 false, true
+  %41 = and i1 %38, false
+  %42 = and i1 %36, %40
+  %43 = and i1 %39, false
+  %44 = and i1 %37, %40
+  %45 = or i1 %41, %42
+  %46 = or i1 %43, %44
+  %47 = xor i1 %45, %46
+  %48 = or i1 %38, %39
+  %49 = xor i1 %48, true
+  %50 = or i1 false, %40
+  %51 = and i1 %49, %50
+  %52 = or i1 %47, %51
+  %53 = or i1 %36, %37
+  %54 = select i1 %52, i32 -771387314, i32 1588836831
+  store i32 %54, i32* %31
+  br label %238
+
+; <label>:55:                                     ; preds = %32
+  %56 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %56, %"class.__gnu_cxx::__normal_iterator"** %19
+  %57 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %57, %"class.__gnu_cxx::__normal_iterator"** %18
+  %58 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %58, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %17
+  %59 = alloca i64, align 8
+  store i64* %59, i64** %16
+  %60 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %60, %"class.__gnu_cxx::__normal_iterator"** %15
+  %61 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %61, %"class.__gnu_cxx::__normal_iterator"** %14
+  %62 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %62, %"class.__gnu_cxx::__normal_iterator"** %13
+  %63 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %63, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %12
+  %64 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %64, %"class.__gnu_cxx::__normal_iterator"** %11
+  %65 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %65, %"class.__gnu_cxx::__normal_iterator"** %10
+  %66 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %66, %"class.__gnu_cxx::__normal_iterator"** %9
+  %67 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %67, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %8
+  %68 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %68, %"class.__gnu_cxx::__normal_iterator"** %7
+  %69 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %69, %"class.__gnu_cxx::__normal_iterator"** %6
+  %70 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %70, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %5
+  %71 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %72 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %71, i32 0, i32 0
+  store i32* %0, i32** %72, align 8
+  %73 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %74 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %73, i32 0, i32 0
+  store i32* %1, i32** %74, align 8
+  %75 = load volatile i64*, i64** %16
+  store i64 %2, i64* %75, align 8
+  %76 = load i32, i32* @x.140
+  %77 = load i32, i32* @y.141
+  %78 = sub i32 %76, -661022946
+  %79 = sub i32 %78, 1
+  %80 = add i32 %79, -661022946
+  %81 = sub i32 %76, 1
+  %82 = mul i32 %76, %80
+  %83 = urem i32 %82, 2
+  %84 = icmp eq i32 %83, 0
+  %85 = icmp slt i32 %77, 10
+  %86 = and i1 %84, %85
+  %87 = xor i1 %84, %85
+  %88 = or i1 %86, %87
+  %89 = or i1 %84, %85
+  %90 = select i1 %88, i32 -808940005, i32 1588836831
+  store i32 %90, i32* %31
+  br label %238
+
+; <label>:91:                                     ; preds = %32
+  store i32 1018414222, i32* %31
+  br label %238
+
+; <label>:92:                                     ; preds = %32
+  %93 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %94 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %95 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %94, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %93) #3
+  %96 = icmp sgt i64 %95, 16
+  %97 = select i1 %96, i32 -1215127826, i32 1669132217
+  store i32 %97, i32* %31
+  br label %238
+
+; <label>:98:                                     ; preds = %32
+  %99 = load i32, i32* @x.140
+  %100 = load i32, i32* @y.141
+  %101 = add i32 %99, -1813033487
+  %102 = sub i32 %101, 1
+  %103 = sub i32 %102, -1813033487
+  %104 = sub i32 %99, 1
+  %105 = mul i32 %99, %103
+  %106 = urem i32 %105, 2
+  %107 = icmp eq i32 %106, 0
+  %108 = icmp slt i32 %100, 10
+  %109 = and i1 %107, %108
+  %110 = xor i1 %107, %108
+  %111 = or i1 %109, %110
+  %112 = or i1 %107, %108
+  %113 = select i1 %111, i32 -1558682350, i32 -1935925908
+  store i32 %113, i32* %31
+  br label %238
+
+; <label>:114:                                    ; preds = %32
+  %115 = load volatile i64*, i64** %16
+  %116 = load i64, i64* %115, align 8
+  %117 = icmp eq i64 %116, 0
+  store i1 %117, i1* %4
+  %118 = load i32, i32* @x.140
+  %119 = load i32, i32* @y.141
+  %120 = add i32 %118, 234010012
+  %121 = sub i32 %120, 1
+  %122 = sub i32 %121, 234010012
+  %123 = sub i32 %118, 1
+  %124 = mul i32 %118, %122
+  %125 = urem i32 %124, 2
+  %126 = icmp eq i32 %125, 0
+  %127 = icmp slt i32 %119, 10
+  %128 = and i1 %126, %127
+  %129 = xor i1 %126, %127
+  %130 = or i1 %128, %129
+  %131 = or i1 %126, %127
+  %132 = select i1 %130, i32 923475282, i32 -1935925908
+  store i32 %132, i32* %31
+  br label %238
+
+; <label>:133:                                    ; preds = %32
+  %134 = load volatile i1, i1* %4
+  %135 = select i1 %134, i32 -1445071212, i32 -1576623613
+  store i32 %135, i32* %31
+  br label %238
+
+; <label>:136:                                    ; preds = %32
+  %137 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %138 = bitcast %"class.__gnu_cxx::__normal_iterator"* %137 to i8*
+  %139 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %140 = bitcast %"class.__gnu_cxx::__normal_iterator"* %139 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %138, i8* %140, i64 8, i32 8, i1 false)
+  %141 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %142 = bitcast %"class.__gnu_cxx::__normal_iterator"* %141 to i8*
+  %143 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %144 = bitcast %"class.__gnu_cxx::__normal_iterator"* %143 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %142, i8* %144, i64 8, i32 8, i1 false)
+  %145 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %146 = bitcast %"class.__gnu_cxx::__normal_iterator"* %145 to i8*
+  %147 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %148 = bitcast %"class.__gnu_cxx::__normal_iterator"* %147 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %146, i8* %148, i64 8, i32 8, i1 false)
+  %149 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %12
+  %150 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %149 to i8*
+  %151 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %17
+  %152 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %151 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %150, i8* %152, i64 1, i32 1, i1 false)
+  %153 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %154 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %153, i32 0, i32 0
+  %155 = load i32*, i32** %154, align 8
+  %156 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %157 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %156, i32 0, i32 0
+  %158 = load i32*, i32** %157, align 8
+  %159 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %160 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %159, i32 0, i32 0
+  %161 = load i32*, i32** %160, align 8
+  call void @_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32* %155, i32* %158, i32* %161)
+  store i32 1669132217, i32* %31
+  br label %238
+
+; <label>:162:                                    ; preds = %32
+  %163 = load volatile i64*, i64** %16
+  %164 = load i64, i64* %163, align 8
+  %165 = add i64 %164, -5371595930884693282
+  %166 = add i64 %165, -1
+  %167 = sub i64 %166, -5371595930884693282
+  %168 = add nsw i64 %164, -1
+  %169 = load volatile i64*, i64** %16
+  store i64 %167, i64* %169, align 8
+  %170 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %171 = bitcast %"class.__gnu_cxx::__normal_iterator"* %170 to i8*
+  %172 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %173 = bitcast %"class.__gnu_cxx::__normal_iterator"* %172 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %171, i8* %173, i64 8, i32 8, i1 false)
+  %174 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %175 = bitcast %"class.__gnu_cxx::__normal_iterator"* %174 to i8*
+  %176 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %177 = bitcast %"class.__gnu_cxx::__normal_iterator"* %176 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %175, i8* %177, i64 8, i32 8, i1 false)
+  %178 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %8
+  %179 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %178 to i8*
+  %180 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %17
+  %181 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %180 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %179, i8* %181, i64 1, i32 1, i1 false)
+  %182 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %183 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %182, i32 0, i32 0
+  %184 = load i32*, i32** %183, align 8
+  %185 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %186 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %185, i32 0, i32 0
+  %187 = load i32*, i32** %186, align 8
+  %188 = call i32* @_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_T0_(i32* %184, i32* %187)
+  %189 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %190 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %189, i32 0, i32 0
+  store i32* %188, i32** %190, align 8
+  %191 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %192 = bitcast %"class.__gnu_cxx::__normal_iterator"* %191 to i8*
+  %193 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %194 = bitcast %"class.__gnu_cxx::__normal_iterator"* %193 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %192, i8* %194, i64 8, i32 8, i1 false)
+  %195 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %196 = bitcast %"class.__gnu_cxx::__normal_iterator"* %195 to i8*
+  %197 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %198 = bitcast %"class.__gnu_cxx::__normal_iterator"* %197 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %196, i8* %198, i64 8, i32 8, i1 false)
+  %199 = load volatile i64*, i64** %16
+  %200 = load i64, i64* %199, align 8
+  %201 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %5
+  %202 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %201 to i8*
+  %203 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %17
+  %204 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %203 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %202, i8* %204, i64 1, i32 1, i1 false)
+  %205 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %206 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %205, i32 0, i32 0
+  %207 = load i32*, i32** %206, align 8
+  %208 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %209 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %208, i32 0, i32 0
+  %210 = load i32*, i32** %209, align 8
+  call void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_T1_(i32* %207, i32* %210, i64 %200)
+  %211 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %212 = bitcast %"class.__gnu_cxx::__normal_iterator"* %211 to i8*
+  %213 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %214 = bitcast %"class.__gnu_cxx::__normal_iterator"* %213 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %212, i8* %214, i64 8, i32 8, i1 false)
+  store i32 1018414222, i32* %31
+  br label %238
+
+; <label>:215:                                    ; preds = %32
+  ret void
+
+; <label>:216:                                    ; preds = %32
+  %217 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %218 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %219 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %220 = alloca i64, align 8
+  %221 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %222 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %223 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %224 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %225 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %226 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %227 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %228 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %229 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %230 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %231 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %232 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %217, i32 0, i32 0
+  store i32* %0, i32** %232, align 8
+  %233 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %218, i32 0, i32 0
+  store i32* %1, i32** %233, align 8
+  store i64 %2, i64* %220, align 8
+  store i32 -771387314, i32* %31
+  br label %238
+
+; <label>:234:                                    ; preds = %32
+  %235 = load volatile i64*, i64** %16
+  %236 = load i64, i64* %235, align 8
+  %237 = icmp eq i64 %236, 0
+  store i32 -1558682350, i32* %31
+  br label %238
+
+; <label>:238:                                    ; preds = %234, %216, %162, %136, %133, %114, %98, %92, %91, %55, %35, %34
+  br label %32
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZSt4__lgl(i64) #4 comdat {
+  %2 = alloca i64, align 8
+  store i64 %0, i64* %2, align 8
+  %3 = load i64, i64* %2, align 8
+  %4 = call i64 @llvm.ctlz.i64(i64 %3, i1 true)
+  %5 = trunc i64 %4 to i32
+  %6 = sext i32 %5 to i64
+  %7 = sub i64 0, %6
+  %8 = add i64 63, %7
+  %9 = sub i64 63, %6
+  ret i64 %8
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8), %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8)) #4 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %3, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %5 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3, align 8
+  %6 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %5) #3
+  %7 = load i32*, i32** %6, align 8
+  %8 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %9 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %8) #3
+  %10 = load i32*, i32** %9, align 8
+  %11 = ptrtoint i32* %7 to i64
+  %12 = ptrtoint i32* %10 to i64
+  %13 = add i64 %11, 3649250220205917113
+  %14 = sub i64 %13, %12
+  %15 = sub i64 %14, 3649250220205917113
+  %16 = sub i64 %11, %12
+  %17 = sdiv exact i64 %15, 4
+  ret i64 %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i1
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %16 = alloca i1
+  %17 = alloca i1
+  %18 = load i32, i32* @x.146
+  %19 = load i32, i32* @y.147
+  %20 = add i32 %18, -621040445
+  %21 = sub i32 %20, 1
+  %22 = sub i32 %21, -621040445
+  %23 = sub i32 %18, 1
+  %24 = mul i32 %18, %22
+  %25 = urem i32 %24, 2
+  %26 = icmp eq i32 %25, 0
+  store i1 %26, i1* %17
+  %27 = icmp slt i32 %19, 10
+  store i1 %27, i1* %16
+  %28 = alloca i32
+  store i32 -1252501018, i32* %28
+  br label %29
+
+; <label>:29:                                     ; preds = %2, %153
+  %30 = load i32, i32* %28
+  switch i32 %30, label %31 [
+    i32 -1252501018, label %32
+    i32 910414652, label %40
+    i32 -1636561530, label %76
+    i32 1023248615, label %79
+    i32 -212866757, label %116
+    i32 -1241146895, label %135
+    i32 -748649193, label %136
+  ]
+
+; <label>:31:                                     ; preds = %29
+  br label %153
+
+; <label>:32:                                     ; preds = %29
+  %33 = load volatile i1, i1* %17
+  %34 = load volatile i1, i1* %16
+  %35 = and i1 %33, %34
+  %36 = xor i1 %33, %34
+  %37 = or i1 %35, %36
+  %38 = or i1 %33, %34
+  %39 = select i1 %37, i32 910414652, i32 -748649193
+  store i32 %39, i32* %28
+  br label %153
+
+; <label>:40:                                     ; preds = %29
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %41, %"class.__gnu_cxx::__normal_iterator"** %15
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %42, %"class.__gnu_cxx::__normal_iterator"** %14
+  %43 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %43, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %13
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %12
+  %45 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %45, %"class.__gnu_cxx::__normal_iterator"** %11
+  %46 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %46, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %10
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %47, %"class.__gnu_cxx::__normal_iterator"** %9
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %8
+  %49 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %49, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %7
+  %50 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %50, %"class.__gnu_cxx::__normal_iterator"** %6
+  %51 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %51, %"class.__gnu_cxx::__normal_iterator"** %5
+  %52 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %52, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4
+  %53 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %54 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %53, i32 0, i32 0
+  store i32* %0, i32** %54, align 8
+  %55 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %56 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %55, i32 0, i32 0
+  store i32* %1, i32** %56, align 8
+  %57 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %58 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %59 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %58, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %57) #3
+  %60 = icmp sgt i64 %59, 16
+  store i1 %60, i1* %3
+  %61 = load i32, i32* @x.146
+  %62 = load i32, i32* @y.147
+  %63 = add i32 %61, 698448544
+  %64 = sub i32 %63, 1
+  %65 = sub i32 %64, 698448544
+  %66 = sub i32 %61, 1
+  %67 = mul i32 %61, %65
+  %68 = urem i32 %67, 2
+  %69 = icmp eq i32 %68, 0
+  %70 = icmp slt i32 %62, 10
+  %71 = and i1 %69, %70
+  %72 = xor i1 %69, %70
+  %73 = or i1 %71, %72
+  %74 = or i1 %69, %70
+  %75 = select i1 %73, i32 -1636561530, i32 -748649193
+  store i32 %75, i32* %28
+  br label %153
+
+; <label>:76:                                     ; preds = %29
+  %77 = load volatile i1, i1* %3
+  %78 = select i1 %77, i32 1023248615, i32 -212866757
+  store i32 %78, i32* %28
+  br label %153
+
+; <label>:79:                                     ; preds = %29
+  %80 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %81 = bitcast %"class.__gnu_cxx::__normal_iterator"* %80 to i8*
+  %82 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %83 = bitcast %"class.__gnu_cxx::__normal_iterator"* %82 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %81, i8* %83, i64 8, i32 8, i1 false)
+  %84 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %85 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %84, i64 16) #3
+  %86 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %87 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %86, i32 0, i32 0
+  store i32* %85, i32** %87, align 8
+  %88 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %10
+  %89 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %88 to i8*
+  %90 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %13
+  %91 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %90 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %89, i8* %91, i64 1, i32 1, i1 false)
+  %92 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %93 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %92, i32 0, i32 0
+  %94 = load i32*, i32** %93, align 8
+  %95 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %96 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %95, i32 0, i32 0
+  %97 = load i32*, i32** %96, align 8
+  call void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %94, i32* %97)
+  %98 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %99 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %98, i64 16) #3
+  %100 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %101 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %100, i32 0, i32 0
+  store i32* %99, i32** %101, align 8
+  %102 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %103 = bitcast %"class.__gnu_cxx::__normal_iterator"* %102 to i8*
+  %104 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %105 = bitcast %"class.__gnu_cxx::__normal_iterator"* %104 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %103, i8* %105, i64 8, i32 8, i1 false)
+  %106 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %7
+  %107 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %106 to i8*
+  %108 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %13
+  %109 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %108 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %107, i8* %109, i64 1, i32 1, i1 false)
+  %110 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %111 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %110, i32 0, i32 0
+  %112 = load i32*, i32** %111, align 8
+  %113 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %114 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %113, i32 0, i32 0
+  %115 = load i32*, i32** %114, align 8
+  call void @_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %112, i32* %115)
+  store i32 -1241146895, i32* %28
+  br label %153
+
+; <label>:116:                                    ; preds = %29
+  %117 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %118 = bitcast %"class.__gnu_cxx::__normal_iterator"* %117 to i8*
+  %119 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %120 = bitcast %"class.__gnu_cxx::__normal_iterator"* %119 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %118, i8* %120, i64 8, i32 8, i1 false)
+  %121 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %122 = bitcast %"class.__gnu_cxx::__normal_iterator"* %121 to i8*
+  %123 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %124 = bitcast %"class.__gnu_cxx::__normal_iterator"* %123 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %122, i8* %124, i64 8, i32 8, i1 false)
+  %125 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4
+  %126 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %125 to i8*
+  %127 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %13
+  %128 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %127 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %126, i8* %128, i64 1, i32 1, i1 false)
+  %129 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %130 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %129, i32 0, i32 0
+  %131 = load i32*, i32** %130, align 8
+  %132 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %133 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %132, i32 0, i32 0
+  %134 = load i32*, i32** %133, align 8
+  call void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %131, i32* %134)
+  store i32 -1241146895, i32* %28
+  br label %153
+
+; <label>:135:                                    ; preds = %29
+  ret void
+
+; <label>:136:                                    ; preds = %29
+  %137 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %138 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %139 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %140 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %141 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %142 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %143 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %144 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %145 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %146 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %147 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %148 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %149 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %137, i32 0, i32 0
+  store i32* %0, i32** %149, align 8
+  %150 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %138, i32 0, i32 0
+  store i32* %1, i32** %150, align 8
+  %151 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %138, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %137) #3
+  %152 = icmp sgt i64 %151, 16
+  store i32 910414652, i32* %28
+  br label %153
+
+; <label>:153:                                    ; preds = %136, %116, %79, %76, %40, %32, %31
+  br label %29
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"*) #4 comdat align 2 {
+  %2 = alloca i32**
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.148
+  %6 = load i32, i32* @y.149
+  %7 = add i32 %5, 485375309
+  %8 = sub i32 %7, 1
+  %9 = sub i32 %8, 485375309
+  %10 = sub i32 %5, 1
+  %11 = mul i32 %5, %9
+  %12 = urem i32 %11, 2
+  %13 = icmp eq i32 %12, 0
+  store i1 %13, i1* %4
+  %14 = icmp slt i32 %6, 10
+  store i1 %14, i1* %3
+  %15 = alloca i32
+  store i32 1616507957, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %52
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 1616507957, label %19
+    i32 74113360, label %27
+    i32 1492452978, label %46
+    i32 198518503, label %48
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %52
+
+; <label>:19:                                     ; preds = %16
+  %20 = load volatile i1, i1* %4
+  %21 = load volatile i1, i1* %3
+  %22 = and i1 %20, %21
+  %23 = xor i1 %20, %21
+  %24 = or i1 %22, %23
+  %25 = or i1 %20, %21
+  %26 = select i1 %24, i32 74113360, i32 198518503
+  store i32 %26, i32* %15
+  br label %52
+
+; <label>:27:                                     ; preds = %16
+  %28 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %28, align 8
+  %29 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %28, align 8
+  %30 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %29, i32 0, i32 0
+  store i32** %30, i32*** %2
+  %31 = load i32, i32* @x.148
+  %32 = load i32, i32* @y.149
+  %33 = add i32 %31, 1378179006
+  %34 = sub i32 %33, 1
+  %35 = sub i32 %34, 1378179006
+  %36 = sub i32 %31, 1
+  %37 = mul i32 %31, %35
+  %38 = urem i32 %37, 2
+  %39 = icmp eq i32 %38, 0
+  %40 = icmp slt i32 %32, 10
+  %41 = and i1 %39, %40
+  %42 = xor i1 %39, %40
+  %43 = or i1 %41, %42
+  %44 = or i1 %39, %40
+  %45 = select i1 %43, i32 1492452978, i32 198518503
+  store i32 %45, i32* %15
+  br label %52
+
+; <label>:46:                                     ; preds = %16
+  %47 = load volatile i32**, i32*** %2
+  ret i32** %47
+
+; <label>:48:                                     ; preds = %16
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %49, align 8
+  %50 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %49, align 8
+  %51 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %50, i32 0, i32 0
+  store i32 74113360, i32* %15
+  br label %52
+
+; <label>:52:                                     ; preds = %48, %27, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %15 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %15, align 8
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %16, align 8
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %2, i32** %17, align 8
+  %18 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %19 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %18, i8* %19, i64 8, i32 8, i1 false)
+  %20 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %20, i8* %21, i64 8, i32 8, i1 false)
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %22, i8* %23, i64 8, i32 8, i1 false)
+  %24 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %11 to i8*
+  %25 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %24, i8* %25, i64 1, i32 1, i1 false)
+  %26 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %27 = load i32*, i32** %26, align 8
+  %28 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %29 = load i32*, i32** %28, align 8
+  %30 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %31 = load i32*, i32** %30, align 8
+  call void @_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32* %27, i32* %29, i32* %31)
+  %32 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %33 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %32, i8* %33, i64 8, i32 8, i1 false)
+  %34 = bitcast %"class.__gnu_cxx::__normal_iterator"* %13 to i8*
+  %35 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %34, i8* %35, i64 8, i32 8, i1 false)
+  %36 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %14 to i8*
+  %37 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %36, i8* %37, i64 1, i32 1, i1 false)
+  %38 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %39 = load i32*, i32** %38, align 8
+  %40 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %41 = load i32*, i32** %40, align 8
+  call void @_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %39, i32* %41)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %17, align 8
+  %18 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %18, align 8
+  %19 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %20 = sdiv i64 %19, 2
+  %21 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 %20) #3
+  %22 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %21, i32** %22, align 8
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %24 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 8, i32 8, i1 false)
+  %25 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 1) #3
+  %26 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  store i32* %25, i32** %26, align 8
+  %27 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %28 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %27, i8* %28, i64 8, i32 8, i1 false)
+  %29 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmiEl(%"class.__gnu_cxx::__normal_iterator"* %5, i64 1) #3
+  %30 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  store i32* %29, i32** %30, align 8
+  %31 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %12 to i8*
+  %32 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %31, i8* %32, i64 1, i32 1, i1 false)
+  %33 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %34 = load i32*, i32** %33, align 8
+  %35 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %36 = load i32*, i32** %35, align 8
+  %37 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %38 = load i32*, i32** %37, align 8
+  %39 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %40 = load i32*, i32** %39, align 8
+  call void @_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_SC_T0_(i32* %34, i32* %36, i32* %38, i32* %40)
+  %41 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 1) #3
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  store i32* %41, i32** %42, align 8
+  %43 = bitcast %"class.__gnu_cxx::__normal_iterator"* %14 to i8*
+  %44 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %43, i8* %44, i64 8, i32 8, i1 false)
+  %45 = bitcast %"class.__gnu_cxx::__normal_iterator"* %15 to i8*
+  %46 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %45, i8* %46, i64 8, i32 8, i1 false)
+  %47 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %16 to i8*
+  %48 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %47, i8* %48, i64 1, i32 1, i1 false)
+  %49 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %50 = load i32*, i32** %49, align 8
+  %51 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %52 = load i32*, i32** %51, align 8
+  %53 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %54 = load i32*, i32** %53, align 8
+  %55 = call i32* @_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_SC_T0_(i32* %50, i32* %52, i32* %54)
+  %56 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %55, i32** %56, align 8
+  %57 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %58 = load i32*, i32** %57, align 8
+  ret i32* %58
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %17 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %18 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %18, align 8
+  %19 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %19, align 8
+  %20 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %2, i32** %20, align 8
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %21, i8* %22, i64 8, i32 8, i1 false)
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %24 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 8, i32 8, i1 false)
+  %25 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %26 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %25, i8* %26, i64 1, i32 1, i1 false)
+  %27 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %28 = load i32*, i32** %27, align 8
+  %29 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %30 = load i32*, i32** %29, align 8
+  call void @_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32* %28, i32* %30)
+  %31 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %32 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %31, i8* %32, i64 8, i32 8, i1 false)
+  %33 = alloca i32
+  store i32 -512728583, i32* %33
+  br label %34
+
+; <label>:34:                                     ; preds = %3, %147
+  %35 = load i32, i32* %33
+  switch i32 %35, label %36 [
+    i32 -512728583, label %37
+    i32 -1033712670, label %40
+    i32 -52121059, label %51
+    i32 -2052958867, label %66
+    i32 962657274, label %81
+    i32 -724612259, label %109
+    i32 258643648, label %110
+    i32 -1690520397, label %112
+    i32 1343386115, label %128
+    i32 1394955469, label %144
+    i32 -853546433, label %145
+    i32 -571252920, label %146
+  ]
+
+; <label>:36:                                     ; preds = %34
+  br label %147
+
+; <label>:37:                                     ; preds = %34
+  %38 = call zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %11, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %6) #3
+  %39 = select i1 %38, i32 -1033712670, i32 -1690520397
+  store i32 %39, i32* %33
+  br label %147
+
+; <label>:40:                                     ; preds = %34
+  %41 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %42 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %41, i8* %42, i64 8, i32 8, i1 false)
+  %43 = bitcast %"class.__gnu_cxx::__normal_iterator"* %13 to i8*
+  %44 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %43, i8* %44, i64 8, i32 8, i1 false)
+  %45 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %46 = load i32*, i32** %45, align 8
+  %47 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %48 = load i32*, i32** %47, align 8
+  %49 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7, i32* %46, i32* %48)
+  %50 = select i1 %49, i32 -52121059, i32 -2052958867
+  store i32 %50, i32* %33
+  br label %147
+
+; <label>:51:                                     ; preds = %34
+  %52 = bitcast %"class.__gnu_cxx::__normal_iterator"* %14 to i8*
+  %53 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %52, i8* %53, i64 8, i32 8, i1 false)
+  %54 = bitcast %"class.__gnu_cxx::__normal_iterator"* %15 to i8*
+  %55 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %54, i8* %55, i64 8, i32 8, i1 false)
+  %56 = bitcast %"class.__gnu_cxx::__normal_iterator"* %16 to i8*
+  %57 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %56, i8* %57, i64 8, i32 8, i1 false)
+  %58 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %17 to i8*
+  %59 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %58, i8* %59, i64 1, i32 1, i1 false)
+  %60 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %61 = load i32*, i32** %60, align 8
+  %62 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %63 = load i32*, i32** %62, align 8
+  %64 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %16, i32 0, i32 0
+  %65 = load i32*, i32** %64, align 8
+  call void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32* %61, i32* %63, i32* %65)
+  store i32 -2052958867, i32* %33
+  br label %147
+
+; <label>:66:                                     ; preds = %34
+  %67 = load i32, i32* @x.154
+  %68 = load i32, i32* @y.155
+  %69 = sub i32 0, 1
+  %70 = add i32 %67, %69
+  %71 = sub i32 %67, 1
+  %72 = mul i32 %67, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %68, 10
+  %76 = and i1 %74, %75
+  %77 = xor i1 %74, %75
+  %78 = or i1 %76, %77
+  %79 = or i1 %74, %75
+  %80 = select i1 %78, i32 962657274, i32 -853546433
+  store i32 %80, i32* %33
+  br label %147
+
+; <label>:81:                                     ; preds = %34
+  %82 = load i32, i32* @x.154
+  %83 = load i32, i32* @y.155
+  %84 = add i32 %82, -1857454664
+  %85 = sub i32 %84, 1
+  %86 = sub i32 %85, -1857454664
+  %87 = sub i32 %82, 1
+  %88 = mul i32 %82, %86
+  %89 = urem i32 %88, 2
+  %90 = icmp eq i32 %89, 0
+  %91 = icmp slt i32 %83, 10
+  %92 = xor i1 %90, true
+  %93 = xor i1 %91, true
+  %94 = xor i1 true, true
+  %95 = and i1 %92, true
+  %96 = and i1 %90, %94
+  %97 = and i1 %93, true
+  %98 = and i1 %91, %94
+  %99 = or i1 %95, %96
+  %100 = or i1 %97, %98
+  %101 = xor i1 %99, %100
+  %102 = or i1 %92, %93
+  %103 = xor i1 %102, true
+  %104 = or i1 true, %94
+  %105 = and i1 %103, %104
+  %106 = or i1 %101, %105
+  %107 = or i1 %90, %91
+  %108 = select i1 %106, i32 -724612259, i32 -853546433
+  store i32 %108, i32* %33
+  br label %147
+
+; <label>:109:                                    ; preds = %34
+  store i32 258643648, i32* %33
+  br label %147
+
+; <label>:110:                                    ; preds = %34
+  %111 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %11) #3
+  store i32 -512728583, i32* %33
+  br label %147
+
+; <label>:112:                                    ; preds = %34
+  %113 = load i32, i32* @x.154
+  %114 = load i32, i32* @y.155
+  %115 = add i32 %113, -1502027940
+  %116 = sub i32 %115, 1
+  %117 = sub i32 %116, -1502027940
+  %118 = sub i32 %113, 1
+  %119 = mul i32 %113, %117
+  %120 = urem i32 %119, 2
+  %121 = icmp eq i32 %120, 0
+  %122 = icmp slt i32 %114, 10
+  %123 = and i1 %121, %122
+  %124 = xor i1 %121, %122
+  %125 = or i1 %123, %124
+  %126 = or i1 %121, %122
+  %127 = select i1 %125, i32 1343386115, i32 -571252920
+  store i32 %127, i32* %33
+  br label %147
+
+; <label>:128:                                    ; preds = %34
+  %129 = load i32, i32* @x.154
+  %130 = load i32, i32* @y.155
+  %131 = add i32 %129, 443826192
+  %132 = sub i32 %131, 1
+  %133 = sub i32 %132, 443826192
+  %134 = sub i32 %129, 1
+  %135 = mul i32 %129, %133
+  %136 = urem i32 %135, 2
+  %137 = icmp eq i32 %136, 0
+  %138 = icmp slt i32 %130, 10
+  %139 = and i1 %137, %138
+  %140 = xor i1 %137, %138
+  %141 = or i1 %139, %140
+  %142 = or i1 %137, %138
+  %143 = select i1 %141, i32 1394955469, i32 -571252920
+  store i32 %143, i32* %33
+  br label %147
+
+; <label>:144:                                    ; preds = %34
+  ret void
+
+; <label>:145:                                    ; preds = %34
+  store i32 962657274, i32* %33
+  br label %147
+
+; <label>:146:                                    ; preds = %34
+  store i32 1343386115, i32* %33
+  br label %147
+
+; <label>:147:                                    ; preds = %146, %145, %128, %112, %110, %109, %81, %66, %51, %40, %37, %36
+  br label %34
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i1
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %12, align 8
+  %13 = alloca i32
+  store i32 -738119773, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %2, %85
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 -738119773, label %17
+    i32 1666628777, label %33
+    i32 -1648148311, label %62
+    i32 1628044850, label %65
+    i32 -1283055813, label %81
+    i32 695196725, label %82
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %85
+
+; <label>:17:                                     ; preds = %14
+  %18 = load i32, i32* @x.156
+  %19 = load i32, i32* @y.157
+  %20 = add i32 %18, -1094287739
+  %21 = sub i32 %20, 1
+  %22 = sub i32 %21, -1094287739
+  %23 = sub i32 %18, 1
+  %24 = mul i32 %18, %22
+  %25 = urem i32 %24, 2
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %19, 10
+  %28 = and i1 %26, %27
+  %29 = xor i1 %26, %27
+  %30 = or i1 %28, %29
+  %31 = or i1 %26, %27
+  %32 = select i1 %30, i32 1666628777, i32 695196725
+  store i32 %32, i32* %13
+  br label %85
+
+; <label>:33:                                     ; preds = %14
+  %34 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %35 = icmp sgt i64 %34, 1
+  store i1 %35, i1* %3
+  %36 = load i32, i32* @x.156
+  %37 = load i32, i32* @y.157
+  %38 = sub i32 0, 1
+  %39 = add i32 %36, %38
+  %40 = sub i32 %36, 1
+  %41 = mul i32 %36, %39
+  %42 = urem i32 %41, 2
+  %43 = icmp eq i32 %42, 0
+  %44 = icmp slt i32 %37, 10
+  %45 = xor i1 %43, true
+  %46 = xor i1 %44, true
+  %47 = xor i1 true, true
+  %48 = and i1 %45, true
+  %49 = and i1 %43, %47
+  %50 = and i1 %46, true
+  %51 = and i1 %44, %47
+  %52 = or i1 %48, %49
+  %53 = or i1 %50, %51
+  %54 = xor i1 %52, %53
+  %55 = or i1 %45, %46
+  %56 = xor i1 %55, true
+  %57 = or i1 true, %47
+  %58 = and i1 %56, %57
+  %59 = or i1 %54, %58
+  %60 = or i1 %43, %44
+  %61 = select i1 %59, i32 -1648148311, i32 695196725
+  store i32 %61, i32* %13
+  br label %85
+
+; <label>:62:                                     ; preds = %14
+  %63 = load volatile i1, i1* %3
+  %64 = select i1 %63, i32 1628044850, i32 -1283055813
+  store i32 %64, i32* %13
+  br label %85
+
+; <label>:65:                                     ; preds = %14
+  %66 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %5) #3
+  %67 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %68 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %67, i8* %68, i64 8, i32 8, i1 false)
+  %69 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %70 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %69, i8* %70, i64 8, i32 8, i1 false)
+  %71 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %72 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %71, i8* %72, i64 8, i32 8, i1 false)
+  %73 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %74 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %73, i8* %74, i64 1, i32 1, i1 false)
+  %75 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %76 = load i32*, i32** %75, align 8
+  %77 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %78 = load i32*, i32** %77, align 8
+  %79 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %80 = load i32*, i32** %79, align 8
+  call void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32* %76, i32* %78, i32* %80)
+  store i32 -738119773, i32* %13
+  br label %85
+
+; <label>:81:                                     ; preds = %14
+  ret void
+
+; <label>:82:                                     ; preds = %14
+  %83 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %84 = icmp sgt i64 %83, 1
+  store i32 1666628777, i32* %13
+  br label %85
+
+; <label>:85:                                     ; preds = %82, %65, %62, %33, %17, %16
+  br label %14
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i1
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca i32*
+  %8 = alloca i64*
+  %9 = alloca i64*
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca i1
+  %14 = alloca i1
+  %15 = load i32, i32* @x.158
+  %16 = load i32, i32* @y.159
+  %17 = sub i32 0, 1
+  %18 = add i32 %15, %17
+  %19 = sub i32 %15, 1
+  %20 = mul i32 %15, %18
+  %21 = urem i32 %20, 2
+  %22 = icmp eq i32 %21, 0
+  store i1 %22, i1* %14
+  %23 = icmp slt i32 %16, 10
+  store i1 %23, i1* %13
+  %24 = alloca i32
+  store i32 -1777135915, i32* %24
+  br label %25
+
+; <label>:25:                                     ; preds = %2, %218
+  %26 = load i32, i32* %24
+  switch i32 %26, label %27 [
+    i32 -1777135915, label %28
+    i32 -572666052, label %36
+    i32 -1135517627, label %81
+    i32 -740367689, label %84
+    i32 -511934448, label %100
+    i32 -1141615461, label %115
+    i32 161775129, label %116
+    i32 -1457886628, label %129
+    i32 -1356540492, label %163
+    i32 -597315721, label %164
+    i32 -526352930, label %171
+    i32 -480480186, label %186
+    i32 -326140527, label %201
+    i32 -1895848960, label %202
+    i32 1069122475, label %216
+    i32 -1673292663, label %217
+  ]
+
+; <label>:27:                                     ; preds = %25
+  br label %218
+
+; <label>:28:                                     ; preds = %25
+  %29 = load volatile i1, i1* %14
+  %30 = load volatile i1, i1* %13
+  %31 = and i1 %29, %30
+  %32 = xor i1 %29, %30
+  %33 = or i1 %31, %32
+  %34 = or i1 %29, %30
+  %35 = select i1 %33, i32 -572666052, i32 -1895848960
+  store i32 %35, i32* %24
+  br label %218
+
+; <label>:36:                                     ; preds = %25
+  %37 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %37, %"class.__gnu_cxx::__normal_iterator"** %12
+  %38 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %38, %"class.__gnu_cxx::__normal_iterator"** %11
+  %39 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %39, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %10
+  %40 = alloca i64, align 8
+  store i64* %40, i64** %9
+  %41 = alloca i64, align 8
+  store i64* %41, i64** %8
+  %42 = alloca i32, align 4
+  store i32* %42, i32** %7
+  %43 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %43, %"class.__gnu_cxx::__normal_iterator"** %6
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %5
+  %45 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %45, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4
+  %46 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %47 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %46, i32 0, i32 0
+  store i32* %0, i32** %47, align 8
+  %48 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %49 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %48, i32 0, i32 0
+  store i32* %1, i32** %49, align 8
+  %50 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %51 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %52 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %51, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %50) #3
+  %53 = icmp slt i64 %52, 2
+  store i1 %53, i1* %3
+  %54 = load i32, i32* @x.158
+  %55 = load i32, i32* @y.159
+  %56 = add i32 %54, 1692403168
+  %57 = sub i32 %56, 1
+  %58 = sub i32 %57, 1692403168
+  %59 = sub i32 %54, 1
+  %60 = mul i32 %54, %58
+  %61 = urem i32 %60, 2
+  %62 = icmp eq i32 %61, 0
+  %63 = icmp slt i32 %55, 10
+  %64 = xor i1 %62, true
+  %65 = xor i1 %63, true
+  %66 = xor i1 true, true
+  %67 = and i1 %64, true
+  %68 = and i1 %62, %66
+  %69 = and i1 %65, true
+  %70 = and i1 %63, %66
+  %71 = or i1 %67, %68
+  %72 = or i1 %69, %70
+  %73 = xor i1 %71, %72
+  %74 = or i1 %64, %65
+  %75 = xor i1 %74, true
+  %76 = or i1 true, %66
+  %77 = and i1 %75, %76
+  %78 = or i1 %73, %77
+  %79 = or i1 %62, %63
+  %80 = select i1 %78, i32 -1135517627, i32 -1895848960
+  store i32 %80, i32* %24
+  br label %218
+
+; <label>:81:                                     ; preds = %25
+  %82 = load volatile i1, i1* %3
+  %83 = select i1 %82, i32 -740367689, i32 161775129
+  store i32 %83, i32* %24
+  br label %218
+
+; <label>:84:                                     ; preds = %25
+  %85 = load i32, i32* @x.158
+  %86 = load i32, i32* @y.159
+  %87 = add i32 %85, -518908301
+  %88 = sub i32 %87, 1
+  %89 = sub i32 %88, -518908301
+  %90 = sub i32 %85, 1
+  %91 = mul i32 %85, %89
+  %92 = urem i32 %91, 2
+  %93 = icmp eq i32 %92, 0
+  %94 = icmp slt i32 %86, 10
+  %95 = and i1 %93, %94
+  %96 = xor i1 %93, %94
+  %97 = or i1 %95, %96
+  %98 = or i1 %93, %94
+  %99 = select i1 %97, i32 -511934448, i32 1069122475
+  store i32 %99, i32* %24
+  br label %218
+
+; <label>:100:                                    ; preds = %25
+  %101 = load i32, i32* @x.158
+  %102 = load i32, i32* @y.159
+  %103 = sub i32 0, 1
+  %104 = add i32 %101, %103
+  %105 = sub i32 %101, 1
+  %106 = mul i32 %101, %104
+  %107 = urem i32 %106, 2
+  %108 = icmp eq i32 %107, 0
+  %109 = icmp slt i32 %102, 10
+  %110 = and i1 %108, %109
+  %111 = xor i1 %108, %109
+  %112 = or i1 %110, %111
+  %113 = or i1 %108, %109
+  %114 = select i1 %112, i32 -1141615461, i32 1069122475
+  store i32 %114, i32* %24
+  br label %218
+
+; <label>:115:                                    ; preds = %25
+  store i32 -526352930, i32* %24
+  br label %218
+
+; <label>:116:                                    ; preds = %25
+  %117 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %118 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %119 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %118, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %117) #3
+  %120 = load volatile i64*, i64** %9
+  store i64 %119, i64* %120, align 8
+  %121 = load volatile i64*, i64** %9
+  %122 = load i64, i64* %121, align 8
+  %123 = sub i64 %122, -4366253401896989569
+  %124 = sub i64 %123, 2
+  %125 = add i64 %124, -4366253401896989569
+  %126 = sub nsw i64 %122, 2
+  %127 = sdiv i64 %125, 2
+  %128 = load volatile i64*, i64** %8
+  store i64 %127, i64* %128, align 8
+  store i32 -1457886628, i32* %24
+  br label %218
+
+; <label>:129:                                    ; preds = %25
+  %130 = load volatile i64*, i64** %8
+  %131 = load i64, i64* %130, align 8
+  %132 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %133 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %132, i64 %131) #3
+  %134 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %135 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %134, i32 0, i32 0
+  store i32* %133, i32** %135, align 8
+  %136 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %137 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %136) #3
+  %138 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %137) #3
+  %139 = load i32, i32* %138, align 4
+  %140 = load volatile i32*, i32** %7
+  store i32 %139, i32* %140, align 4
+  %141 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %142 = bitcast %"class.__gnu_cxx::__normal_iterator"* %141 to i8*
+  %143 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %144 = bitcast %"class.__gnu_cxx::__normal_iterator"* %143 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %142, i8* %144, i64 8, i32 8, i1 false)
+  %145 = load volatile i64*, i64** %8
+  %146 = load i64, i64* %145, align 8
+  %147 = load volatile i64*, i64** %9
+  %148 = load i64, i64* %147, align 8
+  %149 = load volatile i32*, i32** %7
+  %150 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %149) #3
+  %151 = load i32, i32* %150, align 4
+  %152 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %4
+  %153 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %152 to i8*
+  %154 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %10
+  %155 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %154 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %153, i8* %155, i64 1, i32 1, i1 false)
+  %156 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %157 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %156, i32 0, i32 0
+  %158 = load i32*, i32** %157, align 8
+  call void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32* %158, i64 %146, i64 %148, i32 %151)
+  %159 = load volatile i64*, i64** %8
+  %160 = load i64, i64* %159, align 8
+  %161 = icmp eq i64 %160, 0
+  %162 = select i1 %161, i32 -1356540492, i32 -597315721
+  store i32 %162, i32* %24
+  br label %218
+
+; <label>:163:                                    ; preds = %25
+  store i32 -526352930, i32* %24
+  br label %218
+
+; <label>:164:                                    ; preds = %25
+  %165 = load volatile i64*, i64** %8
+  %166 = load i64, i64* %165, align 8
+  %167 = sub i64 0, -1
+  %168 = sub i64 %166, %167
+  %169 = add nsw i64 %166, -1
+  %170 = load volatile i64*, i64** %8
+  store i64 %168, i64* %170, align 8
+  store i32 -1457886628, i32* %24
+  br label %218
+
+; <label>:171:                                    ; preds = %25
+  %172 = load i32, i32* @x.158
+  %173 = load i32, i32* @y.159
+  %174 = sub i32 0, 1
+  %175 = add i32 %172, %174
+  %176 = sub i32 %172, 1
+  %177 = mul i32 %172, %175
+  %178 = urem i32 %177, 2
+  %179 = icmp eq i32 %178, 0
+  %180 = icmp slt i32 %173, 10
+  %181 = and i1 %179, %180
+  %182 = xor i1 %179, %180
+  %183 = or i1 %181, %182
+  %184 = or i1 %179, %180
+  %185 = select i1 %183, i32 -480480186, i32 -1673292663
+  store i32 %185, i32* %24
+  br label %218
+
+; <label>:186:                                    ; preds = %25
+  %187 = load i32, i32* @x.158
+  %188 = load i32, i32* @y.159
+  %189 = sub i32 0, 1
+  %190 = add i32 %187, %189
+  %191 = sub i32 %187, 1
+  %192 = mul i32 %187, %190
+  %193 = urem i32 %192, 2
+  %194 = icmp eq i32 %193, 0
+  %195 = icmp slt i32 %188, 10
+  %196 = and i1 %194, %195
+  %197 = xor i1 %194, %195
+  %198 = or i1 %196, %197
+  %199 = or i1 %194, %195
+  %200 = select i1 %198, i32 -326140527, i32 -1673292663
+  store i32 %200, i32* %24
+  br label %218
+
+; <label>:201:                                    ; preds = %25
+  ret void
+
+; <label>:202:                                    ; preds = %25
+  %203 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %204 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %205 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %206 = alloca i64, align 8
+  %207 = alloca i64, align 8
+  %208 = alloca i32, align 4
+  %209 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %210 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %211 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %212 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %203, i32 0, i32 0
+  store i32* %0, i32** %212, align 8
+  %213 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %204, i32 0, i32 0
+  store i32* %1, i32** %213, align 8
+  %214 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %204, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %203) #3
+  %215 = icmp slt i64 %214, 2
+  store i32 -572666052, i32* %24
+  br label %218
+
+; <label>:216:                                    ; preds = %25
+  store i32 -511934448, i32* %24
+  br label %218
+
+; <label>:217:                                    ; preds = %25
+  store i32 -480480186, i32* %24
+  br label %218
+
+; <label>:218:                                    ; preds = %217, %216, %202, %186, %171, %164, %163, %129, %116, %115, %100, %84, %81, %36, %28, %27
+  br label %25
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8), %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8)) #4 comdat {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.160
+  %7 = load i32, i32* @y.161
+  %8 = add i32 %6, 253347431
+  %9 = sub i32 %8, 1
+  %10 = sub i32 %9, 253347431
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 736639080, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %76
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 736639080, label %20
+    i32 -1209735174, label %28
+    i32 -440661932, label %64
+    i32 128186450, label %66
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %76
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 -1209735174, i32 128186450
+  store i32 %27, i32* %16
+  br label %76
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %30 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %29, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %30, align 8
+  %31 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29, align 8
+  %32 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %31) #3
+  %33 = load i32*, i32** %32, align 8
+  %34 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30, align 8
+  %35 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %34) #3
+  %36 = load i32*, i32** %35, align 8
+  %37 = icmp ult i32* %33, %36
+  store i1 %37, i1* %3
+  %38 = load i32, i32* @x.160
+  %39 = load i32, i32* @y.161
+  %40 = sub i32 0, 1
+  %41 = add i32 %38, %40
+  %42 = sub i32 %38, 1
+  %43 = mul i32 %38, %41
+  %44 = urem i32 %43, 2
+  %45 = icmp eq i32 %44, 0
+  %46 = icmp slt i32 %39, 10
+  %47 = xor i1 %45, true
+  %48 = xor i1 %46, true
+  %49 = xor i1 false, true
+  %50 = and i1 %47, false
+  %51 = and i1 %45, %49
+  %52 = and i1 %48, false
+  %53 = and i1 %46, %49
+  %54 = or i1 %50, %51
+  %55 = or i1 %52, %53
+  %56 = xor i1 %54, %55
+  %57 = or i1 %47, %48
+  %58 = xor i1 %57, true
+  %59 = or i1 false, %49
+  %60 = and i1 %58, %59
+  %61 = or i1 %56, %60
+  %62 = or i1 %45, %46
+  %63 = select i1 %61, i32 -440661932, i32 128186450
+  store i32 %63, i32* %16
+  br label %76
+
+; <label>:64:                                     ; preds = %17
+  %65 = load volatile i1, i1* %3
+  ret i1 %65
+
+; <label>:66:                                     ; preds = %17
+  %67 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %68 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %67, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %68, align 8
+  %69 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %67, align 8
+  %70 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %69) #3
+  %71 = load i32*, i32** %70, align 8
+  %72 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %68, align 8
+  %73 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %72) #3
+  %74 = load i32*, i32** %73, align 8
+  %75 = icmp ult i32* %71, %74
+  store i32 -1209735174, i32* %16
+  br label %76
+
+; <label>:76:                                     ; preds = %66, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, i32*, i32*) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, align 8
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %7, align 8
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %2, i32** %8, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %6, align 8
+  %9 = load %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %6, align 8
+  %10 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %9, i32 0, i32 0
+  %11 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  %12 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %5) #3
+  %13 = call zeroext i1 @_ZNKSt7greaterIiEclERKiS2_(%"struct.std::greater"* %10, i32* dereferenceable(4) %11, i32* dereferenceable(4) %12)
+  ret i1 %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %8 = alloca i32, align 4
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %12, align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %2, i32** %13, align 8
+  %14 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  %15 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %14) #3
+  %16 = load i32, i32* %15, align 4
+  store i32 %16, i32* %8, align 4
+  %17 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  %18 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %17) #3
+  %19 = load i32, i32* %18, align 4
+  %20 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  store i32 %19, i32* %20, align 4
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %21, i8* %22, i64 8, i32 8, i1 false)
+  %23 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %24 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %8) #3
+  %25 = load i32, i32* %24, align 4
+  %26 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %10 to i8*
+  %27 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %26, i8* %27, i64 1, i32 1, i1 false)
+  %28 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %29 = load i32*, i32** %28, align 8
+  call void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32* %29, i64 0, i64 %23, i32 %25)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.166
+  %6 = load i32, i32* @y.167
+  %7 = sub i32 0, 1
+  %8 = add i32 %5, %7
+  %9 = sub i32 %5, 1
+  %10 = mul i32 %5, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %4
+  %13 = icmp slt i32 %6, 10
+  store i1 %13, i1* %3
+  %14 = alloca i32
+  store i32 2142535130, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %80
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 2142535130, label %18
+    i32 125761100, label %38
+    i32 -1164178375, label %72
+    i32 1316423926, label %74
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %80
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %4
+  %20 = load volatile i1, i1* %3
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 false, true
+  %24 = and i1 %21, false
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, false
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 false, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 125761100, i32 1316423926
+  store i32 %37, i32* %14
+  br label %80
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %39, align 8
+  %40 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %39, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %40, %"class.__gnu_cxx::__normal_iterator"** %2
+  %41 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %41, i32 0, i32 0
+  %43 = load i32*, i32** %42, align 8
+  %44 = getelementptr inbounds i32, i32* %43, i32 1
+  store i32* %44, i32** %42, align 8
+  %45 = load i32, i32* @x.166
+  %46 = load i32, i32* @y.167
+  %47 = sub i32 %45, 542638624
+  %48 = sub i32 %47, 1
+  %49 = add i32 %48, 542638624
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 false, true
+  %58 = and i1 %55, false
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, false
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 false, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  %71 = select i1 %69, i32 -1164178375, i32 1316423926
+  store i32 %71, i32* %14
+  br label %80
+
+; <label>:72:                                     ; preds = %15
+  %73 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2
+  ret %"class.__gnu_cxx::__normal_iterator"* %73
+
+; <label>:74:                                     ; preds = %15
+  %75 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %75, align 8
+  %76 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %75, align 8
+  %77 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %76, i32 0, i32 0
+  %78 = load i32*, i32** %77, align 8
+  %79 = getelementptr inbounds i32, i32* %78, i32 1
+  store i32* %79, i32** %77, align 8
+  store i32 125761100, i32* %14
+  br label %80
+
+; <label>:80:                                     ; preds = %74, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4)) #4 comdat {
+  %2 = alloca i32*, align 8
+  store i32* %0, i32** %2, align 8
+  %3 = load i32*, i32** %2, align 8
+  ret i32* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"*, i64) #4 comdat align 2 {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i32*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  store i64 %1, i64* %5, align 8
+  %7 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  %10 = load i64, i64* %5, align 8
+  %11 = getelementptr inbounds i32, i32* %9, i64 %10
+  store i32* %11, i32** %6, align 8
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %3, i32** dereferenceable(8) %6) #3
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %13 = load i32*, i32** %12, align 8
+  ret i32* %13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2, align 8
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %5 = load i32*, i32** %4, align 8
+  ret i32* %5
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca i64*
+  %14 = alloca i64*
+  %15 = alloca i32*
+  %16 = alloca i64*
+  %17 = alloca i64*
+  %18 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %19 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %20 = alloca i1
+  %21 = alloca i1
+  %22 = load i32, i32* @x.174
+  %23 = load i32, i32* @y.175
+  %24 = sub i32 %22, 5378985
+  %25 = sub i32 %24, 1
+  %26 = add i32 %25, 5378985
+  %27 = sub i32 %22, 1
+  %28 = mul i32 %22, %26
+  %29 = urem i32 %28, 2
+  %30 = icmp eq i32 %29, 0
+  store i1 %30, i1* %21
+  %31 = icmp slt i32 %23, 10
+  store i1 %31, i1* %20
+  %32 = alloca i32
+  store i32 127070575, i32* %32
+  br label %33
+
+; <label>:33:                                     ; preds = %4, %536
+  %34 = load i32, i32* %32
+  switch i32 %34, label %35 [
+    i32 127070575, label %36
+    i32 1128016623, label %56
+    i32 -1471106005, label %112
+    i32 -272885206, label %113
+    i32 -60279903, label %125
+    i32 -325583331, label %159
+    i32 1662132307, label %168
+    i32 -418460023, label %190
+    i32 1281995199, label %199
+    i32 -363931025, label %210
+    i32 -1814114287, label %226
+    i32 -991847872, label %279
+    i32 -1634095042, label %280
+    i32 -1453782694, label %307
+    i32 -630563855, label %352
+    i32 -522458800, label %353
+    i32 -1791695902, label %374
+    i32 222105790, label %517
+  ]
+
+; <label>:35:                                     ; preds = %33
+  br label %536
+
+; <label>:36:                                     ; preds = %33
+  %37 = load volatile i1, i1* %21
+  %38 = load volatile i1, i1* %20
+  %39 = xor i1 %37, true
+  %40 = xor i1 %38, true
+  %41 = xor i1 false, true
+  %42 = and i1 %39, false
+  %43 = and i1 %37, %41
+  %44 = and i1 %40, false
+  %45 = and i1 %38, %41
+  %46 = or i1 %42, %43
+  %47 = or i1 %44, %45
+  %48 = xor i1 %46, %47
+  %49 = or i1 %39, %40
+  %50 = xor i1 %49, true
+  %51 = or i1 false, %41
+  %52 = and i1 %50, %51
+  %53 = or i1 %48, %52
+  %54 = or i1 %37, %38
+  %55 = select i1 %53, i32 1128016623, i32 -522458800
+  store i32 %55, i32* %32
+  br label %536
+
+; <label>:56:                                     ; preds = %33
+  %57 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %57, %"class.__gnu_cxx::__normal_iterator"** %19
+  %58 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %58, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %18
+  %59 = alloca i64, align 8
+  store i64* %59, i64** %17
+  %60 = alloca i64, align 8
+  store i64* %60, i64** %16
+  %61 = alloca i32, align 4
+  store i32* %61, i32** %15
+  %62 = alloca i64, align 8
+  store i64* %62, i64** %14
+  %63 = alloca i64, align 8
+  store i64* %63, i64** %13
+  %64 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %64, %"class.__gnu_cxx::__normal_iterator"** %12
+  %65 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %65, %"class.__gnu_cxx::__normal_iterator"** %11
+  %66 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %66, %"class.__gnu_cxx::__normal_iterator"** %10
+  %67 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %67, %"class.__gnu_cxx::__normal_iterator"** %9
+  %68 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %68, %"class.__gnu_cxx::__normal_iterator"** %8
+  %69 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %69, %"class.__gnu_cxx::__normal_iterator"** %7
+  %70 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %70, %"class.__gnu_cxx::__normal_iterator"** %6
+  %71 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %72 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %72, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %5
+  %73 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %74 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %75 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %74, i32 0, i32 0
+  store i32* %0, i32** %75, align 8
+  %76 = load volatile i64*, i64** %17
+  store i64 %1, i64* %76, align 8
+  %77 = load volatile i64*, i64** %16
+  store i64 %2, i64* %77, align 8
+  %78 = load volatile i32*, i32** %15
+  store i32 %3, i32* %78, align 4
+  %79 = load volatile i64*, i64** %17
+  %80 = load i64, i64* %79, align 8
+  %81 = load volatile i64*, i64** %14
+  store i64 %80, i64* %81, align 8
+  %82 = load volatile i64*, i64** %17
+  %83 = load i64, i64* %82, align 8
+  %84 = load volatile i64*, i64** %13
+  store i64 %83, i64* %84, align 8
+  %85 = load i32, i32* @x.174
+  %86 = load i32, i32* @y.175
+  %87 = sub i32 %85, -1405335526
+  %88 = sub i32 %87, 1
+  %89 = add i32 %88, -1405335526
+  %90 = sub i32 %85, 1
+  %91 = mul i32 %85, %89
+  %92 = urem i32 %91, 2
+  %93 = icmp eq i32 %92, 0
+  %94 = icmp slt i32 %86, 10
+  %95 = xor i1 %93, true
+  %96 = xor i1 %94, true
+  %97 = xor i1 true, true
+  %98 = and i1 %95, true
+  %99 = and i1 %93, %97
+  %100 = and i1 %96, true
+  %101 = and i1 %94, %97
+  %102 = or i1 %98, %99
+  %103 = or i1 %100, %101
+  %104 = xor i1 %102, %103
+  %105 = or i1 %95, %96
+  %106 = xor i1 %105, true
+  %107 = or i1 true, %97
+  %108 = and i1 %106, %107
+  %109 = or i1 %104, %108
+  %110 = or i1 %93, %94
+  %111 = select i1 %109, i32 -1471106005, i32 -522458800
+  store i32 %111, i32* %32
+  br label %536
+
+; <label>:112:                                    ; preds = %33
+  store i32 -272885206, i32* %32
+  br label %536
+
+; <label>:113:                                    ; preds = %33
+  %114 = load volatile i64*, i64** %13
+  %115 = load i64, i64* %114, align 8
+  %116 = load volatile i64*, i64** %16
+  %117 = load i64, i64* %116, align 8
+  %118 = add i64 %117, 5705022681134693031
+  %119 = sub i64 %118, 1
+  %120 = sub i64 %119, 5705022681134693031
+  %121 = sub nsw i64 %117, 1
+  %122 = sdiv i64 %120, 2
+  %123 = icmp slt i64 %115, %122
+  %124 = select i1 %123, i32 -60279903, i32 -418460023
+  store i32 %124, i32* %32
+  br label %536
+
+; <label>:125:                                    ; preds = %33
+  %126 = load volatile i64*, i64** %13
+  %127 = load i64, i64* %126, align 8
+  %128 = add i64 %127, -1583691468702153899
+  %129 = add i64 %128, 1
+  %130 = sub i64 %129, -1583691468702153899
+  %131 = add nsw i64 %127, 1
+  %132 = mul nsw i64 2, %130
+  %133 = load volatile i64*, i64** %13
+  store i64 %132, i64* %133, align 8
+  %134 = load volatile i64*, i64** %13
+  %135 = load i64, i64* %134, align 8
+  %136 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %137 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %136, i64 %135) #3
+  %138 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %139 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %138, i32 0, i32 0
+  store i32* %137, i32** %139, align 8
+  %140 = load volatile i64*, i64** %13
+  %141 = load i64, i64* %140, align 8
+  %142 = sub i64 %141, -8160404788851487172
+  %143 = sub i64 %142, 1
+  %144 = add i64 %143, -8160404788851487172
+  %145 = sub nsw i64 %141, 1
+  %146 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %147 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %146, i64 %144) #3
+  %148 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %149 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %148, i32 0, i32 0
+  store i32* %147, i32** %149, align 8
+  %150 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %151 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %150, i32 0, i32 0
+  %152 = load i32*, i32** %151, align 8
+  %153 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %154 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %153, i32 0, i32 0
+  %155 = load i32*, i32** %154, align 8
+  %156 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %18
+  %157 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %156, i32* %152, i32* %155)
+  %158 = select i1 %157, i32 -325583331, i32 1662132307
+  store i32 %158, i32* %32
+  br label %536
+
+; <label>:159:                                    ; preds = %33
+  %160 = load volatile i64*, i64** %13
+  %161 = load i64, i64* %160, align 8
+  %162 = sub i64 0, %161
+  %163 = sub i64 0, -1
+  %164 = add i64 %162, %163
+  %165 = sub i64 0, %164
+  %166 = add nsw i64 %161, -1
+  %167 = load volatile i64*, i64** %13
+  store i64 %165, i64* %167, align 8
+  store i32 1662132307, i32* %32
+  br label %536
+
+; <label>:168:                                    ; preds = %33
+  %169 = load volatile i64*, i64** %13
+  %170 = load i64, i64* %169, align 8
+  %171 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %172 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %171, i64 %170) #3
+  %173 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %174 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %173, i32 0, i32 0
+  store i32* %172, i32** %174, align 8
+  %175 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %176 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %175) #3
+  %177 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %176) #3
+  %178 = load i32, i32* %177, align 4
+  %179 = load volatile i64*, i64** %17
+  %180 = load i64, i64* %179, align 8
+  %181 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %182 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %181, i64 %180) #3
+  %183 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %184 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %183, i32 0, i32 0
+  store i32* %182, i32** %184, align 8
+  %185 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %186 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %185) #3
+  store i32 %178, i32* %186, align 4
+  %187 = load volatile i64*, i64** %13
+  %188 = load i64, i64* %187, align 8
+  %189 = load volatile i64*, i64** %17
+  store i64 %188, i64* %189, align 8
+  store i32 -272885206, i32* %32
+  br label %536
+
+; <label>:190:                                    ; preds = %33
+  %191 = load volatile i64*, i64** %16
+  %192 = load i64, i64* %191, align 8
+  %193 = xor i64 1, -1
+  %194 = xor i64 %192, %193
+  %195 = and i64 %194, %192
+  %196 = and i64 %192, 1
+  %197 = icmp eq i64 %195, 0
+  %198 = select i1 %197, i32 1281995199, i32 -1634095042
+  store i32 %198, i32* %32
+  br label %536
+
+; <label>:199:                                    ; preds = %33
+  %200 = load volatile i64*, i64** %13
+  %201 = load i64, i64* %200, align 8
+  %202 = load volatile i64*, i64** %16
+  %203 = load i64, i64* %202, align 8
+  %204 = sub i64 0, 2
+  %205 = add i64 %203, %204
+  %206 = sub nsw i64 %203, 2
+  %207 = sdiv i64 %205, 2
+  %208 = icmp eq i64 %201, %207
+  %209 = select i1 %208, i32 -363931025, i32 -1634095042
+  store i32 %209, i32* %32
+  br label %536
+
+; <label>:210:                                    ; preds = %33
+  %211 = load i32, i32* @x.174
+  %212 = load i32, i32* @y.175
+  %213 = add i32 %211, 1042032739
+  %214 = sub i32 %213, 1
+  %215 = sub i32 %214, 1042032739
+  %216 = sub i32 %211, 1
+  %217 = mul i32 %211, %215
+  %218 = urem i32 %217, 2
+  %219 = icmp eq i32 %218, 0
+  %220 = icmp slt i32 %212, 10
+  %221 = and i1 %219, %220
+  %222 = xor i1 %219, %220
+  %223 = or i1 %221, %222
+  %224 = or i1 %219, %220
+  %225 = select i1 %223, i32 -1814114287, i32 -1791695902
+  store i32 %225, i32* %32
+  br label %536
+
+; <label>:226:                                    ; preds = %33
+  %227 = load volatile i64*, i64** %13
+  %228 = load i64, i64* %227, align 8
+  %229 = sub i64 %228, -7221864359964857548
+  %230 = add i64 %229, 1
+  %231 = add i64 %230, -7221864359964857548
+  %232 = add nsw i64 %228, 1
+  %233 = mul nsw i64 2, %231
+  %234 = load volatile i64*, i64** %13
+  store i64 %233, i64* %234, align 8
+  %235 = load volatile i64*, i64** %13
+  %236 = load i64, i64* %235, align 8
+  %237 = add i64 %236, -5765787194480330263
+  %238 = sub i64 %237, 1
+  %239 = sub i64 %238, -5765787194480330263
+  %240 = sub nsw i64 %236, 1
+  %241 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %242 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %241, i64 %239) #3
+  %243 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %244 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %243, i32 0, i32 0
+  store i32* %242, i32** %244, align 8
+  %245 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %246 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %245) #3
+  %247 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %246) #3
+  %248 = load i32, i32* %247, align 4
+  %249 = load volatile i64*, i64** %17
+  %250 = load i64, i64* %249, align 8
+  %251 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %252 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %251, i64 %250) #3
+  %253 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %254 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %253, i32 0, i32 0
+  store i32* %252, i32** %254, align 8
+  %255 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %256 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %255) #3
+  store i32 %248, i32* %256, align 4
+  %257 = load volatile i64*, i64** %13
+  %258 = load i64, i64* %257, align 8
+  %259 = add i64 %258, 1000601432800564429
+  %260 = sub i64 %259, 1
+  %261 = sub i64 %260, 1000601432800564429
+  %262 = sub nsw i64 %258, 1
+  %263 = load volatile i64*, i64** %17
+  store i64 %261, i64* %263, align 8
+  %264 = load i32, i32* @x.174
+  %265 = load i32, i32* @y.175
+  %266 = sub i32 %264, -1334432587
+  %267 = sub i32 %266, 1
+  %268 = add i32 %267, -1334432587
+  %269 = sub i32 %264, 1
+  %270 = mul i32 %264, %268
+  %271 = urem i32 %270, 2
+  %272 = icmp eq i32 %271, 0
+  %273 = icmp slt i32 %265, 10
+  %274 = and i1 %272, %273
+  %275 = xor i1 %272, %273
+  %276 = or i1 %274, %275
+  %277 = or i1 %272, %273
+  %278 = select i1 %276, i32 -991847872, i32 -1791695902
+  store i32 %278, i32* %32
+  br label %536
+
+; <label>:279:                                    ; preds = %33
+  store i32 -1634095042, i32* %32
+  br label %536
+
+; <label>:280:                                    ; preds = %33
+  %281 = load i32, i32* @x.174
+  %282 = load i32, i32* @y.175
+  %283 = sub i32 0, 1
+  %284 = add i32 %281, %283
+  %285 = sub i32 %281, 1
+  %286 = mul i32 %281, %284
+  %287 = urem i32 %286, 2
+  %288 = icmp eq i32 %287, 0
+  %289 = icmp slt i32 %282, 10
+  %290 = xor i1 %288, true
+  %291 = xor i1 %289, true
+  %292 = xor i1 false, true
+  %293 = and i1 %290, false
+  %294 = and i1 %288, %292
+  %295 = and i1 %291, false
+  %296 = and i1 %289, %292
+  %297 = or i1 %293, %294
+  %298 = or i1 %295, %296
+  %299 = xor i1 %297, %298
+  %300 = or i1 %290, %291
+  %301 = xor i1 %300, true
+  %302 = or i1 false, %292
+  %303 = and i1 %301, %302
+  %304 = or i1 %299, %303
+  %305 = or i1 %288, %289
+  %306 = select i1 %304, i32 -1453782694, i32 222105790
+  store i32 %306, i32* %32
+  br label %536
+
+; <label>:307:                                    ; preds = %33
+  %308 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %309 = bitcast %"class.__gnu_cxx::__normal_iterator"* %308 to i8*
+  %310 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %311 = bitcast %"class.__gnu_cxx::__normal_iterator"* %310 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %309, i8* %311, i64 8, i32 8, i1 false)
+  %312 = load volatile i64*, i64** %17
+  %313 = load i64, i64* %312, align 8
+  %314 = load volatile i64*, i64** %14
+  %315 = load i64, i64* %314, align 8
+  %316 = load volatile i32*, i32** %15
+  %317 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %316) #3
+  %318 = load i32, i32* %317, align 4
+  %319 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %5
+  %320 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %319 to i8*
+  %321 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %18
+  %322 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %321 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %320, i8* %322, i64 1, i32 1, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__iter_comp_valISt7greaterIiEEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS5_EE()
+  %323 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %324 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %323, i32 0, i32 0
+  %325 = load i32*, i32** %324, align 8
+  call void @_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_comp_valISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32* %325, i64 %313, i64 %315, i32 %318)
+  %326 = load i32, i32* @x.174
+  %327 = load i32, i32* @y.175
+  %328 = sub i32 0, 1
+  %329 = add i32 %326, %328
+  %330 = sub i32 %326, 1
+  %331 = mul i32 %326, %329
+  %332 = urem i32 %331, 2
+  %333 = icmp eq i32 %332, 0
+  %334 = icmp slt i32 %327, 10
+  %335 = xor i1 %333, true
+  %336 = xor i1 %334, true
+  %337 = xor i1 false, true
+  %338 = and i1 %335, false
+  %339 = and i1 %333, %337
+  %340 = and i1 %336, false
+  %341 = and i1 %334, %337
+  %342 = or i1 %338, %339
+  %343 = or i1 %340, %341
+  %344 = xor i1 %342, %343
+  %345 = or i1 %335, %336
+  %346 = xor i1 %345, true
+  %347 = or i1 false, %337
+  %348 = and i1 %346, %347
+  %349 = or i1 %344, %348
+  %350 = or i1 %333, %334
+  %351 = select i1 %349, i32 -630563855, i32 222105790
+  store i32 %351, i32* %32
+  br label %536
+
+; <label>:352:                                    ; preds = %33
+  ret void
+
+; <label>:353:                                    ; preds = %33
+  %354 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %355 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %356 = alloca i64, align 8
+  %357 = alloca i64, align 8
+  %358 = alloca i32, align 4
+  %359 = alloca i64, align 8
+  %360 = alloca i64, align 8
+  %361 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %362 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %363 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %364 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %365 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %366 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %367 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %368 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %369 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %370 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %371 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %354, i32 0, i32 0
+  store i32* %0, i32** %371, align 8
+  store i64 %1, i64* %356, align 8
+  store i64 %2, i64* %357, align 8
+  store i32 %3, i32* %358, align 4
+  %372 = load i64, i64* %356, align 8
+  store i64 %372, i64* %359, align 8
+  %373 = load i64, i64* %356, align 8
+  store i64 %373, i64* %360, align 8
+  store i32 1128016623, i32* %32
+  br label %536
+
+; <label>:374:                                    ; preds = %33
+  %375 = load volatile i64*, i64** %13
+  %376 = load i64, i64* %375, align 8
+  %377 = add i64 0, -1463231859817565648
+  %378 = sub i64 %377, %376
+  %379 = sub i64 %378, -1463231859817565648
+  %380 = sub i64 0, %376
+  %381 = sub i64 0, %379
+  %382 = sub i64 0, 1
+  %383 = add i64 %381, %382
+  %384 = sub i64 0, %383
+  %385 = add i64 %379, 1
+  %386 = sub i64 0, 2690225852975805936
+  %387 = sub i64 %386, %376
+  %388 = add i64 %387, 2690225852975805936
+  %389 = sub i64 0, %376
+  %390 = add i64 %388, -6288940245946837074
+  %391 = add i64 %390, 1
+  %392 = sub i64 %391, -6288940245946837074
+  %393 = add i64 %388, 1
+  %394 = sub i64 %376, 2906206614976457545
+  %395 = sub i64 %394, 1
+  %396 = add i64 %395, 2906206614976457545
+  %397 = sub i64 %376, 1
+  %398 = mul i64 %396, 1
+  %399 = sub i64 0, 4110252514861471832
+  %400 = sub i64 %399, %376
+  %401 = add i64 %400, 4110252514861471832
+  %402 = sub i64 0, %376
+  %403 = sub i64 0, %401
+  %404 = sub i64 0, 1
+  %405 = add i64 %403, %404
+  %406 = sub i64 0, %405
+  %407 = add i64 %401, 1
+  %408 = shl i64 %376, 1
+  %409 = shl i64 %376, 1
+  %410 = sub i64 %376, -1634778867775968475
+  %411 = sub i64 %410, 1
+  %412 = add i64 %411, -1634778867775968475
+  %413 = sub i64 %376, 1
+  %414 = mul i64 %412, 1
+  %415 = sub i64 0, 1
+  %416 = sub i64 %376, %415
+  %417 = add nsw i64 %376, 1
+  %418 = sub i64 0, 2
+  %419 = add i64 0, %418
+  %420 = sub i64 0, 2
+  %421 = add i64 %419, 6757195702561615883
+  %422 = add i64 %421, %416
+  %423 = sub i64 %422, 6757195702561615883
+  %424 = add i64 %419, %416
+  %425 = shl i64 2, %416
+  %426 = sub i64 2, 5840902723212696234
+  %427 = sub i64 %426, %416
+  %428 = add i64 %427, 5840902723212696234
+  %429 = sub i64 2, %416
+  %430 = mul i64 %428, %416
+  %431 = mul nsw i64 2, %416
+  %432 = load volatile i64*, i64** %13
+  store i64 %431, i64* %432, align 8
+  %433 = load volatile i64*, i64** %13
+  %434 = load i64, i64* %433, align 8
+  %435 = shl i64 %434, 1
+  %436 = add i64 0, 3146327054125612788
+  %437 = sub i64 %436, %434
+  %438 = sub i64 %437, 3146327054125612788
+  %439 = sub i64 0, %434
+  %440 = sub i64 %438, 1616389158931122914
+  %441 = add i64 %440, 1
+  %442 = add i64 %441, 1616389158931122914
+  %443 = add i64 %438, 1
+  %444 = shl i64 %434, 1
+  %445 = sub i64 0, 1
+  %446 = add i64 %434, %445
+  %447 = sub i64 %434, 1
+  %448 = mul i64 %446, 1
+  %449 = add i64 %434, -2360873128881832823
+  %450 = sub i64 %449, 1
+  %451 = sub i64 %450, -2360873128881832823
+  %452 = sub i64 %434, 1
+  %453 = mul i64 %451, 1
+  %454 = shl i64 %434, 1
+  %455 = sub i64 %434, 1945226567079860455
+  %456 = sub i64 %455, 1
+  %457 = add i64 %456, 1945226567079860455
+  %458 = sub nsw i64 %434, 1
+  %459 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %460 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %459, i64 %457) #3
+  %461 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %462 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %461, i32 0, i32 0
+  store i32* %460, i32** %462, align 8
+  %463 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %464 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %463) #3
+  %465 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %464) #3
+  %466 = load i32, i32* %465, align 4
+  %467 = load volatile i64*, i64** %17
+  %468 = load i64, i64* %467, align 8
+  %469 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %470 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %469, i64 %468) #3
+  %471 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %472 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %471, i32 0, i32 0
+  store i32* %470, i32** %472, align 8
+  %473 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %474 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %473) #3
+  store i32 %466, i32* %474, align 4
+  %475 = load volatile i64*, i64** %13
+  %476 = load i64, i64* %475, align 8
+  %477 = sub i64 0, 1
+  %478 = add i64 %476, %477
+  %479 = sub i64 %476, 1
+  %480 = mul i64 %478, 1
+  %481 = add i64 0, -7312221614580438588
+  %482 = sub i64 %481, %476
+  %483 = sub i64 %482, -7312221614580438588
+  %484 = sub i64 0, %476
+  %485 = sub i64 0, 1
+  %486 = sub i64 %483, %485
+  %487 = add i64 %483, 1
+  %488 = sub i64 0, 7894973924102447093
+  %489 = sub i64 %488, %476
+  %490 = add i64 %489, 7894973924102447093
+  %491 = sub i64 0, %476
+  %492 = sub i64 0, %490
+  %493 = sub i64 0, 1
+  %494 = add i64 %492, %493
+  %495 = sub i64 0, %494
+  %496 = add i64 %490, 1
+  %497 = add i64 %476, -7914048481622920858
+  %498 = sub i64 %497, 1
+  %499 = sub i64 %498, -7914048481622920858
+  %500 = sub i64 %476, 1
+  %501 = mul i64 %499, 1
+  %502 = sub i64 %476, 7063220276905577929
+  %503 = sub i64 %502, 1
+  %504 = add i64 %503, 7063220276905577929
+  %505 = sub i64 %476, 1
+  %506 = mul i64 %504, 1
+  %507 = shl i64 %476, 1
+  %508 = add i64 %476, 7454949507943137447
+  %509 = sub i64 %508, 1
+  %510 = sub i64 %509, 7454949507943137447
+  %511 = sub i64 %476, 1
+  %512 = mul i64 %510, 1
+  %513 = sub i64 0, 1
+  %514 = add i64 %476, %513
+  %515 = sub nsw i64 %476, 1
+  %516 = load volatile i64*, i64** %17
+  store i64 %514, i64* %516, align 8
+  store i32 -1814114287, i32* %32
+  br label %536
+
+; <label>:517:                                    ; preds = %33
+  %518 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %519 = bitcast %"class.__gnu_cxx::__normal_iterator"* %518 to i8*
+  %520 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %521 = bitcast %"class.__gnu_cxx::__normal_iterator"* %520 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %519, i8* %521, i64 8, i32 8, i1 false)
+  %522 = load volatile i64*, i64** %17
+  %523 = load i64, i64* %522, align 8
+  %524 = load volatile i64*, i64** %14
+  %525 = load i64, i64* %524, align 8
+  %526 = load volatile i32*, i32** %15
+  %527 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %526) #3
+  %528 = load i32, i32* %527, align 4
+  %529 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %5
+  %530 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %529 to i8*
+  %531 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %18
+  %532 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %531 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %530, i8* %532, i64 1, i32 1, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__iter_comp_valISt7greaterIiEEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS5_EE()
+  %533 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %534 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %533, i32 0, i32 0
+  %535 = load i32*, i32** %534, align 8
+  call void @_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_comp_valISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32* %535, i64 %523, i64 %525, i32 %528)
+  store i32 -1453782694, i32* %32
+  br label %536
+
+; <label>:536:                                    ; preds = %517, %374, %353, %307, %280, %279, %226, %210, %199, %190, %168, %159, %125, %113, %112, %56, %36, %35
+  br label %33
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_comp_valISt7greaterIiEEEEvT_T0_SD_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %9 = alloca i64, align 8
+  %10 = alloca i64, align 8
+  %11 = alloca i32, align 4
+  %12 = alloca i64, align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %0, i32** %17, align 8
+  store i64 %1, i64* %9, align 8
+  store i64 %2, i64* %10, align 8
+  store i32 %3, i32* %11, align 4
+  %18 = load i64, i64* %9, align 8
+  %19 = sub i64 %18, 2690447006498891670
+  %20 = sub i64 %19, 1
+  %21 = add i64 %20, 2690447006498891670
+  %22 = sub nsw i64 %18, 1
+  %23 = sdiv i64 %21, 2
+  store i64 %23, i64* %12, align 8
+  %24 = alloca i32
+  store i32 1648620527, i32* %24
+  %25 = alloca i1
+  br label %26
+
+; <label>:26:                                     ; preds = %4, %150
+  %27 = load i32, i32* %24
+  switch i32 %27, label %28 [
+    i32 1648620527, label %29
+    i32 -1464329068, label %45
+    i32 857561107, label %63
+    i32 1231323839, label %66
+    i32 -2122475438, label %73
+    i32 -2036147342, label %101
+    i32 -119888605, label %117
+    i32 -1925797667, label %120
+    i32 -1652238265, label %138
+    i32 1482854136, label %145
+    i32 304165405, label %149
+  ]
+
+; <label>:28:                                     ; preds = %26
+  br label %150
+
+; <label>:29:                                     ; preds = %26
+  %30 = load i32, i32* @x.176
+  %31 = load i32, i32* @y.177
+  %32 = sub i32 %30, -875675033
+  %33 = sub i32 %32, 1
+  %34 = add i32 %33, -875675033
+  %35 = sub i32 %30, 1
+  %36 = mul i32 %30, %34
+  %37 = urem i32 %36, 2
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %31, 10
+  %40 = and i1 %38, %39
+  %41 = xor i1 %38, %39
+  %42 = or i1 %40, %41
+  %43 = or i1 %38, %39
+  %44 = select i1 %42, i32 -1464329068, i32 1482854136
+  store i32 %44, i32* %24
+  br label %150
+
+; <label>:45:                                     ; preds = %26
+  %46 = load i64, i64* %9, align 8
+  %47 = load i64, i64* %10, align 8
+  %48 = icmp sgt i64 %46, %47
+  store i1 %48, i1* %6
+  %49 = load i32, i32* @x.176
+  %50 = load i32, i32* @y.177
+  %51 = sub i32 0, 1
+  %52 = add i32 %49, %51
+  %53 = sub i32 %49, 1
+  %54 = mul i32 %49, %52
+  %55 = urem i32 %54, 2
+  %56 = icmp eq i32 %55, 0
+  %57 = icmp slt i32 %50, 10
+  %58 = and i1 %56, %57
+  %59 = xor i1 %56, %57
+  %60 = or i1 %58, %59
+  %61 = or i1 %56, %57
+  %62 = select i1 %60, i32 857561107, i32 1482854136
+  store i32 %62, i32* %24
+  br label %150
+
+; <label>:63:                                     ; preds = %26
+  %64 = load volatile i1, i1* %6
+  %65 = select i1 %64, i32 1231323839, i32 -2122475438
+  store i32 %65, i32* %24
+  store i1 false, i1* %25
+  br label %150
+
+; <label>:66:                                     ; preds = %26
+  %67 = load i64, i64* %12, align 8
+  %68 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %67) #3
+  %69 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  store i32* %68, i32** %69, align 8
+  %70 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %71 = load i32*, i32** %70, align 8
+  %72 = call zeroext i1 @_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"* %8, i32* %71, i32* dereferenceable(4) %11)
+  store i32 -2122475438, i32* %24
+  store i1 %72, i1* %25
+  br label %150
+
+; <label>:73:                                     ; preds = %26
+  %74 = load i1, i1* %25
+  store i1 %74, i1* %5
+  %75 = load i32, i32* @x.176
+  %76 = load i32, i32* @y.177
+  %77 = sub i32 0, 1
+  %78 = add i32 %75, %77
+  %79 = sub i32 %75, 1
+  %80 = mul i32 %75, %78
+  %81 = urem i32 %80, 2
+  %82 = icmp eq i32 %81, 0
+  %83 = icmp slt i32 %76, 10
+  %84 = xor i1 %82, true
+  %85 = xor i1 %83, true
+  %86 = xor i1 false, true
+  %87 = and i1 %84, false
+  %88 = and i1 %82, %86
+  %89 = and i1 %85, false
+  %90 = and i1 %83, %86
+  %91 = or i1 %87, %88
+  %92 = or i1 %89, %90
+  %93 = xor i1 %91, %92
+  %94 = or i1 %84, %85
+  %95 = xor i1 %94, true
+  %96 = or i1 false, %86
+  %97 = and i1 %95, %96
+  %98 = or i1 %93, %97
+  %99 = or i1 %82, %83
+  %100 = select i1 %98, i32 -2036147342, i32 304165405
+  store i32 %100, i32* %24
+  br label %150
+
+; <label>:101:                                    ; preds = %26
+  %102 = load i32, i32* @x.176
+  %103 = load i32, i32* @y.177
+  %104 = sub i32 %102, -306653136
+  %105 = sub i32 %104, 1
+  %106 = add i32 %105, -306653136
+  %107 = sub i32 %102, 1
+  %108 = mul i32 %102, %106
+  %109 = urem i32 %108, 2
+  %110 = icmp eq i32 %109, 0
+  %111 = icmp slt i32 %103, 10
+  %112 = and i1 %110, %111
+  %113 = xor i1 %110, %111
+  %114 = or i1 %112, %113
+  %115 = or i1 %110, %111
+  %116 = select i1 %114, i32 -119888605, i32 304165405
+  store i32 %116, i32* %24
+  br label %150
+
+; <label>:117:                                    ; preds = %26
+  %118 = load volatile i1, i1* %5
+  %119 = select i1 %118, i32 -1925797667, i32 -1652238265
+  store i32 %119, i32* %24
+  br label %150
+
+; <label>:120:                                    ; preds = %26
+  %121 = load i64, i64* %12, align 8
+  %122 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %121) #3
+  %123 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %122, i32** %123, align 8
+  %124 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %14) #3
+  %125 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %124) #3
+  %126 = load i32, i32* %125, align 4
+  %127 = load i64, i64* %9, align 8
+  %128 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %127) #3
+  %129 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %128, i32** %129, align 8
+  %130 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %15) #3
+  store i32 %126, i32* %130, align 4
+  %131 = load i64, i64* %12, align 8
+  store i64 %131, i64* %9, align 8
+  %132 = load i64, i64* %9, align 8
+  %133 = add i64 %132, 7785932264619588553
+  %134 = sub i64 %133, 1
+  %135 = sub i64 %134, 7785932264619588553
+  %136 = sub nsw i64 %132, 1
+  %137 = sdiv i64 %135, 2
+  store i64 %137, i64* %12, align 8
+  store i32 1648620527, i32* %24
+  br label %150
+
+; <label>:138:                                    ; preds = %26
+  %139 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %11) #3
+  %140 = load i32, i32* %139, align 4
+  %141 = load i64, i64* %9, align 8
+  %142 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %141) #3
+  %143 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %16, i32 0, i32 0
+  store i32* %142, i32** %143, align 8
+  %144 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %16) #3
+  store i32 %140, i32* %144, align 4
+  ret void
+
+; <label>:145:                                    ; preds = %26
+  %146 = load i64, i64* %9, align 8
+  %147 = load i64, i64* %10, align 8
+  %148 = icmp sgt i64 %146, %147
+  store i32 -1464329068, i32* %24
+  br label %150
+
+; <label>:149:                                    ; preds = %26
+  store i32 -2036147342, i32* %24
+  br label %150
+
+; <label>:150:                                    ; preds = %149, %145, %120, %117, %101, %73, %66, %63, %45, %29, %28
+  br label %26
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__iter_comp_valISt7greaterIiEEENS0_14_Iter_comp_valIT_EENS0_15_Iter_comp_iterIS5_EE() #0 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %3 = alloca %"struct.std::greater", align 1
+  %4 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %2, i32 0, i32 0
+  call void @_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"* %1)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"*, i32*, i32* dereferenceable(4)) #0 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.180
+  %8 = load i32, i32* @y.181
+  %9 = add i32 %7, 1963010282
+  %10 = sub i32 %9, 1
+  %11 = sub i32 %10, 1963010282
+  %12 = sub i32 %7, 1
+  %13 = mul i32 %7, %11
+  %14 = urem i32 %13, 2
+  %15 = icmp eq i32 %14, 0
+  store i1 %15, i1* %6
+  %16 = icmp slt i32 %8, 10
+  store i1 %16, i1* %5
+  %17 = alloca i32
+  store i32 -1835964134, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %3, %90
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 -1835964134, label %21
+    i32 -592038373, label %41
+    i32 -164354329, label %78
+    i32 -1450825949, label %80
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %90
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile i1, i1* %6
+  %23 = load volatile i1, i1* %5
+  %24 = xor i1 %22, true
+  %25 = xor i1 %23, true
+  %26 = xor i1 false, true
+  %27 = and i1 %24, false
+  %28 = and i1 %22, %26
+  %29 = and i1 %25, false
+  %30 = and i1 %23, %26
+  %31 = or i1 %27, %28
+  %32 = or i1 %29, %30
+  %33 = xor i1 %31, %32
+  %34 = or i1 %24, %25
+  %35 = xor i1 %34, true
+  %36 = or i1 false, %26
+  %37 = and i1 %35, %36
+  %38 = or i1 %33, %37
+  %39 = or i1 %22, %23
+  %40 = select i1 %38, i32 -592038373, i32 -1450825949
+  store i32 %40, i32* %17
+  br label %90
+
+; <label>:41:                                     ; preds = %18
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %43 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, align 8
+  %44 = alloca i32*, align 8
+  %45 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %42, i32 0, i32 0
+  store i32* %1, i32** %45, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %43, align 8
+  store i32* %2, i32** %44, align 8
+  %46 = load %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %43, align 8
+  %47 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %46, i32 0, i32 0
+  %48 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %42) #3
+  %49 = load i32*, i32** %44, align 8
+  %50 = call zeroext i1 @_ZNKSt7greaterIiEclERKiS2_(%"struct.std::greater"* %47, i32* dereferenceable(4) %48, i32* dereferenceable(4) %49)
+  store i1 %50, i1* %4
+  %51 = load i32, i32* @x.180
+  %52 = load i32, i32* @y.181
+  %53 = add i32 %51, 1227397274
+  %54 = sub i32 %53, 1
+  %55 = sub i32 %54, 1227397274
+  %56 = sub i32 %51, 1
+  %57 = mul i32 %51, %55
+  %58 = urem i32 %57, 2
+  %59 = icmp eq i32 %58, 0
+  %60 = icmp slt i32 %52, 10
+  %61 = xor i1 %59, true
+  %62 = xor i1 %60, true
+  %63 = xor i1 true, true
+  %64 = and i1 %61, true
+  %65 = and i1 %59, %63
+  %66 = and i1 %62, true
+  %67 = and i1 %60, %63
+  %68 = or i1 %64, %65
+  %69 = or i1 %66, %67
+  %70 = xor i1 %68, %69
+  %71 = or i1 %61, %62
+  %72 = xor i1 %71, true
+  %73 = or i1 true, %63
+  %74 = and i1 %72, %73
+  %75 = or i1 %70, %74
+  %76 = or i1 %59, %60
+  %77 = select i1 %75, i32 -164354329, i32 -1450825949
+  store i32 %77, i32* %17
+  br label %90
+
+; <label>:78:                                     ; preds = %18
+  %79 = load volatile i1, i1* %4
+  ret i1 %79
+
+; <label>:80:                                     ; preds = %18
+  %81 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %82 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, align 8
+  %83 = alloca i32*, align 8
+  %84 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %81, i32 0, i32 0
+  store i32* %1, i32** %84, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %82, align 8
+  store i32* %2, i32** %83, align 8
+  %85 = load %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %82, align 8
+  %86 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %85, i32 0, i32 0
+  %87 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %81) #3
+  %88 = load i32*, i32** %83, align 8
+  %89 = call zeroext i1 @_ZNKSt7greaterIiEclERKiS2_(%"struct.std::greater"* %86, i32* dereferenceable(4) %87, i32* dereferenceable(4) %88)
+  store i32 -592038373, i32* %17
+  br label %90
+
+; <label>:90:                                     ; preds = %80, %41, %21, %20
+  br label %18
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNKSt7greaterIiEclERKiS2_(%"struct.std::greater"*, i32* dereferenceable(4), i32* dereferenceable(4)) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.182
+  %8 = load i32, i32* @y.183
+  %9 = sub i32 0, 1
+  %10 = add i32 %7, %9
+  %11 = sub i32 %7, 1
+  %12 = mul i32 %7, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %6
+  %15 = icmp slt i32 %8, 10
+  store i1 %15, i1* %5
+  %16 = alloca i32
+  store i32 974691576, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %3, %65
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 974691576, label %20
+    i32 -359065789, label %28
+    i32 1814223467, label %53
+    i32 1257290298, label %55
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %65
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %6
+  %22 = load volatile i1, i1* %5
+  %23 = and i1 %21, %22
+  %24 = xor i1 %21, %22
+  %25 = or i1 %23, %24
+  %26 = or i1 %21, %22
+  %27 = select i1 %25, i32 -359065789, i32 1257290298
+  store i32 %27, i32* %16
+  br label %65
+
+; <label>:28:                                     ; preds = %17
+  %29 = alloca %"struct.std::greater"*, align 8
+  %30 = alloca i32*, align 8
+  %31 = alloca i32*, align 8
+  store %"struct.std::greater"* %0, %"struct.std::greater"** %29, align 8
+  store i32* %1, i32** %30, align 8
+  store i32* %2, i32** %31, align 8
+  %32 = load %"struct.std::greater"*, %"struct.std::greater"** %29, align 8
+  %33 = load i32*, i32** %30, align 8
+  %34 = load i32, i32* %33, align 4
+  %35 = load i32*, i32** %31, align 8
+  %36 = load i32, i32* %35, align 4
+  %37 = icmp sgt i32 %34, %36
+  store i1 %37, i1* %4
+  %38 = load i32, i32* @x.182
+  %39 = load i32, i32* @y.183
+  %40 = sub i32 %38, -1655931452
+  %41 = sub i32 %40, 1
+  %42 = add i32 %41, -1655931452
+  %43 = sub i32 %38, 1
+  %44 = mul i32 %38, %42
+  %45 = urem i32 %44, 2
+  %46 = icmp eq i32 %45, 0
+  %47 = icmp slt i32 %39, 10
+  %48 = and i1 %46, %47
+  %49 = xor i1 %46, %47
+  %50 = or i1 %48, %49
+  %51 = or i1 %46, %47
+  %52 = select i1 %50, i32 1814223467, i32 1257290298
+  store i32 %52, i32* %16
+  br label %65
+
+; <label>:53:                                     ; preds = %17
+  %54 = load volatile i1, i1* %4
+  ret i1 %54
+
+; <label>:55:                                     ; preds = %17
+  %56 = alloca %"struct.std::greater"*, align 8
+  %57 = alloca i32*, align 8
+  %58 = alloca i32*, align 8
+  store %"struct.std::greater"* %0, %"struct.std::greater"** %56, align 8
+  store i32* %1, i32** %57, align 8
+  store i32* %2, i32** %58, align 8
+  %59 = load %"struct.std::greater"*, %"struct.std::greater"** %56, align 8
+  %60 = load i32*, i32** %57, align 8
+  %61 = load i32, i32* %60, align 4
+  %62 = load i32*, i32** %58, align 8
+  %63 = load i32, i32* %62, align 4
+  %64 = icmp sgt i32 %61, %63
+  store i32 -359065789, i32* %16
+  br label %65
+
+; <label>:65:                                     ; preds = %55, %28, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops14_Iter_comp_valISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Iter_comp_val"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca %"struct.std::greater", align 1
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %3, align 8
+  %4 = load %"struct.__gnu_cxx::__ops::_Iter_comp_val"*, %"struct.__gnu_cxx::__ops::_Iter_comp_val"** %3, align 8
+  %5 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_val", %"struct.__gnu_cxx::__ops::_Iter_comp_val"* %4, i32 0, i32 0
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %2, align 8
+  %3 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2, align 8
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %5 = load i32*, i32** %4, align 8
+  %6 = getelementptr inbounds i32, i32* %5, i32 -1
+  store i32* %6, i32** %4, align 8
+  ret %"class.__gnu_cxx::__normal_iterator"* %3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_SC_SC_T0_(i32*, i32*, i32*, i32*) #0 comdat {
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = alloca i1
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %16 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %17 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %19 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %20 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %21 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %22 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %23 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %24 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %25 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %26 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %27 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %28 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %29 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %30 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %31 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %32 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %33 = alloca i1
+  %34 = alloca i1
+  %35 = load i32, i32* @x.188
+  %36 = load i32, i32* @y.189
+  %37 = add i32 %35, -1929619526
+  %38 = sub i32 %37, 1
+  %39 = sub i32 %38, -1929619526
+  %40 = sub i32 %35, 1
+  %41 = mul i32 %35, %39
+  %42 = urem i32 %41, 2
+  %43 = icmp eq i32 %42, 0
+  store i1 %43, i1* %34
+  %44 = icmp slt i32 %36, 10
+  store i1 %44, i1* %33
+  %45 = alloca i32
+  store i32 683235132, i32* %45
+  br label %46
+
+; <label>:46:                                     ; preds = %4, %533
+  %47 = load i32, i32* %45
+  switch i32 %47, label %48 [
+    i32 683235132, label %49
+    i32 1311206565, label %69
+    i32 276491539, label %144
+    i32 -1654925641, label %147
+    i32 1145437132, label %175
+    i32 -706179920, label %218
+    i32 -1583129964, label %221
+    i32 -524122548, label %236
+    i32 714843650, label %254
+    i32 220206652, label %269
+    i32 -1616511863, label %284
+    i32 626963620, label %285
+    i32 630755030, label %286
+    i32 852896797, label %302
+    i32 -274668549, label %346
+    i32 265980015, label %349
+    i32 -1807034524, label %364
+    i32 -791841923, label %382
+    i32 620604642, label %397
+    i32 1403997788, label %412
+    i32 626192221, label %413
+    i32 -1094302027, label %428
+    i32 584693365, label %455
+    i32 439949516, label %456
+    i32 -1395324929, label %457
+    i32 -1846155920, label %498
+    i32 680698296, label %515
+    i32 150297518, label %532
+  ]
+
+; <label>:48:                                     ; preds = %46
+  br label %533
+
+; <label>:49:                                     ; preds = %46
+  %50 = load volatile i1, i1* %34
+  %51 = load volatile i1, i1* %33
+  %52 = xor i1 %50, true
+  %53 = xor i1 %51, true
+  %54 = xor i1 true, true
+  %55 = and i1 %52, true
+  %56 = and i1 %50, %54
+  %57 = and i1 %53, true
+  %58 = and i1 %51, %54
+  %59 = or i1 %55, %56
+  %60 = or i1 %57, %58
+  %61 = xor i1 %59, %60
+  %62 = or i1 %52, %53
+  %63 = xor i1 %62, true
+  %64 = or i1 true, %54
+  %65 = and i1 %63, %64
+  %66 = or i1 %61, %65
+  %67 = or i1 %50, %51
+  %68 = select i1 %66, i32 1311206565, i32 -1395324929
+  store i32 %68, i32* %45
+  br label %533
+
+; <label>:69:                                     ; preds = %46
+  %70 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %70, %"class.__gnu_cxx::__normal_iterator"** %32
+  %71 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %71, %"class.__gnu_cxx::__normal_iterator"** %31
+  %72 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %72, %"class.__gnu_cxx::__normal_iterator"** %30
+  %73 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %73, %"class.__gnu_cxx::__normal_iterator"** %29
+  %74 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %74, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %75 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %76 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %77 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %77, %"class.__gnu_cxx::__normal_iterator"** %27
+  %78 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %78, %"class.__gnu_cxx::__normal_iterator"** %26
+  %79 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %79, %"class.__gnu_cxx::__normal_iterator"** %25
+  %80 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %80, %"class.__gnu_cxx::__normal_iterator"** %24
+  %81 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %81, %"class.__gnu_cxx::__normal_iterator"** %23
+  %82 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %82, %"class.__gnu_cxx::__normal_iterator"** %22
+  %83 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %83, %"class.__gnu_cxx::__normal_iterator"** %21
+  %84 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %84, %"class.__gnu_cxx::__normal_iterator"** %20
+  %85 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %85, %"class.__gnu_cxx::__normal_iterator"** %19
+  %86 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %86, %"class.__gnu_cxx::__normal_iterator"** %18
+  %87 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %87, %"class.__gnu_cxx::__normal_iterator"** %17
+  %88 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %88, %"class.__gnu_cxx::__normal_iterator"** %16
+  %89 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %89, %"class.__gnu_cxx::__normal_iterator"** %15
+  %90 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %90, %"class.__gnu_cxx::__normal_iterator"** %14
+  %91 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %91, %"class.__gnu_cxx::__normal_iterator"** %13
+  %92 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %92, %"class.__gnu_cxx::__normal_iterator"** %12
+  %93 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %93, %"class.__gnu_cxx::__normal_iterator"** %11
+  %94 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %94, %"class.__gnu_cxx::__normal_iterator"** %10
+  %95 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %95, %"class.__gnu_cxx::__normal_iterator"** %9
+  %96 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %96, %"class.__gnu_cxx::__normal_iterator"** %8
+  %97 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %98 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %97, i32 0, i32 0
+  store i32* %0, i32** %98, align 8
+  %99 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %100 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %99, i32 0, i32 0
+  store i32* %1, i32** %100, align 8
+  %101 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %102 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %101, i32 0, i32 0
+  store i32* %2, i32** %102, align 8
+  %103 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %104 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %103, i32 0, i32 0
+  store i32* %3, i32** %104, align 8
+  %105 = bitcast %"class.__gnu_cxx::__normal_iterator"* %75 to i8*
+  %106 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %107 = bitcast %"class.__gnu_cxx::__normal_iterator"* %106 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %105, i8* %107, i64 8, i32 8, i1 false)
+  %108 = bitcast %"class.__gnu_cxx::__normal_iterator"* %76 to i8*
+  %109 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %110 = bitcast %"class.__gnu_cxx::__normal_iterator"* %109 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %108, i8* %110, i64 8, i32 8, i1 false)
+  %111 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %75, i32 0, i32 0
+  %112 = load i32*, i32** %111, align 8
+  %113 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %76, i32 0, i32 0
+  %114 = load i32*, i32** %113, align 8
+  %115 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %116 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %115, i32* %112, i32* %114)
+  store i1 %116, i1* %7
+  %117 = load i32, i32* @x.188
+  %118 = load i32, i32* @y.189
+  %119 = sub i32 %117, -73830308
+  %120 = sub i32 %119, 1
+  %121 = add i32 %120, -73830308
+  %122 = sub i32 %117, 1
+  %123 = mul i32 %117, %121
+  %124 = urem i32 %123, 2
+  %125 = icmp eq i32 %124, 0
+  %126 = icmp slt i32 %118, 10
+  %127 = xor i1 %125, true
+  %128 = xor i1 %126, true
+  %129 = xor i1 false, true
+  %130 = and i1 %127, false
+  %131 = and i1 %125, %129
+  %132 = and i1 %128, false
+  %133 = and i1 %126, %129
+  %134 = or i1 %130, %131
+  %135 = or i1 %132, %133
+  %136 = xor i1 %134, %135
+  %137 = or i1 %127, %128
+  %138 = xor i1 %137, true
+  %139 = or i1 false, %129
+  %140 = and i1 %138, %139
+  %141 = or i1 %136, %140
+  %142 = or i1 %125, %126
+  %143 = select i1 %141, i32 276491539, i32 -1395324929
+  store i32 %143, i32* %45
+  br label %533
+
+; <label>:144:                                    ; preds = %46
+  %145 = load volatile i1, i1* %7
+  %146 = select i1 %145, i32 -1654925641, i32 630755030
+  store i32 %146, i32* %45
+  br label %533
+
+; <label>:147:                                    ; preds = %46
+  %148 = load i32, i32* @x.188
+  %149 = load i32, i32* @y.189
+  %150 = sub i32 %148, 1127512745
+  %151 = sub i32 %150, 1
+  %152 = add i32 %151, 1127512745
+  %153 = sub i32 %148, 1
+  %154 = mul i32 %148, %152
+  %155 = urem i32 %154, 2
+  %156 = icmp eq i32 %155, 0
+  %157 = icmp slt i32 %149, 10
+  %158 = xor i1 %156, true
+  %159 = xor i1 %157, true
+  %160 = xor i1 true, true
+  %161 = and i1 %158, true
+  %162 = and i1 %156, %160
+  %163 = and i1 %159, true
+  %164 = and i1 %157, %160
+  %165 = or i1 %161, %162
+  %166 = or i1 %163, %164
+  %167 = xor i1 %165, %166
+  %168 = or i1 %158, %159
+  %169 = xor i1 %168, true
+  %170 = or i1 true, %160
+  %171 = and i1 %169, %170
+  %172 = or i1 %167, %171
+  %173 = or i1 %156, %157
+  %174 = select i1 %172, i32 1145437132, i32 -1846155920
+  store i32 %174, i32* %45
+  br label %533
+
+; <label>:175:                                    ; preds = %46
+  %176 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %27
+  %177 = bitcast %"class.__gnu_cxx::__normal_iterator"* %176 to i8*
+  %178 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %179 = bitcast %"class.__gnu_cxx::__normal_iterator"* %178 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %177, i8* %179, i64 8, i32 8, i1 false)
+  %180 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %26
+  %181 = bitcast %"class.__gnu_cxx::__normal_iterator"* %180 to i8*
+  %182 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %183 = bitcast %"class.__gnu_cxx::__normal_iterator"* %182 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %181, i8* %183, i64 8, i32 8, i1 false)
+  %184 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %27
+  %185 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %184, i32 0, i32 0
+  %186 = load i32*, i32** %185, align 8
+  %187 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %26
+  %188 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %187, i32 0, i32 0
+  %189 = load i32*, i32** %188, align 8
+  %190 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %191 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %190, i32* %186, i32* %189)
+  store i1 %191, i1* %6
+  %192 = load i32, i32* @x.188
+  %193 = load i32, i32* @y.189
+  %194 = sub i32 0, 1
+  %195 = add i32 %192, %194
+  %196 = sub i32 %192, 1
+  %197 = mul i32 %192, %195
+  %198 = urem i32 %197, 2
+  %199 = icmp eq i32 %198, 0
+  %200 = icmp slt i32 %193, 10
+  %201 = xor i1 %199, true
+  %202 = xor i1 %200, true
+  %203 = xor i1 false, true
+  %204 = and i1 %201, false
+  %205 = and i1 %199, %203
+  %206 = and i1 %202, false
+  %207 = and i1 %200, %203
+  %208 = or i1 %204, %205
+  %209 = or i1 %206, %207
+  %210 = xor i1 %208, %209
+  %211 = or i1 %201, %202
+  %212 = xor i1 %211, true
+  %213 = or i1 false, %203
+  %214 = and i1 %212, %213
+  %215 = or i1 %210, %214
+  %216 = or i1 %199, %200
+  %217 = select i1 %215, i32 -706179920, i32 -1846155920
+  store i32 %217, i32* %45
+  br label %533
+
+; <label>:218:                                    ; preds = %46
+  %219 = load volatile i1, i1* %6
+  %220 = select i1 %219, i32 -1583129964, i32 -524122548
+  store i32 %220, i32* %45
+  br label %533
+
+; <label>:221:                                    ; preds = %46
+  %222 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %25
+  %223 = bitcast %"class.__gnu_cxx::__normal_iterator"* %222 to i8*
+  %224 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %225 = bitcast %"class.__gnu_cxx::__normal_iterator"* %224 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %223, i8* %225, i64 8, i32 8, i1 false)
+  %226 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %24
+  %227 = bitcast %"class.__gnu_cxx::__normal_iterator"* %226 to i8*
+  %228 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %229 = bitcast %"class.__gnu_cxx::__normal_iterator"* %228 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %227, i8* %229, i64 8, i32 8, i1 false)
+  %230 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %25
+  %231 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %230, i32 0, i32 0
+  %232 = load i32*, i32** %231, align 8
+  %233 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %24
+  %234 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %233, i32 0, i32 0
+  %235 = load i32*, i32** %234, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %232, i32* %235)
+  store i32 626963620, i32* %45
+  br label %533
+
+; <label>:236:                                    ; preds = %46
+  %237 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %23
+  %238 = bitcast %"class.__gnu_cxx::__normal_iterator"* %237 to i8*
+  %239 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %240 = bitcast %"class.__gnu_cxx::__normal_iterator"* %239 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %238, i8* %240, i64 8, i32 8, i1 false)
+  %241 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %22
+  %242 = bitcast %"class.__gnu_cxx::__normal_iterator"* %241 to i8*
+  %243 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %244 = bitcast %"class.__gnu_cxx::__normal_iterator"* %243 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %242, i8* %244, i64 8, i32 8, i1 false)
+  %245 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %23
+  %246 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %245, i32 0, i32 0
+  %247 = load i32*, i32** %246, align 8
+  %248 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %22
+  %249 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %248, i32 0, i32 0
+  %250 = load i32*, i32** %249, align 8
+  %251 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %252 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %251, i32* %247, i32* %250)
+  %253 = select i1 %252, i32 714843650, i32 220206652
+  store i32 %253, i32* %45
+  br label %533
+
+; <label>:254:                                    ; preds = %46
+  %255 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %21
+  %256 = bitcast %"class.__gnu_cxx::__normal_iterator"* %255 to i8*
+  %257 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %258 = bitcast %"class.__gnu_cxx::__normal_iterator"* %257 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %256, i8* %258, i64 8, i32 8, i1 false)
+  %259 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %20
+  %260 = bitcast %"class.__gnu_cxx::__normal_iterator"* %259 to i8*
+  %261 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %262 = bitcast %"class.__gnu_cxx::__normal_iterator"* %261 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %260, i8* %262, i64 8, i32 8, i1 false)
+  %263 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %21
+  %264 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %263, i32 0, i32 0
+  %265 = load i32*, i32** %264, align 8
+  %266 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %20
+  %267 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %266, i32 0, i32 0
+  %268 = load i32*, i32** %267, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %265, i32* %268)
+  store i32 -1616511863, i32* %45
+  br label %533
+
+; <label>:269:                                    ; preds = %46
+  %270 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %271 = bitcast %"class.__gnu_cxx::__normal_iterator"* %270 to i8*
+  %272 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %273 = bitcast %"class.__gnu_cxx::__normal_iterator"* %272 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %271, i8* %273, i64 8, i32 8, i1 false)
+  %274 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %275 = bitcast %"class.__gnu_cxx::__normal_iterator"* %274 to i8*
+  %276 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %277 = bitcast %"class.__gnu_cxx::__normal_iterator"* %276 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %275, i8* %277, i64 8, i32 8, i1 false)
+  %278 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %19
+  %279 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %278, i32 0, i32 0
+  %280 = load i32*, i32** %279, align 8
+  %281 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %18
+  %282 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %281, i32 0, i32 0
+  %283 = load i32*, i32** %282, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %280, i32* %283)
+  store i32 -1616511863, i32* %45
+  br label %533
+
+; <label>:284:                                    ; preds = %46
+  store i32 626963620, i32* %45
+  br label %533
+
+; <label>:285:                                    ; preds = %46
+  store i32 439949516, i32* %45
+  br label %533
+
+; <label>:286:                                    ; preds = %46
+  %287 = load i32, i32* @x.188
+  %288 = load i32, i32* @y.189
+  %289 = sub i32 %287, -1002795808
+  %290 = sub i32 %289, 1
+  %291 = add i32 %290, -1002795808
+  %292 = sub i32 %287, 1
+  %293 = mul i32 %287, %291
+  %294 = urem i32 %293, 2
+  %295 = icmp eq i32 %294, 0
+  %296 = icmp slt i32 %288, 10
+  %297 = and i1 %295, %296
+  %298 = xor i1 %295, %296
+  %299 = or i1 %297, %298
+  %300 = or i1 %295, %296
+  %301 = select i1 %299, i32 852896797, i32 680698296
+  store i32 %301, i32* %45
+  br label %533
+
+; <label>:302:                                    ; preds = %46
+  %303 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %17
+  %304 = bitcast %"class.__gnu_cxx::__normal_iterator"* %303 to i8*
+  %305 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %306 = bitcast %"class.__gnu_cxx::__normal_iterator"* %305 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %304, i8* %306, i64 8, i32 8, i1 false)
+  %307 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %16
+  %308 = bitcast %"class.__gnu_cxx::__normal_iterator"* %307 to i8*
+  %309 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %310 = bitcast %"class.__gnu_cxx::__normal_iterator"* %309 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %308, i8* %310, i64 8, i32 8, i1 false)
+  %311 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %17
+  %312 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %311, i32 0, i32 0
+  %313 = load i32*, i32** %312, align 8
+  %314 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %16
+  %315 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %314, i32 0, i32 0
+  %316 = load i32*, i32** %315, align 8
+  %317 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %318 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %317, i32* %313, i32* %316)
+  store i1 %318, i1* %5
+  %319 = load i32, i32* @x.188
+  %320 = load i32, i32* @y.189
+  %321 = add i32 %319, -384489177
+  %322 = sub i32 %321, 1
+  %323 = sub i32 %322, -384489177
+  %324 = sub i32 %319, 1
+  %325 = mul i32 %319, %323
+  %326 = urem i32 %325, 2
+  %327 = icmp eq i32 %326, 0
+  %328 = icmp slt i32 %320, 10
+  %329 = xor i1 %327, true
+  %330 = xor i1 %328, true
+  %331 = xor i1 false, true
+  %332 = and i1 %329, false
+  %333 = and i1 %327, %331
+  %334 = and i1 %330, false
+  %335 = and i1 %328, %331
+  %336 = or i1 %332, %333
+  %337 = or i1 %334, %335
+  %338 = xor i1 %336, %337
+  %339 = or i1 %329, %330
+  %340 = xor i1 %339, true
+  %341 = or i1 false, %331
+  %342 = and i1 %340, %341
+  %343 = or i1 %338, %342
+  %344 = or i1 %327, %328
+  %345 = select i1 %343, i32 -274668549, i32 680698296
+  store i32 %345, i32* %45
+  br label %533
+
+; <label>:346:                                    ; preds = %46
+  %347 = load volatile i1, i1* %5
+  %348 = select i1 %347, i32 265980015, i32 -1807034524
+  store i32 %348, i32* %45
+  br label %533
+
+; <label>:349:                                    ; preds = %46
+  %350 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %351 = bitcast %"class.__gnu_cxx::__normal_iterator"* %350 to i8*
+  %352 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %353 = bitcast %"class.__gnu_cxx::__normal_iterator"* %352 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %351, i8* %353, i64 8, i32 8, i1 false)
+  %354 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %355 = bitcast %"class.__gnu_cxx::__normal_iterator"* %354 to i8*
+  %356 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %357 = bitcast %"class.__gnu_cxx::__normal_iterator"* %356 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %355, i8* %357, i64 8, i32 8, i1 false)
+  %358 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %359 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %358, i32 0, i32 0
+  %360 = load i32*, i32** %359, align 8
+  %361 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %362 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %361, i32 0, i32 0
+  %363 = load i32*, i32** %362, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %360, i32* %363)
+  store i32 626192221, i32* %45
+  br label %533
+
+; <label>:364:                                    ; preds = %46
+  %365 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %366 = bitcast %"class.__gnu_cxx::__normal_iterator"* %365 to i8*
+  %367 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %368 = bitcast %"class.__gnu_cxx::__normal_iterator"* %367 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %366, i8* %368, i64 8, i32 8, i1 false)
+  %369 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %370 = bitcast %"class.__gnu_cxx::__normal_iterator"* %369 to i8*
+  %371 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %372 = bitcast %"class.__gnu_cxx::__normal_iterator"* %371 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %370, i8* %372, i64 8, i32 8, i1 false)
+  %373 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %374 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %373, i32 0, i32 0
+  %375 = load i32*, i32** %374, align 8
+  %376 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %377 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %376, i32 0, i32 0
+  %378 = load i32*, i32** %377, align 8
+  %379 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %380 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %379, i32* %375, i32* %378)
+  %381 = select i1 %380, i32 -791841923, i32 620604642
+  store i32 %381, i32* %45
+  br label %533
+
+; <label>:382:                                    ; preds = %46
+  %383 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %384 = bitcast %"class.__gnu_cxx::__normal_iterator"* %383 to i8*
+  %385 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %386 = bitcast %"class.__gnu_cxx::__normal_iterator"* %385 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %384, i8* %386, i64 8, i32 8, i1 false)
+  %387 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %388 = bitcast %"class.__gnu_cxx::__normal_iterator"* %387 to i8*
+  %389 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %390 = bitcast %"class.__gnu_cxx::__normal_iterator"* %389 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %388, i8* %390, i64 8, i32 8, i1 false)
+  %391 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %392 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %391, i32 0, i32 0
+  %393 = load i32*, i32** %392, align 8
+  %394 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %395 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %394, i32 0, i32 0
+  %396 = load i32*, i32** %395, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %393, i32* %396)
+  store i32 1403997788, i32* %45
+  br label %533
+
+; <label>:397:                                    ; preds = %46
+  %398 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %399 = bitcast %"class.__gnu_cxx::__normal_iterator"* %398 to i8*
+  %400 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %32
+  %401 = bitcast %"class.__gnu_cxx::__normal_iterator"* %400 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %399, i8* %401, i64 8, i32 8, i1 false)
+  %402 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %403 = bitcast %"class.__gnu_cxx::__normal_iterator"* %402 to i8*
+  %404 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %405 = bitcast %"class.__gnu_cxx::__normal_iterator"* %404 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %403, i8* %405, i64 8, i32 8, i1 false)
+  %406 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %407 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %406, i32 0, i32 0
+  %408 = load i32*, i32** %407, align 8
+  %409 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %410 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %409, i32 0, i32 0
+  %411 = load i32*, i32** %410, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %408, i32* %411)
+  store i32 1403997788, i32* %45
+  br label %533
+
+; <label>:412:                                    ; preds = %46
+  store i32 626192221, i32* %45
+  br label %533
+
+; <label>:413:                                    ; preds = %46
+  %414 = load i32, i32* @x.188
+  %415 = load i32, i32* @y.189
+  %416 = sub i32 0, 1
+  %417 = add i32 %414, %416
+  %418 = sub i32 %414, 1
+  %419 = mul i32 %414, %417
+  %420 = urem i32 %419, 2
+  %421 = icmp eq i32 %420, 0
+  %422 = icmp slt i32 %415, 10
+  %423 = and i1 %421, %422
+  %424 = xor i1 %421, %422
+  %425 = or i1 %423, %424
+  %426 = or i1 %421, %422
+  %427 = select i1 %425, i32 -1094302027, i32 150297518
+  store i32 %427, i32* %45
+  br label %533
+
+; <label>:428:                                    ; preds = %46
+  %429 = load i32, i32* @x.188
+  %430 = load i32, i32* @y.189
+  %431 = sub i32 0, 1
+  %432 = add i32 %429, %431
+  %433 = sub i32 %429, 1
+  %434 = mul i32 %429, %432
+  %435 = urem i32 %434, 2
+  %436 = icmp eq i32 %435, 0
+  %437 = icmp slt i32 %430, 10
+  %438 = xor i1 %436, true
+  %439 = xor i1 %437, true
+  %440 = xor i1 true, true
+  %441 = and i1 %438, true
+  %442 = and i1 %436, %440
+  %443 = and i1 %439, true
+  %444 = and i1 %437, %440
+  %445 = or i1 %441, %442
+  %446 = or i1 %443, %444
+  %447 = xor i1 %445, %446
+  %448 = or i1 %438, %439
+  %449 = xor i1 %448, true
+  %450 = or i1 true, %440
+  %451 = and i1 %449, %450
+  %452 = or i1 %447, %451
+  %453 = or i1 %436, %437
+  %454 = select i1 %452, i32 584693365, i32 150297518
+  store i32 %454, i32* %45
+  br label %533
+
+; <label>:455:                                    ; preds = %46
+  store i32 439949516, i32* %45
+  br label %533
+
+; <label>:456:                                    ; preds = %46
+  ret void
+
+; <label>:457:                                    ; preds = %46
+  %458 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %459 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %460 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %461 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %462 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %463 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %464 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %465 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %466 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %467 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %468 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %469 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %470 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %471 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %472 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %473 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %474 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %475 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %476 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %477 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %478 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %479 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %480 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %481 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %482 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %483 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %484 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %485 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %458, i32 0, i32 0
+  store i32* %0, i32** %485, align 8
+  %486 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %459, i32 0, i32 0
+  store i32* %1, i32** %486, align 8
+  %487 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %460, i32 0, i32 0
+  store i32* %2, i32** %487, align 8
+  %488 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %461, i32 0, i32 0
+  store i32* %3, i32** %488, align 8
+  %489 = bitcast %"class.__gnu_cxx::__normal_iterator"* %463 to i8*
+  %490 = bitcast %"class.__gnu_cxx::__normal_iterator"* %459 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %489, i8* %490, i64 8, i32 8, i1 false)
+  %491 = bitcast %"class.__gnu_cxx::__normal_iterator"* %464 to i8*
+  %492 = bitcast %"class.__gnu_cxx::__normal_iterator"* %460 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %491, i8* %492, i64 8, i32 8, i1 false)
+  %493 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %463, i32 0, i32 0
+  %494 = load i32*, i32** %493, align 8
+  %495 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %464, i32 0, i32 0
+  %496 = load i32*, i32** %495, align 8
+  %497 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %462, i32* %494, i32* %496)
+  store i32 1311206565, i32* %45
+  br label %533
+
+; <label>:498:                                    ; preds = %46
+  %499 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %27
+  %500 = bitcast %"class.__gnu_cxx::__normal_iterator"* %499 to i8*
+  %501 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %30
+  %502 = bitcast %"class.__gnu_cxx::__normal_iterator"* %501 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %500, i8* %502, i64 8, i32 8, i1 false)
+  %503 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %26
+  %504 = bitcast %"class.__gnu_cxx::__normal_iterator"* %503 to i8*
+  %505 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %506 = bitcast %"class.__gnu_cxx::__normal_iterator"* %505 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %504, i8* %506, i64 8, i32 8, i1 false)
+  %507 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %27
+  %508 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %507, i32 0, i32 0
+  %509 = load i32*, i32** %508, align 8
+  %510 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %26
+  %511 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %510, i32 0, i32 0
+  %512 = load i32*, i32** %511, align 8
+  %513 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %514 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %513, i32* %509, i32* %512)
+  store i32 1145437132, i32* %45
+  br label %533
+
+; <label>:515:                                    ; preds = %46
+  %516 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %17
+  %517 = bitcast %"class.__gnu_cxx::__normal_iterator"* %516 to i8*
+  %518 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %31
+  %519 = bitcast %"class.__gnu_cxx::__normal_iterator"* %518 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %517, i8* %519, i64 8, i32 8, i1 false)
+  %520 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %16
+  %521 = bitcast %"class.__gnu_cxx::__normal_iterator"* %520 to i8*
+  %522 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %29
+  %523 = bitcast %"class.__gnu_cxx::__normal_iterator"* %522 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %521, i8* %523, i64 8, i32 8, i1 false)
+  %524 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %17
+  %525 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %524, i32 0, i32 0
+  %526 = load i32*, i32** %525, align 8
+  %527 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %16
+  %528 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %527, i32 0, i32 0
+  %529 = load i32*, i32** %528, align 8
+  %530 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %28
+  %531 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %530, i32* %526, i32* %529)
+  store i32 852896797, i32* %45
+  br label %533
+
+; <label>:532:                                    ; preds = %46
+  store i32 -1094302027, i32* %45
+  br label %533
+
+; <label>:533:                                    ; preds = %532, %515, %498, %457, %455, %428, %413, %412, %397, %382, %364, %349, %346, %302, %286, %285, %284, %269, %254, %236, %221, %218, %175, %147, %144, %69, %49, %48
+  br label %46
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmiEl(%"class.__gnu_cxx::__normal_iterator"*, i64) #4 comdat align 2 {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %5 = alloca i64, align 8
+  %6 = alloca i32*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  store i64 %1, i64* %5, align 8
+  %7 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  %10 = load i64, i64* %5, align 8
+  %11 = sub i64 0, -4710976214239775361
+  %12 = sub i64 %11, %10
+  %13 = add i64 %12, -4710976214239775361
+  %14 = sub i64 0, %10
+  %15 = getelementptr inbounds i32, i32* %9, i64 %13
+  store i32* %15, i32** %6, align 8
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %3, i32** dereferenceable(8) %6) #3
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %17 = load i32*, i32** %16, align 8
+  ret i32* %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEET_SC_SC_SC_T0_(i32*, i32*, i32*) #4 comdat {
+  %4 = alloca i1
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %16 = alloca i1
+  %17 = alloca i1
+  %18 = load i32, i32* @x.192
+  %19 = load i32, i32* @y.193
+  %20 = sub i32 %18, 263249300
+  %21 = sub i32 %20, 1
+  %22 = add i32 %21, 263249300
+  %23 = sub i32 %18, 1
+  %24 = mul i32 %18, %22
+  %25 = urem i32 %24, 2
+  %26 = icmp eq i32 %25, 0
+  store i1 %26, i1* %17
+  %27 = icmp slt i32 %19, 10
+  store i1 %27, i1* %16
+  %28 = alloca i32
+  store i32 2095277058, i32* %28
+  br label %29
+
+; <label>:29:                                     ; preds = %3, %367
+  %30 = load i32, i32* %28
+  switch i32 %30, label %31 [
+    i32 2095277058, label %32
+    i32 285779345, label %40
+    i32 139582738, label %73
+    i32 -239136542, label %74
+    i32 -501637420, label %75
+    i32 -1223703360, label %93
+    i32 2140879795, label %108
+    i32 -141730845, label %138
+    i32 -1064063969, label %139
+    i32 -1092833787, label %155
+    i32 972494886, label %185
+    i32 -1430699624, label %186
+    i32 -1483695512, label %204
+    i32 -819734181, label %207
+    i32 1887240331, label %223
+    i32 -1774419543, label %253
+    i32 830851048, label %256
+    i32 -845457465, label %264
+    i32 1877806242, label %292
+    i32 2066862812, label %324
+    i32 1159409255, label %325
+    i32 -767542920, label %340
+    i32 -363393864, label %343
+    i32 -1980464369, label %346
+    i32 1543779538, label %350
+  ]
+
+; <label>:31:                                     ; preds = %29
+  br label %367
+
+; <label>:32:                                     ; preds = %29
+  %33 = load volatile i1, i1* %17
+  %34 = load volatile i1, i1* %16
+  %35 = and i1 %33, %34
+  %36 = xor i1 %33, %34
+  %37 = or i1 %35, %36
+  %38 = or i1 %33, %34
+  %39 = select i1 %37, i32 285779345, i32 1159409255
+  store i32 %39, i32* %28
+  br label %367
+
+; <label>:40:                                     ; preds = %29
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %41, %"class.__gnu_cxx::__normal_iterator"** %15
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %42, %"class.__gnu_cxx::__normal_iterator"** %14
+  %43 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %43, %"class.__gnu_cxx::__normal_iterator"** %13
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %12
+  %45 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %45, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %11
+  %46 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %46, %"class.__gnu_cxx::__normal_iterator"** %10
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %47, %"class.__gnu_cxx::__normal_iterator"** %9
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %8
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %49, %"class.__gnu_cxx::__normal_iterator"** %7
+  %50 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %50, %"class.__gnu_cxx::__normal_iterator"** %6
+  %51 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %51, %"class.__gnu_cxx::__normal_iterator"** %5
+  %52 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %53 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %52, i32 0, i32 0
+  store i32* %0, i32** %53, align 8
+  %54 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %55 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %54, i32 0, i32 0
+  store i32* %1, i32** %55, align 8
+  %56 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %57 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %56, i32 0, i32 0
+  store i32* %2, i32** %57, align 8
+  %58 = load i32, i32* @x.192
+  %59 = load i32, i32* @y.193
+  %60 = add i32 %58, 1815753064
+  %61 = sub i32 %60, 1
+  %62 = sub i32 %61, 1815753064
+  %63 = sub i32 %58, 1
+  %64 = mul i32 %58, %62
+  %65 = urem i32 %64, 2
+  %66 = icmp eq i32 %65, 0
+  %67 = icmp slt i32 %59, 10
+  %68 = and i1 %66, %67
+  %69 = xor i1 %66, %67
+  %70 = or i1 %68, %69
+  %71 = or i1 %66, %67
+  %72 = select i1 %70, i32 139582738, i32 1159409255
+  store i32 %72, i32* %28
+  br label %367
+
+; <label>:73:                                     ; preds = %29
+  store i32 -239136542, i32* %28
+  br label %367
+
+; <label>:74:                                     ; preds = %29
+  store i32 -501637420, i32* %28
+  br label %367
+
+; <label>:75:                                     ; preds = %29
+  %76 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %77 = bitcast %"class.__gnu_cxx::__normal_iterator"* %76 to i8*
+  %78 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %79 = bitcast %"class.__gnu_cxx::__normal_iterator"* %78 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %77, i8* %79, i64 8, i32 8, i1 false)
+  %80 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %81 = bitcast %"class.__gnu_cxx::__normal_iterator"* %80 to i8*
+  %82 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %83 = bitcast %"class.__gnu_cxx::__normal_iterator"* %82 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %81, i8* %83, i64 8, i32 8, i1 false)
+  %84 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %85 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %84, i32 0, i32 0
+  %86 = load i32*, i32** %85, align 8
+  %87 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %88 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %87, i32 0, i32 0
+  %89 = load i32*, i32** %88, align 8
+  %90 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %11
+  %91 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %90, i32* %86, i32* %89)
+  %92 = select i1 %91, i32 -1223703360, i32 -1064063969
+  store i32 %92, i32* %28
+  br label %367
+
+; <label>:93:                                     ; preds = %29
+  %94 = load i32, i32* @x.192
+  %95 = load i32, i32* @y.193
+  %96 = sub i32 0, 1
+  %97 = add i32 %94, %96
+  %98 = sub i32 %94, 1
+  %99 = mul i32 %94, %97
+  %100 = urem i32 %99, 2
+  %101 = icmp eq i32 %100, 0
+  %102 = icmp slt i32 %95, 10
+  %103 = and i1 %101, %102
+  %104 = xor i1 %101, %102
+  %105 = or i1 %103, %104
+  %106 = or i1 %101, %102
+  %107 = select i1 %105, i32 2140879795, i32 -767542920
+  store i32 %107, i32* %28
+  br label %367
+
+; <label>:108:                                    ; preds = %29
+  %109 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %110 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %109) #3
+  %111 = load i32, i32* @x.192
+  %112 = load i32, i32* @y.193
+  %113 = sub i32 %111, -56961701
+  %114 = sub i32 %113, 1
+  %115 = add i32 %114, -56961701
+  %116 = sub i32 %111, 1
+  %117 = mul i32 %111, %115
+  %118 = urem i32 %117, 2
+  %119 = icmp eq i32 %118, 0
+  %120 = icmp slt i32 %112, 10
+  %121 = xor i1 %119, true
+  %122 = xor i1 %120, true
+  %123 = xor i1 true, true
+  %124 = and i1 %121, true
+  %125 = and i1 %119, %123
+  %126 = and i1 %122, true
+  %127 = and i1 %120, %123
+  %128 = or i1 %124, %125
+  %129 = or i1 %126, %127
+  %130 = xor i1 %128, %129
+  %131 = or i1 %121, %122
+  %132 = xor i1 %131, true
+  %133 = or i1 true, %123
+  %134 = and i1 %132, %133
+  %135 = or i1 %130, %134
+  %136 = or i1 %119, %120
+  %137 = select i1 %135, i32 -141730845, i32 -767542920
+  store i32 %137, i32* %28
+  br label %367
+
+; <label>:138:                                    ; preds = %29
+  store i32 -501637420, i32* %28
+  br label %367
+
+; <label>:139:                                    ; preds = %29
+  %140 = load i32, i32* @x.192
+  %141 = load i32, i32* @y.193
+  %142 = sub i32 %140, -1164327929
+  %143 = sub i32 %142, 1
+  %144 = add i32 %143, -1164327929
+  %145 = sub i32 %140, 1
+  %146 = mul i32 %140, %144
+  %147 = urem i32 %146, 2
+  %148 = icmp eq i32 %147, 0
+  %149 = icmp slt i32 %141, 10
+  %150 = and i1 %148, %149
+  %151 = xor i1 %148, %149
+  %152 = or i1 %150, %151
+  %153 = or i1 %148, %149
+  %154 = select i1 %152, i32 -1092833787, i32 -363393864
+  store i32 %154, i32* %28
+  br label %367
+
+; <label>:155:                                    ; preds = %29
+  %156 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %157 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %156) #3
+  %158 = load i32, i32* @x.192
+  %159 = load i32, i32* @y.193
+  %160 = sub i32 %158, -1805925768
+  %161 = sub i32 %160, 1
+  %162 = add i32 %161, -1805925768
+  %163 = sub i32 %158, 1
+  %164 = mul i32 %158, %162
+  %165 = urem i32 %164, 2
+  %166 = icmp eq i32 %165, 0
+  %167 = icmp slt i32 %159, 10
+  %168 = xor i1 %166, true
+  %169 = xor i1 %167, true
+  %170 = xor i1 true, true
+  %171 = and i1 %168, true
+  %172 = and i1 %166, %170
+  %173 = and i1 %169, true
+  %174 = and i1 %167, %170
+  %175 = or i1 %171, %172
+  %176 = or i1 %173, %174
+  %177 = xor i1 %175, %176
+  %178 = or i1 %168, %169
+  %179 = xor i1 %178, true
+  %180 = or i1 true, %170
+  %181 = and i1 %179, %180
+  %182 = or i1 %177, %181
+  %183 = or i1 %166, %167
+  %184 = select i1 %182, i32 972494886, i32 -363393864
+  store i32 %184, i32* %28
+  br label %367
+
+; <label>:185:                                    ; preds = %29
+  store i32 -1430699624, i32* %28
+  br label %367
+
+; <label>:186:                                    ; preds = %29
+  %187 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %188 = bitcast %"class.__gnu_cxx::__normal_iterator"* %187 to i8*
+  %189 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %190 = bitcast %"class.__gnu_cxx::__normal_iterator"* %189 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %188, i8* %190, i64 8, i32 8, i1 false)
+  %191 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %192 = bitcast %"class.__gnu_cxx::__normal_iterator"* %191 to i8*
+  %193 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %194 = bitcast %"class.__gnu_cxx::__normal_iterator"* %193 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %192, i8* %194, i64 8, i32 8, i1 false)
+  %195 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %196 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %195, i32 0, i32 0
+  %197 = load i32*, i32** %196, align 8
+  %198 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %199 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %198, i32 0, i32 0
+  %200 = load i32*, i32** %199, align 8
+  %201 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %11
+  %202 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %201, i32* %197, i32* %200)
+  %203 = select i1 %202, i32 -1483695512, i32 -819734181
+  store i32 %203, i32* %28
+  br label %367
+
+; <label>:204:                                    ; preds = %29
+  %205 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %206 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %205) #3
+  store i32 -1430699624, i32* %28
+  br label %367
+
+; <label>:207:                                    ; preds = %29
+  %208 = load i32, i32* @x.192
+  %209 = load i32, i32* @y.193
+  %210 = sub i32 %208, -356038776
+  %211 = sub i32 %210, 1
+  %212 = add i32 %211, -356038776
+  %213 = sub i32 %208, 1
+  %214 = mul i32 %208, %212
+  %215 = urem i32 %214, 2
+  %216 = icmp eq i32 %215, 0
+  %217 = icmp slt i32 %209, 10
+  %218 = and i1 %216, %217
+  %219 = xor i1 %216, %217
+  %220 = or i1 %218, %219
+  %221 = or i1 %216, %217
+  %222 = select i1 %220, i32 1887240331, i32 -1980464369
+  store i32 %222, i32* %28
+  br label %367
+
+; <label>:223:                                    ; preds = %29
+  %224 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %225 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %226 = call zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %224, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %225) #3
+  store i1 %226, i1* %4
+  %227 = load i32, i32* @x.192
+  %228 = load i32, i32* @y.193
+  %229 = sub i32 0, 1
+  %230 = add i32 %227, %229
+  %231 = sub i32 %227, 1
+  %232 = mul i32 %227, %230
+  %233 = urem i32 %232, 2
+  %234 = icmp eq i32 %233, 0
+  %235 = icmp slt i32 %228, 10
+  %236 = xor i1 %234, true
+  %237 = xor i1 %235, true
+  %238 = xor i1 true, true
+  %239 = and i1 %236, true
+  %240 = and i1 %234, %238
+  %241 = and i1 %237, true
+  %242 = and i1 %235, %238
+  %243 = or i1 %239, %240
+  %244 = or i1 %241, %242
+  %245 = xor i1 %243, %244
+  %246 = or i1 %236, %237
+  %247 = xor i1 %246, true
+  %248 = or i1 true, %238
+  %249 = and i1 %247, %248
+  %250 = or i1 %245, %249
+  %251 = or i1 %234, %235
+  %252 = select i1 %250, i32 -1774419543, i32 -1980464369
+  store i32 %252, i32* %28
+  br label %367
+
+; <label>:253:                                    ; preds = %29
+  %254 = load volatile i1, i1* %4
+  %255 = select i1 %254, i32 -845457465, i32 830851048
+  store i32 %255, i32* %28
+  br label %367
+
+; <label>:256:                                    ; preds = %29
+  %257 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %258 = bitcast %"class.__gnu_cxx::__normal_iterator"* %257 to i8*
+  %259 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %260 = bitcast %"class.__gnu_cxx::__normal_iterator"* %259 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %258, i8* %260, i64 8, i32 8, i1 false)
+  %261 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %15
+  %262 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %261, i32 0, i32 0
+  %263 = load i32*, i32** %262, align 8
+  ret i32* %263
+
+; <label>:264:                                    ; preds = %29
+  %265 = load i32, i32* @x.192
+  %266 = load i32, i32* @y.193
+  %267 = add i32 %265, -1445122375
+  %268 = sub i32 %267, 1
+  %269 = sub i32 %268, -1445122375
+  %270 = sub i32 %265, 1
+  %271 = mul i32 %265, %269
+  %272 = urem i32 %271, 2
+  %273 = icmp eq i32 %272, 0
+  %274 = icmp slt i32 %266, 10
+  %275 = xor i1 %273, true
+  %276 = xor i1 %274, true
+  %277 = xor i1 false, true
+  %278 = and i1 %275, false
+  %279 = and i1 %273, %277
+  %280 = and i1 %276, false
+  %281 = and i1 %274, %277
+  %282 = or i1 %278, %279
+  %283 = or i1 %280, %281
+  %284 = xor i1 %282, %283
+  %285 = or i1 %275, %276
+  %286 = xor i1 %285, true
+  %287 = or i1 false, %277
+  %288 = and i1 %286, %287
+  %289 = or i1 %284, %288
+  %290 = or i1 %273, %274
+  %291 = select i1 %289, i32 1877806242, i32 1543779538
+  store i32 %291, i32* %28
+  br label %367
+
+; <label>:292:                                    ; preds = %29
+  %293 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %294 = bitcast %"class.__gnu_cxx::__normal_iterator"* %293 to i8*
+  %295 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %296 = bitcast %"class.__gnu_cxx::__normal_iterator"* %295 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %294, i8* %296, i64 8, i32 8, i1 false)
+  %297 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %298 = bitcast %"class.__gnu_cxx::__normal_iterator"* %297 to i8*
+  %299 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %300 = bitcast %"class.__gnu_cxx::__normal_iterator"* %299 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %298, i8* %300, i64 8, i32 8, i1 false)
+  %301 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %302 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %301, i32 0, i32 0
+  %303 = load i32*, i32** %302, align 8
+  %304 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %305 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %304, i32 0, i32 0
+  %306 = load i32*, i32** %305, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %303, i32* %306)
+  %307 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %308 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %307) #3
+  %309 = load i32, i32* @x.192
+  %310 = load i32, i32* @y.193
+  %311 = sub i32 %309, 778513811
+  %312 = sub i32 %311, 1
+  %313 = add i32 %312, 778513811
+  %314 = sub i32 %309, 1
+  %315 = mul i32 %309, %313
+  %316 = urem i32 %315, 2
+  %317 = icmp eq i32 %316, 0
+  %318 = icmp slt i32 %310, 10
+  %319 = and i1 %317, %318
+  %320 = xor i1 %317, %318
+  %321 = or i1 %319, %320
+  %322 = or i1 %317, %318
+  %323 = select i1 %321, i32 2066862812, i32 1543779538
+  store i32 %323, i32* %28
+  br label %367
+
+; <label>:324:                                    ; preds = %29
+  store i32 -239136542, i32* %28
+  br label %367
+
+; <label>:325:                                    ; preds = %29
+  %326 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %327 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %328 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %329 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %330 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %331 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %332 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %333 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %334 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %335 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %336 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %337 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %327, i32 0, i32 0
+  store i32* %0, i32** %337, align 8
+  %338 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %328, i32 0, i32 0
+  store i32* %1, i32** %338, align 8
+  %339 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %329, i32 0, i32 0
+  store i32* %2, i32** %339, align 8
+  store i32 285779345, i32* %28
+  br label %367
+
+; <label>:340:                                    ; preds = %29
+  %341 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %342 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %341) #3
+  store i32 2140879795, i32* %28
+  br label %367
+
+; <label>:343:                                    ; preds = %29
+  %344 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %345 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %344) #3
+  store i32 -1092833787, i32* %28
+  br label %367
+
+; <label>:346:                                    ; preds = %29
+  %347 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %348 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %349 = call zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %347, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %348) #3
+  store i32 1887240331, i32* %28
+  br label %367
+
+; <label>:350:                                    ; preds = %29
+  %351 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %352 = bitcast %"class.__gnu_cxx::__normal_iterator"* %351 to i8*
+  %353 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %354 = bitcast %"class.__gnu_cxx::__normal_iterator"* %353 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %352, i8* %354, i64 8, i32 8, i1 false)
+  %355 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %356 = bitcast %"class.__gnu_cxx::__normal_iterator"* %355 to i8*
+  %357 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %358 = bitcast %"class.__gnu_cxx::__normal_iterator"* %357 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %356, i8* %358, i64 8, i32 8, i1 false)
+  %359 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %360 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %359, i32 0, i32 0
+  %361 = load i32*, i32** %360, align 8
+  %362 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %363 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %362, i32 0, i32 0
+  %364 = load i32*, i32** %363, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %361, i32* %364)
+  %365 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %366 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %365) #3
+  store i32 1877806242, i32* %28
+  br label %367
+
+; <label>:367:                                    ; preds = %350, %346, %343, %340, %325, %324, %292, %264, %253, %223, %207, %204, %186, %185, %155, %139, %138, %108, %93, %75, %74, %73, %40, %32, %31
+  br label %29
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32*, i32*) #4 comdat {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.194
+  %6 = load i32, i32* @y.195
+  %7 = sub i32 0, 1
+  %8 = add i32 %5, %7
+  %9 = sub i32 %5, 1
+  %10 = mul i32 %5, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %4
+  %13 = icmp slt i32 %6, 10
+  store i1 %13, i1* %3
+  %14 = alloca i32
+  store i32 -1674589106, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %80
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -1674589106, label %18
+    i32 953963103, label %38
+    i32 -619150507, label %72
+    i32 475352735, label %73
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %80
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %4
+  %20 = load volatile i1, i1* %3
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 true, true
+  %24 = and i1 %21, true
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, true
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 true, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 953963103, i32 475352735
+  store i32 %37, i32* %14
+  br label %80
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %41 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %39, i32 0, i32 0
+  store i32* %0, i32** %41, align 8
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %40, i32 0, i32 0
+  store i32* %1, i32** %42, align 8
+  %43 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %39) #3
+  %44 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %40) #3
+  call void @_ZSt4swapIiEvRT_S1_(i32* dereferenceable(4) %43, i32* dereferenceable(4) %44) #3
+  %45 = load i32, i32* @x.194
+  %46 = load i32, i32* @y.195
+  %47 = add i32 %45, -1355542360
+  %48 = sub i32 %47, 1
+  %49 = sub i32 %48, -1355542360
+  %50 = sub i32 %45, 1
+  %51 = mul i32 %45, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %46, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 true, true
+  %58 = and i1 %55, true
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, true
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 true, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  %71 = select i1 %69, i32 -619150507, i32 475352735
+  store i32 %71, i32* %14
+  br label %80
+
+; <label>:72:                                     ; preds = %15
+  ret void
+
+; <label>:73:                                     ; preds = %15
+  %74 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %75 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %76 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %74, i32 0, i32 0
+  store i32* %0, i32** %76, align 8
+  %77 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %75, i32 0, i32 0
+  store i32* %1, i32** %77, align 8
+  %78 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %74) #3
+  %79 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %75) #3
+  call void @_ZSt4swapIiEvRT_S1_(i32* dereferenceable(4) %78, i32* dereferenceable(4) %79) #3
+  store i32 953963103, i32* %14
+  br label %80
+
+; <label>:80:                                     ; preds = %73, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapIiEvRT_S1_(i32* dereferenceable(4), i32* dereferenceable(4)) #4 comdat {
+  %3 = alloca i1
+  %4 = alloca i1
+  %5 = load i32, i32* @x.196
+  %6 = load i32, i32* @y.197
+  %7 = sub i32 0, 1
+  %8 = add i32 %5, %7
+  %9 = sub i32 %5, 1
+  %10 = mul i32 %5, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %4
+  %13 = icmp slt i32 %6, 10
+  store i1 %13, i1* %3
+  %14 = alloca i32
+  store i32 76579235, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %81
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 76579235, label %18
+    i32 796828161, label %38
+    i32 -538353296, label %66
+    i32 -1684520505, label %67
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %81
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %4
+  %20 = load volatile i1, i1* %3
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 true, true
+  %24 = and i1 %21, true
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, true
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 true, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 796828161, i32 -1684520505
+  store i32 %37, i32* %14
+  br label %81
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca i32*, align 8
+  %40 = alloca i32*, align 8
+  %41 = alloca i32, align 4
+  store i32* %0, i32** %39, align 8
+  store i32* %1, i32** %40, align 8
+  %42 = load i32*, i32** %39, align 8
+  %43 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %42) #3
+  %44 = load i32, i32* %43, align 4
+  store i32 %44, i32* %41, align 4
+  %45 = load i32*, i32** %40, align 8
+  %46 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %45) #3
+  %47 = load i32, i32* %46, align 4
+  %48 = load i32*, i32** %39, align 8
+  store i32 %47, i32* %48, align 4
+  %49 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %41) #3
+  %50 = load i32, i32* %49, align 4
+  %51 = load i32*, i32** %40, align 8
+  store i32 %50, i32* %51, align 4
+  %52 = load i32, i32* @x.196
+  %53 = load i32, i32* @y.197
+  %54 = sub i32 0, 1
+  %55 = add i32 %52, %54
+  %56 = sub i32 %52, 1
+  %57 = mul i32 %52, %55
+  %58 = urem i32 %57, 2
+  %59 = icmp eq i32 %58, 0
+  %60 = icmp slt i32 %53, 10
+  %61 = and i1 %59, %60
+  %62 = xor i1 %59, %60
+  %63 = or i1 %61, %62
+  %64 = or i1 %59, %60
+  %65 = select i1 %63, i32 -538353296, i32 -1684520505
+  store i32 %65, i32* %14
+  br label %81
+
+; <label>:66:                                     ; preds = %15
+  ret void
+
+; <label>:67:                                     ; preds = %15
+  %68 = alloca i32*, align 8
+  %69 = alloca i32*, align 8
+  %70 = alloca i32, align 4
+  store i32* %0, i32** %68, align 8
+  store i32* %1, i32** %69, align 8
+  %71 = load i32*, i32** %68, align 8
+  %72 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %71) #3
+  %73 = load i32, i32* %72, align 4
+  store i32 %73, i32* %70, align 4
+  %74 = load i32*, i32** %69, align 8
+  %75 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %74) #3
+  %76 = load i32, i32* %75, align 4
+  %77 = load i32*, i32** %68, align 8
+  store i32 %76, i32* %77, align 4
+  %78 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %70) #3
+  %79 = load i32, i32* %78, align 4
+  %80 = load i32*, i32** %69, align 8
+  store i32 %79, i32* %80, align 4
+  store i32 796828161, i32* %14
+  br label %81
+
+; <label>:81:                                     ; preds = %67, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: nounwind readnone
+declare i64 @llvm.ctlz.i64(i64, i1) #11
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca i32, align 4
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %16 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %17 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %18 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %18, align 8
+  %19 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %19, align 8
+  %20 = alloca i32
+  store i32 826651337, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %2, %121
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 826651337, label %24
+    i32 -151495938, label %27
+    i32 501617273, label %28
+    i32 -240802096, label %31
+    i32 -1312135992, label %34
+    i32 634149752, label %45
+    i32 -495619592, label %66
+    i32 992097605, label %73
+    i32 1944569757, label %74
+    i32 -1468693033, label %76
+    i32 -377000194, label %92
+    i32 -1266953582, label %119
+    i32 -1327659825, label %120
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %121
+
+; <label>:24:                                     ; preds = %21
+  %25 = call zeroext i1 @_ZN9__gnu_cxxeqIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %26 = select i1 %25, i32 -151495938, i32 501617273
+  store i32 %26, i32* %20
+  br label %121
+
+; <label>:27:                                     ; preds = %21
+  store i32 -1468693033, i32* %20
+  br label %121
+
+; <label>:28:                                     ; preds = %21
+  %29 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %3, i64 1) #3
+  %30 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %29, i32** %30, align 8
+  store i32 -240802096, i32* %20
+  br label %121
+
+; <label>:31:                                     ; preds = %21
+  %32 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %6, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %33 = select i1 %32, i32 -1312135992, i32 -1468693033
+  store i32 %33, i32* %20
+  br label %121
+
+; <label>:34:                                     ; preds = %21
+  %35 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %36 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %35, i8* %36, i64 8, i32 8, i1 false)
+  %37 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %38 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %37, i8* %38, i64 8, i32 8, i1 false)
+  %39 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %40 = load i32*, i32** %39, align 8
+  %41 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %42 = load i32*, i32** %41, align 8
+  %43 = call zeroext i1 @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEESB_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5, i32* %40, i32* %42)
+  %44 = select i1 %43, i32 634149752, i32 -495619592
+  store i32 %44, i32* %20
+  br label %121
+
+; <label>:45:                                     ; preds = %21
+  %46 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  %47 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %46) #3
+  %48 = load i32, i32* %47, align 4
+  store i32 %48, i32* %9, align 4
+  %49 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %50 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %49, i8* %50, i64 8, i32 8, i1 false)
+  %51 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %52 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %51, i8* %52, i64 8, i32 8, i1 false)
+  %53 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 1) #3
+  %54 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  store i32* %53, i32** %54, align 8
+  %55 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %56 = load i32*, i32** %55, align 8
+  %57 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %58 = load i32*, i32** %57, align 8
+  %59 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %60 = load i32*, i32** %59, align 8
+  %61 = call i32* @_ZSt13move_backwardIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET0_T_S8_S7_(i32* %56, i32* %58, i32* %60)
+  %62 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  store i32* %61, i32** %62, align 8
+  %63 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #3
+  %64 = load i32, i32* %63, align 4
+  %65 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %3) #3
+  store i32 %64, i32* %65, align 4
+  store i32 992097605, i32* %20
+  br label %121
+
+; <label>:66:                                     ; preds = %21
+  %67 = bitcast %"class.__gnu_cxx::__normal_iterator"* %14 to i8*
+  %68 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %67, i8* %68, i64 8, i32 8, i1 false)
+  %69 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %16 to i8*
+  %70 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %69, i8* %70, i64 1, i32 1, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterISt7greaterIiEEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS5_EE()
+  %71 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %72 = load i32*, i32** %71, align 8
+  call void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_comp_iterISt7greaterIiEEEEvT_T0_(i32* %72)
+  store i32 992097605, i32* %20
+  br label %121
+
+; <label>:73:                                     ; preds = %21
+  store i32 1944569757, i32* %20
+  br label %121
+
+; <label>:74:                                     ; preds = %21
+  %75 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  store i32 -240802096, i32* %20
+  br label %121
+
+; <label>:76:                                     ; preds = %21
+  %77 = load i32, i32* @x.198
+  %78 = load i32, i32* @y.199
+  %79 = sub i32 %77, 2125223983
+  %80 = sub i32 %79, 1
+  %81 = add i32 %80, 2125223983
+  %82 = sub i32 %77, 1
+  %83 = mul i32 %77, %81
+  %84 = urem i32 %83, 2
+  %85 = icmp eq i32 %84, 0
+  %86 = icmp slt i32 %78, 10
+  %87 = and i1 %85, %86
+  %88 = xor i1 %85, %86
+  %89 = or i1 %87, %88
+  %90 = or i1 %85, %86
+  %91 = select i1 %89, i32 -377000194, i32 -1327659825
+  store i32 %91, i32* %20
+  br label %121
+
+; <label>:92:                                     ; preds = %21
+  %93 = load i32, i32* @x.198
+  %94 = load i32, i32* @y.199
+  %95 = sub i32 0, 1
+  %96 = add i32 %93, %95
+  %97 = sub i32 %93, 1
+  %98 = mul i32 %93, %96
+  %99 = urem i32 %98, 2
+  %100 = icmp eq i32 %99, 0
+  %101 = icmp slt i32 %94, 10
+  %102 = xor i1 %100, true
+  %103 = xor i1 %101, true
+  %104 = xor i1 false, true
+  %105 = and i1 %102, false
+  %106 = and i1 %100, %104
+  %107 = and i1 %103, false
+  %108 = and i1 %101, %104
+  %109 = or i1 %105, %106
+  %110 = or i1 %107, %108
+  %111 = xor i1 %109, %110
+  %112 = or i1 %102, %103
+  %113 = xor i1 %112, true
+  %114 = or i1 false, %104
+  %115 = and i1 %113, %114
+  %116 = or i1 %111, %115
+  %117 = or i1 %100, %101
+  %118 = select i1 %116, i32 -1266953582, i32 -1327659825
+  store i32 %118, i32* %20
+  br label %121
+
+; <label>:119:                                    ; preds = %21
+  ret void
+
+; <label>:120:                                    ; preds = %21
+  store i32 -377000194, i32* %20
+  br label %121
+
+; <label>:121:                                    ; preds = %120, %92, %76, %74, %73, %66, %45, %34, %31, %28, %27, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_comp_iterISt7greaterIiEEEEvT_SC_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca i1
+  %9 = alloca i1
+  %10 = load i32, i32* @x.200
+  %11 = load i32, i32* @y.201
+  %12 = sub i32 0, 1
+  %13 = add i32 %10, %12
+  %14 = sub i32 %10, 1
+  %15 = mul i32 %10, %13
+  %16 = urem i32 %15, 2
+  %17 = icmp eq i32 %16, 0
+  store i1 %17, i1* %9
+  %18 = icmp slt i32 %11, 10
+  store i1 %18, i1* %8
+  %19 = alloca i32
+  store i32 -741134465, i32* %19
+  br label %20
+
+; <label>:20:                                     ; preds = %2, %173
+  %21 = load i32, i32* %19
+  switch i32 %21, label %22 [
+    i32 -741134465, label %23
+    i32 -836176560, label %31
+    i32 341724464, label %72
+    i32 1830419233, label %73
+    i32 215569724, label %78
+    i32 -945934381, label %105
+    i32 -316611336, label %143
+    i32 745116803, label %144
+    i32 442851201, label %147
+    i32 198285593, label %148
+    i32 -939632231, label %161
+  ]
+
+; <label>:22:                                     ; preds = %20
+  br label %173
+
+; <label>:23:                                     ; preds = %20
+  %24 = load volatile i1, i1* %9
+  %25 = load volatile i1, i1* %8
+  %26 = and i1 %24, %25
+  %27 = xor i1 %24, %25
+  %28 = or i1 %26, %27
+  %29 = or i1 %24, %25
+  %30 = select i1 %28, i32 -836176560, i32 198285593
+  store i32 %30, i32* %19
+  br label %173
+
+; <label>:31:                                     ; preds = %20
+  %32 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %33 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %33, %"class.__gnu_cxx::__normal_iterator"** %7
+  %34 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %34, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %6
+  %35 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %35, %"class.__gnu_cxx::__normal_iterator"** %5
+  %36 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %36, %"class.__gnu_cxx::__normal_iterator"** %4
+  %37 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %38 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %38, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %3
+  %39 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %40 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %32, i32 0, i32 0
+  store i32* %0, i32** %40, align 8
+  %41 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %41, i32 0, i32 0
+  store i32* %1, i32** %42, align 8
+  %43 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %44 = bitcast %"class.__gnu_cxx::__normal_iterator"* %43 to i8*
+  %45 = bitcast %"class.__gnu_cxx::__normal_iterator"* %32 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %44, i8* %45, i64 8, i32 8, i1 false)
+  %46 = load i32, i32* @x.200
+  %47 = load i32, i32* @y.201
+  %48 = sub i32 0, 1
+  %49 = add i32 %46, %48
+  %50 = sub i32 %46, 1
+  %51 = mul i32 %46, %49
+  %52 = urem i32 %51, 2
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %47, 10
+  %55 = xor i1 %53, true
+  %56 = xor i1 %54, true
+  %57 = xor i1 true, true
+  %58 = and i1 %55, true
+  %59 = and i1 %53, %57
+  %60 = and i1 %56, true
+  %61 = and i1 %54, %57
+  %62 = or i1 %58, %59
+  %63 = or i1 %60, %61
+  %64 = xor i1 %62, %63
+  %65 = or i1 %55, %56
+  %66 = xor i1 %65, true
+  %67 = or i1 true, %57
+  %68 = and i1 %66, %67
+  %69 = or i1 %64, %68
+  %70 = or i1 %53, %54
+  %71 = select i1 %69, i32 341724464, i32 198285593
+  store i32 %71, i32* %19
+  br label %173
+
+; <label>:72:                                     ; preds = %20
+  store i32 1830419233, i32* %19
+  br label %173
+
+; <label>:73:                                     ; preds = %20
+  %74 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %75 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %76 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %75, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %74) #3
+  %77 = select i1 %76, i32 215569724, i32 442851201
+  store i32 %77, i32* %19
+  br label %173
+
+; <label>:78:                                     ; preds = %20
+  %79 = load i32, i32* @x.200
+  %80 = load i32, i32* @y.201
+  %81 = sub i32 0, 1
+  %82 = add i32 %79, %81
+  %83 = sub i32 %79, 1
+  %84 = mul i32 %79, %82
+  %85 = urem i32 %84, 2
+  %86 = icmp eq i32 %85, 0
+  %87 = icmp slt i32 %80, 10
+  %88 = xor i1 %86, true
+  %89 = xor i1 %87, true
+  %90 = xor i1 false, true
+  %91 = and i1 %88, false
+  %92 = and i1 %86, %90
+  %93 = and i1 %89, false
+  %94 = and i1 %87, %90
+  %95 = or i1 %91, %92
+  %96 = or i1 %93, %94
+  %97 = xor i1 %95, %96
+  %98 = or i1 %88, %89
+  %99 = xor i1 %98, true
+  %100 = or i1 false, %90
+  %101 = and i1 %99, %100
+  %102 = or i1 %97, %101
+  %103 = or i1 %86, %87
+  %104 = select i1 %102, i32 -945934381, i32 -939632231
+  store i32 %104, i32* %19
+  br label %173
+
+; <label>:105:                                    ; preds = %20
+  %106 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %107 = bitcast %"class.__gnu_cxx::__normal_iterator"* %106 to i8*
+  %108 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %109 = bitcast %"class.__gnu_cxx::__normal_iterator"* %108 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %107, i8* %109, i64 8, i32 8, i1 false)
+  %110 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %3
+  %111 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %110 to i8*
+  %112 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %6
+  %113 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %112 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %111, i8* %113, i64 1, i32 1, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterISt7greaterIiEEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS5_EE()
+  %114 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %115 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %114, i32 0, i32 0
+  %116 = load i32*, i32** %115, align 8
+  call void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_comp_iterISt7greaterIiEEEEvT_T0_(i32* %116)
+  %117 = load i32, i32* @x.200
+  %118 = load i32, i32* @y.201
+  %119 = sub i32 0, 1
+  %120 = add i32 %117, %119
+  %121 = sub i32 %117, 1
+  %122 = mul i32 %117, %120
+  %123 = urem i32 %122, 2
+  %124 = icmp eq i32 %123, 0
+  %125 = icmp slt i32 %118, 10
+  %126 = xor i1 %124, true
+  %127 = xor i1 %125, true
+  %128 = xor i1 true, true
+  %129 = and i1 %126, true
+  %130 = and i1 %124, %128
+  %131 = and i1 %127, true
+  %132 = and i1 %125, %128
+  %133 = or i1 %129, %130
+  %134 = or i1 %131, %132
+  %135 = xor i1 %133, %134
+  %136 = or i1 %126, %127
+  %137 = xor i1 %136, true
+  %138 = or i1 true, %128
+  %139 = and i1 %137, %138
+  %140 = or i1 %135, %139
+  %141 = or i1 %124, %125
+  %142 = select i1 %140, i32 -316611336, i32 -939632231
+  store i32 %142, i32* %19
+  br label %173
+
+; <label>:143:                                    ; preds = %20
+  store i32 745116803, i32* %19
+  br label %173
+
+; <label>:144:                                    ; preds = %20
+  %145 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %146 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %145) #3
+  store i32 1830419233, i32* %19
+  br label %173
+
+; <label>:147:                                    ; preds = %20
+  ret void
+
+; <label>:148:                                    ; preds = %20
+  %149 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %150 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %151 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %152 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %153 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %154 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %155 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %156 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %157 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %149, i32 0, i32 0
+  store i32* %0, i32** %157, align 8
+  %158 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %150, i32 0, i32 0
+  store i32* %1, i32** %158, align 8
+  %159 = bitcast %"class.__gnu_cxx::__normal_iterator"* %152 to i8*
+  %160 = bitcast %"class.__gnu_cxx::__normal_iterator"* %149 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %159, i8* %160, i64 8, i32 8, i1 false)
+  store i32 -836176560, i32* %19
+  br label %173
+
+; <label>:161:                                    ; preds = %20
+  %162 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %163 = bitcast %"class.__gnu_cxx::__normal_iterator"* %162 to i8*
+  %164 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %165 = bitcast %"class.__gnu_cxx::__normal_iterator"* %164 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %163, i8* %165, i64 8, i32 8, i1 false)
+  %166 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %3
+  %167 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %166 to i8*
+  %168 = load volatile %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %6
+  %169 = bitcast %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %168 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %167, i8* %169, i64 1, i32 1, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterISt7greaterIiEEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS5_EE()
+  %170 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %171 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %170, i32 0, i32 0
+  %172 = load i32*, i32** %171, align 8
+  call void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_comp_iterISt7greaterIiEEEEvT_T0_(i32* %172)
+  store i32 -945934381, i32* %19
+  br label %173
+
+; <label>:173:                                    ; preds = %161, %148, %144, %143, %105, %78, %73, %72, %31, %23, %22
+  br label %20
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxxeqIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8), %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8)) #4 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %0, %"class.__gnu_cxx::__normal_iterator"** %3, align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %1, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %5 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3, align 8
+  %6 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %5) #3
+  %7 = load i32*, i32** %6, align 8
+  %8 = load %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4, align 8
+  %9 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %8) #3
+  %10 = load i32*, i32** %9, align 8
+  %11 = icmp eq i32* %7, %10
+  ret i1 %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt13move_backwardIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET0_T_S8_S7_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %0, i32** %13, align 8
+  %14 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %1, i32** %14, align 8
+  %15 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %2, i32** %15, align 8
+  %16 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %17 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %16, i8* %17, i64 8, i32 8, i1 false)
+  %18 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %19 = load i32*, i32** %18, align 8
+  %20 = call i32* @_ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Miter_baseIT_E13iterator_typeES8_(i32* %19)
+  %21 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  store i32* %20, i32** %21, align 8
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %22, i8* %23, i64 8, i32 8, i1 false)
+  %24 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %25 = load i32*, i32** %24, align 8
+  %26 = call i32* @_ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Miter_baseIT_E13iterator_typeES8_(i32* %25)
+  %27 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  store i32* %26, i32** %27, align 8
+  %28 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %29 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %28, i8* %29, i64 8, i32 8, i1 false)
+  %30 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %31 = load i32*, i32** %30, align 8
+  %32 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %33 = load i32*, i32** %32, align 8
+  %34 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %35 = load i32*, i32** %34, align 8
+  %36 = call i32* @_ZSt23__copy_move_backward_a2ILb1EN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET1_T0_S8_S7_(i32* %31, i32* %33, i32* %35)
+  %37 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %36, i32** %37, align 8
+  %38 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  %39 = load i32*, i32** %38, align 8
+  ret i32* %39
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_comp_iterISt7greaterIiEEEEvT_T0_(i32*) #0 comdat {
+  %2 = alloca i1
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %5 = alloca i32, align 4
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %8, align 8
+  %9 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %3) #3
+  %10 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #3
+  %11 = load i32, i32* %10, align 4
+  store i32 %11, i32* %5, align 4
+  %12 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %13 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %12, i8* %13, i64 8, i32 8, i1 false)
+  %14 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  %15 = alloca i32
+  store i32 -1010327717, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %1, %147
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -1010327717, label %19
+    i32 -294196760, label %46
+    i32 1181093036, label %79
+    i32 810757258, label %82
+    i32 -1372134062, label %90
+    i32 -815994795, label %118
+    i32 -1043812432, label %136
+    i32 1870441570, label %137
+    i32 775939706, label %143
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %147
+
+; <label>:19:                                     ; preds = %16
+  %20 = load i32, i32* @x.206
+  %21 = load i32, i32* @y.207
+  %22 = sub i32 0, 1
+  %23 = add i32 %20, %22
+  %24 = sub i32 %20, 1
+  %25 = mul i32 %20, %23
+  %26 = urem i32 %25, 2
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %21, 10
+  %29 = xor i1 %27, true
+  %30 = xor i1 %28, true
+  %31 = xor i1 true, true
+  %32 = and i1 %29, true
+  %33 = and i1 %27, %31
+  %34 = and i1 %30, true
+  %35 = and i1 %28, %31
+  %36 = or i1 %32, %33
+  %37 = or i1 %34, %35
+  %38 = xor i1 %36, %37
+  %39 = or i1 %29, %30
+  %40 = xor i1 %39, true
+  %41 = or i1 true, %31
+  %42 = and i1 %40, %41
+  %43 = or i1 %38, %42
+  %44 = or i1 %27, %28
+  %45 = select i1 %43, i32 -294196760, i32 1870441570
+  store i32 %45, i32* %15
+  br label %147
+
+; <label>:46:                                     ; preds = %16
+  %47 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %48 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %47, i8* %48, i64 8, i32 8, i1 false)
+  %49 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %50 = load i32*, i32** %49, align 8
+  %51 = call zeroext i1 @_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"* %4, i32* dereferenceable(4) %5, i32* %50)
+  store i1 %51, i1* %2
+  %52 = load i32, i32* @x.206
+  %53 = load i32, i32* @y.207
+  %54 = add i32 %52, 201334834
+  %55 = sub i32 %54, 1
+  %56 = sub i32 %55, 201334834
+  %57 = sub i32 %52, 1
+  %58 = mul i32 %52, %56
+  %59 = urem i32 %58, 2
+  %60 = icmp eq i32 %59, 0
+  %61 = icmp slt i32 %53, 10
+  %62 = xor i1 %60, true
+  %63 = xor i1 %61, true
+  %64 = xor i1 true, true
+  %65 = and i1 %62, true
+  %66 = and i1 %60, %64
+  %67 = and i1 %63, true
+  %68 = and i1 %61, %64
+  %69 = or i1 %65, %66
+  %70 = or i1 %67, %68
+  %71 = xor i1 %69, %70
+  %72 = or i1 %62, %63
+  %73 = xor i1 %72, true
+  %74 = or i1 true, %64
+  %75 = and i1 %73, %74
+  %76 = or i1 %71, %75
+  %77 = or i1 %60, %61
+  %78 = select i1 %76, i32 1181093036, i32 1870441570
+  store i32 %78, i32* %15
+  br label %147
+
+; <label>:79:                                     ; preds = %16
+  %80 = load volatile i1, i1* %2
+  %81 = select i1 %80, i32 810757258, i32 -1372134062
+  store i32 %81, i32* %15
+  br label %147
+
+; <label>:82:                                     ; preds = %16
+  %83 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  %84 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %83) #3
+  %85 = load i32, i32* %84, align 4
+  %86 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %3) #3
+  store i32 %85, i32* %86, align 4
+  %87 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  %88 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %87, i8* %88, i64 8, i32 8, i1 false)
+  %89 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  store i32 -1010327717, i32* %15
+  br label %147
+
+; <label>:90:                                     ; preds = %16
+  %91 = load i32, i32* @x.206
+  %92 = load i32, i32* @y.207
+  %93 = sub i32 %91, 1635373444
+  %94 = sub i32 %93, 1
+  %95 = add i32 %94, 1635373444
+  %96 = sub i32 %91, 1
+  %97 = mul i32 %91, %95
+  %98 = urem i32 %97, 2
+  %99 = icmp eq i32 %98, 0
+  %100 = icmp slt i32 %92, 10
+  %101 = xor i1 %99, true
+  %102 = xor i1 %100, true
+  %103 = xor i1 true, true
+  %104 = and i1 %101, true
+  %105 = and i1 %99, %103
+  %106 = and i1 %102, true
+  %107 = and i1 %100, %103
+  %108 = or i1 %104, %105
+  %109 = or i1 %106, %107
+  %110 = xor i1 %108, %109
+  %111 = or i1 %101, %102
+  %112 = xor i1 %111, true
+  %113 = or i1 true, %103
+  %114 = and i1 %112, %113
+  %115 = or i1 %110, %114
+  %116 = or i1 %99, %100
+  %117 = select i1 %115, i32 -815994795, i32 775939706
+  store i32 %117, i32* %15
+  br label %147
+
+; <label>:118:                                    ; preds = %16
+  %119 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %5) #3
+  %120 = load i32, i32* %119, align 4
+  %121 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %3) #3
+  store i32 %120, i32* %121, align 4
+  %122 = load i32, i32* @x.206
+  %123 = load i32, i32* @y.207
+  %124 = sub i32 0, 1
+  %125 = add i32 %122, %124
+  %126 = sub i32 %122, 1
+  %127 = mul i32 %122, %125
+  %128 = urem i32 %127, 2
+  %129 = icmp eq i32 %128, 0
+  %130 = icmp slt i32 %123, 10
+  %131 = and i1 %129, %130
+  %132 = xor i1 %129, %130
+  %133 = or i1 %131, %132
+  %134 = or i1 %129, %130
+  %135 = select i1 %133, i32 -1043812432, i32 775939706
+  store i32 %135, i32* %15
+  br label %147
+
+; <label>:136:                                    ; preds = %16
+  ret void
+
+; <label>:137:                                    ; preds = %16
+  %138 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %139 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %138, i8* %139, i64 8, i32 8, i1 false)
+  %140 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %141 = load i32*, i32** %140, align 8
+  %142 = call zeroext i1 @_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"* %4, i32* dereferenceable(4) %5, i32* %141)
+  store i32 -294196760, i32* %15
+  br label %147
+
+; <label>:143:                                    ; preds = %16
+  %144 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %5) #3
+  %145 = load i32, i32* %144, align 4
+  %146 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %3) #3
+  store i32 %145, i32* %146, align 4
+  store i32 -815994795, i32* %15
+  br label %147
+
+; <label>:147:                                    ; preds = %143, %137, %118, %90, %82, %79, %46, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__val_comp_iterISt7greaterIiEEENS0_14_Val_comp_iterIT_EENS0_15_Iter_comp_iterIS5_EE() #0 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter", align 1
+  %3 = alloca %"struct.std::greater", align 1
+  %4 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %2, i32 0, i32 0
+  call void @_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"* %1)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt23__copy_move_backward_a2ILb1EN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET1_T0_S8_S7_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca i32*, align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %0, i32** %12, align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %1, i32** %13, align 8
+  %14 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %2, i32** %14, align 8
+  %15 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %16 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* %16, i64 8, i32 8, i1 false)
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %18 = load i32*, i32** %17, align 8
+  %19 = call i32* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i32* %18)
+  %20 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %20, i8* %21, i64 8, i32 8, i1 false)
+  %22 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %23 = load i32*, i32** %22, align 8
+  %24 = call i32* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i32* %23)
+  %25 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %26 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %25, i8* %26, i64 8, i32 8, i1 false)
+  %27 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %28 = load i32*, i32** %27, align 8
+  %29 = call i32* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i32* %28)
+  %30 = call i32* @_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_(i32* %19, i32* %24, i32* %29)
+  store i32* %30, i32** %8, align 8
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %4, i32** dereferenceable(8) %8) #3
+  %31 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  %32 = load i32*, i32** %31, align 8
+  ret i32* %32
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Miter_baseIT_E13iterator_typeES8_(i32*) #0 comdat {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %5, align 8
+  %6 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  %7 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %6, i8* %7, i64 8, i32 8, i1 false)
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  %9 = load i32*, i32** %8, align 8
+  %10 = call i32* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb0EE7_S_baseES6_(i32* %9)
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  store i32* %10, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  %13 = load i32*, i32** %12, align 8
+  ret i32* %13
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt22__copy_move_backward_aILb1EPiS0_ET1_T0_S2_S1_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca i32*, align 8
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i8, align 1
+  store i32* %0, i32** %4, align 8
+  store i32* %1, i32** %5, align 8
+  store i32* %2, i32** %6, align 8
+  store i8 1, i8* %7, align 1
+  %8 = load i32*, i32** %4, align 8
+  %9 = load i32*, i32** %5, align 8
+  %10 = load i32*, i32** %6, align 8
+  %11 = call i32* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_(i32* %8, i32* %9, i32* %10)
+  ret i32* %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i32*) #0 comdat {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  store i32* %0, i32** %4, align 8
+  %5 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  %6 = bitcast %"class.__gnu_cxx::__normal_iterator"* %2 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 8, i32 8, i1 false)
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  %8 = load i32*, i32** %7, align 8
+  %9 = call i32* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb1EE7_S_baseES6_(i32* %8)
+  ret i32* %9
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt20__copy_move_backwardILb1ELb1ESt26random_access_iterator_tagE13__copy_move_bIiEEPT_PKS3_S6_S4_(i32*, i32*, i32*) #4 comdat align 2 {
+  %4 = alloca i64
+  %5 = alloca i32*, align 8
+  %6 = alloca i32*, align 8
+  %7 = alloca i32*, align 8
+  %8 = alloca i64, align 8
+  store i32* %0, i32** %5, align 8
+  store i32* %1, i32** %6, align 8
+  store i32* %2, i32** %7, align 8
+  %9 = load i32*, i32** %6, align 8
+  %10 = load i32*, i32** %5, align 8
+  %11 = ptrtoint i32* %9 to i64
+  %12 = ptrtoint i32* %10 to i64
+  %13 = sub i64 0, %12
+  %14 = add i64 %11, %13
+  %15 = sub i64 %11, %12
+  %16 = sdiv exact i64 %14, 4
+  store i64 %16, i64* %8, align 8
+  %17 = load i64, i64* %8, align 8
+  store i64 %17, i64* %4
+  %18 = alloca i32
+  store i32 1542765720, i32* %18
+  br label %19
+
+; <label>:19:                                     ; preds = %3, %159
+  %20 = load i32, i32* %18
+  switch i32 %20, label %21 [
+    i32 1542765720, label %22
+    i32 -1161641353, label %26
+    i32 841033476, label %54
+    i32 1947957299, label %81
+    i32 386050146, label %82
+    i32 -2100085668, label %90
+  ]
+
+; <label>:21:                                     ; preds = %19
+  br label %159
+
+; <label>:22:                                     ; preds = %19
+  %23 = load volatile i64, i64* %4
+  %24 = icmp ne i64 %23, 0
+  %25 = select i1 %24, i32 -1161641353, i32 386050146
+  store i32 %25, i32* %18
+  br label %159
+
+; <label>:26:                                     ; preds = %19
+  %27 = load i32, i32* @x.218
+  %28 = load i32, i32* @y.219
+  %29 = sub i32 %27, -2095385312
+  %30 = sub i32 %29, 1
+  %31 = add i32 %30, -2095385312
+  %32 = sub i32 %27, 1
+  %33 = mul i32 %27, %31
+  %34 = urem i32 %33, 2
+  %35 = icmp eq i32 %34, 0
+  %36 = icmp slt i32 %28, 10
+  %37 = xor i1 %35, true
+  %38 = xor i1 %36, true
+  %39 = xor i1 true, true
+  %40 = and i1 %37, true
+  %41 = and i1 %35, %39
+  %42 = and i1 %38, true
+  %43 = and i1 %36, %39
+  %44 = or i1 %40, %41
+  %45 = or i1 %42, %43
+  %46 = xor i1 %44, %45
+  %47 = or i1 %37, %38
+  %48 = xor i1 %47, true
+  %49 = or i1 true, %39
+  %50 = and i1 %48, %49
+  %51 = or i1 %46, %50
+  %52 = or i1 %35, %36
+  %53 = select i1 %51, i32 841033476, i32 -2100085668
+  store i32 %53, i32* %18
+  br label %159
+
+; <label>:54:                                     ; preds = %19
+  %55 = load i32*, i32** %7, align 8
+  %56 = load i64, i64* %8, align 8
+  %57 = sub i64 0, %56
+  %58 = add i64 0, %57
+  %59 = sub i64 0, %56
+  %60 = getelementptr inbounds i32, i32* %55, i64 %58
+  %61 = bitcast i32* %60 to i8*
+  %62 = load i32*, i32** %5, align 8
+  %63 = bitcast i32* %62 to i8*
+  %64 = load i64, i64* %8, align 8
+  %65 = mul i64 4, %64
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %61, i8* %63, i64 %65, i32 4, i1 false)
+  %66 = load i32, i32* @x.218
+  %67 = load i32, i32* @y.219
+  %68 = add i32 %66, -139180458
+  %69 = sub i32 %68, 1
+  %70 = sub i32 %69, -139180458
+  %71 = sub i32 %66, 1
+  %72 = mul i32 %66, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %67, 10
+  %76 = and i1 %74, %75
+  %77 = xor i1 %74, %75
+  %78 = or i1 %76, %77
+  %79 = or i1 %74, %75
+  %80 = select i1 %78, i32 1947957299, i32 -2100085668
+  store i32 %80, i32* %18
+  br label %159
+
+; <label>:81:                                     ; preds = %19
+  store i32 386050146, i32* %18
+  br label %159
+
+; <label>:82:                                     ; preds = %19
+  %83 = load i32*, i32** %7, align 8
+  %84 = load i64, i64* %8, align 8
+  %85 = add i64 0, -345163248542151877
+  %86 = sub i64 %85, %84
+  %87 = sub i64 %86, -345163248542151877
+  %88 = sub i64 0, %84
+  %89 = getelementptr inbounds i32, i32* %83, i64 %87
+  ret i32* %89
+
+; <label>:90:                                     ; preds = %19
+  %91 = load i32*, i32** %7, align 8
+  %92 = load i64, i64* %8, align 8
+  %93 = add i64 0, -204551889307170758
+  %94 = sub i64 %93, %92
+  %95 = sub i64 %94, -204551889307170758
+  %96 = sub i64 0, %92
+  %97 = mul i64 %95, %92
+  %98 = sub i64 0, -7392025010891169826
+  %99 = sub i64 %98, 0
+  %100 = add i64 %99, -7392025010891169826
+  %101 = sub i64 0, 0
+  %102 = sub i64 0, %100
+  %103 = sub i64 0, %92
+  %104 = add i64 %102, %103
+  %105 = sub i64 0, %104
+  %106 = add i64 %100, %92
+  %107 = add i64 0, -5111826970140203203
+  %108 = sub i64 %107, %92
+  %109 = sub i64 %108, -5111826970140203203
+  %110 = sub i64 0, %92
+  %111 = mul i64 %109, %92
+  %112 = add i64 0, 7434064725054392788
+  %113 = sub i64 %112, %92
+  %114 = sub i64 %113, 7434064725054392788
+  %115 = sub i64 0, %92
+  %116 = mul i64 %114, %92
+  %117 = sub i64 0, -2152831494569244249
+  %118 = sub i64 %117, %92
+  %119 = add i64 %118, -2152831494569244249
+  %120 = sub i64 0, %92
+  %121 = mul i64 %119, %92
+  %122 = sub i64 0, 1199585430527003057
+  %123 = sub i64 %122, %92
+  %124 = add i64 %123, 1199585430527003057
+  %125 = sub i64 0, %92
+  %126 = getelementptr inbounds i32, i32* %91, i64 %124
+  %127 = bitcast i32* %126 to i8*
+  %128 = load i32*, i32** %5, align 8
+  %129 = bitcast i32* %128 to i8*
+  %130 = load i64, i64* %8, align 8
+  %131 = add i64 0, -5795437856226443336
+  %132 = sub i64 %131, 4
+  %133 = sub i64 %132, -5795437856226443336
+  %134 = sub i64 0, 4
+  %135 = sub i64 0, %133
+  %136 = sub i64 0, %130
+  %137 = add i64 %135, %136
+  %138 = sub i64 0, %137
+  %139 = add i64 %133, %130
+  %140 = sub i64 0, %130
+  %141 = add i64 4, %140
+  %142 = sub i64 4, %130
+  %143 = mul i64 %141, %130
+  %144 = shl i64 4, %130
+  %145 = sub i64 0, 4
+  %146 = add i64 0, %145
+  %147 = sub i64 0, 4
+  %148 = sub i64 0, %130
+  %149 = sub i64 %146, %148
+  %150 = add i64 %146, %130
+  %151 = sub i64 0, %130
+  %152 = add i64 4, %151
+  %153 = sub i64 4, %130
+  %154 = mul i64 %152, %130
+  %155 = shl i64 4, %130
+  %156 = shl i64 4, %130
+  %157 = shl i64 4, %130
+  %158 = mul i64 4, %130
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* %127, i8* %129, i64 %158, i32 4, i1 false)
+  store i32 841033476, i32* %18
+  br label %159
+
+; <label>:159:                                    ; preds = %90, %81, %54, %26, %22, %21
+  br label %19
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memmove.p0i8.p0i8.i64(i8* nocapture, i8* nocapture readonly, i64, i32, i1) #10
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb1EE7_S_baseES6_(i32*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  store i32* %0, i32** %3, align 8
+  %4 = call dereferenceable(8) i32** @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %2) #3
+  %5 = load i32*, i32** %4, align 8
+  ret i32* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEELb0EE7_S_baseES6_(i32*) #4 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %4, align 8
+  %5 = bitcast %"class.__gnu_cxx::__normal_iterator"* %2 to i8*
+  %6 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 8, i32 8, i1 false)
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i32 0, i32 0
+  %8 = load i32*, i32** %7, align 8
+  ret i32* %8
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"*, i32* dereferenceable(4), i32*) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, align 8
+  %6 = alloca i32*, align 8
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %2, i32** %7, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %5, align 8
+  store i32* %1, i32** %6, align 8
+  %8 = load %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %5, align 8
+  %9 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %8, i32 0, i32 0
+  %10 = load i32*, i32** %6, align 8
+  %11 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  %12 = call zeroext i1 @_ZNKSt7greaterIiEclERKiS2_(%"struct.std::greater"* %9, i32* dereferenceable(4) %10, i32* dereferenceable(4) %11)
+  ret i1 %12
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops14_Val_comp_iterISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Val_comp_iter"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.226
+  %5 = load i32, i32* @y.227
+  %6 = sub i32 0, 1
+  %7 = add i32 %4, %6
+  %8 = sub i32 %4, 1
+  %9 = mul i32 %4, %7
+  %10 = urem i32 %9, 2
+  %11 = icmp eq i32 %10, 0
+  store i1 %11, i1* %3
+  %12 = icmp slt i32 %5, 10
+  store i1 %12, i1* %2
+  %13 = alloca i32
+  store i32 -265157, i32* %13
+  br label %14
+
+; <label>:14:                                     ; preds = %1, %63
+  %15 = load i32, i32* %13
+  switch i32 %15, label %16 [
+    i32 -265157, label %17
+    i32 167936981, label %37
+    i32 -681956513, label %57
+    i32 -146827689, label %58
+  ]
+
+; <label>:16:                                     ; preds = %14
+  br label %63
+
+; <label>:17:                                     ; preds = %14
+  %18 = load volatile i1, i1* %3
+  %19 = load volatile i1, i1* %2
+  %20 = xor i1 %18, true
+  %21 = xor i1 %19, true
+  %22 = xor i1 true, true
+  %23 = and i1 %20, true
+  %24 = and i1 %18, %22
+  %25 = and i1 %21, true
+  %26 = and i1 %19, %22
+  %27 = or i1 %23, %24
+  %28 = or i1 %25, %26
+  %29 = xor i1 %27, %28
+  %30 = or i1 %20, %21
+  %31 = xor i1 %30, true
+  %32 = or i1 true, %22
+  %33 = and i1 %31, %32
+  %34 = or i1 %29, %33
+  %35 = or i1 %18, %19
+  %36 = select i1 %34, i32 167936981, i32 -146827689
+  store i32 %36, i32* %13
+  br label %63
+
+; <label>:37:                                     ; preds = %14
+  %38 = alloca %"struct.std::greater", align 1
+  %39 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %39, align 8
+  %40 = load %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %39, align 8
+  %41 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %40, i32 0, i32 0
+  %42 = load i32, i32* @x.226
+  %43 = load i32, i32* @y.227
+  %44 = add i32 %42, 714081100
+  %45 = sub i32 %44, 1
+  %46 = sub i32 %45, 714081100
+  %47 = sub i32 %42, 1
+  %48 = mul i32 %42, %46
+  %49 = urem i32 %48, 2
+  %50 = icmp eq i32 %49, 0
+  %51 = icmp slt i32 %43, 10
+  %52 = and i1 %50, %51
+  %53 = xor i1 %50, %51
+  %54 = or i1 %52, %53
+  %55 = or i1 %50, %51
+  %56 = select i1 %54, i32 -681956513, i32 -146827689
+  store i32 %56, i32* %13
+  br label %63
+
+; <label>:57:                                     ; preds = %14
+  ret void
+
+; <label>:58:                                     ; preds = %14
+  %59 = alloca %"struct.std::greater", align 1
+  %60 = alloca %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %60, align 8
+  %61 = load %"struct.__gnu_cxx::__ops::_Val_comp_iter"*, %"struct.__gnu_cxx::__ops::_Val_comp_iter"** %60, align 8
+  %62 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Val_comp_iter", %"struct.__gnu_cxx::__ops::_Val_comp_iter"* %61, i32 0, i32 0
+  store i32 167936981, i32* %13
+  br label %63
+
+; <label>:63:                                     ; preds = %58, %37, %17, %16
+  br label %14
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15_Iter_comp_iterISt7greaterIiEEC2ES3_(%"struct.__gnu_cxx::__ops::_Iter_comp_iter"*) unnamed_addr #4 comdat align 2 {
+  %2 = alloca i1
+  %3 = alloca i1
+  %4 = load i32, i32* @x.228
+  %5 = load i32, i32* @y.229
+  %6 = sub i32 %4, 1591258629
+  %7 = sub i32 %6, 1
+  %8 = add i32 %7, 1591258629
+  %9 = sub i32 %4, 1
+  %10 = mul i32 %4, %8
+  %11 = urem i32 %10, 2
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %3
+  %13 = icmp slt i32 %5, 10
+  store i1 %13, i1* %2
+  %14 = alloca i32
+  store i32 676619340, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %1, %76
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 676619340, label %18
+    i32 1686590491, label %38
+    i32 1321694538, label %70
+    i32 727856909, label %71
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %76
+
+; <label>:18:                                     ; preds = %15
+  %19 = load volatile i1, i1* %3
+  %20 = load volatile i1, i1* %2
+  %21 = xor i1 %19, true
+  %22 = xor i1 %20, true
+  %23 = xor i1 false, true
+  %24 = and i1 %21, false
+  %25 = and i1 %19, %23
+  %26 = and i1 %22, false
+  %27 = and i1 %20, %23
+  %28 = or i1 %24, %25
+  %29 = or i1 %26, %27
+  %30 = xor i1 %28, %29
+  %31 = or i1 %21, %22
+  %32 = xor i1 %31, true
+  %33 = or i1 false, %23
+  %34 = and i1 %32, %33
+  %35 = or i1 %30, %34
+  %36 = or i1 %19, %20
+  %37 = select i1 %35, i32 1686590491, i32 727856909
+  store i32 %37, i32* %14
+  br label %76
+
+; <label>:38:                                     ; preds = %15
+  %39 = alloca %"struct.std::greater", align 1
+  %40 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %40, align 8
+  %41 = load %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %40, align 8
+  %42 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %41, i32 0, i32 0
+  %43 = load i32, i32* @x.228
+  %44 = load i32, i32* @y.229
+  %45 = sub i32 %43, -214917245
+  %46 = sub i32 %45, 1
+  %47 = add i32 %46, -214917245
+  %48 = sub i32 %43, 1
+  %49 = mul i32 %43, %47
+  %50 = urem i32 %49, 2
+  %51 = icmp eq i32 %50, 0
+  %52 = icmp slt i32 %44, 10
+  %53 = xor i1 %51, true
+  %54 = xor i1 %52, true
+  %55 = xor i1 false, true
+  %56 = and i1 %53, false
+  %57 = and i1 %51, %55
+  %58 = and i1 %54, false
+  %59 = and i1 %52, %55
+  %60 = or i1 %56, %57
+  %61 = or i1 %58, %59
+  %62 = xor i1 %60, %61
+  %63 = or i1 %53, %54
+  %64 = xor i1 %63, true
+  %65 = or i1 false, %55
+  %66 = and i1 %64, %65
+  %67 = or i1 %62, %66
+  %68 = or i1 %51, %52
+  %69 = select i1 %67, i32 1321694538, i32 727856909
+  store i32 %69, i32* %14
+  br label %76
+
+; <label>:70:                                     ; preds = %15
+  ret void
+
+; <label>:71:                                     ; preds = %15
+  %72 = alloca %"struct.std::greater", align 1
+  %73 = alloca %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %73, align 8
+  %74 = load %"struct.__gnu_cxx::__ops::_Iter_comp_iter"*, %"struct.__gnu_cxx::__ops::_Iter_comp_iter"** %73, align 8
+  %75 = getelementptr inbounds %"struct.__gnu_cxx::__ops::_Iter_comp_iter", %"struct.__gnu_cxx::__ops::_Iter_comp_iter"* %74, i32 0, i32 0
+  store i32 1686590491, i32* %14
+  br label %76
+
+; <label>:76:                                     ; preds = %71, %38, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt6__sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %12, align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %13, align 8
+  %14 = alloca i32
+  store i32 -1561125906, i32* %14
+  br label %15
+
+; <label>:15:                                     ; preds = %2, %42
+  %16 = load i32, i32* %14
+  switch i32 %16, label %17 [
+    i32 -1561125906, label %18
+    i32 981471325, label %21
+    i32 -781905578, label %41
+  ]
+
+; <label>:17:                                     ; preds = %15
+  br label %42
+
+; <label>:18:                                     ; preds = %15
+  %19 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %20 = select i1 %19, i32 981471325, i32 -781905578
+  store i32 %20, i32* %14
+  br label %42
+
+; <label>:21:                                     ; preds = %15
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %22, i8* %23, i64 8, i32 8, i1 false)
+  %24 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %25 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %24, i8* %25, i64 8, i32 8, i1 false)
+  %26 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %3) #3
+  %27 = call i64 @_ZSt4__lgl(i64 %26)
+  %28 = mul nsw i64 %27, 2
+  %29 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  %30 = load i32*, i32** %29, align 8
+  %31 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %32 = load i32*, i32** %31, align 8
+  call void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_(i32* %30, i32* %32, i64 %28)
+  %33 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %34 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %33, i8* %34, i64 8, i32 8, i1 false)
+  %35 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %36 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %35, i8* %36, i64 8, i32 8, i1 false)
+  %37 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %38 = load i32*, i32** %37, align 8
+  %39 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %40 = load i32*, i32** %39, align 8
+  call void @_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %38, i32* %40)
+  store i32 -781905578, i32* %14
+  br label %42
+
+; <label>:41:                                     ; preds = %15
+  ret void
+
+; <label>:42:                                     ; preds = %21, %18, %17
+  br label %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops16__iter_less_iterEv() #4 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_(i32*, i32*, i64) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca i64*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca i1
+  %16 = alloca i1
+  %17 = load i32, i32* @x.234
+  %18 = load i32, i32* @y.235
+  %19 = sub i32 %17, -1609890581
+  %20 = sub i32 %19, 1
+  %21 = add i32 %20, -1609890581
+  %22 = sub i32 %17, 1
+  %23 = mul i32 %17, %21
+  %24 = urem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  store i1 %25, i1* %16
+  %26 = icmp slt i32 %18, 10
+  store i1 %26, i1* %15
+  %27 = alloca i32
+  store i32 -473926417, i32* %27
+  br label %28
+
+; <label>:28:                                     ; preds = %3, %173
+  %29 = load i32, i32* %27
+  switch i32 %29, label %30 [
+    i32 -473926417, label %31
+    i32 -2130707384, label %39
+    i32 -1227299119, label %75
+    i32 480889488, label %76
+    i32 1469230138, label %82
+    i32 482679658, label %87
+    i32 1250034712, label %109
+    i32 -760507046, label %154
+    i32 1886802832, label %155
+  ]
+
+; <label>:30:                                     ; preds = %28
+  br label %173
+
+; <label>:31:                                     ; preds = %28
+  %32 = load volatile i1, i1* %16
+  %33 = load volatile i1, i1* %15
+  %34 = and i1 %32, %33
+  %35 = xor i1 %32, %33
+  %36 = or i1 %34, %35
+  %37 = or i1 %32, %33
+  %38 = select i1 %36, i32 -2130707384, i32 1886802832
+  store i32 %38, i32* %27
+  br label %173
+
+; <label>:39:                                     ; preds = %28
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %40, %"class.__gnu_cxx::__normal_iterator"** %14
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %41, %"class.__gnu_cxx::__normal_iterator"** %13
+  %42 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %43 = alloca i64, align 8
+  store i64* %43, i64** %12
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %11
+  %45 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %45, %"class.__gnu_cxx::__normal_iterator"** %10
+  %46 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %46, %"class.__gnu_cxx::__normal_iterator"** %9
+  %47 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %8
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %49, %"class.__gnu_cxx::__normal_iterator"** %7
+  %50 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %50, %"class.__gnu_cxx::__normal_iterator"** %6
+  %51 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %52 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %52, %"class.__gnu_cxx::__normal_iterator"** %5
+  %53 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %53, %"class.__gnu_cxx::__normal_iterator"** %4
+  %54 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %55 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %56 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %55, i32 0, i32 0
+  store i32* %0, i32** %56, align 8
+  %57 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %58 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %57, i32 0, i32 0
+  store i32* %1, i32** %58, align 8
+  %59 = load volatile i64*, i64** %12
+  store i64 %2, i64* %59, align 8
+  %60 = load i32, i32* @x.234
+  %61 = load i32, i32* @y.235
+  %62 = sub i32 %60, 819202499
+  %63 = sub i32 %62, 1
+  %64 = add i32 %63, 819202499
+  %65 = sub i32 %60, 1
+  %66 = mul i32 %60, %64
+  %67 = urem i32 %66, 2
+  %68 = icmp eq i32 %67, 0
+  %69 = icmp slt i32 %61, 10
+  %70 = and i1 %68, %69
+  %71 = xor i1 %68, %69
+  %72 = or i1 %70, %71
+  %73 = or i1 %68, %69
+  %74 = select i1 %72, i32 -1227299119, i32 1886802832
+  store i32 %74, i32* %27
+  br label %173
+
+; <label>:75:                                     ; preds = %28
+  store i32 480889488, i32* %27
+  br label %173
+
+; <label>:76:                                     ; preds = %28
+  %77 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %78 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %79 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %78, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %77) #3
+  %80 = icmp sgt i64 %79, 16
+  %81 = select i1 %80, i32 1469230138, i32 -760507046
+  store i32 %81, i32* %27
+  br label %173
+
+; <label>:82:                                     ; preds = %28
+  %83 = load volatile i64*, i64** %12
+  %84 = load i64, i64* %83, align 8
+  %85 = icmp eq i64 %84, 0
+  %86 = select i1 %85, i32 482679658, i32 1250034712
+  store i32 %86, i32* %27
+  br label %173
+
+; <label>:87:                                     ; preds = %28
+  %88 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %89 = bitcast %"class.__gnu_cxx::__normal_iterator"* %88 to i8*
+  %90 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %91 = bitcast %"class.__gnu_cxx::__normal_iterator"* %90 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %89, i8* %91, i64 8, i32 8, i1 false)
+  %92 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %93 = bitcast %"class.__gnu_cxx::__normal_iterator"* %92 to i8*
+  %94 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %95 = bitcast %"class.__gnu_cxx::__normal_iterator"* %94 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %93, i8* %95, i64 8, i32 8, i1 false)
+  %96 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %97 = bitcast %"class.__gnu_cxx::__normal_iterator"* %96 to i8*
+  %98 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %99 = bitcast %"class.__gnu_cxx::__normal_iterator"* %98 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %97, i8* %99, i64 8, i32 8, i1 false)
+  %100 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %101 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %100, i32 0, i32 0
+  %102 = load i32*, i32** %101, align 8
+  %103 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %10
+  %104 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %103, i32 0, i32 0
+  %105 = load i32*, i32** %104, align 8
+  %106 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %107 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %106, i32 0, i32 0
+  %108 = load i32*, i32** %107, align 8
+  call void @_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32* %102, i32* %105, i32* %108)
+  store i32 -760507046, i32* %27
+  br label %173
+
+; <label>:109:                                    ; preds = %28
+  %110 = load volatile i64*, i64** %12
+  %111 = load i64, i64* %110, align 8
+  %112 = add i64 %111, 4446652264504325766
+  %113 = add i64 %112, -1
+  %114 = sub i64 %113, 4446652264504325766
+  %115 = add nsw i64 %111, -1
+  %116 = load volatile i64*, i64** %12
+  store i64 %114, i64* %116, align 8
+  %117 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %118 = bitcast %"class.__gnu_cxx::__normal_iterator"* %117 to i8*
+  %119 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %120 = bitcast %"class.__gnu_cxx::__normal_iterator"* %119 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %118, i8* %120, i64 8, i32 8, i1 false)
+  %121 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %122 = bitcast %"class.__gnu_cxx::__normal_iterator"* %121 to i8*
+  %123 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %124 = bitcast %"class.__gnu_cxx::__normal_iterator"* %123 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %122, i8* %124, i64 8, i32 8, i1 false)
+  %125 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %126 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %125, i32 0, i32 0
+  %127 = load i32*, i32** %126, align 8
+  %128 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %129 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %128, i32 0, i32 0
+  %130 = load i32*, i32** %129, align 8
+  %131 = call i32* @_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_T0_(i32* %127, i32* %130)
+  %132 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %133 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %132, i32 0, i32 0
+  store i32* %131, i32** %133, align 8
+  %134 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %135 = bitcast %"class.__gnu_cxx::__normal_iterator"* %134 to i8*
+  %136 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %137 = bitcast %"class.__gnu_cxx::__normal_iterator"* %136 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %135, i8* %137, i64 8, i32 8, i1 false)
+  %138 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %139 = bitcast %"class.__gnu_cxx::__normal_iterator"* %138 to i8*
+  %140 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %141 = bitcast %"class.__gnu_cxx::__normal_iterator"* %140 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %139, i8* %141, i64 8, i32 8, i1 false)
+  %142 = load volatile i64*, i64** %12
+  %143 = load i64, i64* %142, align 8
+  %144 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %145 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %144, i32 0, i32 0
+  %146 = load i32*, i32** %145, align 8
+  %147 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %148 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %147, i32 0, i32 0
+  %149 = load i32*, i32** %148, align 8
+  call void @_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_(i32* %146, i32* %149, i64 %143)
+  %150 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %151 = bitcast %"class.__gnu_cxx::__normal_iterator"* %150 to i8*
+  %152 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %153 = bitcast %"class.__gnu_cxx::__normal_iterator"* %152 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %151, i8* %153, i64 8, i32 8, i1 false)
+  store i32 480889488, i32* %27
+  br label %173
+
+; <label>:154:                                    ; preds = %28
+  ret void
+
+; <label>:155:                                    ; preds = %28
+  %156 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %157 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %158 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %159 = alloca i64, align 8
+  %160 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %161 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %162 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %163 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %164 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %165 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %166 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %167 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %168 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %169 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %170 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %171 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %156, i32 0, i32 0
+  store i32* %0, i32** %171, align 8
+  %172 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %157, i32 0, i32 0
+  store i32* %1, i32** %172, align 8
+  store i64 %2, i64* %159, align 8
+  store i32 -2130707384, i32* %27
+  br label %173
+
+; <label>:173:                                    ; preds = %155, %109, %87, %82, %76, %75, %39, %31, %30
+  br label %28
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i64
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %16, align 8
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %17, align 8
+  %18 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  store i64 %18, i64* %3
+  %19 = alloca i32
+  store i32 -766336512, i32* %19
+  br label %20
+
+; <label>:20:                                     ; preds = %2, %54
+  %21 = load i32, i32* %19
+  switch i32 %21, label %22 [
+    i32 -766336512, label %23
+    i32 -500256646, label %27
+    i32 -1799201509, label %44
+    i32 -1151109408, label %53
+  ]
+
+; <label>:22:                                     ; preds = %20
+  br label %54
+
+; <label>:23:                                     ; preds = %20
+  %24 = load volatile i64, i64* %3
+  %25 = icmp sgt i64 %24, 16
+  %26 = select i1 %25, i32 -500256646, i32 -1799201509
+  store i32 %26, i32* %19
+  br label %54
+
+; <label>:27:                                     ; preds = %20
+  %28 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %29 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %28, i8* %29, i64 8, i32 8, i1 false)
+  %30 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 16) #3
+  %31 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  store i32* %30, i32** %31, align 8
+  %32 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %33 = load i32*, i32** %32, align 8
+  %34 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %35 = load i32*, i32** %34, align 8
+  call void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %33, i32* %35)
+  %36 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 16) #3
+  %37 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  store i32* %36, i32** %37, align 8
+  %38 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %39 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %38, i8* %39, i64 8, i32 8, i1 false)
+  %40 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %41 = load i32*, i32** %40, align 8
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %43 = load i32*, i32** %42, align 8
+  call void @_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %41, i32* %43)
+  store i32 -1151109408, i32* %19
+  br label %54
+
+; <label>:44:                                     ; preds = %20
+  %45 = bitcast %"class.__gnu_cxx::__normal_iterator"* %13 to i8*
+  %46 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %45, i8* %46, i64 8, i32 8, i1 false)
+  %47 = bitcast %"class.__gnu_cxx::__normal_iterator"* %14 to i8*
+  %48 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %47, i8* %48, i64 8, i32 8, i1 false)
+  %49 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %50 = load i32*, i32** %49, align 8
+  %51 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %52 = load i32*, i32** %51, align 8
+  call void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %50, i32* %52)
+  store i32 -1151109408, i32* %19
+  br label %54
+
+; <label>:53:                                     ; preds = %20
+  ret void
+
+; <label>:54:                                     ; preds = %44, %27, %23, %22
+  br label %20
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt14__partial_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %15 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %15, align 8
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %16, align 8
+  %17 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %2, i32** %17, align 8
+  %18 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %19 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %18, i8* %19, i64 8, i32 8, i1 false)
+  %20 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %20, i8* %21, i64 8, i32 8, i1 false)
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %22, i8* %23, i64 8, i32 8, i1 false)
+  %24 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %25 = load i32*, i32** %24, align 8
+  %26 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %27 = load i32*, i32** %26, align 8
+  %28 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  %29 = load i32*, i32** %28, align 8
+  call void @_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32* %25, i32* %27, i32* %29)
+  %30 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %31 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %30, i8* %31, i64 8, i32 8, i1 false)
+  %32 = bitcast %"class.__gnu_cxx::__normal_iterator"* %13 to i8*
+  %33 = bitcast %"class.__gnu_cxx::__normal_iterator"* %5 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %32, i8* %33, i64 8, i32 8, i1 false)
+  %34 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %35 = load i32*, i32** %34, align 8
+  %36 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %37 = load i32*, i32** %36, align 8
+  call void @_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %35, i32* %37)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i32* @_ZSt27__unguarded_partition_pivotIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i32*
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = load i32, i32* @x.240
+  %7 = load i32, i32* @y.241
+  %8 = sub i32 %6, -1340287669
+  %9 = sub i32 %8, 1
+  %10 = add i32 %9, -1340287669
+  %11 = sub i32 %6, 1
+  %12 = mul i32 %6, %10
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %5
+  %15 = icmp slt i32 %7, 10
+  store i1 %15, i1* %4
+  %16 = alloca i32
+  store i32 984765085, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %186
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 984765085, label %20
+    i32 1655543799, label %40
+    i32 -1475797465, label %119
+    i32 779914092, label %121
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %186
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i1, i1* %5
+  %22 = load volatile i1, i1* %4
+  %23 = xor i1 %21, true
+  %24 = xor i1 %22, true
+  %25 = xor i1 false, true
+  %26 = and i1 %23, false
+  %27 = and i1 %21, %25
+  %28 = and i1 %24, false
+  %29 = and i1 %22, %25
+  %30 = or i1 %26, %27
+  %31 = or i1 %28, %29
+  %32 = xor i1 %30, %31
+  %33 = or i1 %23, %24
+  %34 = xor i1 %33, true
+  %35 = or i1 false, %25
+  %36 = and i1 %34, %35
+  %37 = or i1 %32, %36
+  %38 = or i1 %21, %22
+  %39 = select i1 %37, i32 1655543799, i32 779914092
+  store i32 %39, i32* %16
+  br label %186
+
+; <label>:40:                                     ; preds = %17
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %43 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %44 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %45 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %46 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %50 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %51 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %52 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %53 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %54 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %55 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %42, i32 0, i32 0
+  store i32* %0, i32** %55, align 8
+  %56 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %43, i32 0, i32 0
+  store i32* %1, i32** %56, align 8
+  %57 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %43, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %42) #3
+  %58 = sdiv i64 %57, 2
+  %59 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %42, i64 %58) #3
+  %60 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %45, i32 0, i32 0
+  store i32* %59, i32** %60, align 8
+  %61 = bitcast %"class.__gnu_cxx::__normal_iterator"* %46 to i8*
+  %62 = bitcast %"class.__gnu_cxx::__normal_iterator"* %42 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %61, i8* %62, i64 8, i32 8, i1 false)
+  %63 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %42, i64 1) #3
+  %64 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %47, i32 0, i32 0
+  store i32* %63, i32** %64, align 8
+  %65 = bitcast %"class.__gnu_cxx::__normal_iterator"* %48 to i8*
+  %66 = bitcast %"class.__gnu_cxx::__normal_iterator"* %45 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %65, i8* %66, i64 8, i32 8, i1 false)
+  %67 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmiEl(%"class.__gnu_cxx::__normal_iterator"* %43, i64 1) #3
+  %68 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %49, i32 0, i32 0
+  store i32* %67, i32** %68, align 8
+  %69 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %46, i32 0, i32 0
+  %70 = load i32*, i32** %69, align 8
+  %71 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %47, i32 0, i32 0
+  %72 = load i32*, i32** %71, align 8
+  %73 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %48, i32 0, i32 0
+  %74 = load i32*, i32** %73, align 8
+  %75 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %49, i32 0, i32 0
+  %76 = load i32*, i32** %75, align 8
+  call void @_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_S9_T0_(i32* %70, i32* %72, i32* %74, i32* %76)
+  %77 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %42, i64 1) #3
+  %78 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %51, i32 0, i32 0
+  store i32* %77, i32** %78, align 8
+  %79 = bitcast %"class.__gnu_cxx::__normal_iterator"* %52 to i8*
+  %80 = bitcast %"class.__gnu_cxx::__normal_iterator"* %43 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %79, i8* %80, i64 8, i32 8, i1 false)
+  %81 = bitcast %"class.__gnu_cxx::__normal_iterator"* %53 to i8*
+  %82 = bitcast %"class.__gnu_cxx::__normal_iterator"* %42 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %81, i8* %82, i64 8, i32 8, i1 false)
+  %83 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %51, i32 0, i32 0
+  %84 = load i32*, i32** %83, align 8
+  %85 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %52, i32 0, i32 0
+  %86 = load i32*, i32** %85, align 8
+  %87 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %53, i32 0, i32 0
+  %88 = load i32*, i32** %87, align 8
+  %89 = call i32* @_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_S9_T0_(i32* %84, i32* %86, i32* %88)
+  %90 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %41, i32 0, i32 0
+  store i32* %89, i32** %90, align 8
+  %91 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %41, i32 0, i32 0
+  %92 = load i32*, i32** %91, align 8
+  store i32* %92, i32** %3
+  %93 = load i32, i32* @x.240
+  %94 = load i32, i32* @y.241
+  %95 = sub i32 0, 1
+  %96 = add i32 %93, %95
+  %97 = sub i32 %93, 1
+  %98 = mul i32 %93, %96
+  %99 = urem i32 %98, 2
+  %100 = icmp eq i32 %99, 0
+  %101 = icmp slt i32 %94, 10
+  %102 = xor i1 %100, true
+  %103 = xor i1 %101, true
+  %104 = xor i1 true, true
+  %105 = and i1 %102, true
+  %106 = and i1 %100, %104
+  %107 = and i1 %103, true
+  %108 = and i1 %101, %104
+  %109 = or i1 %105, %106
+  %110 = or i1 %107, %108
+  %111 = xor i1 %109, %110
+  %112 = or i1 %102, %103
+  %113 = xor i1 %112, true
+  %114 = or i1 true, %104
+  %115 = and i1 %113, %114
+  %116 = or i1 %111, %115
+  %117 = or i1 %100, %101
+  %118 = select i1 %116, i32 -1475797465, i32 779914092
+  store i32 %118, i32* %16
+  br label %186
+
+; <label>:119:                                    ; preds = %17
+  %120 = load volatile i32*, i32** %3
+  ret i32* %120
+
+; <label>:121:                                    ; preds = %17
+  %122 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %123 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %124 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %125 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %126 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %127 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %128 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %129 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %130 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %131 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %132 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %133 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %134 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %135 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %136 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %123, i32 0, i32 0
+  store i32* %0, i32** %136, align 8
+  %137 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %124, i32 0, i32 0
+  store i32* %1, i32** %137, align 8
+  %138 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %124, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %123) #3
+  %139 = shl i64 %138, 2
+  %140 = shl i64 %138, 2
+  %141 = shl i64 %138, 2
+  %142 = sub i64 %138, 1647203629873385696
+  %143 = sub i64 %142, 2
+  %144 = add i64 %143, 1647203629873385696
+  %145 = sub i64 %138, 2
+  %146 = mul i64 %144, 2
+  %147 = shl i64 %138, 2
+  %148 = shl i64 %138, 2
+  %149 = shl i64 %138, 2
+  %150 = shl i64 %138, 2
+  %151 = sdiv i64 %138, 2
+  %152 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %123, i64 %151) #3
+  %153 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %126, i32 0, i32 0
+  store i32* %152, i32** %153, align 8
+  %154 = bitcast %"class.__gnu_cxx::__normal_iterator"* %127 to i8*
+  %155 = bitcast %"class.__gnu_cxx::__normal_iterator"* %123 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %154, i8* %155, i64 8, i32 8, i1 false)
+  %156 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %123, i64 1) #3
+  %157 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %128, i32 0, i32 0
+  store i32* %156, i32** %157, align 8
+  %158 = bitcast %"class.__gnu_cxx::__normal_iterator"* %129 to i8*
+  %159 = bitcast %"class.__gnu_cxx::__normal_iterator"* %126 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %158, i8* %159, i64 8, i32 8, i1 false)
+  %160 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmiEl(%"class.__gnu_cxx::__normal_iterator"* %124, i64 1) #3
+  %161 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %130, i32 0, i32 0
+  store i32* %160, i32** %161, align 8
+  %162 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %127, i32 0, i32 0
+  %163 = load i32*, i32** %162, align 8
+  %164 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %128, i32 0, i32 0
+  %165 = load i32*, i32** %164, align 8
+  %166 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %129, i32 0, i32 0
+  %167 = load i32*, i32** %166, align 8
+  %168 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %130, i32 0, i32 0
+  %169 = load i32*, i32** %168, align 8
+  call void @_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_S9_T0_(i32* %163, i32* %165, i32* %167, i32* %169)
+  %170 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %123, i64 1) #3
+  %171 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %132, i32 0, i32 0
+  store i32* %170, i32** %171, align 8
+  %172 = bitcast %"class.__gnu_cxx::__normal_iterator"* %133 to i8*
+  %173 = bitcast %"class.__gnu_cxx::__normal_iterator"* %124 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %172, i8* %173, i64 8, i32 8, i1 false)
+  %174 = bitcast %"class.__gnu_cxx::__normal_iterator"* %134 to i8*
+  %175 = bitcast %"class.__gnu_cxx::__normal_iterator"* %123 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %174, i8* %175, i64 8, i32 8, i1 false)
+  %176 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %132, i32 0, i32 0
+  %177 = load i32*, i32** %176, align 8
+  %178 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %133, i32 0, i32 0
+  %179 = load i32*, i32** %178, align 8
+  %180 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %134, i32 0, i32 0
+  %181 = load i32*, i32** %180, align 8
+  %182 = call i32* @_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_S9_T0_(i32* %177, i32* %179, i32* %181)
+  %183 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %122, i32 0, i32 0
+  store i32* %182, i32** %183, align 8
+  %184 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %122, i32 0, i32 0
+  %185 = load i32*, i32** %184, align 8
+  store i32 1655543799, i32* %16
+  br label %186
+
+; <label>:186:                                    ; preds = %121, %40, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__heap_selectIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca i1
+  %15 = alloca i1
+  %16 = load i32, i32* @x.242
+  %17 = load i32, i32* @y.243
+  %18 = sub i32 %16, -946831271
+  %19 = sub i32 %18, 1
+  %20 = add i32 %19, -946831271
+  %21 = sub i32 %16, 1
+  %22 = mul i32 %16, %20
+  %23 = urem i32 %22, 2
+  %24 = icmp eq i32 %23, 0
+  store i1 %24, i1* %15
+  %25 = icmp slt i32 %17, 10
+  store i1 %25, i1* %14
+  %26 = alloca i32
+  store i32 954803439, i32* %26
+  br label %27
+
+; <label>:27:                                     ; preds = %3, %178
+  %28 = load i32, i32* %26
+  switch i32 %28, label %29 [
+    i32 954803439, label %30
+    i32 -140455914, label %38
+    i32 49755755, label %99
+    i32 828442300, label %100
+    i32 -720357264, label %105
+    i32 354824462, label %123
+    i32 -441587142, label %145
+    i32 1238757104, label %146
+    i32 -678666991, label %149
+    i32 380493017, label %150
+  ]
+
+; <label>:29:                                     ; preds = %27
+  br label %178
+
+; <label>:30:                                     ; preds = %27
+  %31 = load volatile i1, i1* %15
+  %32 = load volatile i1, i1* %14
+  %33 = and i1 %31, %32
+  %34 = xor i1 %31, %32
+  %35 = or i1 %33, %34
+  %36 = or i1 %31, %32
+  %37 = select i1 %35, i32 -140455914, i32 380493017
+  store i32 %37, i32* %26
+  br label %178
+
+; <label>:38:                                     ; preds = %27
+  %39 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %39, %"class.__gnu_cxx::__normal_iterator"** %13
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %40, %"class.__gnu_cxx::__normal_iterator"** %12
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %41, %"class.__gnu_cxx::__normal_iterator"** %11
+  %42 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_less_iter"* %42, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %10
+  %43 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %45 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %46 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %46, %"class.__gnu_cxx::__normal_iterator"** %9
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %47, %"class.__gnu_cxx::__normal_iterator"** %8
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %7
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %49, %"class.__gnu_cxx::__normal_iterator"** %6
+  %50 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %50, %"class.__gnu_cxx::__normal_iterator"** %5
+  %51 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %51, %"class.__gnu_cxx::__normal_iterator"** %4
+  %52 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %53 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %54 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %53, i32 0, i32 0
+  store i32* %0, i32** %54, align 8
+  %55 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %56 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %55, i32 0, i32 0
+  store i32* %1, i32** %56, align 8
+  %57 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %58 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %57, i32 0, i32 0
+  store i32* %2, i32** %58, align 8
+  %59 = bitcast %"class.__gnu_cxx::__normal_iterator"* %43 to i8*
+  %60 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %61 = bitcast %"class.__gnu_cxx::__normal_iterator"* %60 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %59, i8* %61, i64 8, i32 8, i1 false)
+  %62 = bitcast %"class.__gnu_cxx::__normal_iterator"* %44 to i8*
+  %63 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %64 = bitcast %"class.__gnu_cxx::__normal_iterator"* %63 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %62, i8* %64, i64 8, i32 8, i1 false)
+  %65 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %43, i32 0, i32 0
+  %66 = load i32*, i32** %65, align 8
+  %67 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %44, i32 0, i32 0
+  %68 = load i32*, i32** %67, align 8
+  call void @_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %66, i32* %68)
+  %69 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %70 = bitcast %"class.__gnu_cxx::__normal_iterator"* %69 to i8*
+  %71 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %72 = bitcast %"class.__gnu_cxx::__normal_iterator"* %71 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %70, i8* %72, i64 8, i32 8, i1 false)
+  %73 = load i32, i32* @x.242
+  %74 = load i32, i32* @y.243
+  %75 = sub i32 0, 1
+  %76 = add i32 %73, %75
+  %77 = sub i32 %73, 1
+  %78 = mul i32 %73, %76
+  %79 = urem i32 %78, 2
+  %80 = icmp eq i32 %79, 0
+  %81 = icmp slt i32 %74, 10
+  %82 = xor i1 %80, true
+  %83 = xor i1 %81, true
+  %84 = xor i1 true, true
+  %85 = and i1 %82, true
+  %86 = and i1 %80, %84
+  %87 = and i1 %83, true
+  %88 = and i1 %81, %84
+  %89 = or i1 %85, %86
+  %90 = or i1 %87, %88
+  %91 = xor i1 %89, %90
+  %92 = or i1 %82, %83
+  %93 = xor i1 %92, true
+  %94 = or i1 true, %84
+  %95 = and i1 %93, %94
+  %96 = or i1 %91, %95
+  %97 = or i1 %80, %81
+  %98 = select i1 %96, i32 49755755, i32 380493017
+  store i32 %98, i32* %26
+  br label %178
+
+; <label>:99:                                     ; preds = %27
+  store i32 828442300, i32* %26
+  br label %178
+
+; <label>:100:                                    ; preds = %27
+  %101 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %102 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %103 = call zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %102, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %101) #3
+  %104 = select i1 %103, i32 -720357264, i32 -678666991
+  store i32 %104, i32* %26
+  br label %178
+
+; <label>:105:                                    ; preds = %27
+  %106 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %107 = bitcast %"class.__gnu_cxx::__normal_iterator"* %106 to i8*
+  %108 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %109 = bitcast %"class.__gnu_cxx::__normal_iterator"* %108 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %107, i8* %109, i64 8, i32 8, i1 false)
+  %110 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %111 = bitcast %"class.__gnu_cxx::__normal_iterator"* %110 to i8*
+  %112 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %113 = bitcast %"class.__gnu_cxx::__normal_iterator"* %112 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %111, i8* %113, i64 8, i32 8, i1 false)
+  %114 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %115 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %114, i32 0, i32 0
+  %116 = load i32*, i32** %115, align 8
+  %117 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %118 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %117, i32 0, i32 0
+  %119 = load i32*, i32** %118, align 8
+  %120 = load volatile %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %10
+  %121 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %120, i32* %116, i32* %119)
+  %122 = select i1 %121, i32 354824462, i32 -441587142
+  store i32 %122, i32* %26
+  br label %178
+
+; <label>:123:                                    ; preds = %27
+  %124 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %125 = bitcast %"class.__gnu_cxx::__normal_iterator"* %124 to i8*
+  %126 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %127 = bitcast %"class.__gnu_cxx::__normal_iterator"* %126 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %125, i8* %127, i64 8, i32 8, i1 false)
+  %128 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %129 = bitcast %"class.__gnu_cxx::__normal_iterator"* %128 to i8*
+  %130 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %131 = bitcast %"class.__gnu_cxx::__normal_iterator"* %130 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %129, i8* %131, i64 8, i32 8, i1 false)
+  %132 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %133 = bitcast %"class.__gnu_cxx::__normal_iterator"* %132 to i8*
+  %134 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %135 = bitcast %"class.__gnu_cxx::__normal_iterator"* %134 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %133, i8* %135, i64 8, i32 8, i1 false)
+  %136 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %137 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %136, i32 0, i32 0
+  %138 = load i32*, i32** %137, align 8
+  %139 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %140 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %139, i32 0, i32 0
+  %141 = load i32*, i32** %140, align 8
+  %142 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %143 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %142, i32 0, i32 0
+  %144 = load i32*, i32** %143, align 8
+  call void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32* %138, i32* %141, i32* %144)
+  store i32 -441587142, i32* %26
+  br label %178
+
+; <label>:145:                                    ; preds = %27
+  store i32 1238757104, i32* %26
+  br label %178
+
+; <label>:146:                                    ; preds = %27
+  %147 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %148 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %147) #3
+  store i32 828442300, i32* %26
+  br label %178
+
+; <label>:149:                                    ; preds = %27
+  ret void
+
+; <label>:150:                                    ; preds = %27
+  %151 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %152 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %153 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %154 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %155 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %156 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %157 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %158 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %159 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %160 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %161 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %162 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %163 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %164 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %165 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %151, i32 0, i32 0
+  store i32* %0, i32** %165, align 8
+  %166 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %152, i32 0, i32 0
+  store i32* %1, i32** %166, align 8
+  %167 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %153, i32 0, i32 0
+  store i32* %2, i32** %167, align 8
+  %168 = bitcast %"class.__gnu_cxx::__normal_iterator"* %155 to i8*
+  %169 = bitcast %"class.__gnu_cxx::__normal_iterator"* %151 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %168, i8* %169, i64 8, i32 8, i1 false)
+  %170 = bitcast %"class.__gnu_cxx::__normal_iterator"* %156 to i8*
+  %171 = bitcast %"class.__gnu_cxx::__normal_iterator"* %152 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %170, i8* %171, i64 8, i32 8, i1 false)
+  %172 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %155, i32 0, i32 0
+  %173 = load i32*, i32** %172, align 8
+  %174 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %156, i32 0, i32 0
+  %175 = load i32*, i32** %174, align 8
+  call void @_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32* %173, i32* %175)
+  %176 = bitcast %"class.__gnu_cxx::__normal_iterator"* %158 to i8*
+  %177 = bitcast %"class.__gnu_cxx::__normal_iterator"* %152 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %176, i8* %177, i64 8, i32 8, i1 false)
+  store i32 -140455914, i32* %26
+  br label %178
+
+; <label>:178:                                    ; preds = %150, %146, %145, %123, %105, %100, %99, %38, %30, %29
+  br label %27
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__sort_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca i1
+  %9 = alloca i1
+  %10 = load i32, i32* @x.244
+  %11 = load i32, i32* @y.245
+  %12 = sub i32 %10, 741215813
+  %13 = sub i32 %12, 1
+  %14 = add i32 %13, 741215813
+  %15 = sub i32 %10, 1
+  %16 = mul i32 %10, %14
+  %17 = urem i32 %16, 2
+  %18 = icmp eq i32 %17, 0
+  store i1 %18, i1* %9
+  %19 = icmp slt i32 %11, 10
+  store i1 %19, i1* %8
+  %20 = alloca i32
+  store i32 -715639472, i32* %20
+  br label %21
+
+; <label>:21:                                     ; preds = %2, %168
+  %22 = load i32, i32* %20
+  switch i32 %22, label %23 [
+    i32 -715639472, label %24
+    i32 103899770, label %32
+    i32 -499100929, label %58
+    i32 1367628749, label %59
+    i32 69513371, label %65
+    i32 957490909, label %81
+    i32 -66411774, label %132
+    i32 312854945, label %133
+    i32 -515765366, label %134
+    i32 -997276962, label %144
+  ]
+
+; <label>:23:                                     ; preds = %21
+  br label %168
+
+; <label>:24:                                     ; preds = %21
+  %25 = load volatile i1, i1* %9
+  %26 = load volatile i1, i1* %8
+  %27 = and i1 %25, %26
+  %28 = xor i1 %25, %26
+  %29 = or i1 %27, %28
+  %30 = or i1 %25, %26
+  %31 = select i1 %29, i32 103899770, i32 -515765366
+  store i32 %31, i32* %20
+  br label %168
+
+; <label>:32:                                     ; preds = %21
+  %33 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %33, %"class.__gnu_cxx::__normal_iterator"** %7
+  %34 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %34, %"class.__gnu_cxx::__normal_iterator"** %6
+  %35 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %36 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %36, %"class.__gnu_cxx::__normal_iterator"** %5
+  %37 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %37, %"class.__gnu_cxx::__normal_iterator"** %4
+  %38 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %38, %"class.__gnu_cxx::__normal_iterator"** %3
+  %39 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %40 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %41 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %40, i32 0, i32 0
+  store i32* %0, i32** %41, align 8
+  %42 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %43 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %42, i32 0, i32 0
+  store i32* %1, i32** %43, align 8
+  %44 = load i32, i32* @x.244
+  %45 = load i32, i32* @y.245
+  %46 = sub i32 0, 1
+  %47 = add i32 %44, %46
+  %48 = sub i32 %44, 1
+  %49 = mul i32 %44, %47
+  %50 = urem i32 %49, 2
+  %51 = icmp eq i32 %50, 0
+  %52 = icmp slt i32 %45, 10
+  %53 = and i1 %51, %52
+  %54 = xor i1 %51, %52
+  %55 = or i1 %53, %54
+  %56 = or i1 %51, %52
+  %57 = select i1 %55, i32 -499100929, i32 -515765366
+  store i32 %57, i32* %20
+  br label %168
+
+; <label>:58:                                     ; preds = %21
+  store i32 1367628749, i32* %20
+  br label %168
+
+; <label>:59:                                     ; preds = %21
+  %60 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %61 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %62 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %61, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %60) #3
+  %63 = icmp sgt i64 %62, 1
+  %64 = select i1 %63, i32 69513371, i32 312854945
+  store i32 %64, i32* %20
+  br label %168
+
+; <label>:65:                                     ; preds = %21
+  %66 = load i32, i32* @x.244
+  %67 = load i32, i32* @y.245
+  %68 = sub i32 %66, -548520134
+  %69 = sub i32 %68, 1
+  %70 = add i32 %69, -548520134
+  %71 = sub i32 %66, 1
+  %72 = mul i32 %66, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %67, 10
+  %76 = and i1 %74, %75
+  %77 = xor i1 %74, %75
+  %78 = or i1 %76, %77
+  %79 = or i1 %74, %75
+  %80 = select i1 %78, i32 957490909, i32 -997276962
+  store i32 %80, i32* %20
+  br label %168
+
+; <label>:81:                                     ; preds = %21
+  %82 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %83 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %82) #3
+  %84 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %85 = bitcast %"class.__gnu_cxx::__normal_iterator"* %84 to i8*
+  %86 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %87 = bitcast %"class.__gnu_cxx::__normal_iterator"* %86 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %85, i8* %87, i64 8, i32 8, i1 false)
+  %88 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %89 = bitcast %"class.__gnu_cxx::__normal_iterator"* %88 to i8*
+  %90 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %91 = bitcast %"class.__gnu_cxx::__normal_iterator"* %90 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %89, i8* %91, i64 8, i32 8, i1 false)
+  %92 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %93 = bitcast %"class.__gnu_cxx::__normal_iterator"* %92 to i8*
+  %94 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %95 = bitcast %"class.__gnu_cxx::__normal_iterator"* %94 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %93, i8* %95, i64 8, i32 8, i1 false)
+  %96 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %97 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %96, i32 0, i32 0
+  %98 = load i32*, i32** %97, align 8
+  %99 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %100 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %99, i32 0, i32 0
+  %101 = load i32*, i32** %100, align 8
+  %102 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %103 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %102, i32 0, i32 0
+  %104 = load i32*, i32** %103, align 8
+  call void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32* %98, i32* %101, i32* %104)
+  %105 = load i32, i32* @x.244
+  %106 = load i32, i32* @y.245
+  %107 = add i32 %105, 1854670390
+  %108 = sub i32 %107, 1
+  %109 = sub i32 %108, 1854670390
+  %110 = sub i32 %105, 1
+  %111 = mul i32 %105, %109
+  %112 = urem i32 %111, 2
+  %113 = icmp eq i32 %112, 0
+  %114 = icmp slt i32 %106, 10
+  %115 = xor i1 %113, true
+  %116 = xor i1 %114, true
+  %117 = xor i1 false, true
+  %118 = and i1 %115, false
+  %119 = and i1 %113, %117
+  %120 = and i1 %116, false
+  %121 = and i1 %114, %117
+  %122 = or i1 %118, %119
+  %123 = or i1 %120, %121
+  %124 = xor i1 %122, %123
+  %125 = or i1 %115, %116
+  %126 = xor i1 %125, true
+  %127 = or i1 false, %117
+  %128 = and i1 %126, %127
+  %129 = or i1 %124, %128
+  %130 = or i1 %113, %114
+  %131 = select i1 %129, i32 -66411774, i32 -997276962
+  store i32 %131, i32* %20
+  br label %168
+
+; <label>:132:                                    ; preds = %21
+  store i32 1367628749, i32* %20
+  br label %168
+
+; <label>:133:                                    ; preds = %21
+  ret void
+
+; <label>:134:                                    ; preds = %21
+  %135 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %136 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %137 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %138 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %139 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %140 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %141 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %142 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %135, i32 0, i32 0
+  store i32* %0, i32** %142, align 8
+  %143 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %136, i32 0, i32 0
+  store i32* %1, i32** %143, align 8
+  store i32 103899770, i32* %20
+  br label %168
+
+; <label>:144:                                    ; preds = %21
+  %145 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %146 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %145) #3
+  %147 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %148 = bitcast %"class.__gnu_cxx::__normal_iterator"* %147 to i8*
+  %149 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %150 = bitcast %"class.__gnu_cxx::__normal_iterator"* %149 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %148, i8* %150, i64 8, i32 8, i1 false)
+  %151 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %152 = bitcast %"class.__gnu_cxx::__normal_iterator"* %151 to i8*
+  %153 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %154 = bitcast %"class.__gnu_cxx::__normal_iterator"* %153 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %152, i8* %154, i64 8, i32 8, i1 false)
+  %155 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %156 = bitcast %"class.__gnu_cxx::__normal_iterator"* %155 to i8*
+  %157 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %158 = bitcast %"class.__gnu_cxx::__normal_iterator"* %157 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %156, i8* %158, i64 8, i32 8, i1 false)
+  %159 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %160 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %159, i32 0, i32 0
+  %161 = load i32*, i32** %160, align 8
+  %162 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %163 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %162, i32 0, i32 0
+  %164 = load i32*, i32** %163, align 8
+  %165 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %166 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %165, i32 0, i32 0
+  %167 = load i32*, i32** %166, align 8
+  call void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32* %161, i32* %164, i32* %167)
+  store i32 957490909, i32* %20
+  br label %168
+
+; <label>:168:                                    ; preds = %144, %134, %132, %81, %65, %59, %58, %32, %24, %23
+  br label %21
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i64
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %7 = alloca i64, align 8
+  %8 = alloca i64, align 8
+  %9 = alloca i32, align 4
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %13, align 8
+  %14 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %14, align 8
+  %15 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  store i64 %15, i64* %3
+  %16 = alloca i32
+  store i32 -2061947490, i32* %16
+  br label %17
+
+; <label>:17:                                     ; preds = %2, %123
+  %18 = load i32, i32* %16
+  switch i32 %18, label %19 [
+    i32 -2061947490, label %20
+    i32 -1166521860, label %24
+    i32 -1200379898, label %39
+    i32 403095614, label %55
+    i32 1474430885, label %56
+    i32 1811396789, label %63
+    i32 93142803, label %81
+    i32 1801185522, label %82
+    i32 -1948786444, label %88
+    i32 1647455336, label %104
+    i32 427701919, label %120
+    i32 -395455970, label %121
+    i32 -951749832, label %122
+  ]
+
+; <label>:19:                                     ; preds = %17
+  br label %123
+
+; <label>:20:                                     ; preds = %17
+  %21 = load volatile i64, i64* %3
+  %22 = icmp slt i64 %21, 2
+  %23 = select i1 %22, i32 -1166521860, i32 1474430885
+  store i32 %23, i32* %16
+  br label %123
+
+; <label>:24:                                     ; preds = %17
+  %25 = load i32, i32* @x.246
+  %26 = load i32, i32* @y.247
+  %27 = sub i32 0, 1
+  %28 = add i32 %25, %27
+  %29 = sub i32 %25, 1
+  %30 = mul i32 %25, %28
+  %31 = urem i32 %30, 2
+  %32 = icmp eq i32 %31, 0
+  %33 = icmp slt i32 %26, 10
+  %34 = and i1 %32, %33
+  %35 = xor i1 %32, %33
+  %36 = or i1 %34, %35
+  %37 = or i1 %32, %33
+  %38 = select i1 %36, i32 -1200379898, i32 -395455970
+  store i32 %38, i32* %16
+  br label %123
+
+; <label>:39:                                     ; preds = %17
+  %40 = load i32, i32* @x.246
+  %41 = load i32, i32* @y.247
+  %42 = add i32 %40, -139112186
+  %43 = sub i32 %42, 1
+  %44 = sub i32 %43, -139112186
+  %45 = sub i32 %40, 1
+  %46 = mul i32 %40, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %41, 10
+  %50 = and i1 %48, %49
+  %51 = xor i1 %48, %49
+  %52 = or i1 %50, %51
+  %53 = or i1 %48, %49
+  %54 = select i1 %52, i32 403095614, i32 -395455970
+  store i32 %54, i32* %16
+  br label %123
+
+; <label>:55:                                     ; preds = %17
+  store i32 -1948786444, i32* %16
+  br label %123
+
+; <label>:56:                                     ; preds = %17
+  %57 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  store i64 %57, i64* %7, align 8
+  %58 = load i64, i64* %7, align 8
+  %59 = sub i64 0, 2
+  %60 = add i64 %58, %59
+  %61 = sub nsw i64 %58, 2
+  %62 = sdiv i64 %60, 2
+  store i64 %62, i64* %8, align 8
+  store i32 1811396789, i32* %16
+  br label %123
+
+; <label>:63:                                     ; preds = %17
+  %64 = load i64, i64* %8, align 8
+  %65 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 %64) #3
+  %66 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  store i32* %65, i32** %66, align 8
+  %67 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %10) #3
+  %68 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %67) #3
+  %69 = load i32, i32* %68, align 4
+  store i32 %69, i32* %9, align 4
+  %70 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %71 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %70, i8* %71, i64 8, i32 8, i1 false)
+  %72 = load i64, i64* %8, align 8
+  %73 = load i64, i64* %7, align 8
+  %74 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %9) #3
+  %75 = load i32, i32* %74, align 4
+  %76 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %77 = load i32*, i32** %76, align 8
+  call void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_less_iterEEvT_T0_SA_T1_T2_(i32* %77, i64 %72, i64 %73, i32 %75)
+  %78 = load i64, i64* %8, align 8
+  %79 = icmp eq i64 %78, 0
+  %80 = select i1 %79, i32 93142803, i32 1801185522
+  store i32 %80, i32* %16
+  br label %123
+
+; <label>:81:                                     ; preds = %17
+  store i32 -1948786444, i32* %16
+  br label %123
+
+; <label>:82:                                     ; preds = %17
+  %83 = load i64, i64* %8, align 8
+  %84 = sub i64 %83, -4091464237578190741
+  %85 = add i64 %84, -1
+  %86 = add i64 %85, -4091464237578190741
+  %87 = add nsw i64 %83, -1
+  store i64 %86, i64* %8, align 8
+  store i32 1811396789, i32* %16
+  br label %123
+
+; <label>:88:                                     ; preds = %17
+  %89 = load i32, i32* @x.246
+  %90 = load i32, i32* @y.247
+  %91 = add i32 %89, 1115538126
+  %92 = sub i32 %91, 1
+  %93 = sub i32 %92, 1115538126
+  %94 = sub i32 %89, 1
+  %95 = mul i32 %89, %93
+  %96 = urem i32 %95, 2
+  %97 = icmp eq i32 %96, 0
+  %98 = icmp slt i32 %90, 10
+  %99 = and i1 %97, %98
+  %100 = xor i1 %97, %98
+  %101 = or i1 %99, %100
+  %102 = or i1 %97, %98
+  %103 = select i1 %101, i32 1647455336, i32 -951749832
+  store i32 %103, i32* %16
+  br label %123
+
+; <label>:104:                                    ; preds = %17
+  %105 = load i32, i32* @x.246
+  %106 = load i32, i32* @y.247
+  %107 = sub i32 %105, 747492451
+  %108 = sub i32 %107, 1
+  %109 = add i32 %108, 747492451
+  %110 = sub i32 %105, 1
+  %111 = mul i32 %105, %109
+  %112 = urem i32 %111, 2
+  %113 = icmp eq i32 %112, 0
+  %114 = icmp slt i32 %106, 10
+  %115 = and i1 %113, %114
+  %116 = xor i1 %113, %114
+  %117 = or i1 %115, %116
+  %118 = or i1 %113, %114
+  %119 = select i1 %117, i32 427701919, i32 -951749832
+  store i32 %119, i32* %16
+  br label %123
+
+; <label>:120:                                    ; preds = %17
+  ret void
+
+; <label>:121:                                    ; preds = %17
+  store i32 -1200379898, i32* %16
+  br label %123
+
+; <label>:122:                                    ; preds = %17
+  store i32 1647455336, i32* %16
+  br label %123
+
+; <label>:123:                                    ; preds = %122, %121, %104, %88, %82, %81, %63, %56, %55, %39, %24, %20, %19
+  br label %17
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"*, i32*, i32*) #4 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, align 8
+  %7 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %7, align 8
+  %8 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %2, i32** %8, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_less_iter"* %0, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %6, align 8
+  %9 = load %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %6, align 8
+  %10 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  %11 = load i32, i32* %10, align 4
+  %12 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %5) #3
+  %13 = load i32, i32* %12, align 4
+  %14 = icmp slt i32 %11, %13
+  ret i1 %14
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt10__pop_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_T0_(i32*, i32*, i32*) #0 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %8 = alloca i32, align 4
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %12, align 8
+  %13 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %2, i32** %13, align 8
+  %14 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  %15 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %14) #3
+  %16 = load i32, i32* %15, align 4
+  store i32 %16, i32* %8, align 4
+  %17 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  %18 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %17) #3
+  %19 = load i32, i32* %18, align 4
+  %20 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  store i32 %19, i32* %20, align 4
+  %21 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %22 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %21, i8* %22, i64 8, i32 8, i1 false)
+  %23 = call i64 @_ZN9__gnu_cxxmiIPiSt6vectorIiSaIiEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKS8_SB_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %24 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %8) #3
+  %25 = load i32, i32* %24, align 4
+  %26 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %27 = load i32*, i32** %26, align 8
+  call void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_less_iterEEvT_T0_SA_T1_T2_(i32* %27, i64 0, i64 %23, i32 %25)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt13__adjust_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops15_Iter_less_iterEEvT_T0_SA_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %9 = alloca i64, align 8
+  %10 = alloca i64, align 8
+  %11 = alloca i32, align 4
+  %12 = alloca i64, align 8
+  %13 = alloca i64, align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %17 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %19 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %20 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %21 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %22 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %23 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %24 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %0, i32** %24, align 8
+  store i64 %1, i64* %9, align 8
+  store i64 %2, i64* %10, align 8
+  store i32 %3, i32* %11, align 4
+  %25 = load i64, i64* %9, align 8
+  store i64 %25, i64* %12, align 8
+  %26 = load i64, i64* %9, align 8
+  store i64 %26, i64* %13, align 8
+  %27 = alloca i32
+  store i32 -376609388, i32* %27
+  br label %28
+
+; <label>:28:                                     ; preds = %4, %391
+  %29 = load i32, i32* %27
+  switch i32 %29, label %30 [
+    i32 -376609388, label %31
+    i32 -853683889, label %47
+    i32 -1266122618, label %82
+    i32 -579125124, label %85
+    i32 -493478926, label %107
+    i32 1252418319, label %135
+    i32 1327787102, label %167
+    i32 1780979960, label %168
+    i32 -1712703601, label %180
+    i32 -1838771220, label %208
+    i32 2091992883, label %230
+    i32 -337388079, label %233
+    i32 -1274959515, label %243
+    i32 -2055105534, label %267
+    i32 1249652222, label %276
+    i32 823903907, label %337
+    i32 -2011470198, label %363
+  ]
+
+; <label>:30:                                     ; preds = %28
+  br label %391
+
+; <label>:31:                                     ; preds = %28
+  %32 = load i32, i32* @x.252
+  %33 = load i32, i32* @y.253
+  %34 = sub i32 %32, 1937971404
+  %35 = sub i32 %34, 1
+  %36 = add i32 %35, 1937971404
+  %37 = sub i32 %32, 1
+  %38 = mul i32 %32, %36
+  %39 = urem i32 %38, 2
+  %40 = icmp eq i32 %39, 0
+  %41 = icmp slt i32 %33, 10
+  %42 = and i1 %40, %41
+  %43 = xor i1 %40, %41
+  %44 = or i1 %42, %43
+  %45 = or i1 %40, %41
+  %46 = select i1 %44, i32 -853683889, i32 1249652222
+  store i32 %46, i32* %27
+  br label %391
+
+; <label>:47:                                     ; preds = %28
+  %48 = load i64, i64* %13, align 8
+  %49 = load i64, i64* %10, align 8
+  %50 = sub i64 %49, -1984251774622309955
+  %51 = sub i64 %50, 1
+  %52 = add i64 %51, -1984251774622309955
+  %53 = sub nsw i64 %49, 1
+  %54 = sdiv i64 %52, 2
+  %55 = icmp slt i64 %48, %54
+  store i1 %55, i1* %6
+  %56 = load i32, i32* @x.252
+  %57 = load i32, i32* @y.253
+  %58 = sub i32 0, 1
+  %59 = add i32 %56, %58
+  %60 = sub i32 %56, 1
+  %61 = mul i32 %56, %59
+  %62 = urem i32 %61, 2
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %57, 10
+  %65 = xor i1 %63, true
+  %66 = xor i1 %64, true
+  %67 = xor i1 true, true
+  %68 = and i1 %65, true
+  %69 = and i1 %63, %67
+  %70 = and i1 %66, true
+  %71 = and i1 %64, %67
+  %72 = or i1 %68, %69
+  %73 = or i1 %70, %71
+  %74 = xor i1 %72, %73
+  %75 = or i1 %65, %66
+  %76 = xor i1 %75, true
+  %77 = or i1 true, %67
+  %78 = and i1 %76, %77
+  %79 = or i1 %74, %78
+  %80 = or i1 %63, %64
+  %81 = select i1 %79, i32 -1266122618, i32 1249652222
+  store i32 %81, i32* %27
+  br label %391
+
+; <label>:82:                                     ; preds = %28
+  %83 = load volatile i1, i1* %6
+  %84 = select i1 %83, i32 -579125124, i32 -1712703601
+  store i32 %84, i32* %27
+  br label %391
+
+; <label>:85:                                     ; preds = %28
+  %86 = load i64, i64* %13, align 8
+  %87 = sub i64 %86, -7970368039522825774
+  %88 = add i64 %87, 1
+  %89 = add i64 %88, -7970368039522825774
+  %90 = add nsw i64 %86, 1
+  %91 = mul nsw i64 2, %89
+  store i64 %91, i64* %13, align 8
+  %92 = load i64, i64* %13, align 8
+  %93 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %92) #3
+  %94 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %93, i32** %94, align 8
+  %95 = load i64, i64* %13, align 8
+  %96 = sub i64 0, 1
+  %97 = add i64 %95, %96
+  %98 = sub nsw i64 %95, 1
+  %99 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %97) #3
+  %100 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %99, i32** %100, align 8
+  %101 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %102 = load i32*, i32** %101, align 8
+  %103 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %104 = load i32*, i32** %103, align 8
+  %105 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %8, i32* %102, i32* %104)
+  %106 = select i1 %105, i32 -493478926, i32 1780979960
+  store i32 %106, i32* %27
+  br label %391
+
+; <label>:107:                                    ; preds = %28
+  %108 = load i32, i32* @x.252
+  %109 = load i32, i32* @y.253
+  %110 = add i32 %108, -1120860917
+  %111 = sub i32 %110, 1
+  %112 = sub i32 %111, -1120860917
+  %113 = sub i32 %108, 1
+  %114 = mul i32 %108, %112
+  %115 = urem i32 %114, 2
+  %116 = icmp eq i32 %115, 0
+  %117 = icmp slt i32 %109, 10
+  %118 = xor i1 %116, true
+  %119 = xor i1 %117, true
+  %120 = xor i1 false, true
+  %121 = and i1 %118, false
+  %122 = and i1 %116, %120
+  %123 = and i1 %119, false
+  %124 = and i1 %117, %120
+  %125 = or i1 %121, %122
+  %126 = or i1 %123, %124
+  %127 = xor i1 %125, %126
+  %128 = or i1 %118, %119
+  %129 = xor i1 %128, true
+  %130 = or i1 false, %120
+  %131 = and i1 %129, %130
+  %132 = or i1 %127, %131
+  %133 = or i1 %116, %117
+  %134 = select i1 %132, i32 1252418319, i32 823903907
+  store i32 %134, i32* %27
+  br label %391
+
+; <label>:135:                                    ; preds = %28
+  %136 = load i64, i64* %13, align 8
+  %137 = sub i64 0, -1
+  %138 = sub i64 %136, %137
+  %139 = add nsw i64 %136, -1
+  store i64 %138, i64* %13, align 8
+  %140 = load i32, i32* @x.252
+  %141 = load i32, i32* @y.253
+  %142 = sub i32 %140, 1032408792
+  %143 = sub i32 %142, 1
+  %144 = add i32 %143, 1032408792
+  %145 = sub i32 %140, 1
+  %146 = mul i32 %140, %144
+  %147 = urem i32 %146, 2
+  %148 = icmp eq i32 %147, 0
+  %149 = icmp slt i32 %141, 10
+  %150 = xor i1 %148, true
+  %151 = xor i1 %149, true
+  %152 = xor i1 true, true
+  %153 = and i1 %150, true
+  %154 = and i1 %148, %152
+  %155 = and i1 %151, true
+  %156 = and i1 %149, %152
+  %157 = or i1 %153, %154
+  %158 = or i1 %155, %156
+  %159 = xor i1 %157, %158
+  %160 = or i1 %150, %151
+  %161 = xor i1 %160, true
+  %162 = or i1 true, %152
+  %163 = and i1 %161, %162
+  %164 = or i1 %159, %163
+  %165 = or i1 %148, %149
+  %166 = select i1 %164, i32 1327787102, i32 823903907
+  store i32 %166, i32* %27
+  br label %391
+
+; <label>:167:                                    ; preds = %28
+  store i32 1780979960, i32* %27
+  br label %391
+
+; <label>:168:                                    ; preds = %28
+  %169 = load i64, i64* %13, align 8
+  %170 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %169) #3
+  %171 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %16, i32 0, i32 0
+  store i32* %170, i32** %171, align 8
+  %172 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %16) #3
+  %173 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %172) #3
+  %174 = load i32, i32* %173, align 4
+  %175 = load i64, i64* %9, align 8
+  %176 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %175) #3
+  %177 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %17, i32 0, i32 0
+  store i32* %176, i32** %177, align 8
+  %178 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %17) #3
+  store i32 %174, i32* %178, align 4
+  %179 = load i64, i64* %13, align 8
+  store i64 %179, i64* %9, align 8
+  store i32 -376609388, i32* %27
+  br label %391
+
+; <label>:180:                                    ; preds = %28
+  %181 = load i32, i32* @x.252
+  %182 = load i32, i32* @y.253
+  %183 = sub i32 %181, -2094683640
+  %184 = sub i32 %183, 1
+  %185 = add i32 %184, -2094683640
+  %186 = sub i32 %181, 1
+  %187 = mul i32 %181, %185
+  %188 = urem i32 %187, 2
+  %189 = icmp eq i32 %188, 0
+  %190 = icmp slt i32 %182, 10
+  %191 = xor i1 %189, true
+  %192 = xor i1 %190, true
+  %193 = xor i1 false, true
+  %194 = and i1 %191, false
+  %195 = and i1 %189, %193
+  %196 = and i1 %192, false
+  %197 = and i1 %190, %193
+  %198 = or i1 %194, %195
+  %199 = or i1 %196, %197
+  %200 = xor i1 %198, %199
+  %201 = or i1 %191, %192
+  %202 = xor i1 %201, true
+  %203 = or i1 false, %193
+  %204 = and i1 %202, %203
+  %205 = or i1 %200, %204
+  %206 = or i1 %189, %190
+  %207 = select i1 %205, i32 -1838771220, i32 -2011470198
+  store i32 %207, i32* %27
+  br label %391
+
+; <label>:208:                                    ; preds = %28
+  %209 = load i64, i64* %10, align 8
+  %210 = xor i64 1, -1
+  %211 = xor i64 %209, %210
+  %212 = and i64 %211, %209
+  %213 = and i64 %209, 1
+  %214 = icmp eq i64 %212, 0
+  store i1 %214, i1* %5
+  %215 = load i32, i32* @x.252
+  %216 = load i32, i32* @y.253
+  %217 = sub i32 %215, 474260994
+  %218 = sub i32 %217, 1
+  %219 = add i32 %218, 474260994
+  %220 = sub i32 %215, 1
+  %221 = mul i32 %215, %219
+  %222 = urem i32 %221, 2
+  %223 = icmp eq i32 %222, 0
+  %224 = icmp slt i32 %216, 10
+  %225 = and i1 %223, %224
+  %226 = xor i1 %223, %224
+  %227 = or i1 %225, %226
+  %228 = or i1 %223, %224
+  %229 = select i1 %227, i32 2091992883, i32 -2011470198
+  store i32 %229, i32* %27
+  br label %391
+
+; <label>:230:                                    ; preds = %28
+  %231 = load volatile i1, i1* %5
+  %232 = select i1 %231, i32 -337388079, i32 -2055105534
+  store i32 %232, i32* %27
+  br label %391
+
+; <label>:233:                                    ; preds = %28
+  %234 = load i64, i64* %13, align 8
+  %235 = load i64, i64* %10, align 8
+  %236 = add i64 %235, -3617201494570295421
+  %237 = sub i64 %236, 2
+  %238 = sub i64 %237, -3617201494570295421
+  %239 = sub nsw i64 %235, 2
+  %240 = sdiv i64 %238, 2
+  %241 = icmp eq i64 %234, %240
+  %242 = select i1 %241, i32 -1274959515, i32 -2055105534
+  store i32 %242, i32* %27
+  br label %391
+
+; <label>:243:                                    ; preds = %28
+  %244 = load i64, i64* %13, align 8
+  %245 = sub i64 0, 1
+  %246 = sub i64 %244, %245
+  %247 = add nsw i64 %244, 1
+  %248 = mul nsw i64 2, %246
+  store i64 %248, i64* %13, align 8
+  %249 = load i64, i64* %13, align 8
+  %250 = sub i64 0, 1
+  %251 = add i64 %249, %250
+  %252 = sub nsw i64 %249, 1
+  %253 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %251) #3
+  %254 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %18, i32 0, i32 0
+  store i32* %253, i32** %254, align 8
+  %255 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %18) #3
+  %256 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %255) #3
+  %257 = load i32, i32* %256, align 4
+  %258 = load i64, i64* %9, align 8
+  %259 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 %258) #3
+  %260 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %19, i32 0, i32 0
+  store i32* %259, i32** %260, align 8
+  %261 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %19) #3
+  store i32 %257, i32* %261, align 4
+  %262 = load i64, i64* %13, align 8
+  %263 = add i64 %262, 6519642573651534849
+  %264 = sub i64 %263, 1
+  %265 = sub i64 %264, 6519642573651534849
+  %266 = sub nsw i64 %262, 1
+  store i64 %265, i64* %9, align 8
+  store i32 -2055105534, i32* %27
+  br label %391
+
+; <label>:267:                                    ; preds = %28
+  %268 = bitcast %"class.__gnu_cxx::__normal_iterator"* %20 to i8*
+  %269 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %268, i8* %269, i64 8, i32 8, i1 false)
+  %270 = load i64, i64* %9, align 8
+  %271 = load i64, i64* %12, align 8
+  %272 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %11) #3
+  %273 = load i32, i32* %272, align 4
+  call void @_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE()
+  %274 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %20, i32 0, i32 0
+  %275 = load i32*, i32** %274, align 8
+  call void @_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_less_valEEvT_T0_SA_T1_T2_(i32* %275, i64 %270, i64 %271, i32 %273)
+  ret void
+
+; <label>:276:                                    ; preds = %28
+  %277 = load i64, i64* %13, align 8
+  %278 = load i64, i64* %10, align 8
+  %279 = add i64 %278, 6561522034463080983
+  %280 = sub i64 %279, 1
+  %281 = sub i64 %280, 6561522034463080983
+  %282 = sub i64 %278, 1
+  %283 = mul i64 %281, 1
+  %284 = sub i64 %278, -2050956884213776635
+  %285 = sub i64 %284, 1
+  %286 = add i64 %285, -2050956884213776635
+  %287 = sub i64 %278, 1
+  %288 = mul i64 %286, 1
+  %289 = sub i64 0, 1
+  %290 = add i64 %278, %289
+  %291 = sub nsw i64 %278, 1
+  %292 = sub i64 0, -9090317019314051797
+  %293 = sub i64 %292, %290
+  %294 = add i64 %293, -9090317019314051797
+  %295 = sub i64 0, %290
+  %296 = sub i64 %294, 2463911473623350809
+  %297 = add i64 %296, 2
+  %298 = add i64 %297, 2463911473623350809
+  %299 = add i64 %294, 2
+  %300 = shl i64 %290, 2
+  %301 = sub i64 %290, 4193881087516334620
+  %302 = sub i64 %301, 2
+  %303 = add i64 %302, 4193881087516334620
+  %304 = sub i64 %290, 2
+  %305 = mul i64 %303, 2
+  %306 = sub i64 %290, 81913371588871832
+  %307 = sub i64 %306, 2
+  %308 = add i64 %307, 81913371588871832
+  %309 = sub i64 %290, 2
+  %310 = mul i64 %308, 2
+  %311 = sub i64 0, 420554351882831934
+  %312 = sub i64 %311, %290
+  %313 = add i64 %312, 420554351882831934
+  %314 = sub i64 0, %290
+  %315 = add i64 %313, -812349176669547459
+  %316 = add i64 %315, 2
+  %317 = sub i64 %316, -812349176669547459
+  %318 = add i64 %313, 2
+  %319 = add i64 %290, -6898747355530558071
+  %320 = sub i64 %319, 2
+  %321 = sub i64 %320, -6898747355530558071
+  %322 = sub i64 %290, 2
+  %323 = mul i64 %321, 2
+  %324 = shl i64 %290, 2
+  %325 = shl i64 %290, 2
+  %326 = sub i64 0, 3832890953671100412
+  %327 = sub i64 %326, %290
+  %328 = add i64 %327, 3832890953671100412
+  %329 = sub i64 0, %290
+  %330 = sub i64 0, %328
+  %331 = sub i64 0, 2
+  %332 = add i64 %330, %331
+  %333 = sub i64 0, %332
+  %334 = add i64 %328, 2
+  %335 = sdiv i64 %290, 2
+  %336 = icmp slt i64 %277, %335
+  store i32 -853683889, i32* %27
+  br label %391
+
+; <label>:337:                                    ; preds = %28
+  %338 = load i64, i64* %13, align 8
+  %339 = sub i64 %338, -2400163413224206144
+  %340 = sub i64 %339, -1
+  %341 = add i64 %340, -2400163413224206144
+  %342 = sub i64 %338, -1
+  %343 = mul i64 %341, -1
+  %344 = add i64 0, 7084515301510293559
+  %345 = sub i64 %344, %338
+  %346 = sub i64 %345, 7084515301510293559
+  %347 = sub i64 0, %338
+  %348 = sub i64 %346, 9202331877587419972
+  %349 = add i64 %348, -1
+  %350 = add i64 %349, 9202331877587419972
+  %351 = add i64 %346, -1
+  %352 = sub i64 0, %338
+  %353 = add i64 0, %352
+  %354 = sub i64 0, %338
+  %355 = sub i64 %353, -2336111456063848557
+  %356 = add i64 %355, -1
+  %357 = add i64 %356, -2336111456063848557
+  %358 = add i64 %353, -1
+  %359 = sub i64 %338, 2349014075765628986
+  %360 = add i64 %359, -1
+  %361 = add i64 %360, 2349014075765628986
+  %362 = add nsw i64 %338, -1
+  store i64 %361, i64* %13, align 8
+  store i32 1252418319, i32* %27
+  br label %391
+
+; <label>:363:                                    ; preds = %28
+  %364 = load i64, i64* %10, align 8
+  %365 = add i64 %364, -150560587123106971
+  %366 = sub i64 %365, 1
+  %367 = sub i64 %366, -150560587123106971
+  %368 = sub i64 %364, 1
+  %369 = mul i64 %367, 1
+  %370 = shl i64 %364, 1
+  %371 = shl i64 %364, 1
+  %372 = add i64 0, -2619311209955748291
+  %373 = sub i64 %372, %364
+  %374 = sub i64 %373, -2619311209955748291
+  %375 = sub i64 0, %364
+  %376 = sub i64 0, 1
+  %377 = sub i64 %374, %376
+  %378 = add i64 %374, 1
+  %379 = sub i64 0, %364
+  %380 = add i64 0, %379
+  %381 = sub i64 0, %364
+  %382 = add i64 %380, -3550775923215810962
+  %383 = add i64 %382, 1
+  %384 = sub i64 %383, -3550775923215810962
+  %385 = add i64 %380, 1
+  %386 = xor i64 1, -1
+  %387 = xor i64 %364, %386
+  %388 = and i64 %387, %364
+  %389 = and i64 %364, 1
+  %390 = icmp eq i64 %388, 0
+  store i32 -1838771220, i32* %27
+  br label %391
+
+; <label>:391:                                    ; preds = %363, %337, %276, %243, %233, %230, %208, %180, %168, %167, %135, %107, %85, %82, %47, %31, %30
+  br label %28
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt11__push_heapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEEliNS0_5__ops14_Iter_less_valEEvT_T0_SA_T1_T2_(i32*, i64, i64, i32) #0 comdat {
+  %5 = alloca i1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %8 = alloca i64, align 8
+  %9 = alloca i64, align 8
+  %10 = alloca i32, align 4
+  %11 = alloca i64, align 8
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %6, i32 0, i32 0
+  store i32* %0, i32** %16, align 8
+  store i64 %1, i64* %8, align 8
+  store i64 %2, i64* %9, align 8
+  store i32 %3, i32* %10, align 4
+  %17 = load i64, i64* %8, align 8
+  %18 = sub i64 0, 1
+  %19 = add i64 %17, %18
+  %20 = sub nsw i64 %17, 1
+  %21 = sdiv i64 %19, 2
+  store i64 %21, i64* %11, align 8
+  %22 = alloca i32
+  store i32 -593844152, i32* %22
+  %23 = alloca i1
+  br label %24
+
+; <label>:24:                                     ; preds = %4, %162
+  %25 = load i32, i32* %22
+  switch i32 %25, label %26 [
+    i32 -593844152, label %27
+    i32 199018919, label %32
+    i32 1151695900, label %39
+    i32 1869171922, label %55
+    i32 72363861, label %82
+    i32 -613470804, label %85
+    i32 1141201181, label %103
+    i32 -904675973, label %131
+    i32 -789801883, label %153
+    i32 772423848, label %154
+    i32 -603759554, label %155
+  ]
+
+; <label>:26:                                     ; preds = %24
+  br label %162
+
+; <label>:27:                                     ; preds = %24
+  %28 = load i64, i64* %8, align 8
+  %29 = load i64, i64* %9, align 8
+  %30 = icmp sgt i64 %28, %29
+  %31 = select i1 %30, i32 199018919, i32 1151695900
+  store i32 %31, i32* %22
+  store i1 false, i1* %23
+  br label %162
+
+; <label>:32:                                     ; preds = %24
+  %33 = load i64, i64* %11, align 8
+  %34 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 %33) #3
+  %35 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  store i32* %34, i32** %35, align 8
+  %36 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %37 = load i32*, i32** %36, align 8
+  %38 = call zeroext i1 @_ZNK9__gnu_cxx5__ops14_Iter_less_valclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_less_val"* %7, i32* %37, i32* dereferenceable(4) %10)
+  store i32 1151695900, i32* %22
+  store i1 %38, i1* %23
+  br label %162
+
+; <label>:39:                                     ; preds = %24
+  %40 = load i1, i1* %23
+  store i1 %40, i1* %5
+  %41 = load i32, i32* @x.254
+  %42 = load i32, i32* @y.255
+  %43 = sub i32 0, 1
+  %44 = add i32 %41, %43
+  %45 = sub i32 %41, 1
+  %46 = mul i32 %41, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %42, 10
+  %50 = and i1 %48, %49
+  %51 = xor i1 %48, %49
+  %52 = or i1 %50, %51
+  %53 = or i1 %48, %49
+  %54 = select i1 %52, i32 1869171922, i32 772423848
+  store i32 %54, i32* %22
+  br label %162
+
+; <label>:55:                                     ; preds = %24
+  %56 = load i32, i32* @x.254
+  %57 = load i32, i32* @y.255
+  %58 = sub i32 0, 1
+  %59 = add i32 %56, %58
+  %60 = sub i32 %56, 1
+  %61 = mul i32 %56, %59
+  %62 = urem i32 %61, 2
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %57, 10
+  %65 = xor i1 %63, true
+  %66 = xor i1 %64, true
+  %67 = xor i1 false, true
+  %68 = and i1 %65, false
+  %69 = and i1 %63, %67
+  %70 = and i1 %66, false
+  %71 = and i1 %64, %67
+  %72 = or i1 %68, %69
+  %73 = or i1 %70, %71
+  %74 = xor i1 %72, %73
+  %75 = or i1 %65, %66
+  %76 = xor i1 %75, true
+  %77 = or i1 false, %67
+  %78 = and i1 %76, %77
+  %79 = or i1 %74, %78
+  %80 = or i1 %63, %64
+  %81 = select i1 %79, i32 72363861, i32 772423848
+  store i32 %81, i32* %22
+  br label %162
+
+; <label>:82:                                     ; preds = %24
+  %83 = load volatile i1, i1* %5
+  %84 = select i1 %83, i32 -613470804, i32 1141201181
+  store i32 %84, i32* %22
+  br label %162
+
+; <label>:85:                                     ; preds = %24
+  %86 = load i64, i64* %11, align 8
+  %87 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 %86) #3
+  %88 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  store i32* %87, i32** %88, align 8
+  %89 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %13) #3
+  %90 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %89) #3
+  %91 = load i32, i32* %90, align 4
+  %92 = load i64, i64* %8, align 8
+  %93 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 %92) #3
+  %94 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %93, i32** %94, align 8
+  %95 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %14) #3
+  store i32 %91, i32* %95, align 4
+  %96 = load i64, i64* %11, align 8
+  store i64 %96, i64* %8, align 8
+  %97 = load i64, i64* %8, align 8
+  %98 = add i64 %97, -5164618269707642345
+  %99 = sub i64 %98, 1
+  %100 = sub i64 %99, -5164618269707642345
+  %101 = sub nsw i64 %97, 1
+  %102 = sdiv i64 %100, 2
+  store i64 %102, i64* %11, align 8
+  store i32 -593844152, i32* %22
+  br label %162
+
+; <label>:103:                                    ; preds = %24
+  %104 = load i32, i32* @x.254
+  %105 = load i32, i32* @y.255
+  %106 = add i32 %104, -849679049
+  %107 = sub i32 %106, 1
+  %108 = sub i32 %107, -849679049
+  %109 = sub i32 %104, 1
+  %110 = mul i32 %104, %108
+  %111 = urem i32 %110, 2
+  %112 = icmp eq i32 %111, 0
+  %113 = icmp slt i32 %105, 10
+  %114 = xor i1 %112, true
+  %115 = xor i1 %113, true
+  %116 = xor i1 true, true
+  %117 = and i1 %114, true
+  %118 = and i1 %112, %116
+  %119 = and i1 %115, true
+  %120 = and i1 %113, %116
+  %121 = or i1 %117, %118
+  %122 = or i1 %119, %120
+  %123 = xor i1 %121, %122
+  %124 = or i1 %114, %115
+  %125 = xor i1 %124, true
+  %126 = or i1 true, %116
+  %127 = and i1 %125, %126
+  %128 = or i1 %123, %127
+  %129 = or i1 %112, %113
+  %130 = select i1 %128, i32 -904675973, i32 -603759554
+  store i32 %130, i32* %22
+  br label %162
+
+; <label>:131:                                    ; preds = %24
+  %132 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %10) #3
+  %133 = load i32, i32* %132, align 4
+  %134 = load i64, i64* %8, align 8
+  %135 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 %134) #3
+  %136 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %135, i32** %136, align 8
+  %137 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %15) #3
+  store i32 %133, i32* %137, align 4
+  %138 = load i32, i32* @x.254
+  %139 = load i32, i32* @y.255
+  %140 = sub i32 %138, -1490732448
+  %141 = sub i32 %140, 1
+  %142 = add i32 %141, -1490732448
+  %143 = sub i32 %138, 1
+  %144 = mul i32 %138, %142
+  %145 = urem i32 %144, 2
+  %146 = icmp eq i32 %145, 0
+  %147 = icmp slt i32 %139, 10
+  %148 = and i1 %146, %147
+  %149 = xor i1 %146, %147
+  %150 = or i1 %148, %149
+  %151 = or i1 %146, %147
+  %152 = select i1 %150, i32 -789801883, i32 -603759554
+  store i32 %152, i32* %22
+  br label %162
+
+; <label>:153:                                    ; preds = %24
+  ret void
+
+; <label>:154:                                    ; preds = %24
+  store i32 1869171922, i32* %22
+  br label %162
+
+; <label>:155:                                    ; preds = %24
+  %156 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %10) #3
+  %157 = load i32, i32* %156, align 4
+  %158 = load i64, i64* %8, align 8
+  %159 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %6, i64 %158) #3
+  %160 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  store i32* %159, i32** %160, align 8
+  %161 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %15) #3
+  store i32 %157, i32* %161, align 4
+  store i32 -904675973, i32* %22
+  br label %162
+
+; <label>:162:                                    ; preds = %155, %154, %131, %103, %85, %82, %55, %39, %32, %27, %26
+  br label %24
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__iter_comp_valENS0_15_Iter_less_iterE() #4 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops14_Iter_less_valclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEiEEbT_RT0_(%"struct.__gnu_cxx::__ops::_Iter_less_val"*, i32*, i32* dereferenceable(4)) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.258
+  %8 = load i32, i32* @y.259
+  %9 = sub i32 %7, -1152468395
+  %10 = sub i32 %9, 1
+  %11 = add i32 %10, -1152468395
+  %12 = sub i32 %7, 1
+  %13 = mul i32 %7, %11
+  %14 = urem i32 %13, 2
+  %15 = icmp eq i32 %14, 0
+  store i1 %15, i1* %6
+  %16 = icmp slt i32 %8, 10
+  store i1 %16, i1* %5
+  %17 = alloca i32
+  store i32 1124068008, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %3, %80
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 1124068008, label %21
+    i32 1486446232, label %41
+    i32 623420693, label %67
+    i32 1069489771, label %69
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %80
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile i1, i1* %6
+  %23 = load volatile i1, i1* %5
+  %24 = xor i1 %22, true
+  %25 = xor i1 %23, true
+  %26 = xor i1 false, true
+  %27 = and i1 %24, false
+  %28 = and i1 %22, %26
+  %29 = and i1 %25, false
+  %30 = and i1 %23, %26
+  %31 = or i1 %27, %28
+  %32 = or i1 %29, %30
+  %33 = xor i1 %31, %32
+  %34 = or i1 %24, %25
+  %35 = xor i1 %34, true
+  %36 = or i1 false, %26
+  %37 = and i1 %35, %36
+  %38 = or i1 %33, %37
+  %39 = or i1 %22, %23
+  %40 = select i1 %38, i32 1486446232, i32 1069489771
+  store i32 %40, i32* %17
+  br label %80
+
+; <label>:41:                                     ; preds = %18
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %43 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val"*, align 8
+  %44 = alloca i32*, align 8
+  %45 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %42, i32 0, i32 0
+  store i32* %1, i32** %45, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_less_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %43, align 8
+  store i32* %2, i32** %44, align 8
+  %46 = load %"struct.__gnu_cxx::__ops::_Iter_less_val"*, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %43, align 8
+  %47 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %42) #3
+  %48 = load i32, i32* %47, align 4
+  %49 = load i32*, i32** %44, align 8
+  %50 = load i32, i32* %49, align 4
+  %51 = icmp slt i32 %48, %50
+  store i1 %51, i1* %4
+  %52 = load i32, i32* @x.258
+  %53 = load i32, i32* @y.259
+  %54 = sub i32 %52, 813563256
+  %55 = sub i32 %54, 1
+  %56 = add i32 %55, 813563256
+  %57 = sub i32 %52, 1
+  %58 = mul i32 %52, %56
+  %59 = urem i32 %58, 2
+  %60 = icmp eq i32 %59, 0
+  %61 = icmp slt i32 %53, 10
+  %62 = and i1 %60, %61
+  %63 = xor i1 %60, %61
+  %64 = or i1 %62, %63
+  %65 = or i1 %60, %61
+  %66 = select i1 %64, i32 623420693, i32 1069489771
+  store i32 %66, i32* %17
+  br label %80
+
+; <label>:67:                                     ; preds = %18
+  %68 = load volatile i1, i1* %4
+  ret i1 %68
+
+; <label>:69:                                     ; preds = %18
+  %70 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %71 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_val"*, align 8
+  %72 = alloca i32*, align 8
+  %73 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %70, i32 0, i32 0
+  store i32* %1, i32** %73, align 8
+  store %"struct.__gnu_cxx::__ops::_Iter_less_val"* %0, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %71, align 8
+  store i32* %2, i32** %72, align 8
+  %74 = load %"struct.__gnu_cxx::__ops::_Iter_less_val"*, %"struct.__gnu_cxx::__ops::_Iter_less_val"** %71, align 8
+  %75 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %70) #3
+  %76 = load i32, i32* %75, align 4
+  %77 = load i32*, i32** %72, align 8
+  %78 = load i32, i32* %77, align 4
+  %79 = icmp slt i32 %76, %78
+  store i32 1486446232, i32* %17
+  br label %80
+
+; <label>:80:                                     ; preds = %69, %41, %21, %20
+  br label %18
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt22__move_median_to_firstIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_S9_S9_T0_(i32*, i32*, i32*, i32*) #4 comdat {
+  %5 = alloca i32*
+  %6 = alloca i32*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %11 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %17 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %19 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %20 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %21 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %22 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %23 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %24 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %25 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %26 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %27 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %28 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %29 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %30 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %31 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %32 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %33 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %34 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %0, i32** %34, align 8
+  %35 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  store i32* %1, i32** %35, align 8
+  %36 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  store i32* %2, i32** %36, align 8
+  %37 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %10, i32 0, i32 0
+  store i32* %3, i32** %37, align 8
+  %38 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %39 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %38, i8* %39, i64 8, i32 8, i1 false)
+  %40 = bitcast %"class.__gnu_cxx::__normal_iterator"* %13 to i8*
+  %41 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %40, i8* %41, i64 8, i32 8, i1 false)
+  %42 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %43 = load i32*, i32** %42, align 8
+  store i32* %43, i32** %6
+  %44 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %45 = load i32*, i32** %44, align 8
+  store i32* %45, i32** %5
+  %46 = alloca i32
+  store i32 -1794032346, i32* %46
+  br label %47
+
+; <label>:47:                                     ; preds = %4, %411
+  %48 = load i32, i32* %46
+  switch i32 %48, label %49 [
+    i32 -1794032346, label %50
+    i32 1265332336, label %55
+    i32 698162501, label %66
+    i32 -1721258007, label %81
+    i32 1336624036, label %117
+    i32 -1912078096, label %118
+    i32 650361135, label %129
+    i32 1639464152, label %138
+    i32 -1316198365, label %166
+    i32 -1465741663, label %201
+    i32 -1464209331, label %202
+    i32 203513374, label %203
+    i32 825219938, label %204
+    i32 1310399010, label %215
+    i32 149402387, label %224
+    i32 738074714, label %235
+    i32 -1318834146, label %244
+    i32 1179169519, label %260
+    i32 395883916, label %283
+    i32 2139204421, label %284
+    i32 -2036179066, label %300
+    i32 -1084651227, label %315
+    i32 -965330903, label %316
+    i32 -135708624, label %331
+    i32 1346457937, label %347
+    i32 1659253522, label %348
+    i32 -614425758, label %364
+    i32 1233471250, label %380
+    i32 452753016, label %381
+    i32 1498981218, label %390
+    i32 -1908779181, label %399
+    i32 766917059, label %408
+    i32 2005628993, label %409
+    i32 351935894, label %410
+  ]
+
+; <label>:49:                                     ; preds = %47
+  br label %411
+
+; <label>:50:                                     ; preds = %47
+  %51 = load volatile i32*, i32** %6
+  %52 = load volatile i32*, i32** %5
+  %53 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %11, i32* %51, i32* %52)
+  %54 = select i1 %53, i32 1265332336, i32 825219938
+  store i32 %54, i32* %46
+  br label %411
+
+; <label>:55:                                     ; preds = %47
+  %56 = bitcast %"class.__gnu_cxx::__normal_iterator"* %14 to i8*
+  %57 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %56, i8* %57, i64 8, i32 8, i1 false)
+  %58 = bitcast %"class.__gnu_cxx::__normal_iterator"* %15 to i8*
+  %59 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %58, i8* %59, i64 8, i32 8, i1 false)
+  %60 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  %61 = load i32*, i32** %60, align 8
+  %62 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %63 = load i32*, i32** %62, align 8
+  %64 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %11, i32* %61, i32* %63)
+  %65 = select i1 %64, i32 698162501, i32 -1912078096
+  store i32 %65, i32* %46
+  br label %411
+
+; <label>:66:                                     ; preds = %47
+  %67 = load i32, i32* @x.260
+  %68 = load i32, i32* @y.261
+  %69 = sub i32 0, 1
+  %70 = add i32 %67, %69
+  %71 = sub i32 %67, 1
+  %72 = mul i32 %67, %70
+  %73 = urem i32 %72, 2
+  %74 = icmp eq i32 %73, 0
+  %75 = icmp slt i32 %68, 10
+  %76 = and i1 %74, %75
+  %77 = xor i1 %74, %75
+  %78 = or i1 %76, %77
+  %79 = or i1 %74, %75
+  %80 = select i1 %78, i32 -1721258007, i32 452753016
+  store i32 %80, i32* %46
+  br label %411
+
+; <label>:81:                                     ; preds = %47
+  %82 = bitcast %"class.__gnu_cxx::__normal_iterator"* %16 to i8*
+  %83 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %82, i8* %83, i64 8, i32 8, i1 false)
+  %84 = bitcast %"class.__gnu_cxx::__normal_iterator"* %17 to i8*
+  %85 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %84, i8* %85, i64 8, i32 8, i1 false)
+  %86 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %16, i32 0, i32 0
+  %87 = load i32*, i32** %86, align 8
+  %88 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %17, i32 0, i32 0
+  %89 = load i32*, i32** %88, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %87, i32* %89)
+  %90 = load i32, i32* @x.260
+  %91 = load i32, i32* @y.261
+  %92 = sub i32 %90, -1387503588
+  %93 = sub i32 %92, 1
+  %94 = add i32 %93, -1387503588
+  %95 = sub i32 %90, 1
+  %96 = mul i32 %90, %94
+  %97 = urem i32 %96, 2
+  %98 = icmp eq i32 %97, 0
+  %99 = icmp slt i32 %91, 10
+  %100 = xor i1 %98, true
+  %101 = xor i1 %99, true
+  %102 = xor i1 false, true
+  %103 = and i1 %100, false
+  %104 = and i1 %98, %102
+  %105 = and i1 %101, false
+  %106 = and i1 %99, %102
+  %107 = or i1 %103, %104
+  %108 = or i1 %105, %106
+  %109 = xor i1 %107, %108
+  %110 = or i1 %100, %101
+  %111 = xor i1 %110, true
+  %112 = or i1 false, %102
+  %113 = and i1 %111, %112
+  %114 = or i1 %109, %113
+  %115 = or i1 %98, %99
+  %116 = select i1 %114, i32 1336624036, i32 452753016
+  store i32 %116, i32* %46
+  br label %411
+
+; <label>:117:                                    ; preds = %47
+  store i32 203513374, i32* %46
+  br label %411
+
+; <label>:118:                                    ; preds = %47
+  %119 = bitcast %"class.__gnu_cxx::__normal_iterator"* %18 to i8*
+  %120 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %119, i8* %120, i64 8, i32 8, i1 false)
+  %121 = bitcast %"class.__gnu_cxx::__normal_iterator"* %19 to i8*
+  %122 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %121, i8* %122, i64 8, i32 8, i1 false)
+  %123 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %18, i32 0, i32 0
+  %124 = load i32*, i32** %123, align 8
+  %125 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %19, i32 0, i32 0
+  %126 = load i32*, i32** %125, align 8
+  %127 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %11, i32* %124, i32* %126)
+  %128 = select i1 %127, i32 650361135, i32 1639464152
+  store i32 %128, i32* %46
+  br label %411
+
+; <label>:129:                                    ; preds = %47
+  %130 = bitcast %"class.__gnu_cxx::__normal_iterator"* %20 to i8*
+  %131 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %130, i8* %131, i64 8, i32 8, i1 false)
+  %132 = bitcast %"class.__gnu_cxx::__normal_iterator"* %21 to i8*
+  %133 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %132, i8* %133, i64 8, i32 8, i1 false)
+  %134 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %20, i32 0, i32 0
+  %135 = load i32*, i32** %134, align 8
+  %136 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %21, i32 0, i32 0
+  %137 = load i32*, i32** %136, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %135, i32* %137)
+  store i32 -1464209331, i32* %46
+  br label %411
+
+; <label>:138:                                    ; preds = %47
+  %139 = load i32, i32* @x.260
+  %140 = load i32, i32* @y.261
+  %141 = add i32 %139, 1988104157
+  %142 = sub i32 %141, 1
+  %143 = sub i32 %142, 1988104157
+  %144 = sub i32 %139, 1
+  %145 = mul i32 %139, %143
+  %146 = urem i32 %145, 2
+  %147 = icmp eq i32 %146, 0
+  %148 = icmp slt i32 %140, 10
+  %149 = xor i1 %147, true
+  %150 = xor i1 %148, true
+  %151 = xor i1 true, true
+  %152 = and i1 %149, true
+  %153 = and i1 %147, %151
+  %154 = and i1 %150, true
+  %155 = and i1 %148, %151
+  %156 = or i1 %152, %153
+  %157 = or i1 %154, %155
+  %158 = xor i1 %156, %157
+  %159 = or i1 %149, %150
+  %160 = xor i1 %159, true
+  %161 = or i1 true, %151
+  %162 = and i1 %160, %161
+  %163 = or i1 %158, %162
+  %164 = or i1 %147, %148
+  %165 = select i1 %163, i32 -1316198365, i32 1498981218
+  store i32 %165, i32* %46
+  br label %411
+
+; <label>:166:                                    ; preds = %47
+  %167 = bitcast %"class.__gnu_cxx::__normal_iterator"* %22 to i8*
+  %168 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %167, i8* %168, i64 8, i32 8, i1 false)
+  %169 = bitcast %"class.__gnu_cxx::__normal_iterator"* %23 to i8*
+  %170 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %169, i8* %170, i64 8, i32 8, i1 false)
+  %171 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %22, i32 0, i32 0
+  %172 = load i32*, i32** %171, align 8
+  %173 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %23, i32 0, i32 0
+  %174 = load i32*, i32** %173, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %172, i32* %174)
+  %175 = load i32, i32* @x.260
+  %176 = load i32, i32* @y.261
+  %177 = sub i32 0, 1
+  %178 = add i32 %175, %177
+  %179 = sub i32 %175, 1
+  %180 = mul i32 %175, %178
+  %181 = urem i32 %180, 2
+  %182 = icmp eq i32 %181, 0
+  %183 = icmp slt i32 %176, 10
+  %184 = xor i1 %182, true
+  %185 = xor i1 %183, true
+  %186 = xor i1 true, true
+  %187 = and i1 %184, true
+  %188 = and i1 %182, %186
+  %189 = and i1 %185, true
+  %190 = and i1 %183, %186
+  %191 = or i1 %187, %188
+  %192 = or i1 %189, %190
+  %193 = xor i1 %191, %192
+  %194 = or i1 %184, %185
+  %195 = xor i1 %194, true
+  %196 = or i1 true, %186
+  %197 = and i1 %195, %196
+  %198 = or i1 %193, %197
+  %199 = or i1 %182, %183
+  %200 = select i1 %198, i32 -1465741663, i32 1498981218
+  store i32 %200, i32* %46
+  br label %411
+
+; <label>:201:                                    ; preds = %47
+  store i32 -1464209331, i32* %46
+  br label %411
+
+; <label>:202:                                    ; preds = %47
+  store i32 203513374, i32* %46
+  br label %411
+
+; <label>:203:                                    ; preds = %47
+  store i32 1659253522, i32* %46
+  br label %411
+
+; <label>:204:                                    ; preds = %47
+  %205 = bitcast %"class.__gnu_cxx::__normal_iterator"* %24 to i8*
+  %206 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %205, i8* %206, i64 8, i32 8, i1 false)
+  %207 = bitcast %"class.__gnu_cxx::__normal_iterator"* %25 to i8*
+  %208 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %207, i8* %208, i64 8, i32 8, i1 false)
+  %209 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %24, i32 0, i32 0
+  %210 = load i32*, i32** %209, align 8
+  %211 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %25, i32 0, i32 0
+  %212 = load i32*, i32** %211, align 8
+  %213 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %11, i32* %210, i32* %212)
+  %214 = select i1 %213, i32 1310399010, i32 149402387
+  store i32 %214, i32* %46
+  br label %411
+
+; <label>:215:                                    ; preds = %47
+  %216 = bitcast %"class.__gnu_cxx::__normal_iterator"* %26 to i8*
+  %217 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %216, i8* %217, i64 8, i32 8, i1 false)
+  %218 = bitcast %"class.__gnu_cxx::__normal_iterator"* %27 to i8*
+  %219 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %218, i8* %219, i64 8, i32 8, i1 false)
+  %220 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %26, i32 0, i32 0
+  %221 = load i32*, i32** %220, align 8
+  %222 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %27, i32 0, i32 0
+  %223 = load i32*, i32** %222, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %221, i32* %223)
+  store i32 -965330903, i32* %46
+  br label %411
+
+; <label>:224:                                    ; preds = %47
+  %225 = bitcast %"class.__gnu_cxx::__normal_iterator"* %28 to i8*
+  %226 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %225, i8* %226, i64 8, i32 8, i1 false)
+  %227 = bitcast %"class.__gnu_cxx::__normal_iterator"* %29 to i8*
+  %228 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %227, i8* %228, i64 8, i32 8, i1 false)
+  %229 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %28, i32 0, i32 0
+  %230 = load i32*, i32** %229, align 8
+  %231 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %29, i32 0, i32 0
+  %232 = load i32*, i32** %231, align 8
+  %233 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %11, i32* %230, i32* %232)
+  %234 = select i1 %233, i32 738074714, i32 -1318834146
+  store i32 %234, i32* %46
+  br label %411
+
+; <label>:235:                                    ; preds = %47
+  %236 = bitcast %"class.__gnu_cxx::__normal_iterator"* %30 to i8*
+  %237 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %236, i8* %237, i64 8, i32 8, i1 false)
+  %238 = bitcast %"class.__gnu_cxx::__normal_iterator"* %31 to i8*
+  %239 = bitcast %"class.__gnu_cxx::__normal_iterator"* %10 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %238, i8* %239, i64 8, i32 8, i1 false)
+  %240 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %30, i32 0, i32 0
+  %241 = load i32*, i32** %240, align 8
+  %242 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %31, i32 0, i32 0
+  %243 = load i32*, i32** %242, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %241, i32* %243)
+  store i32 2139204421, i32* %46
+  br label %411
+
+; <label>:244:                                    ; preds = %47
+  %245 = load i32, i32* @x.260
+  %246 = load i32, i32* @y.261
+  %247 = sub i32 %245, -110539550
+  %248 = sub i32 %247, 1
+  %249 = add i32 %248, -110539550
+  %250 = sub i32 %245, 1
+  %251 = mul i32 %245, %249
+  %252 = urem i32 %251, 2
+  %253 = icmp eq i32 %252, 0
+  %254 = icmp slt i32 %246, 10
+  %255 = and i1 %253, %254
+  %256 = xor i1 %253, %254
+  %257 = or i1 %255, %256
+  %258 = or i1 %253, %254
+  %259 = select i1 %257, i32 1179169519, i32 -1908779181
+  store i32 %259, i32* %46
+  br label %411
+
+; <label>:260:                                    ; preds = %47
+  %261 = bitcast %"class.__gnu_cxx::__normal_iterator"* %32 to i8*
+  %262 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %261, i8* %262, i64 8, i32 8, i1 false)
+  %263 = bitcast %"class.__gnu_cxx::__normal_iterator"* %33 to i8*
+  %264 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %263, i8* %264, i64 8, i32 8, i1 false)
+  %265 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %32, i32 0, i32 0
+  %266 = load i32*, i32** %265, align 8
+  %267 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %33, i32 0, i32 0
+  %268 = load i32*, i32** %267, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %266, i32* %268)
+  %269 = load i32, i32* @x.260
+  %270 = load i32, i32* @y.261
+  %271 = sub i32 0, 1
+  %272 = add i32 %269, %271
+  %273 = sub i32 %269, 1
+  %274 = mul i32 %269, %272
+  %275 = urem i32 %274, 2
+  %276 = icmp eq i32 %275, 0
+  %277 = icmp slt i32 %270, 10
+  %278 = and i1 %276, %277
+  %279 = xor i1 %276, %277
+  %280 = or i1 %278, %279
+  %281 = or i1 %276, %277
+  %282 = select i1 %280, i32 395883916, i32 -1908779181
+  store i32 %282, i32* %46
+  br label %411
+
+; <label>:283:                                    ; preds = %47
+  store i32 2139204421, i32* %46
+  br label %411
+
+; <label>:284:                                    ; preds = %47
+  %285 = load i32, i32* @x.260
+  %286 = load i32, i32* @y.261
+  %287 = add i32 %285, 1378944515
+  %288 = sub i32 %287, 1
+  %289 = sub i32 %288, 1378944515
+  %290 = sub i32 %285, 1
+  %291 = mul i32 %285, %289
+  %292 = urem i32 %291, 2
+  %293 = icmp eq i32 %292, 0
+  %294 = icmp slt i32 %286, 10
+  %295 = and i1 %293, %294
+  %296 = xor i1 %293, %294
+  %297 = or i1 %295, %296
+  %298 = or i1 %293, %294
+  %299 = select i1 %297, i32 -2036179066, i32 766917059
+  store i32 %299, i32* %46
+  br label %411
+
+; <label>:300:                                    ; preds = %47
+  %301 = load i32, i32* @x.260
+  %302 = load i32, i32* @y.261
+  %303 = sub i32 0, 1
+  %304 = add i32 %301, %303
+  %305 = sub i32 %301, 1
+  %306 = mul i32 %301, %304
+  %307 = urem i32 %306, 2
+  %308 = icmp eq i32 %307, 0
+  %309 = icmp slt i32 %302, 10
+  %310 = and i1 %308, %309
+  %311 = xor i1 %308, %309
+  %312 = or i1 %310, %311
+  %313 = or i1 %308, %309
+  %314 = select i1 %312, i32 -1084651227, i32 766917059
+  store i32 %314, i32* %46
+  br label %411
+
+; <label>:315:                                    ; preds = %47
+  store i32 -965330903, i32* %46
+  br label %411
+
+; <label>:316:                                    ; preds = %47
+  %317 = load i32, i32* @x.260
+  %318 = load i32, i32* @y.261
+  %319 = sub i32 0, 1
+  %320 = add i32 %317, %319
+  %321 = sub i32 %317, 1
+  %322 = mul i32 %317, %320
+  %323 = urem i32 %322, 2
+  %324 = icmp eq i32 %323, 0
+  %325 = icmp slt i32 %318, 10
+  %326 = and i1 %324, %325
+  %327 = xor i1 %324, %325
+  %328 = or i1 %326, %327
+  %329 = or i1 %324, %325
+  %330 = select i1 %328, i32 -135708624, i32 2005628993
+  store i32 %330, i32* %46
+  br label %411
+
+; <label>:331:                                    ; preds = %47
+  %332 = load i32, i32* @x.260
+  %333 = load i32, i32* @y.261
+  %334 = sub i32 %332, 914607840
+  %335 = sub i32 %334, 1
+  %336 = add i32 %335, 914607840
+  %337 = sub i32 %332, 1
+  %338 = mul i32 %332, %336
+  %339 = urem i32 %338, 2
+  %340 = icmp eq i32 %339, 0
+  %341 = icmp slt i32 %333, 10
+  %342 = and i1 %340, %341
+  %343 = xor i1 %340, %341
+  %344 = or i1 %342, %343
+  %345 = or i1 %340, %341
+  %346 = select i1 %344, i32 1346457937, i32 2005628993
+  store i32 %346, i32* %46
+  br label %411
+
+; <label>:347:                                    ; preds = %47
+  store i32 1659253522, i32* %46
+  br label %411
+
+; <label>:348:                                    ; preds = %47
+  %349 = load i32, i32* @x.260
+  %350 = load i32, i32* @y.261
+  %351 = sub i32 %349, -2014227411
+  %352 = sub i32 %351, 1
+  %353 = add i32 %352, -2014227411
+  %354 = sub i32 %349, 1
+  %355 = mul i32 %349, %353
+  %356 = urem i32 %355, 2
+  %357 = icmp eq i32 %356, 0
+  %358 = icmp slt i32 %350, 10
+  %359 = and i1 %357, %358
+  %360 = xor i1 %357, %358
+  %361 = or i1 %359, %360
+  %362 = or i1 %357, %358
+  %363 = select i1 %361, i32 -614425758, i32 351935894
+  store i32 %363, i32* %46
+  br label %411
+
+; <label>:364:                                    ; preds = %47
+  %365 = load i32, i32* @x.260
+  %366 = load i32, i32* @y.261
+  %367 = add i32 %365, -199817706
+  %368 = sub i32 %367, 1
+  %369 = sub i32 %368, -199817706
+  %370 = sub i32 %365, 1
+  %371 = mul i32 %365, %369
+  %372 = urem i32 %371, 2
+  %373 = icmp eq i32 %372, 0
+  %374 = icmp slt i32 %366, 10
+  %375 = and i1 %373, %374
+  %376 = xor i1 %373, %374
+  %377 = or i1 %375, %376
+  %378 = or i1 %373, %374
+  %379 = select i1 %377, i32 1233471250, i32 351935894
+  store i32 %379, i32* %46
+  br label %411
+
+; <label>:380:                                    ; preds = %47
+  ret void
+
+; <label>:381:                                    ; preds = %47
+  %382 = bitcast %"class.__gnu_cxx::__normal_iterator"* %16 to i8*
+  %383 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %382, i8* %383, i64 8, i32 8, i1 false)
+  %384 = bitcast %"class.__gnu_cxx::__normal_iterator"* %17 to i8*
+  %385 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %384, i8* %385, i64 8, i32 8, i1 false)
+  %386 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %16, i32 0, i32 0
+  %387 = load i32*, i32** %386, align 8
+  %388 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %17, i32 0, i32 0
+  %389 = load i32*, i32** %388, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %387, i32* %389)
+  store i32 -1721258007, i32* %46
+  br label %411
+
+; <label>:390:                                    ; preds = %47
+  %391 = bitcast %"class.__gnu_cxx::__normal_iterator"* %22 to i8*
+  %392 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %391, i8* %392, i64 8, i32 8, i1 false)
+  %393 = bitcast %"class.__gnu_cxx::__normal_iterator"* %23 to i8*
+  %394 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %393, i8* %394, i64 8, i32 8, i1 false)
+  %395 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %22, i32 0, i32 0
+  %396 = load i32*, i32** %395, align 8
+  %397 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %23, i32 0, i32 0
+  %398 = load i32*, i32** %397, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %396, i32* %398)
+  store i32 -1316198365, i32* %46
+  br label %411
+
+; <label>:399:                                    ; preds = %47
+  %400 = bitcast %"class.__gnu_cxx::__normal_iterator"* %32 to i8*
+  %401 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %400, i8* %401, i64 8, i32 8, i1 false)
+  %402 = bitcast %"class.__gnu_cxx::__normal_iterator"* %33 to i8*
+  %403 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %402, i8* %403, i64 8, i32 8, i1 false)
+  %404 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %32, i32 0, i32 0
+  %405 = load i32*, i32** %404, align 8
+  %406 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %33, i32 0, i32 0
+  %407 = load i32*, i32** %406, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %405, i32* %407)
+  store i32 1179169519, i32* %46
+  br label %411
+
+; <label>:408:                                    ; preds = %47
+  store i32 -2036179066, i32* %46
+  br label %411
+
+; <label>:409:                                    ; preds = %47
+  store i32 -135708624, i32* %46
+  br label %411
+
+; <label>:410:                                    ; preds = %47
+  store i32 -614425758, i32* %46
+  br label %411
+
+; <label>:411:                                    ; preds = %410, %409, %408, %399, %390, %381, %364, %348, %347, %331, %316, %315, %300, %284, %283, %260, %244, %235, %224, %215, %204, %203, %202, %201, %166, %138, %129, %118, %117, %81, %66, %55, %50, %49
+  br label %47
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i32* @_ZSt21__unguarded_partitionIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEET_S9_S9_S9_T0_(i32*, i32*, i32*) #4 comdat {
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter"*
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %15 = alloca i1
+  %16 = alloca i1
+  %17 = load i32, i32* @x.262
+  %18 = load i32, i32* @y.263
+  %19 = sub i32 0, 1
+  %20 = add i32 %17, %19
+  %21 = sub i32 %17, 1
+  %22 = mul i32 %17, %20
+  %23 = urem i32 %22, 2
+  %24 = icmp eq i32 %23, 0
+  store i1 %24, i1* %16
+  %25 = icmp slt i32 %18, 10
+  store i1 %25, i1* %15
+  %26 = alloca i32
+  store i32 509723696, i32* %26
+  br label %27
+
+; <label>:27:                                     ; preds = %3, %175
+  %28 = load i32, i32* %26
+  switch i32 %28, label %29 [
+    i32 509723696, label %30
+    i32 1985697908, label %38
+    i32 -1527293309, label %83
+    i32 -144302507, label %84
+    i32 526346770, label %85
+    i32 1258537017, label %103
+    i32 918537312, label %106
+    i32 1839491601, label %109
+    i32 542871174, label %127
+    i32 -1783727573, label %130
+    i32 1763999176, label %135
+    i32 -937466794, label %143
+    i32 1420196377, label %160
+  ]
+
+; <label>:29:                                     ; preds = %27
+  br label %175
+
+; <label>:30:                                     ; preds = %27
+  %31 = load volatile i1, i1* %16
+  %32 = load volatile i1, i1* %15
+  %33 = and i1 %31, %32
+  %34 = xor i1 %31, %32
+  %35 = or i1 %33, %34
+  %36 = or i1 %31, %32
+  %37 = select i1 %35, i32 1985697908, i32 1420196377
+  store i32 %37, i32* %26
+  br label %175
+
+; <label>:38:                                     ; preds = %27
+  %39 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %39, %"class.__gnu_cxx::__normal_iterator"** %14
+  %40 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %40, %"class.__gnu_cxx::__normal_iterator"** %13
+  %41 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %41, %"class.__gnu_cxx::__normal_iterator"** %12
+  %42 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %42, %"class.__gnu_cxx::__normal_iterator"** %11
+  %43 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Iter_less_iter"* %43, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %10
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %9
+  %45 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %45, %"class.__gnu_cxx::__normal_iterator"** %8
+  %46 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %46, %"class.__gnu_cxx::__normal_iterator"** %7
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %47, %"class.__gnu_cxx::__normal_iterator"** %6
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %5
+  %49 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %49, %"class.__gnu_cxx::__normal_iterator"** %4
+  %50 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %51 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %50, i32 0, i32 0
+  store i32* %0, i32** %51, align 8
+  %52 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %53 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %52, i32 0, i32 0
+  store i32* %1, i32** %53, align 8
+  %54 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %55 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %54, i32 0, i32 0
+  store i32* %2, i32** %55, align 8
+  %56 = load i32, i32* @x.262
+  %57 = load i32, i32* @y.263
+  %58 = sub i32 %56, 1730460618
+  %59 = sub i32 %58, 1
+  %60 = add i32 %59, 1730460618
+  %61 = sub i32 %56, 1
+  %62 = mul i32 %56, %60
+  %63 = urem i32 %62, 2
+  %64 = icmp eq i32 %63, 0
+  %65 = icmp slt i32 %57, 10
+  %66 = xor i1 %64, true
+  %67 = xor i1 %65, true
+  %68 = xor i1 true, true
+  %69 = and i1 %66, true
+  %70 = and i1 %64, %68
+  %71 = and i1 %67, true
+  %72 = and i1 %65, %68
+  %73 = or i1 %69, %70
+  %74 = or i1 %71, %72
+  %75 = xor i1 %73, %74
+  %76 = or i1 %66, %67
+  %77 = xor i1 %76, true
+  %78 = or i1 true, %68
+  %79 = and i1 %77, %78
+  %80 = or i1 %75, %79
+  %81 = or i1 %64, %65
+  %82 = select i1 %80, i32 -1527293309, i32 1420196377
+  store i32 %82, i32* %26
+  br label %175
+
+; <label>:83:                                     ; preds = %27
+  store i32 -144302507, i32* %26
+  br label %175
+
+; <label>:84:                                     ; preds = %27
+  store i32 526346770, i32* %26
+  br label %175
+
+; <label>:85:                                     ; preds = %27
+  %86 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %87 = bitcast %"class.__gnu_cxx::__normal_iterator"* %86 to i8*
+  %88 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %89 = bitcast %"class.__gnu_cxx::__normal_iterator"* %88 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %87, i8* %89, i64 8, i32 8, i1 false)
+  %90 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %91 = bitcast %"class.__gnu_cxx::__normal_iterator"* %90 to i8*
+  %92 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %93 = bitcast %"class.__gnu_cxx::__normal_iterator"* %92 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %91, i8* %93, i64 8, i32 8, i1 false)
+  %94 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %9
+  %95 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %94, i32 0, i32 0
+  %96 = load i32*, i32** %95, align 8
+  %97 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %8
+  %98 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %97, i32 0, i32 0
+  %99 = load i32*, i32** %98, align 8
+  %100 = load volatile %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %10
+  %101 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %100, i32* %96, i32* %99)
+  %102 = select i1 %101, i32 1258537017, i32 918537312
+  store i32 %102, i32* %26
+  br label %175
+
+; <label>:103:                                    ; preds = %27
+  %104 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %105 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %104) #3
+  store i32 526346770, i32* %26
+  br label %175
+
+; <label>:106:                                    ; preds = %27
+  %107 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %108 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %107) #3
+  store i32 1839491601, i32* %26
+  br label %175
+
+; <label>:109:                                    ; preds = %27
+  %110 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %111 = bitcast %"class.__gnu_cxx::__normal_iterator"* %110 to i8*
+  %112 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %11
+  %113 = bitcast %"class.__gnu_cxx::__normal_iterator"* %112 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %111, i8* %113, i64 8, i32 8, i1 false)
+  %114 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %115 = bitcast %"class.__gnu_cxx::__normal_iterator"* %114 to i8*
+  %116 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %117 = bitcast %"class.__gnu_cxx::__normal_iterator"* %116 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %115, i8* %117, i64 8, i32 8, i1 false)
+  %118 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7
+  %119 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %118, i32 0, i32 0
+  %120 = load i32*, i32** %119, align 8
+  %121 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %122 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %121, i32 0, i32 0
+  %123 = load i32*, i32** %122, align 8
+  %124 = load volatile %"struct.__gnu_cxx::__ops::_Iter_less_iter"*, %"struct.__gnu_cxx::__ops::_Iter_less_iter"** %10
+  %125 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %124, i32* %120, i32* %123)
+  %126 = select i1 %125, i32 542871174, i32 -1783727573
+  store i32 %126, i32* %26
+  br label %175
+
+; <label>:127:                                    ; preds = %27
+  %128 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %129 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %128) #3
+  store i32 1839491601, i32* %26
+  br label %175
+
+; <label>:130:                                    ; preds = %27
+  %131 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %132 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %133 = call zeroext i1 @_ZN9__gnu_cxxltIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %131, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %132) #3
+  %134 = select i1 %133, i32 -937466794, i32 1763999176
+  store i32 %134, i32* %26
+  br label %175
+
+; <label>:135:                                    ; preds = %27
+  %136 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %137 = bitcast %"class.__gnu_cxx::__normal_iterator"* %136 to i8*
+  %138 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %139 = bitcast %"class.__gnu_cxx::__normal_iterator"* %138 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %137, i8* %139, i64 8, i32 8, i1 false)
+  %140 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %14
+  %141 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %140, i32 0, i32 0
+  %142 = load i32*, i32** %141, align 8
+  ret i32* %142
+
+; <label>:143:                                    ; preds = %27
+  %144 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %145 = bitcast %"class.__gnu_cxx::__normal_iterator"* %144 to i8*
+  %146 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %147 = bitcast %"class.__gnu_cxx::__normal_iterator"* %146 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %145, i8* %147, i64 8, i32 8, i1 false)
+  %148 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %149 = bitcast %"class.__gnu_cxx::__normal_iterator"* %148 to i8*
+  %150 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %12
+  %151 = bitcast %"class.__gnu_cxx::__normal_iterator"* %150 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %149, i8* %151, i64 8, i32 8, i1 false)
+  %152 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %5
+  %153 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %152, i32 0, i32 0
+  %154 = load i32*, i32** %153, align 8
+  %155 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %4
+  %156 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %155, i32 0, i32 0
+  %157 = load i32*, i32** %156, align 8
+  call void @_ZSt9iter_swapIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_EvT_T0_(i32* %154, i32* %157)
+  %158 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %13
+  %159 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %158) #3
+  store i32 -144302507, i32* %26
+  br label %175
+
+; <label>:160:                                    ; preds = %27
+  %161 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %162 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %163 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %164 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %165 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %166 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %167 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %168 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %169 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %170 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %171 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %172 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %162, i32 0, i32 0
+  store i32* %0, i32** %172, align 8
+  %173 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %163, i32 0, i32 0
+  store i32* %1, i32** %173, align 8
+  %174 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %164, i32 0, i32 0
+  store i32* %2, i32** %174, align 8
+  store i32 1985697908, i32* %26
+  br label %175
+
+; <label>:175:                                    ; preds = %160, %143, %130, %127, %109, %106, %103, %85, %84, %83, %38, %30, %29
+  br label %27
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt16__insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca i1
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %6 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %9 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %10 = alloca i32, align 4
+  %11 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %12 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %13 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %14 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %15 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %16 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %17 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %18 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %19 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %0, i32** %19, align 8
+  %20 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %5, i32 0, i32 0
+  store i32* %1, i32** %20, align 8
+  %21 = alloca i32
+  store i32 890380967, i32* %21
+  br label %22
+
+; <label>:22:                                     ; preds = %2, %177
+  %23 = load i32, i32* %21
+  switch i32 %23, label %24 [
+    i32 890380967, label %25
+    i32 -1250699581, label %28
+    i32 -669439332, label %29
+    i32 1426870287, label %32
+    i32 1464665369, label %35
+    i32 -1306963169, label %63
+    i32 817754592, label %100
+    i32 -1192542947, label %103
+    i32 1488853092, label %124
+    i32 1381643457, label %129
+    i32 1952088331, label %130
+    i32 -640146124, label %146
+    i32 -767684107, label %163
+    i32 576883767, label %164
+    i32 -609283978, label %165
+    i32 -1398207849, label %175
+  ]
+
+; <label>:24:                                     ; preds = %22
+  br label %177
+
+; <label>:25:                                     ; preds = %22
+  %26 = call zeroext i1 @_ZN9__gnu_cxxeqIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5) #3
+  %27 = select i1 %26, i32 -1250699581, i32 -669439332
+  store i32 %27, i32* %21
+  br label %177
+
+; <label>:28:                                     ; preds = %22
+  store i32 576883767, i32* %21
+  br label %177
+
+; <label>:29:                                     ; preds = %22
+  %30 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %4, i64 1) #3
+  %31 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  store i32* %30, i32** %31, align 8
+  store i32 1426870287, i32* %21
+  br label %177
+
+; <label>:32:                                     ; preds = %22
+  %33 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %7, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %5) #3
+  %34 = select i1 %33, i32 1464665369, i32 576883767
+  store i32 %34, i32* %21
+  br label %177
+
+; <label>:35:                                     ; preds = %22
+  %36 = load i32, i32* @x.264
+  %37 = load i32, i32* @y.265
+  %38 = add i32 %36, -290245841
+  %39 = sub i32 %38, 1
+  %40 = sub i32 %39, -290245841
+  %41 = sub i32 %36, 1
+  %42 = mul i32 %36, %40
+  %43 = urem i32 %42, 2
+  %44 = icmp eq i32 %43, 0
+  %45 = icmp slt i32 %37, 10
+  %46 = xor i1 %44, true
+  %47 = xor i1 %45, true
+  %48 = xor i1 true, true
+  %49 = and i1 %46, true
+  %50 = and i1 %44, %48
+  %51 = and i1 %47, true
+  %52 = and i1 %45, %48
+  %53 = or i1 %49, %50
+  %54 = or i1 %51, %52
+  %55 = xor i1 %53, %54
+  %56 = or i1 %46, %47
+  %57 = xor i1 %56, true
+  %58 = or i1 true, %48
+  %59 = and i1 %57, %58
+  %60 = or i1 %55, %59
+  %61 = or i1 %44, %45
+  %62 = select i1 %60, i32 -1306963169, i32 -609283978
+  store i32 %62, i32* %21
+  br label %177
+
+; <label>:63:                                     ; preds = %22
+  %64 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %65 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %64, i8* %65, i64 8, i32 8, i1 false)
+  %66 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %67 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %66, i8* %67, i64 8, i32 8, i1 false)
+  %68 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %69 = load i32*, i32** %68, align 8
+  %70 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %71 = load i32*, i32** %70, align 8
+  %72 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %6, i32* %69, i32* %71)
+  store i1 %72, i1* %3
+  %73 = load i32, i32* @x.264
+  %74 = load i32, i32* @y.265
+  %75 = sub i32 %73, -1731710137
+  %76 = sub i32 %75, 1
+  %77 = add i32 %76, -1731710137
+  %78 = sub i32 %73, 1
+  %79 = mul i32 %73, %77
+  %80 = urem i32 %79, 2
+  %81 = icmp eq i32 %80, 0
+  %82 = icmp slt i32 %74, 10
+  %83 = xor i1 %81, true
+  %84 = xor i1 %82, true
+  %85 = xor i1 true, true
+  %86 = and i1 %83, true
+  %87 = and i1 %81, %85
+  %88 = and i1 %84, true
+  %89 = and i1 %82, %85
+  %90 = or i1 %86, %87
+  %91 = or i1 %88, %89
+  %92 = xor i1 %90, %91
+  %93 = or i1 %83, %84
+  %94 = xor i1 %93, true
+  %95 = or i1 true, %85
+  %96 = and i1 %94, %95
+  %97 = or i1 %92, %96
+  %98 = or i1 %81, %82
+  %99 = select i1 %97, i32 817754592, i32 -609283978
+  store i32 %99, i32* %21
+  br label %177
+
+; <label>:100:                                    ; preds = %22
+  %101 = load volatile i1, i1* %3
+  %102 = select i1 %101, i32 -1192542947, i32 1488853092
+  store i32 %102, i32* %21
+  br label %177
+
+; <label>:103:                                    ; preds = %22
+  %104 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %7) #3
+  %105 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %104) #3
+  %106 = load i32, i32* %105, align 4
+  store i32 %106, i32* %10, align 4
+  %107 = bitcast %"class.__gnu_cxx::__normal_iterator"* %11 to i8*
+  %108 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %107, i8* %108, i64 8, i32 8, i1 false)
+  %109 = bitcast %"class.__gnu_cxx::__normal_iterator"* %12 to i8*
+  %110 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %109, i8* %110, i64 8, i32 8, i1 false)
+  %111 = call i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEplEl(%"class.__gnu_cxx::__normal_iterator"* %7, i64 1) #3
+  %112 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  store i32* %111, i32** %112, align 8
+  %113 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %11, i32 0, i32 0
+  %114 = load i32*, i32** %113, align 8
+  %115 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %12, i32 0, i32 0
+  %116 = load i32*, i32** %115, align 8
+  %117 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %13, i32 0, i32 0
+  %118 = load i32*, i32** %117, align 8
+  %119 = call i32* @_ZSt13move_backwardIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEES6_ET0_T_S8_S7_(i32* %114, i32* %116, i32* %118)
+  %120 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %14, i32 0, i32 0
+  store i32* %119, i32** %120, align 8
+  %121 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %10) #3
+  %122 = load i32, i32* %121, align 4
+  %123 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %4) #3
+  store i32 %122, i32* %123, align 4
+  store i32 1381643457, i32* %21
+  br label %177
+
+; <label>:124:                                    ; preds = %22
+  %125 = bitcast %"class.__gnu_cxx::__normal_iterator"* %15 to i8*
+  %126 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %125, i8* %126, i64 8, i32 8, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE()
+  %127 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %15, i32 0, i32 0
+  %128 = load i32*, i32** %127, align 8
+  call void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_less_iterEEvT_T0_(i32* %128)
+  store i32 1381643457, i32* %21
+  br label %177
+
+; <label>:129:                                    ; preds = %22
+  store i32 1952088331, i32* %21
+  br label %177
+
+; <label>:130:                                    ; preds = %22
+  %131 = load i32, i32* @x.264
+  %132 = load i32, i32* @y.265
+  %133 = sub i32 %131, -511033748
+  %134 = sub i32 %133, 1
+  %135 = add i32 %134, -511033748
+  %136 = sub i32 %131, 1
+  %137 = mul i32 %131, %135
+  %138 = urem i32 %137, 2
+  %139 = icmp eq i32 %138, 0
+  %140 = icmp slt i32 %132, 10
+  %141 = and i1 %139, %140
+  %142 = xor i1 %139, %140
+  %143 = or i1 %141, %142
+  %144 = or i1 %139, %140
+  %145 = select i1 %143, i32 -640146124, i32 -1398207849
+  store i32 %145, i32* %21
+  br label %177
+
+; <label>:146:                                    ; preds = %22
+  %147 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %7) #3
+  %148 = load i32, i32* @x.264
+  %149 = load i32, i32* @y.265
+  %150 = sub i32 %148, -1337302416
+  %151 = sub i32 %150, 1
+  %152 = add i32 %151, -1337302416
+  %153 = sub i32 %148, 1
+  %154 = mul i32 %148, %152
+  %155 = urem i32 %154, 2
+  %156 = icmp eq i32 %155, 0
+  %157 = icmp slt i32 %149, 10
+  %158 = and i1 %156, %157
+  %159 = xor i1 %156, %157
+  %160 = or i1 %158, %159
+  %161 = or i1 %156, %157
+  %162 = select i1 %160, i32 -767684107, i32 -1398207849
+  store i32 %162, i32* %21
+  br label %177
+
+; <label>:163:                                    ; preds = %22
+  store i32 1426870287, i32* %21
+  br label %177
+
+; <label>:164:                                    ; preds = %22
+  ret void
+
+; <label>:165:                                    ; preds = %22
+  %166 = bitcast %"class.__gnu_cxx::__normal_iterator"* %8 to i8*
+  %167 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %166, i8* %167, i64 8, i32 8, i1 false)
+  %168 = bitcast %"class.__gnu_cxx::__normal_iterator"* %9 to i8*
+  %169 = bitcast %"class.__gnu_cxx::__normal_iterator"* %4 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %168, i8* %169, i64 8, i32 8, i1 false)
+  %170 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %8, i32 0, i32 0
+  %171 = load i32*, i32** %170, align 8
+  %172 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %9, i32 0, i32 0
+  %173 = load i32*, i32** %172, align 8
+  %174 = call zeroext i1 @_ZNK9__gnu_cxx5__ops15_Iter_less_iterclINS_17__normal_iteratorIPiSt6vectorIiSaIiEEEES8_EEbT_T0_(%"struct.__gnu_cxx::__ops::_Iter_less_iter"* %6, i32* %171, i32* %173)
+  store i32 -1306963169, i32* %21
+  br label %177
+
+; <label>:175:                                    ; preds = %22
+  %176 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %7) #3
+  store i32 -640146124, i32* %21
+  br label %177
+
+; <label>:177:                                    ; preds = %175, %165, %163, %146, %130, %129, %124, %103, %100, %63, %35, %32, %29, %28, %25, %24
+  br label %22
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt26__unguarded_insertion_sortIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_(i32*, i32*) #0 comdat {
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %4 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %8 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %9 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  %10 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %11 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %3, i32 0, i32 0
+  store i32* %0, i32** %11, align 8
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %4, i32 0, i32 0
+  store i32* %1, i32** %12, align 8
+  %13 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  %14 = bitcast %"class.__gnu_cxx::__normal_iterator"* %3 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %13, i8* %14, i64 8, i32 8, i1 false)
+  %15 = alloca i32
+  store i32 -1642858163, i32* %15
+  br label %16
+
+; <label>:16:                                     ; preds = %2, %30
+  %17 = load i32, i32* %15
+  switch i32 %17, label %18 [
+    i32 -1642858163, label %19
+    i32 -1766816189, label %22
+    i32 931311402, label %27
+    i32 1521877813, label %29
+  ]
+
+; <label>:18:                                     ; preds = %16
+  br label %30
+
+; <label>:19:                                     ; preds = %16
+  %20 = call zeroext i1 @_ZN9__gnu_cxxneIPiSt6vectorIiSaIiEEEEbRKNS_17__normal_iteratorIT_T0_EESA_(%"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %6, %"class.__gnu_cxx::__normal_iterator"* dereferenceable(8) %4) #3
+  %21 = select i1 %20, i32 -1766816189, i32 1521877813
+  store i32 %21, i32* %15
+  br label %30
+
+; <label>:22:                                     ; preds = %16
+  %23 = bitcast %"class.__gnu_cxx::__normal_iterator"* %7 to i8*
+  %24 = bitcast %"class.__gnu_cxx::__normal_iterator"* %6 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %23, i8* %24, i64 8, i32 8, i1 false)
+  call void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE()
+  %25 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %7, i32 0, i32 0
+  %26 = load i32*, i32** %25, align 8
+  call void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_less_iterEEvT_T0_(i32* %26)
+  store i32 931311402, i32* %15
+  br label %30
+
+; <label>:27:                                     ; preds = %16
+  %28 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEppEv(%"class.__gnu_cxx::__normal_iterator"* %6) #3
+  store i32 -1642858163, i32* %15
+  br label %30
+
+; <label>:29:                                     ; preds = %16
+  ret void
+
+; <label>:30:                                     ; preds = %27, %22, %19, %18
+  br label %16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt25__unguarded_linear_insertIN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEENS0_5__ops14_Val_less_iterEEvT_T0_(i32*) #0 comdat {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %3 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %4 = alloca i32*
+  %5 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter"*
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*
+  %7 = alloca i1
+  %8 = alloca i1
+  %9 = load i32, i32* @x.268
+  %10 = load i32, i32* @y.269
+  %11 = sub i32 %9, -1731206199
+  %12 = sub i32 %11, 1
+  %13 = add i32 %12, -1731206199
+  %14 = sub i32 %9, 1
+  %15 = mul i32 %9, %13
+  %16 = urem i32 %15, 2
+  %17 = icmp eq i32 %16, 0
+  store i1 %17, i1* %8
+  %18 = icmp slt i32 %10, 10
+  store i1 %18, i1* %7
+  %19 = alloca i32
+  store i32 43683236, i32* %19
+  br label %20
+
+; <label>:20:                                     ; preds = %1, %159
+  %21 = load i32, i32* %19
+  switch i32 %21, label %22 [
+    i32 43683236, label %23
+    i32 -600439879, label %43
+    i32 -563490329, label %77
+    i32 34332420, label %78
+    i32 1092600058, label %90
+    i32 -1187157818, label %103
+    i32 -162179948, label %118
+    i32 2096487702, label %139
+    i32 1438123340, label %140
+    i32 227818181, label %153
+  ]
+
+; <label>:22:                                     ; preds = %20
+  br label %159
+
+; <label>:23:                                     ; preds = %20
+  %24 = load volatile i1, i1* %8
+  %25 = load volatile i1, i1* %7
+  %26 = xor i1 %24, true
+  %27 = xor i1 %25, true
+  %28 = xor i1 false, true
+  %29 = and i1 %26, false
+  %30 = and i1 %24, %28
+  %31 = and i1 %27, false
+  %32 = and i1 %25, %28
+  %33 = or i1 %29, %30
+  %34 = or i1 %31, %32
+  %35 = xor i1 %33, %34
+  %36 = or i1 %26, %27
+  %37 = xor i1 %36, true
+  %38 = or i1 false, %28
+  %39 = and i1 %37, %38
+  %40 = or i1 %35, %39
+  %41 = or i1 %24, %25
+  %42 = select i1 %40, i32 -600439879, i32 1438123340
+  store i32 %42, i32* %19
+  br label %159
+
+; <label>:43:                                     ; preds = %20
+  %44 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %44, %"class.__gnu_cxx::__normal_iterator"** %6
+  %45 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  store %"struct.__gnu_cxx::__ops::_Val_less_iter"* %45, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %5
+  %46 = alloca i32, align 4
+  store i32* %46, i32** %4
+  %47 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %47, %"class.__gnu_cxx::__normal_iterator"** %3
+  %48 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %48, %"class.__gnu_cxx::__normal_iterator"** %2
+  %49 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %50 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %49, i32 0, i32 0
+  store i32* %0, i32** %50, align 8
+  %51 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %52 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %51) #3
+  %53 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %52) #3
+  %54 = load i32, i32* %53, align 4
+  %55 = load volatile i32*, i32** %4
+  store i32 %54, i32* %55, align 4
+  %56 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %57 = bitcast %"class.__gnu_cxx::__normal_iterator"* %56 to i8*
+  %58 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %59 = bitcast %"class.__gnu_cxx::__normal_iterator"* %58 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %57, i8* %59, i64 8, i32 8, i1 false)
+  %60 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %61 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %60) #3
+  %62 = load i32, i32* @x.268
+  %63 = load i32, i32* @y.269
+  %64 = sub i32 %62, -98593873
+  %65 = sub i32 %64, 1
+  %66 = add i32 %65, -98593873
+  %67 = sub i32 %62, 1
+  %68 = mul i32 %62, %66
+  %69 = urem i32 %68, 2
+  %70 = icmp eq i32 %69, 0
+  %71 = icmp slt i32 %63, 10
+  %72 = and i1 %70, %71
+  %73 = xor i1 %70, %71
+  %74 = or i1 %72, %73
+  %75 = or i1 %70, %71
+  %76 = select i1 %74, i32 -563490329, i32 1438123340
+  store i32 %76, i32* %19
+  br label %159
+
+; <label>:77:                                     ; preds = %20
+  store i32 34332420, i32* %19
+  br label %159
+
+; <label>:78:                                     ; preds = %20
+  %79 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2
+  %80 = bitcast %"class.__gnu_cxx::__normal_iterator"* %79 to i8*
+  %81 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %82 = bitcast %"class.__gnu_cxx::__normal_iterator"* %81 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %80, i8* %82, i64 8, i32 8, i1 false)
+  %83 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %2
+  %84 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %83, i32 0, i32 0
+  %85 = load i32*, i32** %84, align 8
+  %86 = load volatile %"struct.__gnu_cxx::__ops::_Val_less_iter"*, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %5
+  %87 = load volatile i32*, i32** %4
+  %88 = call zeroext i1 @_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_less_iter"* %86, i32* dereferenceable(4) %87, i32* %85)
+  %89 = select i1 %88, i32 1092600058, i32 -1187157818
+  store i32 %89, i32* %19
+  br label %159
+
+; <label>:90:                                     ; preds = %20
+  %91 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %92 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %91) #3
+  %93 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %92) #3
+  %94 = load i32, i32* %93, align 4
+  %95 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %96 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %95) #3
+  store i32 %94, i32* %96, align 4
+  %97 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %98 = bitcast %"class.__gnu_cxx::__normal_iterator"* %97 to i8*
+  %99 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %100 = bitcast %"class.__gnu_cxx::__normal_iterator"* %99 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %98, i8* %100, i64 8, i32 8, i1 false)
+  %101 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %3
+  %102 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %101) #3
+  store i32 34332420, i32* %19
+  br label %159
+
+; <label>:103:                                    ; preds = %20
+  %104 = load i32, i32* @x.268
+  %105 = load i32, i32* @y.269
+  %106 = sub i32 0, 1
+  %107 = add i32 %104, %106
+  %108 = sub i32 %104, 1
+  %109 = mul i32 %104, %107
+  %110 = urem i32 %109, 2
+  %111 = icmp eq i32 %110, 0
+  %112 = icmp slt i32 %105, 10
+  %113 = and i1 %111, %112
+  %114 = xor i1 %111, %112
+  %115 = or i1 %113, %114
+  %116 = or i1 %111, %112
+  %117 = select i1 %115, i32 -162179948, i32 227818181
+  store i32 %117, i32* %19
+  br label %159
+
+; <label>:118:                                    ; preds = %20
+  %119 = load volatile i32*, i32** %4
+  %120 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %119) #3
+  %121 = load i32, i32* %120, align 4
+  %122 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %123 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %122) #3
+  store i32 %121, i32* %123, align 4
+  %124 = load i32, i32* @x.268
+  %125 = load i32, i32* @y.269
+  %126 = sub i32 %124, -1240885665
+  %127 = sub i32 %126, 1
+  %128 = add i32 %127, -1240885665
+  %129 = sub i32 %124, 1
+  %130 = mul i32 %124, %128
+  %131 = urem i32 %130, 2
+  %132 = icmp eq i32 %131, 0
+  %133 = icmp slt i32 %125, 10
+  %134 = and i1 %132, %133
+  %135 = xor i1 %132, %133
+  %136 = or i1 %134, %135
+  %137 = or i1 %132, %133
+  %138 = select i1 %136, i32 2096487702, i32 227818181
+  store i32 %138, i32* %19
+  br label %159
+
+; <label>:139:                                    ; preds = %20
+  ret void
+
+; <label>:140:                                    ; preds = %20
+  %141 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %142 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %143 = alloca i32, align 4
+  %144 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %145 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %146 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %141, i32 0, i32 0
+  store i32* %0, i32** %146, align 8
+  %147 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %141) #3
+  %148 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %147) #3
+  %149 = load i32, i32* %148, align 4
+  store i32 %149, i32* %143, align 4
+  %150 = bitcast %"class.__gnu_cxx::__normal_iterator"* %144 to i8*
+  %151 = bitcast %"class.__gnu_cxx::__normal_iterator"* %141 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %150, i8* %151, i64 8, i32 8, i1 false)
+  %152 = call dereferenceable(8) %"class.__gnu_cxx::__normal_iterator"* @_ZN9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEmmEv(%"class.__gnu_cxx::__normal_iterator"* %144) #3
+  store i32 -600439879, i32* %19
+  br label %159
+
+; <label>:153:                                    ; preds = %20
+  %154 = load volatile i32*, i32** %4
+  %155 = call dereferenceable(4) i32* @_ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_(i32* dereferenceable(4) %154) #3
+  %156 = load i32, i32* %155, align 4
+  %157 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6
+  %158 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %157) #3
+  store i32 %156, i32* %158, align 4
+  store i32 -162179948, i32* %19
+  br label %159
+
+; <label>:159:                                    ; preds = %153, %140, %118, %103, %90, %78, %77, %43, %23, %22
+  br label %20
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx5__ops15__val_comp_iterENS0_15_Iter_less_iterE() #4 comdat {
+  %1 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter", align 1
+  %2 = alloca %"struct.__gnu_cxx::__ops::_Iter_less_iter", align 1
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNK9__gnu_cxx5__ops14_Val_less_iterclIiNS_17__normal_iteratorIPiSt6vectorIiSaIiEEEEEEbRT_T0_(%"struct.__gnu_cxx::__ops::_Val_less_iter"*, i32* dereferenceable(4), i32*) #4 comdat align 2 {
+  %4 = alloca i1
+  %5 = alloca i1
+  %6 = alloca i1
+  %7 = load i32, i32* @x.272
+  %8 = load i32, i32* @y.273
+  %9 = sub i32 %7, -37940122
+  %10 = sub i32 %9, 1
+  %11 = add i32 %10, -37940122
+  %12 = sub i32 %7, 1
+  %13 = mul i32 %7, %11
+  %14 = urem i32 %13, 2
+  %15 = icmp eq i32 %14, 0
+  store i1 %15, i1* %6
+  %16 = icmp slt i32 %8, 10
+  store i1 %16, i1* %5
+  %17 = alloca i32
+  store i32 522315044, i32* %17
+  br label %18
+
+; <label>:18:                                     ; preds = %3, %68
+  %19 = load i32, i32* %17
+  switch i32 %19, label %20 [
+    i32 522315044, label %21
+    i32 -1743816754, label %29
+    i32 1145827310, label %55
+    i32 -1219601818, label %57
+  ]
+
+; <label>:20:                                     ; preds = %18
+  br label %68
+
+; <label>:21:                                     ; preds = %18
+  %22 = load volatile i1, i1* %6
+  %23 = load volatile i1, i1* %5
+  %24 = and i1 %22, %23
+  %25 = xor i1 %22, %23
+  %26 = or i1 %24, %25
+  %27 = or i1 %22, %23
+  %28 = select i1 %26, i32 -1743816754, i32 -1219601818
+  store i32 %28, i32* %17
+  br label %68
+
+; <label>:29:                                     ; preds = %18
+  %30 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %31 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter"*, align 8
+  %32 = alloca i32*, align 8
+  %33 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %30, i32 0, i32 0
+  store i32* %2, i32** %33, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_less_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %31, align 8
+  store i32* %1, i32** %32, align 8
+  %34 = load %"struct.__gnu_cxx::__ops::_Val_less_iter"*, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %31, align 8
+  %35 = load i32*, i32** %32, align 8
+  %36 = load i32, i32* %35, align 4
+  %37 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %30) #3
+  %38 = load i32, i32* %37, align 4
+  %39 = icmp slt i32 %36, %38
+  store i1 %39, i1* %4
+  %40 = load i32, i32* @x.272
+  %41 = load i32, i32* @y.273
+  %42 = sub i32 %40, 1251726767
+  %43 = sub i32 %42, 1
+  %44 = add i32 %43, 1251726767
+  %45 = sub i32 %40, 1
+  %46 = mul i32 %40, %44
+  %47 = urem i32 %46, 2
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %41, 10
+  %50 = and i1 %48, %49
+  %51 = xor i1 %48, %49
+  %52 = or i1 %50, %51
+  %53 = or i1 %48, %49
+  %54 = select i1 %52, i32 1145827310, i32 -1219601818
+  store i32 %54, i32* %17
+  br label %68
+
+; <label>:55:                                     ; preds = %18
+  %56 = load volatile i1, i1* %4
+  ret i1 %56
+
+; <label>:57:                                     ; preds = %18
+  %58 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %59 = alloca %"struct.__gnu_cxx::__ops::_Val_less_iter"*, align 8
+  %60 = alloca i32*, align 8
+  %61 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %58, i32 0, i32 0
+  store i32* %2, i32** %61, align 8
+  store %"struct.__gnu_cxx::__ops::_Val_less_iter"* %0, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %59, align 8
+  store i32* %1, i32** %60, align 8
+  %62 = load %"struct.__gnu_cxx::__ops::_Val_less_iter"*, %"struct.__gnu_cxx::__ops::_Val_less_iter"** %59, align 8
+  %63 = load i32*, i32** %60, align 8
+  %64 = load i32, i32* %63, align 4
+  %65 = call dereferenceable(4) i32* @_ZNK9__gnu_cxx17__normal_iteratorIPiSt6vectorIiSaIiEEEdeEv(%"class.__gnu_cxx::__normal_iterator"* %58) #3
+  %66 = load i32, i32* %65, align 4
+  %67 = icmp slt i32 %64, %66
+  store i32 -1743816754, i32* %17
+  br label %68
+
+; <label>:68:                                     ; preds = %57, %29, %21, %20
+  br label %18
+}
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s640405057.cpp() #0 section ".text.startup" {
+  call void @__cxx_global_var_init()
+  call void @__cxx_global_var_init.1()
+  call void @__cxx_global_var_init.2()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #6 = { noinline noreturn nounwind }
+attributes #7 = { nobuiltin nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #8 = { noreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #9 = { nobuiltin "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #10 = { argmemonly nounwind }
+attributes #11 = { nounwind readnone }
+attributes #12 = { noreturn nounwind }
+attributes #13 = { noreturn }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
