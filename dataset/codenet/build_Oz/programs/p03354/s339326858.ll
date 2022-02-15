@@ -1,0 +1,1202 @@
+; ModuleID = 'Project_CodeNet_C++1400/p03354/s339326858.cpp'
+source_filename = "Project_CodeNet_C++1400/p03354/s339326858.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::vector" = type { %"struct.std::_Vector_base" }
+%"struct.std::_Vector_base" = type { %"struct.std::_Vector_base<long long, std::allocator<long long>>::_Vector_impl" }
+%"struct.std::_Vector_base<long long, std::allocator<long long>>::_Vector_impl" = type { %"struct.std::_Vector_base<long long, std::allocator<long long>>::_Vector_impl_data" }
+%"struct.std::_Vector_base<long long, std::allocator<long long>>::_Vector_impl_data" = type { i64*, i64*, i64* }
+%"class.std::vector.0" = type { %"struct.std::_Vector_base.1" }
+%"struct.std::_Vector_base.1" = type { %"struct.std::_Vector_base<std::vector<long long>, std::allocator<std::vector<long long>>>::_Vector_impl" }
+%"struct.std::_Vector_base<std::vector<long long>, std::allocator<std::vector<long long>>>::_Vector_impl" = type { %"struct.std::_Vector_base<std::vector<long long>, std::allocator<std::vector<long long>>>::_Vector_impl_data" }
+%"struct.std::_Vector_base<std::vector<long long>, std::allocator<std::vector<long long>>>::_Vector_impl_data" = type { %"class.std::vector"*, %"class.std::vector"*, %"class.std::vector"* }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::allocator" = type { i8 }
+%class.UnionFind = type { %"class.std::vector", %"class.std::vector", %"class.std::vector" }
+%"struct.std::vector<long long>::_Temporary_value" = type { %"class.std::vector"*, %"union.std::aligned_storage<8, 8>::type" }
+%"union.std::aligned_storage<8, 8>::type" = type { [8 x i8] }
+%"class.__gnu_cxx::new_allocator" = type { i8 }
+
+$_ZNSt6vectorIxSaIxEED2Ev = comdat any
+
+$_ZNSt6vectorIS_IxSaIxEESaIS1_EED2Ev = comdat any
+
+$_ZNSt6vectorIxSaIxEEC2EmRKS0_ = comdat any
+
+$_ZN9UnionFindC2Ex = comdat any
+
+$_ZN9UnionFind5uniteExx = comdat any
+
+$_ZN9UnionFind4findEx = comdat any
+
+$_ZN9UnionFindD2Ev = comdat any
+
+$_ZNSt6vectorIxSaIxEE6resizeEmRKx = comdat any
+
+$_ZN9UnionFind4initEx = comdat any
+
+$_ZNSt6vectorIxSaIxEE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPxS1_EEmRKx = comdat any
+
+$_ZNKSt6vectorIxSaIxEE12_M_check_lenEmPKc = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm = comdat any
+
+$__clang_call_terminate = comdat any
+
+$_ZSt10__fill_n_aIPxmxET_S1_T0_RKT1_St26random_access_iterator_tag = comdat any
+
+$_ZNSt16allocator_traitsISaIxEE8allocateERS0_m = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEED2Ev = comdat any
+
+$_ZNSt12_Vector_baseISt6vectorIxSaIxEESaIS2_EED2Ev = comdat any
+
+$_ZNSt12_Destroy_auxILb0EE9__destroyIPSt6vectorIxSaIxEEEEvT_S6_ = comdat any
+
+$_ZNSt6vectorIxSaIxEE17_S_check_init_lenEmRKS0_ = comdat any
+
+$_ZNSt6vectorIxSaIxEE21_M_default_initializeEm = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm = comdat any
+
+$_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPxmEET_S3_T0_ = comdat any
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external hidden global i8
+@_ZSt4cerr = external global %"class.std::basic_ostream", align 8
+@i = dso_local local_unnamed_addr global i64 0, align 8
+@j = dso_local local_unnamed_addr global i64 0, align 8
+@k = dso_local local_unnamed_addr global i64 0, align 8
+@l = dso_local local_unnamed_addr global i64 0, align 8
+@N = dso_local global i64 0, align 8
+@M = dso_local global i64 0, align 8
+@K = dso_local local_unnamed_addr global i64 0, align 8
+@H = dso_local local_unnamed_addr global i64 0, align 8
+@W = dso_local local_unnamed_addr global i64 0, align 8
+@L = dso_local local_unnamed_addr global i64 0, align 8
+@X = dso_local local_unnamed_addr global i64 0, align 8
+@Y = dso_local local_unnamed_addr global i64 0, align 8
+@Z = dso_local local_unnamed_addr global i64 0, align 8
+@R = dso_local local_unnamed_addr global i64 0, align 8
+@MOD = dso_local local_unnamed_addr global i64 1000000007, align 8
+@INF = dso_local local_unnamed_addr global i64 4611686018427387904, align 8
+@ans = dso_local local_unnamed_addr global i64 0, align 8
+@z = dso_local local_unnamed_addr global i64 0, align 8
+@o = dso_local local_unnamed_addr global i64 1, align 8
+@flag = dso_local global %"class.std::vector" zeroinitializer, align 8
+@color = dso_local global %"class.std::vector" zeroinitializer, align 8
+@D = dso_local global %"class.std::vector" zeroinitializer, align 8
+@path = dso_local global %"class.std::vector.0" zeroinitializer, align 8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@.str = private unnamed_addr constant [23 x i8] c"vector::_M_fill_insert\00", align 1
+@.str.5 = private unnamed_addr constant [49 x i8] c"cannot create std::vector larger than max_size()\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s339326858.cpp, i8* null }]
+
+; Function Attrs: minsize optsize
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1)) unnamed_addr #0
+
+; Function Attrs: minsize nounwind optsize
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1)) unnamed_addr #1
+
+; Function Attrs: nofree nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) local_unnamed_addr #2
+
+; Function Attrs: minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn
+define dso_local void @_Z2inv() local_unnamed_addr #3 {
+  ret void
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define dso_local void @_Z9debug_outv() local_unnamed_addr #4 {
+  %1 = tail call nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8) @_ZSt4cerr) #19
+  ret void
+}
+
+; Function Attrs: inlinehint minsize mustprogress optsize sspstrong uwtable
+declare nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8)) local_unnamed_addr #5
+
+; Function Attrs: minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn
+define dso_local i64 @_Z4ctoic(i8 signext %0) local_unnamed_addr #3 {
+  %2 = sext i8 %0 to i32
+  %3 = add nsw i32 %2, -49
+  %4 = icmp ult i32 %3, 9
+  %5 = zext i32 %3 to i64
+  %6 = add nuw nsw i64 %5, 1
+  %7 = select i1 %4, i64 %6, i64 0
+  ret i64 %7
+}
+
+; Function Attrs: minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn
+define dso_local zeroext i1 @_Z11pairCompareSt4pairIxxES0_(i64 %0, i64 %1, i64 %2, i64 %3) local_unnamed_addr #3 {
+  %5 = icmp sgt i64 %0, %2
+  ret i1 %5
+}
+
+; Function Attrs: minsize nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0) unnamed_addr #6 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %2) #20
+  ret void
+}
+
+; Function Attrs: minsize nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIS_IxSaIxEESaIS1_EED2Ev(%"class.std::vector.0"* nonnull align 8 dereferenceable(24) %0) unnamed_addr #6 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr inbounds %"class.std::vector.0", %"class.std::vector.0"* %0, i64 0, i32 0
+  %3 = getelementptr inbounds %"class.std::vector.0", %"class.std::vector.0"* %0, i64 0, i32 0, i32 0, i32 0, i32 0
+  %4 = load %"class.std::vector"*, %"class.std::vector"** %3, align 8, !tbaa !5
+  %5 = getelementptr inbounds %"class.std::vector.0", %"class.std::vector.0"* %0, i64 0, i32 0, i32 0, i32 0, i32 1
+  %6 = load %"class.std::vector"*, %"class.std::vector"** %5, align 8, !tbaa !10
+  invoke void @_ZNSt12_Destroy_auxILb0EE9__destroyIPSt6vectorIxSaIxEEEEvT_S6_(%"class.std::vector"* %4, %"class.std::vector"* %6) #19
+          to label %7 unwind label %8
+
+7:                                                ; preds = %1
+  tail call void @_ZNSt12_Vector_baseISt6vectorIxSaIxEESaIS2_EED2Ev(%"struct.std::_Vector_base.1"* nonnull align 8 dereferenceable(24) %2) #20
+  ret void
+
+8:                                                ; preds = %1
+  %9 = landingpad { i8*, i32 }
+          catch i8* null
+  %10 = extractvalue { i8*, i32 } %9, 0
+  tail call void @_ZNSt12_Vector_baseISt6vectorIxSaIxEESaIS2_EED2Ev(%"struct.std::_Vector_base.1"* nonnull align 8 dereferenceable(24) %2) #20
+  tail call void @__clang_call_terminate(i8* %10) #21
+  unreachable
+}
+
+; Function Attrs: minsize norecurse optsize sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #7 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca %"class.std::vector", align 8
+  %2 = alloca %"class.std::allocator", align 1
+  %3 = alloca %"class.std::vector", align 8
+  %4 = alloca %"class.std::allocator", align 1
+  %5 = alloca %class.UnionFind, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca i64, align 8
+  %8 = tail call nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) @_ZSt3cin, i64* nonnull align 8 dereferenceable(8) @N) #19
+  %9 = tail call nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) %8, i64* nonnull align 8 dereferenceable(8) @M) #19
+  %10 = bitcast %"class.std::vector"* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 24, i8* nonnull %10) #22
+  %11 = load i64, i64* @N, align 8, !tbaa !11
+  %12 = getelementptr inbounds %"class.std::allocator", %"class.std::allocator"* %2, i64 0, i32 0
+  call void @llvm.lifetime.start.p0i8(i64 1, i8* nonnull %12) #22
+  call void @_ZNSt6vectorIxSaIxEEC2EmRKS0_(%"class.std::vector"* nonnull align 8 dereferenceable(24) %1, i64 %11, %"class.std::allocator"* nonnull align 1 dereferenceable(1) %2) #19
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* nonnull %12) #22
+  %13 = bitcast %"class.std::vector"* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 24, i8* nonnull %13) #22
+  %14 = load i64, i64* @N, align 8, !tbaa !11
+  %15 = getelementptr inbounds %"class.std::allocator", %"class.std::allocator"* %4, i64 0, i32 0
+  call void @llvm.lifetime.start.p0i8(i64 1, i8* nonnull %15) #22
+  invoke void @_ZNSt6vectorIxSaIxEEC2EmRKS0_(%"class.std::vector"* nonnull align 8 dereferenceable(24) %3, i64 %14, %"class.std::allocator"* nonnull align 1 dereferenceable(1) %4) #19
+          to label %16 unwind label %37
+
+16:                                               ; preds = %0
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* nonnull %15) #22
+  %17 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %1, i64 0, i32 0, i32 0, i32 0, i32 0
+  %18 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %3, i64 0, i32 0, i32 0, i32 0, i32 0
+  br label %19
+
+19:                                               ; preds = %27, %16
+  %20 = phi i64 [ 0, %16 ], [ %36, %27 ]
+  store i64 %20, i64* @i, align 8, !tbaa !11
+  %21 = load i64, i64* @N, align 8, !tbaa !11
+  %22 = icmp slt i64 %20, %21
+  br i1 %22, label %23, label %41
+
+23:                                               ; preds = %19
+  %24 = load i64*, i64** %17, align 8, !tbaa !13
+  %25 = getelementptr inbounds i64, i64* %24, i64 %20
+  %26 = invoke nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) @_ZSt3cin, i64* nonnull align 8 dereferenceable(8) %25) #19
+          to label %27 unwind label %39
+
+27:                                               ; preds = %23
+  %28 = load i64, i64* @i, align 8, !tbaa !11
+  %29 = load i64*, i64** %17, align 8, !tbaa !13
+  %30 = getelementptr inbounds i64, i64* %29, i64 %28
+  %31 = load i64, i64* %30, align 8, !tbaa !11
+  %32 = add nsw i64 %31, -1
+  %33 = load i64*, i64** %18, align 8, !tbaa !13
+  %34 = getelementptr inbounds i64, i64* %33, i64 %32
+  store i64 %28, i64* %34, align 8, !tbaa !11
+  %35 = load i64, i64* @i, align 8, !tbaa !11
+  %36 = add nsw i64 %35, 1
+  br label %19, !llvm.loop !15
+
+37:                                               ; preds = %0
+  %38 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* nonnull %15) #22
+  br label %120
+
+39:                                               ; preds = %23
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  br label %117
+
+41:                                               ; preds = %19
+  %42 = bitcast %class.UnionFind* %5 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 72, i8* nonnull %42) #22
+  invoke void @_ZN9UnionFindC2Ex(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %21) #19
+          to label %43 unwind label %62
+
+43:                                               ; preds = %41
+  %44 = bitcast i64* %6 to i8*
+  %45 = bitcast i64* %7 to i8*
+  br label %46
+
+46:                                               ; preds = %43, %59
+  %47 = phi i64 [ %61, %59 ], [ 0, %43 ]
+  store i64 %47, i64* @i, align 8, !tbaa !11
+  %48 = load i64, i64* @M, align 8, !tbaa !11
+  %49 = icmp slt i64 %47, %48
+  br i1 %49, label %50, label %66
+
+50:                                               ; preds = %46
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %44) #22
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %45) #22
+  %51 = invoke nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) @_ZSt3cin, i64* nonnull align 8 dereferenceable(8) %6) #19
+          to label %52 unwind label %64
+
+52:                                               ; preds = %50
+  %53 = invoke nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) %51, i64* nonnull align 8 dereferenceable(8) %7) #19
+          to label %54 unwind label %64
+
+54:                                               ; preds = %52
+  %55 = load i64, i64* %6, align 8, !tbaa !11
+  %56 = add nsw i64 %55, -1
+  store i64 %56, i64* %6, align 8, !tbaa !11
+  %57 = load i64, i64* %7, align 8, !tbaa !11
+  %58 = add nsw i64 %57, -1
+  store i64 %58, i64* %7, align 8, !tbaa !11
+  invoke void @_ZN9UnionFind5uniteExx(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %56, i64 %58) #19
+          to label %59 unwind label %64
+
+59:                                               ; preds = %54
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %45) #22
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %44) #22
+  %60 = load i64, i64* @i, align 8, !tbaa !11
+  %61 = add nsw i64 %60, 1
+  br label %46, !llvm.loop !17
+
+62:                                               ; preds = %41
+  %63 = landingpad { i8*, i32 }
+          cleanup
+  br label %115
+
+64:                                               ; preds = %52, %50, %54
+  %65 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %45) #22
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %44) #22
+  br label %113
+
+66:                                               ; preds = %46, %104
+  %67 = phi i64 [ %106, %104 ], [ 0, %46 ]
+  store i64 %67, i64* @i, align 8, !tbaa !11
+  %68 = load i64, i64* @N, align 8, !tbaa !11
+  %69 = icmp slt i64 %67, %68
+  br i1 %69, label %70, label %107
+
+70:                                               ; preds = %66
+  %71 = invoke i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %67) #19
+          to label %72 unwind label %87
+
+72:                                               ; preds = %70
+  %73 = load i64, i64* @i, align 8, !tbaa !11
+  %74 = load i64*, i64** %18, align 8, !tbaa !13
+  %75 = getelementptr inbounds i64, i64* %74, i64 %73
+  %76 = load i64, i64* %75, align 8, !tbaa !11
+  %77 = invoke i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %76) #19
+          to label %78 unwind label %87
+
+78:                                               ; preds = %72
+  %79 = icmp eq i64 %71, %77
+  %80 = load i64, i64* @i, align 8, !tbaa !11
+  br i1 %79, label %91, label %81
+
+81:                                               ; preds = %78
+  %82 = load i64*, i64** %17, align 8, !tbaa !13
+  %83 = getelementptr inbounds i64, i64* %82, i64 %80
+  %84 = load i64, i64* %83, align 8, !tbaa !11
+  %85 = add nsw i64 %80, 1
+  %86 = icmp eq i64 %84, %85
+  br i1 %86, label %101, label %91
+
+87:                                               ; preds = %70, %72, %91, %93
+  %88 = landingpad { i8*, i32 }
+          cleanup
+  br label %113
+
+89:                                               ; preds = %107
+  %90 = landingpad { i8*, i32 }
+          cleanup
+  br label %113
+
+91:                                               ; preds = %78, %81
+  %92 = invoke i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %80) #19
+          to label %93 unwind label %87
+
+93:                                               ; preds = %91
+  %94 = load i64, i64* @i, align 8, !tbaa !11
+  %95 = load i64*, i64** %18, align 8, !tbaa !13
+  %96 = getelementptr inbounds i64, i64* %95, i64 %94
+  %97 = load i64, i64* %96, align 8, !tbaa !11
+  %98 = invoke i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %5, i64 %97) #19
+          to label %99 unwind label %87
+
+99:                                               ; preds = %93
+  %100 = icmp eq i64 %92, %98
+  br i1 %100, label %101, label %104
+
+101:                                              ; preds = %99, %81
+  %102 = load i64, i64* @ans, align 8, !tbaa !11
+  %103 = add nsw i64 %102, 1
+  store i64 %103, i64* @ans, align 8, !tbaa !11
+  br label %104
+
+104:                                              ; preds = %101, %99
+  %105 = load i64, i64* @i, align 8, !tbaa !11
+  %106 = add nsw i64 %105, 1
+  br label %66, !llvm.loop !18
+
+107:                                              ; preds = %66
+  %108 = load i64, i64* @ans, align 8, !tbaa !11
+  %109 = invoke nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZNSo9_M_insertIxEERSoT_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8) @_ZSt4cout, i64 %108) #19
+          to label %110 unwind label %89
+
+110:                                              ; preds = %107
+  call void @_ZN9UnionFindD2Ev(%class.UnionFind* nonnull align 8 dereferenceable(72) %5) #20
+  call void @llvm.lifetime.end.p0i8(i64 72, i8* nonnull %42) #22
+  %111 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %3, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %111) #20
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* nonnull %13) #22
+  %112 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %1, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %112) #20
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* nonnull %10) #22
+  ret i32 0
+
+113:                                              ; preds = %87, %89, %64
+  %114 = phi { i8*, i32 } [ %65, %64 ], [ %88, %87 ], [ %90, %89 ]
+  call void @_ZN9UnionFindD2Ev(%class.UnionFind* nonnull align 8 dereferenceable(72) %5) #20
+  br label %115
+
+115:                                              ; preds = %113, %62
+  %116 = phi { i8*, i32 } [ %114, %113 ], [ %63, %62 ]
+  call void @llvm.lifetime.end.p0i8(i64 72, i8* nonnull %42) #22
+  br label %117
+
+117:                                              ; preds = %115, %39
+  %118 = phi { i8*, i32 } [ %40, %39 ], [ %116, %115 ]
+  %119 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %3, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %119) #20
+  br label %120
+
+120:                                              ; preds = %117, %37
+  %121 = phi { i8*, i32 } [ %118, %117 ], [ %38, %37 ]
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* nonnull %13) #22
+  %122 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %1, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %122) #20
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* nonnull %10) #22
+  resume { i8*, i32 } %121
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #8
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIxSaIxEEC2EmRKS0_(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %1, %"class.std::allocator"* nonnull align 1 dereferenceable(1) %2) unnamed_addr #9 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %5 = tail call i64 @_ZNSt6vectorIxSaIxEE17_S_check_init_lenEmRKS0_(i64 %1, %"class.std::allocator"* nonnull align 1 dereferenceable(1) %2) #19
+  %6 = bitcast %"class.std::vector"* %0 to i8*
+  tail call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) %6, i8 0, i64 24, i1 false) #22
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %4, i64 %5) #19
+  invoke void @_ZNSt6vectorIxSaIxEE21_M_default_initializeEm(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %1) #19
+          to label %7 unwind label %8
+
+7:                                                ; preds = %3
+  ret void
+
+8:                                                ; preds = %3
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %4) #20
+  resume { i8*, i32 } %9
+}
+
+declare i32 @__gxx_personality_v0(...)
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #8
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZN9UnionFindC2Ex(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1) unnamed_addr #9 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  %6 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 0
+  %7 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 1
+  %8 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 2
+  %9 = bitcast i64* %3 to i8*
+  %10 = bitcast %class.UnionFind* %0 to i8*
+  call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(72) %10, i8 0, i64 72, i1 false)
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %9) #22
+  store i64 0, i64* %3, align 8, !tbaa !11
+  invoke void @_ZNSt6vectorIxSaIxEE6resizeEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %6, i64 %1, i64* nonnull align 8 dereferenceable(8) %3) #19
+          to label %11 unwind label %16
+
+11:                                               ; preds = %2
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %9) #22
+  %12 = bitcast i64* %4 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %12) #22
+  store i64 0, i64* %4, align 8, !tbaa !11
+  invoke void @_ZNSt6vectorIxSaIxEE6resizeEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %7, i64 %1, i64* nonnull align 8 dereferenceable(8) %4) #19
+          to label %13 unwind label %18
+
+13:                                               ; preds = %11
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %12) #22
+  %14 = bitcast i64* %5 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %14) #22
+  store i64 1, i64* %5, align 8, !tbaa !11
+  invoke void @_ZNSt6vectorIxSaIxEE6resizeEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %8, i64 %1, i64* nonnull align 8 dereferenceable(8) %5) #19
+          to label %15 unwind label %20
+
+15:                                               ; preds = %13
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %14) #22
+  call void @_ZN9UnionFind4initEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1) #19
+  ret void
+
+16:                                               ; preds = %2
+  %17 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %9) #22
+  br label %22
+
+18:                                               ; preds = %11
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %12) #22
+  br label %22
+
+20:                                               ; preds = %13
+  %21 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %14) #22
+  br label %22
+
+22:                                               ; preds = %20, %18, %16
+  %23 = phi { i8*, i32 } [ %21, %20 ], [ %19, %18 ], [ %17, %16 ]
+  %24 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %8, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %24) #20
+  %25 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %7, i64 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %25) #20
+  %26 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %26) #20
+  resume { i8*, i32 } %23
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZN9UnionFind5uniteExx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1, i64 %2) local_unnamed_addr #4 comdat align 2 {
+  %4 = tail call i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1) #19
+  %5 = tail call i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %2) #19
+  %6 = icmp eq i64 %4, %5
+  br i1 %6, label %40, label %7
+
+7:                                                ; preds = %3
+  %8 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 0, i32 0, i32 0, i32 0, i32 0
+  %9 = load i64*, i64** %8, align 8, !tbaa !13
+  %10 = getelementptr inbounds i64, i64* %9, i64 %4
+  %11 = load i64, i64* %10, align 8, !tbaa !11
+  %12 = getelementptr inbounds i64, i64* %9, i64 %5
+  %13 = load i64, i64* %12, align 8, !tbaa !11
+  %14 = icmp slt i64 %11, %13
+  %15 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 1, i32 0, i32 0, i32 0, i32 0
+  %16 = load i64*, i64** %15, align 8, !tbaa !13
+  br i1 %14, label %17, label %26
+
+17:                                               ; preds = %7
+  %18 = getelementptr inbounds i64, i64* %16, i64 %4
+  store i64 %5, i64* %18, align 8, !tbaa !11
+  %19 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 2, i32 0, i32 0, i32 0, i32 0
+  %20 = load i64*, i64** %19, align 8, !tbaa !13
+  %21 = getelementptr inbounds i64, i64* %20, i64 %4
+  %22 = load i64, i64* %21, align 8, !tbaa !11
+  %23 = getelementptr inbounds i64, i64* %20, i64 %5
+  %24 = load i64, i64* %23, align 8, !tbaa !11
+  %25 = add nsw i64 %24, %22
+  store i64 %25, i64* %23, align 8, !tbaa !11
+  br label %40
+
+26:                                               ; preds = %7
+  %27 = getelementptr inbounds i64, i64* %16, i64 %5
+  store i64 %4, i64* %27, align 8, !tbaa !11
+  %28 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 2, i32 0, i32 0, i32 0, i32 0
+  %29 = load i64*, i64** %28, align 8, !tbaa !13
+  %30 = getelementptr inbounds i64, i64* %29, i64 %5
+  %31 = load i64, i64* %30, align 8, !tbaa !11
+  %32 = getelementptr inbounds i64, i64* %29, i64 %4
+  %33 = load i64, i64* %32, align 8, !tbaa !11
+  %34 = add nsw i64 %33, %31
+  store i64 %34, i64* %32, align 8, !tbaa !11
+  %35 = load i64, i64* %10, align 8, !tbaa !11
+  %36 = load i64, i64* %12, align 8, !tbaa !11
+  %37 = icmp eq i64 %35, %36
+  br i1 %37, label %38, label %40
+
+38:                                               ; preds = %26
+  %39 = add nsw i64 %35, 1
+  store i64 %39, i64* %10, align 8, !tbaa !11
+  br label %40
+
+40:                                               ; preds = %17, %38, %26, %3
+  ret void
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 1, i32 0, i32 0, i32 0, i32 0
+  %4 = load i64*, i64** %3, align 8, !tbaa !13
+  %5 = getelementptr inbounds i64, i64* %4, i64 %1
+  %6 = load i64, i64* %5, align 8, !tbaa !11
+  %7 = icmp eq i64 %6, %1
+  br i1 %7, label %8, label %10
+
+8:                                                ; preds = %2, %10
+  %9 = phi i64 [ %11, %10 ], [ %1, %2 ]
+  ret i64 %9
+
+10:                                               ; preds = %2
+  %11 = tail call i64 @_ZN9UnionFind4findEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %6) #19
+  %12 = load i64*, i64** %3, align 8, !tbaa !13
+  %13 = getelementptr inbounds i64, i64* %12, i64 %1
+  store i64 %11, i64* %13, align 8, !tbaa !11
+  br label %8
+}
+
+; Function Attrs: inlinehint minsize nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZN9UnionFindD2Ev(%class.UnionFind* nonnull align 8 dereferenceable(72) %0) unnamed_addr #10 comdat align 2 personality i32 (...)* @__gxx_personality_v0 {
+  %2 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 2, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %2) #20
+  %3 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 1, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %3) #20
+  %4 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %4) #20
+  ret void
+}
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIxSaIxEE6resizeEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %1, i64* nonnull align 8 dereferenceable(8) %2) local_unnamed_addr #9 comdat align 2 personality i32 (...)* @__gxx_personality_v0 {
+  %4 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 1
+  %5 = load i64*, i64** %4, align 8, !tbaa !19
+  %6 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 0
+  %7 = load i64*, i64** %6, align 8, !tbaa !13
+  %8 = ptrtoint i64* %5 to i64
+  %9 = ptrtoint i64* %7 to i64
+  %10 = sub i64 %8, %9
+  %11 = ashr exact i64 %10, 3
+  %12 = icmp ult i64 %11, %1
+  br i1 %12, label %13, label %15
+
+13:                                               ; preds = %3
+  %14 = sub i64 %1, %11
+  tail call void @_ZNSt6vectorIxSaIxEE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPxS1_EEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64* %5, i64 %14, i64* nonnull align 8 dereferenceable(8) %2) #19
+  br label %21
+
+15:                                               ; preds = %3
+  %16 = icmp ugt i64 %11, %1
+  br i1 %16, label %17, label %21
+
+17:                                               ; preds = %15
+  %18 = getelementptr inbounds i64, i64* %7, i64 %1
+  %19 = icmp eq i64* %5, %18
+  br i1 %19, label %21, label %20
+
+20:                                               ; preds = %17
+  store i64* %18, i64** %4, align 8, !tbaa !19
+  br label %21
+
+21:                                               ; preds = %20, %17, %15, %13
+  ret void
+}
+
+; Function Attrs: minsize mustprogress nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZN9UnionFind4initEx(%class.UnionFind* nonnull align 8 dereferenceable(72) %0, i64 %1) local_unnamed_addr #11 comdat align 2 {
+  %3 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 1, i32 0, i32 0, i32 0, i32 0
+  %4 = load i64*, i64** %3, align 8
+  %5 = getelementptr inbounds %class.UnionFind, %class.UnionFind* %0, i64 0, i32 0, i32 0, i32 0, i32 0, i32 0
+  %6 = load i64*, i64** %5, align 8
+  %7 = call i64 @llvm.smax.i64(i64 %1, i64 0)
+  br label %8
+
+8:                                                ; preds = %12, %2
+  %9 = phi i64 [ 0, %2 ], [ %15, %12 ]
+  %10 = icmp eq i64 %9, %7
+  br i1 %10, label %11, label %12
+
+11:                                               ; preds = %8
+  ret void
+
+12:                                               ; preds = %8
+  %13 = getelementptr inbounds i64, i64* %4, i64 %9
+  store i64 %9, i64* %13, align 8, !tbaa !11
+  %14 = getelementptr inbounds i64, i64* %6, i64 %9
+  store i64 0, i64* %14, align 8, !tbaa !11
+  %15 = add nuw i64 %9, 1
+  br label %8, !llvm.loop !20
+}
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIxSaIxEE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPxS1_EEmRKx(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64* %1, i64 %2, i64* nonnull align 8 dereferenceable(8) %3) local_unnamed_addr #9 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %5 = alloca %"struct.std::vector<long long>::_Temporary_value", align 8
+  %6 = icmp eq i64 %2, 0
+  br i1 %6, label %123, label %7
+
+7:                                                ; preds = %4
+  %8 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 2
+  %9 = load i64*, i64** %8, align 8, !tbaa !21
+  %10 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 1
+  %11 = load i64*, i64** %10, align 8, !tbaa !19
+  %12 = ptrtoint i64* %9 to i64
+  %13 = ptrtoint i64* %11 to i64
+  %14 = sub i64 %12, %13
+  %15 = ashr exact i64 %14, 3
+  %16 = icmp ult i64 %15, %2
+  br i1 %16, label %73, label %17
+
+17:                                               ; preds = %7
+  %18 = bitcast %"struct.std::vector<long long>::_Temporary_value"* %5 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 16, i8* nonnull %18) #22
+  %19 = getelementptr inbounds %"struct.std::vector<long long>::_Temporary_value", %"struct.std::vector<long long>::_Temporary_value"* %5, i64 0, i32 0
+  store %"class.std::vector"* %0, %"class.std::vector"** %19, align 8, !tbaa !22
+  %20 = getelementptr inbounds %"struct.std::vector<long long>::_Temporary_value", %"struct.std::vector<long long>::_Temporary_value"* %5, i64 0, i32 1
+  %21 = bitcast %"union.std::aligned_storage<8, 8>::type"* %20 to i64*
+  %22 = load i64, i64* %3, align 8, !tbaa !11
+  store i64 %22, i64* %21, align 8, !tbaa !11
+  %23 = ptrtoint i64* %1 to i64
+  %24 = sub i64 %13, %23
+  %25 = ashr exact i64 %24, 3
+  %26 = icmp ugt i64 %25, %2
+  br i1 %26, label %27, label %55
+
+27:                                               ; preds = %17
+  %28 = sub i64 0, %2
+  %29 = getelementptr inbounds i64, i64* %11, i64 %28
+  %30 = ptrtoint i64* %29 to i64
+  %31 = shl i64 %2, 3
+  %32 = icmp eq i64 %31, 0
+  br i1 %32, label %37, label %33
+
+33:                                               ; preds = %27
+  %34 = bitcast i64* %11 to i8*
+  %35 = bitcast i64* %29 to i8*
+  tail call void @llvm.memmove.p0i8.p0i8.i64(i8* align 8 %34, i8* align 8 %35, i64 %31, i1 false) #22
+  %36 = load i64*, i64** %10, align 8, !tbaa !19
+  br label %37
+
+37:                                               ; preds = %33, %27
+  %38 = phi i64* [ %36, %33 ], [ %11, %27 ]
+  %39 = getelementptr inbounds i64, i64* %38, i64 %2
+  store i64* %39, i64** %10, align 8, !tbaa !19
+  %40 = sub i64 %30, %23
+  %41 = icmp eq i64 %40, 0
+  br i1 %41, label %48, label %42
+
+42:                                               ; preds = %37
+  %43 = ashr exact i64 %40, 3
+  %44 = sub nsw i64 0, %43
+  %45 = getelementptr inbounds i64, i64* %11, i64 %44
+  %46 = bitcast i64* %45 to i8*
+  %47 = bitcast i64* %1 to i8*
+  tail call void @llvm.memmove.p0i8.p0i8.i64(i8* align 8 %46, i8* align 8 %47, i64 %40, i1 false) #22
+  br label %48
+
+48:                                               ; preds = %42, %37
+  %49 = getelementptr inbounds i64, i64* %1, i64 %2
+  br label %50
+
+50:                                               ; preds = %53, %48
+  %51 = phi i64* [ %1, %48 ], [ %54, %53 ]
+  %52 = icmp eq i64* %51, %49
+  br i1 %52, label %72, label %53
+
+53:                                               ; preds = %50
+  store i64 %22, i64* %51, align 8, !tbaa !11
+  %54 = getelementptr inbounds i64, i64* %51, i64 1
+  br label %50, !llvm.loop !24
+
+55:                                               ; preds = %17
+  %56 = sub i64 %2, %25
+  %57 = call i64* @_ZSt10__fill_n_aIPxmxET_S1_T0_RKT1_St26random_access_iterator_tag(i64* %11, i64 %56, i64* nonnull align 8 dereferenceable(8) %21) #19
+  store i64* %57, i64** %10, align 8, !tbaa !19
+  %58 = icmp eq i64 %24, 0
+  br i1 %58, label %63, label %59
+
+59:                                               ; preds = %55
+  %60 = bitcast i64* %57 to i8*
+  %61 = bitcast i64* %1 to i8*
+  call void @llvm.memmove.p0i8.p0i8.i64(i8* align 8 %60, i8* align 8 %61, i64 %24, i1 false) #22
+  %62 = load i64*, i64** %10, align 8, !tbaa !19
+  br label %63
+
+63:                                               ; preds = %59, %55
+  %64 = phi i64* [ %62, %59 ], [ %57, %55 ]
+  %65 = getelementptr inbounds i64, i64* %64, i64 %25
+  store i64* %65, i64** %10, align 8, !tbaa !19
+  %66 = load i64, i64* %21, align 8, !tbaa !11
+  br label %67
+
+67:                                               ; preds = %70, %63
+  %68 = phi i64* [ %1, %63 ], [ %71, %70 ]
+  %69 = icmp eq i64* %68, %11
+  br i1 %69, label %72, label %70
+
+70:                                               ; preds = %67
+  store i64 %66, i64* %68, align 8, !tbaa !11
+  %71 = getelementptr inbounds i64, i64* %68, i64 1
+  br label %67, !llvm.loop !24
+
+72:                                               ; preds = %67, %50
+  call void @llvm.lifetime.end.p0i8(i64 16, i8* nonnull %18) #22
+  br label %123
+
+73:                                               ; preds = %7
+  %74 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %75 = tail call i64 @_ZNKSt6vectorIxSaIxEE12_M_check_lenEmPKc(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %2, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str, i64 0, i64 0)) #19
+  %76 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 0
+  %77 = load i64*, i64** %76, align 8, !tbaa !25
+  %78 = ptrtoint i64* %1 to i64
+  %79 = ptrtoint i64* %77 to i64
+  %80 = sub i64 %78, %79
+  %81 = ashr exact i64 %80, 3
+  %82 = tail call i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %74, i64 %75) #19
+  %83 = getelementptr inbounds i64, i64* %82, i64 %81
+  %84 = invoke i64* @_ZSt10__fill_n_aIPxmxET_S1_T0_RKT1_St26random_access_iterator_tag(i64* %83, i64 %2, i64* nonnull align 8 dereferenceable(8) %3) #19
+          to label %85 unwind label %113
+
+85:                                               ; preds = %73
+  %86 = load i64*, i64** %76, align 8, !tbaa !13
+  %87 = ptrtoint i64* %86 to i64
+  %88 = sub i64 %78, %87
+  %89 = icmp eq i64 %88, 0
+  br i1 %89, label %93, label %90
+
+90:                                               ; preds = %85
+  %91 = bitcast i64* %82 to i8*
+  %92 = bitcast i64* %86 to i8*
+  tail call void @llvm.memmove.p0i8.p0i8.i64(i8* align 8 %91, i8* align 8 %92, i64 %88, i1 false) #22
+  br label %93
+
+93:                                               ; preds = %90, %85
+  %94 = ashr exact i64 %88, 3
+  %95 = add nsw i64 %94, %2
+  %96 = getelementptr inbounds i64, i64* %82, i64 %95
+  %97 = load i64*, i64** %10, align 8, !tbaa !19
+  %98 = ptrtoint i64* %97 to i64
+  %99 = sub i64 %98, %78
+  %100 = icmp eq i64 %99, 0
+  br i1 %100, label %104, label %101
+
+101:                                              ; preds = %93
+  %102 = bitcast i64* %96 to i8*
+  %103 = bitcast i64* %1 to i8*
+  tail call void @llvm.memmove.p0i8.p0i8.i64(i8* align 8 %102, i8* align 8 %103, i64 %99, i1 false) #22
+  br label %104
+
+104:                                              ; preds = %101, %93
+  %105 = ashr exact i64 %99, 3
+  %106 = getelementptr inbounds i64, i64* %96, i64 %105
+  %107 = load i64*, i64** %76, align 8, !tbaa !13
+  %108 = icmp eq i64* %107, null
+  br i1 %108, label %111, label %109
+
+109:                                              ; preds = %104
+  %110 = bitcast i64* %107 to i8*
+  tail call void @_ZdlPv(i8* nonnull %110) #20
+  br label %111
+
+111:                                              ; preds = %104, %109
+  store i64* %82, i64** %76, align 8, !tbaa !13
+  store i64* %106, i64** %10, align 8, !tbaa !19
+  %112 = getelementptr inbounds i64, i64* %82, i64 %75
+  store i64* %112, i64** %8, align 8, !tbaa !21
+  br label %123
+
+113:                                              ; preds = %73
+  %114 = landingpad { i8*, i32 }
+          catch i8* null
+  %115 = extractvalue { i8*, i32 } %114, 0
+  %116 = tail call i8* @__cxa_begin_catch(i8* %115) #22
+  %117 = icmp eq i64* %82, null
+  br i1 %117, label %122, label %120
+
+118:                                              ; preds = %122
+  %119 = landingpad { i8*, i32 }
+          cleanup
+  invoke void @__cxa_end_catch()
+          to label %124 unwind label %125
+
+120:                                              ; preds = %113
+  %121 = bitcast i64* %82 to i8*
+  tail call void @_ZdlPv(i8* nonnull %121) #20
+  br label %122
+
+122:                                              ; preds = %120, %113
+  invoke void @__cxa_rethrow() #23
+          to label %128 unwind label %118
+
+123:                                              ; preds = %72, %111, %4
+  ret void
+
+124:                                              ; preds = %118
+  resume { i8*, i32 } %119
+
+125:                                              ; preds = %118
+  %126 = landingpad { i8*, i32 }
+          catch i8* null
+  %127 = extractvalue { i8*, i32 } %126, 0
+  tail call void @__clang_call_terminate(i8* %127) #21
+  unreachable
+
+128:                                              ; preds = %122
+  unreachable
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64 @_ZNKSt6vectorIxSaIxEE12_M_check_lenEmPKc(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %1, i8* %2) local_unnamed_addr #4 comdat align 2 personality i32 (...)* @__gxx_personality_v0 {
+  %4 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 1
+  %5 = load i64*, i64** %4, align 8, !tbaa !19
+  %6 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 0
+  %7 = load i64*, i64** %6, align 8, !tbaa !13
+  %8 = ptrtoint i64* %5 to i64
+  %9 = ptrtoint i64* %7 to i64
+  %10 = sub i64 %8, %9
+  %11 = ashr exact i64 %10, 3
+  %12 = sub nsw i64 1152921504606846975, %11
+  %13 = icmp ult i64 %12, %1
+  br i1 %13, label %14, label %15
+
+14:                                               ; preds = %3
+  tail call void @_ZSt20__throw_length_errorPKc(i8* %2) #24
+  unreachable
+
+15:                                               ; preds = %3
+  %16 = icmp ult i64 %11, %1
+  %17 = select i1 %16, i64 %1, i64 %11
+  %18 = add i64 %17, %11
+  %19 = icmp ult i64 %18, %11
+  %20 = icmp ugt i64 %18, 1152921504606846975
+  %21 = or i1 %19, %20
+  %22 = select i1 %21, i64 1152921504606846975, i64 %18
+  ret i64 %22
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = icmp eq i64 %1, 0
+  br i1 %3, label %7, label %4
+
+4:                                                ; preds = %2
+  %5 = bitcast %"struct.std::_Vector_base"* %0 to %"class.std::allocator"*
+  %6 = tail call i64* @_ZNSt16allocator_traitsISaIxEE8allocateERS0_m(%"class.std::allocator"* nonnull align 1 dereferenceable(1) %5, i64 %1) #19
+  br label %7
+
+7:                                                ; preds = %2, %4
+  %8 = phi i64* [ %6, %4 ], [ null, %2 ]
+  ret i64* %8
+}
+
+declare i8* @__cxa_begin_catch(i8*) local_unnamed_addr
+
+declare void @__cxa_rethrow() local_unnamed_addr
+
+declare void @__cxa_end_catch() local_unnamed_addr
+
+; Function Attrs: noinline noreturn nounwind
+define linkonce_odr hidden void @__clang_call_terminate(i8* %0) local_unnamed_addr #12 comdat {
+  %2 = tail call i8* @__cxa_begin_catch(i8* %0) #22
+  tail call void @_ZSt9terminatev() #21
+  unreachable
+}
+
+declare void @_ZSt9terminatev() local_unnamed_addr
+
+; Function Attrs: argmemonly mustprogress nofree nounwind willreturn
+declare void @llvm.memmove.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i1 immarg) #13
+
+; Function Attrs: inlinehint minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64* @_ZSt10__fill_n_aIPxmxET_S1_T0_RKT1_St26random_access_iterator_tag(i64* %0, i64 %1, i64* nonnull align 8 dereferenceable(8) %2) local_unnamed_addr #5 comdat {
+  %4 = icmp eq i64 %1, 0
+  br i1 %4, label %13, label %5
+
+5:                                                ; preds = %3
+  %6 = getelementptr inbounds i64, i64* %0, i64 %1
+  %7 = load i64, i64* %2, align 8, !tbaa !11
+  br label %8
+
+8:                                                ; preds = %11, %5
+  %9 = phi i64* [ %0, %5 ], [ %12, %11 ]
+  %10 = icmp eq i64* %9, %6
+  br i1 %10, label %13, label %11
+
+11:                                               ; preds = %8
+  store i64 %7, i64* %9, align 8, !tbaa !11
+  %12 = getelementptr inbounds i64, i64* %9, i64 1
+  br label %8, !llvm.loop !24
+
+13:                                               ; preds = %8, %3
+  %14 = phi i64* [ %0, %3 ], [ %6, %8 ]
+  ret i64* %14
+}
+
+; Function Attrs: minsize noreturn optsize
+declare void @_ZSt20__throw_length_errorPKc(i8*) local_unnamed_addr #14
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64* @_ZNSt16allocator_traitsISaIxEE8allocateERS0_m(%"class.std::allocator"* nonnull align 1 dereferenceable(1) %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  %4 = tail call i64* @_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"* nonnull align 1 dereferenceable(1) %3, i64 %1, i8* null) #19
+  ret i64* %4
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64* @_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"* nonnull align 1 dereferenceable(1) %0, i64 %1, i8* %2) local_unnamed_addr #4 comdat align 2 {
+  %4 = icmp ugt i64 %1, 1152921504606846975
+  br i1 %4, label %5, label %9, !prof !26
+
+5:                                                ; preds = %3
+  %6 = icmp ugt i64 %1, 2305843009213693951
+  br i1 %6, label %7, label %8
+
+7:                                                ; preds = %5
+  tail call void @_ZSt28__throw_bad_array_new_lengthv() #24
+  unreachable
+
+8:                                                ; preds = %5
+  tail call void @_ZSt17__throw_bad_allocv() #24
+  unreachable
+
+9:                                                ; preds = %3
+  %10 = shl nuw nsw i64 %1, 3
+  %11 = tail call noalias nonnull i8* @_Znwm(i64 %10) #25
+  %12 = bitcast i8* %11 to i64*
+  ret i64* %12
+}
+
+; Function Attrs: minsize noreturn optsize
+declare void @_ZSt28__throw_bad_array_new_lengthv() local_unnamed_addr #14
+
+; Function Attrs: minsize noreturn optsize
+declare void @_ZSt17__throw_bad_allocv() local_unnamed_addr #14
+
+; Function Attrs: minsize nobuiltin optsize allocsize(0)
+declare nonnull i8* @_Znwm(i64) local_unnamed_addr #15
+
+; Function Attrs: minsize nobuiltin nounwind optsize
+declare void @_ZdlPv(i8*) local_unnamed_addr #16
+
+; Function Attrs: minsize nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %0) unnamed_addr #6 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0, i32 0
+  %3 = load i64*, i64** %2, align 8, !tbaa !13
+  %4 = icmp eq i64* %3, null
+  br i1 %4, label %7, label %5
+
+5:                                                ; preds = %1
+  %6 = bitcast i64* %3 to i8*
+  tail call void @_ZdlPv(i8* nonnull %6) #20
+  br label %7
+
+7:                                                ; preds = %5, %1
+  ret void
+}
+
+; Function Attrs: minsize nounwind optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt12_Vector_baseISt6vectorIxSaIxEESaIS2_EED2Ev(%"struct.std::_Vector_base.1"* nonnull align 8 dereferenceable(24) %0) unnamed_addr #6 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr inbounds %"struct.std::_Vector_base.1", %"struct.std::_Vector_base.1"* %0, i64 0, i32 0, i32 0, i32 0
+  %3 = load %"class.std::vector"*, %"class.std::vector"** %2, align 8, !tbaa !5
+  %4 = icmp eq %"class.std::vector"* %3, null
+  br i1 %4, label %7, label %5
+
+5:                                                ; preds = %1
+  %6 = bitcast %"class.std::vector"* %3 to i8*
+  tail call void @_ZdlPv(i8* nonnull %6) #20
+  br label %7
+
+7:                                                ; preds = %5, %1
+  ret void
+}
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt12_Destroy_auxILb0EE9__destroyIPSt6vectorIxSaIxEEEEvT_S6_(%"class.std::vector"* %0, %"class.std::vector"* %1) local_unnamed_addr #9 comdat align 2 personality i32 (...)* @__gxx_personality_v0 {
+  br label %3
+
+3:                                                ; preds = %6, %2
+  %4 = phi %"class.std::vector"* [ %0, %2 ], [ %8, %6 ]
+  %5 = icmp eq %"class.std::vector"* %4, %1
+  br i1 %5, label %9, label %6
+
+6:                                                ; preds = %3
+  %7 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %4, i64 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %7) #20
+  %8 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %4, i64 1
+  br label %3, !llvm.loop !27
+
+9:                                                ; preds = %3
+  ret void
+}
+
+; Function Attrs: minsize optsize
+declare nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16), i64* nonnull align 8 dereferenceable(8)) local_unnamed_addr #0
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define linkonce_odr dso_local i64 @_ZNSt6vectorIxSaIxEE17_S_check_init_lenEmRKS0_(i64 %0, %"class.std::allocator"* nonnull align 1 dereferenceable(1) %1) local_unnamed_addr #9 comdat align 2 personality i32 (...)* @__gxx_personality_v0 {
+  %3 = icmp ugt i64 %0, 1152921504606846975
+  br i1 %3, label %4, label %5
+
+4:                                                ; preds = %2
+  tail call void @_ZSt20__throw_length_errorPKc(i8* getelementptr inbounds ([49 x i8], [49 x i8]* @.str.5, i64 0, i64 0)) #24
+  unreachable
+
+5:                                                ; preds = %2
+  ret i64 %0
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt6vectorIxSaIxEE21_M_default_initializeEm(%"class.std::vector"* nonnull align 8 dereferenceable(24) %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 0
+  %4 = load i64*, i64** %3, align 8, !tbaa !13
+  %5 = tail call i64* @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPxmEET_S3_T0_(i64* %4, i64 %1) #19
+  %6 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0, i32 1
+  store i64* %5, i64** %6, align 8, !tbaa !19
+  ret void
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local void @_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = tail call i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* nonnull align 8 dereferenceable(24) %0, i64 %1) #19
+  %4 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0, i32 0
+  store i64* %3, i64** %4, align 8, !tbaa !13
+  %5 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0, i32 1
+  store i64* %3, i64** %5, align 8, !tbaa !19
+  %6 = getelementptr inbounds i64, i64* %3, i64 %1
+  %7 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0, i32 2
+  store i64* %6, i64** %7, align 8, !tbaa !21
+  ret void
+}
+
+; Function Attrs: minsize mustprogress optsize sspstrong uwtable
+define linkonce_odr dso_local i64* @_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPxmEET_S3_T0_(i64* %0, i64 %1) local_unnamed_addr #4 comdat align 2 {
+  %3 = icmp eq i64 %1, 0
+  br i1 %3, label %8, label %4
+
+4:                                                ; preds = %2
+  store i64 0, i64* %0, align 8, !tbaa !11
+  %5 = getelementptr inbounds i64, i64* %0, i64 1
+  %6 = add i64 %1, -1
+  %7 = tail call i64* @_ZSt10__fill_n_aIPxmxET_S1_T0_RKT1_St26random_access_iterator_tag(i64* nonnull %5, i64 %6, i64* nonnull align 8 dereferenceable(8) %0) #19
+  br label %8
+
+8:                                                ; preds = %4, %2
+  %9 = phi i64* [ %7, %4 ], [ %0, %2 ]
+  ret i64* %9
+}
+
+; Function Attrs: minsize optsize
+declare nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZNSo9_M_insertIxEERSoT_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8), i64) local_unnamed_addr #0
+
+; Function Attrs: minsize optsize sspstrong uwtable
+define internal void @_GLOBAL__sub_I_s339326858.cpp() #9 section ".text.startup" {
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1) @_ZStL8__ioinit) #19
+  %1 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #22
+  tail call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) bitcast (%"class.std::vector"* @flag to i8*), i8 0, i64 24, i1 false) #22
+  %2 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector"*)* @_ZNSt6vectorIxSaIxEED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector"* @flag to i8*), i8* nonnull @__dso_handle) #22
+  tail call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) bitcast (%"class.std::vector"* @color to i8*), i8 0, i64 24, i1 false) #22
+  %3 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector"*)* @_ZNSt6vectorIxSaIxEED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector"* @color to i8*), i8* nonnull @__dso_handle) #22
+  tail call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) bitcast (%"class.std::vector"* @D to i8*), i8 0, i64 24, i1 false) #22
+  %4 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector"*)* @_ZNSt6vectorIxSaIxEED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector"* @D to i8*), i8* nonnull @__dso_handle) #22
+  tail call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) bitcast (%"class.std::vector.0"* @path to i8*), i8 0, i64 24, i1 false) #22
+  %5 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::vector.0"*)* @_ZNSt6vectorIS_IxSaIxEESaIS1_EED2Ev to void (i8*)*), i8* bitcast (%"class.std::vector.0"* @path to i8*), i8* nonnull @__dso_handle) #22
+  ret void
+}
+
+; Function Attrs: argmemonly nofree nounwind willreturn writeonly
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg) #17
+
+; Function Attrs: nofree nosync nounwind readnone speculatable willreturn
+declare i64 @llvm.smax.i64(i64, i64) #18
+
+attributes #0 = { minsize optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { minsize nounwind optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #2 = { nofree nounwind }
+attributes #3 = { minsize mustprogress nofree norecurse nosync nounwind optsize readnone sspstrong uwtable willreturn "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { minsize mustprogress optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #5 = { inlinehint minsize mustprogress optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #6 = { minsize nounwind optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #7 = { minsize norecurse optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #8 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #9 = { minsize optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #10 = { inlinehint minsize nounwind optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #11 = { minsize mustprogress nounwind optsize sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #12 = { noinline noreturn nounwind }
+attributes #13 = { argmemonly mustprogress nofree nounwind willreturn }
+attributes #14 = { minsize noreturn optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #15 = { minsize nobuiltin optsize allocsize(0) "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #16 = { minsize nobuiltin nounwind optsize "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #17 = { argmemonly nofree nounwind willreturn writeonly }
+attributes #18 = { nofree nosync nounwind readnone speculatable willreturn }
+attributes #19 = { minsize optsize }
+attributes #20 = { minsize nounwind optsize }
+attributes #21 = { noreturn nounwind }
+attributes #22 = { nounwind }
+attributes #23 = { noreturn }
+attributes #24 = { minsize noreturn optsize }
+attributes #25 = { minsize optsize allocsize(0) }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6, !7, i64 0}
+!6 = !{!"_ZTSNSt12_Vector_baseISt6vectorIxSaIxEESaIS2_EE17_Vector_impl_dataE", !7, i64 0, !7, i64 8, !7, i64 16}
+!7 = !{!"any pointer", !8, i64 0}
+!8 = !{!"omnipotent char", !9, i64 0}
+!9 = !{!"Simple C++ TBAA"}
+!10 = !{!6, !7, i64 8}
+!11 = !{!12, !12, i64 0}
+!12 = !{!"long long", !8, i64 0}
+!13 = !{!14, !7, i64 0}
+!14 = !{!"_ZTSNSt12_Vector_baseIxSaIxEE17_Vector_impl_dataE", !7, i64 0, !7, i64 8, !7, i64 16}
+!15 = distinct !{!15, !16}
+!16 = !{!"llvm.loop.mustprogress"}
+!17 = distinct !{!17, !16}
+!18 = distinct !{!18, !16}
+!19 = !{!14, !7, i64 8}
+!20 = distinct !{!20, !16}
+!21 = !{!14, !7, i64 16}
+!22 = !{!23, !7, i64 0}
+!23 = !{!"_ZTSNSt6vectorIxSaIxEE16_Temporary_valueE", !7, i64 0, !8, i64 8}
+!24 = distinct !{!24, !16}
+!25 = !{!7, !7, i64 0}
+!26 = !{!"branch_weights", i32 1, i32 2000}
+!27 = distinct !{!27, !16}
