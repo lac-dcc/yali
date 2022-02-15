@@ -1,0 +1,315 @@
+; ModuleID = 'Project_CodeNet_C++1400/p00055/s448203160.cpp'
+source_filename = "Project_CodeNet_C++1400/p00055/s448203160.cpp"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@.str = private unnamed_addr constant [6 x i8] c"%.8f\0A\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s448203160.cpp, i8* null }]
+@x = common global i32 0
+@y = common global i32 0
+@x.1 = common global i32 0
+@y.2 = common global i32 0
+@x.3 = common global i32 0
+@y.4 = common global i32 0
+@x.5 = common global i32 0
+@y.6 = common global i32 0
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 section ".text.startup" {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %1 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #3
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) #3
+
+; Function Attrs: noinline nounwind uwtable
+define double @_Z5solved(double) #4 {
+  %2 = alloca double, align 8
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = alloca i32, align 4
+  store double %0, double* %2, align 8
+  %6 = load double, double* %2, align 8
+  store double %6, double* %3, align 8
+  %7 = load double, double* %2, align 8
+  store double %7, double* %4, align 8
+  store i32 2, i32* %5, align 4
+  br label %8
+
+; <label>:8:                                      ; preds = %61, %1
+  %9 = load i32, i32* @x.1
+  %10 = load i32, i32* @y.2
+  %11 = sub i32 %9, 1
+  %12 = mul i32 %9, %11
+  %13 = urem i32 %12, 2
+  %14 = icmp eq i32 %13, 0
+  %15 = icmp slt i32 %10, 10
+  %16 = or i1 %14, %15
+  br i1 %16, label %17, label %66
+
+; <label>:17:                                     ; preds = %8, %66
+  %18 = load i32, i32* %5, align 4
+  %19 = icmp slt i32 %18, 11
+  %20 = load i32, i32* @x.1
+  %21 = load i32, i32* @y.2
+  %22 = sub i32 %20, 1
+  %23 = mul i32 %20, %22
+  %24 = urem i32 %23, 2
+  %25 = icmp eq i32 %24, 0
+  %26 = icmp slt i32 %21, 10
+  %27 = or i1 %25, %26
+  br i1 %27, label %28, label %66
+
+; <label>:28:                                     ; preds = %17
+  br i1 %19, label %29, label %64
+
+; <label>:29:                                     ; preds = %28
+  %30 = load i32, i32* @x.1
+  %31 = load i32, i32* @y.2
+  %32 = sub i32 %30, 1
+  %33 = mul i32 %30, %32
+  %34 = urem i32 %33, 2
+  %35 = icmp eq i32 %34, 0
+  %36 = icmp slt i32 %31, 10
+  %37 = or i1 %35, %36
+  br i1 %37, label %38, label %69
+
+; <label>:38:                                     ; preds = %29, %69
+  %39 = load i32, i32* %5, align 4
+  %40 = srem i32 %39, 2
+  %41 = icmp eq i32 %40, 0
+  %42 = load i32, i32* @x.1
+  %43 = load i32, i32* @y.2
+  %44 = sub i32 %42, 1
+  %45 = mul i32 %42, %44
+  %46 = urem i32 %45, 2
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %43, 10
+  %49 = or i1 %47, %48
+  br i1 %49, label %50, label %69
+
+; <label>:50:                                     ; preds = %38
+  br i1 %41, label %51, label %54
+
+; <label>:51:                                     ; preds = %50
+  %52 = load double, double* %4, align 8
+  %53 = fmul double %52, 2.000000e+00
+  store double %53, double* %4, align 8
+  br label %57
+
+; <label>:54:                                     ; preds = %50
+  %55 = load double, double* %4, align 8
+  %56 = fdiv double %55, 3.000000e+00
+  store double %56, double* %4, align 8
+  br label %57
+
+; <label>:57:                                     ; preds = %54, %51
+  %58 = load double, double* %4, align 8
+  %59 = load double, double* %3, align 8
+  %60 = fadd double %59, %58
+  store double %60, double* %3, align 8
+  br label %61
+
+; <label>:61:                                     ; preds = %57
+  %62 = load i32, i32* %5, align 4
+  %63 = add nsw i32 %62, 1
+  store i32 %63, i32* %5, align 4
+  br label %8
+
+; <label>:64:                                     ; preds = %28
+  %65 = load double, double* %3, align 8
+  ret double %65
+
+; <label>:66:                                     ; preds = %17, %8
+  %67 = load i32, i32* %5, align 4
+  %68 = icmp slt i32 %67, 11
+  br label %17
+
+; <label>:69:                                     ; preds = %38, %29
+  %70 = load i32, i32* %5, align 4
+  %71 = sub i32 0, %70
+  %72 = add i32 %71, 2
+  %73 = sub i32 %70, 2
+  %74 = mul i32 %73, 2
+  %75 = sub i32 0, %70
+  %76 = add i32 %75, 2
+  %77 = shl i32 %70, 2
+  %78 = shl i32 %70, 2
+  %79 = sub i32 0, %70
+  %80 = add i32 %79, 2
+  %81 = sub i32 0, %70
+  %82 = add i32 %81, 2
+  %83 = srem i32 %70, 2
+  %84 = icmp eq i32 %83, 0
+  br label %38
+}
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() #5 {
+  %1 = load i32, i32* @x.3
+  %2 = load i32, i32* @y.4
+  %3 = sub i32 %1, 1
+  %4 = mul i32 %1, %3
+  %5 = urem i32 %4, 2
+  %6 = icmp eq i32 %5, 0
+  %7 = icmp slt i32 %2, 10
+  %8 = or i1 %6, %7
+  br i1 %8, label %9, label %55
+
+; <label>:9:                                      ; preds = %0, %55
+  %10 = alloca i32, align 4
+  %11 = alloca double, align 8
+  store i32 0, i32* %10, align 4
+  %12 = load i32, i32* @x.3
+  %13 = load i32, i32* @y.4
+  %14 = sub i32 %12, 1
+  %15 = mul i32 %12, %14
+  %16 = urem i32 %15, 2
+  %17 = icmp eq i32 %16, 0
+  %18 = icmp slt i32 %13, 10
+  %19 = or i1 %17, %18
+  br i1 %19, label %20, label %55
+
+; <label>:20:                                     ; preds = %9
+  br label %21
+
+; <label>:21:                                     ; preds = %50, %20
+  %22 = load i32, i32* @x.3
+  %23 = load i32, i32* @y.4
+  %24 = sub i32 %22, 1
+  %25 = mul i32 %22, %24
+  %26 = urem i32 %25, 2
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %27, %28
+  br i1 %29, label %30, label %58
+
+; <label>:30:                                     ; preds = %21, %58
+  %31 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERd(%"class.std::basic_istream"* @_ZSt3cin, double* dereferenceable(8) %11)
+  %32 = bitcast %"class.std::basic_istream"* %31 to i8**
+  %33 = load i8*, i8** %32, align 8
+  %34 = getelementptr i8, i8* %33, i64 -24
+  %35 = bitcast i8* %34 to i64*
+  %36 = load i64, i64* %35, align 8
+  %37 = bitcast %"class.std::basic_istream"* %31 to i8*
+  %38 = getelementptr inbounds i8, i8* %37, i64 %36
+  %39 = bitcast i8* %38 to %"class.std::basic_ios"*
+  %40 = call zeroext i1 @_ZNKSt9basic_iosIcSt11char_traitsIcEEcvbEv(%"class.std::basic_ios"* %39)
+  %41 = load i32, i32* @x.3
+  %42 = load i32, i32* @y.4
+  %43 = sub i32 %41, 1
+  %44 = mul i32 %41, %43
+  %45 = urem i32 %44, 2
+  %46 = icmp eq i32 %45, 0
+  %47 = icmp slt i32 %42, 10
+  %48 = or i1 %46, %47
+  br i1 %48, label %49, label %58
+
+; <label>:49:                                     ; preds = %30
+  br i1 %40, label %50, label %54
+
+; <label>:50:                                     ; preds = %49
+  %51 = load double, double* %11, align 8
+  %52 = call double @_Z5solved(double %51)
+  %53 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i32 0, i32 0), double %52)
+  br label %21
+
+; <label>:54:                                     ; preds = %49
+  ret i32 0
+
+; <label>:55:                                     ; preds = %9, %0
+  %56 = alloca i32, align 4
+  %57 = alloca double, align 8
+  store i32 0, i32* %56, align 4
+  br label %9
+
+; <label>:58:                                     ; preds = %30, %21
+  %59 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERd(%"class.std::basic_istream"* @_ZSt3cin, double* dereferenceable(8) %11)
+  %60 = bitcast %"class.std::basic_istream"* %59 to i8**
+  %61 = load i8*, i8** %60, align 8
+  %62 = getelementptr i8, i8* %61, i64 -24
+  %63 = bitcast i8* %62 to i64*
+  %64 = load i64, i64* %63, align 8
+  %65 = bitcast %"class.std::basic_istream"* %59 to i8*
+  %66 = getelementptr inbounds i8, i8* %65, i64 %64
+  %67 = bitcast i8* %66 to %"class.std::basic_ios"*
+  %68 = call zeroext i1 @_ZNKSt9basic_iosIcSt11char_traitsIcEEcvbEv(%"class.std::basic_ios"* %67)
+  br label %30
+}
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERd(%"class.std::basic_istream"*, double* dereferenceable(8)) #1
+
+declare zeroext i1 @_ZNKSt9basic_iosIcSt11char_traitsIcEEcvbEv(%"class.std::basic_ios"*) #1
+
+declare i32 @printf(i8*, ...) #1
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s448203160.cpp() #0 section ".text.startup" {
+  %1 = load i32, i32* @x.5
+  %2 = load i32, i32* @y.6
+  %3 = sub i32 %1, 1
+  %4 = mul i32 %1, %3
+  %5 = urem i32 %4, 2
+  %6 = icmp eq i32 %5, 0
+  %7 = icmp slt i32 %2, 10
+  %8 = or i1 %6, %7
+  br i1 %8, label %9, label %19
+
+; <label>:9:                                      ; preds = %0, %19
+  call void @__cxx_global_var_init()
+  %10 = load i32, i32* @x.5
+  %11 = load i32, i32* @y.6
+  %12 = sub i32 %10, 1
+  %13 = mul i32 %10, %12
+  %14 = urem i32 %13, 2
+  %15 = icmp eq i32 %14, 0
+  %16 = icmp slt i32 %11, 10
+  %17 = or i1 %15, %16
+  br i1 %17, label %18, label %19
+
+; <label>:18:                                     ; preds = %9
+  ret void
+
+; <label>:19:                                     ; preds = %9, %0
+  call void @__cxx_global_var_init()
+  br label %9
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
