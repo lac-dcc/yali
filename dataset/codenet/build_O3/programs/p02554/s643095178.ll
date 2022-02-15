@@ -1,0 +1,482 @@
+; ModuleID = 'Project_CodeNet_C++1400/p02554/s643095178.cpp'
+source_filename = "Project_CodeNet_C++1400/p02554/s643095178.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::__cxx11::basic_string" = type { %"struct.std::__cxx11::basic_string<char>::_Alloc_hider", i64, %union.anon }
+%"struct.std::__cxx11::basic_string<char>::_Alloc_hider" = type { i8* }
+%union.anon = type { i64, [8 x i8] }
+%"class.std::__cxx11::basic_stringstream" = type { %"class.std::basic_iostream.base", %"class.std::__cxx11::basic_stringbuf", %"class.std::basic_ios" }
+%"class.std::basic_iostream.base" = type { %"class.std::basic_istream.base", %"class.std::basic_ostream.base" }
+%"class.std::basic_istream.base" = type { i32 (...)**, i64 }
+%"class.std::basic_ostream.base" = type { i32 (...)** }
+%"class.std::__cxx11::basic_stringbuf" = type { %"class.std::basic_streambuf", i32, %"class.std::__cxx11::basic_string" }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external hidden global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE = external unnamed_addr constant [10 x i8*], align 8
+@_ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE = external unnamed_addr constant { [16 x i8*] }, align 8
+@_ZTVSt15basic_streambufIcSt11char_traitsIcEE = external unnamed_addr constant { [16 x i8*] }, align 8
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s643095178.cpp, i8* null }]
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1)) unnamed_addr #0
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1)) unnamed_addr #1
+
+; Function Attrs: nofree nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) local_unnamed_addr #2
+
+; Function Attrs: sspstrong uwtable
+define dso_local void @_Z5tostrB5cxx11x(%"class.std::__cxx11::basic_string"* noalias sret(%"class.std::__cxx11::basic_string") align 8 %0, i64 %1) local_unnamed_addr #3 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = alloca %"class.std::__cxx11::basic_stringstream", align 8
+  %4 = bitcast %"class.std::__cxx11::basic_stringstream"* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 392, i8* nonnull %4) #12
+  call void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128) %3)
+  %5 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 0, i32 1
+  %6 = bitcast %"class.std::basic_ostream.base"* %5 to %"class.std::basic_ostream"*
+  %7 = invoke nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZNSo9_M_insertIxEERSoT_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8) %6, i64 %1)
+          to label %8 unwind label %66
+
+8:                                                ; preds = %2
+  call void @llvm.experimental.noalias.scope.decl(metadata !5)
+  call void @llvm.experimental.noalias.scope.decl(metadata !8)
+  %9 = getelementptr inbounds %"class.std::__cxx11::basic_string", %"class.std::__cxx11::basic_string"* %0, i64 0, i32 2
+  %10 = bitcast %"class.std::__cxx11::basic_string"* %0 to %union.anon**
+  store %union.anon* %9, %union.anon** %10, align 8, !tbaa !11, !alias.scope !16
+  %11 = getelementptr inbounds %"class.std::__cxx11::basic_string", %"class.std::__cxx11::basic_string"* %0, i64 0, i32 1
+  store i64 0, i64* %11, align 8, !tbaa !17, !alias.scope !16
+  %12 = bitcast %union.anon* %9 to i8*
+  store i8 0, i8* %12, align 8, !tbaa !20, !alias.scope !16
+  %13 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 0, i32 5
+  %14 = load i8*, i8** %13, align 8, !tbaa !21, !noalias !16
+  %15 = icmp eq i8* %14, null
+  br i1 %15, label %35, label %16
+
+16:                                               ; preds = %8
+  %17 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 0, i32 3
+  %18 = load i8*, i8** %17, align 8, !tbaa !24, !noalias !16
+  %19 = icmp eq i8* %18, null
+  %20 = icmp ugt i8* %14, %18
+  %21 = select i1 %19, i1 true, i1 %20
+  %22 = select i1 %21, i8* %14, i8* %18
+  %23 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 0, i32 4
+  %24 = load i8*, i8** %23, align 8, !tbaa !25, !noalias !16
+  %25 = ptrtoint i8* %22 to i64
+  %26 = ptrtoint i8* %24 to i64
+  %27 = sub i64 %25, %26
+  %28 = invoke nonnull align 8 dereferenceable(32) %"class.std::__cxx11::basic_string"* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm(%"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32) %0, i64 0, i64 0, i8* %24, i64 %27)
+          to label %37 unwind label %29
+
+29:                                               ; preds = %35, %16
+  %30 = landingpad { i8*, i32 }
+          cleanup
+  %31 = getelementptr inbounds %"class.std::__cxx11::basic_string", %"class.std::__cxx11::basic_string"* %0, i64 0, i32 0, i32 0
+  %32 = load i8*, i8** %31, align 8, !tbaa !26, !alias.scope !16
+  %33 = icmp eq i8* %32, %12
+  br i1 %33, label %68, label %34
+
+34:                                               ; preds = %29
+  call void @_ZdlPv(i8* %32) #12
+  br label %68
+
+35:                                               ; preds = %8
+  %36 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 2
+  invoke void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_(%"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32) %0, %"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32) %36)
+          to label %37 unwind label %29
+
+37:                                               ; preds = %35, %16
+  %38 = load i32 (...)**, i32 (...)*** bitcast ([10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE to i32 (...)***), align 8
+  %39 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 0, i32 0, i32 0
+  store i32 (...)** %38, i32 (...)*** %39, align 8, !tbaa !27
+  %40 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 8) to i32 (...)***), align 8
+  %41 = getelementptr i32 (...)*, i32 (...)** %38, i64 -3
+  %42 = bitcast i32 (...)** %41 to i64*
+  %43 = load i64, i64* %42, align 8
+  %44 = getelementptr inbounds i8, i8* %4, i64 %43
+  %45 = bitcast i8* %44 to i32 (...)***
+  store i32 (...)** %40, i32 (...)*** %45, align 8, !tbaa !27
+  %46 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 9) to i32 (...)***), align 8
+  %47 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 0, i32 1, i32 0
+  store i32 (...)** %46, i32 (...)*** %47, align 8, !tbaa !27
+  %48 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [16 x i8*] }, { [16 x i8*] }* @_ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %48, align 8, !tbaa !27
+  %49 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 2, i32 0, i32 0
+  %50 = load i8*, i8** %49, align 8, !tbaa !26
+  %51 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 2, i32 2
+  %52 = bitcast %union.anon* %51 to i8*
+  %53 = icmp eq i8* %50, %52
+  br i1 %53, label %55, label %54
+
+54:                                               ; preds = %37
+  call void @_ZdlPv(i8* %50) #12
+  br label %55
+
+55:                                               ; preds = %37, %54
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [16 x i8*] }, { [16 x i8*] }* @_ZTVSt15basic_streambufIcSt11char_traitsIcEE, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %48, align 8, !tbaa !27
+  %56 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 1, i32 0, i32 7
+  call void @_ZNSt6localeD1Ev(%"class.std::locale"* nonnull align 8 dereferenceable(8) %56) #12
+  %57 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 2) to i32 (...)***), align 8
+  store i32 (...)** %57, i32 (...)*** %39, align 8, !tbaa !27
+  %58 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 3) to i32 (...)***), align 8
+  %59 = getelementptr i32 (...)*, i32 (...)** %57, i64 -3
+  %60 = bitcast i32 (...)** %59 to i64*
+  %61 = load i64, i64* %60, align 8
+  %62 = getelementptr inbounds i8, i8* %4, i64 %61
+  %63 = bitcast i8* %62 to i32 (...)***
+  store i32 (...)** %58, i32 (...)*** %63, align 8, !tbaa !27
+  %64 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 0, i32 0, i32 1
+  store i64 0, i64* %64, align 8, !tbaa !29
+  %65 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %3, i64 0, i32 2, i32 0
+  call void @_ZNSt8ios_baseD2Ev(%"class.std::ios_base"* nonnull align 8 dereferenceable(216) %65) #12
+  call void @llvm.lifetime.end.p0i8(i64 392, i8* nonnull %4) #12
+  ret void
+
+66:                                               ; preds = %2
+  %67 = landingpad { i8*, i32 }
+          cleanup
+  br label %68
+
+68:                                               ; preds = %29, %34, %66
+  %69 = phi { i8*, i32 } [ %67, %66 ], [ %30, %34 ], [ %30, %29 ]
+  call void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128) %3) #12
+  call void @llvm.lifetime.end.p0i8(i64 392, i8* nonnull %4) #12
+  resume { i8*, i32 } %69
+}
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #4
+
+; Function Attrs: sspstrong uwtable
+declare void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128)) unnamed_addr #3 align 2
+
+declare i32 @__gxx_personality_v0(...)
+
+; Function Attrs: nounwind sspstrong uwtable
+declare void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128)) unnamed_addr #5 align 2
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #4
+
+; Function Attrs: sspstrong uwtable
+define dso_local i64 @_Z5tointNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE(%"class.std::__cxx11::basic_string"* nonnull %0) local_unnamed_addr #3 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %"class.std::__cxx11::basic_stringstream", align 8
+  %3 = alloca i64, align 8
+  %4 = bitcast %"class.std::__cxx11::basic_stringstream"* %2 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 392, i8* nonnull %4) #12
+  call void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1ERKNS_12basic_stringIcS2_S3_EESt13_Ios_Openmode(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128) %2, %"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32) %0, i32 24)
+  %5 = bitcast i64* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %5) #12
+  %6 = bitcast %"class.std::__cxx11::basic_stringstream"* %2 to %"class.std::basic_istream"*
+  %7 = invoke nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) %6, i64* nonnull align 8 dereferenceable(8) %3)
+          to label %8 unwind label %38
+
+8:                                                ; preds = %1
+  %9 = load i64, i64* %3, align 8, !tbaa !31
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %5) #12
+  %10 = load i32 (...)**, i32 (...)*** bitcast ([10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE to i32 (...)***), align 8
+  %11 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 0, i32 0, i32 0
+  store i32 (...)** %10, i32 (...)*** %11, align 8, !tbaa !27
+  %12 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 8) to i32 (...)***), align 8
+  %13 = getelementptr i32 (...)*, i32 (...)** %10, i64 -3
+  %14 = bitcast i32 (...)** %13 to i64*
+  %15 = load i64, i64* %14, align 8
+  %16 = getelementptr inbounds i8, i8* %4, i64 %15
+  %17 = bitcast i8* %16 to i32 (...)***
+  store i32 (...)** %12, i32 (...)*** %17, align 8, !tbaa !27
+  %18 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 9) to i32 (...)***), align 8
+  %19 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 0, i32 1, i32 0
+  store i32 (...)** %18, i32 (...)*** %19, align 8, !tbaa !27
+  %20 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 1, i32 0, i32 0
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [16 x i8*] }, { [16 x i8*] }* @_ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %20, align 8, !tbaa !27
+  %21 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 1, i32 2, i32 0, i32 0
+  %22 = load i8*, i8** %21, align 8, !tbaa !26
+  %23 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 1, i32 2, i32 2
+  %24 = bitcast %union.anon* %23 to i8*
+  %25 = icmp eq i8* %22, %24
+  br i1 %25, label %27, label %26
+
+26:                                               ; preds = %8
+  call void @_ZdlPv(i8* %22) #12
+  br label %27
+
+27:                                               ; preds = %8, %26
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [16 x i8*] }, { [16 x i8*] }* @_ZTVSt15basic_streambufIcSt11char_traitsIcEE, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %20, align 8, !tbaa !27
+  %28 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 1, i32 0, i32 7
+  call void @_ZNSt6localeD1Ev(%"class.std::locale"* nonnull align 8 dereferenceable(8) %28) #12
+  %29 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 2) to i32 (...)***), align 8
+  store i32 (...)** %29, i32 (...)*** %11, align 8, !tbaa !27
+  %30 = load i32 (...)**, i32 (...)*** bitcast (i8** getelementptr inbounds ([10 x i8*], [10 x i8*]* @_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE, i64 0, i64 3) to i32 (...)***), align 8
+  %31 = getelementptr i32 (...)*, i32 (...)** %29, i64 -3
+  %32 = bitcast i32 (...)** %31 to i64*
+  %33 = load i64, i64* %32, align 8
+  %34 = getelementptr inbounds i8, i8* %4, i64 %33
+  %35 = bitcast i8* %34 to i32 (...)***
+  store i32 (...)** %30, i32 (...)*** %35, align 8, !tbaa !27
+  %36 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 0, i32 0, i32 1
+  store i64 0, i64* %36, align 8, !tbaa !29
+  %37 = getelementptr inbounds %"class.std::__cxx11::basic_stringstream", %"class.std::__cxx11::basic_stringstream"* %2, i64 0, i32 2, i32 0
+  call void @_ZNSt8ios_baseD2Ev(%"class.std::ios_base"* nonnull align 8 dereferenceable(216) %37) #12
+  call void @llvm.lifetime.end.p0i8(i64 392, i8* nonnull %4) #12
+  ret i64 %9
+
+38:                                               ; preds = %1
+  %39 = landingpad { i8*, i32 }
+          cleanup
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %5) #12
+  call void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128) %2) #12
+  call void @llvm.lifetime.end.p0i8(i64 392, i8* nonnull %4) #12
+  resume { i8*, i32 } %39
+}
+
+; Function Attrs: sspstrong uwtable
+declare void @_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1ERKNS_12basic_stringIcS2_S3_EESt13_Ios_Openmode(%"class.std::__cxx11::basic_stringstream"* nonnull align 8 dereferenceable(128), %"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32), i32) unnamed_addr #3 align 2
+
+; Function Attrs: mustprogress nofree norecurse nosync nounwind readnone sspstrong uwtable willreturn
+define dso_local i64 @_Z4mpowxx(i64 %0, i64 %1) local_unnamed_addr #6 {
+  %3 = icmp sgt i64 %1, 0
+  br i1 %3, label %4, label %19
+
+4:                                                ; preds = %2, %14
+  %5 = phi i64 [ %16, %14 ], [ %0, %2 ]
+  %6 = phi i64 [ %15, %14 ], [ 1, %2 ]
+  %7 = phi i64 [ %17, %14 ], [ %1, %2 ]
+  %8 = srem i64 %5, 1000000007
+  %9 = and i64 %7, 1
+  %10 = icmp eq i64 %9, 0
+  br i1 %10, label %14, label %11
+
+11:                                               ; preds = %4
+  %12 = mul nsw i64 %6, %8
+  %13 = srem i64 %12, 1000000007
+  br label %14
+
+14:                                               ; preds = %11, %4
+  %15 = phi i64 [ %13, %11 ], [ %6, %4 ]
+  %16 = mul nsw i64 %8, %8
+  %17 = lshr i64 %7, 1
+  %18 = icmp ult i64 %7, 2
+  br i1 %18, label %19, label %4, !llvm.loop !33
+
+19:                                               ; preds = %14, %2
+  %20 = phi i64 [ 1, %2 ], [ %15, %14 ]
+  ret i64 %20
+}
+
+; Function Attrs: mustprogress sspstrong uwtable
+define dso_local void @_Z5solvev() local_unnamed_addr #7 {
+  %1 = alloca i64, align 8
+  %2 = bitcast i64* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %2) #12
+  %3 = call nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16) @_ZSt3cin, i64* nonnull align 8 dereferenceable(8) %1)
+  %4 = load i64, i64* %1, align 8, !tbaa !31
+  %5 = icmp sgt i64 %4, 0
+  br i1 %5, label %6, label %54
+
+6:                                                ; preds = %0, %16
+  %7 = phi i64 [ %18, %16 ], [ 10, %0 ]
+  %8 = phi i64 [ %17, %16 ], [ 1, %0 ]
+  %9 = phi i64 [ %19, %16 ], [ %4, %0 ]
+  %10 = urem i64 %7, 1000000007
+  %11 = and i64 %9, 1
+  %12 = icmp eq i64 %11, 0
+  br i1 %12, label %16, label %13
+
+13:                                               ; preds = %6
+  %14 = mul nsw i64 %8, %10
+  %15 = srem i64 %14, 1000000007
+  br label %16
+
+16:                                               ; preds = %13, %6
+  %17 = phi i64 [ %15, %13 ], [ %8, %6 ]
+  %18 = mul nuw nsw i64 %10, %10
+  %19 = lshr i64 %9, 1
+  %20 = icmp ult i64 %9, 2
+  br i1 %20, label %21, label %6, !llvm.loop !33
+
+21:                                               ; preds = %16, %31
+  %22 = phi i64 [ %33, %31 ], [ 9, %16 ]
+  %23 = phi i64 [ %32, %31 ], [ 1, %16 ]
+  %24 = phi i64 [ %34, %31 ], [ %4, %16 ]
+  %25 = urem i64 %22, 1000000007
+  %26 = and i64 %24, 1
+  %27 = icmp eq i64 %26, 0
+  br i1 %27, label %31, label %28
+
+28:                                               ; preds = %21
+  %29 = mul nsw i64 %23, %25
+  %30 = srem i64 %29, 1000000007
+  br label %31
+
+31:                                               ; preds = %28, %21
+  %32 = phi i64 [ %30, %28 ], [ %23, %21 ]
+  %33 = mul nuw nsw i64 %25, %25
+  %34 = lshr i64 %24, 1
+  %35 = icmp ult i64 %24, 2
+  br i1 %35, label %36, label %21, !llvm.loop !33
+
+36:                                               ; preds = %31
+  %37 = mul i64 %32, -2
+  %38 = add i64 %37, %17
+  br label %39
+
+39:                                               ; preds = %36, %49
+  %40 = phi i64 [ %51, %49 ], [ 8, %36 ]
+  %41 = phi i64 [ %50, %49 ], [ 1, %36 ]
+  %42 = phi i64 [ %52, %49 ], [ %4, %36 ]
+  %43 = urem i64 %40, 1000000007
+  %44 = and i64 %42, 1
+  %45 = icmp eq i64 %44, 0
+  br i1 %45, label %49, label %46
+
+46:                                               ; preds = %39
+  %47 = mul nsw i64 %41, %43
+  %48 = srem i64 %47, 1000000007
+  br label %49
+
+49:                                               ; preds = %46, %39
+  %50 = phi i64 [ %48, %46 ], [ %41, %39 ]
+  %51 = mul nuw nsw i64 %43, %43
+  %52 = lshr i64 %42, 1
+  %53 = icmp ult i64 %42, 2
+  br i1 %53, label %54, label %39, !llvm.loop !33
+
+54:                                               ; preds = %49, %0
+  %55 = phi i64 [ -1, %0 ], [ %38, %49 ]
+  %56 = phi i64 [ 1, %0 ], [ %50, %49 ]
+  %57 = add i64 %55, %56
+  %58 = call i64 @llvm.smax.i64(i64 %57, i64 0)
+  %59 = lshr i64 %57, 63
+  %60 = add i64 %59, %57
+  %61 = sub i64 %58, %60
+  %62 = udiv i64 %61, 1000000007
+  %63 = add nuw nsw i64 %59, %62
+  %64 = mul i64 %63, 1000000007
+  %65 = add i64 %57, %64
+  %66 = urem i64 %65, 1000000007
+  %67 = call nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZNSo9_M_insertIxEERSoT_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8) @_ZSt4cout, i64 %66)
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %2) #12
+  ret void
+}
+
+; Function Attrs: mustprogress norecurse sspstrong uwtable
+define dso_local i32 @main() local_unnamed_addr #8 {
+  %1 = tail call zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext false)
+  %2 = load i8*, i8** bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8**), align 8, !tbaa !27
+  %3 = getelementptr i8, i8* %2, i64 -24
+  %4 = bitcast i8* %3 to i64*
+  %5 = load i64, i64* %4, align 8
+  %6 = add nsw i64 %5, 216
+  %7 = getelementptr inbounds i8, i8* bitcast (%"class.std::basic_istream"* @_ZSt3cin to i8*), i64 %6
+  %8 = bitcast i8* %7 to %"class.std::basic_ostream"**
+  store %"class.std::basic_ostream"* null, %"class.std::basic_ostream"** %8, align 8, !tbaa !35
+  tail call void @_Z5solvev()
+  ret i32 0
+}
+
+declare zeroext i1 @_ZNSt8ios_base15sync_with_stdioEb(i1 zeroext) local_unnamed_addr #0
+
+; Function Attrs: nobuiltin nounwind
+declare void @_ZdlPv(i8*) local_unnamed_addr #9
+
+; Function Attrs: nounwind
+declare void @_ZNSt6localeD1Ev(%"class.std::locale"* nonnull align 8 dereferenceable(8)) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_baseD2Ev(%"class.std::ios_base"* nonnull align 8 dereferenceable(216)) unnamed_addr #1
+
+declare nonnull align 8 dereferenceable(8) %"class.std::basic_ostream"* @_ZNSo9_M_insertIxEERSoT_(%"class.std::basic_ostream"* nonnull align 8 dereferenceable(8), i64) local_unnamed_addr #0
+
+declare nonnull align 8 dereferenceable(32) %"class.std::__cxx11::basic_string"* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm(%"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32), i64, i64, i8*, i64) local_unnamed_addr #0
+
+declare void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_(%"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32), %"class.std::__cxx11::basic_string"* nonnull align 8 dereferenceable(32)) local_unnamed_addr #0
+
+declare nonnull align 8 dereferenceable(16) %"class.std::basic_istream"* @_ZNSi10_M_extractIxEERSiRT_(%"class.std::basic_istream"* nonnull align 8 dereferenceable(16), i64* nonnull align 8 dereferenceable(8)) local_unnamed_addr #0
+
+; Function Attrs: sspstrong uwtable
+define internal void @_GLOBAL__sub_I_s643095178.cpp() #3 section ".text.startup" {
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull align 1 dereferenceable(1) @_ZStL8__ioinit)
+  %1 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #12
+  ret void
+}
+
+; Function Attrs: inaccessiblememonly nofree nosync nounwind willreturn
+declare void @llvm.experimental.noalias.scope.decl(metadata) #10
+
+; Function Attrs: nofree nosync nounwind readnone speculatable willreturn
+declare i64 @llvm.smax.i64(i64, i64) #11
+
+attributes #0 = { "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { nounwind "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #2 = { nofree nounwind }
+attributes #3 = { sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #5 = { nounwind sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #6 = { mustprogress nofree norecurse nosync nounwind readnone sspstrong uwtable willreturn "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #7 = { mustprogress sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #8 = { mustprogress norecurse sspstrong uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #9 = { nobuiltin nounwind "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #10 = { inaccessiblememonly nofree nosync nounwind willreturn }
+attributes #11 = { nofree nosync nounwind readnone speculatable willreturn }
+attributes #12 = { nounwind }
+
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
+
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{i32 7, !"PIE Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 1}
+!4 = !{!"clang version 13.0.0"}
+!5 = !{!6}
+!6 = distinct !{!6, !7, !"_ZNKSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEE3strEv: argument 0"}
+!7 = distinct !{!7, !"_ZNKSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEE3strEv"}
+!8 = !{!9}
+!9 = distinct !{!9, !10, !"_ZNKSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv: argument 0"}
+!10 = distinct !{!10, !"_ZNKSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv"}
+!11 = !{!12, !13, i64 0}
+!12 = !{!"_ZTSNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderE", !13, i64 0}
+!13 = !{!"any pointer", !14, i64 0}
+!14 = !{!"omnipotent char", !15, i64 0}
+!15 = !{!"Simple C++ TBAA"}
+!16 = !{!9, !6}
+!17 = !{!18, !19, i64 8}
+!18 = !{!"_ZTSNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE", !12, i64 0, !19, i64 8, !14, i64 16}
+!19 = !{!"long", !14, i64 0}
+!20 = !{!14, !14, i64 0}
+!21 = !{!22, !13, i64 40}
+!22 = !{!"_ZTSSt15basic_streambufIcSt11char_traitsIcEE", !13, i64 8, !13, i64 16, !13, i64 24, !13, i64 32, !13, i64 40, !13, i64 48, !23, i64 56}
+!23 = !{!"_ZTSSt6locale", !13, i64 0}
+!24 = !{!22, !13, i64 24}
+!25 = !{!22, !13, i64 32}
+!26 = !{!18, !13, i64 0}
+!27 = !{!28, !28, i64 0}
+!28 = !{!"vtable pointer", !15, i64 0}
+!29 = !{!30, !19, i64 8}
+!30 = !{!"_ZTSSi", !19, i64 8}
+!31 = !{!32, !32, i64 0}
+!32 = !{!"long long", !14, i64 0}
+!33 = distinct !{!33, !34}
+!34 = !{!"llvm.loop.mustprogress"}
+!35 = !{!36, !13, i64 216}
+!36 = !{!"_ZTSSt9basic_iosIcSt11char_traitsIcEE", !13, i64 216, !14, i64 224, !37, i64 225, !13, i64 232, !13, i64 240, !13, i64 248, !13, i64 256}
+!37 = !{!"bool", !14, i64 0}
