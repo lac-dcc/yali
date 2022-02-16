@@ -3,14 +3,20 @@
 ###################################################################################
 FOLDERO0=build_O0
 FOLDERO3=build_O3
+FOLDEROZ=build_Oz
 FOLDEROLLVM=build_ollvm
 FOLDEROLLVMBCF=build_ollvm_bcf
 FOLDEROLLVMFLA=build_ollvm_fla
 FOLDEROLLVMSUB=build_ollvm_sub
 
-all: clean O0 O3 ollvm ollvmbcf ollvmfla ollvmsub
+all: clean O0 O3 ollvm ollvmbcf ollvmfla ollvmsub Oz
 
 # POJ104 with O0
+Oz:
+	@echo "Generating features from POJ-104 ~> ${FOLDEROZ}"
+	$(MAKE) -C ${FOLDEROZ}
+
+# POJ104 with OZ
 O0:
 	@echo "Generating features from POJ-104 ~> ${FOLDERO0}"
 	$(MAKE) -C ${FOLDERO0}
