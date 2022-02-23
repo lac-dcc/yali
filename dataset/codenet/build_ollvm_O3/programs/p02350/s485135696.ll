@@ -1,0 +1,5854 @@
+; ModuleID = 'build_ollvm/programs/p02350/s485135696.ll'
+source_filename = "Project_CodeNet_C++1400/p02350/s485135696.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%struct.LazySegmentTree = type { i32, %"class.std::vector", %"class.std::vector", i64, i64, %"class.std::function", %"class.std::function", %"class.std::function" }
+%"class.std::vector" = type { %"struct.std::_Vector_base" }
+%"struct.std::_Vector_base" = type { %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl" }
+%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl" = type { i64*, i64*, i64* }
+%"class.std::function" = type { %"class.std::_Function_base", i64 (%"union.std::_Any_data"*, i64*, i64*)* }
+%"class.std::_Function_base" = type { %"union.std::_Any_data", i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* }
+%"union.std::_Any_data" = type { %"union.std::_Nocopy_types" }
+%"union.std::_Nocopy_types" = type { { i64, i64 } }
+%class.anon = type { i8 }
+%class.anon.0 = type { i8 }
+%class.anon.2 = type { i8 }
+%"class.std::allocator" = type { i8 }
+%"class.__gnu_cxx::new_allocator" = type { i8 }
+%"class.std::type_info" = type { i32 (...)**, i8* }
+%"class.__gnu_cxx::__normal_iterator" = type { i64* }
+
+$_ZN15LazySegmentTreeIxxEC2EixxSt8functionIFxxxEES3_S3_ = comdat any
+
+$_ZNSt8functionIFxxxEED2Ev = comdat any
+
+$_ZN15LazySegmentTreeIxxE13operate_rangeEiix = comdat any
+
+$_ZN15LazySegmentTreeIxxE4foldEii = comdat any
+
+$_ZN15LazySegmentTreeIxxED2Ev = comdat any
+
+$_ZNSt14_Function_baseD2Ev = comdat any
+
+$__clang_call_terminate = comdat any
+
+$_ZNSt6vectorIxSaIxEED2Ev = comdat any
+
+$_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEED2Ev = comdat any
+
+$_ZSt8_DestroyIPxEvT_S1_ = comdat any
+
+$_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev = comdat any
+
+$_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm = comdat any
+
+$_ZNSaIxED2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxED2Ev = comdat any
+
+$_ZNSt14_Function_baseC2Ev = comdat any
+
+$_ZNSt9_Any_data9_M_accessEv = comdat any
+
+$_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE = comdat any
+
+$_ZNKSt9_Any_data9_M_accessEv = comdat any
+
+$_ZSt3minIxERKT_S2_S2_ = comdat any
+
+$_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v = comdat any
+
+$_ZNSt6vectorIxSaIxEEC2Ev = comdat any
+
+$_ZNSt8functionIFxxxEEC2ERKS1_ = comdat any
+
+$_ZNSt6vectorIxSaIxEE6assignEmRKx = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEEC2Ev = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev = comdat any
+
+$_ZNSaIxEC2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxEC2Ev = comdat any
+
+$_ZNKSt8functionIFxxxEEcvbEv = comdat any
+
+$_ZNKSt14_Function_base8_M_emptyEv = comdat any
+
+$_ZNSt6vectorIxSaIxEE14_M_fill_assignEmRKx = comdat any
+
+$_ZNKSt6vectorIxSaIxEE8capacityEv = comdat any
+
+$_ZNSt6vectorIxSaIxEEC2EmRKxRKS0_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_impl12_M_swap_dataERS2_ = comdat any
+
+$_ZNKSt6vectorIxSaIxEE4sizeEv = comdat any
+
+$_ZSt4fillIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEExEvT_S7_RKT0_ = comdat any
+
+$_ZNSt6vectorIxSaIxEE5beginEv = comdat any
+
+$_ZNSt6vectorIxSaIxEE3endEv = comdat any
+
+$_ZSt24__uninitialized_fill_n_aIPxmxxET_S1_T0_RKT1_RSaIT2_E = comdat any
+
+$_ZNSt6vectorIxSaIxEE15_M_erase_at_endEPx = comdat any
+
+$_ZSt6fill_nIPxmxET_S1_T0_RKT1_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEEC2EmRKS0_ = comdat any
+
+$_ZNSt6vectorIxSaIxEE18_M_fill_initializeEmRKx = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2ERKS0_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm = comdat any
+
+$_ZNSaIxEC2ERKS_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxEC2ERKS1_ = comdat any
+
+$_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm = comdat any
+
+$_ZNSt16allocator_traitsISaIxEE8allocateERS0_m = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv = comdat any
+
+$_ZNK9__gnu_cxx13new_allocatorIxE8max_sizeEv = comdat any
+
+$_ZSt4swapIPxEvRT_S2_ = comdat any
+
+$_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_ = comdat any
+
+$_ZSt8__fill_aIPxxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT0_EE7__valueEvE6__typeET_S6_RKS3_ = comdat any
+
+$_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEEENSt11_Niter_baseIT_E13iterator_typeES8_ = comdat any
+
+$_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEELb1EE7_S_baseES6_ = comdat any
+
+$_ZNK9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEE4baseEv = comdat any
+
+$_ZN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEC2ERKS1_ = comdat any
+
+$_ZSt20uninitialized_fill_nIPxmxET_S1_T0_RKT1_ = comdat any
+
+$_ZNSt22__uninitialized_fill_nILb1EE15__uninit_fill_nIPxmxEET_S3_T0_RKT1_ = comdat any
+
+$_ZSt10__fill_n_aIPxmxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_ = comdat any
+
+$_ZSt12__niter_baseIPxENSt11_Niter_baseIT_E13iterator_typeES2_ = comdat any
+
+$_ZNSt10_Iter_baseIPxLb0EE7_S_baseES0_ = comdat any
+
+$_ZN15LazySegmentTreeIxxE15propagate_aboveEi = comdat any
+
+$_ZNKSt8functionIFxxxEEclExx = comdat any
+
+$_ZNSt6vectorIxSaIxEEixEm = comdat any
+
+$_ZN15LazySegmentTreeIxxE12recalc_aboveEi = comdat any
+
+$_ZN15LazySegmentTreeIxxE12propagate_atEi = comdat any
+
+$_ZN15LazySegmentTreeIxxE7eval_atEi = comdat any
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@_ZTVN10__cxxabiv117__class_type_infoE = external global i8*
+@"_ZTSZ4mainE3$_0" = internal constant [12 x i8] c"Z4mainE3$_0\00"
+@"_ZTIZ4mainE3$_0" = internal constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @"_ZTSZ4mainE3$_0", i32 0, i32 0) }
+@"_ZTSZ4mainE3$_1" = internal constant [12 x i8] c"Z4mainE3$_1\00"
+@"_ZTIZ4mainE3$_1" = internal constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @"_ZTSZ4mainE3$_1", i32 0, i32 0) }
+@"_ZTSZ4mainE3$_2" = internal constant [12 x i8] c"Z4mainE3$_2\00"
+@"_ZTIZ4mainE3$_2" = internal constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @"_ZTSZ4mainE3$_2", i32 0, i32 0) }
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s485135696.cpp, i8* null }]
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+@x.1 = common local_unnamed_addr global i32 0
+@y.2 = common local_unnamed_addr global i32 0
+@x.3 = common local_unnamed_addr global i32 0
+@y.4 = common local_unnamed_addr global i32 0
+@x.5 = common local_unnamed_addr global i32 0
+@y.6 = common local_unnamed_addr global i32 0
+@x.7 = common local_unnamed_addr global i32 0
+@y.8 = common local_unnamed_addr global i32 0
+@x.9 = common local_unnamed_addr global i32 0
+@y.10 = common local_unnamed_addr global i32 0
+@x.11 = common local_unnamed_addr global i32 0
+@y.12 = common local_unnamed_addr global i32 0
+@x.13 = common local_unnamed_addr global i32 0
+@y.14 = common local_unnamed_addr global i32 0
+@x.15 = common local_unnamed_addr global i32 0
+@y.16 = common local_unnamed_addr global i32 0
+@x.17 = common local_unnamed_addr global i32 0
+@y.18 = common local_unnamed_addr global i32 0
+@x.19 = common local_unnamed_addr global i32 0
+@y.20 = common local_unnamed_addr global i32 0
+@x.21 = common local_unnamed_addr global i32 0
+@y.22 = common local_unnamed_addr global i32 0
+@x.23 = common local_unnamed_addr global i32 0
+@y.24 = common local_unnamed_addr global i32 0
+@x.25 = common local_unnamed_addr global i32 0
+@y.26 = common local_unnamed_addr global i32 0
+@x.27 = common local_unnamed_addr global i32 0
+@y.28 = common local_unnamed_addr global i32 0
+@x.29 = common local_unnamed_addr global i32 0
+@y.30 = common local_unnamed_addr global i32 0
+@x.31 = common local_unnamed_addr global i32 0
+@y.32 = common local_unnamed_addr global i32 0
+@x.33 = common local_unnamed_addr global i32 0
+@y.34 = common local_unnamed_addr global i32 0
+@x.35 = common local_unnamed_addr global i32 0
+@y.36 = common local_unnamed_addr global i32 0
+@x.37 = common local_unnamed_addr global i32 0
+@y.38 = common local_unnamed_addr global i32 0
+@x.39 = common local_unnamed_addr global i32 0
+@y.40 = common local_unnamed_addr global i32 0
+@x.41 = common local_unnamed_addr global i32 0
+@y.42 = common local_unnamed_addr global i32 0
+@x.43 = common local_unnamed_addr global i32 0
+@y.44 = common local_unnamed_addr global i32 0
+@x.45 = common local_unnamed_addr global i32 0
+@y.46 = common local_unnamed_addr global i32 0
+@x.47 = common local_unnamed_addr global i32 0
+@y.48 = common local_unnamed_addr global i32 0
+@x.49 = common local_unnamed_addr global i32 0
+@y.50 = common local_unnamed_addr global i32 0
+@x.51 = common local_unnamed_addr global i32 0
+@y.52 = common local_unnamed_addr global i32 0
+@x.53 = common local_unnamed_addr global i32 0
+@y.54 = common local_unnamed_addr global i32 0
+@x.55 = common local_unnamed_addr global i32 0
+@y.56 = common local_unnamed_addr global i32 0
+@x.57 = common local_unnamed_addr global i32 0
+@y.58 = common local_unnamed_addr global i32 0
+@x.59 = common local_unnamed_addr global i32 0
+@y.60 = common local_unnamed_addr global i32 0
+@x.61 = common local_unnamed_addr global i32 0
+@y.62 = common local_unnamed_addr global i32 0
+@x.63 = common local_unnamed_addr global i32 0
+@y.64 = common local_unnamed_addr global i32 0
+@x.65 = common local_unnamed_addr global i32 0
+@y.66 = common local_unnamed_addr global i32 0
+@x.67 = common local_unnamed_addr global i32 0
+@y.68 = common local_unnamed_addr global i32 0
+@x.69 = common local_unnamed_addr global i32 0
+@y.70 = common local_unnamed_addr global i32 0
+@x.71 = common local_unnamed_addr global i32 0
+@y.72 = common local_unnamed_addr global i32 0
+@x.73 = common local_unnamed_addr global i32 0
+@y.74 = common local_unnamed_addr global i32 0
+@x.75 = common local_unnamed_addr global i32 0
+@y.76 = common local_unnamed_addr global i32 0
+@x.77 = common local_unnamed_addr global i32 0
+@y.78 = common local_unnamed_addr global i32 0
+@x.79 = common local_unnamed_addr global i32 0
+@y.80 = common local_unnamed_addr global i32 0
+@x.81 = common local_unnamed_addr global i32 0
+@y.82 = common local_unnamed_addr global i32 0
+@x.83 = common local_unnamed_addr global i32 0
+@y.84 = common local_unnamed_addr global i32 0
+@x.85 = common local_unnamed_addr global i32 0
+@y.86 = common local_unnamed_addr global i32 0
+@x.87 = common local_unnamed_addr global i32 0
+@y.88 = common local_unnamed_addr global i32 0
+@x.89 = common local_unnamed_addr global i32 0
+@y.90 = common local_unnamed_addr global i32 0
+@x.91 = common local_unnamed_addr global i32 0
+@y.92 = common local_unnamed_addr global i32 0
+@x.93 = common local_unnamed_addr global i32 0
+@y.94 = common local_unnamed_addr global i32 0
+@x.95 = common local_unnamed_addr global i32 0
+@y.96 = common local_unnamed_addr global i32 0
+@x.97 = common local_unnamed_addr global i32 0
+@y.98 = common local_unnamed_addr global i32 0
+@x.99 = common local_unnamed_addr global i32 0
+@y.100 = common local_unnamed_addr global i32 0
+@x.101 = common local_unnamed_addr global i32 0
+@y.102 = common local_unnamed_addr global i32 0
+@x.103 = common local_unnamed_addr global i32 0
+@y.104 = common local_unnamed_addr global i32 0
+@x.105 = common local_unnamed_addr global i32 0
+@y.106 = common local_unnamed_addr global i32 0
+@x.107 = common local_unnamed_addr global i32 0
+@y.108 = common local_unnamed_addr global i32 0
+@x.109 = common local_unnamed_addr global i32 0
+@y.110 = common local_unnamed_addr global i32 0
+@x.111 = common local_unnamed_addr global i32 0
+@y.112 = common local_unnamed_addr global i32 0
+@x.113 = common local_unnamed_addr global i32 0
+@y.114 = common local_unnamed_addr global i32 0
+@x.115 = common local_unnamed_addr global i32 0
+@y.116 = common local_unnamed_addr global i32 0
+@x.117 = common local_unnamed_addr global i32 0
+@y.118 = common local_unnamed_addr global i32 0
+@x.119 = common local_unnamed_addr global i32 0
+@y.120 = common local_unnamed_addr global i32 0
+@x.121 = common local_unnamed_addr global i32 0
+@y.122 = common local_unnamed_addr global i32 0
+@x.123 = common local_unnamed_addr global i32 0
+@y.124 = common local_unnamed_addr global i32 0
+@x.125 = common local_unnamed_addr global i32 0
+@y.126 = common local_unnamed_addr global i32 0
+@x.127 = common local_unnamed_addr global i32 0
+@y.128 = common local_unnamed_addr global i32 0
+@x.129 = common local_unnamed_addr global i32 0
+@y.130 = common local_unnamed_addr global i32 0
+@x.131 = common local_unnamed_addr global i32 0
+@y.132 = common local_unnamed_addr global i32 0
+@x.133 = common local_unnamed_addr global i32 0
+@y.134 = common local_unnamed_addr global i32 0
+@x.135 = common local_unnamed_addr global i32 0
+@y.136 = common local_unnamed_addr global i32 0
+@x.137 = common local_unnamed_addr global i32 0
+@y.138 = common local_unnamed_addr global i32 0
+@x.139 = common local_unnamed_addr global i32 0
+@y.140 = common local_unnamed_addr global i32 0
+@x.141 = common local_unnamed_addr global i32 0
+@y.142 = common local_unnamed_addr global i32 0
+@x.143 = common local_unnamed_addr global i32 0
+@y.144 = common local_unnamed_addr global i32 0
+@x.145 = common local_unnamed_addr global i32 0
+@y.146 = common local_unnamed_addr global i32 0
+@x.147 = common local_unnamed_addr global i32 0
+@y.148 = common local_unnamed_addr global i32 0
+@x.149 = common local_unnamed_addr global i32 0
+@y.150 = common local_unnamed_addr global i32 0
+@x.151 = common local_unnamed_addr global i32 0
+@y.152 = common local_unnamed_addr global i32 0
+@x.153 = common local_unnamed_addr global i32 0
+@y.154 = common local_unnamed_addr global i32 0
+@x.155 = common local_unnamed_addr global i32 0
+@y.156 = common local_unnamed_addr global i32 0
+@x.157 = common local_unnamed_addr global i32 0
+@y.158 = common local_unnamed_addr global i32 0
+@x.159 = common local_unnamed_addr global i32 0
+@y.160 = common local_unnamed_addr global i32 0
+@x.161 = common local_unnamed_addr global i32 0
+@y.162 = common local_unnamed_addr global i32 0
+@x.163 = common local_unnamed_addr global i32 0
+@y.164 = common local_unnamed_addr global i32 0
+@x.165 = common local_unnamed_addr global i32 0
+@y.166 = common local_unnamed_addr global i32 0
+@x.167 = common local_unnamed_addr global i32 0
+@y.168 = common local_unnamed_addr global i32 0
+@x.169 = common local_unnamed_addr global i32 0
+@y.170 = common local_unnamed_addr global i32 0
+@x.171 = common local_unnamed_addr global i32 0
+@y.172 = common local_unnamed_addr global i32 0
+@x.173 = common local_unnamed_addr global i32 0
+@y.174 = common local_unnamed_addr global i32 0
+@x.175 = common local_unnamed_addr global i32 0
+@y.176 = common local_unnamed_addr global i32 0
+@x.177 = common local_unnamed_addr global i32 0
+@y.178 = common local_unnamed_addr global i32 0
+@x.179 = common local_unnamed_addr global i32 0
+@y.180 = common local_unnamed_addr global i32 0
+@x.181 = common local_unnamed_addr global i32 0
+@y.182 = common local_unnamed_addr global i32 0
+@x.183 = common local_unnamed_addr global i32 0
+@y.184 = common local_unnamed_addr global i32 0
+@x.185 = common local_unnamed_addr global i32 0
+@y.186 = common local_unnamed_addr global i32 0
+@x.187 = common local_unnamed_addr global i32 0
+@y.188 = common local_unnamed_addr global i32 0
+@x.189 = common local_unnamed_addr global i32 0
+@y.190 = common local_unnamed_addr global i32 0
+@x.191 = common local_unnamed_addr global i32 0
+@y.192 = common local_unnamed_addr global i32 0
+@x.193 = common local_unnamed_addr global i32 0
+@y.194 = common local_unnamed_addr global i32 0
+@x.195 = common local_unnamed_addr global i32 0
+@y.196 = common local_unnamed_addr global i32 0
+@x.197 = common local_unnamed_addr global i32 0
+@y.198 = common local_unnamed_addr global i32 0
+@x.199 = common local_unnamed_addr global i32 0
+@y.200 = common local_unnamed_addr global i32 0
+@x.201 = common local_unnamed_addr global i32 0
+@y.202 = common local_unnamed_addr global i32 0
+@x.203 = common local_unnamed_addr global i32 0
+@y.204 = common local_unnamed_addr global i32 0
+@x.205 = common local_unnamed_addr global i32 0
+@y.206 = common local_unnamed_addr global i32 0
+@x.207 = common local_unnamed_addr global i32 0
+@y.208 = common local_unnamed_addr global i32 0
+@x.209 = common local_unnamed_addr global i32 0
+@y.210 = common local_unnamed_addr global i32 0
+@x.211 = common local_unnamed_addr global i32 0
+@y.212 = common local_unnamed_addr global i32 0
+@x.213 = common local_unnamed_addr global i32 0
+@y.214 = common local_unnamed_addr global i32 0
+@x.215 = common local_unnamed_addr global i32 0
+@y.216 = common local_unnamed_addr global i32 0
+@x.217 = common local_unnamed_addr global i32 0
+@y.218 = common local_unnamed_addr global i32 0
+@x.219 = common local_unnamed_addr global i32 0
+@y.220 = common local_unnamed_addr global i32 0
+@x.221 = common local_unnamed_addr global i32 0
+@y.222 = common local_unnamed_addr global i32 0
+@x.223 = common local_unnamed_addr global i32 0
+@y.224 = common local_unnamed_addr global i32 0
+@x.225 = common local_unnamed_addr global i32 0
+@y.226 = common local_unnamed_addr global i32 0
+@x.227 = common local_unnamed_addr global i32 0
+@y.228 = common local_unnamed_addr global i32 0
+@x.229 = common local_unnamed_addr global i32 0
+@y.230 = common local_unnamed_addr global i32 0
+@x.231 = common local_unnamed_addr global i32 0
+@y.232 = common local_unnamed_addr global i32 0
+@x.233 = common local_unnamed_addr global i32 0
+@y.234 = common local_unnamed_addr global i32 0
+@x.235 = common local_unnamed_addr global i32 0
+@y.236 = common local_unnamed_addr global i32 0
+@x.237 = common local_unnamed_addr global i32 0
+@y.238 = common local_unnamed_addr global i32 0
+@x.239 = common local_unnamed_addr global i32 0
+@y.240 = common local_unnamed_addr global i32 0
+
+; Function Attrs: noinline uwtable
+define internal fastcc void @__cxx_global_var_init() unnamed_addr #0 section ".text.startup" {
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull @_ZStL8__ioinit)
+  %1 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #13
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nofree nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) local_unnamed_addr #3
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() local_unnamed_addr #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca i32, align 4
+  %2 = alloca i32, align 4
+  %3 = alloca %struct.LazySegmentTree, align 8
+  %4 = alloca %"class.std::function", align 8
+  %5 = alloca %"class.std::function", align 8
+  %6 = alloca %"class.std::function", align 8
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i32, align 4
+  %10 = alloca i32, align 4
+  %11 = alloca i32, align 4
+  %12 = alloca i32, align 4
+  %13 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* nonnull dereferenceable(4) %1)
+  %14 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull %13, i32* nonnull dereferenceable(4) %2)
+  %15 = load i32, i32* %1, align 4
+  call fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_0vvEET_"(%"class.std::function"* nonnull %4)
+  invoke fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_1vvEET_"(%"class.std::function"* nonnull %5)
+          to label %16 unwind label %52
+
+16:                                               ; preds = %0
+  invoke fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_2vvEET_"(%"class.std::function"* nonnull %6)
+          to label %17 unwind label %63
+
+17:                                               ; preds = %16
+  invoke void @_ZN15LazySegmentTreeIxxEC2EixxSt8functionIFxxxEES3_S3_(%struct.LazySegmentTree* nonnull %3, i32 %15, i64 2147483647, i64 2147483647, %"class.std::function"* nonnull %4, %"class.std::function"* nonnull %5, %"class.std::function"* nonnull %6)
+          to label %18 unwind label %65
+
+18:                                               ; preds = %17
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %6) #13
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %5) #13
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %4) #13
+  %19 = load i32, i32* %2, align 4
+  %20 = icmp sgt i32 %19, 0
+  br i1 %20, label %.lr.ph, label %._crit_edge
+
+.lr.ph:                                           ; preds = %18, %.critedge15
+  %.024 = phi i32 [ %122, %.critedge15 ], [ 0, %18 ]
+  %21 = load i32, i32* @x.1, align 4
+  %22 = load i32, i32* @y.2, align 4
+  %23 = add i32 %21, -1
+  %24 = mul i32 %23, %21
+  %25 = and i32 %24, 1
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %22, 10
+  %28 = or i1 %27, %26
+  br i1 %28, label %.critedge, label %.preheader23
+
+.critedge:                                        ; preds = %.lr.ph
+  %29 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* nonnull dereferenceable(4) %7)
+          to label %30 unwind label %82
+
+30:                                               ; preds = %.critedge
+  %31 = load i32, i32* @x.1, align 4
+  %32 = load i32, i32* @y.2, align 4
+  %33 = add i32 %31, -1
+  %34 = mul i32 %33, %31
+  %35 = and i32 %34, 1
+  %36 = icmp eq i32 %35, 0
+  %37 = icmp slt i32 %32, 10
+  %38 = or i1 %37, %36
+  br i1 %38, label %.critedge12, label %.preheader22
+
+.critedge12:                                      ; preds = %30
+  %39 = load i32, i32* %7, align 4
+  %40 = icmp eq i32 %39, 0
+  br i1 %40, label %41, label %84
+
+41:                                               ; preds = %.critedge12
+  %42 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* nonnull dereferenceable(4) %8)
+          to label %43 unwind label %82
+
+43:                                               ; preds = %41
+  %44 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull %42, i32* nonnull dereferenceable(4) %9)
+          to label %45 unwind label %82
+
+45:                                               ; preds = %43
+  %46 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull %44, i32* nonnull dereferenceable(4) %10)
+          to label %47 unwind label %82
+
+47:                                               ; preds = %45
+  %48 = load i32, i32* %8, align 4
+  %49 = load i32, i32* %9, align 4
+  %.neg = add i32 %49, 1
+  %50 = load i32, i32* %10, align 4
+  %51 = sext i32 %50 to i64
+  invoke void @_ZN15LazySegmentTreeIxxE13operate_rangeEiix(%struct.LazySegmentTree* nonnull %3, i32 %48, i32 %.neg, i64 %51)
+          to label %.critedge15 unwind label %82
+
+52:                                               ; preds = %0
+  %53 = load i32, i32* @x.1, align 4
+  %54 = load i32, i32* @y.2, align 4
+  %55 = add i32 %53, -1
+  %56 = mul i32 %55, %53
+  %57 = and i32 %56, 1
+  %58 = icmp eq i32 %57, 0
+  %59 = icmp slt i32 %54, 10
+  %60 = or i1 %59, %58
+  br i1 %60, label %61, label %126
+
+61:                                               ; preds = %126, %52
+  %62 = landingpad { i8*, i32 }
+          cleanup
+  br i1 %60, label %68, label %126
+
+63:                                               ; preds = %16
+  %64 = landingpad { i8*, i32 }
+          cleanup
+  br label %67
+
+65:                                               ; preds = %17
+  %66 = landingpad { i8*, i32 }
+          cleanup
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %6) #13
+  br label %67
+
+67:                                               ; preds = %65, %63
+  %.pn = phi { i8*, i32 } [ %66, %65 ], [ %64, %63 ]
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %5) #13
+  %.pre = load i32, i32* @x.1, align 4
+  %.pre30 = load i32, i32* @y.2, align 4
+  %.pre31 = add i32 %.pre, -1
+  %.pre32 = mul i32 %.pre31, %.pre
+  %.pre34 = and i32 %.pre32, 1
+  br label %68
+
+68:                                               ; preds = %61, %67
+  %.pre-phi35 = phi i32 [ %57, %61 ], [ %.pre34, %67 ]
+  %69 = phi i32 [ %54, %61 ], [ %.pre30, %67 ]
+  %.pn.pn = phi { i8*, i32 } [ %62, %61 ], [ %.pn, %67 ]
+  %70 = icmp eq i32 %.pre-phi35, 0
+  %71 = icmp slt i32 %69, 10
+  %72 = or i1 %71, %70
+  br i1 %72, label %73, label %128
+
+73:                                               ; preds = %128, %68
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %4) #13
+  %74 = load i32, i32* @x.1, align 4
+  %75 = load i32, i32* @y.2, align 4
+  %76 = add i32 %74, -1
+  %77 = mul i32 %76, %74
+  %78 = and i32 %77, 1
+  %79 = icmp eq i32 %78, 0
+  %80 = icmp slt i32 %75, 10
+  %81 = or i1 %80, %79
+  br i1 %81, label %125, label %128
+
+82:                                               ; preds = %.critedge14, %.critedge13, %88, %86, %84, %47, %45, %43, %41, %.critedge
+  %83 = landingpad { i8*, i32 }
+          cleanup
+  call void @_ZN15LazySegmentTreeIxxED2Ev(%struct.LazySegmentTree* nonnull %3) #13
+  br label %125
+
+84:                                               ; preds = %.critedge12
+  %85 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* nonnull dereferenceable(4) %11)
+          to label %86 unwind label %82
+
+86:                                               ; preds = %84
+  %87 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull %85, i32* nonnull dereferenceable(4) %12)
+          to label %88 unwind label %82
+
+88:                                               ; preds = %86
+  %89 = load i32, i32* %11, align 4
+  %90 = load i32, i32* %12, align 4
+  %91 = add i32 %90, 1
+  %92 = invoke i64 @_ZN15LazySegmentTreeIxxE4foldEii(%struct.LazySegmentTree* nonnull %3, i32 %89, i32 %91)
+          to label %93 unwind label %82
+
+93:                                               ; preds = %88
+  %94 = load i32, i32* @x.1, align 4
+  %95 = load i32, i32* @y.2, align 4
+  %96 = add i32 %94, -1
+  %97 = mul i32 %96, %94
+  %98 = and i32 %97, 1
+  %99 = icmp eq i32 %98, 0
+  %100 = icmp slt i32 %95, 10
+  %101 = or i1 %100, %99
+  br i1 %101, label %.critedge13, label %.preheader21
+
+.critedge13:                                      ; preds = %93
+  %102 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"* nonnull @_ZSt4cout, i64 %92)
+          to label %103 unwind label %82
+
+103:                                              ; preds = %.critedge13
+  %104 = load i32, i32* @x.1, align 4
+  %105 = load i32, i32* @y.2, align 4
+  %106 = add i32 %104, -1
+  %107 = mul i32 %106, %104
+  %108 = and i32 %107, 1
+  %109 = icmp eq i32 %108, 0
+  %110 = icmp slt i32 %105, 10
+  %111 = or i1 %110, %109
+  br i1 %111, label %.critedge14, label %.preheader20
+
+.critedge14:                                      ; preds = %103
+  %112 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* nonnull dereferenceable(272) %102, i8 signext 10)
+          to label %113 unwind label %82
+
+113:                                              ; preds = %.critedge14
+  %114 = load i32, i32* @x.1, align 4
+  %115 = load i32, i32* @y.2, align 4
+  %116 = add i32 %114, -1
+  %117 = mul i32 %116, %114
+  %118 = and i32 %117, 1
+  %119 = icmp eq i32 %118, 0
+  %120 = icmp slt i32 %115, 10
+  %121 = or i1 %120, %119
+  br i1 %121, label %.critedge15, label %.preheader
+
+.critedge15:                                      ; preds = %113, %47
+  %122 = add nuw nsw i32 %.024, 1
+  %123 = load i32, i32* %2, align 4
+  %124 = icmp slt i32 %122, %123
+  br i1 %124, label %.lr.ph, label %._crit_edge
+
+._crit_edge:                                      ; preds = %.critedge15, %18
+  call void @_ZN15LazySegmentTreeIxxED2Ev(%struct.LazySegmentTree* nonnull %3) #13
+  ret i32 0
+
+125:                                              ; preds = %73, %82
+  %.pn8 = phi { i8*, i32 } [ %83, %82 ], [ %.pn.pn, %73 ]
+  resume { i8*, i32 } %.pn8
+
+.preheader23:                                     ; preds = %.lr.ph, %.preheader23
+  br label %.preheader23, !llvm.loop !1
+
+.preheader22:                                     ; preds = %30, %.preheader22
+  br label %.preheader22, !llvm.loop !3
+
+126:                                              ; preds = %61, %52
+  %127 = landingpad { i8*, i32 }
+          cleanup
+  br label %61
+
+128:                                              ; preds = %73, %68
+  call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %4) #13
+  br label %73
+
+.preheader21:                                     ; preds = %93, %.preheader21
+  br label %.preheader21, !llvm.loop !4
+
+.preheader20:                                     ; preds = %103, %.preheader20
+  br label %.preheader20, !llvm.loop !5
+
+.preheader:                                       ; preds = %113, %.preheader
+  br label %.preheader, !llvm.loop !6
+}
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"*, i32* dereferenceable(4)) local_unnamed_addr #1
+
+; Function Attrs: noinline norecurse uwtable
+define internal fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_0vvEET_"(%"class.std::function"* %0) unnamed_addr #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = alloca %class.anon, align 1
+  %3 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %3)
+  %4 = load i32, i32* @x.3, align 4
+  %5 = load i32, i32* @y.4, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  %10 = icmp slt i32 %5, 10
+  %11 = or i1 %10, %9
+  br i1 %11, label %.critedge, label %.preheader
+
+.critedge:                                        ; preds = %1
+  %12 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 0
+  %13 = call fastcc dereferenceable(1) %class.anon* @"_ZSt4moveIRZ4mainE3$_0EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon* nonnull dereferenceable(1) %2) #13
+  call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %12, %class.anon* nonnull dereferenceable(1) %13)
+  %14 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 1
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_0E9_M_invokeERKSt9_Any_dataOxS6_", i64 (%"union.std::_Any_data"*, i64*, i64*)** %14, align 8
+  %15 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 1
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation", i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %15, align 8
+  ret void
+
+.preheader:                                       ; preds = %1, %.preheader
+  br label %.preheader, !llvm.loop !7
+}
+
+; Function Attrs: noinline norecurse uwtable
+define internal fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_1vvEET_"(%"class.std::function"* %0) unnamed_addr #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.5, align 4
+  %3 = load i32, i32* @y.6, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  br i1 %9, label %10, label %34
+
+10:                                               ; preds = %34, %1
+  %11 = alloca %class.anon.0, align 1
+  %12 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %12)
+  %13 = load i32, i32* @x.5, align 4
+  %14 = load i32, i32* @y.6, align 4
+  %15 = add i32 %13, -1
+  %16 = mul i32 %15, %13
+  %17 = and i32 %16, 1
+  %18 = icmp eq i32 %17, 0
+  %19 = icmp slt i32 %14, 10
+  %20 = or i1 %19, %18
+  br i1 %20, label %21, label %34
+
+21:                                               ; preds = %10
+  %22 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 0
+  %23 = call fastcc dereferenceable(1) %class.anon.0* @"_ZSt4moveIRZ4mainE3$_1EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon.0* nonnull dereferenceable(1) %11) #13
+  call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %22, %class.anon.0* nonnull dereferenceable(1) %23)
+  %24 = load i32, i32* @x.5, align 4
+  %25 = load i32, i32* @y.6, align 4
+  %26 = add i32 %24, -1
+  %27 = mul i32 %26, %24
+  %28 = and i32 %27, 1
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %25, 10
+  %31 = or i1 %30, %29
+  br i1 %31, label %.loopexit, label %.peel.next
+
+.loopexit:                                        ; preds = %21
+  %32 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 1
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_1E9_M_invokeERKSt9_Any_dataOxS6_", i64 (%"union.std::_Any_data"*, i64*, i64*)** %32, align 8
+  %33 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 1
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation", i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %33, align 8
+  ret void
+
+34:                                               ; preds = %10, %1
+  %35 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %35)
+  br label %10
+
+.peel.next:                                       ; preds = %21, %.peel.next
+  br label %.peel.next, !llvm.loop !8
+}
+
+declare i32 @__gxx_personality_v0(...)
+
+; Function Attrs: noinline norecurse uwtable
+define internal fastcc void @"_ZNSt8functionIFxxxEEC2IZ4mainE3$_2vvEET_"(%"class.std::function"* %0) unnamed_addr #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.7, align 4
+  %3 = load i32, i32* @y.8, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  br i1 %9, label %10, label %30
+
+10:                                               ; preds = %30, %1
+  %11 = alloca %class.anon.2, align 1
+  %12 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %12)
+  %13 = load i32, i32* @x.7, align 4
+  %14 = load i32, i32* @y.8, align 4
+  %15 = add i32 %13, -1
+  %16 = mul i32 %15, %13
+  %17 = and i32 %16, 1
+  %18 = icmp eq i32 %17, 0
+  %19 = icmp slt i32 %14, 10
+  %20 = or i1 %19, %18
+  br i1 %20, label %.preheader, label %30
+
+.preheader:                                       ; preds = %10
+  %21 = icmp ne i32 %17, 0
+  %22 = xor i1 %19, %21
+  %23 = xor i1 %22, true
+  %.not = xor i1 %21, true
+  %24 = and i1 %19, %.not
+  %25 = or i1 %24, %23
+  br i1 %25, label %26, label %.preheader.split
+
+.preheader.split:                                 ; preds = %.preheader, %.preheader.split
+  br label %.preheader.split
+
+26:                                               ; preds = %.preheader
+  %27 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 0
+  call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %27, %class.anon.2* nonnull dereferenceable(1) %11)
+  %28 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 1
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_2E9_M_invokeERKSt9_Any_dataOxS6_", i64 (%"union.std::_Any_data"*, i64*, i64*)** %28, align 8
+  %29 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 1
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation", i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %29, align 8
+  ret void
+
+30:                                               ; preds = %10, %1
+  %31 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %31)
+  br label %10
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxEC2EixxSt8functionIFxxxEES3_S3_(%struct.LazySegmentTree* %0, i32 %1, i64 %2, i64 %3, %"class.std::function"* %4, %"class.std::function"* %5, %"class.std::function"* %6) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %8 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 0
+  store i32 %1, i32* %8, align 8
+  %9 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 1
+  tail call void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"* nonnull %9) #13
+  %10 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 2
+  tail call void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"* nonnull %10) #13
+  %11 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 3
+  store i64 %2, i64* %11, align 8
+  %12 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 4
+  store i64 %3, i64* %12, align 8
+  %13 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 5
+  invoke void @_ZNSt8functionIFxxxEEC2ERKS1_(%"class.std::function"* nonnull %13, %"class.std::function"* dereferenceable(32) %4)
+          to label %14 unwind label %51
+
+14:                                               ; preds = %7
+  %15 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 6
+  invoke void @_ZNSt8functionIFxxxEEC2ERKS1_(%"class.std::function"* nonnull %15, %"class.std::function"* dereferenceable(32) %6)
+          to label %16 unwind label %62
+
+16:                                               ; preds = %14
+  %17 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 7
+  invoke void @_ZNSt8functionIFxxxEEC2ERKS1_(%"class.std::function"* nonnull %17, %"class.std::function"* nonnull dereferenceable(32) %6)
+          to label %18 unwind label %73
+
+18:                                               ; preds = %16
+  %19 = load i32, i32* @x.9, align 4
+  %20 = load i32, i32* @y.10, align 4
+  %21 = add i32 %19, -1
+  %22 = mul i32 %21, %19
+  %23 = and i32 %22, 1
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %20, 10
+  %26 = or i1 %25, %24
+  br i1 %26, label %.critedge, label %.preheader16
+
+.critedge:                                        ; preds = %18
+  %27 = load i32, i32* %8, align 8
+  %28 = shl i32 %27, 1
+  %29 = sext i32 %28 to i64
+  invoke void @_ZNSt6vectorIxSaIxEE6assignEmRKx(%"class.std::vector"* nonnull %9, i64 %29, i64* nonnull dereferenceable(8) %11)
+          to label %30 unwind label %75
+
+30:                                               ; preds = %.critedge
+  %31 = load i32, i32* @x.9, align 4
+  %32 = load i32, i32* @y.10, align 4
+  %33 = add i32 %31, -1
+  %34 = mul i32 %33, %31
+  %35 = and i32 %34, 1
+  %36 = icmp eq i32 %35, 0
+  %37 = icmp slt i32 %32, 10
+  %38 = or i1 %37, %36
+  br i1 %38, label %.critedge11, label %.preheader15
+
+.critedge11:                                      ; preds = %30
+  %39 = load i32, i32* %8, align 8
+  %40 = shl i32 %39, 1
+  %41 = sext i32 %40 to i64
+  invoke void @_ZNSt6vectorIxSaIxEE6assignEmRKx(%"class.std::vector"* nonnull %10, i64 %41, i64* nonnull dereferenceable(8) %12)
+          to label %42 unwind label %75
+
+42:                                               ; preds = %.critedge11
+  %43 = load i32, i32* @x.9, align 4
+  %44 = load i32, i32* @y.10, align 4
+  %45 = add i32 %43, -1
+  %46 = mul i32 %45, %43
+  %47 = and i32 %46, 1
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %44, 10
+  %50 = or i1 %49, %48
+  br i1 %50, label %.critedge12, label %.preheader
+
+.critedge12:                                      ; preds = %42
+  ret void
+
+51:                                               ; preds = %7
+  %52 = load i32, i32* @x.9, align 4
+  %53 = load i32, i32* @y.10, align 4
+  %54 = add i32 %52, -1
+  %55 = mul i32 %54, %52
+  %56 = and i32 %55, 1
+  %57 = icmp eq i32 %56, 0
+  %58 = icmp slt i32 %53, 10
+  %59 = or i1 %58, %57
+  br i1 %59, label %60, label %80
+
+60:                                               ; preds = %80, %51
+  %61 = landingpad { i8*, i32 }
+          cleanup
+  br i1 %59, label %79, label %80
+
+62:                                               ; preds = %14
+  %63 = load i32, i32* @x.9, align 4
+  %64 = load i32, i32* @y.10, align 4
+  %65 = add i32 %63, -1
+  %66 = mul i32 %65, %63
+  %67 = and i32 %66, 1
+  %68 = icmp eq i32 %67, 0
+  %69 = icmp slt i32 %64, 10
+  %70 = or i1 %69, %68
+  br i1 %70, label %71, label %82
+
+71:                                               ; preds = %82, %62
+  %72 = landingpad { i8*, i32 }
+          cleanup
+  br i1 %70, label %78, label %82
+
+73:                                               ; preds = %16
+  %74 = landingpad { i8*, i32 }
+          cleanup
+  br label %77
+
+75:                                               ; preds = %.critedge11, %.critedge
+  %76 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %17) #13
+  br label %77
+
+77:                                               ; preds = %75, %73
+  %.pn = phi { i8*, i32 } [ %76, %75 ], [ %74, %73 ]
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %15) #13
+  br label %78
+
+78:                                               ; preds = %71, %77
+  %.pn.pn = phi { i8*, i32 } [ %.pn, %77 ], [ %72, %71 ]
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %13) #13
+  br label %79
+
+79:                                               ; preds = %60, %78
+  %.pn.pn.pn = phi { i8*, i32 } [ %.pn.pn, %78 ], [ %61, %60 ]
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %10) #13
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %9) #13
+  resume { i8*, i32 } %.pn.pn.pn
+
+.preheader16:                                     ; preds = %18, %.preheader16
+  br label %.preheader16, !llvm.loop !9
+
+.preheader15:                                     ; preds = %30, %.preheader15
+  br label %.preheader15, !llvm.loop !10
+
+.preheader:                                       ; preds = %42, %.preheader
+  br label %.preheader, !llvm.loop !11
+
+80:                                               ; preds = %60, %51
+  %81 = landingpad { i8*, i32 }
+          cleanup
+  br label %60
+
+82:                                               ; preds = %71, %62
+  %83 = landingpad { i8*, i32 }
+          cleanup
+  br label %71
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseD2Ev(%"class.std::_Function_base"* %2) #13
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxE13operate_rangeEiix(%struct.LazySegmentTree* %0, i32 %1, i32 %2, i64 %3) local_unnamed_addr #0 comdat align 2 {
+  %5 = alloca i1, align 1
+  %6 = alloca i1, align 1
+  %7 = alloca i1, align 1
+  %8 = alloca %struct.LazySegmentTree*, align 8
+  %9 = alloca i32*, align 8
+  %10 = alloca i32*, align 8
+  %11 = alloca i64*, align 8
+  %12 = alloca i32*, align 8
+  %13 = alloca i32*, align 8
+  %14 = alloca i1, align 1
+  %15 = alloca i1, align 1
+  %16 = load i32, i32* @x.13, align 4
+  %17 = load i32, i32* @y.14, align 4
+  %18 = add i32 %16, -1
+  %19 = mul i32 %18, %16
+  %20 = and i32 %19, 1
+  %21 = icmp eq i32 %20, 0
+  store i1 %21, i1* %15, align 1
+  %22 = icmp slt i32 %17, 10
+  store i1 %22, i1* %14, align 1
+  %23 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 0
+  br label %24
+
+24:                                               ; preds = %.backedge, %4
+  %.0 = phi i32 [ 1893082972, %4 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 1893082972, label %25
+    i32 873469590, label %28
+    i32 2080291434, label %64
+    i32 356411077, label %65
+    i32 -1502688903, label %75
+    i32 -1879371870, label %88
+    i32 1797545624, label %90
+    i32 -1408396816, label %100
+    i32 -1346840916, label %113
+    i32 1182842935, label %115
+    i32 678192943, label %125
+    i32 -1808224839, label %148
+    i32 -1455360762, label %149
+    i32 1524950038, label %159
+    i32 137451009, label %172
+    i32 1027307761, label %174
+    i32 -213722684, label %189
+    i32 232993268, label %194
+    i32 -162348409, label %204
+    i32 -1804023288, label %216
+    i32 1039857178, label %217
+    i32 -1583939345, label %227
+    i32 -166988696, label %228
+    i32 -1214703427, label %229
+    i32 -1566734562, label %243
+    i32 -1198056934, label %244
+  ]
+
+.backedge:                                        ; preds = %24, %244, %243, %229, %228, %227, %217, %204, %194, %189, %174, %172, %159, %149, %148, %125, %115, %113, %100, %90, %88, %75, %65, %64, %28, %25
+  %.0.be = phi i32 [ %.0, %24 ], [ -162348409, %244 ], [ 1524950038, %243 ], [ 678192943, %229 ], [ -1408396816, %228 ], [ -1502688903, %227 ], [ 873469590, %217 ], [ %215, %204 ], [ %203, %194 ], [ 356411077, %189 ], [ -213722684, %174 ], [ %173, %172 ], [ %171, %159 ], [ %158, %149 ], [ -1455360762, %148 ], [ %147, %125 ], [ %124, %115 ], [ %114, %113 ], [ %112, %100 ], [ %99, %90 ], [ %89, %88 ], [ %87, %75 ], [ %74, %65 ], [ 356411077, %64 ], [ %63, %28 ], [ %27, %25 ]
+  br label %24
+
+25:                                               ; preds = %24
+  %.0..0..0. = load volatile i1, i1* %15, align 1
+  %.0..0..0.1 = load volatile i1, i1* %14, align 1
+  %26 = or i1 %.0..0..0., %.0..0..0.1
+  %27 = select i1 %26, i32 873469590, i32 1039857178
+  br label %.backedge
+
+28:                                               ; preds = %24
+  %29 = alloca i32, align 4
+  store i32* %29, i32** %13, align 8
+  %30 = alloca i32, align 4
+  store i32* %30, i32** %12, align 8
+  %31 = alloca i64, align 8
+  store i64* %31, i64** %11, align 8
+  %32 = alloca i32, align 4
+  store i32* %32, i32** %10, align 8
+  %33 = alloca i32, align 4
+  store i32* %33, i32** %9, align 8
+  %.0..0..0.2 = load volatile i32*, i32** %13, align 8
+  store i32 %1, i32* %.0..0..0.2, align 4
+  %.0..0..0.22 = load volatile i32*, i32** %12, align 8
+  store i32 %2, i32* %.0..0..0.22, align 4
+  %.0..0..0.38 = load volatile i64*, i64** %11, align 8
+  store i64 %3, i64* %.0..0..0.38, align 8
+  store %struct.LazySegmentTree* %0, %struct.LazySegmentTree** %8, align 8
+  %.0..0..0.50 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %34 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.50, i64 0, i32 0
+  %35 = load i32, i32* %34, align 8
+  %.0..0..0.3 = load volatile i32*, i32** %13, align 8
+  %36 = load i32, i32* %.0..0..0.3, align 4
+  %37 = add i32 %36, %35
+  %.0..0..0.4 = load volatile i32*, i32** %13, align 8
+  store i32 %37, i32* %.0..0..0.4, align 4
+  %.0..0..0.51 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %38 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.51, i64 0, i32 0
+  %39 = load i32, i32* %38, align 8
+  %.0..0..0.23 = load volatile i32*, i32** %12, align 8
+  %40 = load i32, i32* %.0..0..0.23, align 4
+  %41 = add i32 %40, %39
+  %.0..0..0.24 = load volatile i32*, i32** %12, align 8
+  store i32 %41, i32* %.0..0..0.24, align 4
+  %.0..0..0.5 = load volatile i32*, i32** %13, align 8
+  %42 = load i32, i32* %.0..0..0.5, align 4
+  %.0..0..0.6 = load volatile i32*, i32** %13, align 8
+  %43 = load i32, i32* %.0..0..0.6, align 4
+  %.0..0..0.7 = load volatile i32*, i32** %13, align 8
+  %44 = load i32, i32* %.0..0..0.7, align 4
+  %.not73 = sub i32 0, %44
+  %45 = and i32 %43, %.not73
+  %46 = sdiv i32 %42, %45
+  %.0..0..0.42 = load volatile i32*, i32** %10, align 8
+  store i32 %46, i32* %.0..0..0.42, align 4
+  %.0..0..0.25 = load volatile i32*, i32** %12, align 8
+  %47 = load i32, i32* %.0..0..0.25, align 4
+  %.0..0..0.26 = load volatile i32*, i32** %12, align 8
+  %48 = load i32, i32* %.0..0..0.26, align 4
+  %.0..0..0.27 = load volatile i32*, i32** %12, align 8
+  %49 = load i32, i32* %.0..0..0.27, align 4
+  %.not75 = sub i32 0, %49
+  %50 = and i32 %48, %.not75
+  %51 = sdiv i32 %47, %50
+  %52 = add i32 %51, -1
+  %.0..0..0.46 = load volatile i32*, i32** %9, align 8
+  store i32 %52, i32* %.0..0..0.46, align 4
+  %.0..0..0.43 = load volatile i32*, i32** %10, align 8
+  %53 = load i32, i32* %.0..0..0.43, align 4
+  %.0..0..0.52 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %.0..0..0.52, i32 %53)
+  %.0..0..0.47 = load volatile i32*, i32** %9, align 8
+  %54 = load i32, i32* %.0..0..0.47, align 4
+  %.0..0..0.53 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %.0..0..0.53, i32 %54)
+  %55 = load i32, i32* @x.13, align 4
+  %56 = load i32, i32* @y.14, align 4
+  %57 = add i32 %55, -1
+  %58 = mul i32 %57, %55
+  %59 = and i32 %58, 1
+  %60 = icmp eq i32 %59, 0
+  %61 = icmp slt i32 %56, 10
+  %62 = or i1 %61, %60
+  %63 = select i1 %62, i32 2080291434, i32 1039857178
+  br label %.backedge
+
+64:                                               ; preds = %24
+  br label %.backedge
+
+65:                                               ; preds = %24
+  %66 = load i32, i32* @x.13, align 4
+  %67 = load i32, i32* @y.14, align 4
+  %68 = add i32 %66, -1
+  %69 = mul i32 %68, %66
+  %70 = and i32 %69, 1
+  %71 = icmp eq i32 %70, 0
+  %72 = icmp slt i32 %67, 10
+  %73 = or i1 %72, %71
+  %74 = select i1 %73, i32 -1502688903, i32 -1583939345
+  br label %.backedge
+
+75:                                               ; preds = %24
+  %.0..0..0.8 = load volatile i32*, i32** %13, align 8
+  %76 = load i32, i32* %.0..0..0.8, align 4
+  %.0..0..0.28 = load volatile i32*, i32** %12, align 8
+  %77 = load i32, i32* %.0..0..0.28, align 4
+  %78 = icmp slt i32 %76, %77
+  store i1 %78, i1* %7, align 1
+  %79 = load i32, i32* @x.13, align 4
+  %80 = load i32, i32* @y.14, align 4
+  %81 = add i32 %79, -1
+  %82 = mul i32 %81, %79
+  %83 = and i32 %82, 1
+  %84 = icmp eq i32 %83, 0
+  %85 = icmp slt i32 %80, 10
+  %86 = or i1 %85, %84
+  %87 = select i1 %86, i32 -1879371870, i32 -1583939345
+  br label %.backedge
+
+88:                                               ; preds = %24
+  %.0..0..0.67 = load volatile i1, i1* %7, align 1
+  %89 = select i1 %.0..0..0.67, i32 1797545624, i32 232993268
+  br label %.backedge
+
+90:                                               ; preds = %24
+  %91 = load i32, i32* @x.13, align 4
+  %92 = load i32, i32* @y.14, align 4
+  %93 = add i32 %91, -1
+  %94 = mul i32 %93, %91
+  %95 = and i32 %94, 1
+  %96 = icmp eq i32 %95, 0
+  %97 = icmp slt i32 %92, 10
+  %98 = or i1 %97, %96
+  %99 = select i1 %98, i32 -1408396816, i32 -166988696
+  br label %.backedge
+
+100:                                              ; preds = %24
+  %.0..0..0.9 = load volatile i32*, i32** %13, align 8
+  %101 = load i32, i32* %.0..0..0.9, align 4
+  %102 = and i32 %101, 1
+  %103 = icmp ne i32 %102, 0
+  store i1 %103, i1* %6, align 1
+  %104 = load i32, i32* @x.13, align 4
+  %105 = load i32, i32* @y.14, align 4
+  %106 = add i32 %104, -1
+  %107 = mul i32 %106, %104
+  %108 = and i32 %107, 1
+  %109 = icmp eq i32 %108, 0
+  %110 = icmp slt i32 %105, 10
+  %111 = or i1 %110, %109
+  %112 = select i1 %111, i32 -1346840916, i32 -166988696
+  br label %.backedge
+
+113:                                              ; preds = %24
+  %.0..0..0.68 = load volatile i1, i1* %6, align 1
+  %114 = select i1 %.0..0..0.68, i32 1182842935, i32 -1455360762
+  br label %.backedge
+
+115:                                              ; preds = %24
+  %116 = load i32, i32* @x.13, align 4
+  %117 = load i32, i32* @y.14, align 4
+  %118 = add i32 %116, -1
+  %119 = mul i32 %118, %116
+  %120 = and i32 %119, 1
+  %121 = icmp eq i32 %120, 0
+  %122 = icmp slt i32 %117, 10
+  %123 = or i1 %122, %121
+  %124 = select i1 %123, i32 678192943, i32 -1214703427
+  br label %.backedge
+
+125:                                              ; preds = %24
+  %.0..0..0.54 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %126 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.54, i64 0, i32 7
+  %.0..0..0.55 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %127 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.55, i64 0, i32 2
+  %.0..0..0.10 = load volatile i32*, i32** %13, align 8
+  %128 = load i32, i32* %.0..0..0.10, align 4
+  %129 = sext i32 %128 to i64
+  %130 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %127, i64 %129) #13
+  %131 = load i64, i64* %130, align 8
+  %.0..0..0.39 = load volatile i64*, i64** %11, align 8
+  %132 = load i64, i64* %.0..0..0.39, align 8
+  %133 = call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %126, i64 %131, i64 %132)
+  %.0..0..0.56 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %134 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.56, i64 0, i32 2
+  %.0..0..0.11 = load volatile i32*, i32** %13, align 8
+  %135 = load i32, i32* %.0..0..0.11, align 4
+  %136 = sext i32 %135 to i64
+  %137 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %134, i64 %136) #13
+  store i64 %133, i64* %137, align 8
+  %.0..0..0.12 = load volatile i32*, i32** %13, align 8
+  %138 = load i32, i32* %.0..0..0.12, align 4
+  %.neg72 = add i32 %138, 1
+  %.0..0..0.13 = load volatile i32*, i32** %13, align 8
+  store i32 %.neg72, i32* %.0..0..0.13, align 4
+  %139 = load i32, i32* @x.13, align 4
+  %140 = load i32, i32* @y.14, align 4
+  %141 = add i32 %139, -1
+  %142 = mul i32 %141, %139
+  %143 = and i32 %142, 1
+  %144 = icmp eq i32 %143, 0
+  %145 = icmp slt i32 %140, 10
+  %146 = or i1 %145, %144
+  %147 = select i1 %146, i32 -1808224839, i32 -1214703427
+  br label %.backedge
+
+148:                                              ; preds = %24
+  br label %.backedge
+
+149:                                              ; preds = %24
+  %150 = load i32, i32* @x.13, align 4
+  %151 = load i32, i32* @y.14, align 4
+  %152 = add i32 %150, -1
+  %153 = mul i32 %152, %150
+  %154 = and i32 %153, 1
+  %155 = icmp eq i32 %154, 0
+  %156 = icmp slt i32 %151, 10
+  %157 = or i1 %156, %155
+  %158 = select i1 %157, i32 1524950038, i32 -1566734562
+  br label %.backedge
+
+159:                                              ; preds = %24
+  %.0..0..0.29 = load volatile i32*, i32** %12, align 8
+  %160 = load i32, i32* %.0..0..0.29, align 4
+  %161 = and i32 %160, 1
+  %162 = icmp ne i32 %161, 0
+  store i1 %162, i1* %5, align 1
+  %163 = load i32, i32* @x.13, align 4
+  %164 = load i32, i32* @y.14, align 4
+  %165 = add i32 %163, -1
+  %166 = mul i32 %165, %163
+  %167 = and i32 %166, 1
+  %168 = icmp eq i32 %167, 0
+  %169 = icmp slt i32 %164, 10
+  %170 = or i1 %169, %168
+  %171 = select i1 %170, i32 137451009, i32 -1566734562
+  br label %.backedge
+
+172:                                              ; preds = %24
+  %.0..0..0.69 = load volatile i1, i1* %5, align 1
+  %173 = select i1 %.0..0..0.69, i32 1027307761, i32 -213722684
+  br label %.backedge
+
+174:                                              ; preds = %24
+  %.0..0..0.30 = load volatile i32*, i32** %12, align 8
+  %175 = load i32, i32* %.0..0..0.30, align 4
+  %176 = add i32 %175, -1
+  %.0..0..0.31 = load volatile i32*, i32** %12, align 8
+  store i32 %176, i32* %.0..0..0.31, align 4
+  %.0..0..0.57 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %177 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.57, i64 0, i32 7
+  %.0..0..0.58 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %178 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.58, i64 0, i32 2
+  %.0..0..0.32 = load volatile i32*, i32** %12, align 8
+  %179 = load i32, i32* %.0..0..0.32, align 4
+  %180 = sext i32 %179 to i64
+  %181 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %178, i64 %180) #13
+  %182 = load i64, i64* %181, align 8
+  %.0..0..0.40 = load volatile i64*, i64** %11, align 8
+  %183 = load i64, i64* %.0..0..0.40, align 8
+  %184 = call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %177, i64 %182, i64 %183)
+  %.0..0..0.59 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %185 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.59, i64 0, i32 2
+  %.0..0..0.33 = load volatile i32*, i32** %12, align 8
+  %186 = load i32, i32* %.0..0..0.33, align 4
+  %187 = sext i32 %186 to i64
+  %188 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %185, i64 %187) #13
+  store i64 %184, i64* %188, align 8
+  br label %.backedge
+
+189:                                              ; preds = %24
+  %.0..0..0.14 = load volatile i32*, i32** %13, align 8
+  %190 = load i32, i32* %.0..0..0.14, align 4
+  %191 = ashr i32 %190, 1
+  %.0..0..0.15 = load volatile i32*, i32** %13, align 8
+  store i32 %191, i32* %.0..0..0.15, align 4
+  %.0..0..0.34 = load volatile i32*, i32** %12, align 8
+  %192 = load i32, i32* %.0..0..0.34, align 4
+  %193 = ashr i32 %192, 1
+  %.0..0..0.35 = load volatile i32*, i32** %12, align 8
+  store i32 %193, i32* %.0..0..0.35, align 4
+  br label %.backedge
+
+194:                                              ; preds = %24
+  %195 = load i32, i32* @x.13, align 4
+  %196 = load i32, i32* @y.14, align 4
+  %197 = add i32 %195, -1
+  %198 = mul i32 %197, %195
+  %199 = and i32 %198, 1
+  %200 = icmp eq i32 %199, 0
+  %201 = icmp slt i32 %196, 10
+  %202 = or i1 %201, %200
+  %203 = select i1 %202, i32 -162348409, i32 -1198056934
+  br label %.backedge
+
+204:                                              ; preds = %24
+  %.0..0..0.44 = load volatile i32*, i32** %10, align 8
+  %205 = load i32, i32* %.0..0..0.44, align 4
+  %.0..0..0.60 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE12recalc_aboveEi(%struct.LazySegmentTree* %.0..0..0.60, i32 %205)
+  %.0..0..0.48 = load volatile i32*, i32** %9, align 8
+  %206 = load i32, i32* %.0..0..0.48, align 4
+  %.0..0..0.61 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE12recalc_aboveEi(%struct.LazySegmentTree* %.0..0..0.61, i32 %206)
+  %207 = load i32, i32* @x.13, align 4
+  %208 = load i32, i32* @y.14, align 4
+  %209 = add i32 %207, -1
+  %210 = mul i32 %209, %207
+  %211 = and i32 %210, 1
+  %212 = icmp eq i32 %211, 0
+  %213 = icmp slt i32 %208, 10
+  %214 = or i1 %213, %212
+  %215 = select i1 %214, i32 -1804023288, i32 -1198056934
+  br label %.backedge
+
+216:                                              ; preds = %24
+  ret void
+
+217:                                              ; preds = %24
+  %218 = load i32, i32* %23, align 8
+  %219 = add i32 %218, %1
+  %220 = add i32 %218, %2
+  %221 = sub i32 0, %219
+  %222 = and i32 %219, %221
+  %223 = sdiv i32 %219, %222
+  %.not = sub i32 0, %220
+  %224 = and i32 %220, %.not
+  %225 = sdiv i32 %220, %224
+  %226 = add i32 %225, -1
+  call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %0, i32 %223)
+  call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %0, i32 %226)
+  br label %.backedge
+
+227:                                              ; preds = %24
+  %.0..0..0.16 = load volatile i32*, i32** %13, align 8
+  %.0..0..0.36 = load volatile i32*, i32** %12, align 8
+  br label %.backedge
+
+228:                                              ; preds = %24
+  %.0..0..0.17 = load volatile i32*, i32** %13, align 8
+  br label %.backedge
+
+229:                                              ; preds = %24
+  %.0..0..0.62 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %230 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.62, i64 0, i32 7
+  %.0..0..0.63 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %231 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.63, i64 0, i32 2
+  %.0..0..0.18 = load volatile i32*, i32** %13, align 8
+  %232 = load i32, i32* %.0..0..0.18, align 4
+  %233 = sext i32 %232 to i64
+  %234 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %231, i64 %233) #13
+  %235 = load i64, i64* %234, align 8
+  %.0..0..0.41 = load volatile i64*, i64** %11, align 8
+  %236 = load i64, i64* %.0..0..0.41, align 8
+  %237 = call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %230, i64 %235, i64 %236)
+  %.0..0..0.64 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  %238 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.64, i64 0, i32 2
+  %.0..0..0.19 = load volatile i32*, i32** %13, align 8
+  %239 = load i32, i32* %.0..0..0.19, align 4
+  %240 = sext i32 %239 to i64
+  %241 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %238, i64 %240) #13
+  store i64 %237, i64* %241, align 8
+  %.0..0..0.20 = load volatile i32*, i32** %13, align 8
+  %242 = load i32, i32* %.0..0..0.20, align 4
+  %.neg = add i32 %242, 1
+  %.0..0..0.21 = load volatile i32*, i32** %13, align 8
+  store i32 %.neg, i32* %.0..0..0.21, align 4
+  br label %.backedge
+
+243:                                              ; preds = %24
+  %.0..0..0.37 = load volatile i32*, i32** %12, align 8
+  br label %.backedge
+
+244:                                              ; preds = %24
+  %.0..0..0.45 = load volatile i32*, i32** %10, align 8
+  %245 = load i32, i32* %.0..0..0.45, align 4
+  %.0..0..0.65 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE12recalc_aboveEi(%struct.LazySegmentTree* %.0..0..0.65, i32 %245)
+  %.0..0..0.49 = load volatile i32*, i32** %9, align 8
+  %246 = load i32, i32* %.0..0..0.49, align 4
+  %.0..0..0.66 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %8, align 8
+  call void @_ZN15LazySegmentTreeIxxE12recalc_aboveEi(%struct.LazySegmentTree* %.0..0..0.66, i32 %246)
+  br label %.backedge
+}
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c(%"class.std::basic_ostream"* dereferenceable(272), i8 signext) local_unnamed_addr #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEx(%"class.std::basic_ostream"*, i64) local_unnamed_addr #1
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64 @_ZN15LazySegmentTreeIxxE4foldEii(%struct.LazySegmentTree* %0, i32 %1, i32 %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = alloca i1, align 1
+  %5 = alloca %struct.LazySegmentTree*, align 8
+  store %struct.LazySegmentTree* %0, %struct.LazySegmentTree** %5, align 8
+  %.0..0..0.30 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %6 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.30, i64 0, i32 0
+  %7 = load i32, i32* %6, align 8
+  %8 = add i32 %7, %1
+  %.0..0..0.31 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %9 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.31, i64 0, i32 0
+  %10 = load i32, i32* %9, align 8
+  %11 = add i32 %10, %2
+  %.not = sub i32 0, %8
+  %12 = and i32 %8, %.not
+  %13 = sdiv i32 %8, %12
+  %.0..0..0.32 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  tail call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %.0..0..0.32, i32 %13)
+  %14 = sub i32 0, %11
+  %15 = and i32 %11, %14
+  %16 = sdiv i32 %11, %15
+  %17 = add i32 %16, -1
+  %.0..0..0.33 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  tail call void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %.0..0..0.33, i32 %17)
+  %.0..0..0.34 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %18 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.34, i64 0, i32 3
+  %19 = load i64, i64* %18, align 8
+  %.0..0..0.35 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %20 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.35, i64 0, i32 3
+  %21 = load i64, i64* %20, align 8
+  br label %22
+
+22:                                               ; preds = %.backedge, %3
+  %.050 = phi i32 [ %8, %3 ], [ %.050.be, %.backedge ]
+  %.048 = phi i32 [ %11, %3 ], [ %.048.be, %.backedge ]
+  %.046 = phi i64 [ %19, %3 ], [ %.046.be, %.backedge ]
+  %.044 = phi i64 [ %21, %3 ], [ %.044.be, %.backedge ]
+  %.0 = phi i32 [ -1164349173, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 -1164349173, label %23
+    i32 1444170378, label %33
+    i32 -1523625182, label %44
+    i32 1613744118, label %46
+    i32 1755939369, label %49
+    i32 491644444, label %54
+    i32 1458888935, label %57
+    i32 -1605499716, label %67
+    i32 676485625, label %81
+    i32 538130760, label %82
+    i32 607150805, label %92
+    i32 541913906, label %104
+    i32 -912431704, label %105
+    i32 235881029, label %108
+    i32 -1412347010, label %109
+    i32 -809060890, label %114
+  ]
+
+.backedge:                                        ; preds = %22, %114, %109, %108, %104, %92, %82, %81, %67, %57, %54, %49, %46, %44, %33, %23
+  %.050.be = phi i32 [ %.050, %22 ], [ %115, %114 ], [ %.050, %109 ], [ %.050, %108 ], [ %.050, %104 ], [ %93, %92 ], [ %.050, %82 ], [ %.050, %81 ], [ %.050, %67 ], [ %.050, %57 ], [ %.050, %54 ], [ %53, %49 ], [ %.050, %46 ], [ %.050, %44 ], [ %.050, %33 ], [ %.050, %23 ]
+  %.048.be = phi i32 [ %.048, %22 ], [ %116, %114 ], [ %110, %109 ], [ %.048, %108 ], [ %.048, %104 ], [ %94, %92 ], [ %.048, %82 ], [ %.048, %81 ], [ %68, %67 ], [ %.048, %57 ], [ %.048, %54 ], [ %.048, %49 ], [ %.048, %46 ], [ %.048, %44 ], [ %.048, %33 ], [ %.048, %23 ]
+  %.046.be = phi i64 [ %.046, %22 ], [ %.046, %114 ], [ %.046, %109 ], [ %.046, %108 ], [ %.046, %104 ], [ %.046, %92 ], [ %.046, %82 ], [ %.046, %81 ], [ %.046, %67 ], [ %.046, %57 ], [ %.046, %54 ], [ %52, %49 ], [ %.046, %46 ], [ %.046, %44 ], [ %.046, %33 ], [ %.046, %23 ]
+  %.044.be = phi i64 [ %.044, %22 ], [ %.044, %114 ], [ %113, %109 ], [ %.044, %108 ], [ %.044, %104 ], [ %.044, %92 ], [ %.044, %82 ], [ %.044, %81 ], [ %71, %67 ], [ %.044, %57 ], [ %.044, %54 ], [ %.044, %49 ], [ %.044, %46 ], [ %.044, %44 ], [ %.044, %33 ], [ %.044, %23 ]
+  %.0.be = phi i32 [ %.0, %22 ], [ 607150805, %114 ], [ -1605499716, %109 ], [ 1444170378, %108 ], [ -1164349173, %104 ], [ %103, %92 ], [ %91, %82 ], [ 538130760, %81 ], [ %80, %67 ], [ %66, %57 ], [ %56, %54 ], [ 491644444, %49 ], [ %48, %46 ], [ %45, %44 ], [ %43, %33 ], [ %32, %23 ]
+  br label %22
+
+23:                                               ; preds = %22
+  %24 = load i32, i32* @x.15, align 4
+  %25 = load i32, i32* @y.16, align 4
+  %26 = add i32 %24, -1
+  %27 = mul i32 %26, %24
+  %28 = and i32 %27, 1
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %25, 10
+  %31 = or i1 %30, %29
+  %32 = select i1 %31, i32 1444170378, i32 235881029
+  br label %.backedge
+
+33:                                               ; preds = %22
+  %34 = icmp slt i32 %.050, %.048
+  store i1 %34, i1* %4, align 1
+  %35 = load i32, i32* @x.15, align 4
+  %36 = load i32, i32* @y.16, align 4
+  %37 = add i32 %35, -1
+  %38 = mul i32 %37, %35
+  %39 = and i32 %38, 1
+  %40 = icmp eq i32 %39, 0
+  %41 = icmp slt i32 %36, 10
+  %42 = or i1 %41, %40
+  %43 = select i1 %42, i32 -1523625182, i32 235881029
+  br label %.backedge
+
+44:                                               ; preds = %22
+  %.0..0..0.43 = load volatile i1, i1* %4, align 1
+  %45 = select i1 %.0..0..0.43, i32 1613744118, i32 -912431704
+  br label %.backedge
+
+46:                                               ; preds = %22
+  %47 = and i32 %.050, 1
+  %.not55 = icmp eq i32 %47, 0
+  %48 = select i1 %.not55, i32 491644444, i32 1755939369
+  br label %.backedge
+
+49:                                               ; preds = %22
+  %.0..0..0.36 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %50 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.36, i64 0, i32 5
+  %.0..0..0.37 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %51 = tail call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %.0..0..0.37, i32 %.050)
+  %52 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %50, i64 %.046, i64 %51)
+  %53 = add i32 %.050, 1
+  br label %.backedge
+
+54:                                               ; preds = %22
+  %55 = and i32 %.048, 1
+  %.not54 = icmp eq i32 %55, 0
+  %56 = select i1 %.not54, i32 538130760, i32 1458888935
+  br label %.backedge
+
+57:                                               ; preds = %22
+  %58 = load i32, i32* @x.15, align 4
+  %59 = load i32, i32* @y.16, align 4
+  %60 = add i32 %58, -1
+  %61 = mul i32 %60, %58
+  %62 = and i32 %61, 1
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %59, 10
+  %65 = or i1 %64, %63
+  %66 = select i1 %65, i32 -1605499716, i32 -1412347010
+  br label %.backedge
+
+67:                                               ; preds = %22
+  %68 = add i32 %.048, -1
+  %.0..0..0.38 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %69 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.38, i64 0, i32 5
+  %.0..0..0.39 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %70 = tail call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %.0..0..0.39, i32 %68)
+  %71 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %69, i64 %70, i64 %.044)
+  %72 = load i32, i32* @x.15, align 4
+  %73 = load i32, i32* @y.16, align 4
+  %74 = add i32 %72, -1
+  %75 = mul i32 %74, %72
+  %76 = and i32 %75, 1
+  %77 = icmp eq i32 %76, 0
+  %78 = icmp slt i32 %73, 10
+  %79 = or i1 %78, %77
+  %80 = select i1 %79, i32 676485625, i32 -1412347010
+  br label %.backedge
+
+81:                                               ; preds = %22
+  br label %.backedge
+
+82:                                               ; preds = %22
+  %83 = load i32, i32* @x.15, align 4
+  %84 = load i32, i32* @y.16, align 4
+  %85 = add i32 %83, -1
+  %86 = mul i32 %85, %83
+  %87 = and i32 %86, 1
+  %88 = icmp eq i32 %87, 0
+  %89 = icmp slt i32 %84, 10
+  %90 = or i1 %89, %88
+  %91 = select i1 %90, i32 607150805, i32 -809060890
+  br label %.backedge
+
+92:                                               ; preds = %22
+  %93 = ashr i32 %.050, 1
+  %94 = ashr i32 %.048, 1
+  %95 = load i32, i32* @x.15, align 4
+  %96 = load i32, i32* @y.16, align 4
+  %97 = add i32 %95, -1
+  %98 = mul i32 %97, %95
+  %99 = and i32 %98, 1
+  %100 = icmp eq i32 %99, 0
+  %101 = icmp slt i32 %96, 10
+  %102 = or i1 %101, %100
+  %103 = select i1 %102, i32 541913906, i32 -809060890
+  br label %.backedge
+
+104:                                              ; preds = %22
+  br label %.backedge
+
+105:                                              ; preds = %22
+  %.0..0..0.40 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %106 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.40, i64 0, i32 5
+  %107 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %106, i64 %.046, i64 %.044)
+  ret i64 %107
+
+108:                                              ; preds = %22
+  br label %.backedge
+
+109:                                              ; preds = %22
+  %110 = add i32 %.048, -1
+  %.0..0..0.41 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %111 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.41, i64 0, i32 5
+  %.0..0..0.42 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %5, align 8
+  %112 = tail call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %.0..0..0.42, i32 %110)
+  %113 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %111, i64 %112, i64 %.044)
+  br label %.backedge
+
+114:                                              ; preds = %22
+  %115 = ashr i32 %.050, 1
+  %116 = ashr i32 %.048, 1
+  br label %.backedge
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxED2Ev(%struct.LazySegmentTree* %0) unnamed_addr #5 comdat align 2 {
+  %2 = alloca i1, align 1
+  %3 = alloca i1, align 1
+  %4 = load i32, i32* @x.17, align 4
+  %5 = load i32, i32* @y.18, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  store i1 %9, i1* %3, align 1
+  %10 = icmp slt i32 %5, 10
+  store i1 %10, i1* %2, align 1
+  %11 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 7
+  %12 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 6
+  %13 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 5
+  %14 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 2
+  %15 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ -1644188228, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %16
+
+16:                                               ; preds = %.outer, %16
+  switch i32 %.0.ph, label %16 [
+    i32 -1644188228, label %17
+    i32 -712857701, label %20
+    i32 1885027505, label %30
+    i32 -1335118360, label %31
+  ]
+
+17:                                               ; preds = %16
+  %.0..0..0. = load volatile i1, i1* %3, align 1
+  %.0..0..0.1 = load volatile i1, i1* %2, align 1
+  %18 = or i1 %.0..0..0., %.0..0..0.1
+  %19 = select i1 %18, i32 -712857701, i32 -1335118360
+  br label %.outer.backedge
+
+20:                                               ; preds = %16
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %11) #13
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %12) #13
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %13) #13
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %14) #13
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %15) #13
+  %21 = load i32, i32* @x.17, align 4
+  %22 = load i32, i32* @y.18, align 4
+  %23 = add i32 %21, -1
+  %24 = mul i32 %23, %21
+  %25 = and i32 %24, 1
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %22, 10
+  %28 = or i1 %27, %26
+  %29 = select i1 %28, i32 1885027505, i32 -1335118360
+  br label %.outer.backedge
+
+30:                                               ; preds = %16
+  ret void
+
+31:                                               ; preds = %16
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %11) #13
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %12) #13
+  tail call void @_ZNSt8functionIFxxxEED2Ev(%"class.std::function"* nonnull %13) #13
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %14) #13
+  tail call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* nonnull %15) #13
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %31, %20, %17
+  %.0.ph.be = phi i32 [ %19, %17 ], [ %29, %20 ], [ -712857701, %31 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt14_Function_baseD2Ev(%"class.std::_Function_base"* %0) unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr inbounds %"class.std::_Function_base", %"class.std::_Function_base"* %0, i64 0, i32 1
+  %3 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %2, align 8
+  %.not = icmp eq i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* %3, null
+  br i1 %.not, label %7, label %4
+
+4:                                                ; preds = %1
+  %5 = getelementptr inbounds %"class.std::_Function_base", %"class.std::_Function_base"* %0, i64 0, i32 0
+  %6 = invoke zeroext i1 %3(%"union.std::_Any_data"* dereferenceable(16) %5, %"union.std::_Any_data"* dereferenceable(16) %5, i32 3)
+          to label %7 unwind label %8
+
+7:                                                ; preds = %4, %1
+  ret void
+
+8:                                                ; preds = %4
+  %9 = landingpad { i8*, i32 }
+          catch i8* null
+  %10 = extractvalue { i8*, i32 } %9, 0
+  tail call void @__clang_call_terminate(i8* %10) #14
+  unreachable
+}
+
+; Function Attrs: noinline noreturn nounwind
+define linkonce_odr hidden void @__clang_call_terminate(i8* %0) local_unnamed_addr #6 comdat {
+  %2 = tail call i8* @__cxa_begin_catch(i8* %0) #13
+  tail call void @_ZSt9terminatev() #14
+  unreachable
+}
+
+declare i8* @__cxa_begin_catch(i8*) local_unnamed_addr
+
+declare void @_ZSt9terminatev() local_unnamed_addr
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* %0) unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %3 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  %4 = load i64*, i64** %3, align 8
+  %5 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 1
+  %6 = load i64*, i64** %5, align 8
+  %7 = tail call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %2) #13
+  invoke void @_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E(i64* %4, i64* %6, %"class.std::allocator"* nonnull dereferenceable(1) %7)
+          to label %8 unwind label %27
+
+8:                                                ; preds = %1
+  %9 = load i32, i32* @x.23, align 4
+  %10 = load i32, i32* @y.24, align 4
+  %11 = add i32 %9, -1
+  %12 = mul i32 %11, %9
+  %13 = and i32 %12, 1
+  %14 = icmp eq i32 %13, 0
+  %15 = icmp slt i32 %10, 10
+  %16 = or i1 %15, %14
+  br i1 %16, label %17, label %30
+
+17:                                               ; preds = %30, %8
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %2) #13
+  %18 = load i32, i32* @x.23, align 4
+  %19 = load i32, i32* @y.24, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  br i1 %25, label %26, label %30
+
+26:                                               ; preds = %17
+  ret void
+
+27:                                               ; preds = %1
+  %28 = landingpad { i8*, i32 }
+          catch i8* null
+  %29 = extractvalue { i8*, i32 } %28, 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %2) #13
+  tail call void @__clang_call_terminate(i8* %29) #14
+  unreachable
+
+30:                                               ; preds = %17, %8
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %2) #13
+  br label %17
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E(i64* %0, i64* %1, %"class.std::allocator"* dereferenceable(1) %2) local_unnamed_addr #0 comdat {
+  tail call void @_ZSt8_DestroyIPxEvT_S1_(i64* %0, i64* %1)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = bitcast %"struct.std::_Vector_base"* %0 to %"class.std::allocator"*
+  ret %"class.std::allocator"* %2
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %0) unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.29, align 4
+  %3 = load i32, i32* @y.30, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  br label %10
+
+10:                                               ; preds = %1, %10
+  br i1 %9, label %11, label %10
+
+11:                                               ; preds = %10
+  %12 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0
+  %13 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0
+  %14 = load i64*, i64** %13, align 8
+  %15 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 2
+  %16 = load i64*, i64** %15, align 8
+  %17 = ptrtoint i64* %16 to i64
+  %18 = ptrtoint i64* %14 to i64
+  %19 = sub i64 %17, %18
+  %20 = ashr exact i64 %19, 3
+  invoke void @_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm(%"struct.std::_Vector_base"* nonnull %0, i64* %14, i64 %20)
+          to label %21 unwind label %40
+
+21:                                               ; preds = %11
+  %22 = load i32, i32* @x.29, align 4
+  %23 = load i32, i32* @y.30, align 4
+  %24 = add i32 %22, -1
+  %25 = mul i32 %24, %22
+  %26 = and i32 %25, 1
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %28, %27
+  br i1 %29, label %30, label %43
+
+30:                                               ; preds = %43, %21
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %12) #13
+  %31 = load i32, i32* @x.29, align 4
+  %32 = load i32, i32* @y.30, align 4
+  %33 = add i32 %31, -1
+  %34 = mul i32 %33, %31
+  %35 = and i32 %34, 1
+  %36 = icmp eq i32 %35, 0
+  %37 = icmp slt i32 %32, 10
+  %38 = or i1 %37, %36
+  br i1 %38, label %39, label %43
+
+39:                                               ; preds = %30
+  ret void
+
+40:                                               ; preds = %11
+  %41 = landingpad { i8*, i32 }
+          catch i8* null
+  %42 = extractvalue { i8*, i32 } %41, 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* nonnull %12) #13
+  tail call void @__clang_call_terminate(i8* %42) #14
+  unreachable
+
+43:                                               ; preds = %30, %21
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %12) #13
+  br label %30
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt8_DestroyIPxEvT_S1_(i64* %0, i64* %1) local_unnamed_addr #0 comdat {
+  tail call void @_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_(i64* %0, i64* %1)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Destroy_auxILb1EE9__destroyIPxEEvT_S3_(i64* %0, i64* %1) local_unnamed_addr #5 comdat align 2 {
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE13_M_deallocateEPxm(%"struct.std::_Vector_base"* %0, i64* %1, i64 %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = alloca i64*, align 8
+  %5 = alloca %"struct.std::_Vector_base"*, align 8
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %5, align 8
+  store i64* %1, i64** %4, align 8
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %3
+  %.0.ph = phi i32 [ -1396680965, %3 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %6
+
+6:                                                ; preds = %.outer, %6
+  switch i32 %.0.ph, label %6 [
+    i32 -1396680965, label %7
+    i32 1343585143, label %9
+    i32 -1739861068, label %19
+    i32 906467839, label %.outer.backedge
+    i32 -944405169, label %30
+    i32 566677728, label %31
+  ]
+
+7:                                                ; preds = %6
+  %.0..0..0.8 = load volatile i64*, i64** %4, align 8
+  %.not = icmp eq i64* %.0..0..0.8, null
+  %8 = select i1 %.not, i32 -944405169, i32 1343585143
+  br label %.outer.backedge
+
+9:                                                ; preds = %6
+  %10 = load i32, i32* @x.35, align 4
+  %11 = load i32, i32* @y.36, align 4
+  %12 = add i32 %10, -1
+  %13 = mul i32 %12, %10
+  %14 = and i32 %13, 1
+  %15 = icmp eq i32 %14, 0
+  %16 = icmp slt i32 %11, 10
+  %17 = or i1 %16, %15
+  %18 = select i1 %17, i32 -1739861068, i32 566677728
+  br label %.outer.backedge
+
+19:                                               ; preds = %6
+  %.0..0..0.6 = load volatile %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %5, align 8
+  %20 = bitcast %"struct.std::_Vector_base"* %.0..0..0.6 to %"class.std::allocator"*
+  tail call void @_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm(%"class.std::allocator"* dereferenceable(1) %20, i64* %1, i64 %2)
+  %21 = load i32, i32* @x.35, align 4
+  %22 = load i32, i32* @y.36, align 4
+  %23 = add i32 %21, -1
+  %24 = mul i32 %23, %21
+  %25 = and i32 %24, 1
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %22, 10
+  %28 = or i1 %27, %26
+  %29 = select i1 %28, i32 906467839, i32 566677728
+  br label %.outer.backedge
+
+30:                                               ; preds = %6
+  ret void
+
+31:                                               ; preds = %6
+  %.0..0..0.7 = load volatile %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %5, align 8
+  %32 = bitcast %"struct.std::_Vector_base"* %.0..0..0.7 to %"class.std::allocator"*
+  tail call void @_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm(%"class.std::allocator"* dereferenceable(1) %32, i64* %1, i64 %2)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %6, %31, %19, %9, %7
+  %.0.ph.be = phi i32 [ %8, %7 ], [ %18, %9 ], [ %29, %19 ], [ -1739861068, %31 ], [ -944405169, %6 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0 to %"class.std::allocator"*
+  tail call void @_ZNSaIxED2Ev(%"class.std::allocator"* %2) #13
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt16allocator_traitsISaIxEE10deallocateERS0_Pxm(%"class.std::allocator"* dereferenceable(1) %0, i64* %1, i64 %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm(%"class.__gnu_cxx::new_allocator"* nonnull %4, i64* %1, i64 %2)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxE10deallocateEPxm(%"class.__gnu_cxx::new_allocator"* %0, i64* %1, i64 %2) local_unnamed_addr #5 comdat align 2 {
+  %4 = bitcast i64* %1 to i8*
+  tail call void @_ZdlPv(i8* %4) #13
+  ret void
+}
+
+; Function Attrs: nobuiltin nounwind
+declare void @_ZdlPv(i8*) local_unnamed_addr #7
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIxED2Ev(%"class.std::allocator"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = alloca i1, align 1
+  %3 = alloca i1, align 1
+  %4 = load i32, i32* @x.43, align 4
+  %5 = load i32, i32* @y.44, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  store i1 %9, i1* %3, align 1
+  %10 = icmp slt i32 %5, 10
+  store i1 %10, i1* %2, align 1
+  %11 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 1092003178, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 1092003178, label %13
+    i32 -1982185203, label %16
+    i32 -435146613, label %26
+    i32 -1717206131, label %27
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %3, align 1
+  %.0..0..0.1 = load volatile i1, i1* %2, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 -1982185203, i32 -1717206131
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"* %11) #13
+  %17 = load i32, i32* @x.43, align 4
+  %18 = load i32, i32* @y.44, align 4
+  %19 = add i32 %17, -1
+  %20 = mul i32 %19, %17
+  %21 = and i32 %20, 1
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %18, 10
+  %24 = or i1 %23, %22
+  %25 = select i1 %24, i32 -435146613, i32 -1717206131
+  br label %.outer.backedge
+
+26:                                               ; preds = %12
+  ret void
+
+27:                                               ; preds = %12
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"* %11) #13
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %27, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %25, %16 ], [ -1982185203, %27 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxED2Ev(%"class.__gnu_cxx::new_allocator"* %0) unnamed_addr #5 comdat align 2 {
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = getelementptr inbounds %"class.std::_Function_base", %"class.std::_Function_base"* %0, i64 0, i32 1
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* null, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon* dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.51, align 4
+  %6 = load i32, i32* @y.52, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ 983630649, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 983630649, label %13
+    i32 -760986588, label %16
+    i32 1381482251, label %27
+    i32 -573494883, label %28
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 -760986588, i32 -573494883
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call fastcc dereferenceable(1) %class.anon* @"_ZSt4moveIRZ4mainE3$_0EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon* nonnull dereferenceable(1) %1) #13
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %class.anon* nonnull dereferenceable(1) %17)
+  %18 = load i32, i32* @x.51, align 4
+  %19 = load i32, i32* @y.52, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 1381482251, i32 -573494883
+  br label %.outer.backedge
+
+27:                                               ; preds = %12
+  ret void
+
+28:                                               ; preds = %12
+  %29 = tail call fastcc dereferenceable(1) %class.anon* @"_ZSt4moveIRZ4mainE3$_0EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon* nonnull dereferenceable(1) %1) #13
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %class.anon* nonnull dereferenceable(1) %29)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %28, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %26, %16 ], [ -760986588, %28 ]
+  br label %.outer
+}
+
+; Function Attrs: nofree noinline norecurse nounwind uwtable
+define internal fastcc dereferenceable(1) %class.anon* @"_ZSt4moveIRZ4mainE3$_0EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon* dereferenceable(1) %0) unnamed_addr #9 {
+  %2 = alloca %class.anon*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.53, align 4
+  %6 = load i32, i32* @y.54, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 -19908764, i32 1942726181
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ -853000238, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 -853000238, label %15
+    i32 -1830319610, label %.outer.backedge
+    i32 -19908764, label %18
+    i32 1942726181, label %19
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -1830319610, i32 1942726181
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  store %class.anon* %0, %class.anon** %2, align 8
+  %.0..0..0.2 = load volatile %class.anon*, %class.anon** %2, align 8
+  ret %class.anon* %.0..0..0.2
+
+19:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %19, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ -1830319610, %19 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal i64 @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_0E9_M_invokeERKSt9_Any_dataOxS6_"(%"union.std::_Any_data"* dereferenceable(16) %0, i64* dereferenceable(8) %1, i64* dereferenceable(8) %2) #5 align 2 {
+  %4 = alloca i64, align 8
+  %5 = alloca i1, align 1
+  %6 = alloca i1, align 1
+  %7 = load i32, i32* @x.55, align 4
+  %8 = load i32, i32* @y.56, align 4
+  %9 = add i32 %7, -1
+  %10 = mul i32 %9, %7
+  %11 = and i32 %10, 1
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %6, align 1
+  %13 = icmp slt i32 %8, 10
+  store i1 %13, i1* %5, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %3
+  %.0.ph = phi i32 [ 1587399472, %3 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 1587399472, label %15
+    i32 132338466, label %18
+    i32 147661290, label %34
+    i32 353526355, label %35
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %6, align 1
+  %.0..0..0.1 = load volatile i1, i1* %5, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 132338466, i32 353526355
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  %19 = tail call fastcc %class.anon* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %20 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %21 = load i64, i64* %20, align 8
+  %22 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %23 = load i64, i64* %22, align 8
+  %24 = tail call fastcc i64 @"_ZZ4mainENK3$_0clExx"(i64 %21, i64 %23)
+  store i64 %24, i64* %4, align 8
+  %25 = load i32, i32* @x.55, align 4
+  %26 = load i32, i32* @y.56, align 4
+  %27 = add i32 %25, -1
+  %28 = mul i32 %27, %25
+  %29 = and i32 %28, 1
+  %30 = icmp eq i32 %29, 0
+  %31 = icmp slt i32 %26, 10
+  %32 = or i1 %31, %30
+  %33 = select i1 %32, i32 147661290, i32 353526355
+  br label %.outer.backedge
+
+34:                                               ; preds = %14
+  %.0..0..0.2 = load volatile i64, i64* %4, align 8
+  ret i64 %.0..0..0.2
+
+35:                                               ; preds = %14
+  %36 = tail call fastcc %class.anon* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %37 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %38 = load i64, i64* %37, align 8
+  %39 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %40 = load i64, i64* %39, align 8
+  %41 = tail call fastcc i64 @"_ZZ4mainENK3$_0clExx"(i64 %38, i64 %40)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %35, %18, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ %33, %18 ], [ 132338466, %35 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal zeroext i1 @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1, i32 %2) #5 align 2 {
+  %4 = alloca i32, align 4
+  %5 = alloca %"union.std::_Any_data"**, align 8
+  %6 = alloca %"union.std::_Any_data"**, align 8
+  %7 = alloca i1, align 1
+  %8 = alloca i1, align 1
+  %9 = load i32, i32* @x.57, align 4
+  %10 = load i32, i32* @y.58, align 4
+  %11 = add i32 %9, -1
+  %12 = mul i32 %11, %9
+  %13 = and i32 %12, 1
+  %14 = icmp eq i32 %13, 0
+  store i1 %14, i1* %8, align 1
+  %15 = icmp slt i32 %10, 10
+  store i1 %15, i1* %7, align 1
+  br label %16
+
+16:                                               ; preds = %.backedge, %3
+  %.0 = phi i32 [ 769941022, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 769941022, label %17
+    i32 1301566322, label %20
+    i32 698654157, label %32
+    i32 1528456611, label %33
+    i32 425115111, label %36
+    i32 -1562810018, label %39
+    i32 -2132398082, label %42
+    i32 -1379024558, label %45
+    i32 -1251414343, label %48
+    i32 674006054, label %51
+    i32 799896018, label %61
+    i32 2116748652, label %75
+    i32 391705660, label %76
+    i32 1559393855, label %79
+    i32 646766932, label %81
+    i32 -2040358275, label %82
+    i32 -354051290, label %83
+    i32 1393314919, label %84
+  ]
+
+.backedge:                                        ; preds = %16, %84, %83, %81, %79, %76, %75, %61, %51, %48, %45, %42, %39, %36, %33, %32, %20, %17
+  %.0.be = phi i32 [ %.0, %16 ], [ 799896018, %84 ], [ 1301566322, %83 ], [ -2040358275, %81 ], [ -2040358275, %79 ], [ -2040358275, %76 ], [ -2040358275, %75 ], [ %74, %61 ], [ %60, %51 ], [ -2040358275, %48 ], [ %47, %45 ], [ %44, %42 ], [ %41, %39 ], [ %38, %36 ], [ %35, %33 ], [ 1528456611, %32 ], [ %31, %20 ], [ %19, %17 ]
+  br label %16
+
+17:                                               ; preds = %16
+  %.0..0..0. = load volatile i1, i1* %8, align 1
+  %.0..0..0.1 = load volatile i1, i1* %7, align 1
+  %18 = or i1 %.0..0..0., %.0..0..0.1
+  %19 = select i1 %18, i32 1301566322, i32 -354051290
+  br label %.backedge
+
+20:                                               ; preds = %16
+  %21 = alloca %"union.std::_Any_data"*, align 8
+  store %"union.std::_Any_data"** %21, %"union.std::_Any_data"*** %6, align 8
+  %22 = alloca %"union.std::_Any_data"*, align 8
+  store %"union.std::_Any_data"** %22, %"union.std::_Any_data"*** %5, align 8
+  %.0..0..0.2 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  store %"union.std::_Any_data"* %0, %"union.std::_Any_data"** %.0..0..0.2, align 8
+  %.0..0..0.8 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %5, align 8
+  store %"union.std::_Any_data"* %1, %"union.std::_Any_data"** %.0..0..0.8, align 8
+  store i32 %2, i32* %4, align 4
+  %23 = load i32, i32* @x.57, align 4
+  %24 = load i32, i32* @y.58, align 4
+  %25 = add i32 %23, -1
+  %26 = mul i32 %25, %23
+  %27 = and i32 %26, 1
+  %28 = icmp eq i32 %27, 0
+  %29 = icmp slt i32 %24, 10
+  %30 = or i1 %29, %28
+  %31 = select i1 %30, i32 698654157, i32 -354051290
+  br label %.backedge
+
+32:                                               ; preds = %16
+  br label %.backedge
+
+33:                                               ; preds = %16
+  %.0..0..0.12 = load volatile i32, i32* %4, align 4
+  %34 = icmp slt i32 %.0..0..0.12, 2
+  %35 = select i1 %34, i32 -2132398082, i32 425115111
+  br label %.backedge
+
+36:                                               ; preds = %16
+  %.0..0..0.13 = load volatile i32, i32* %4, align 4
+  %37 = icmp slt i32 %.0..0..0.13, 3
+  %38 = select i1 %37, i32 391705660, i32 -1562810018
+  br label %.backedge
+
+39:                                               ; preds = %16
+  %.0..0..0.14 = load volatile i32, i32* %4, align 4
+  %40 = icmp eq i32 %.0..0..0.14, 3
+  %41 = select i1 %40, i32 1559393855, i32 646766932
+  br label %.backedge
+
+42:                                               ; preds = %16
+  %.0..0..0.15 = load volatile i32, i32* %4, align 4
+  %43 = icmp slt i32 %.0..0..0.15, 1
+  %44 = select i1 %43, i32 -1379024558, i32 674006054
+  br label %.backedge
+
+45:                                               ; preds = %16
+  %.0..0..0.16 = load volatile i32, i32* %4, align 4
+  %46 = icmp eq i32 %.0..0..0.16, 0
+  %47 = select i1 %46, i32 -1251414343, i32 646766932
+  br label %.backedge
+
+48:                                               ; preds = %16
+  %.0..0..0.3 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  %49 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.3, align 8
+  %50 = call dereferenceable(8) %"class.std::type_info"** @_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v(%"union.std::_Any_data"* %49)
+  store %"class.std::type_info"* bitcast ({ i8*, i8* }* @"_ZTIZ4mainE3$_0" to %"class.std::type_info"*), %"class.std::type_info"** %50, align 8
+  br label %.backedge
+
+51:                                               ; preds = %16
+  %52 = load i32, i32* @x.57, align 4
+  %53 = load i32, i32* @y.58, align 4
+  %54 = add i32 %52, -1
+  %55 = mul i32 %54, %52
+  %56 = and i32 %55, 1
+  %57 = icmp eq i32 %56, 0
+  %58 = icmp slt i32 %53, 10
+  %59 = or i1 %58, %57
+  %60 = select i1 %59, i32 799896018, i32 1393314919
+  br label %.backedge
+
+61:                                               ; preds = %16
+  %.0..0..0.9 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %5, align 8
+  %62 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.9, align 8
+  %63 = call fastcc %class.anon* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* dereferenceable(16) %62)
+  %.0..0..0.4 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  %64 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.4, align 8
+  %65 = call fastcc dereferenceable(8) %class.anon** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_0EERT_v"(%"union.std::_Any_data"* %64)
+  store %class.anon* %63, %class.anon** %65, align 8
+  %66 = load i32, i32* @x.57, align 4
+  %67 = load i32, i32* @y.58, align 4
+  %68 = add i32 %66, -1
+  %69 = mul i32 %68, %66
+  %70 = and i32 %69, 1
+  %71 = icmp eq i32 %70, 0
+  %72 = icmp slt i32 %67, 10
+  %73 = or i1 %72, %71
+  %74 = select i1 %73, i32 2116748652, i32 1393314919
+  br label %.backedge
+
+75:                                               ; preds = %16
+  br label %.backedge
+
+76:                                               ; preds = %16
+  %.0..0..0.5 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  %77 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.5, align 8
+  %.0..0..0.10 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %5, align 8
+  %78 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.10, align 8
+  call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %77, %"union.std::_Any_data"* dereferenceable(16) %78)
+  br label %.backedge
+
+79:                                               ; preds = %16
+  %.0..0..0.6 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  %80 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.6, align 8
+  call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %80)
+  br label %.backedge
+
+81:                                               ; preds = %16
+  br label %.backedge
+
+82:                                               ; preds = %16
+  ret i1 false
+
+83:                                               ; preds = %16
+  br label %.backedge
+
+84:                                               ; preds = %16
+  %.0..0..0.11 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %5, align 8
+  %85 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.11, align 8
+  %86 = call fastcc %class.anon* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* dereferenceable(16) %85)
+  %.0..0..0.7 = load volatile %"union.std::_Any_data"**, %"union.std::_Any_data"*** %6, align 8
+  %87 = load %"union.std::_Any_data"*, %"union.std::_Any_data"** %.0..0..0.7, align 8
+  %88 = call fastcc dereferenceable(8) %class.anon** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_0EERT_v"(%"union.std::_Any_data"* %87)
+  store %class.anon* %86, %class.anon** %88, align 8
+  br label %.backedge
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon* dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %4 = tail call fastcc dereferenceable(1) %class.anon* @"_ZSt4moveIRZ4mainE3$_0EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon* nonnull dereferenceable(1) %1) #13
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = bitcast %"union.std::_Any_data"* %0 to i8*
+  ret i8* %2
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc %class.anon* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  %2 = alloca %class.anon*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.63, align 4
+  %6 = load i32, i32* @y.64, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %16, %1
+  %.ph = phi %class.anon* [ %17, %16 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %26, %16 ], [ -80264281, %1 ]
+  br label %.outer3
+
+.outer3:                                          ; preds = %.outer3.backedge, %.outer
+  %.0.ph4 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph4.be, %.outer3.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer3, %12
+  switch i32 %.0.ph4, label %12 [
+    i32 -80264281, label %13
+    i32 1857801332, label %16
+    i32 -840234302, label %27
+    i32 579808690, label %28
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 1857801332, i32 579808690
+  br label %.outer3.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call fastcc dereferenceable(1) %class.anon* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_0EERKT_v"(%"union.std::_Any_data"* nonnull %0)
+  %18 = load i32, i32* @x.63, align 4
+  %19 = load i32, i32* @y.64, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 -840234302, i32 579808690
+  br label %.outer
+
+27:                                               ; preds = %12
+  store %class.anon* %.ph, %class.anon** %2, align 8
+  %.0..0..0.2 = load volatile %class.anon*, %class.anon** %2, align 8
+  ret %class.anon* %.0..0..0.2
+
+28:                                               ; preds = %12
+  %29 = tail call fastcc dereferenceable(1) %class.anon* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_0EERKT_v"(%"union.std::_Any_data"* nonnull %0)
+  br label %.outer3.backedge
+
+.outer3.backedge:                                 ; preds = %28, %13
+  %.0.ph4.be = phi i32 [ %15, %13 ], [ 1857801332, %28 ]
+  br label %.outer3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc i64 @"_ZZ4mainENK3$_0clExx"(i64 %0, i64 %1) unnamed_addr #5 align 2 {
+  %3 = alloca i64, align 8
+  %4 = alloca i1, align 1
+  %5 = alloca i1, align 1
+  %6 = load i32, i32* @x.65, align 4
+  %7 = load i32, i32* @y.66, align 4
+  %8 = add i32 %6, -1
+  %9 = mul i32 %8, %6
+  %10 = and i32 %9, 1
+  %11 = icmp eq i32 %10, 0
+  store i1 %11, i1* %5, align 1
+  %12 = icmp slt i32 %7, 10
+  store i1 %12, i1* %4, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -2030209356, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %13
+
+13:                                               ; preds = %.outer, %13
+  switch i32 %.0.ph, label %13 [
+    i32 -2030209356, label %14
+    i32 -29007467, label %17
+    i32 -1504712374, label %31
+    i32 1673324180, label %32
+  ]
+
+14:                                               ; preds = %13
+  %.0..0..0. = load volatile i1, i1* %5, align 1
+  %.0..0..0.1 = load volatile i1, i1* %4, align 1
+  %15 = or i1 %.0..0..0., %.0..0..0.1
+  %16 = select i1 %15, i32 -29007467, i32 1673324180
+  br label %.outer.backedge
+
+17:                                               ; preds = %13
+  %18 = alloca i64, align 8
+  %19 = alloca i64, align 8
+  store i64 %0, i64* %18, align 8
+  store i64 %1, i64* %19, align 8
+  %20 = call dereferenceable(8) i64* @_ZSt3minIxERKT_S2_S2_(i64* nonnull dereferenceable(8) %18, i64* nonnull dereferenceable(8) %19)
+  %21 = load i64, i64* %20, align 8
+  store i64 %21, i64* %3, align 8
+  %22 = load i32, i32* @x.65, align 4
+  %23 = load i32, i32* @y.66, align 4
+  %24 = add i32 %22, -1
+  %25 = mul i32 %24, %22
+  %26 = and i32 %25, 1
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %28, %27
+  %30 = select i1 %29, i32 -1504712374, i32 1673324180
+  br label %.outer.backedge
+
+31:                                               ; preds = %13
+  %.0..0..0.2 = load volatile i64, i64* %3, align 8
+  ret i64 %.0..0..0.2
+
+32:                                               ; preds = %13
+  %33 = alloca i64, align 8
+  %34 = alloca i64, align 8
+  store i64 %0, i64* %33, align 8
+  store i64 %1, i64* %34, align 8
+  %35 = call dereferenceable(8) i64* @_ZSt3minIxERKT_S2_S2_(i64* nonnull dereferenceable(8) %33, i64* nonnull dereferenceable(8) %34)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %32, %17, %14
+  %.0.ph.be = phi i32 [ %16, %14 ], [ %30, %17 ], [ -29007467, %32 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* dereferenceable(8) %0) local_unnamed_addr #5 comdat {
+  %2 = alloca i64*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.67, align 4
+  %6 = load i32, i32* @y.68, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 -1913485588, i32 1844154214
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 1598552661, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 1598552661, label %15
+    i32 -1267984049, label %.outer.backedge
+    i32 -1913485588, label %18
+    i32 1844154214, label %19
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -1267984049, i32 1844154214
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  store i64* %0, i64** %2, align 8
+  %.0..0..0.2 = load volatile i64*, i64** %2, align 8
+  ret i64* %.0..0..0.2
+
+19:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %19, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ -1267984049, %19 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(1) %class.anon* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_0EERKT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNKSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %class.anon*
+  ret %class.anon* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i8* @_ZNKSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca i8*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.73, align 4
+  %6 = load i32, i32* @y.74, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 1972129849, i32 -2144021773
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 629971247, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 629971247, label %15
+    i32 -1725333107, label %.outer.backedge
+    i32 1972129849, label %18
+    i32 -2144021773, label %20
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -1725333107, i32 -2144021773
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  %19 = bitcast i8** %2 to %"union.std::_Any_data"**
+  store %"union.std::_Any_data"* %0, %"union.std::_Any_data"** %19, align 8
+  %.0..0..0.2 = load volatile i8*, i8** %2, align 8
+  ret i8* %.0..0..0.2
+
+20:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %20, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ -1725333107, %20 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64* @_ZSt3minIxERKT_S2_S2_(i64* dereferenceable(8) %0, i64* dereferenceable(8) %1) local_unnamed_addr #5 comdat {
+  %3 = alloca i64, align 8
+  %4 = alloca i64, align 8
+  %5 = load i64, i64* %1, align 8
+  store i64 %5, i64* %4, align 8
+  %6 = load i64, i64* %0, align 8
+  store i64 %6, i64* %3, align 8
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.07.ph = phi i64* [ undef, %2 ], [ %.07.ph.be, %.outer.backedge ]
+  %.0.ph = phi i32 [ 750617558, %2 ], [ -1360286957, %.outer.backedge ]
+  br label %.outer9
+
+.outer9:                                          ; preds = %.outer, %8
+  %.0.ph10 = phi i32 [ %.0.ph, %.outer ], [ %10, %8 ]
+  br label %7
+
+7:                                                ; preds = %.outer9, %7
+  switch i32 %.0.ph10, label %7 [
+    i32 750617558, label %8
+    i32 1511568265, label %.outer.backedge
+    i32 745404763, label %11
+    i32 -1360286957, label %12
+  ]
+
+8:                                                ; preds = %7
+  %.0..0..0.5 = load volatile i64, i64* %4, align 8
+  %.0..0..0.6 = load volatile i64, i64* %3, align 8
+  %9 = icmp slt i64 %.0..0..0.5, %.0..0..0.6
+  %10 = select i1 %9, i32 1511568265, i32 745404763
+  br label %.outer9
+
+11:                                               ; preds = %7
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %7, %11
+  %.07.ph.be = phi i64* [ %0, %11 ], [ %1, %7 ]
+  br label %.outer
+
+12:                                               ; preds = %7
+  ret i64* %.07.ph
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) %"class.std::type_info"** @_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v(%"union.std::_Any_data"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %"class.std::type_info"**
+  ret %"class.std::type_info"** %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(8) %class.anon** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_0EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %class.anon**
+  ret %class.anon** %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1) unnamed_addr #5 align 2 {
+  %3 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %4 = tail call fastcc dereferenceable(1) %class.anon* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_0EERKT_v"(%"union.std::_Any_data"* nonnull %1)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_0E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  tail call fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_0EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_0EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  ret void
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon.0* dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = tail call fastcc dereferenceable(1) %class.anon.0* @"_ZSt4moveIRZ4mainE3$_1EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon.0* nonnull dereferenceable(1) %1) #13
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %class.anon.0* nonnull dereferenceable(1) %3)
+  ret void
+}
+
+; Function Attrs: nofree noinline norecurse nounwind uwtable
+define internal fastcc dereferenceable(1) %class.anon.0* @"_ZSt4moveIRZ4mainE3$_1EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon.0* dereferenceable(1) %0) unnamed_addr #9 {
+  %2 = alloca %class.anon.0*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.91, align 4
+  %6 = load i32, i32* @y.92, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 1330502018, i32 -664974978
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 1012003496, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 1012003496, label %15
+    i32 39013770, label %.outer.backedge
+    i32 1330502018, label %18
+    i32 -664974978, label %19
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 39013770, i32 -664974978
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  store %class.anon.0* %0, %class.anon.0** %2, align 8
+  %.0..0..0.2 = load volatile %class.anon.0*, %class.anon.0** %2, align 8
+  ret %class.anon.0* %.0..0..0.2
+
+19:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %19, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ 39013770, %19 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal i64 @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_1E9_M_invokeERKSt9_Any_dataOxS6_"(%"union.std::_Any_data"* dereferenceable(16) %0, i64* dereferenceable(8) %1, i64* dereferenceable(8) %2) #5 align 2 {
+  %4 = alloca i64, align 8
+  %5 = alloca i1, align 1
+  %6 = alloca i1, align 1
+  %7 = load i32, i32* @x.93, align 4
+  %8 = load i32, i32* @y.94, align 4
+  %9 = add i32 %7, -1
+  %10 = mul i32 %9, %7
+  %11 = and i32 %10, 1
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %6, align 1
+  %13 = icmp slt i32 %8, 10
+  store i1 %13, i1* %5, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %3
+  %.0.ph = phi i32 [ -2084537318, %3 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 -2084537318, label %15
+    i32 -865314769, label %18
+    i32 167411224, label %34
+    i32 649876148, label %35
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %6, align 1
+  %.0..0..0.1 = load volatile i1, i1* %5, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -865314769, i32 649876148
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  %19 = tail call fastcc %class.anon.0* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %20 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %21 = load i64, i64* %20, align 8
+  %22 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %23 = load i64, i64* %22, align 8
+  %24 = tail call fastcc i64 @"_ZZ4mainENK3$_1clExx"(i64 %21, i64 %23)
+  store i64 %24, i64* %4, align 8
+  %25 = load i32, i32* @x.93, align 4
+  %26 = load i32, i32* @y.94, align 4
+  %27 = add i32 %25, -1
+  %28 = mul i32 %27, %25
+  %29 = and i32 %28, 1
+  %30 = icmp eq i32 %29, 0
+  %31 = icmp slt i32 %26, 10
+  %32 = or i1 %31, %30
+  %33 = select i1 %32, i32 167411224, i32 649876148
+  br label %.outer.backedge
+
+34:                                               ; preds = %14
+  %.0..0..0.2 = load volatile i64, i64* %4, align 8
+  ret i64 %.0..0..0.2
+
+35:                                               ; preds = %14
+  %36 = tail call fastcc %class.anon.0* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %37 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %38 = load i64, i64* %37, align 8
+  %39 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %40 = load i64, i64* %39, align 8
+  %41 = tail call fastcc i64 @"_ZZ4mainENK3$_1clExx"(i64 %38, i64 %40)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %35, %18, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ %33, %18 ], [ -865314769, %35 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal zeroext i1 @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1, i32 %2) #5 align 2 {
+  %4 = alloca i32, align 4
+  store i32 %2, i32* %4, align 4
+  br label %5
+
+5:                                                ; preds = %.backedge, %3
+  %.0 = phi i32 [ 1107784885, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 1107784885, label %6
+    i32 1296605354, label %9
+    i32 722801975, label %12
+    i32 1524804625, label %15
+    i32 -872809274, label %18
+    i32 -224711803, label %21
+    i32 2144867511, label %23
+    i32 -1276785237, label %26
+    i32 1453580831, label %36
+    i32 -1088212604, label %46
+    i32 1229535532, label %47
+    i32 634159018, label %48
+    i32 1265521137, label %49
+    i32 -1044826309, label %59
+    i32 233470941, label %69
+    i32 702605960, label %70
+    i32 -368567061, label %71
+  ]
+
+.backedge:                                        ; preds = %5, %71, %70, %59, %49, %48, %47, %46, %36, %26, %23, %21, %18, %15, %12, %9, %6
+  %.0.be = phi i32 [ %.0, %5 ], [ -1044826309, %71 ], [ 1453580831, %70 ], [ %68, %59 ], [ %58, %49 ], [ 1265521137, %48 ], [ 1265521137, %47 ], [ 1265521137, %46 ], [ %45, %36 ], [ %35, %26 ], [ 1265521137, %23 ], [ 1265521137, %21 ], [ %20, %18 ], [ %17, %15 ], [ %14, %12 ], [ %11, %9 ], [ %8, %6 ]
+  br label %5
+
+6:                                                ; preds = %5
+  %.0..0..0.9 = load volatile i32, i32* %4, align 4
+  %7 = icmp slt i32 %.0..0..0.9, 2
+  %8 = select i1 %7, i32 1524804625, i32 1296605354
+  br label %.backedge
+
+9:                                                ; preds = %5
+  %.0..0..0.10 = load volatile i32, i32* %4, align 4
+  %10 = icmp slt i32 %.0..0..0.10, 3
+  %11 = select i1 %10, i32 -1276785237, i32 722801975
+  br label %.backedge
+
+12:                                               ; preds = %5
+  %.0..0..0.11 = load volatile i32, i32* %4, align 4
+  %13 = icmp eq i32 %.0..0..0.11, 3
+  %14 = select i1 %13, i32 1229535532, i32 634159018
+  br label %.backedge
+
+15:                                               ; preds = %5
+  %.0..0..0.12 = load volatile i32, i32* %4, align 4
+  %16 = icmp slt i32 %.0..0..0.12, 1
+  %17 = select i1 %16, i32 -872809274, i32 2144867511
+  br label %.backedge
+
+18:                                               ; preds = %5
+  %.0..0..0.13 = load volatile i32, i32* %4, align 4
+  %19 = icmp eq i32 %.0..0..0.13, 0
+  %20 = select i1 %19, i32 -224711803, i32 634159018
+  br label %.backedge
+
+21:                                               ; preds = %5
+  %22 = tail call dereferenceable(8) %"class.std::type_info"** @_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v(%"union.std::_Any_data"* nonnull %0)
+  store %"class.std::type_info"* bitcast ({ i8*, i8* }* @"_ZTIZ4mainE3$_1" to %"class.std::type_info"*), %"class.std::type_info"** %22, align 8
+  br label %.backedge
+
+23:                                               ; preds = %5
+  %24 = tail call fastcc %class.anon.0* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %1)
+  %25 = tail call fastcc dereferenceable(8) %class.anon.0** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_1EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  store %class.anon.0* %24, %class.anon.0** %25, align 8
+  br label %.backedge
+
+26:                                               ; preds = %5
+  %27 = load i32, i32* @x.95, align 4
+  %28 = load i32, i32* @y.96, align 4
+  %29 = add i32 %27, -1
+  %30 = mul i32 %29, %27
+  %31 = and i32 %30, 1
+  %32 = icmp eq i32 %31, 0
+  %33 = icmp slt i32 %28, 10
+  %34 = or i1 %33, %32
+  %35 = select i1 %34, i32 1453580831, i32 702605960
+  br label %.backedge
+
+36:                                               ; preds = %5
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %"union.std::_Any_data"* nonnull dereferenceable(16) %1)
+  %37 = load i32, i32* @x.95, align 4
+  %38 = load i32, i32* @y.96, align 4
+  %39 = add i32 %37, -1
+  %40 = mul i32 %39, %37
+  %41 = and i32 %40, 1
+  %42 = icmp eq i32 %41, 0
+  %43 = icmp slt i32 %38, 10
+  %44 = or i1 %43, %42
+  %45 = select i1 %44, i32 -1088212604, i32 702605960
+  br label %.backedge
+
+46:                                               ; preds = %5
+  br label %.backedge
+
+47:                                               ; preds = %5
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  br label %.backedge
+
+48:                                               ; preds = %5
+  br label %.backedge
+
+49:                                               ; preds = %5
+  %50 = load i32, i32* @x.95, align 4
+  %51 = load i32, i32* @y.96, align 4
+  %52 = add i32 %50, -1
+  %53 = mul i32 %52, %50
+  %54 = and i32 %53, 1
+  %55 = icmp eq i32 %54, 0
+  %56 = icmp slt i32 %51, 10
+  %57 = or i1 %56, %55
+  %58 = select i1 %57, i32 -1044826309, i32 -368567061
+  br label %.backedge
+
+59:                                               ; preds = %5
+  %60 = load i32, i32* @x.95, align 4
+  %61 = load i32, i32* @y.96, align 4
+  %62 = add i32 %60, -1
+  %63 = mul i32 %62, %60
+  %64 = and i32 %63, 1
+  %65 = icmp eq i32 %64, 0
+  %66 = icmp slt i32 %61, 10
+  %67 = or i1 %66, %65
+  %68 = select i1 %67, i32 233470941, i32 -368567061
+  br label %.backedge
+
+69:                                               ; preds = %5
+  ret i1 false
+
+70:                                               ; preds = %5
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %"union.std::_Any_data"* nonnull dereferenceable(16) %1)
+  br label %.backedge
+
+71:                                               ; preds = %5
+  br label %.backedge
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon.0* dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %4 = tail call fastcc dereferenceable(1) %class.anon.0* @"_ZSt4moveIRZ4mainE3$_1EONSt16remove_referenceIT_E4typeEOS3_"(%class.anon.0* nonnull dereferenceable(1) %1) #13
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc %class.anon.0* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  %2 = alloca %class.anon.0*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.99, align 4
+  %6 = load i32, i32* @y.100, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %16, %1
+  %.ph = phi %class.anon.0* [ %18, %16 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %27, %16 ], [ 1004522761, %1 ]
+  br label %.outer3
+
+.outer3:                                          ; preds = %.outer3.backedge, %.outer
+  %.0.ph4 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph4.be, %.outer3.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer3, %12
+  switch i32 %.0.ph4, label %12 [
+    i32 1004522761, label %13
+    i32 1459718461, label %16
+    i32 1349419510, label %28
+    i32 540720151, label %29
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 1459718461, i32 540720151
+  br label %.outer3.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call fastcc dereferenceable(1) %class.anon.0* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_1EERKT_v"(%"union.std::_Any_data"* nonnull %0)
+  %18 = tail call fastcc %class.anon.0* @"_ZSt11__addressofIKZ4mainE3$_1EPT_RS2_"(%class.anon.0* nonnull dereferenceable(1) %17) #13
+  %19 = load i32, i32* @x.99, align 4
+  %20 = load i32, i32* @y.100, align 4
+  %21 = add i32 %19, -1
+  %22 = mul i32 %21, %19
+  %23 = and i32 %22, 1
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %20, 10
+  %26 = or i1 %25, %24
+  %27 = select i1 %26, i32 1349419510, i32 540720151
+  br label %.outer
+
+28:                                               ; preds = %12
+  store %class.anon.0* %.ph, %class.anon.0** %2, align 8
+  %.0..0..0.2 = load volatile %class.anon.0*, %class.anon.0** %2, align 8
+  ret %class.anon.0* %.0..0..0.2
+
+29:                                               ; preds = %12
+  %30 = tail call fastcc dereferenceable(1) %class.anon.0* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_1EERKT_v"(%"union.std::_Any_data"* nonnull %0)
+  %31 = tail call fastcc %class.anon.0* @"_ZSt11__addressofIKZ4mainE3$_1EPT_RS2_"(%class.anon.0* nonnull dereferenceable(1) %30) #13
+  br label %.outer3.backedge
+
+.outer3.backedge:                                 ; preds = %29, %13
+  %.0.ph4.be = phi i32 [ %15, %13 ], [ 1459718461, %29 ]
+  br label %.outer3
+}
+
+; Function Attrs: nofree noinline norecurse nounwind uwtable
+define internal fastcc i64 @"_ZZ4mainENK3$_1clExx"(i64 %0, i64 %1) unnamed_addr #9 align 2 {
+  %3 = alloca i64, align 8
+  %4 = alloca i1, align 1
+  %5 = alloca i1, align 1
+  %6 = load i32, i32* @x.101, align 4
+  %7 = load i32, i32* @y.102, align 4
+  %8 = add i32 %6, -1
+  %9 = mul i32 %8, %6
+  %10 = and i32 %9, 1
+  %11 = icmp eq i32 %10, 0
+  store i1 %11, i1* %5, align 1
+  %12 = icmp slt i32 %7, 10
+  store i1 %12, i1* %4, align 1
+  %13 = or i1 %12, %11
+  %14 = select i1 %13, i32 -1045039652, i32 1448739301
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ 1001127838, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %15
+
+15:                                               ; preds = %.outer, %15
+  switch i32 %.0.ph, label %15 [
+    i32 1001127838, label %16
+    i32 -117910142, label %.outer.backedge
+    i32 -1045039652, label %19
+    i32 1448739301, label %20
+  ]
+
+16:                                               ; preds = %15
+  %.0..0..0. = load volatile i1, i1* %5, align 1
+  %.0..0..0.1 = load volatile i1, i1* %4, align 1
+  %17 = or i1 %.0..0..0., %.0..0..0.1
+  %18 = select i1 %17, i32 -117910142, i32 1448739301
+  br label %.outer.backedge
+
+19:                                               ; preds = %15
+  store i64 %1, i64* %3, align 8
+  %.0..0..0.2 = load volatile i64, i64* %3, align 8
+  ret i64 %.0..0..0.2
+
+20:                                               ; preds = %15
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %15, %20, %16
+  %.0.ph.be = phi i32 [ %18, %16 ], [ -117910142, %20 ], [ %14, %15 ]
+  br label %.outer
+}
+
+; Function Attrs: nofree noinline norecurse nounwind uwtable
+define internal fastcc %class.anon.0* @"_ZSt11__addressofIKZ4mainE3$_1EPT_RS2_"(%class.anon.0* dereferenceable(1) %0) unnamed_addr #9 {
+  %2 = alloca %class.anon.0*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.103, align 4
+  %6 = load i32, i32* @y.104, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 1283085183, i32 -1652475711
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 2072741219, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 2072741219, label %15
+    i32 -407835770, label %.outer.backedge
+    i32 1283085183, label %18
+    i32 -1652475711, label %19
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -407835770, i32 -1652475711
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  store %class.anon.0* %0, %class.anon.0** %2, align 8
+  %.0..0..0.2 = load volatile %class.anon.0*, %class.anon.0** %2, align 8
+  ret %class.anon.0* %.0..0..0.2
+
+19:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %19, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ -407835770, %19 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(1) %class.anon.0* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_1EERKT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = alloca %class.anon.0*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.105, align 4
+  %6 = load i32, i32* @y.106, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %16, %1
+  %.ph = phi i8* [ %17, %16 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %26, %16 ], [ -2093933527, %1 ]
+  br label %.outer3
+
+.outer3:                                          ; preds = %.outer3.backedge, %.outer
+  %.0.ph4 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph4.be, %.outer3.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer3, %12
+  switch i32 %.0.ph4, label %12 [
+    i32 -2093933527, label %13
+    i32 -1216550342, label %16
+    i32 1977784844, label %27
+    i32 784039666, label %29
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 -1216550342, i32 784039666
+  br label %.outer3.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call i8* @_ZNKSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %18 = load i32, i32* @x.105, align 4
+  %19 = load i32, i32* @y.106, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 1977784844, i32 784039666
+  br label %.outer
+
+27:                                               ; preds = %12
+  %28 = bitcast %class.anon.0** %2 to i8**
+  store i8* %.ph, i8** %28, align 8
+  %.0..0..0.2 = load volatile %class.anon.0*, %class.anon.0** %2, align 8
+  ret %class.anon.0* %.0..0..0.2
+
+29:                                               ; preds = %12
+  %30 = tail call i8* @_ZNKSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  br label %.outer3.backedge
+
+.outer3.backedge:                                 ; preds = %29, %13
+  %.0.ph4.be = phi i32 [ %15, %13 ], [ -1216550342, %29 ]
+  br label %.outer3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(8) %class.anon.0** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_1EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %class.anon.0**
+  ret %class.anon.0** %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1) unnamed_addr #5 align 2 {
+  %3 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %4 = tail call fastcc dereferenceable(1) %class.anon.0* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_1EERKT_v"(%"union.std::_Any_data"* nonnull %1)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_1E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  tail call fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_1EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_1EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = alloca %class.anon.0*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.113, align 4
+  %6 = load i32, i32* @y.114, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %16, %1
+  %.ph = phi i8* [ %17, %16 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %26, %16 ], [ 2017348773, %1 ]
+  br label %.outer1
+
+.outer1:                                          ; preds = %.outer1.backedge, %.outer
+  %.0.ph2 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph2.be, %.outer1.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer1, %12
+  switch i32 %.0.ph2, label %12 [
+    i32 2017348773, label %13
+    i32 732235127, label %16
+    i32 1599304806, label %27
+    i32 -177752523, label %29
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 732235127, i32 -177752523
+  br label %.outer1.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %18 = load i32, i32* @x.113, align 4
+  %19 = load i32, i32* @y.114, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 1599304806, i32 -177752523
+  br label %.outer
+
+27:                                               ; preds = %12
+  %28 = bitcast %class.anon.0** %2 to i8**
+  store i8* %.ph, i8** %28, align 8
+  %.0..0..0.2 = load volatile %class.anon.0*, %class.anon.0** %2, align 8
+  ret void
+
+29:                                               ; preds = %12
+  %30 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  br label %.outer1.backedge
+
+.outer1.backedge:                                 ; preds = %29, %13
+  %.0.ph2.be = phi i32 [ %15, %13 ], [ 732235127, %29 ]
+  br label %.outer1
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E15_M_init_functorERSt9_Any_dataOS1_"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon.2* readnone dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.117, align 4
+  %6 = load i32, i32* @y.118, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ 1010977543, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 1010977543, label %13
+    i32 2053510631, label %16
+    i32 1787888828, label %26
+    i32 1824290995, label %27
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 2053510631, i32 1824290995
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %class.anon.2* nonnull dereferenceable(1) %1)
+  %17 = load i32, i32* @x.117, align 4
+  %18 = load i32, i32* @y.118, align 4
+  %19 = add i32 %17, -1
+  %20 = mul i32 %19, %17
+  %21 = and i32 %20, 1
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %18, 10
+  %24 = or i1 %23, %22
+  %25 = select i1 %24, i32 1787888828, i32 1824290995
+  br label %.outer.backedge
+
+26:                                               ; preds = %12
+  ret void
+
+27:                                               ; preds = %12
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %class.anon.2* nonnull dereferenceable(1) %1)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %27, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %25, %16 ], [ 2053510631, %27 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal i64 @"_ZNSt17_Function_handlerIFxxxEZ4mainE3$_2E9_M_invokeERKSt9_Any_dataOxS6_"(%"union.std::_Any_data"* dereferenceable(16) %0, i64* dereferenceable(8) %1, i64* dereferenceable(8) %2) #5 align 2 {
+  %4 = alloca i64, align 8
+  %5 = alloca i1, align 1
+  %6 = alloca i1, align 1
+  %7 = load i32, i32* @x.121, align 4
+  %8 = load i32, i32* @y.122, align 4
+  %9 = add i32 %7, -1
+  %10 = mul i32 %9, %7
+  %11 = and i32 %10, 1
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %6, align 1
+  %13 = icmp slt i32 %8, 10
+  store i1 %13, i1* %5, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %3
+  %.0.ph = phi i32 [ 959092010, %3 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 959092010, label %15
+    i32 612712818, label %18
+    i32 -766529672, label %34
+    i32 1033230915, label %35
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %6, align 1
+  %.0..0..0.1 = load volatile i1, i1* %5, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 612712818, i32 1033230915
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  %19 = tail call fastcc %class.anon.2* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %20 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %21 = load i64, i64* %20, align 8
+  %22 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %23 = load i64, i64* %22, align 8
+  %24 = tail call fastcc i64 @"_ZZ4mainENK3$_2clExx"(i64 %21, i64 %23)
+  store i64 %24, i64* %4, align 8
+  %25 = load i32, i32* @x.121, align 4
+  %26 = load i32, i32* @y.122, align 4
+  %27 = add i32 %25, -1
+  %28 = mul i32 %27, %25
+  %29 = and i32 %28, 1
+  %30 = icmp eq i32 %29, 0
+  %31 = icmp slt i32 %26, 10
+  %32 = or i1 %31, %30
+  %33 = select i1 %32, i32 -766529672, i32 1033230915
+  br label %.outer.backedge
+
+34:                                               ; preds = %14
+  %.0..0..0.2 = load volatile i64, i64* %4, align 8
+  ret i64 %.0..0..0.2
+
+35:                                               ; preds = %14
+  %36 = tail call fastcc %class.anon.2* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  %37 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %1) #13
+  %38 = load i64, i64* %37, align 8
+  %39 = tail call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %2) #13
+  %40 = load i64, i64* %39, align 8
+  %41 = tail call fastcc i64 @"_ZZ4mainENK3$_2clExx"(i64 %38, i64 %40)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %35, %18, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ %33, %18 ], [ 612712818, %35 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal zeroext i1 @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E10_M_managerERSt9_Any_dataRKS3_St18_Manager_operation"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1, i32 %2) #5 align 2 {
+  %4 = alloca i32, align 4
+  store i32 %2, i32* %4, align 4
+  br label %5
+
+5:                                                ; preds = %.backedge, %3
+  %.0 = phi i32 [ -1332253567, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 -1332253567, label %6
+    i32 -38622008, label %9
+    i32 -176399577, label %12
+    i32 -505803987, label %15
+    i32 161536724, label %18
+    i32 795560010, label %21
+    i32 -170511102, label %31
+    i32 1090144418, label %42
+    i32 1456806285, label %43
+    i32 1381018301, label %46
+    i32 -2006530836, label %47
+    i32 1526195119, label %48
+    i32 1041964975, label %49
+    i32 611761156, label %50
+  ]
+
+.backedge:                                        ; preds = %5, %50, %48, %47, %46, %43, %42, %31, %21, %18, %15, %12, %9, %6
+  %.0.be = phi i32 [ %.0, %5 ], [ -170511102, %50 ], [ 1041964975, %48 ], [ 1041964975, %47 ], [ 1041964975, %46 ], [ 1041964975, %43 ], [ 1041964975, %42 ], [ %41, %31 ], [ %30, %21 ], [ %20, %18 ], [ %17, %15 ], [ %14, %12 ], [ %11, %9 ], [ %8, %6 ]
+  br label %5
+
+6:                                                ; preds = %5
+  %.0..0..0.8 = load volatile i32, i32* %4, align 4
+  %7 = icmp slt i32 %.0..0..0.8, 2
+  %8 = select i1 %7, i32 -505803987, i32 -38622008
+  br label %.backedge
+
+9:                                                ; preds = %5
+  %.0..0..0.9 = load volatile i32, i32* %4, align 4
+  %10 = icmp slt i32 %.0..0..0.9, 3
+  %11 = select i1 %10, i32 1381018301, i32 -176399577
+  br label %.backedge
+
+12:                                               ; preds = %5
+  %.0..0..0.10 = load volatile i32, i32* %4, align 4
+  %13 = icmp eq i32 %.0..0..0.10, 3
+  %14 = select i1 %13, i32 -2006530836, i32 1526195119
+  br label %.backedge
+
+15:                                               ; preds = %5
+  %.0..0..0.11 = load volatile i32, i32* %4, align 4
+  %16 = icmp slt i32 %.0..0..0.11, 1
+  %17 = select i1 %16, i32 161536724, i32 1456806285
+  br label %.backedge
+
+18:                                               ; preds = %5
+  %.0..0..0.12 = load volatile i32, i32* %4, align 4
+  %19 = icmp eq i32 %.0..0..0.12, 0
+  %20 = select i1 %19, i32 795560010, i32 1526195119
+  br label %.backedge
+
+21:                                               ; preds = %5
+  %22 = load i32, i32* @x.123, align 4
+  %23 = load i32, i32* @y.124, align 4
+  %24 = add i32 %22, -1
+  %25 = mul i32 %24, %22
+  %26 = and i32 %25, 1
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %28, %27
+  %30 = select i1 %29, i32 -170511102, i32 611761156
+  br label %.backedge
+
+31:                                               ; preds = %5
+  %32 = tail call dereferenceable(8) %"class.std::type_info"** @_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v(%"union.std::_Any_data"* nonnull %0)
+  store %"class.std::type_info"* bitcast ({ i8*, i8* }* @"_ZTIZ4mainE3$_2" to %"class.std::type_info"*), %"class.std::type_info"** %32, align 8
+  %33 = load i32, i32* @x.123, align 4
+  %34 = load i32, i32* @y.124, align 4
+  %35 = add i32 %33, -1
+  %36 = mul i32 %35, %33
+  %37 = and i32 %36, 1
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %34, 10
+  %40 = or i1 %39, %38
+  %41 = select i1 %40, i32 1090144418, i32 611761156
+  br label %.backedge
+
+42:                                               ; preds = %5
+  br label %.backedge
+
+43:                                               ; preds = %5
+  %44 = tail call fastcc %class.anon.2* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* nonnull dereferenceable(16) %1)
+  %45 = tail call fastcc dereferenceable(8) %class.anon.2** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_2EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  store %class.anon.2* %44, %class.anon.2** %45, align 8
+  br label %.backedge
+
+46:                                               ; preds = %5
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0, %"union.std::_Any_data"* nonnull dereferenceable(16) %1)
+  br label %.backedge
+
+47:                                               ; preds = %5
+  tail call fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* nonnull dereferenceable(16) %0)
+  br label %.backedge
+
+48:                                               ; preds = %5
+  br label %.backedge
+
+49:                                               ; preds = %5
+  ret i1 false
+
+50:                                               ; preds = %5
+  %51 = tail call dereferenceable(8) %"class.std::type_info"** @_ZNSt9_Any_data9_M_accessIPKSt9type_infoEERT_v(%"union.std::_Any_data"* nonnull %0)
+  store %"class.std::type_info"* bitcast ({ i8*, i8* }* @"_ZTIZ4mainE3$_2" to %"class.std::type_info"*), %"class.std::type_info"** %51, align 8
+  br label %.backedge
+}
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E15_M_init_functorERSt9_Any_dataOS1_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %class.anon.2* readnone dereferenceable(1) %1) unnamed_addr #8 align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.125, align 4
+  %6 = load i32, i32* @y.126, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -1120265541, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 -1120265541, label %13
+    i32 2074915955, label %16
+    i32 1573832864, label %27
+    i32 809839755, label %28
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 2074915955, i32 809839755
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %18 = load i32, i32* @x.125, align 4
+  %19 = load i32, i32* @y.126, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 1573832864, i32 809839755
+  br label %.outer.backedge
+
+27:                                               ; preds = %12
+  ret void
+
+28:                                               ; preds = %12
+  %29 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %28, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %26, %16 ], [ 2074915955, %28 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc nonnull %class.anon.2* @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E14_M_get_pointerERKSt9_Any_data"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  %2 = tail call fastcc dereferenceable(1) %class.anon.2* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_2EERKT_v"(%"union.std::_Any_data"* nonnull %0)
+  ret %class.anon.2* %2
+}
+
+; Function Attrs: nofree noinline norecurse nounwind uwtable
+define internal fastcc i64 @"_ZZ4mainENK3$_2clExx"(i64 %0, i64 %1) unnamed_addr #9 align 2 {
+  %3 = alloca i64, align 8
+  store i64 %1, i64* %3, align 8
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.06.ph = phi i64 [ undef, %2 ], [ %.06.ph.be, %.outer.backedge ]
+  %.0.ph = phi i32 [ 162771159, %2 ], [ 762699265, %.outer.backedge ]
+  br label %.outer1
+
+.outer1:                                          ; preds = %.outer, %5
+  %.0.ph2 = phi i32 [ %.0.ph, %.outer ], [ %7, %5 ]
+  br label %4
+
+4:                                                ; preds = %.outer1, %4
+  switch i32 %.0.ph2, label %4 [
+    i32 162771159, label %5
+    i32 -1769857789, label %.outer.backedge
+    i32 404477846, label %8
+    i32 762699265, label %9
+  ]
+
+5:                                                ; preds = %4
+  %.0..0..0.5 = load volatile i64, i64* %3, align 8
+  %6 = icmp eq i64 %.0..0..0.5, 2147483647
+  %7 = select i1 %6, i32 -1769857789, i32 404477846
+  br label %.outer1
+
+8:                                                ; preds = %4
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %4, %8
+  %.06.ph.be = phi i64 [ %1, %8 ], [ %0, %4 ]
+  br label %.outer
+
+9:                                                ; preds = %4
+  ret i64 %.06.ph
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(1) %class.anon.2* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_2EERKT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNKSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %class.anon.2*
+  ret %class.anon.2* %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc dereferenceable(8) %class.anon.2** @"_ZNSt9_Any_data9_M_accessIPZ4mainE3$_2EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  %3 = bitcast i8* %2 to %class.anon.2**
+  ret %class.anon.2** %3
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E8_M_cloneERSt9_Any_dataRKS3_St17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0, %"union.std::_Any_data"* dereferenceable(16) %1) unnamed_addr #5 align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.137, align 4
+  %6 = load i32, i32* @y.138, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -534650898, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 -534650898, label %13
+    i32 1686377096, label %16
+    i32 -608209106, label %28
+    i32 1557833831, label %29
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 1686377096, i32 1557833831
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %18 = tail call fastcc dereferenceable(1) %class.anon.2* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_2EERKT_v"(%"union.std::_Any_data"* nonnull %1)
+  %19 = load i32, i32* @x.137, align 4
+  %20 = load i32, i32* @y.138, align 4
+  %21 = add i32 %19, -1
+  %22 = mul i32 %21, %19
+  %23 = and i32 %22, 1
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %20, 10
+  %26 = or i1 %25, %24
+  %27 = select i1 %26, i32 -608209106, i32 1557833831
+  br label %.outer.backedge
+
+28:                                               ; preds = %12
+  ret void
+
+29:                                               ; preds = %12
+  %30 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* nonnull %0)
+  %31 = tail call fastcc dereferenceable(1) %class.anon.2* @"_ZNKSt9_Any_data9_M_accessIZ4mainE3$_2EERKT_v"(%"union.std::_Any_data"* nonnull %1)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %29, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %27, %16 ], [ 1686377096, %29 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt14_Function_base13_Base_managerIZ4mainE3$_2E10_M_destroyERSt9_Any_dataSt17integral_constantIbLb1EE"(%"union.std::_Any_data"* dereferenceable(16) %0) unnamed_addr #5 align 2 {
+  %2 = alloca i1, align 1
+  %3 = alloca i1, align 1
+  %4 = load i32, i32* @x.139, align 4
+  %5 = load i32, i32* @y.140, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  store i1 %9, i1* %3, align 1
+  %10 = icmp slt i32 %5, 10
+  store i1 %10, i1* %2, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 2139986319, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %11
+
+11:                                               ; preds = %.outer, %11
+  switch i32 %.0.ph, label %11 [
+    i32 2139986319, label %12
+    i32 -1359159511, label %15
+    i32 -1924867066, label %25
+    i32 -1657439920, label %26
+  ]
+
+12:                                               ; preds = %11
+  %.0..0..0. = load volatile i1, i1* %3, align 1
+  %.0..0..0.1 = load volatile i1, i1* %2, align 1
+  %13 = or i1 %.0..0..0., %.0..0..0.1
+  %14 = select i1 %13, i32 -1359159511, i32 -1657439920
+  br label %.outer.backedge
+
+15:                                               ; preds = %11
+  tail call fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_2EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  %16 = load i32, i32* @x.139, align 4
+  %17 = load i32, i32* @y.140, align 4
+  %18 = add i32 %16, -1
+  %19 = mul i32 %18, %16
+  %20 = and i32 %19, 1
+  %21 = icmp eq i32 %20, 0
+  %22 = icmp slt i32 %17, 10
+  %23 = or i1 %22, %21
+  %24 = select i1 %23, i32 -1924867066, i32 -1657439920
+  br label %.outer.backedge
+
+25:                                               ; preds = %11
+  ret void
+
+26:                                               ; preds = %11
+  tail call fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_2EERT_v"(%"union.std::_Any_data"* nonnull %0)
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %26, %15, %12
+  %.0.ph.be = phi i32 [ %14, %12 ], [ %24, %15 ], [ -1359159511, %26 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @"_ZNSt9_Any_data9_M_accessIZ4mainE3$_2EERT_v"(%"union.std::_Any_data"* %0) unnamed_addr #5 align 2 {
+  %2 = tail call i8* @_ZNSt9_Any_data9_M_accessEv(%"union.std::_Any_data"* %0)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEEC2Ev(%"class.std::vector"* %0) unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  invoke void @_ZNSt12_Vector_baseIxSaIxEEC2Ev(%"struct.std::_Vector_base"* %2)
+          to label %3 unwind label %4
+
+3:                                                ; preds = %1
+  ret void
+
+4:                                                ; preds = %1
+  %5 = landingpad { i8*, i32 }
+          catch i8* null
+  %6 = extractvalue { i8*, i32 } %5, 0
+  tail call void @__clang_call_terminate(i8* %6) #14
+  unreachable
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt8functionIFxxxEEC2ERKS1_(%"class.std::function"* %0, %"class.std::function"* dereferenceable(32) %1) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = load i32, i32* @x.145, align 4
+  %4 = load i32, i32* @y.146, align 4
+  %5 = add i32 %3, -1
+  %6 = mul i32 %5, %3
+  %7 = and i32 %6, 1
+  %8 = icmp eq i32 %7, 0
+  %9 = icmp slt i32 %4, 10
+  %10 = or i1 %9, %8
+  br i1 %10, label %11, label %72
+
+11:                                               ; preds = %72, %2
+  %12 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %12)
+  %13 = tail call zeroext i1 @_ZNKSt8functionIFxxxEEcvbEv(%"class.std::function"* nonnull %1) #13
+  %14 = load i32, i32* @x.145, align 4
+  %15 = load i32, i32* @y.146, align 4
+  %16 = add i32 %14, -1
+  %17 = mul i32 %16, %14
+  %18 = and i32 %17, 1
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %15, 10
+  %21 = or i1 %20, %19
+  br i1 %21, label %22, label %72
+
+22:                                               ; preds = %11
+  br i1 %13, label %23, label %66
+
+23:                                               ; preds = %22
+  %24 = getelementptr inbounds %"class.std::function", %"class.std::function"* %1, i64 0, i32 0, i32 1
+  %25 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %24, align 8
+  %26 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 0
+  %27 = getelementptr inbounds %"class.std::function", %"class.std::function"* %1, i64 0, i32 0, i32 0
+  %28 = invoke zeroext i1 %25(%"union.std::_Any_data"* dereferenceable(16) %26, %"union.std::_Any_data"* nonnull dereferenceable(16) %27, i32 2)
+          to label %29 unwind label %42
+
+29:                                               ; preds = %23
+  %30 = load i32, i32* @x.145, align 4
+  %31 = load i32, i32* @y.146, align 4
+  %32 = add i32 %30, -1
+  %33 = mul i32 %32, %30
+  %34 = and i32 %33, 1
+  %35 = icmp eq i32 %34, 0
+  %36 = icmp slt i32 %31, 10
+  %37 = or i1 %36, %35
+  %38 = getelementptr inbounds %"class.std::function", %"class.std::function"* %1, i64 0, i32 1
+  br i1 %37, label %.critedge, label %.preheader4
+
+.preheader4:                                      ; preds = %29
+  %39 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 1
+  %40 = getelementptr inbounds %"class.std::function", %"class.std::function"* %1, i64 0, i32 0, i32 1
+  %41 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 1
+  br label %74
+
+42:                                               ; preds = %23
+  %43 = load i32, i32* @x.145, align 4
+  %44 = load i32, i32* @y.146, align 4
+  %45 = add i32 %43, -1
+  %46 = mul i32 %45, %43
+  %47 = and i32 %46, 1
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %44, 10
+  %50 = or i1 %49, %48
+  br i1 %50, label %51, label %79
+
+51:                                               ; preds = %79, %42
+  %52 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt14_Function_baseD2Ev(%"class.std::_Function_base"* %12) #13
+  %53 = load i32, i32* @x.145, align 4
+  %54 = load i32, i32* @y.146, align 4
+  %55 = add i32 %53, -1
+  %56 = mul i32 %55, %53
+  %57 = and i32 %56, 1
+  %58 = icmp eq i32 %57, 0
+  %59 = icmp slt i32 %54, 10
+  %60 = or i1 %59, %58
+  br i1 %60, label %71, label %79
+
+.critedge:                                        ; preds = %29
+  %61 = load i64 (%"union.std::_Any_data"*, i64*, i64*)*, i64 (%"union.std::_Any_data"*, i64*, i64*)** %38, align 8
+  %62 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 1
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* %61, i64 (%"union.std::_Any_data"*, i64*, i64*)** %62, align 8
+  %63 = getelementptr inbounds %"class.std::function", %"class.std::function"* %1, i64 0, i32 0, i32 1
+  %64 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %63, align 8
+  %65 = getelementptr inbounds %"class.std::function", %"class.std::function"* %0, i64 0, i32 0, i32 1
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* %64, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %65, align 8
+  br label %66
+
+66:                                               ; preds = %.critedge, %22
+  %.pre-phi7 = phi i32 [ %34, %.critedge ], [ %18, %22 ]
+  %67 = phi i32 [ %31, %.critedge ], [ %15, %22 ]
+  %68 = icmp eq i32 %.pre-phi7, 0
+  %69 = icmp slt i32 %67, 10
+  %70 = or i1 %69, %68
+  br i1 %70, label %.critedge3, label %.preheader
+
+.critedge3:                                       ; preds = %66
+  ret void
+
+71:                                               ; preds = %51
+  resume { i8*, i32 } %52
+
+72:                                               ; preds = %11, %2
+  %.cast = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  tail call void @_ZNSt14_Function_baseC2Ev(%"class.std::_Function_base"* %.cast)
+  %73 = tail call zeroext i1 @_ZNKSt8functionIFxxxEEcvbEv(%"class.std::function"* nonnull %1) #13
+  br label %11
+
+74:                                               ; preds = %74, %.preheader4
+  %75 = load i64 (%"union.std::_Any_data"*, i64*, i64*)*, i64 (%"union.std::_Any_data"*, i64*, i64*)** %38, align 8
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* %75, i64 (%"union.std::_Any_data"*, i64*, i64*)** %39, align 8
+  %76 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %40, align 8
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* %76, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %41, align 8
+  %77 = load i64 (%"union.std::_Any_data"*, i64*, i64*)*, i64 (%"union.std::_Any_data"*, i64*, i64*)** %38, align 8
+  store i64 (%"union.std::_Any_data"*, i64*, i64*)* %77, i64 (%"union.std::_Any_data"*, i64*, i64*)** %39, align 8
+  %78 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %40, align 8
+  store i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* %78, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %41, align 8
+  br label %74
+
+79:                                               ; preds = %51, %42
+  %80 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt14_Function_baseD2Ev(%"class.std::_Function_base"* %12) #13
+  br label %51
+
+.preheader:                                       ; preds = %66, %.preheader
+  br label %.preheader, !llvm.loop !12
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEE6assignEmRKx(%"class.std::vector"* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat align 2 {
+  tail call void @_ZNSt6vectorIxSaIxEE14_M_fill_assignEmRKx(%"class.std::vector"* %0, i64 %1, i64* nonnull dereferenceable(8) %2)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEEC2Ev(%"struct.std::_Vector_base"* %0) unnamed_addr #0 comdat align 2 {
+  %2 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %2)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0 to %"class.std::allocator"*
+  tail call void @_ZNSaIxEC2Ev(%"class.std::allocator"* %2) #13
+  %3 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0 to i8*
+  call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) %3, i8 0, i64 24, i1 false)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIxEC2Ev(%"class.std::allocator"* %0) unnamed_addr #5 comdat align 2 {
+  %2 = alloca i1, align 1
+  %3 = alloca i1, align 1
+  %4 = load i32, i32* @x.153, align 4
+  %5 = load i32, i32* @y.154, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  store i1 %9, i1* %3, align 1
+  %10 = icmp slt i32 %5, 10
+  store i1 %10, i1* %2, align 1
+  %11 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ 284523713, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 284523713, label %13
+    i32 1103730855, label %16
+    i32 1741709026, label %26
+    i32 -184819145, label %27
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %3, align 1
+  %.0..0..0.1 = load volatile i1, i1* %2, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 1103730855, i32 -184819145
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxEC2Ev(%"class.__gnu_cxx::new_allocator"* %11) #13
+  %17 = load i32, i32* @x.153, align 4
+  %18 = load i32, i32* @y.154, align 4
+  %19 = add i32 %17, -1
+  %20 = mul i32 %19, %17
+  %21 = and i32 %20, 1
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %18, 10
+  %24 = or i1 %23, %22
+  %25 = select i1 %24, i32 1741709026, i32 -184819145
+  br label %.outer.backedge
+
+26:                                               ; preds = %12
+  ret void
+
+27:                                               ; preds = %12
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxEC2Ev(%"class.__gnu_cxx::new_allocator"* %11) #13
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %27, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %25, %16 ], [ 1103730855, %27 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxEC2Ev(%"class.__gnu_cxx::new_allocator"* %0) unnamed_addr #5 comdat align 2 {
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNKSt8functionIFxxxEEcvbEv(%"class.std::function"* %0) local_unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %2 = load i32, i32* @x.157, align 4
+  %3 = load i32, i32* @y.158, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  br i1 %9, label %.critedge, label %.preheader
+
+.critedge:                                        ; preds = %1
+  %10 = getelementptr %"class.std::function", %"class.std::function"* %0, i64 0, i32 0
+  %11 = tail call zeroext i1 @_ZNKSt14_Function_base8_M_emptyEv(%"class.std::_Function_base"* %10)
+  %12 = xor i1 %11, true
+  ret i1 %12
+
+.preheader:                                       ; preds = %1, %.preheader
+  br label %.preheader, !llvm.loop !13
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr zeroext i1 @_ZNKSt14_Function_base8_M_emptyEv(%"class.std::_Function_base"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = getelementptr inbounds %"class.std::_Function_base", %"class.std::_Function_base"* %0, i64 0, i32 1
+  %3 = load i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)*, i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)** %2, align 8
+  %.not = icmp eq i1 (%"union.std::_Any_data"*, %"union.std::_Any_data"*, i32)* %3, null
+  ret i1 %.not
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEE14_M_fill_assignEmRKx(%"class.std::vector"* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = alloca i1, align 1
+  %5 = alloca %"class.std::vector"*, align 8
+  %6 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %7 = alloca %"class.__gnu_cxx::__normal_iterator"*, align 8
+  %8 = alloca %"class.std::vector"*, align 8
+  %9 = alloca i64**, align 8
+  %10 = alloca i64*, align 8
+  %11 = alloca i1, align 1
+  %12 = alloca i1, align 1
+  %13 = load i32, i32* @x.161, align 4
+  %14 = load i32, i32* @y.162, align 4
+  %15 = add i32 %13, -1
+  %16 = mul i32 %15, %13
+  %17 = and i32 %16, 1
+  %18 = icmp eq i32 %17, 0
+  store i1 %18, i1* %12, align 1
+  %19 = icmp slt i32 %14, 10
+  store i1 %19, i1* %11, align 1
+  br label %20
+
+20:                                               ; preds = %.backedge, %3
+  %.0 = phi i32 [ 1195791738, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 1195791738, label %21
+    i32 -1183886618, label %24
+    i32 739602606, label %42
+    i32 1291514449, label %44
+    i32 -1924702146, label %51
+    i32 -1931932832, label %56
+    i32 177474900, label %76
+    i32 -1486422992, label %82
+    i32 -1322700930, label %92
+    i32 103051346, label %102
+    i32 1797389989, label %103
+    i32 -1777592969, label %104
+    i32 295929587, label %106
+  ]
+
+.backedge:                                        ; preds = %20, %106, %104, %102, %92, %82, %76, %56, %51, %44, %42, %24, %21
+  %.0.be = phi i32 [ %.0, %20 ], [ -1322700930, %106 ], [ -1183886618, %104 ], [ 1797389989, %102 ], [ %101, %92 ], [ %91, %82 ], [ -1486422992, %76 ], [ -1486422992, %56 ], [ %55, %51 ], [ 1797389989, %44 ], [ %43, %42 ], [ %41, %24 ], [ %23, %21 ]
+  br label %20
+
+21:                                               ; preds = %20
+  %.0..0..0. = load volatile i1, i1* %12, align 1
+  %.0..0..0.1 = load volatile i1, i1* %11, align 1
+  %22 = or i1 %.0..0..0., %.0..0..0.1
+  %23 = select i1 %22, i32 -1183886618, i32 -1777592969
+  br label %.backedge
+
+24:                                               ; preds = %20
+  %25 = alloca i64, align 8
+  store i64* %25, i64** %10, align 8
+  %26 = alloca i64*, align 8
+  store i64** %26, i64*** %9, align 8
+  %27 = alloca %"class.std::vector", align 8
+  store %"class.std::vector"* %27, %"class.std::vector"** %8, align 8
+  %28 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %28, %"class.__gnu_cxx::__normal_iterator"** %7, align 8
+  %29 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  store %"class.__gnu_cxx::__normal_iterator"* %29, %"class.__gnu_cxx::__normal_iterator"** %6, align 8
+  %.0..0..0.2 = load volatile i64*, i64** %10, align 8
+  store i64 %1, i64* %.0..0..0.2, align 8
+  %.0..0..0.8 = load volatile i64**, i64*** %9, align 8
+  store i64* %2, i64** %.0..0..0.8, align 8
+  store %"class.std::vector"* %0, %"class.std::vector"** %5, align 8
+  %.0..0..0.3 = load volatile i64*, i64** %10, align 8
+  %30 = load i64, i64* %.0..0..0.3, align 8
+  %.0..0..0.20 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %31 = call i64 @_ZNKSt6vectorIxSaIxEE8capacityEv(%"class.std::vector"* %.0..0..0.20) #13
+  %32 = icmp ugt i64 %30, %31
+  store i1 %32, i1* %4, align 1
+  %33 = load i32, i32* @x.161, align 4
+  %34 = load i32, i32* @y.162, align 4
+  %35 = add i32 %33, -1
+  %36 = mul i32 %35, %33
+  %37 = and i32 %36, 1
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %34, 10
+  %40 = or i1 %39, %38
+  %41 = select i1 %40, i32 739602606, i32 -1777592969
+  br label %.backedge
+
+42:                                               ; preds = %20
+  %.0..0..0.32 = load volatile i1, i1* %4, align 1
+  %43 = select i1 %.0..0..0.32, i32 1291514449, i32 -1924702146
+  br label %.backedge
+
+44:                                               ; preds = %20
+  %.0..0..0.4 = load volatile i64*, i64** %10, align 8
+  %45 = load i64, i64* %.0..0..0.4, align 8
+  %.0..0..0.9 = load volatile i64**, i64*** %9, align 8
+  %46 = load i64*, i64** %.0..0..0.9, align 8
+  %.0..0..0.21 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %47 = getelementptr %"class.std::vector", %"class.std::vector"* %.0..0..0.21, i64 0, i32 0
+  %48 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %47) #13
+  %.0..0..0.13 = load volatile %"class.std::vector"*, %"class.std::vector"** %8, align 8
+  call void @_ZNSt6vectorIxSaIxEEC2EmRKxRKS0_(%"class.std::vector"* %.0..0..0.13, i64 %45, i64* dereferenceable(8) %46, %"class.std::allocator"* nonnull dereferenceable(1) %48)
+  %.0..0..0.14 = load volatile %"class.std::vector"*, %"class.std::vector"** %8, align 8
+  %49 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %.0..0..0.14, i64 0, i32 0, i32 0
+  %.0..0..0.22 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %50 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %.0..0..0.22, i64 0, i32 0, i32 0
+  call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_impl12_M_swap_dataERS2_(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %49, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* dereferenceable(24) %50) #13
+  %.0..0..0.15 = load volatile %"class.std::vector"*, %"class.std::vector"** %8, align 8
+  call void @_ZNSt6vectorIxSaIxEED2Ev(%"class.std::vector"* %.0..0..0.15) #13
+  br label %.backedge
+
+51:                                               ; preds = %20
+  %.0..0..0.5 = load volatile i64*, i64** %10, align 8
+  %52 = load i64, i64* %.0..0..0.5, align 8
+  %.0..0..0.23 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %53 = call i64 @_ZNKSt6vectorIxSaIxEE4sizeEv(%"class.std::vector"* %.0..0..0.23) #13
+  %54 = icmp ugt i64 %52, %53
+  %55 = select i1 %54, i32 -1931932832, i32 177474900
+  br label %.backedge
+
+56:                                               ; preds = %20
+  %.0..0..0.24 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %57 = call i64* @_ZNSt6vectorIxSaIxEE5beginEv(%"class.std::vector"* %.0..0..0.24) #13
+  %.0..0..0.16 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7, align 8
+  %58 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %.0..0..0.16, i64 0, i32 0
+  store i64* %57, i64** %58, align 8
+  %.0..0..0.25 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %59 = call i64* @_ZNSt6vectorIxSaIxEE3endEv(%"class.std::vector"* %.0..0..0.25) #13
+  %.0..0..0.18 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6, align 8
+  %60 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %.0..0..0.18, i64 0, i32 0
+  store i64* %59, i64** %60, align 8
+  %.0..0..0.10 = load volatile i64**, i64*** %9, align 8
+  %61 = load i64*, i64** %.0..0..0.10, align 8
+  %.0..0..0.17 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %7, align 8
+  %62 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %.0..0..0.17, i64 0, i32 0
+  %63 = load i64*, i64** %62, align 8
+  %.0..0..0.19 = load volatile %"class.__gnu_cxx::__normal_iterator"*, %"class.__gnu_cxx::__normal_iterator"** %6, align 8
+  %64 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %.0..0..0.19, i64 0, i32 0
+  %65 = load i64*, i64** %64, align 8
+  call void @_ZSt4fillIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEExEvT_S7_RKT0_(i64* %63, i64* %65, i64* dereferenceable(8) %61)
+  %.0..0..0.26 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %66 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %.0..0..0.26, i64 0, i32 0, i32 0, i32 1
+  %67 = load i64*, i64** %66, align 8
+  %.0..0..0.6 = load volatile i64*, i64** %10, align 8
+  %68 = load i64, i64* %.0..0..0.6, align 8
+  %.0..0..0.27 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %69 = call i64 @_ZNKSt6vectorIxSaIxEE4sizeEv(%"class.std::vector"* %.0..0..0.27) #13
+  %70 = sub i64 %68, %69
+  %.0..0..0.11 = load volatile i64**, i64*** %9, align 8
+  %71 = load i64*, i64** %.0..0..0.11, align 8
+  %.0..0..0.28 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %72 = getelementptr %"class.std::vector", %"class.std::vector"* %.0..0..0.28, i64 0, i32 0
+  %73 = call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %72) #13
+  %74 = call i64* @_ZSt24__uninitialized_fill_n_aIPxmxxET_S1_T0_RKT1_RSaIT2_E(i64* %67, i64 %70, i64* dereferenceable(8) %71, %"class.std::allocator"* nonnull dereferenceable(1) %73)
+  %.0..0..0.29 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %75 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %.0..0..0.29, i64 0, i32 0, i32 0, i32 1
+  store i64* %74, i64** %75, align 8
+  br label %.backedge
+
+76:                                               ; preds = %20
+  %.0..0..0.30 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  %77 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %.0..0..0.30, i64 0, i32 0, i32 0, i32 0
+  %78 = load i64*, i64** %77, align 8
+  %.0..0..0.7 = load volatile i64*, i64** %10, align 8
+  %79 = load i64, i64* %.0..0..0.7, align 8
+  %.0..0..0.12 = load volatile i64**, i64*** %9, align 8
+  %80 = load i64*, i64** %.0..0..0.12, align 8
+  %81 = call i64* @_ZSt6fill_nIPxmxET_S1_T0_RKT1_(i64* %78, i64 %79, i64* dereferenceable(8) %80)
+  %.0..0..0.31 = load volatile %"class.std::vector"*, %"class.std::vector"** %5, align 8
+  call void @_ZNSt6vectorIxSaIxEE15_M_erase_at_endEPx(%"class.std::vector"* %.0..0..0.31, i64* %81) #13
+  br label %.backedge
+
+82:                                               ; preds = %20
+  %83 = load i32, i32* @x.161, align 4
+  %84 = load i32, i32* @y.162, align 4
+  %85 = add i32 %83, -1
+  %86 = mul i32 %85, %83
+  %87 = and i32 %86, 1
+  %88 = icmp eq i32 %87, 0
+  %89 = icmp slt i32 %84, 10
+  %90 = or i1 %89, %88
+  %91 = select i1 %90, i32 -1322700930, i32 295929587
+  br label %.backedge
+
+92:                                               ; preds = %20
+  %93 = load i32, i32* @x.161, align 4
+  %94 = load i32, i32* @y.162, align 4
+  %95 = add i32 %93, -1
+  %96 = mul i32 %95, %93
+  %97 = and i32 %96, 1
+  %98 = icmp eq i32 %97, 0
+  %99 = icmp slt i32 %94, 10
+  %100 = or i1 %99, %98
+  %101 = select i1 %100, i32 103051346, i32 295929587
+  br label %.backedge
+
+102:                                              ; preds = %20
+  br label %.backedge
+
+103:                                              ; preds = %20
+  ret void
+
+104:                                              ; preds = %20
+  %105 = call i64 @_ZNKSt6vectorIxSaIxEE8capacityEv(%"class.std::vector"* %0) #13
+  br label %.backedge
+
+106:                                              ; preds = %20
+  br label %.backedge
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNKSt6vectorIxSaIxEE8capacityEv(%"class.std::vector"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 2
+  %3 = load i64*, i64** %2, align 8
+  %4 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  %5 = load i64*, i64** %4, align 8
+  %6 = ptrtoint i64* %3 to i64
+  %7 = ptrtoint i64* %5 to i64
+  %8 = sub i64 %6, %7
+  %9 = ashr exact i64 %8, 3
+  ret i64 %9
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEEC2EmRKxRKS0_(%"class.std::vector"* %0, i64 %1, i64* dereferenceable(8) %2, %"class.std::allocator"* dereferenceable(1) %3) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %5 = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEEC2EmRKS0_(%"struct.std::_Vector_base"* %5, i64 %1, %"class.std::allocator"* nonnull dereferenceable(1) %3)
+  invoke void @_ZNSt6vectorIxSaIxEE18_M_fill_initializeEmRKx(%"class.std::vector"* %0, i64 %1, i64* nonnull dereferenceable(8) %2)
+          to label %6 unwind label %15
+
+6:                                                ; preds = %4
+  %7 = load i32, i32* @x.165, align 4
+  %8 = load i32, i32* @y.166, align 4
+  %9 = add i32 %7, -1
+  %10 = mul i32 %9, %7
+  %11 = and i32 %10, 1
+  %12 = icmp eq i32 %11, 0
+  %13 = icmp slt i32 %8, 10
+  %14 = or i1 %13, %12
+  br i1 %14, label %.critedge, label %.preheader
+
+.critedge:                                        ; preds = %6
+  ret void
+
+15:                                               ; preds = %4
+  %16 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt12_Vector_baseIxSaIxEED2Ev(%"struct.std::_Vector_base"* %5) #13
+  %17 = load i32, i32* @x.165, align 4
+  %18 = load i32, i32* @y.166, align 4
+  %19 = add i32 %17, -1
+  %20 = mul i32 %19, %17
+  %21 = and i32 %20, 1
+  %22 = icmp eq i32 %21, 0
+  %23 = icmp slt i32 %18, 10
+  %24 = or i1 %23, %22
+  br i1 %24, label %.critedge8, label %.preheader10
+
+.critedge8:                                       ; preds = %15
+  resume { i8*, i32 } %16
+
+.preheader:                                       ; preds = %6, %.preheader
+  br label %.preheader, !llvm.loop !14
+
+.preheader10:                                     ; preds = %15, %.preheader10
+  br label %.preheader10, !llvm.loop !15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_impl12_M_swap_dataERS2_(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* dereferenceable(24) %1) local_unnamed_addr #5 comdat align 2 {
+  %3 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, i64 0, i32 0
+  %4 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %1, i64 0, i32 0
+  tail call void @_ZSt4swapIPxEvRT_S2_(i64** dereferenceable(8) %3, i64** nonnull dereferenceable(8) %4) #13
+  %5 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, i64 0, i32 1
+  %6 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %1, i64 0, i32 1
+  tail call void @_ZSt4swapIPxEvRT_S2_(i64** nonnull dereferenceable(8) %5, i64** nonnull dereferenceable(8) %6) #13
+  %7 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, i64 0, i32 2
+  %8 = getelementptr inbounds %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl", %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %1, i64 0, i32 2
+  tail call void @_ZSt4swapIPxEvRT_S2_(i64** nonnull dereferenceable(8) %7, i64** nonnull dereferenceable(8) %8) #13
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNKSt6vectorIxSaIxEE4sizeEv(%"class.std::vector"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca i64, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.169, align 4
+  %6 = load i32, i32* @y.170, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 1
+  %13 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  %14 = or i1 %11, %10
+  %15 = select i1 %14, i32 -1601335342, i32 -2000472725
+  br label %.outer
+
+.outer:                                           ; preds = %20, %1
+  %.ph = phi i64 [ %26, %20 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %15, %20 ], [ -352482952, %1 ]
+  br label %.outer3
+
+.outer3:                                          ; preds = %.outer3.backedge, %.outer
+  %.0.ph4 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph4.be, %.outer3.backedge ]
+  br label %16
+
+16:                                               ; preds = %.outer3, %16
+  switch i32 %.0.ph4, label %16 [
+    i32 -352482952, label %17
+    i32 -299780529, label %20
+    i32 -1601335342, label %27
+    i32 -2000472725, label %.outer3.backedge
+  ]
+
+17:                                               ; preds = %16
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %18 = or i1 %.0..0..0., %.0..0..0.1
+  %19 = select i1 %18, i32 -299780529, i32 -2000472725
+  br label %.outer3.backedge
+
+20:                                               ; preds = %16
+  %21 = load i64*, i64** %12, align 8
+  %22 = load i64*, i64** %13, align 8
+  %23 = ptrtoint i64* %21 to i64
+  %24 = ptrtoint i64* %22 to i64
+  %25 = sub i64 %23, %24
+  %26 = ashr exact i64 %25, 3
+  br label %.outer
+
+27:                                               ; preds = %16
+  store i64 %.ph, i64* %2, align 8
+  %.0..0..0.2 = load volatile i64, i64* %2, align 8
+  ret i64 %.0..0..0.2
+
+.outer3.backedge:                                 ; preds = %16, %17
+  %.0.ph4.be = phi i32 [ %19, %17 ], [ -299780529, %16 ]
+  br label %.outer3
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZSt4fillIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEExEvT_S7_RKT0_(i64* %0, i64* %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat {
+  %4 = tail call i64* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i64* %0)
+  %5 = tail call i64* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i64* %1)
+  tail call void @_ZSt8__fill_aIPxxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT0_EE7__valueEvE6__typeET_S6_RKS3_(i64* %4, i64* %5, i64* nonnull dereferenceable(8) %2)
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64* @_ZNSt6vectorIxSaIxEE5beginEv(%"class.std::vector"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca i64*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.173, align 4
+  %6 = load i32, i32* @y.174, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ -1352553430, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %13
+
+13:                                               ; preds = %.outer, %13
+  switch i32 %.0.ph, label %13 [
+    i32 -1352553430, label %14
+    i32 -1584905012, label %17
+    i32 1765399473, label %30
+    i32 -203687159, label %31
+  ]
+
+14:                                               ; preds = %13
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %15 = or i1 %.0..0..0., %.0..0..0.1
+  %16 = select i1 %15, i32 -1584905012, i32 -203687159
+  br label %.outer.backedge
+
+17:                                               ; preds = %13
+  %18 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* nonnull %18, i64** dereferenceable(8) %12) #13
+  %19 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %18, i64 0, i32 0
+  %20 = load i64*, i64** %19, align 8
+  store i64* %20, i64** %2, align 8
+  %21 = load i32, i32* @x.173, align 4
+  %22 = load i32, i32* @y.174, align 4
+  %23 = add i32 %21, -1
+  %24 = mul i32 %23, %21
+  %25 = and i32 %24, 1
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %22, 10
+  %28 = or i1 %27, %26
+  %29 = select i1 %28, i32 1765399473, i32 -203687159
+  br label %.outer.backedge
+
+30:                                               ; preds = %13
+  %.0..0..0.2 = load volatile i64*, i64** %2, align 8
+  ret i64* %.0..0..0.2
+
+31:                                               ; preds = %13
+  %32 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* nonnull %32, i64** dereferenceable(8) %12) #13
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %31, %17, %14
+  %.0.ph.be = phi i32 [ %16, %14 ], [ %29, %17 ], [ -1584905012, %31 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64* @_ZNSt6vectorIxSaIxEE3endEv(%"class.std::vector"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 1
+  call void @_ZN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* nonnull %2, i64** nonnull dereferenceable(8) %3) #13
+  %4 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i64 0, i32 0
+  %5 = load i64*, i64** %4, align 8
+  ret i64* %5
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZSt24__uninitialized_fill_n_aIPxmxxET_S1_T0_RKT1_RSaIT2_E(i64* %0, i64 %1, i64* dereferenceable(8) %2, %"class.std::allocator"* dereferenceable(1) %3) local_unnamed_addr #0 comdat {
+  %5 = tail call i64* @_ZSt20uninitialized_fill_nIPxmxET_S1_T0_RKT1_(i64* %0, i64 %1, i64* nonnull dereferenceable(8) %2)
+  ret i64* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEE15_M_erase_at_endEPx(%"class.std::vector"* %0, i64* %1) local_unnamed_addr #5 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %3 = load i32, i32* @x.179, align 4
+  %4 = load i32, i32* @y.180, align 4
+  %5 = add i32 %3, -1
+  %6 = mul i32 %5, %3
+  %7 = and i32 %6, 1
+  %8 = icmp eq i32 %7, 0
+  %9 = icmp slt i32 %4, 10
+  %10 = or i1 %9, %8
+  br i1 %10, label %11, label %28
+
+11:                                               ; preds = %28, %2
+  %.cast1 = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %12 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 1
+  %13 = load i64*, i64** %12, align 8
+  %14 = tail call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %.cast1) #13
+  %15 = load i32, i32* @x.179, align 4
+  %16 = load i32, i32* @y.180, align 4
+  %17 = add i32 %15, -1
+  %18 = mul i32 %17, %15
+  %19 = and i32 %18, 1
+  %20 = icmp eq i32 %19, 0
+  %21 = icmp slt i32 %16, 10
+  %22 = or i1 %21, %20
+  br i1 %22, label %23, label %28
+
+23:                                               ; preds = %11
+  invoke void @_ZSt8_DestroyIPxxEvT_S1_RSaIT0_E(i64* %1, i64* %13, %"class.std::allocator"* nonnull dereferenceable(1) %14)
+          to label %24 unwind label %25
+
+24:                                               ; preds = %23
+  store i64* %1, i64** %12, align 8
+  ret void
+
+25:                                               ; preds = %23
+  %26 = landingpad { i8*, i32 }
+          catch i8* null
+  %27 = extractvalue { i8*, i32 } %26, 0
+  tail call void @__clang_call_terminate(i8* %27) #14
+  unreachable
+
+28:                                               ; preds = %11, %2
+  %.cast = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %29 = tail call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %.cast) #13
+  br label %11
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZSt6fill_nIPxmxET_S1_T0_RKT1_(i64* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat {
+  %4 = tail call i64* @_ZSt12__niter_baseIPxENSt11_Niter_baseIT_E13iterator_typeES2_(i64* %0)
+  %5 = tail call i64* @_ZSt10__fill_n_aIPxmxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_(i64* %4, i64 %1, i64* nonnull dereferenceable(8) %2)
+  ret i64* %5
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEEC2EmRKS0_(%"struct.std::_Vector_base"* %0, i64 %1, %"class.std::allocator"* dereferenceable(1) %2) unnamed_addr #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2ERKS0_(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %4, %"class.std::allocator"* nonnull dereferenceable(1) %2) #13
+  invoke void @_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm(%"struct.std::_Vector_base"* %0, i64 %1)
+          to label %5 unwind label %14
+
+5:                                                ; preds = %3
+  %6 = load i32, i32* @x.183, align 4
+  %7 = load i32, i32* @y.184, align 4
+  %8 = add i32 %6, -1
+  %9 = mul i32 %8, %6
+  %10 = and i32 %9, 1
+  %11 = icmp eq i32 %10, 0
+  %12 = icmp slt i32 %7, 10
+  %13 = or i1 %12, %11
+  br i1 %13, label %.critedge, label %.preheader
+
+.critedge:                                        ; preds = %5
+  ret void
+
+14:                                               ; preds = %3
+  %15 = landingpad { i8*, i32 }
+          cleanup
+  tail call void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implD2Ev(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %4) #13
+  resume { i8*, i32 } %15
+
+.preheader:                                       ; preds = %5, %.preheader
+  br label %.preheader, !llvm.loop !16
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt6vectorIxSaIxEE18_M_fill_initializeEmRKx(%"class.std::vector"* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = getelementptr %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0
+  %5 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  %6 = load i64*, i64** %5, align 8
+  %7 = tail call dereferenceable(1) %"class.std::allocator"* @_ZNSt12_Vector_baseIxSaIxEE19_M_get_Tp_allocatorEv(%"struct.std::_Vector_base"* %4) #13
+  %8 = tail call i64* @_ZSt24__uninitialized_fill_n_aIPxmxxET_S1_T0_RKT1_RSaIT2_E(i64* %6, i64 %1, i64* nonnull dereferenceable(8) %2, %"class.std::allocator"* nonnull dereferenceable(1) %7)
+  %9 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 1
+  store i64* %8, i64** %9, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE12_Vector_implC2ERKS0_(%"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0, %"class.std::allocator"* dereferenceable(1) %1) unnamed_addr #5 comdat align 2 {
+  %3 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0 to %"class.std::allocator"*
+  tail call void @_ZNSaIxEC2ERKS_(%"class.std::allocator"* %3, %"class.std::allocator"* nonnull dereferenceable(1) %1) #13
+  %4 = bitcast %"struct.std::_Vector_base<long long, std::allocator<long long> >::_Vector_impl"* %0 to i8*
+  call void @llvm.memset.p0i8.i64(i8* noundef nonnull align 8 dereferenceable(24) %4, i8 0, i64 24, i1 false)
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZNSt12_Vector_baseIxSaIxEE17_M_create_storageEm(%"struct.std::_Vector_base"* %0, i64 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.189, align 4
+  %6 = load i32, i32* @y.190, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 0
+  %13 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 1
+  %14 = getelementptr inbounds %"struct.std::_Vector_base", %"struct.std::_Vector_base"* %0, i64 0, i32 0, i32 2
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -1538126265, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %15
+
+15:                                               ; preds = %.outer, %15
+  switch i32 %.0.ph, label %15 [
+    i32 -1538126265, label %16
+    i32 1960605255, label %19
+    i32 -966529812, label %31
+    i32 1515414977, label %32
+  ]
+
+16:                                               ; preds = %15
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %17 = or i1 %.0..0..0., %.0..0..0.1
+  %18 = select i1 %17, i32 1960605255, i32 1515414977
+  br label %.outer.backedge
+
+19:                                               ; preds = %15
+  %20 = tail call i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* %0, i64 %1)
+  store i64* %20, i64** %12, align 8
+  store i64* %20, i64** %13, align 8
+  %21 = getelementptr inbounds i64, i64* %20, i64 %1
+  store i64* %21, i64** %14, align 8
+  %22 = load i32, i32* @x.189, align 4
+  %23 = load i32, i32* @y.190, align 4
+  %24 = add i32 %22, -1
+  %25 = mul i32 %24, %22
+  %26 = and i32 %25, 1
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %28, %27
+  %30 = select i1 %29, i32 -966529812, i32 1515414977
+  br label %.outer.backedge
+
+31:                                               ; preds = %15
+  ret void
+
+32:                                               ; preds = %15
+  %33 = tail call i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* %0, i64 %1)
+  store i64* %33, i64** %12, align 8
+  store i64* %33, i64** %13, align 8
+  %34 = getelementptr inbounds i64, i64* %33, i64 %1
+  store i64* %34, i64** %14, align 8
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %32, %19, %16
+  %.0.ph.be = phi i32 [ %18, %16 ], [ %30, %19 ], [ 1960605255, %32 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZNSaIxEC2ERKS_(%"class.std::allocator"* %0, %"class.std::allocator"* dereferenceable(1) %1) unnamed_addr #5 comdat align 2 {
+  %3 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  %4 = bitcast %"class.std::allocator"* %1 to %"class.__gnu_cxx::new_allocator"*
+  tail call void @_ZN9__gnu_cxx13new_allocatorIxEC2ERKS1_(%"class.__gnu_cxx::new_allocator"* %3, %"class.__gnu_cxx::new_allocator"* nonnull dereferenceable(1) %4) #13
+  ret void
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx13new_allocatorIxEC2ERKS1_(%"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"* dereferenceable(1) %1) unnamed_addr #5 comdat align 2 {
+  ret void
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZNSt12_Vector_baseIxSaIxEE11_M_allocateEm(%"struct.std::_Vector_base"* %0, i64 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = alloca i64, align 8
+  %4 = alloca %"struct.std::_Vector_base"*, align 8
+  store %"struct.std::_Vector_base"* %0, %"struct.std::_Vector_base"** %4, align 8
+  store i64 %1, i64* %3, align 8
+  br label %.outer.outer
+
+.outer.outer:                                     ; preds = %.outer.outer.backedge, %2
+  %.06.ph.ph = phi i32 [ 189956140, %2 ], [ 1683291744, %.outer.outer.backedge ]
+  %.0.ph.ph = phi i64* [ undef, %2 ], [ %.0.ph.ph.be, %.outer.outer.backedge ]
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.outer, %6
+  %.06.ph = phi i32 [ %7, %6 ], [ %.06.ph.ph, %.outer.outer ]
+  br label %5
+
+5:                                                ; preds = %.outer, %5
+  switch i32 %.06.ph, label %5 [
+    i32 189956140, label %6
+    i32 -1910361810, label %8
+    i32 480708970, label %.outer.outer.backedge
+    i32 1683291744, label %11
+  ]
+
+6:                                                ; preds = %5
+  %.0..0..0.5 = load volatile i64, i64* %3, align 8
+  %.not = icmp eq i64 %.0..0..0.5, 0
+  %7 = select i1 %.not, i32 480708970, i32 -1910361810
+  br label %.outer
+
+8:                                                ; preds = %5
+  %.0..0..0.4 = load volatile %"struct.std::_Vector_base"*, %"struct.std::_Vector_base"** %4, align 8
+  %9 = bitcast %"struct.std::_Vector_base"* %.0..0..0.4 to %"class.std::allocator"*
+  %10 = tail call i64* @_ZNSt16allocator_traitsISaIxEE8allocateERS0_m(%"class.std::allocator"* dereferenceable(1) %9, i64 %1)
+  br label %.outer.outer.backedge
+
+.outer.outer.backedge:                            ; preds = %5, %8
+  %.0.ph.ph.be = phi i64* [ %10, %8 ], [ null, %5 ]
+  br label %.outer.outer
+
+11:                                               ; preds = %5
+  ret i64* %.0.ph.ph
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZNSt16allocator_traitsISaIxEE8allocateERS0_m(%"class.std::allocator"* dereferenceable(1) %0, i64 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = bitcast %"class.std::allocator"* %0 to %"class.__gnu_cxx::new_allocator"*
+  %4 = tail call i64* @_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"* nonnull %3, i64 %1, i8* null)
+  ret i64* %4
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZN9__gnu_cxx13new_allocatorIxE8allocateEmPKv(%"class.__gnu_cxx::new_allocator"* %0, i64 %1, i8* %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = alloca i64, align 8
+  %5 = alloca i64, align 8
+  store i64 %1, i64* %5, align 8
+  %6 = tail call i64 @_ZNK9__gnu_cxx13new_allocatorIxE8max_sizeEv(%"class.__gnu_cxx::new_allocator"* %0) #13
+  store i64 %6, i64* %4, align 8
+  br label %.outer
+
+.outer:                                           ; preds = %8, %3
+  %.0.ph = phi i32 [ %10, %8 ], [ 2025235851, %3 ]
+  br label %7
+
+7:                                                ; preds = %.outer, %7
+  switch i32 %.0.ph, label %7 [
+    i32 2025235851, label %8
+    i32 1052022823, label %11
+    i32 -1847593927, label %12
+  ]
+
+8:                                                ; preds = %7
+  %.0..0..0.3 = load volatile i64, i64* %5, align 8
+  %.0..0..0.4 = load volatile i64, i64* %4, align 8
+  %9 = icmp ugt i64 %.0..0..0.3, %.0..0..0.4
+  %10 = select i1 %9, i32 1052022823, i32 -1847593927
+  br label %.outer
+
+11:                                               ; preds = %7
+  tail call void @_ZSt17__throw_bad_allocv() #15
+  unreachable
+
+12:                                               ; preds = %7
+  %13 = shl i64 %1, 3
+  %14 = tail call i8* @_Znwm(i64 %13)
+  %15 = bitcast i8* %14 to i64*
+  ret i64* %15
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64 @_ZNK9__gnu_cxx13new_allocatorIxE8max_sizeEv(%"class.__gnu_cxx::new_allocator"* %0) local_unnamed_addr #5 comdat align 2 {
+  ret i64 2305843009213693951
+}
+
+; Function Attrs: noreturn
+declare void @_ZSt17__throw_bad_allocv() local_unnamed_addr #10
+
+; Function Attrs: nobuiltin
+declare noalias i8* @_Znwm(i64) local_unnamed_addr #11
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt4swapIPxEvRT_S2_(i64** dereferenceable(8) %0, i64** dereferenceable(8) %1) local_unnamed_addr #5 comdat {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.203, align 4
+  %6 = load i32, i32* @y.204, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -935146765, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer, %12
+  switch i32 %.0.ph, label %12 [
+    i32 -935146765, label %13
+    i32 -545304833, label %16
+    i32 -1478793875, label %33
+    i32 2038563381, label %34
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 -545304833, i32 2038563381
+  br label %.outer.backedge
+
+16:                                               ; preds = %12
+  %17 = alloca i64*, align 8
+  %18 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %0) #13
+  %19 = load i64*, i64** %18, align 8
+  store i64* %19, i64** %17, align 8
+  %20 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %1) #13
+  %21 = load i64*, i64** %20, align 8
+  store i64* %21, i64** %0, align 8
+  %22 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %17) #13
+  %23 = load i64*, i64** %22, align 8
+  store i64* %23, i64** %1, align 8
+  %24 = load i32, i32* @x.203, align 4
+  %25 = load i32, i32* @y.204, align 4
+  %26 = add i32 %24, -1
+  %27 = mul i32 %26, %24
+  %28 = and i32 %27, 1
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %25, 10
+  %31 = or i1 %30, %29
+  %32 = select i1 %31, i32 -1478793875, i32 2038563381
+  br label %.outer.backedge
+
+33:                                               ; preds = %12
+  ret void
+
+34:                                               ; preds = %12
+  %35 = alloca i64*, align 8
+  %36 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %0) #13
+  %37 = load i64*, i64** %36, align 8
+  store i64* %37, i64** %35, align 8
+  %38 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %1) #13
+  %39 = load i64*, i64** %38, align 8
+  store i64* %39, i64** %0, align 8
+  %40 = call dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** nonnull dereferenceable(8) %35) #13
+  %41 = load i64*, i64** %40, align 8
+  store i64* %41, i64** %1, align 8
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %34, %16, %13
+  %.0.ph.be = phi i32 [ %15, %13 ], [ %32, %16 ], [ -545304833, %34 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64** @_ZSt4moveIRPxEONSt16remove_referenceIT_E4typeEOS3_(i64** dereferenceable(8) %0) local_unnamed_addr #5 comdat {
+  ret i64** %0
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZSt8__fill_aIPxxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT0_EE7__valueEvE6__typeET_S6_RKS3_(i64* %0, i64* %1, i64* dereferenceable(8) %2) local_unnamed_addr #5 comdat {
+  %4 = alloca i1, align 1
+  %5 = load i64, i64* %2, align 8
+  br label %6
+
+6:                                                ; preds = %.backedge, %3
+  %.010 = phi i64* [ %0, %3 ], [ %.010.be, %.backedge ]
+  %.0 = phi i32 [ -1708290017, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 -1708290017, label %7
+    i32 1441091152, label %17
+    i32 -2085186086, label %28
+    i32 -1135017702, label %30
+    i32 -537278332, label %31
+    i32 -1416461296, label %41
+    i32 -168419329, label %52
+    i32 -1011254887, label %53
+    i32 575597442, label %63
+    i32 -1840586730, label %73
+    i32 764352006, label %74
+    i32 -1354306116, label %75
+    i32 498008473, label %77
+  ]
+
+.backedge:                                        ; preds = %6, %77, %75, %74, %63, %53, %52, %41, %31, %30, %28, %17, %7
+  %.010.be = phi i64* [ %.010, %6 ], [ %.010, %77 ], [ %76, %75 ], [ %.010, %74 ], [ %.010, %63 ], [ %.010, %53 ], [ %.010, %52 ], [ %42, %41 ], [ %.010, %31 ], [ %.010, %30 ], [ %.010, %28 ], [ %.010, %17 ], [ %.010, %7 ]
+  %.0.be = phi i32 [ %.0, %6 ], [ 575597442, %77 ], [ -1416461296, %75 ], [ 1441091152, %74 ], [ %72, %63 ], [ %62, %53 ], [ -1708290017, %52 ], [ %51, %41 ], [ %40, %31 ], [ -537278332, %30 ], [ %29, %28 ], [ %27, %17 ], [ %16, %7 ]
+  br label %6
+
+7:                                                ; preds = %6
+  %8 = load i32, i32* @x.207, align 4
+  %9 = load i32, i32* @y.208, align 4
+  %10 = add i32 %8, -1
+  %11 = mul i32 %10, %8
+  %12 = and i32 %11, 1
+  %13 = icmp eq i32 %12, 0
+  %14 = icmp slt i32 %9, 10
+  %15 = or i1 %14, %13
+  %16 = select i1 %15, i32 1441091152, i32 764352006
+  br label %.backedge
+
+17:                                               ; preds = %6
+  %18 = icmp ne i64* %.010, %1
+  store i1 %18, i1* %4, align 1
+  %19 = load i32, i32* @x.207, align 4
+  %20 = load i32, i32* @y.208, align 4
+  %21 = add i32 %19, -1
+  %22 = mul i32 %21, %19
+  %23 = and i32 %22, 1
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %20, 10
+  %26 = or i1 %25, %24
+  %27 = select i1 %26, i32 -2085186086, i32 764352006
+  br label %.backedge
+
+28:                                               ; preds = %6
+  %.0..0..0.9 = load volatile i1, i1* %4, align 1
+  %29 = select i1 %.0..0..0.9, i32 -1135017702, i32 -1011254887
+  br label %.backedge
+
+30:                                               ; preds = %6
+  store i64 %5, i64* %.010, align 8
+  br label %.backedge
+
+31:                                               ; preds = %6
+  %32 = load i32, i32* @x.207, align 4
+  %33 = load i32, i32* @y.208, align 4
+  %34 = add i32 %32, -1
+  %35 = mul i32 %34, %32
+  %36 = and i32 %35, 1
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %33, 10
+  %39 = or i1 %38, %37
+  %40 = select i1 %39, i32 -1416461296, i32 -1354306116
+  br label %.backedge
+
+41:                                               ; preds = %6
+  %42 = getelementptr inbounds i64, i64* %.010, i64 1
+  %43 = load i32, i32* @x.207, align 4
+  %44 = load i32, i32* @y.208, align 4
+  %45 = add i32 %43, -1
+  %46 = mul i32 %45, %43
+  %47 = and i32 %46, 1
+  %48 = icmp eq i32 %47, 0
+  %49 = icmp slt i32 %44, 10
+  %50 = or i1 %49, %48
+  %51 = select i1 %50, i32 -168419329, i32 -1354306116
+  br label %.backedge
+
+52:                                               ; preds = %6
+  br label %.backedge
+
+53:                                               ; preds = %6
+  %54 = load i32, i32* @x.207, align 4
+  %55 = load i32, i32* @y.208, align 4
+  %56 = add i32 %54, -1
+  %57 = mul i32 %56, %54
+  %58 = and i32 %57, 1
+  %59 = icmp eq i32 %58, 0
+  %60 = icmp slt i32 %55, 10
+  %61 = or i1 %60, %59
+  %62 = select i1 %61, i32 575597442, i32 498008473
+  br label %.backedge
+
+63:                                               ; preds = %6
+  %64 = load i32, i32* @x.207, align 4
+  %65 = load i32, i32* @y.208, align 4
+  %66 = add i32 %64, -1
+  %67 = mul i32 %66, %64
+  %68 = and i32 %67, 1
+  %69 = icmp eq i32 %68, 0
+  %70 = icmp slt i32 %65, 10
+  %71 = or i1 %70, %69
+  %72 = select i1 %71, i32 -1840586730, i32 498008473
+  br label %.backedge
+
+73:                                               ; preds = %6
+  ret void
+
+74:                                               ; preds = %6
+  br label %.backedge
+
+75:                                               ; preds = %6
+  %76 = getelementptr inbounds i64, i64* %.010, i64 1
+  br label %.backedge
+
+77:                                               ; preds = %6
+  br label %.backedge
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZSt12__niter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEEENSt11_Niter_baseIT_E13iterator_typeES8_(i64* %0) local_unnamed_addr #0 comdat {
+  %2 = alloca i64*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.209, align 4
+  %6 = load i32, i32* @y.210, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %16, %1
+  %.ph = phi i64* [ %17, %16 ], [ undef, %1 ]
+  %.0.ph = phi i32 [ %26, %16 ], [ -1596238985, %1 ]
+  br label %.outer5
+
+.outer5:                                          ; preds = %.outer5.backedge, %.outer
+  %.0.ph6 = phi i32 [ %.0.ph, %.outer ], [ %.0.ph6.be, %.outer5.backedge ]
+  br label %12
+
+12:                                               ; preds = %.outer5, %12
+  switch i32 %.0.ph6, label %12 [
+    i32 -1596238985, label %13
+    i32 -1597556435, label %16
+    i32 808259513, label %27
+    i32 -447238591, label %28
+  ]
+
+13:                                               ; preds = %12
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %14 = or i1 %.0..0..0., %.0..0..0.1
+  %15 = select i1 %14, i32 -1597556435, i32 -447238591
+  br label %.outer5.backedge
+
+16:                                               ; preds = %12
+  %17 = tail call i64* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEELb1EE7_S_baseES6_(i64* %0)
+  %18 = load i32, i32* @x.209, align 4
+  %19 = load i32, i32* @y.210, align 4
+  %20 = add i32 %18, -1
+  %21 = mul i32 %20, %18
+  %22 = and i32 %21, 1
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %19, 10
+  %25 = or i1 %24, %23
+  %26 = select i1 %25, i32 808259513, i32 -447238591
+  br label %.outer
+
+27:                                               ; preds = %12
+  store i64* %.ph, i64** %2, align 8
+  %.0..0..0.2 = load volatile i64*, i64** %2, align 8
+  ret i64* %.0..0..0.2
+
+28:                                               ; preds = %12
+  %29 = tail call i64* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEELb1EE7_S_baseES6_(i64* %0)
+  br label %.outer5.backedge
+
+.outer5.backedge:                                 ; preds = %28, %13
+  %.0.ph6.be = phi i32 [ %15, %13 ], [ -1597556435, %28 ]
+  br label %.outer5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64* @_ZNSt10_Iter_baseIN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEELb1EE7_S_baseES6_(i64* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::__normal_iterator", align 8
+  %3 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %2, i64 0, i32 0
+  store i64* %0, i64** %3, align 8
+  %4 = call dereferenceable(8) i64** @_ZNK9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* nonnull %2) #13
+  %5 = load i64*, i64** %4, align 8
+  ret i64* %5
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64** @_ZNK9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEE4baseEv(%"class.__gnu_cxx::__normal_iterator"* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %0, i64 0, i32 0
+  ret i64** %2
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr void @_ZN9__gnu_cxx17__normal_iteratorIPxSt6vectorIxSaIxEEEC2ERKS1_(%"class.__gnu_cxx::__normal_iterator"* %0, i64** dereferenceable(8) %1) unnamed_addr #5 comdat align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.215, align 4
+  %6 = load i32, i32* @y.216, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = getelementptr inbounds %"class.__gnu_cxx::__normal_iterator", %"class.__gnu_cxx::__normal_iterator"* %0, i64 0, i32 0
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -478382208, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %13
+
+13:                                               ; preds = %.outer, %13
+  switch i32 %.0.ph, label %13 [
+    i32 -478382208, label %14
+    i32 2130667205, label %17
+    i32 1416019507, label %28
+    i32 -2020408596, label %29
+  ]
+
+14:                                               ; preds = %13
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %15 = or i1 %.0..0..0., %.0..0..0.1
+  %16 = select i1 %15, i32 2130667205, i32 -2020408596
+  br label %.outer.backedge
+
+17:                                               ; preds = %13
+  %18 = load i64*, i64** %1, align 8
+  store i64* %18, i64** %12, align 8
+  %19 = load i32, i32* @x.215, align 4
+  %20 = load i32, i32* @y.216, align 4
+  %21 = add i32 %19, -1
+  %22 = mul i32 %21, %19
+  %23 = and i32 %22, 1
+  %24 = icmp eq i32 %23, 0
+  %25 = icmp slt i32 %20, 10
+  %26 = or i1 %25, %24
+  %27 = select i1 %26, i32 1416019507, i32 -2020408596
+  br label %.outer.backedge
+
+28:                                               ; preds = %13
+  ret void
+
+29:                                               ; preds = %13
+  %30 = load i64*, i64** %1, align 8
+  store i64* %30, i64** %12, align 8
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %29, %17, %14
+  %.0.ph.be = phi i32 [ %16, %14 ], [ %27, %17 ], [ 2130667205, %29 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZSt20uninitialized_fill_nIPxmxET_S1_T0_RKT1_(i64* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat {
+  %4 = tail call i64* @_ZNSt22__uninitialized_fill_nILb1EE15__uninit_fill_nIPxmxEET_S3_T0_RKT1_(i64* %0, i64 %1, i64* nonnull dereferenceable(8) %2)
+  ret i64* %4
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZNSt22__uninitialized_fill_nILb1EE15__uninit_fill_nIPxmxEET_S3_T0_RKT1_(i64* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = tail call i64* @_ZSt6fill_nIPxmxET_S1_T0_RKT1_(i64* %0, i64 %1, i64* nonnull dereferenceable(8) %2)
+  ret i64* %4
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64* @_ZSt10__fill_n_aIPxmxEN9__gnu_cxx11__enable_ifIXsr11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_(i64* %0, i64 %1, i64* dereferenceable(8) %2) local_unnamed_addr #5 comdat {
+  %4 = alloca i64*, align 8
+  %5 = alloca i64*, align 8
+  %6 = alloca i64*, align 8
+  %7 = alloca i64**, align 8
+  %8 = alloca i1, align 1
+  %9 = alloca i1, align 1
+  %10 = load i32, i32* @x.221, align 4
+  %11 = load i32, i32* @y.222, align 4
+  %12 = add i32 %10, -1
+  %13 = mul i32 %12, %10
+  %14 = and i32 %13, 1
+  %15 = icmp eq i32 %14, 0
+  store i1 %15, i1* %9, align 1
+  %16 = icmp slt i32 %11, 10
+  store i1 %16, i1* %8, align 1
+  br label %17
+
+17:                                               ; preds = %.backedge, %3
+  %.0 = phi i32 [ 2078909541, %3 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 2078909541, label %18
+    i32 -1787834061, label %21
+    i32 637830273, label %35
+    i32 -1010592286, label %36
+    i32 -1597509517, label %39
+    i32 -976593944, label %42
+    i32 -1972524797, label %46
+    i32 -329849015, label %56
+    i32 150019230, label %67
+    i32 332858593, label %68
+    i32 -1934964602, label %69
+  ]
+
+.backedge:                                        ; preds = %17, %69, %68, %56, %46, %42, %39, %36, %35, %21, %18
+  %.0.be = phi i32 [ %.0, %17 ], [ -329849015, %69 ], [ -1787834061, %68 ], [ %66, %56 ], [ %55, %46 ], [ -1010592286, %42 ], [ -976593944, %39 ], [ %38, %36 ], [ -1010592286, %35 ], [ %34, %21 ], [ %20, %18 ]
+  br label %17
+
+18:                                               ; preds = %17
+  %.0..0..0. = load volatile i1, i1* %9, align 1
+  %.0..0..0.1 = load volatile i1, i1* %8, align 1
+  %19 = or i1 %.0..0..0., %.0..0..0.1
+  %20 = select i1 %19, i32 -1787834061, i32 332858593
+  br label %.backedge
+
+21:                                               ; preds = %17
+  %22 = alloca i64*, align 8
+  store i64** %22, i64*** %7, align 8
+  %23 = alloca i64, align 8
+  store i64* %23, i64** %6, align 8
+  %24 = alloca i64, align 8
+  store i64* %24, i64** %5, align 8
+  %.0..0..0.2 = load volatile i64**, i64*** %7, align 8
+  store i64* %0, i64** %.0..0..0.2, align 8
+  %25 = load i64, i64* %2, align 8
+  %.0..0..0.8 = load volatile i64*, i64** %6, align 8
+  store i64 %25, i64* %.0..0..0.8, align 8
+  %.0..0..0.10 = load volatile i64*, i64** %5, align 8
+  store i64 %1, i64* %.0..0..0.10, align 8
+  %26 = load i32, i32* @x.221, align 4
+  %27 = load i32, i32* @y.222, align 4
+  %28 = add i32 %26, -1
+  %29 = mul i32 %28, %26
+  %30 = and i32 %29, 1
+  %31 = icmp eq i32 %30, 0
+  %32 = icmp slt i32 %27, 10
+  %33 = or i1 %32, %31
+  %34 = select i1 %33, i32 637830273, i32 332858593
+  br label %.backedge
+
+35:                                               ; preds = %17
+  br label %.backedge
+
+36:                                               ; preds = %17
+  %.0..0..0.11 = load volatile i64*, i64** %5, align 8
+  %37 = load i64, i64* %.0..0..0.11, align 8
+  %.not = icmp eq i64 %37, 0
+  %38 = select i1 %.not, i32 -1972524797, i32 -1597509517
+  br label %.backedge
+
+39:                                               ; preds = %17
+  %.0..0..0.9 = load volatile i64*, i64** %6, align 8
+  %40 = load i64, i64* %.0..0..0.9, align 8
+  %.0..0..0.3 = load volatile i64**, i64*** %7, align 8
+  %41 = load i64*, i64** %.0..0..0.3, align 8
+  store i64 %40, i64* %41, align 8
+  br label %.backedge
+
+42:                                               ; preds = %17
+  %.0..0..0.12 = load volatile i64*, i64** %5, align 8
+  %43 = load i64, i64* %.0..0..0.12, align 8
+  %.neg = add i64 %43, -1
+  %.0..0..0.13 = load volatile i64*, i64** %5, align 8
+  store i64 %.neg, i64* %.0..0..0.13, align 8
+  %.0..0..0.4 = load volatile i64**, i64*** %7, align 8
+  %44 = load i64*, i64** %.0..0..0.4, align 8
+  %45 = getelementptr inbounds i64, i64* %44, i64 1
+  %.0..0..0.5 = load volatile i64**, i64*** %7, align 8
+  store i64* %45, i64** %.0..0..0.5, align 8
+  br label %.backedge
+
+46:                                               ; preds = %17
+  %47 = load i32, i32* @x.221, align 4
+  %48 = load i32, i32* @y.222, align 4
+  %49 = add i32 %47, -1
+  %50 = mul i32 %49, %47
+  %51 = and i32 %50, 1
+  %52 = icmp eq i32 %51, 0
+  %53 = icmp slt i32 %48, 10
+  %54 = or i1 %53, %52
+  %55 = select i1 %54, i32 -329849015, i32 -1934964602
+  br label %.backedge
+
+56:                                               ; preds = %17
+  %.0..0..0.6 = load volatile i64**, i64*** %7, align 8
+  %57 = load i64*, i64** %.0..0..0.6, align 8
+  store i64* %57, i64** %4, align 8
+  %58 = load i32, i32* @x.221, align 4
+  %59 = load i32, i32* @y.222, align 4
+  %60 = add i32 %58, -1
+  %61 = mul i32 %60, %58
+  %62 = and i32 %61, 1
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %59, 10
+  %65 = or i1 %64, %63
+  %66 = select i1 %65, i32 150019230, i32 -1934964602
+  br label %.backedge
+
+67:                                               ; preds = %17
+  %.0..0..0.14 = load volatile i64*, i64** %4, align 8
+  ret i64* %.0..0..0.14
+
+68:                                               ; preds = %17
+  br label %.backedge
+
+69:                                               ; preds = %17
+  %.0..0..0.7 = load volatile i64**, i64*** %7, align 8
+  br label %.backedge
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64* @_ZSt12__niter_baseIPxENSt11_Niter_baseIT_E13iterator_typeES2_(i64* %0) local_unnamed_addr #0 comdat {
+  %2 = tail call i64* @_ZNSt10_Iter_baseIPxLb0EE7_S_baseES0_(i64* %0)
+  ret i64* %2
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr i64* @_ZNSt10_Iter_baseIPxLb0EE7_S_baseES0_(i64* %0) local_unnamed_addr #5 comdat align 2 {
+  %2 = alloca i64*, align 8
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.225, align 4
+  %6 = load i32, i32* @y.226, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = or i1 %11, %10
+  %13 = select i1 %12, i32 -867120537, i32 1419566757
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %1
+  %.0.ph = phi i32 [ -1305492247, %1 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 -1305492247, label %15
+    i32 -33267559, label %.outer.backedge
+    i32 -867120537, label %18
+    i32 1419566757, label %19
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 -33267559, i32 1419566757
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  store i64* %0, i64** %2, align 8
+  %.0..0..0.2 = load volatile i64*, i64** %2, align 8
+  ret i64* %.0..0..0.2
+
+19:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %19, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ -33267559, %19 ], [ %13, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxE15propagate_aboveEi(%struct.LazySegmentTree* %0, i32 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = alloca %struct.LazySegmentTree*, align 8
+  store %struct.LazySegmentTree* %0, %struct.LazySegmentTree** %3, align 8
+  br label %4
+
+4:                                                ; preds = %.backedge, %2
+  %.013 = phi i32 [ 0, %2 ], [ %.013.be, %.backedge ]
+  %.011 = phi i32 [ undef, %2 ], [ %.011.be, %.backedge ]
+  %.0 = phi i32 [ -1768003688, %2 ], [ %.0.be, %.backedge ]
+  switch i32 %.0, label %.backedge [
+    i32 -1768003688, label %5
+    i32 519487421, label %9
+    i32 1698336400, label %11
+    i32 971327517, label %21
+    i32 534052559, label %31
+    i32 -654232914, label %32
+    i32 -2005160745, label %35
+    i32 1763450733, label %37
+    i32 -1311745575, label %39
+    i32 670102668, label %40
+  ]
+
+.backedge:                                        ; preds = %4, %40, %37, %35, %32, %31, %21, %11, %9, %5
+  %.013.be = phi i32 [ %.013, %4 ], [ %.013, %40 ], [ %.013, %37 ], [ %.013, %35 ], [ %.013, %32 ], [ %.013, %31 ], [ %.013, %21 ], [ %.013, %11 ], [ %10, %9 ], [ %.013, %5 ]
+  %.011.be = phi i32 [ %.011, %4 ], [ %.013, %40 ], [ %38, %37 ], [ %.011, %35 ], [ %.011, %32 ], [ %.011, %31 ], [ %.013, %21 ], [ %.011, %11 ], [ %.011, %9 ], [ %.011, %5 ]
+  %.0.be = phi i32 [ %.0, %4 ], [ 971327517, %40 ], [ -654232914, %37 ], [ 1763450733, %35 ], [ %34, %32 ], [ -654232914, %31 ], [ %30, %21 ], [ %20, %11 ], [ -1768003688, %9 ], [ %8, %5 ]
+  br label %4
+
+5:                                                ; preds = %4
+  %6 = shl nuw i32 1, %.013
+  %7 = icmp slt i32 %6, %1
+  %8 = select i1 %7, i32 519487421, i32 1698336400
+  br label %.backedge
+
+9:                                                ; preds = %4
+  %10 = add i32 %.013, 1
+  br label %.backedge
+
+11:                                               ; preds = %4
+  %12 = load i32, i32* @x.227, align 4
+  %13 = load i32, i32* @y.228, align 4
+  %14 = add i32 %12, -1
+  %15 = mul i32 %14, %12
+  %16 = and i32 %15, 1
+  %17 = icmp eq i32 %16, 0
+  %18 = icmp slt i32 %13, 10
+  %19 = or i1 %18, %17
+  %20 = select i1 %19, i32 971327517, i32 670102668
+  br label %.backedge
+
+21:                                               ; preds = %4
+  %22 = load i32, i32* @x.227, align 4
+  %23 = load i32, i32* @y.228, align 4
+  %24 = add i32 %22, -1
+  %25 = mul i32 %24, %22
+  %26 = and i32 %25, 1
+  %27 = icmp eq i32 %26, 0
+  %28 = icmp slt i32 %23, 10
+  %29 = or i1 %28, %27
+  %30 = select i1 %29, i32 534052559, i32 670102668
+  br label %.backedge
+
+31:                                               ; preds = %4
+  br label %.backedge
+
+32:                                               ; preds = %4
+  %33 = icmp sgt i32 %.011, 0
+  %34 = select i1 %33, i32 -2005160745, i32 -1311745575
+  br label %.backedge
+
+35:                                               ; preds = %4
+  %36 = ashr i32 %1, %.011
+  %.0..0..0.10 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %3, align 8
+  tail call void @_ZN15LazySegmentTreeIxxE12propagate_atEi(%struct.LazySegmentTree* %.0..0..0.10, i32 %36)
+  br label %.backedge
+
+37:                                               ; preds = %4
+  %38 = add i32 %.011, -1
+  br label %.backedge
+
+39:                                               ; preds = %4
+  ret void
+
+40:                                               ; preds = %4
+  br label %.backedge
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* %0, i64 %1, i64 %2) local_unnamed_addr #0 comdat align 2 {
+  %4 = alloca %"class.std::_Function_base"*, align 8
+  %5 = alloca %"class.std::function"*, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca i64, align 8
+  store i64 %1, i64* %6, align 8
+  store i64 %2, i64* %7, align 8
+  store %"class.std::function"* %0, %"class.std::function"** %5, align 8
+  %.0..0..0.1 = load volatile %"class.std::function"*, %"class.std::function"** %5, align 8
+  %8 = getelementptr %"class.std::function", %"class.std::function"* %.0..0..0.1, i64 0, i32 0
+  store %"class.std::_Function_base"* %8, %"class.std::_Function_base"** %4, align 8
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %3
+  %.0.ph = phi i32 [ -173433365, %3 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %9
+
+9:                                                ; preds = %.outer, %9
+  switch i32 %.0.ph, label %9 [
+    i32 -173433365, label %10
+    i32 -1223486632, label %13
+    i32 -577003354, label %23
+    i32 -311910432, label %31
+    i32 -1768985912, label %24
+  ]
+
+10:                                               ; preds = %9
+  %.0..0..0.4 = load volatile %"class.std::_Function_base"*, %"class.std::_Function_base"** %4, align 8
+  %11 = tail call zeroext i1 @_ZNKSt14_Function_base8_M_emptyEv(%"class.std::_Function_base"* %.0..0..0.4)
+  %12 = select i1 %11, i32 -1223486632, i32 -1768985912
+  br label %.outer.backedge
+
+13:                                               ; preds = %9
+  %14 = load i32, i32* @x.229, align 4
+  %15 = load i32, i32* @y.230, align 4
+  %16 = add i32 %14, -1
+  %17 = mul i32 %16, %14
+  %18 = and i32 %17, 1
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %15, 10
+  %21 = or i1 %20, %19
+  %22 = select i1 %21, i32 -577003354, i32 -311910432
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %13, %10
+  %.0.ph.be = phi i32 [ %12, %10 ], [ %22, %13 ]
+  br label %.outer
+
+23:                                               ; preds = %9
+  tail call void @_ZSt25__throw_bad_function_callv() #15
+  unreachable
+
+24:                                               ; preds = %9
+  %.0..0..0.2 = load volatile %"class.std::function"*, %"class.std::function"** %5, align 8
+  %25 = getelementptr inbounds %"class.std::function", %"class.std::function"* %.0..0..0.2, i64 0, i32 1
+  %26 = load i64 (%"union.std::_Any_data"*, i64*, i64*)*, i64 (%"union.std::_Any_data"*, i64*, i64*)** %25, align 8
+  %.0..0..0.3 = load volatile %"class.std::function"*, %"class.std::function"** %5, align 8
+  %27 = getelementptr inbounds %"class.std::function", %"class.std::function"* %.0..0..0.3, i64 0, i32 0, i32 0
+  %28 = call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %6) #13
+  %29 = call dereferenceable(8) i64* @_ZSt7forwardIxEOT_RNSt16remove_referenceIS0_E4typeE(i64* nonnull dereferenceable(8) %7) #13
+  %30 = call i64 %26(%"union.std::_Any_data"* dereferenceable(16) %27, i64* nonnull dereferenceable(8) %28, i64* nonnull dereferenceable(8) %29)
+  ret i64 %30
+
+31:                                               ; preds = %9
+  tail call void @_ZSt25__throw_bad_function_callv() #15
+  unreachable
+}
+
+; Function Attrs: noinline nounwind uwtable
+define linkonce_odr dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* %0, i64 %1) local_unnamed_addr #5 comdat align 2 {
+  %3 = getelementptr inbounds %"class.std::vector", %"class.std::vector"* %0, i64 0, i32 0, i32 0, i32 0
+  %4 = load i64*, i64** %3, align 8
+  %5 = getelementptr inbounds i64, i64* %4, i64 %1
+  ret i64* %5
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxE12recalc_aboveEi(%struct.LazySegmentTree* %0, i32 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = alloca %struct.LazySegmentTree*, align 8
+  %4 = alloca i32*, align 8
+  %5 = alloca i1, align 1
+  %6 = alloca i1, align 1
+  %7 = load i32, i32* @x.233, align 4
+  %8 = load i32, i32* @y.234, align 4
+  %9 = add i32 %7, -1
+  %10 = mul i32 %9, %7
+  %11 = and i32 %10, 1
+  %12 = icmp eq i32 %11, 0
+  store i1 %12, i1* %6, align 1
+  %13 = icmp slt i32 %8, 10
+  store i1 %13, i1* %5, align 1
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -1574791918, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %14
+
+14:                                               ; preds = %.outer, %14
+  switch i32 %.0.ph, label %14 [
+    i32 -1574791918, label %15
+    i32 22409491, label %18
+    i32 -1286815695, label %.outer.backedge
+    i32 -336533646, label %29
+    i32 1456164513, label %33
+    i32 1377441310, label %49
+    i32 -1894391820, label %50
+  ]
+
+15:                                               ; preds = %14
+  %.0..0..0. = load volatile i1, i1* %6, align 1
+  %.0..0..0.1 = load volatile i1, i1* %5, align 1
+  %16 = or i1 %.0..0..0., %.0..0..0.1
+  %17 = select i1 %16, i32 22409491, i32 -1894391820
+  br label %.outer.backedge
+
+18:                                               ; preds = %14
+  %19 = alloca i32, align 4
+  store i32* %19, i32** %4, align 8
+  %.0..0..0.2 = load volatile i32*, i32** %4, align 8
+  store i32 %1, i32* %.0..0..0.2, align 4
+  store %struct.LazySegmentTree* %0, %struct.LazySegmentTree** %3, align 8
+  %20 = load i32, i32* @x.233, align 4
+  %21 = load i32, i32* @y.234, align 4
+  %22 = add i32 %20, -1
+  %23 = mul i32 %22, %20
+  %24 = and i32 %23, 1
+  %25 = icmp eq i32 %24, 0
+  %26 = icmp slt i32 %21, 10
+  %27 = or i1 %26, %25
+  %28 = select i1 %27, i32 -1286815695, i32 -1894391820
+  br label %.outer.backedge
+
+29:                                               ; preds = %14
+  %.0..0..0.3 = load volatile i32*, i32** %4, align 8
+  %30 = load i32, i32* %.0..0..0.3, align 4
+  %31 = icmp sgt i32 %30, 1
+  %32 = select i1 %31, i32 1456164513, i32 1377441310
+  br label %.outer.backedge
+
+33:                                               ; preds = %14
+  %.0..0..0.4 = load volatile i32*, i32** %4, align 8
+  %34 = load i32, i32* %.0..0..0.4, align 4
+  %35 = ashr i32 %34, 1
+  %.0..0..0.5 = load volatile i32*, i32** %4, align 8
+  store i32 %35, i32* %.0..0..0.5, align 4
+  %.0..0..0.9 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %3, align 8
+  %36 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.9, i64 0, i32 5
+  %.0..0..0.6 = load volatile i32*, i32** %4, align 8
+  %37 = load i32, i32* %.0..0..0.6, align 4
+  %38 = shl i32 %37, 1
+  %.0..0..0.10 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %3, align 8
+  %39 = call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %.0..0..0.10, i32 %38)
+  %.0..0..0.7 = load volatile i32*, i32** %4, align 8
+  %40 = load i32, i32* %.0..0..0.7, align 4
+  %41 = shl i32 %40, 1
+  %42 = or i32 %41, 1
+  %.0..0..0.11 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %3, align 8
+  %43 = call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %.0..0..0.11, i32 %42)
+  %44 = call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %36, i64 %39, i64 %43)
+  %.0..0..0.12 = load volatile %struct.LazySegmentTree*, %struct.LazySegmentTree** %3, align 8
+  %45 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %.0..0..0.12, i64 0, i32 1
+  %.0..0..0.8 = load volatile i32*, i32** %4, align 8
+  %46 = load i32, i32* %.0..0..0.8, align 4
+  %47 = sext i32 %46 to i64
+  %48 = call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %45, i64 %47) #13
+  store i64 %44, i64* %48, align 8
+  br label %.outer.backedge
+
+49:                                               ; preds = %14
+  ret void
+
+50:                                               ; preds = %14
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %14, %50, %33, %29, %18, %15
+  %.0.ph.be = phi i32 [ %17, %15 ], [ %28, %18 ], [ %32, %29 ], [ -336533646, %33 ], [ 22409491, %50 ], [ -336533646, %14 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr void @_ZN15LazySegmentTreeIxxE12propagate_atEi(%struct.LazySegmentTree* %0, i32 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = alloca i1, align 1
+  %4 = alloca i1, align 1
+  %5 = load i32, i32* @x.235, align 4
+  %6 = load i32, i32* @y.236, align 4
+  %7 = add i32 %5, -1
+  %8 = mul i32 %7, %5
+  %9 = and i32 %8, 1
+  %10 = icmp eq i32 %9, 0
+  store i1 %10, i1* %4, align 1
+  %11 = icmp slt i32 %6, 10
+  store i1 %11, i1* %3, align 1
+  %12 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 1
+  %13 = sext i32 %1 to i64
+  %14 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 7
+  %15 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 2
+  %16 = shl i32 %1, 1
+  %17 = sext i32 %16 to i64
+  %18 = or i32 %16, 1
+  %19 = sext i32 %18 to i64
+  %20 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 4
+  br label %.outer
+
+.outer:                                           ; preds = %.outer.backedge, %2
+  %.0.ph = phi i32 [ -1075902231, %2 ], [ %.0.ph.be, %.outer.backedge ]
+  br label %21
+
+21:                                               ; preds = %.outer, %21
+  switch i32 %.0.ph, label %21 [
+    i32 -1075902231, label %22
+    i32 -629305859, label %25
+    i32 1742761712, label %51
+    i32 851808339, label %52
+  ]
+
+22:                                               ; preds = %21
+  %.0..0..0. = load volatile i1, i1* %4, align 1
+  %.0..0..0.1 = load volatile i1, i1* %3, align 1
+  %23 = or i1 %.0..0..0., %.0..0..0.1
+  %24 = select i1 %23, i32 -629305859, i32 851808339
+  br label %.outer.backedge
+
+25:                                               ; preds = %21
+  %26 = tail call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %0, i32 %1)
+  %27 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %12, i64 %13) #13
+  store i64 %26, i64* %27, align 8
+  %28 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %17) #13
+  %29 = load i64, i64* %28, align 8
+  %30 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  %31 = load i64, i64* %30, align 8
+  %32 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %14, i64 %29, i64 %31)
+  %33 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %17) #13
+  store i64 %32, i64* %33, align 8
+  %34 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %19) #13
+  %35 = load i64, i64* %34, align 8
+  %36 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  %37 = load i64, i64* %36, align 8
+  %38 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %14, i64 %35, i64 %37)
+  %39 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %19) #13
+  store i64 %38, i64* %39, align 8
+  %40 = load i64, i64* %20, align 8
+  %41 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  store i64 %40, i64* %41, align 8
+  %42 = load i32, i32* @x.235, align 4
+  %43 = load i32, i32* @y.236, align 4
+  %44 = add i32 %42, -1
+  %45 = mul i32 %44, %42
+  %46 = and i32 %45, 1
+  %47 = icmp eq i32 %46, 0
+  %48 = icmp slt i32 %43, 10
+  %49 = or i1 %48, %47
+  %50 = select i1 %49, i32 1742761712, i32 851808339
+  br label %.outer.backedge
+
+51:                                               ; preds = %21
+  ret void
+
+52:                                               ; preds = %21
+  %53 = tail call i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %0, i32 %1)
+  %54 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %12, i64 %13) #13
+  store i64 %53, i64* %54, align 8
+  %55 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %17) #13
+  %56 = load i64, i64* %55, align 8
+  %57 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  %58 = load i64, i64* %57, align 8
+  %59 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %14, i64 %56, i64 %58)
+  %60 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %17) #13
+  store i64 %59, i64* %60, align 8
+  %61 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %19) #13
+  %62 = load i64, i64* %61, align 8
+  %63 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  %64 = load i64, i64* %63, align 8
+  %65 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %14, i64 %62, i64 %64)
+  %66 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %19) #13
+  store i64 %65, i64* %66, align 8
+  %67 = load i64, i64* %20, align 8
+  %68 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %15, i64 %13) #13
+  store i64 %67, i64* %68, align 8
+  br label %.outer.backedge
+
+.outer.backedge:                                  ; preds = %52, %25, %22
+  %.0.ph.be = phi i32 [ %24, %22 ], [ %50, %25 ], [ -629305859, %52 ]
+  br label %.outer
+}
+
+; Function Attrs: noinline uwtable
+define linkonce_odr i64 @_ZN15LazySegmentTreeIxxE7eval_atEi(%struct.LazySegmentTree* %0, i32 %1) local_unnamed_addr #0 comdat align 2 {
+  %3 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 6
+  %4 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 1
+  %5 = sext i32 %1 to i64
+  %6 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %4, i64 %5) #13
+  %7 = load i64, i64* %6, align 8
+  %8 = getelementptr inbounds %struct.LazySegmentTree, %struct.LazySegmentTree* %0, i64 0, i32 2
+  %9 = tail call dereferenceable(8) i64* @_ZNSt6vectorIxSaIxEEixEm(%"class.std::vector"* nonnull %8, i64 %5) #13
+  %10 = load i64, i64* %9, align 8
+  %11 = tail call i64 @_ZNKSt8functionIFxxxEEclExx(%"class.std::function"* nonnull %3, i64 %7, i64 %10)
+  ret i64 %11
+}
+
+; Function Attrs: noreturn
+declare void @_ZSt25__throw_bad_function_callv() local_unnamed_addr #10
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s485135696.cpp() #0 section ".text.startup" {
+  tail call fastcc void @__cxx_global_var_init()
+  ret void
+}
+
+; Function Attrs: argmemonly nofree nounwind willreturn writeonly
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg) #12
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nofree nounwind }
+attributes #4 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #6 = { noinline noreturn nounwind }
+attributes #7 = { nobuiltin nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #8 = { noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #9 = { nofree noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #10 = { noreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #11 = { nobuiltin "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #12 = { argmemonly nofree nounwind willreturn writeonly }
+attributes #13 = { nounwind }
+attributes #14 = { noreturn nounwind }
+attributes #15 = { noreturn }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
+!1 = distinct !{!1, !2}
+!2 = !{!"llvm.loop.peeled.count", i32 1}
+!3 = distinct !{!3, !2}
+!4 = distinct !{!4, !2}
+!5 = distinct !{!5, !2}
+!6 = distinct !{!6, !2}
+!7 = distinct !{!7, !2}
+!8 = distinct !{!8, !2}
+!9 = distinct !{!9, !2}
+!10 = distinct !{!10, !2}
+!11 = distinct !{!11, !2}
+!12 = distinct !{!12, !2}
+!13 = distinct !{!13, !2}
+!14 = distinct !{!14, !2}
+!15 = distinct !{!15, !2}
+!16 = distinct !{!16, !2}

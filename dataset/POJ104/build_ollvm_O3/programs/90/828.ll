@@ -1,0 +1,183 @@
+; ModuleID = 'build_ollvm/programs/90/828.ll'
+source_filename = "source-C-CXX/90/828.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main() local_unnamed_addr #0 {
+entry:
+  %str2 = alloca [100 x i8], align 16
+  %call = tail call noalias dereferenceable_or_null(100) i8* @malloc(i64 100) #5
+  %call1 = tail call i32 (i8*, ...) bitcast (i32 (...)* @gets to i32 (i8*, ...)*)(i8* %call) #5
+  %call2 = tail call i64 @strlen(i8* noundef nonnull dereferenceable(1) %call) #6
+  %conv = trunc i64 %call2 to i32
+  %sext = shl i64 %call2, 32
+  %idx.ext12 = ashr exact i64 %sext, 32
+  %add.ptr14.idx = add nsw i64 %idx.ext12, -1
+  %add.ptr14 = getelementptr inbounds i8, i8* %call, i64 %add.ptr14.idx
+  %add.ptr20 = getelementptr inbounds [100 x i8], [100 x i8]* %str2, i64 0, i64 %idx.ext12
+  %add.ptr21 = getelementptr inbounds i8, i8* %add.ptr20, i64 -1
+  %0 = add i32 %conv, -1
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.backedge, %entry
+  %i.0 = phi i32 [ 0, %entry ], [ %i.0.be, %loopEntry.backedge ]
+  %switchVar.0 = phi i32 [ -316087738, %entry ], [ %switchVar.0.be, %loopEntry.backedge ]
+  switch i32 %switchVar.0, label %loopEntry.backedge [
+    i32 -316087738, label %for.cond
+    i32 1352895259, label %for.body
+    i32 -224865313, label %originalBB
+    i32 -2111528075, label %originalBBpart2
+    i32 166094820, label %for.inc
+    i32 -963536464, label %originalBB41
+    i32 1115694417, label %originalBBpart249
+    i32 -1469595197, label %for.end
+    i32 1122446630, label %for.cond22
+    i32 -65913361, label %for.body25
+    i32 -944054481, label %for.inc30
+    i32 534627454, label %for.end32
+    i32 -947602967, label %originalBBalteredBB
+    i32 -1298113635, label %originalBB41alteredBB
+  ]
+
+loopEntry.backedge:                               ; preds = %loopEntry, %originalBB41alteredBB, %originalBBalteredBB, %for.inc30, %for.body25, %for.cond22, %for.end, %originalBBpart249, %originalBB41, %for.inc, %originalBBpart2, %originalBB, %for.body, %for.cond
+  %i.0.be = phi i32 [ %i.0, %loopEntry ], [ %50, %originalBB41alteredBB ], [ %i.0, %originalBBalteredBB ], [ %.neg, %for.inc30 ], [ %i.0, %for.body25 ], [ %i.0, %for.cond22 ], [ 0, %for.end ], [ %i.0, %originalBBpart249 ], [ %32, %originalBB41 ], [ %i.0, %for.inc ], [ %i.0, %originalBBpart2 ], [ %i.0, %originalBB ], [ %i.0, %for.body ], [ %i.0, %for.cond ]
+  %switchVar.0.be = phi i32 [ %switchVar.0, %loopEntry ], [ -963536464, %originalBB41alteredBB ], [ -224865313, %originalBBalteredBB ], [ 1122446630, %for.inc30 ], [ -944054481, %for.body25 ], [ %45, %for.cond22 ], [ 1122446630, %for.end ], [ -316087738, %originalBBpart249 ], [ %41, %originalBB41 ], [ %31, %for.inc ], [ 166094820, %originalBBpart2 ], [ %22, %originalBB ], [ %10, %for.body ], [ %1, %for.cond ]
+  br label %loopEntry
+
+for.cond:                                         ; preds = %loopEntry
+  %cmp = icmp slt i32 %i.0, %0
+  %1 = select i1 %cmp, i32 1352895259, i32 -1469595197
+  br label %loopEntry.backedge
+
+for.body:                                         ; preds = %loopEntry
+  %2 = load i32, i32* @x, align 4
+  %3 = load i32, i32* @y, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  %10 = select i1 %9, i32 -224865313, i32 -947602967
+  br label %loopEntry.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  %idx.ext = sext i32 %i.0 to i64
+  %add.ptr = getelementptr inbounds i8, i8* %call, i64 %idx.ext
+  %11 = load i8, i8* %add.ptr, align 1
+  %add.ptr7 = getelementptr inbounds i8, i8* %add.ptr, i64 1
+  %12 = load i8, i8* %add.ptr7, align 1
+  %13 = add i8 %12, %11
+  %add.ptr11 = getelementptr inbounds [100 x i8], [100 x i8]* %str2, i64 0, i64 %idx.ext
+  store i8 %13, i8* %add.ptr11, align 1
+  %14 = load i32, i32* @x, align 4
+  %15 = load i32, i32* @y, align 4
+  %16 = add i32 %14, -1
+  %17 = mul i32 %16, %14
+  %18 = and i32 %17, 1
+  %19 = icmp eq i32 %18, 0
+  %20 = icmp slt i32 %15, 10
+  %21 = or i1 %20, %19
+  %22 = select i1 %21, i32 -2111528075, i32 -947602967
+  br label %loopEntry.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc:                                          ; preds = %loopEntry
+  %23 = load i32, i32* @x, align 4
+  %24 = load i32, i32* @y, align 4
+  %25 = add i32 %23, -1
+  %26 = mul i32 %25, %23
+  %27 = and i32 %26, 1
+  %28 = icmp eq i32 %27, 0
+  %29 = icmp slt i32 %24, 10
+  %30 = or i1 %29, %28
+  %31 = select i1 %30, i32 -963536464, i32 -1298113635
+  br label %loopEntry.backedge
+
+originalBB41:                                     ; preds = %loopEntry
+  %32 = add i32 %i.0, 1
+  %33 = load i32, i32* @x, align 4
+  %34 = load i32, i32* @y, align 4
+  %35 = add i32 %33, -1
+  %36 = mul i32 %35, %33
+  %37 = and i32 %36, 1
+  %38 = icmp eq i32 %37, 0
+  %39 = icmp slt i32 %34, 10
+  %40 = or i1 %39, %38
+  %41 = select i1 %40, i32 1115694417, i32 -1298113635
+  br label %loopEntry.backedge
+
+originalBBpart249:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.end:                                          ; preds = %loopEntry
+  %42 = load i8, i8* %add.ptr14, align 1
+  %43 = load i8, i8* %call, align 1
+  %44 = add i8 %43, %42
+  store i8 %44, i8* %add.ptr21, align 1
+  br label %loopEntry.backedge
+
+for.cond22:                                       ; preds = %loopEntry
+  %cmp23 = icmp slt i32 %i.0, %conv
+  %45 = select i1 %cmp23, i32 -65913361, i32 534627454
+  br label %loopEntry.backedge
+
+for.body25:                                       ; preds = %loopEntry
+  %idx.ext26 = sext i32 %i.0 to i64
+  %add.ptr27 = getelementptr inbounds [100 x i8], [100 x i8]* %str2, i64 0, i64 %idx.ext26
+  %46 = load i8, i8* %add.ptr27, align 1
+  %conv28 = sext i8 %46 to i32
+  %putchar = tail call i32 @putchar(i32 %conv28)
+  br label %loopEntry.backedge
+
+for.inc30:                                        ; preds = %loopEntry
+  %.neg = add i32 %i.0, 1
+  br label %loopEntry.backedge
+
+for.end32:                                        ; preds = %loopEntry
+  ret i32 0
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %idx.extalteredBB = sext i32 %i.0 to i64
+  %add.ptralteredBB = getelementptr inbounds i8, i8* %call, i64 %idx.extalteredBB
+  %47 = load i8, i8* %add.ptralteredBB, align 1
+  %add.ptr7alteredBB = getelementptr inbounds i8, i8* %add.ptralteredBB, i64 1
+  %48 = load i8, i8* %add.ptr7alteredBB, align 1
+  %49 = add i8 %48, %47
+  %add.ptr11alteredBB = getelementptr inbounds [100 x i8], [100 x i8]* %str2, i64 0, i64 %idx.extalteredBB
+  store i8 %49, i8* %add.ptr11alteredBB, align 1
+  br label %loopEntry.backedge
+
+originalBB41alteredBB:                            ; preds = %loopEntry
+  %50 = add i32 %i.0, 1
+  br label %loopEntry.backedge
+}
+
+; Function Attrs: inaccessiblememonly mustprogress nofree nounwind willreturn
+declare noalias noundef i8* @malloc(i64 noundef) local_unnamed_addr #1
+
+declare i32 @gets(...) local_unnamed_addr #2
+
+; Function Attrs: argmemonly mustprogress nofree nounwind readonly willreturn
+declare i64 @strlen(i8* nocapture) local_unnamed_addr #3
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @putchar(i32 noundef) local_unnamed_addr #4
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { inaccessiblememonly mustprogress nofree nounwind willreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { argmemonly mustprogress nofree nounwind readonly willreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { nofree nounwind }
+attributes #5 = { nounwind }
+attributes #6 = { nounwind readonly }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

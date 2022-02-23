@@ -1,0 +1,162 @@
+; ModuleID = 'build_ollvm/programs/44/2745.ll'
+source_filename = "source-C-CXX/44/2745.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [5 x i8] c"%s%s\00", align 1
+@.str.1 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+
+; Function Attrs: nofree noinline nounwind uwtable
+define i32 @main() local_unnamed_addr #0 {
+entry:
+  %cmp14.reg2mem = alloca i1, align 1
+  %s = alloca [1000 x i8], align 16
+  %w = alloca [1000 x i8], align 16
+  %arraydecay = getelementptr inbounds [1000 x i8], [1000 x i8]* %s, i64 0, i64 0
+  %arraydecay1 = getelementptr inbounds [1000 x i8], [1000 x i8]* %w, i64 0, i64 0
+  %call = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str, i64 0, i64 0), i8* nonnull %arraydecay, i8* nonnull %arraydecay1)
+  %call3 = call i64 @strlen(i8* noundef nonnull %arraydecay) #3
+  %conv = trunc i64 %call3 to i32
+  %call5 = call i64 @strlen(i8* noundef nonnull %arraydecay1) #3
+  %conv6 = trunc i64 %call5 to i32
+  %0 = load i32, i32* @x, align 4
+  %1 = load i32, i32* @y, align 4
+  %2 = add i32 %0, -1
+  %3 = mul i32 %2, %0
+  %4 = and i32 %3, 1
+  %5 = icmp eq i32 %4, 0
+  %6 = icmp slt i32 %1, 10
+  %7 = or i1 %6, %5
+  %8 = select i1 %7, i32 370007022, i32 1601981839
+  %9 = select i1 %7, i32 -217471298, i32 1601981839
+  %10 = select i1 %7, i32 -858816066, i32 1080814892
+  %11 = select i1 %7, i32 -1792344715, i32 1080814892
+  %12 = select i1 %7, i32 499619387, i32 -1033149778
+  %13 = select i1 %7, i32 -543087949, i32 -1033149778
+  %14 = add i32 %conv, -1
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.backedge, %entry
+  %pos.0 = phi i32 [ 0, %entry ], [ %pos.0.be, %loopEntry.backedge ]
+  %i.0 = phi i32 [ 0, %entry ], [ %i.0.be, %loopEntry.backedge ]
+  %switchVar.0 = phi i32 [ 948947683, %entry ], [ %switchVar.0.be, %loopEntry.backedge ]
+  switch i32 %switchVar.0, label %loopEntry.backedge [
+    i32 948947683, label %for.cond
+    i32 1351549306, label %for.body
+    i32 781968533, label %if.then
+    i32 1912279001, label %if.end
+    i32 -543087949, label %originalBB
+    i32 499619387, label %originalBBpart2
+    i32 -1247855241, label %if.then16
+    i32 -1644545899, label %if.else
+    i32 1409059049, label %if.end17
+    i32 -1792344715, label %originalBB21
+    i32 -858816066, label %originalBBpart223
+    i32 -1829876966, label %for.inc
+    i32 -217471298, label %originalBB25
+    i32 370007022, label %originalBBpart227
+    i32 2009366362, label %for.end
+    i32 -1033149778, label %originalBBalteredBB
+    i32 1080814892, label %originalBB21alteredBB
+    i32 1601981839, label %originalBB25alteredBB
+  ]
+
+loopEntry.backedge:                               ; preds = %loopEntry, %originalBB25alteredBB, %originalBB21alteredBB, %originalBBalteredBB, %originalBBpart227, %originalBB25, %for.inc, %originalBBpart223, %originalBB21, %if.end17, %if.else, %if.then16, %originalBBpart2, %originalBB, %if.end, %if.then, %for.body, %for.cond
+  %pos.0.be = phi i32 [ %pos.0, %loopEntry ], [ %pos.0, %originalBB25alteredBB ], [ %pos.0, %originalBB21alteredBB ], [ %pos.0, %originalBBalteredBB ], [ %pos.0, %originalBBpart227 ], [ %pos.0, %originalBB25 ], [ %pos.0, %for.inc ], [ %pos.0, %originalBBpart223 ], [ %pos.0, %originalBB21 ], [ %pos.0, %if.end17 ], [ 0, %if.else ], [ %.neg, %if.then16 ], [ %pos.0, %originalBBpart2 ], [ %pos.0, %originalBB ], [ %pos.0, %if.end ], [ %pos.0, %if.then ], [ %pos.0, %for.body ], [ %pos.0, %for.cond ]
+  %i.0.be = phi i32 [ %i.0, %loopEntry ], [ %22, %originalBB25alteredBB ], [ %i.0, %originalBB21alteredBB ], [ %i.0, %originalBBalteredBB ], [ %i.0, %originalBBpart227 ], [ %20, %originalBB25 ], [ %i.0, %for.inc ], [ %i.0, %originalBBpart223 ], [ %i.0, %originalBB21 ], [ %i.0, %if.end17 ], [ %i.0, %if.else ], [ %i.0, %if.then16 ], [ %i.0, %originalBBpart2 ], [ %i.0, %originalBB ], [ %i.0, %if.end ], [ %i.0, %if.then ], [ %i.0, %for.body ], [ %i.0, %for.cond ]
+  %switchVar.0.be = phi i32 [ %switchVar.0, %loopEntry ], [ -217471298, %originalBB25alteredBB ], [ -1792344715, %originalBB21alteredBB ], [ -543087949, %originalBBalteredBB ], [ 948947683, %originalBBpart227 ], [ %8, %originalBB25 ], [ %9, %for.inc ], [ -1829876966, %originalBBpart223 ], [ %10, %originalBB21 ], [ %11, %if.end17 ], [ 1409059049, %if.else ], [ 1409059049, %if.then16 ], [ %19, %originalBBpart2 ], [ %12, %originalBB ], [ %13, %if.end ], [ 2009366362, %if.then ], [ %16, %for.body ], [ %15, %for.cond ]
+  br label %loopEntry
+
+for.cond:                                         ; preds = %loopEntry
+  %cmp = icmp slt i32 %i.0, %conv6
+  %15 = select i1 %cmp, i32 1351549306, i32 2009366362
+  br label %loopEntry.backedge
+
+for.body:                                         ; preds = %loopEntry
+  %cmp8 = icmp eq i32 %pos.0, %14
+  %16 = select i1 %cmp8, i32 781968533, i32 1912279001
+  br label %loopEntry.backedge
+
+if.then:                                          ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+if.end:                                           ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  %idxprom = sext i32 %i.0 to i64
+  %arrayidx = getelementptr inbounds [1000 x i8], [1000 x i8]* %w, i64 0, i64 %idxprom
+  %17 = load i8, i8* %arrayidx, align 1
+  %idxprom11 = sext i32 %pos.0 to i64
+  %arrayidx12 = getelementptr inbounds [1000 x i8], [1000 x i8]* %s, i64 0, i64 %idxprom11
+  %18 = load i8, i8* %arrayidx12, align 1
+  %cmp14 = icmp eq i8 %17, %18
+  store i1 %cmp14, i1* %cmp14.reg2mem, align 1
+  br label %loopEntry.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  %cmp14.reg2mem.0.cmp14.reg2mem.0.cmp14.reg2mem.0.cmp14.reload = load volatile i1, i1* %cmp14.reg2mem, align 1
+  %19 = select i1 %cmp14.reg2mem.0.cmp14.reg2mem.0.cmp14.reg2mem.0.cmp14.reload, i32 -1247855241, i32 -1644545899
+  br label %loopEntry.backedge
+
+if.then16:                                        ; preds = %loopEntry
+  %.neg = add i32 %pos.0, 1
+  br label %loopEntry.backedge
+
+if.else:                                          ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+if.end17:                                         ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB21:                                     ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBBpart223:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc:                                          ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB25:                                     ; preds = %loopEntry
+  %20 = add i32 %i.0, 1
+  br label %loopEntry.backedge
+
+originalBBpart227:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.end:                                          ; preds = %loopEntry
+  %21 = sub i32 %i.0, %pos.0
+  %call20 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32 %21)
+  ret i32 0
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB21alteredBB:                            ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB25alteredBB:                            ; preds = %loopEntry
+  %22 = add i32 %i.0, 1
+  br label %loopEntry.backedge
+}
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #1
+
+; Function Attrs: argmemonly mustprogress nofree nounwind readonly willreturn
+declare i64 @strlen(i8* nocapture) local_unnamed_addr #2
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #1
+
+attributes #0 = { nofree noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nofree nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { argmemonly mustprogress nofree nounwind readonly willreturn "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind readonly }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

@@ -1,0 +1,274 @@
+; ModuleID = 'build_ollvm/programs/p03109/s243263606.ll'
+source_filename = "Project_CodeNet_C++1400/p03109/s243263606.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::__cxx11::basic_string" = type { %"struct.std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider", i64, %union.anon }
+%"struct.std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Alloc_hider" = type { i8* }
+%union.anon = type { i64, [8 x i8] }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@.str = private unnamed_addr constant [4 x i8] c"TBD\00", align 1
+@.str.1 = private unnamed_addr constant [7 x i8] c"Heisei\00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_s243263606.cpp, i8* null }]
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+@x.2 = common local_unnamed_addr global i32 0
+@y.3 = common local_unnamed_addr global i32 0
+@x.4 = common local_unnamed_addr global i32 0
+@y.5 = common local_unnamed_addr global i32 0
+
+; Function Attrs: noinline uwtable
+define internal fastcc void @__cxx_global_var_init() unnamed_addr #0 section ".text.startup" {
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull @_ZStL8__ioinit)
+  %1 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #5
+  ret void
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #2
+
+; Function Attrs: nofree nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) local_unnamed_addr #3
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() local_unnamed_addr #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %1 = alloca %"class.std::__cxx11::basic_string", align 8
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_string"* nonnull %1) #5
+  %2 = invoke dereferenceable(280) %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE(%"class.std::basic_istream"* nonnull dereferenceable(280) @_ZSt3cin, %"class.std::__cxx11::basic_string"* nonnull dereferenceable(32) %1)
+          to label %3 unwind label %53
+
+3:                                                ; preds = %0
+  %4 = load i32, i32* @x.2, align 4
+  %5 = load i32, i32* @y.3, align 4
+  %6 = add i32 %4, -1
+  %7 = mul i32 %6, %4
+  %8 = and i32 %7, 1
+  %9 = icmp eq i32 %8, 0
+  %10 = icmp slt i32 %5, 10
+  %11 = or i1 %10, %9
+  br i1 %11, label %.critedge, label %.preheader29
+
+.critedge:                                        ; preds = %3
+  %12 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 0)
+          to label %13 unwind label %53
+
+13:                                               ; preds = %.critedge
+  %14 = load i8, i8* %12, align 1
+  %15 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 1)
+          to label %16 unwind label %53
+
+16:                                               ; preds = %13
+  %17 = load i8, i8* %15, align 1
+  %18 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 2)
+          to label %19 unwind label %53
+
+19:                                               ; preds = %16
+  %20 = load i8, i8* %18, align 1
+  %21 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 3)
+          to label %22 unwind label %53
+
+22:                                               ; preds = %19
+  %23 = sext i8 %20 to i64
+  %.neg9.neg = mul nsw i64 %23, 10
+  %24 = sext i8 %14 to i64
+  %.neg.neg = mul nsw i64 %24, 1000
+  %25 = sext i8 %17 to i64
+  %.neg7.neg = mul nsw i64 %25, 100
+  %.neg8.neg = add nsw i64 %.neg7.neg, %.neg.neg
+  %.neg10 = add nsw i64 %.neg8.neg, %.neg9.neg
+  %26 = load i8, i8* %21, align 1
+  %27 = sext i8 %26 to i64
+  %.neg12 = add nsw i64 %.neg10, %27
+  %28 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 5)
+          to label %29 unwind label %53
+
+29:                                               ; preds = %22
+  %30 = load i8, i8* %28, align 1
+  %31 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 6)
+          to label %32 unwind label %53
+
+32:                                               ; preds = %29
+  %33 = sext i8 %30 to i64
+  %.neg.neg14 = mul nsw i64 %33, 10
+  %34 = load i8, i8* %31, align 1
+  %35 = sext i8 %34 to i64
+  %.neg16 = add nsw i64 %.neg.neg14, %35
+  %36 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 8)
+          to label %37 unwind label %53
+
+37:                                               ; preds = %32
+  %38 = invoke dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"* nonnull %1, i64 9)
+          to label %39 unwind label %53
+
+39:                                               ; preds = %37
+  %40 = load i32, i32* @x.2, align 4
+  %41 = load i32, i32* @y.3, align 4
+  %42 = add i32 %40, -1
+  %43 = mul i32 %42, %40
+  %44 = and i32 %43, 1
+  %45 = icmp eq i32 %44, 0
+  %46 = icmp slt i32 %41, 10
+  %47 = or i1 %46, %45
+  br i1 %47, label %.critedge18, label %.preheader28
+
+.critedge18:                                      ; preds = %39
+  %48 = icmp sgt i64 %.neg12, 55347
+  br i1 %48, label %49, label %55
+
+49:                                               ; preds = %.critedge18
+  %50 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* nonnull dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0))
+          to label %51 unwind label %53
+
+51:                                               ; preds = %49
+  %52 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* nonnull %50, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* nonnull @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %.critedge21 unwind label %53
+
+53:                                               ; preds = %.critedge19, %62, %60, %58, %51, %49, %37, %32, %29, %22, %19, %16, %13, %.critedge, %0
+  %54 = landingpad { i8*, i32 }
+          cleanup
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"* nonnull %1) #5
+  resume { i8*, i32 } %54
+
+55:                                               ; preds = %.critedge18
+  %56 = icmp eq i64 %.neg12, 55347
+  %57 = icmp sgt i64 %.neg16, 532
+  %or.cond = select i1 %56, i1 %57, i1 false
+  br i1 %or.cond, label %58, label %62
+
+58:                                               ; preds = %55
+  %59 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* nonnull dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0))
+          to label %60 unwind label %53
+
+60:                                               ; preds = %58
+  %61 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* nonnull %59, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* nonnull @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %..critedge20_crit_edge unwind label %53
+
+..critedge20_crit_edge:                           ; preds = %60
+  %.pre = load i32, i32* @x.2, align 4
+  %.pre35 = load i32, i32* @y.3, align 4
+  %.pre36 = add i32 %.pre, -1
+  %.pre37 = mul i32 %.pre36, %.pre
+  %.pre39 = and i32 %.pre37, 1
+  br label %.critedge20
+
+62:                                               ; preds = %55
+  %63 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* nonnull dereferenceable(272) @_ZSt4cout, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i64 0, i64 0))
+          to label %64 unwind label %53
+
+64:                                               ; preds = %62
+  %65 = load i32, i32* @x.2, align 4
+  %66 = load i32, i32* @y.3, align 4
+  %67 = add i32 %65, -1
+  %68 = mul i32 %67, %65
+  %69 = and i32 %68, 1
+  %70 = icmp eq i32 %69, 0
+  %71 = icmp slt i32 %66, 10
+  %72 = or i1 %71, %70
+  br i1 %72, label %.critedge19, label %.preheader27
+
+.critedge19:                                      ; preds = %64
+  %73 = invoke dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"* nonnull %63, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)* nonnull @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+          to label %74 unwind label %53
+
+74:                                               ; preds = %.critedge19
+  %75 = load i32, i32* @x.2, align 4
+  %76 = load i32, i32* @y.3, align 4
+  %77 = add i32 %75, -1
+  %78 = mul i32 %77, %75
+  %79 = and i32 %78, 1
+  %80 = icmp eq i32 %79, 0
+  %81 = icmp slt i32 %76, 10
+  %82 = or i1 %81, %80
+  br i1 %82, label %.critedge20, label %.preheader26
+
+.critedge20:                                      ; preds = %..critedge20_crit_edge, %74
+  %.pre-phi40 = phi i32 [ %.pre39, %..critedge20_crit_edge ], [ %79, %74 ]
+  %83 = phi i32 [ %.pre35, %..critedge20_crit_edge ], [ %76, %74 ]
+  %84 = icmp eq i32 %.pre-phi40, 0
+  %85 = icmp slt i32 %83, 10
+  %86 = or i1 %85, %84
+  br i1 %86, label %.critedge21, label %.preheader
+
+.critedge21:                                      ; preds = %.critedge20, %51
+  call void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"* nonnull %1) #5
+  ret i32 0
+
+.preheader29:                                     ; preds = %3, %.preheader29
+  br label %.preheader29, !llvm.loop !1
+
+.preheader28:                                     ; preds = %39, %.preheader28
+  br label %.preheader28, !llvm.loop !3
+
+.preheader27:                                     ; preds = %64, %.preheader27
+  br label %.preheader27, !llvm.loop !4
+
+.preheader26:                                     ; preds = %74, %.preheader26
+  br label %.preheader26, !llvm.loop !5
+
+.preheader:                                       ; preds = %.critedge20, %.preheader
+  br label %.preheader, !llvm.loop !6
+}
+
+; Function Attrs: nounwind
+declare void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1Ev(%"class.std::__cxx11::basic_string"*) unnamed_addr #2
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE(%"class.std::basic_istream"* dereferenceable(280), %"class.std::__cxx11::basic_string"* dereferenceable(32)) local_unnamed_addr #1
+
+declare i32 @__gxx_personality_v0(...)
+
+declare dereferenceable(1) i8* @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEixEm(%"class.std::__cxx11::basic_string"*, i64) local_unnamed_addr #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272), i8*) local_unnamed_addr #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEPFRSoS_E(%"class.std::basic_ostream"*, %"class.std::basic_ostream"* (%"class.std::basic_ostream"*)*) local_unnamed_addr #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%"class.std::basic_ostream"* dereferenceable(272)) #1
+
+; Function Attrs: nounwind
+declare void @_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev(%"class.std::__cxx11::basic_string"*) unnamed_addr #2
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_s243263606.cpp() #0 section ".text.startup" {
+  tail call fastcc void @__cxx_global_var_init()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nofree nounwind }
+attributes #4 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
+!1 = distinct !{!1, !2}
+!2 = !{!"llvm.loop.peeled.count", i32 1}
+!3 = distinct !{!3, !2}
+!4 = distinct !{!4, !2}
+!5 = distinct !{!5, !2}
+!6 = distinct !{!6, !2}

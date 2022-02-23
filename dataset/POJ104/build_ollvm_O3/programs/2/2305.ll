@@ -1,0 +1,353 @@
+; ModuleID = 'build_ollvm/programs/2/2305.ll'
+source_filename = "source-C-CXX/2/2305.c"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+@.str = private unnamed_addr constant [5 x i8] c"%d%d\00", align 1
+@.str.1 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.2 = private unnamed_addr constant [4 x i8] c"yes\00", align 1
+@.str.3 = private unnamed_addr constant [3 x i8] c"no\00", align 1
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+
+; Function Attrs: nofree noinline nounwind uwtable
+define i32 @main() local_unnamed_addr #0 {
+entry:
+  %cmp24.reg2mem = alloca i1, align 1
+  %cmp19.reg2mem = alloca i1, align 1
+  %cmp2.reg2mem = alloca i1, align 1
+  %sz = alloca [1000 x i32], align 16
+  %n = alloca i32, align 4
+  %k = alloca i32, align 4
+  %call = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str, i64 0, i64 0), i32* nonnull %n, i32* nonnull %k)
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.backedge, %entry
+  %i.0 = phi i32 [ 0, %entry ], [ %i.0.be, %loopEntry.backedge ]
+  %t.0 = phi i32 [ undef, %entry ], [ %t.0.be, %loopEntry.backedge ]
+  %l.0 = phi i32 [ undef, %entry ], [ %l.0.be, %loopEntry.backedge ]
+  %switchVar.0 = phi i32 [ 1106290753, %entry ], [ %switchVar.0.be, %loopEntry.backedge ]
+  switch i32 %switchVar.0, label %loopEntry.backedge [
+    i32 1106290753, label %for.cond
+    i32 -1897887610, label %for.body
+    i32 1940863849, label %originalBB
+    i32 2060527032, label %originalBBpart2
+    i32 117614920, label %for.inc
+    i32 -2104701405, label %for.end
+    i32 -850805526, label %while.cond
+    i32 -873306761, label %originalBB28
+    i32 -1218678309, label %originalBBpart230
+    i32 -1573081967, label %while.body
+    i32 2107873918, label %while.cond3
+    i32 -1661989440, label %while.body5
+    i32 -171289864, label %if.then
+    i32 603697183, label %originalBB32
+    i32 894726258, label %originalBBpart237
+    i32 -1302730825, label %if.else
+    i32 523753307, label %if.end
+    i32 -25773404, label %while.end
+    i32 923030316, label %originalBB39
+    i32 1805116165, label %originalBBpart246
+    i32 -2117361321, label %if.then20
+    i32 27897260, label %if.end21
+    i32 1783878211, label %while.end23
+    i32 -448386645, label %originalBB48
+    i32 -581964215, label %originalBBpart250
+    i32 -1419912633, label %if.then25
+    i32 1989399198, label %if.end27
+    i32 -1069262677, label %originalBB52
+    i32 602922454, label %originalBBpart254
+    i32 1461078233, label %originalBBalteredBB
+    i32 822312238, label %originalBB28alteredBB
+    i32 1313259587, label %originalBB32alteredBB
+    i32 99275392, label %originalBB39alteredBB
+    i32 -1063848083, label %originalBB48alteredBB
+    i32 2057100806, label %originalBB52alteredBB
+  ]
+
+loopEntry.backedge:                               ; preds = %loopEntry, %originalBB52alteredBB, %originalBB48alteredBB, %originalBB39alteredBB, %originalBB32alteredBB, %originalBB28alteredBB, %originalBBalteredBB, %originalBB52, %if.end27, %if.then25, %originalBBpart250, %originalBB48, %while.end23, %if.end21, %if.then20, %originalBBpart246, %originalBB39, %while.end, %if.end, %if.else, %originalBBpart237, %originalBB32, %if.then, %while.body5, %while.cond3, %while.body, %originalBBpart230, %originalBB28, %while.cond, %for.end, %for.inc, %originalBBpart2, %originalBB, %for.body, %for.cond
+  %i.0.be = phi i32 [ %i.0, %loopEntry ], [ %i.0, %originalBB52alteredBB ], [ %i.0, %originalBB48alteredBB ], [ %i.0, %originalBB39alteredBB ], [ %i.0, %originalBB32alteredBB ], [ %i.0, %originalBB28alteredBB ], [ %i.0, %originalBBalteredBB ], [ %i.0, %originalBB52 ], [ %i.0, %if.end27 ], [ %i.0, %if.then25 ], [ %i.0, %originalBBpart250 ], [ %i.0, %originalBB48 ], [ %i.0, %while.end23 ], [ %i.0, %if.end21 ], [ %i.0, %if.then20 ], [ %i.0, %originalBBpart246 ], [ %i.0, %originalBB39 ], [ %i.0, %while.end ], [ %i.0, %if.end ], [ %i.0, %if.else ], [ %i.0, %originalBBpart237 ], [ %i.0, %originalBB32 ], [ %i.0, %if.then ], [ %i.0, %while.body5 ], [ %i.0, %while.cond3 ], [ %i.0, %while.body ], [ %i.0, %originalBBpart230 ], [ %i.0, %originalBB28 ], [ %i.0, %while.cond ], [ %i.0, %for.end ], [ %20, %for.inc ], [ %i.0, %originalBBpart2 ], [ %i.0, %originalBB ], [ %i.0, %for.body ], [ %i.0, %for.cond ]
+  %t.0.be = phi i32 [ %t.0, %loopEntry ], [ %t.0, %originalBB52alteredBB ], [ %t.0, %originalBB48alteredBB ], [ %t.0, %originalBB39alteredBB ], [ %t.0, %originalBB32alteredBB ], [ %t.0, %originalBB28alteredBB ], [ %t.0, %originalBBalteredBB ], [ %t.0, %originalBB52 ], [ %t.0, %if.end27 ], [ %t.0, %if.then25 ], [ %t.0, %originalBBpart250 ], [ %t.0, %originalBB48 ], [ %t.0, %while.end23 ], [ %92, %if.end21 ], [ %t.0, %if.then20 ], [ %t.0, %originalBBpart246 ], [ %t.0, %originalBB39 ], [ %t.0, %while.end ], [ %t.0, %if.end ], [ %t.0, %if.else ], [ %t.0, %originalBBpart237 ], [ %t.0, %originalBB32 ], [ %t.0, %if.then ], [ %t.0, %while.body5 ], [ %t.0, %while.cond3 ], [ %t.0, %while.body ], [ %t.0, %originalBBpart230 ], [ %t.0, %originalBB28 ], [ %t.0, %while.cond ], [ 0, %for.end ], [ %t.0, %for.inc ], [ %t.0, %originalBBpart2 ], [ %t.0, %originalBB ], [ %t.0, %for.body ], [ %t.0, %for.cond ]
+  %l.0.be = phi i32 [ %l.0, %loopEntry ], [ %l.0, %originalBB52alteredBB ], [ %l.0, %originalBB48alteredBB ], [ %l.0, %originalBB39alteredBB ], [ %131, %originalBB32alteredBB ], [ %l.0, %originalBB28alteredBB ], [ %l.0, %originalBBalteredBB ], [ %l.0, %originalBB52 ], [ %l.0, %if.end27 ], [ %l.0, %if.then25 ], [ %l.0, %originalBBpart250 ], [ %l.0, %originalBB48 ], [ %l.0, %while.end23 ], [ %l.0, %if.end21 ], [ %l.0, %if.then20 ], [ %l.0, %originalBBpart246 ], [ %l.0, %originalBB39 ], [ %l.0, %while.end ], [ %l.0, %if.end ], [ %67, %if.else ], [ %l.0, %originalBBpart237 ], [ %57, %originalBB32 ], [ %l.0, %if.then ], [ %l.0, %while.body5 ], [ %l.0, %while.cond3 ], [ 1, %while.body ], [ %l.0, %originalBBpart230 ], [ %l.0, %originalBB28 ], [ %l.0, %while.cond ], [ %l.0, %for.end ], [ %l.0, %for.inc ], [ %l.0, %originalBBpart2 ], [ %l.0, %originalBB ], [ %l.0, %for.body ], [ %l.0, %for.cond ]
+  %switchVar.0.be = phi i32 [ %switchVar.0, %loopEntry ], [ -1069262677, %originalBB52alteredBB ], [ -448386645, %originalBB48alteredBB ], [ 923030316, %originalBB39alteredBB ], [ 603697183, %originalBB32alteredBB ], [ -873306761, %originalBB28alteredBB ], [ 1940863849, %originalBBalteredBB ], [ %130, %originalBB52 ], [ %121, %if.end27 ], [ 1989399198, %if.then25 ], [ %112, %originalBBpart250 ], [ %111, %originalBB48 ], [ %101, %while.end23 ], [ -850805526, %if.end21 ], [ 1783878211, %if.then20 ], [ %91, %originalBBpart246 ], [ %90, %originalBB39 ], [ %76, %while.end ], [ 2107873918, %if.end ], [ 523753307, %if.else ], [ -25773404, %originalBBpart237 ], [ %66, %originalBB32 ], [ %56, %if.then ], [ %47, %while.body5 ], [ %42, %while.cond3 ], [ 2107873918, %while.body ], [ %40, %originalBBpart230 ], [ %39, %originalBB28 ], [ %29, %while.cond ], [ -850805526, %for.end ], [ 1106290753, %for.inc ], [ 117614920, %originalBBpart2 ], [ %19, %originalBB ], [ %10, %for.body ], [ %1, %for.cond ]
+  br label %loopEntry
+
+for.cond:                                         ; preds = %loopEntry
+  %0 = load i32, i32* %n, align 4
+  %cmp = icmp slt i32 %i.0, %0
+  %1 = select i1 %cmp, i32 -1897887610, i32 -2104701405
+  br label %loopEntry.backedge
+
+for.body:                                         ; preds = %loopEntry
+  %2 = load i32, i32* @x, align 4
+  %3 = load i32, i32* @y, align 4
+  %4 = add i32 %2, -1
+  %5 = mul i32 %4, %2
+  %6 = and i32 %5, 1
+  %7 = icmp eq i32 %6, 0
+  %8 = icmp slt i32 %3, 10
+  %9 = or i1 %8, %7
+  %10 = select i1 %9, i32 1940863849, i32 1461078233
+  br label %loopEntry.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  %idxprom = sext i32 %i.0 to i64
+  %arrayidx = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxprom
+  %call1 = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32* nonnull %arrayidx)
+  %11 = load i32, i32* @x, align 4
+  %12 = load i32, i32* @y, align 4
+  %13 = add i32 %11, -1
+  %14 = mul i32 %13, %11
+  %15 = and i32 %14, 1
+  %16 = icmp eq i32 %15, 0
+  %17 = icmp slt i32 %12, 10
+  %18 = or i1 %17, %16
+  %19 = select i1 %18, i32 2060527032, i32 1461078233
+  br label %loopEntry.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc:                                          ; preds = %loopEntry
+  %20 = add i32 %i.0, 1
+  br label %loopEntry.backedge
+
+for.end:                                          ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+while.cond:                                       ; preds = %loopEntry
+  %21 = load i32, i32* @x, align 4
+  %22 = load i32, i32* @y, align 4
+  %23 = add i32 %21, -1
+  %24 = mul i32 %23, %21
+  %25 = and i32 %24, 1
+  %26 = icmp eq i32 %25, 0
+  %27 = icmp slt i32 %22, 10
+  %28 = or i1 %27, %26
+  %29 = select i1 %28, i32 -873306761, i32 822312238
+  br label %loopEntry.backedge
+
+originalBB28:                                     ; preds = %loopEntry
+  %30 = load i32, i32* %n, align 4
+  %cmp2 = icmp slt i32 %t.0, %30
+  store i1 %cmp2, i1* %cmp2.reg2mem, align 1
+  %31 = load i32, i32* @x, align 4
+  %32 = load i32, i32* @y, align 4
+  %33 = add i32 %31, -1
+  %34 = mul i32 %33, %31
+  %35 = and i32 %34, 1
+  %36 = icmp eq i32 %35, 0
+  %37 = icmp slt i32 %32, 10
+  %38 = or i1 %37, %36
+  %39 = select i1 %38, i32 -1218678309, i32 822312238
+  br label %loopEntry.backedge
+
+originalBBpart230:                                ; preds = %loopEntry
+  %cmp2.reg2mem.0.cmp2.reg2mem.0.cmp2.reg2mem.0.cmp2.reload = load volatile i1, i1* %cmp2.reg2mem, align 1
+  %40 = select i1 %cmp2.reg2mem.0.cmp2.reg2mem.0.cmp2.reg2mem.0.cmp2.reload, i32 -1573081967, i32 1783878211
+  br label %loopEntry.backedge
+
+while.body:                                       ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+while.cond3:                                      ; preds = %loopEntry
+  %41 = load i32, i32* %n, align 4
+  %cmp4 = icmp slt i32 %l.0, %41
+  %42 = select i1 %cmp4, i32 -1661989440, i32 -25773404
+  br label %loopEntry.backedge
+
+while.body5:                                      ; preds = %loopEntry
+  %idxprom6 = sext i32 %t.0 to i64
+  %arrayidx7 = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxprom6
+  %43 = load i32, i32* %arrayidx7, align 4
+  %idxprom8 = sext i32 %l.0 to i64
+  %arrayidx9 = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxprom8
+  %44 = load i32, i32* %arrayidx9, align 4
+  %45 = add i32 %44, %43
+  %46 = load i32, i32* %k, align 4
+  %cmp10 = icmp eq i32 %45, %46
+  %47 = select i1 %cmp10, i32 -171289864, i32 -1302730825
+  br label %loopEntry.backedge
+
+if.then:                                          ; preds = %loopEntry
+  %48 = load i32, i32* @x, align 4
+  %49 = load i32, i32* @y, align 4
+  %50 = add i32 %48, -1
+  %51 = mul i32 %50, %48
+  %52 = and i32 %51, 1
+  %53 = icmp eq i32 %52, 0
+  %54 = icmp slt i32 %49, 10
+  %55 = or i1 %54, %53
+  %56 = select i1 %55, i32 603697183, i32 1313259587
+  br label %loopEntry.backedge
+
+originalBB32:                                     ; preds = %loopEntry
+  %call11 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.2, i64 0, i64 0))
+  %57 = add i32 %l.0, 1
+  %58 = load i32, i32* @x, align 4
+  %59 = load i32, i32* @y, align 4
+  %60 = add i32 %58, -1
+  %61 = mul i32 %60, %58
+  %62 = and i32 %61, 1
+  %63 = icmp eq i32 %62, 0
+  %64 = icmp slt i32 %59, 10
+  %65 = or i1 %64, %63
+  %66 = select i1 %65, i32 894726258, i32 1313259587
+  br label %loopEntry.backedge
+
+originalBBpart237:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+if.else:                                          ; preds = %loopEntry
+  %67 = add i32 %l.0, 1
+  br label %loopEntry.backedge
+
+if.end:                                           ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+while.end:                                        ; preds = %loopEntry
+  %68 = load i32, i32* @x, align 4
+  %69 = load i32, i32* @y, align 4
+  %70 = add i32 %68, -1
+  %71 = mul i32 %70, %68
+  %72 = and i32 %71, 1
+  %73 = icmp eq i32 %72, 0
+  %74 = icmp slt i32 %69, 10
+  %75 = or i1 %74, %73
+  %76 = select i1 %75, i32 923030316, i32 99275392
+  br label %loopEntry.backedge
+
+originalBB39:                                     ; preds = %loopEntry
+  %idxprom14 = sext i32 %t.0 to i64
+  %arrayidx15 = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxprom14
+  %77 = load i32, i32* %arrayidx15, align 4
+  %78 = add i32 %l.0, -1
+  %idxprom16 = sext i32 %78 to i64
+  %arrayidx17 = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxprom16
+  %79 = load i32, i32* %arrayidx17, align 4
+  %80 = add i32 %79, %77
+  %81 = load i32, i32* %k, align 4
+  %cmp19 = icmp eq i32 %80, %81
+  store i1 %cmp19, i1* %cmp19.reg2mem, align 1
+  %82 = load i32, i32* @x, align 4
+  %83 = load i32, i32* @y, align 4
+  %84 = add i32 %82, -1
+  %85 = mul i32 %84, %82
+  %86 = and i32 %85, 1
+  %87 = icmp eq i32 %86, 0
+  %88 = icmp slt i32 %83, 10
+  %89 = or i1 %88, %87
+  %90 = select i1 %89, i32 1805116165, i32 99275392
+  br label %loopEntry.backedge
+
+originalBBpart246:                                ; preds = %loopEntry
+  %cmp19.reg2mem.0.cmp19.reg2mem.0.cmp19.reg2mem.0.cmp19.reload = load volatile i1, i1* %cmp19.reg2mem, align 1
+  %91 = select i1 %cmp19.reg2mem.0.cmp19.reg2mem.0.cmp19.reg2mem.0.cmp19.reload, i32 -2117361321, i32 27897260
+  br label %loopEntry.backedge
+
+if.then20:                                        ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+if.end21:                                         ; preds = %loopEntry
+  %92 = add i32 %t.0, 1
+  br label %loopEntry.backedge
+
+while.end23:                                      ; preds = %loopEntry
+  %93 = load i32, i32* @x, align 4
+  %94 = load i32, i32* @y, align 4
+  %95 = add i32 %93, -1
+  %96 = mul i32 %95, %93
+  %97 = and i32 %96, 1
+  %98 = icmp eq i32 %97, 0
+  %99 = icmp slt i32 %94, 10
+  %100 = or i1 %99, %98
+  %101 = select i1 %100, i32 -448386645, i32 -1063848083
+  br label %loopEntry.backedge
+
+originalBB48:                                     ; preds = %loopEntry
+  %102 = load i32, i32* %n, align 4
+  %cmp24 = icmp eq i32 %t.0, %102
+  store i1 %cmp24, i1* %cmp24.reg2mem, align 1
+  %103 = load i32, i32* @x, align 4
+  %104 = load i32, i32* @y, align 4
+  %105 = add i32 %103, -1
+  %106 = mul i32 %105, %103
+  %107 = and i32 %106, 1
+  %108 = icmp eq i32 %107, 0
+  %109 = icmp slt i32 %104, 10
+  %110 = or i1 %109, %108
+  %111 = select i1 %110, i32 -581964215, i32 -1063848083
+  br label %loopEntry.backedge
+
+originalBBpart250:                                ; preds = %loopEntry
+  %cmp24.reg2mem.0.cmp24.reg2mem.0.cmp24.reg2mem.0.cmp24.reload = load volatile i1, i1* %cmp24.reg2mem, align 1
+  %112 = select i1 %cmp24.reg2mem.0.cmp24.reg2mem.0.cmp24.reg2mem.0.cmp24.reload, i32 -1419912633, i32 1989399198
+  br label %loopEntry.backedge
+
+if.then25:                                        ; preds = %loopEntry
+  %call26 = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([3 x i8], [3 x i8]* @.str.3, i64 0, i64 0))
+  br label %loopEntry.backedge
+
+if.end27:                                         ; preds = %loopEntry
+  %113 = load i32, i32* @x, align 4
+  %114 = load i32, i32* @y, align 4
+  %115 = add i32 %113, -1
+  %116 = mul i32 %115, %113
+  %117 = and i32 %116, 1
+  %118 = icmp eq i32 %117, 0
+  %119 = icmp slt i32 %114, 10
+  %120 = or i1 %119, %118
+  %121 = select i1 %120, i32 -1069262677, i32 2057100806
+  br label %loopEntry.backedge
+
+originalBB52:                                     ; preds = %loopEntry
+  %122 = load i32, i32* @x, align 4
+  %123 = load i32, i32* @y, align 4
+  %124 = add i32 %122, -1
+  %125 = mul i32 %124, %122
+  %126 = and i32 %125, 1
+  %127 = icmp eq i32 %126, 0
+  %128 = icmp slt i32 %123, 10
+  %129 = or i1 %128, %127
+  %130 = select i1 %129, i32 602922454, i32 2057100806
+  br label %loopEntry.backedge
+
+originalBBpart254:                                ; preds = %loopEntry
+  ret i32 0
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %idxpromalteredBB = sext i32 %i.0 to i64
+  %arrayidxalteredBB = getelementptr inbounds [1000 x i32], [1000 x i32]* %sz, i64 0, i64 %idxpromalteredBB
+  %call1alteredBB = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32* nonnull %arrayidxalteredBB)
+  br label %loopEntry.backedge
+
+originalBB28alteredBB:                            ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB32alteredBB:                            ; preds = %loopEntry
+  %call11alteredBB = call i32 (i8*, ...) @printf(i8* nonnull dereferenceable(1) getelementptr inbounds ([4 x i8], [4 x i8]* @.str.2, i64 0, i64 0))
+  %131 = add i32 %l.0, 1
+  br label %loopEntry.backedge
+
+originalBB39alteredBB:                            ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB48alteredBB:                            ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+originalBB52alteredBB:                            ; preds = %loopEntry
+  br label %loopEntry.backedge
+}
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @__isoc99_scanf(i8* nocapture noundef readonly, ...) local_unnamed_addr #1
+
+; Function Attrs: nofree nounwind
+declare noundef i32 @printf(i8* nocapture noundef readonly, ...) local_unnamed_addr #1
+
+attributes #0 = { nofree noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nofree nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}

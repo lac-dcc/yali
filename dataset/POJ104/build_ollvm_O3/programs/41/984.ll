@@ -1,0 +1,695 @@
+; ModuleID = 'build_ollvm/programs/41/984.ll'
+source_filename = "source-C-CXX/41/984.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+%"class.std::basic_istream" = type { i32 (...)**, i64, %"class.std::basic_ios" }
+%"class.std::basic_ios" = type { %"class.std::ios_base", %"class.std::basic_ostream"*, i8, i8, %"class.std::basic_streambuf"*, %"class.std::ctype"*, %"class.std::num_put"*, %"class.std::num_get"* }
+%"class.std::ios_base" = type { i32 (...)**, i64, i64, i32, i32, i32, %"struct.std::ios_base::_Callback_list"*, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, %"struct.std::ios_base::_Words"*, %"class.std::locale" }
+%"struct.std::ios_base::_Callback_list" = type { %"struct.std::ios_base::_Callback_list"*, void (i32, %"class.std::ios_base"*, i32)*, i32, i32 }
+%"struct.std::ios_base::_Words" = type { i8*, i64 }
+%"class.std::locale" = type { %"class.std::locale::_Impl"* }
+%"class.std::locale::_Impl" = type { i32, %"class.std::locale::facet"**, i64, %"class.std::locale::facet"**, i8** }
+%"class.std::locale::facet" = type <{ i32 (...)**, i32, [4 x i8] }>
+%"class.std::basic_ostream" = type { i32 (...)**, %"class.std::basic_ios" }
+%"class.std::basic_streambuf" = type { i32 (...)**, i8*, i8*, i8*, i8*, i8*, i8*, %"class.std::locale" }
+%"class.std::ctype" = type <{ %"class.std::locale::facet.base", [4 x i8], %struct.__locale_struct*, i8, [7 x i8], i32*, i32*, i16*, i8, [256 x i8], [256 x i8], i8, [6 x i8] }>
+%"class.std::locale::facet.base" = type <{ i32 (...)**, i32 }>
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+%"class.std::num_put" = type { %"class.std::locale::facet.base", [4 x i8] }
+%"class.std::num_get" = type { %"class.std::locale::facet.base", [4 x i8] }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@__dso_handle = external global i8
+@_ZSt3cin = external global %"class.std::basic_istream", align 8
+@_ZSt4cout = external global %"class.std::basic_ostream", align 8
+@.str = private unnamed_addr constant [2 x i8] c" \00", align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_984.cpp, i8* null }]
+@x = common local_unnamed_addr global i32 0
+@y = common local_unnamed_addr global i32 0
+@x.1 = common local_unnamed_addr global i32 0
+@y.2 = common local_unnamed_addr global i32 0
+@x.3 = common local_unnamed_addr global i32 0
+@y.4 = common local_unnamed_addr global i32 0
+
+; Function Attrs: noinline uwtable
+define internal fastcc void @__cxx_global_var_init() unnamed_addr #0 section ".text.startup" {
+entry:
+  %.reg2mem2 = alloca i1, align 1
+  %.reg2mem = alloca i1, align 1
+  %0 = load i32, i32* @x, align 4
+  %1 = load i32, i32* @y, align 4
+  %2 = add i32 %0, -1
+  %3 = mul i32 %2, %0
+  %4 = and i32 %3, 1
+  %5 = icmp eq i32 %4, 0
+  store i1 %5, i1* %.reg2mem, align 1
+  %6 = icmp slt i32 %1, 10
+  store i1 %6, i1* %.reg2mem2, align 1
+  br label %loopEntry.outer
+
+loopEntry.outer:                                  ; preds = %loopEntry.outer.backedge, %entry
+  %switchVar.0.ph = phi i32 [ -353206831, %entry ], [ %switchVar.0.ph.be, %loopEntry.outer.backedge ]
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.outer, %loopEntry
+  switch i32 %switchVar.0.ph, label %loopEntry [
+    i32 -353206831, label %first
+    i32 860655514, label %originalBB
+    i32 -1994974203, label %originalBBpart2
+    i32 1763147036, label %originalBBalteredBB
+  ]
+
+first:                                            ; preds = %loopEntry
+  %.reg2mem.0..reg2mem.0..reg2mem.0..reload = load volatile i1, i1* %.reg2mem, align 1
+  %.reg2mem2.0..reg2mem2.0..reg2mem2.0..reload3 = load volatile i1, i1* %.reg2mem2, align 1
+  %7 = or i1 %.reg2mem.0..reg2mem.0..reg2mem.0..reload, %.reg2mem2.0..reg2mem2.0..reg2mem2.0..reload3
+  %8 = select i1 %7, i32 860655514, i32 1763147036
+  br label %loopEntry.outer.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull @_ZStL8__ioinit)
+  %9 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #5
+  %10 = load i32, i32* @x, align 4
+  %11 = load i32, i32* @y, align 4
+  %12 = add i32 %10, -1
+  %13 = mul i32 %12, %10
+  %14 = and i32 %13, 1
+  %15 = icmp eq i32 %14, 0
+  %16 = icmp slt i32 %11, 10
+  %17 = or i1 %16, %15
+  %18 = select i1 %17, i32 -1994974203, i32 1763147036
+  br label %loopEntry.outer.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  ret void
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  tail call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull @_ZStL8__ioinit)
+  %19 = tail call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init", %"class.std::ios_base::Init"* @_ZStL8__ioinit, i64 0, i32 0), i8* nonnull @__dso_handle) #5
+  br label %loopEntry.outer.backedge
+
+loopEntry.outer.backedge:                         ; preds = %originalBBalteredBB, %originalBB, %first
+  %switchVar.0.ph.be = phi i32 [ %8, %first ], [ %18, %originalBB ], [ 860655514, %originalBBalteredBB ]
+  br label %loopEntry.outer
+}
+
+declare void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+declare void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"*) unnamed_addr #1
+
+; Function Attrs: nofree nounwind
+declare i32 @__cxa_atexit(void (i8*)*, i8*, i8*) local_unnamed_addr #2
+
+; Function Attrs: noinline norecurse uwtable
+define i32 @main() local_unnamed_addr #3 {
+entry:
+  %cmp23.reg2mem = alloca i1, align 1
+  %cmp10.reg2mem = alloca i1, align 1
+  %vla.reg2mem = alloca i32*, align 8
+  %saved_stack.reg2mem = alloca i8**, align 8
+  %k.reg2mem = alloca i32*, align 8
+  %j.reg2mem = alloca i32*, align 8
+  %i.reg2mem = alloca i32*, align 8
+  %n.reg2mem = alloca i32*, align 8
+  %retval.reg2mem = alloca i32*, align 8
+  %.reg2mem67 = alloca i1, align 1
+  %.reg2mem = alloca i1, align 1
+  %0 = load i32, i32* @x.1, align 4
+  %1 = load i32, i32* @y.2, align 4
+  %2 = add i32 %0, -1
+  %3 = mul i32 %2, %0
+  %4 = and i32 %3, 1
+  %5 = icmp eq i32 %4, 0
+  store i1 %5, i1* %.reg2mem, align 1
+  %6 = icmp slt i32 %1, 10
+  store i1 %6, i1* %.reg2mem67, align 1
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.backedge, %entry
+  %switchVar.0 = phi i32 [ 438752638, %entry ], [ %switchVar.0.be, %loopEntry.backedge ]
+  switch i32 %switchVar.0, label %loopEntry.backedge [
+    i32 438752638, label %first
+    i32 -1116870709, label %originalBB
+    i32 1154821122, label %originalBBpart2
+    i32 1603157783, label %for.cond
+    i32 -1174311140, label %for.body
+    i32 1807721135, label %for.inc
+    i32 -1490826937, label %for.end
+    i32 605420627, label %for.cond3
+    i32 -1670960512, label %for.body5
+    i32 -2130921308, label %if.then
+    i32 480044195, label %originalBB39
+    i32 -609293963, label %originalBBpart241
+    i32 -1106134141, label %for.cond9
+    i32 1910697413, label %originalBB43
+    i32 -1810290000, label %originalBBpart245
+    i32 374372468, label %for.body11
+    i32 -683992246, label %originalBB47
+    i32 -1299142511, label %originalBBpart252
+    i32 1812040505, label %for.inc16
+    i32 -2139696092, label %for.end18
+    i32 -1102930405, label %if.end
+    i32 -1667759183, label %for.inc19
+    i32 2042484985, label %for.end21
+    i32 186307121, label %originalBB54
+    i32 -285484870, label %originalBBpart256
+    i32 -737845669, label %for.cond22
+    i32 92379436, label %originalBB58
+    i32 1101660485, label %originalBBpart260
+    i32 1758017996, label %for.body24
+    i32 -273800618, label %if.then27
+    i32 986366424, label %originalBB62
+    i32 535673937, label %originalBBpart264
+    i32 -2134177118, label %if.else
+    i32 -460804419, label %if.end35
+    i32 -2049201503, label %for.inc36
+    i32 516943143, label %for.end38
+    i32 -1547583883, label %originalBBalteredBB
+    i32 9433356, label %originalBB39alteredBB
+    i32 416156136, label %originalBB43alteredBB
+    i32 2004690996, label %originalBB47alteredBB
+    i32 -1401473802, label %originalBB54alteredBB
+    i32 -1371118502, label %originalBB58alteredBB
+    i32 -512745470, label %originalBB62alteredBB
+  ]
+
+loopEntry.backedge:                               ; preds = %loopEntry, %originalBB62alteredBB, %originalBB58alteredBB, %originalBB54alteredBB, %originalBB47alteredBB, %originalBB43alteredBB, %originalBB39alteredBB, %originalBBalteredBB, %for.inc36, %if.end35, %if.else, %originalBBpart264, %originalBB62, %if.then27, %for.body24, %originalBBpart260, %originalBB58, %for.cond22, %originalBBpart256, %originalBB54, %for.end21, %for.inc19, %if.end, %for.end18, %for.inc16, %originalBBpart252, %originalBB47, %for.body11, %originalBBpart245, %originalBB43, %for.cond9, %originalBBpart241, %originalBB39, %if.then, %for.body5, %for.cond3, %for.end, %for.inc, %for.body, %for.cond, %originalBBpart2, %originalBB, %first
+  %switchVar.0.be = phi i32 [ %switchVar.0, %loopEntry ], [ 986366424, %originalBB62alteredBB ], [ 92379436, %originalBB58alteredBB ], [ 186307121, %originalBB54alteredBB ], [ -683992246, %originalBB47alteredBB ], [ 1910697413, %originalBB43alteredBB ], [ 480044195, %originalBB39alteredBB ], [ -1116870709, %originalBBalteredBB ], [ -737845669, %for.inc36 ], [ -2049201503, %if.end35 ], [ -460804419, %if.else ], [ -460804419, %originalBBpart264 ], [ %164, %originalBB62 ], [ %153, %if.then27 ], [ %144, %for.body24 ], [ %140, %originalBBpart260 ], [ %139, %originalBB58 ], [ %128, %for.cond22 ], [ -737845669, %originalBBpart256 ], [ %119, %originalBB54 ], [ %110, %for.end21 ], [ 605420627, %for.inc19 ], [ -1667759183, %if.end ], [ -1102930405, %for.end18 ], [ -1106134141, %for.inc16 ], [ 1812040505, %originalBBpart252 ], [ %95, %originalBB47 ], [ %82, %for.body11 ], [ %73, %originalBBpart245 ], [ %72, %originalBB43 ], [ %61, %for.cond9 ], [ -1106134141, %originalBBpart241 ], [ %52, %originalBB39 ], [ %42, %if.then ], [ %33, %for.body5 ], [ %29, %for.cond3 ], [ 605420627, %for.end ], [ 1603157783, %for.inc ], [ 1807721135, %for.body ], [ %23, %for.cond ], [ 1603157783, %originalBBpart2 ], [ %20, %originalBB ], [ %8, %first ]
+  br label %loopEntry
+
+first:                                            ; preds = %loopEntry
+  %.reg2mem.0..reg2mem.0..reg2mem.0..reload = load volatile i1, i1* %.reg2mem, align 1
+  %.reg2mem67.0..reg2mem67.0..reg2mem67.0..reload68 = load volatile i1, i1* %.reg2mem67, align 1
+  %7 = or i1 %.reg2mem.0..reg2mem.0..reg2mem.0..reload, %.reg2mem67.0..reg2mem67.0..reg2mem67.0..reload68
+  %8 = select i1 %7, i32 -1116870709, i32 -1547583883
+  br label %loopEntry.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  %retval = alloca i32, align 4
+  store i32* %retval, i32** %retval.reg2mem, align 8
+  %n = alloca i32, align 4
+  store i32* %n, i32** %n.reg2mem, align 8
+  %i = alloca i32, align 4
+  store i32* %i, i32** %i.reg2mem, align 8
+  %j = alloca i32, align 4
+  store i32* %j, i32** %j.reg2mem, align 8
+  %k = alloca i32, align 4
+  store i32* %k, i32** %k.reg2mem, align 8
+  %saved_stack = alloca i8*, align 8
+  store i8** %saved_stack, i8*** %saved_stack.reg2mem, align 8
+  %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload70 = load volatile i32*, i32** %retval.reg2mem, align 8
+  store i32 0, i32* %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload70, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload80 = load volatile i32*, i32** %n.reg2mem, align 8
+  %call = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* dereferenceable(4) %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload80)
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload79 = load volatile i32*, i32** %n.reg2mem, align 8
+  %9 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload79, align 4
+  %10 = zext i32 %9 to i64
+  %11 = call i8* @llvm.stacksave()
+  %saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reload114 = load volatile i8**, i8*** %saved_stack.reg2mem, align 8
+  store i8* %11, i8** %saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reload114, align 8
+  %vla = alloca i32, i64 %10, align 16
+  store i32* %vla, i32** %vla.reg2mem, align 8
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload110 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 0, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload110, align 4
+  %12 = load i32, i32* @x.1, align 4
+  %13 = load i32, i32* @y.2, align 4
+  %14 = add i32 %12, -1
+  %15 = mul i32 %14, %12
+  %16 = and i32 %15, 1
+  %17 = icmp eq i32 %16, 0
+  %18 = icmp slt i32 %13, 10
+  %19 = or i1 %18, %17
+  %20 = select i1 %19, i32 1154821122, i32 -1547583883
+  br label %loopEntry.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.cond:                                         ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload109 = load volatile i32*, i32** %i.reg2mem, align 8
+  %21 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload109, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload78 = load volatile i32*, i32** %n.reg2mem, align 8
+  %22 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload78, align 4
+  %cmp = icmp slt i32 %21, %22
+  %23 = select i1 %cmp, i32 -1174311140, i32 -1490826937
+  br label %loopEntry.backedge
+
+for.body:                                         ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload108 = load volatile i32*, i32** %i.reg2mem, align 8
+  %24 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload108, align 4
+  %idxprom = sext i32 %24 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload122 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload122, i64 %idxprom
+  %call1 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* dereferenceable(4) %arrayidx)
+  br label %loopEntry.backedge
+
+for.inc:                                          ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload107 = load volatile i32*, i32** %i.reg2mem, align 8
+  %25 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload107, align 4
+  %26 = add i32 %25, 1
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload106 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 %26, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload106, align 4
+  br label %loopEntry.backedge
+
+for.end:                                          ; preds = %loopEntry
+  %k.reg2mem.0.k.reg2mem.0.k.reg2mem.0.k.reload113 = load volatile i32*, i32** %k.reg2mem, align 8
+  %call2 = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* dereferenceable(4) %k.reg2mem.0.k.reg2mem.0.k.reg2mem.0.k.reload113)
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload105 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 0, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload105, align 4
+  br label %loopEntry.backedge
+
+for.cond3:                                        ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload104 = load volatile i32*, i32** %i.reg2mem, align 8
+  %27 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload104, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload77 = load volatile i32*, i32** %n.reg2mem, align 8
+  %28 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload77, align 4
+  %cmp4 = icmp slt i32 %27, %28
+  %29 = select i1 %cmp4, i32 -1670960512, i32 2042484985
+  br label %loopEntry.backedge
+
+for.body5:                                        ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload103 = load volatile i32*, i32** %i.reg2mem, align 8
+  %30 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload103, align 4
+  %idxprom6 = sext i32 %30 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload121 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx7 = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload121, i64 %idxprom6
+  %31 = load i32, i32* %arrayidx7, align 4
+  %k.reg2mem.0.k.reg2mem.0.k.reg2mem.0.k.reload = load volatile i32*, i32** %k.reg2mem, align 8
+  %32 = load i32, i32* %k.reg2mem.0.k.reg2mem.0.k.reg2mem.0.k.reload, align 4
+  %cmp8 = icmp eq i32 %31, %32
+  %33 = select i1 %cmp8, i32 -2130921308, i32 -1102930405
+  br label %loopEntry.backedge
+
+if.then:                                          ; preds = %loopEntry
+  %34 = load i32, i32* @x.1, align 4
+  %35 = load i32, i32* @y.2, align 4
+  %36 = add i32 %34, -1
+  %37 = mul i32 %36, %34
+  %38 = and i32 %37, 1
+  %39 = icmp eq i32 %38, 0
+  %40 = icmp slt i32 %35, 10
+  %41 = or i1 %40, %39
+  %42 = select i1 %41, i32 480044195, i32 9433356
+  br label %loopEntry.backedge
+
+originalBB39:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload102 = load volatile i32*, i32** %i.reg2mem, align 8
+  %43 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload102, align 4
+  %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload112 = load volatile i32*, i32** %j.reg2mem, align 8
+  store i32 %43, i32* %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload112, align 4
+  %44 = load i32, i32* @x.1, align 4
+  %45 = load i32, i32* @y.2, align 4
+  %46 = add i32 %44, -1
+  %47 = mul i32 %46, %44
+  %48 = and i32 %47, 1
+  %49 = icmp eq i32 %48, 0
+  %50 = icmp slt i32 %45, 10
+  %51 = or i1 %50, %49
+  %52 = select i1 %51, i32 -609293963, i32 9433356
+  br label %loopEntry.backedge
+
+originalBBpart241:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.cond9:                                        ; preds = %loopEntry
+  %53 = load i32, i32* @x.1, align 4
+  %54 = load i32, i32* @y.2, align 4
+  %55 = add i32 %53, -1
+  %56 = mul i32 %55, %53
+  %57 = and i32 %56, 1
+  %58 = icmp eq i32 %57, 0
+  %59 = icmp slt i32 %54, 10
+  %60 = or i1 %59, %58
+  %61 = select i1 %60, i32 1910697413, i32 416156136
+  br label %loopEntry.backedge
+
+originalBB43:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload101 = load volatile i32*, i32** %i.reg2mem, align 8
+  %62 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload101, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload76 = load volatile i32*, i32** %n.reg2mem, align 8
+  %63 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload76, align 4
+  %cmp10 = icmp slt i32 %62, %63
+  store i1 %cmp10, i1* %cmp10.reg2mem, align 1
+  %64 = load i32, i32* @x.1, align 4
+  %65 = load i32, i32* @y.2, align 4
+  %66 = add i32 %64, -1
+  %67 = mul i32 %66, %64
+  %68 = and i32 %67, 1
+  %69 = icmp eq i32 %68, 0
+  %70 = icmp slt i32 %65, 10
+  %71 = or i1 %70, %69
+  %72 = select i1 %71, i32 -1810290000, i32 416156136
+  br label %loopEntry.backedge
+
+originalBBpart245:                                ; preds = %loopEntry
+  %cmp10.reg2mem.0.cmp10.reg2mem.0.cmp10.reg2mem.0.cmp10.reload = load volatile i1, i1* %cmp10.reg2mem, align 1
+  %73 = select i1 %cmp10.reg2mem.0.cmp10.reg2mem.0.cmp10.reg2mem.0.cmp10.reload, i32 374372468, i32 -2139696092
+  br label %loopEntry.backedge
+
+for.body11:                                       ; preds = %loopEntry
+  %74 = load i32, i32* @x.1, align 4
+  %75 = load i32, i32* @y.2, align 4
+  %76 = add i32 %74, -1
+  %77 = mul i32 %76, %74
+  %78 = and i32 %77, 1
+  %79 = icmp eq i32 %78, 0
+  %80 = icmp slt i32 %75, 10
+  %81 = or i1 %80, %79
+  %82 = select i1 %81, i32 -683992246, i32 2004690996
+  br label %loopEntry.backedge
+
+originalBB47:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload100 = load volatile i32*, i32** %i.reg2mem, align 8
+  %83 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload100, align 4
+  %84 = add i32 %83, 1
+  %idxprom12 = sext i32 %84 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload120 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx13 = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload120, i64 %idxprom12
+  %85 = load i32, i32* %arrayidx13, align 4
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload99 = load volatile i32*, i32** %i.reg2mem, align 8
+  %86 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload99, align 4
+  %idxprom14 = sext i32 %86 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload119 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx15 = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload119, i64 %idxprom14
+  store i32 %85, i32* %arrayidx15, align 4
+  %87 = load i32, i32* @x.1, align 4
+  %88 = load i32, i32* @y.2, align 4
+  %89 = add i32 %87, -1
+  %90 = mul i32 %89, %87
+  %91 = and i32 %90, 1
+  %92 = icmp eq i32 %91, 0
+  %93 = icmp slt i32 %88, 10
+  %94 = or i1 %93, %92
+  %95 = select i1 %94, i32 -1299142511, i32 2004690996
+  br label %loopEntry.backedge
+
+originalBBpart252:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc16:                                        ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload98 = load volatile i32*, i32** %i.reg2mem, align 8
+  %96 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload98, align 4
+  %.neg1 = add i32 %96, 1
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload97 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 %.neg1, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload97, align 4
+  br label %loopEntry.backedge
+
+for.end18:                                        ; preds = %loopEntry
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload75 = load volatile i32*, i32** %n.reg2mem, align 8
+  %97 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload75, align 4
+  %98 = add i32 %97, -1
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload74 = load volatile i32*, i32** %n.reg2mem, align 8
+  store i32 %98, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload74, align 4
+  %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload111 = load volatile i32*, i32** %j.reg2mem, align 8
+  %99 = load i32, i32* %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload111, align 4
+  %100 = add i32 %99, -1
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload96 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 %100, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload96, align 4
+  br label %loopEntry.backedge
+
+if.end:                                           ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc19:                                        ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload95 = load volatile i32*, i32** %i.reg2mem, align 8
+  %101 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload95, align 4
+  %.neg = add i32 %101, 1
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload94 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 %.neg, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload94, align 4
+  br label %loopEntry.backedge
+
+for.end21:                                        ; preds = %loopEntry
+  %102 = load i32, i32* @x.1, align 4
+  %103 = load i32, i32* @y.2, align 4
+  %104 = add i32 %102, -1
+  %105 = mul i32 %104, %102
+  %106 = and i32 %105, 1
+  %107 = icmp eq i32 %106, 0
+  %108 = icmp slt i32 %103, 10
+  %109 = or i1 %108, %107
+  %110 = select i1 %109, i32 186307121, i32 -1401473802
+  br label %loopEntry.backedge
+
+originalBB54:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload93 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 0, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload93, align 4
+  %111 = load i32, i32* @x.1, align 4
+  %112 = load i32, i32* @y.2, align 4
+  %113 = add i32 %111, -1
+  %114 = mul i32 %113, %111
+  %115 = and i32 %114, 1
+  %116 = icmp eq i32 %115, 0
+  %117 = icmp slt i32 %112, 10
+  %118 = or i1 %117, %116
+  %119 = select i1 %118, i32 -285484870, i32 -1401473802
+  br label %loopEntry.backedge
+
+originalBBpart256:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.cond22:                                       ; preds = %loopEntry
+  %120 = load i32, i32* @x.1, align 4
+  %121 = load i32, i32* @y.2, align 4
+  %122 = add i32 %120, -1
+  %123 = mul i32 %122, %120
+  %124 = and i32 %123, 1
+  %125 = icmp eq i32 %124, 0
+  %126 = icmp slt i32 %121, 10
+  %127 = or i1 %126, %125
+  %128 = select i1 %127, i32 92379436, i32 -1371118502
+  br label %loopEntry.backedge
+
+originalBB58:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload92 = load volatile i32*, i32** %i.reg2mem, align 8
+  %129 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload92, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload73 = load volatile i32*, i32** %n.reg2mem, align 8
+  %130 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload73, align 4
+  %cmp23 = icmp slt i32 %129, %130
+  store i1 %cmp23, i1* %cmp23.reg2mem, align 1
+  %131 = load i32, i32* @x.1, align 4
+  %132 = load i32, i32* @y.2, align 4
+  %133 = add i32 %131, -1
+  %134 = mul i32 %133, %131
+  %135 = and i32 %134, 1
+  %136 = icmp eq i32 %135, 0
+  %137 = icmp slt i32 %132, 10
+  %138 = or i1 %137, %136
+  %139 = select i1 %138, i32 1101660485, i32 -1371118502
+  br label %loopEntry.backedge
+
+originalBBpart260:                                ; preds = %loopEntry
+  %cmp23.reg2mem.0.cmp23.reg2mem.0.cmp23.reg2mem.0.cmp23.reload = load volatile i1, i1* %cmp23.reg2mem, align 1
+  %140 = select i1 %cmp23.reg2mem.0.cmp23.reg2mem.0.cmp23.reg2mem.0.cmp23.reload, i32 1758017996, i32 516943143
+  br label %loopEntry.backedge
+
+for.body24:                                       ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload91 = load volatile i32*, i32** %i.reg2mem, align 8
+  %141 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload91, align 4
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload72 = load volatile i32*, i32** %n.reg2mem, align 8
+  %142 = load i32, i32* %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload72, align 4
+  %143 = add i32 %142, -1
+  %cmp26 = icmp slt i32 %141, %143
+  %144 = select i1 %cmp26, i32 -273800618, i32 -2134177118
+  br label %loopEntry.backedge
+
+if.then27:                                        ; preds = %loopEntry
+  %145 = load i32, i32* @x.1, align 4
+  %146 = load i32, i32* @y.2, align 4
+  %147 = add i32 %145, -1
+  %148 = mul i32 %147, %145
+  %149 = and i32 %148, 1
+  %150 = icmp eq i32 %149, 0
+  %151 = icmp slt i32 %146, 10
+  %152 = or i1 %151, %150
+  %153 = select i1 %152, i32 986366424, i32 -512745470
+  br label %loopEntry.backedge
+
+originalBB62:                                     ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload90 = load volatile i32*, i32** %i.reg2mem, align 8
+  %154 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload90, align 4
+  %idxprom28 = sext i32 %154 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload118 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx29 = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload118, i64 %idxprom28
+  %155 = load i32, i32* %arrayidx29, align 4
+  %call30 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* nonnull @_ZSt4cout, i32 %155)
+  %call31 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* nonnull dereferenceable(272) %call30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0))
+  %156 = load i32, i32* @x.1, align 4
+  %157 = load i32, i32* @y.2, align 4
+  %158 = add i32 %156, -1
+  %159 = mul i32 %158, %156
+  %160 = and i32 %159, 1
+  %161 = icmp eq i32 %160, 0
+  %162 = icmp slt i32 %157, 10
+  %163 = or i1 %162, %161
+  %164 = select i1 %163, i32 535673937, i32 -512745470
+  br label %loopEntry.backedge
+
+originalBBpart264:                                ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+if.else:                                          ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload89 = load volatile i32*, i32** %i.reg2mem, align 8
+  %165 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload89, align 4
+  %idxprom32 = sext i32 %165 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload117 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx33 = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload117, i64 %idxprom32
+  %166 = load i32, i32* %arrayidx33, align 4
+  %call34 = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* nonnull @_ZSt4cout, i32 %166)
+  br label %loopEntry.backedge
+
+if.end35:                                         ; preds = %loopEntry
+  br label %loopEntry.backedge
+
+for.inc36:                                        ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload88 = load volatile i32*, i32** %i.reg2mem, align 8
+  %167 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload88, align 4
+  %168 = add i32 %167, 1
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload87 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 %168, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload87, align 4
+  br label %loopEntry.backedge
+
+for.end38:                                        ; preds = %loopEntry
+  %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload69 = load volatile i32*, i32** %retval.reg2mem, align 8
+  store i32 0, i32* %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload69, align 4
+  %saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reg2mem.0.saved_stack.reload = load volatile i8**, i8*** %saved_stack.reg2mem, align 8
+  %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload = load volatile i32*, i32** %retval.reg2mem, align 8
+  %169 = load i32, i32* %retval.reg2mem.0.retval.reg2mem.0.retval.reg2mem.0.retval.reload, align 4
+  ret i32 %169
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %nalteredBB = alloca i32, align 4
+  %callalteredBB = call dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"* nonnull @_ZSt3cin, i32* nonnull dereferenceable(4) %nalteredBB)
+  br label %loopEntry.backedge
+
+originalBB39alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload86 = load volatile i32*, i32** %i.reg2mem, align 8
+  %170 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload86, align 4
+  %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload = load volatile i32*, i32** %j.reg2mem, align 8
+  store i32 %170, i32* %j.reg2mem.0.j.reg2mem.0.j.reg2mem.0.j.reload, align 4
+  br label %loopEntry.backedge
+
+originalBB43alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload85 = load volatile i32*, i32** %i.reg2mem, align 8
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload71 = load volatile i32*, i32** %n.reg2mem, align 8
+  br label %loopEntry.backedge
+
+originalBB47alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload84 = load volatile i32*, i32** %i.reg2mem, align 8
+  %171 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload84, align 4
+  %172 = add i32 %171, 1
+  %idxprom12alteredBB = sext i32 %172 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload116 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx13alteredBB = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload116, i64 %idxprom12alteredBB
+  %173 = load i32, i32* %arrayidx13alteredBB, align 4
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload83 = load volatile i32*, i32** %i.reg2mem, align 8
+  %174 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload83, align 4
+  %idxprom14alteredBB = sext i32 %174 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload115 = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx15alteredBB = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload115, i64 %idxprom14alteredBB
+  store i32 %173, i32* %arrayidx15alteredBB, align 4
+  br label %loopEntry.backedge
+
+originalBB54alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload82 = load volatile i32*, i32** %i.reg2mem, align 8
+  store i32 0, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload82, align 4
+  br label %loopEntry.backedge
+
+originalBB58alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload81 = load volatile i32*, i32** %i.reg2mem, align 8
+  %n.reg2mem.0.n.reg2mem.0.n.reg2mem.0.n.reload = load volatile i32*, i32** %n.reg2mem, align 8
+  br label %loopEntry.backedge
+
+originalBB62alteredBB:                            ; preds = %loopEntry
+  %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload = load volatile i32*, i32** %i.reg2mem, align 8
+  %175 = load i32, i32* %i.reg2mem.0.i.reg2mem.0.i.reg2mem.0.i.reload, align 4
+  %idxprom28alteredBB = sext i32 %175 to i64
+  %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload = load volatile i32*, i32** %vla.reg2mem, align 8
+  %arrayidx29alteredBB = getelementptr inbounds i32, i32* %vla.reg2mem.0.vla.reg2mem.0.vla.reg2mem.0.vla.reload, i64 %idxprom28alteredBB
+  %176 = load i32, i32* %arrayidx29alteredBB, align 4
+  %call30alteredBB = call dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"* nonnull @_ZSt4cout, i32 %176)
+  %call31alteredBB = call dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* nonnull dereferenceable(272) %call30alteredBB, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0))
+  br label %loopEntry.backedge
+}
+
+declare dereferenceable(280) %"class.std::basic_istream"* @_ZNSirsERi(%"class.std::basic_istream"*, i32* dereferenceable(4)) local_unnamed_addr #1
+
+; Function Attrs: mustprogress nofree nosync nounwind willreturn
+declare i8* @llvm.stacksave() #4
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(%"class.std::basic_ostream"* dereferenceable(272), i8*) local_unnamed_addr #1
+
+declare dereferenceable(272) %"class.std::basic_ostream"* @_ZNSolsEi(%"class.std::basic_ostream"*, i32) local_unnamed_addr #1
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_984.cpp() #0 section ".text.startup" {
+entry:
+  %.reg2mem2 = alloca i1, align 1
+  %.reg2mem = alloca i1, align 1
+  %0 = load i32, i32* @x.3, align 4
+  %1 = load i32, i32* @y.4, align 4
+  %2 = add i32 %0, -1
+  %3 = mul i32 %2, %0
+  %4 = and i32 %3, 1
+  %5 = icmp eq i32 %4, 0
+  store i1 %5, i1* %.reg2mem, align 1
+  %6 = icmp slt i32 %1, 10
+  store i1 %6, i1* %.reg2mem2, align 1
+  br label %loopEntry.outer
+
+loopEntry.outer:                                  ; preds = %loopEntry.outer.backedge, %entry
+  %switchVar.0.ph = phi i32 [ 576138728, %entry ], [ %switchVar.0.ph.be, %loopEntry.outer.backedge ]
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %loopEntry.outer, %loopEntry
+  switch i32 %switchVar.0.ph, label %loopEntry [
+    i32 576138728, label %first
+    i32 527622510, label %originalBB
+    i32 -1496982826, label %originalBBpart2
+    i32 -1225353520, label %originalBBalteredBB
+  ]
+
+first:                                            ; preds = %loopEntry
+  %.reg2mem.0..reg2mem.0..reg2mem.0..reload = load volatile i1, i1* %.reg2mem, align 1
+  %.reg2mem2.0..reg2mem2.0..reg2mem2.0..reload3 = load volatile i1, i1* %.reg2mem2, align 1
+  %7 = or i1 %.reg2mem.0..reg2mem.0..reg2mem.0..reload, %.reg2mem2.0..reg2mem2.0..reg2mem2.0..reload3
+  %8 = select i1 %7, i32 527622510, i32 -1225353520
+  br label %loopEntry.outer.backedge
+
+originalBB:                                       ; preds = %loopEntry
+  tail call fastcc void @__cxx_global_var_init()
+  %9 = load i32, i32* @x.3, align 4
+  %10 = load i32, i32* @y.4, align 4
+  %11 = add i32 %9, -1
+  %12 = mul i32 %11, %9
+  %13 = and i32 %12, 1
+  %14 = icmp eq i32 %13, 0
+  %15 = icmp slt i32 %10, 10
+  %16 = or i1 %15, %14
+  %17 = select i1 %16, i32 -1496982826, i32 -1225353520
+  br label %loopEntry.outer.backedge
+
+originalBBpart2:                                  ; preds = %loopEntry
+  ret void
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  tail call fastcc void @__cxx_global_var_init()
+  br label %loopEntry.outer.backedge
+
+loopEntry.outer.backedge:                         ; preds = %originalBBalteredBB, %originalBB, %first
+  %switchVar.0.ph.be = phi i32 [ %8, %first ], [ %17, %originalBB ], [ 527622510, %originalBBalteredBB ]
+  br label %loopEntry.outer
+}
+
+attributes #0 = { noinline uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nofree nounwind }
+attributes #3 = { noinline norecurse uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { mustprogress nofree nosync nounwind willreturn }
+attributes #5 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
