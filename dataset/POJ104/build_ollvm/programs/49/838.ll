@@ -1,0 +1,503 @@
+; ModuleID = 'source-C-CXX/49/838.c'
+source_filename = "source-C-CXX/49/838.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.str = private unnamed_addr constant [3 x i8] c"%d\00", align 1
+@.str.1 = private unnamed_addr constant [4 x i8] c"%d\0A\00", align 1
+@Day.month = private unnamed_addr constant [12 x i32] [i32 31, i32 28, i32 31, i32 30, i32 31, i32 30, i32 31, i32 31, i32 30, i32 31, i32 30, i32 31], align 16
+@x = common global i32 0
+@y = common global i32 0
+@x.2 = common global i32 0
+@y.3 = common global i32 0
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main() #0 {
+entry:
+  %cmp2.reg2mem = alloca i1
+  %retval = alloca i32, align 4
+  %w = alloca i32, align 4
+  %i = alloca i32, align 4
+  store i32 0, i32* %retval, align 4
+  %call = call i32 (i8*, ...) @__isoc99_scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i32 0, i32 0), i32* %w)
+  store i32 1, i32* %i, align 4
+  %switchVar = alloca i32
+  store i32 -1893027209, i32* %switchVar
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %entry, %loopEnd
+  %switchVar21 = load i32, i32* %switchVar
+  switch i32 %switchVar21, label %switchDefault [
+    i32 -1893027209, label %for.cond
+    i32 353426495, label %for.body
+    i32 -53620214, label %originalBB
+    i32 1055887540, label %originalBBpart2
+    i32 -1061755254, label %if.then
+    i32 -1645795631, label %if.end
+    i32 -1579120786, label %for.inc
+    i32 827806264, label %originalBB17
+    i32 672301980, label %originalBBpart219
+    i32 -890869525, label %for.end
+    i32 1730030863, label %originalBBalteredBB
+    i32 32209955, label %originalBB17alteredBB
+  ]
+
+switchDefault:                                    ; preds = %loopEntry
+  br label %loopEnd
+
+for.cond:                                         ; preds = %loopEntry
+  %0 = load i32, i32* %i, align 4
+  %cmp = icmp sle i32 %0, 12
+  %1 = select i1 %cmp, i32 353426495, i32 -890869525
+  store i32 %1, i32* %switchVar
+  br label %loopEnd
+
+for.body:                                         ; preds = %loopEntry
+  %2 = load i32, i32* @x
+  %3 = load i32, i32* @y
+  %4 = add i32 %2, -1224473588
+  %5 = sub i32 %4, 1
+  %6 = sub i32 %5, -1224473588
+  %7 = sub i32 %2, 1
+  %8 = mul i32 %2, %6
+  %9 = urem i32 %8, 2
+  %10 = icmp eq i32 %9, 0
+  %11 = icmp slt i32 %3, 10
+  %12 = and i1 %10, %11
+  %13 = xor i1 %10, %11
+  %14 = or i1 %12, %13
+  %15 = or i1 %10, %11
+  %16 = select i1 %14, i32 -53620214, i32 1730030863
+  store i32 %16, i32* %switchVar
+  br label %loopEnd
+
+originalBB:                                       ; preds = %loopEntry
+  %17 = load i32, i32* %i, align 4
+  %call1 = call i32 @Day(i32 %17)
+  %18 = load i32, i32* %w, align 4
+  %19 = sub i32 0, %18
+  %20 = sub i32 %call1, %19
+  %add = add nsw i32 %call1, %18
+  %rem = srem i32 %20, 7
+  %cmp2 = icmp eq i32 %rem, 5
+  store i1 %cmp2, i1* %cmp2.reg2mem
+  %21 = load i32, i32* @x
+  %22 = load i32, i32* @y
+  %23 = sub i32 %21, -650515511
+  %24 = sub i32 %23, 1
+  %25 = add i32 %24, -650515511
+  %26 = sub i32 %21, 1
+  %27 = mul i32 %21, %25
+  %28 = urem i32 %27, 2
+  %29 = icmp eq i32 %28, 0
+  %30 = icmp slt i32 %22, 10
+  %31 = xor i1 %29, true
+  %32 = xor i1 %30, true
+  %33 = xor i1 false, true
+  %34 = and i1 %31, false
+  %35 = and i1 %29, %33
+  %36 = and i1 %32, false
+  %37 = and i1 %30, %33
+  %38 = or i1 %34, %35
+  %39 = or i1 %36, %37
+  %40 = xor i1 %38, %39
+  %41 = or i1 %31, %32
+  %42 = xor i1 %41, true
+  %43 = or i1 false, %33
+  %44 = and i1 %42, %43
+  %45 = or i1 %40, %44
+  %46 = or i1 %29, %30
+  %47 = select i1 %45, i32 1055887540, i32 1730030863
+  store i32 %47, i32* %switchVar
+  br label %loopEnd
+
+originalBBpart2:                                  ; preds = %loopEntry
+  %cmp2.reload = load volatile i1, i1* %cmp2.reg2mem
+  %48 = select i1 %cmp2.reload, i32 -1061755254, i32 -1645795631
+  store i32 %48, i32* %switchVar
+  br label %loopEnd
+
+if.then:                                          ; preds = %loopEntry
+  %49 = load i32, i32* %i, align 4
+  %call3 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i32 0, i32 0), i32 %49)
+  store i32 -1645795631, i32* %switchVar
+  br label %loopEnd
+
+if.end:                                           ; preds = %loopEntry
+  store i32 -1579120786, i32* %switchVar
+  br label %loopEnd
+
+for.inc:                                          ; preds = %loopEntry
+  %50 = load i32, i32* @x
+  %51 = load i32, i32* @y
+  %52 = add i32 %50, 1271131643
+  %53 = sub i32 %52, 1
+  %54 = sub i32 %53, 1271131643
+  %55 = sub i32 %50, 1
+  %56 = mul i32 %50, %54
+  %57 = urem i32 %56, 2
+  %58 = icmp eq i32 %57, 0
+  %59 = icmp slt i32 %51, 10
+  %60 = and i1 %58, %59
+  %61 = xor i1 %58, %59
+  %62 = or i1 %60, %61
+  %63 = or i1 %58, %59
+  %64 = select i1 %62, i32 827806264, i32 32209955
+  store i32 %64, i32* %switchVar
+  br label %loopEnd
+
+originalBB17:                                     ; preds = %loopEntry
+  %65 = load i32, i32* %i, align 4
+  %66 = sub i32 0, 1
+  %67 = sub i32 %65, %66
+  %inc = add nsw i32 %65, 1
+  store i32 %67, i32* %i, align 4
+  %68 = load i32, i32* @x
+  %69 = load i32, i32* @y
+  %70 = sub i32 0, 1
+  %71 = add i32 %68, %70
+  %72 = sub i32 %68, 1
+  %73 = mul i32 %68, %71
+  %74 = urem i32 %73, 2
+  %75 = icmp eq i32 %74, 0
+  %76 = icmp slt i32 %69, 10
+  %77 = and i1 %75, %76
+  %78 = xor i1 %75, %76
+  %79 = or i1 %77, %78
+  %80 = or i1 %75, %76
+  %81 = select i1 %79, i32 672301980, i32 32209955
+  store i32 %81, i32* %switchVar
+  br label %loopEnd
+
+originalBBpart219:                                ; preds = %loopEntry
+  store i32 -1893027209, i32* %switchVar
+  br label %loopEnd
+
+for.end:                                          ; preds = %loopEntry
+  ret i32 0
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %82 = load i32, i32* %i, align 4
+  %call1alteredBB = call i32 @Day(i32 %82)
+  %83 = load i32, i32* %w, align 4
+  %84 = sub i32 %call1alteredBB, 1627065589
+  %85 = sub i32 %84, %83
+  %86 = add i32 %85, 1627065589
+  %_ = sub i32 %call1alteredBB, %83
+  %gen = mul i32 %86, %83
+  %87 = sub i32 0, %83
+  %88 = sub i32 %call1alteredBB, %87
+  %addalteredBB = add nsw i32 %call1alteredBB, %83
+  %89 = sub i32 %88, 1914858616
+  %90 = sub i32 %89, 7
+  %91 = add i32 %90, 1914858616
+  %_4 = sub i32 %88, 7
+  %gen5 = mul i32 %91, 7
+  %92 = sub i32 0, 7
+  %93 = add i32 %88, %92
+  %_6 = sub i32 %88, 7
+  %gen7 = mul i32 %93, 7
+  %_8 = shl i32 %88, 7
+  %94 = add i32 %88, -1485033956
+  %95 = sub i32 %94, 7
+  %96 = sub i32 %95, -1485033956
+  %_9 = sub i32 %88, 7
+  %gen10 = mul i32 %96, 7
+  %_11 = shl i32 %88, 7
+  %_12 = shl i32 %88, 7
+  %_13 = shl i32 %88, 7
+  %_14 = shl i32 %88, 7
+  %97 = sub i32 0, 158970395
+  %98 = sub i32 %97, %88
+  %99 = add i32 %98, 158970395
+  %_15 = sub i32 0, %88
+  %100 = sub i32 %99, -740783452
+  %101 = add i32 %100, 7
+  %102 = add i32 %101, -740783452
+  %gen16 = add i32 %99, 7
+  %remalteredBB = srem i32 %88, 7
+  %cmp2alteredBB = icmp eq i32 %remalteredBB, 5
+  store i32 -53620214, i32* %switchVar
+  br label %loopEnd
+
+originalBB17alteredBB:                            ; preds = %loopEntry
+  %103 = load i32, i32* %i, align 4
+  %104 = add i32 %103, -998841385
+  %105 = add i32 %104, 1
+  %106 = sub i32 %105, -998841385
+  %incalteredBB = add nsw i32 %103, 1
+  store i32 %106, i32* %i, align 4
+  store i32 827806264, i32* %switchVar
+  br label %loopEnd
+
+loopEnd:                                          ; preds = %originalBB17alteredBB, %originalBBalteredBB, %originalBBpart219, %originalBB17, %for.inc, %if.end, %if.then, %originalBBpart2, %originalBB, %for.body, %for.cond, %switchDefault
+  br label %loopEntry
+}
+
+declare i32 @__isoc99_scanf(i8*, ...) #1
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @Day(i32 %m) #0 {
+entry:
+  %cmp.reg2mem = alloca i1
+  %i.reg2mem = alloca i32*
+  %month.reg2mem = alloca [12 x i32]*
+  %sum.reg2mem = alloca i32*
+  %m.addr.reg2mem = alloca i32*
+  %.reg2mem11 = alloca i1
+  %.reg2mem = alloca i1
+  %0 = load i32, i32* @x.2
+  %1 = load i32, i32* @y.3
+  %2 = add i32 %0, -1916216304
+  %3 = sub i32 %2, 1
+  %4 = sub i32 %3, -1916216304
+  %5 = sub i32 %0, 1
+  %6 = mul i32 %0, %4
+  %7 = urem i32 %6, 2
+  %8 = icmp eq i32 %7, 0
+  store i1 %8, i1* %.reg2mem
+  %9 = icmp slt i32 %1, 10
+  store i1 %9, i1* %.reg2mem11
+  %switchVar = alloca i32
+  store i32 1895398202, i32* %switchVar
+  br label %loopEntry
+
+loopEntry:                                        ; preds = %entry, %loopEnd
+  %switchVar10 = load i32, i32* %switchVar
+  switch i32 %switchVar10, label %switchDefault [
+    i32 1895398202, label %first
+    i32 -879056773, label %originalBB
+    i32 636416788, label %originalBBpart2
+    i32 -481810029, label %for.cond
+    i32 1884206257, label %originalBB2
+    i32 1074978785, label %originalBBpart28
+    i32 -427077280, label %for.body
+    i32 306784881, label %for.inc
+    i32 1113517844, label %for.end
+    i32 48442975, label %originalBBalteredBB
+    i32 -1295030699, label %originalBB2alteredBB
+  ]
+
+switchDefault:                                    ; preds = %loopEntry
+  br label %loopEnd
+
+first:                                            ; preds = %loopEntry
+  %.reload = load volatile i1, i1* %.reg2mem
+  %.reload12 = load volatile i1, i1* %.reg2mem11
+  %10 = and i1 %.reload, %.reload12
+  %11 = xor i1 %.reload, %.reload12
+  %12 = or i1 %10, %11
+  %13 = or i1 %.reload, %.reload12
+  %14 = select i1 %12, i32 -879056773, i32 48442975
+  store i32 %14, i32* %switchVar
+  br label %loopEnd
+
+originalBB:                                       ; preds = %loopEntry
+  %m.addr = alloca i32, align 4
+  store i32* %m.addr, i32** %m.addr.reg2mem
+  %sum = alloca i32, align 4
+  store i32* %sum, i32** %sum.reg2mem
+  %month = alloca [12 x i32], align 16
+  store [12 x i32]* %month, [12 x i32]** %month.reg2mem
+  %i = alloca i32, align 4
+  store i32* %i, i32** %i.reg2mem
+  %m.addr.reload14 = load volatile i32*, i32** %m.addr.reg2mem
+  store i32 %m, i32* %m.addr.reload14, align 4
+  %sum.reload17 = load volatile i32*, i32** %sum.reg2mem
+  store i32 0, i32* %sum.reload17, align 4
+  %month.reload18 = load volatile [12 x i32]*, [12 x i32]** %month.reg2mem
+  %15 = bitcast [12 x i32]* %month.reload18 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %15, i8* bitcast ([12 x i32]* @Day.month to i8*), i64 48, i32 16, i1 false)
+  %i.reload23 = load volatile i32*, i32** %i.reg2mem
+  store i32 0, i32* %i.reload23, align 4
+  %16 = load i32, i32* @x.2
+  %17 = load i32, i32* @y.3
+  %18 = sub i32 0, 1
+  %19 = add i32 %16, %18
+  %20 = sub i32 %16, 1
+  %21 = mul i32 %16, %19
+  %22 = urem i32 %21, 2
+  %23 = icmp eq i32 %22, 0
+  %24 = icmp slt i32 %17, 10
+  %25 = and i1 %23, %24
+  %26 = xor i1 %23, %24
+  %27 = or i1 %25, %26
+  %28 = or i1 %23, %24
+  %29 = select i1 %27, i32 636416788, i32 48442975
+  store i32 %29, i32* %switchVar
+  br label %loopEnd
+
+originalBBpart2:                                  ; preds = %loopEntry
+  store i32 -481810029, i32* %switchVar
+  br label %loopEnd
+
+for.cond:                                         ; preds = %loopEntry
+  %30 = load i32, i32* @x.2
+  %31 = load i32, i32* @y.3
+  %32 = sub i32 0, 1
+  %33 = add i32 %30, %32
+  %34 = sub i32 %30, 1
+  %35 = mul i32 %30, %33
+  %36 = urem i32 %35, 2
+  %37 = icmp eq i32 %36, 0
+  %38 = icmp slt i32 %31, 10
+  %39 = xor i1 %37, true
+  %40 = xor i1 %38, true
+  %41 = xor i1 true, true
+  %42 = and i1 %39, true
+  %43 = and i1 %37, %41
+  %44 = and i1 %40, true
+  %45 = and i1 %38, %41
+  %46 = or i1 %42, %43
+  %47 = or i1 %44, %45
+  %48 = xor i1 %46, %47
+  %49 = or i1 %39, %40
+  %50 = xor i1 %49, true
+  %51 = or i1 true, %41
+  %52 = and i1 %50, %51
+  %53 = or i1 %48, %52
+  %54 = or i1 %37, %38
+  %55 = select i1 %53, i32 1884206257, i32 -1295030699
+  store i32 %55, i32* %switchVar
+  br label %loopEnd
+
+originalBB2:                                      ; preds = %loopEntry
+  %i.reload22 = load volatile i32*, i32** %i.reg2mem
+  %56 = load i32, i32* %i.reload22, align 4
+  %m.addr.reload13 = load volatile i32*, i32** %m.addr.reg2mem
+  %57 = load i32, i32* %m.addr.reload13, align 4
+  %58 = add i32 %57, -771195717
+  %59 = sub i32 %58, 1
+  %60 = sub i32 %59, -771195717
+  %sub = sub nsw i32 %57, 1
+  %cmp = icmp slt i32 %56, %60
+  store i1 %cmp, i1* %cmp.reg2mem
+  %61 = load i32, i32* @x.2
+  %62 = load i32, i32* @y.3
+  %63 = sub i32 0, 1
+  %64 = add i32 %61, %63
+  %65 = sub i32 %61, 1
+  %66 = mul i32 %61, %64
+  %67 = urem i32 %66, 2
+  %68 = icmp eq i32 %67, 0
+  %69 = icmp slt i32 %62, 10
+  %70 = xor i1 %68, true
+  %71 = xor i1 %69, true
+  %72 = xor i1 true, true
+  %73 = and i1 %70, true
+  %74 = and i1 %68, %72
+  %75 = and i1 %71, true
+  %76 = and i1 %69, %72
+  %77 = or i1 %73, %74
+  %78 = or i1 %75, %76
+  %79 = xor i1 %77, %78
+  %80 = or i1 %70, %71
+  %81 = xor i1 %80, true
+  %82 = or i1 true, %72
+  %83 = and i1 %81, %82
+  %84 = or i1 %79, %83
+  %85 = or i1 %68, %69
+  %86 = select i1 %84, i32 1074978785, i32 -1295030699
+  store i32 %86, i32* %switchVar
+  br label %loopEnd
+
+originalBBpart28:                                 ; preds = %loopEntry
+  %cmp.reload = load volatile i1, i1* %cmp.reg2mem
+  %87 = select i1 %cmp.reload, i32 -427077280, i32 1113517844
+  store i32 %87, i32* %switchVar
+  br label %loopEnd
+
+for.body:                                         ; preds = %loopEntry
+  %i.reload21 = load volatile i32*, i32** %i.reg2mem
+  %88 = load i32, i32* %i.reload21, align 4
+  %idxprom = sext i32 %88 to i64
+  %month.reload = load volatile [12 x i32]*, [12 x i32]** %month.reg2mem
+  %arrayidx = getelementptr inbounds [12 x i32], [12 x i32]* %month.reload, i64 0, i64 %idxprom
+  %89 = load i32, i32* %arrayidx, align 4
+  %sum.reload16 = load volatile i32*, i32** %sum.reg2mem
+  %90 = load i32, i32* %sum.reload16, align 4
+  %91 = sub i32 %90, 2084004769
+  %92 = add i32 %91, %89
+  %93 = add i32 %92, 2084004769
+  %add = add nsw i32 %90, %89
+  %sum.reload15 = load volatile i32*, i32** %sum.reg2mem
+  store i32 %93, i32* %sum.reload15, align 4
+  store i32 306784881, i32* %switchVar
+  br label %loopEnd
+
+for.inc:                                          ; preds = %loopEntry
+  %i.reload20 = load volatile i32*, i32** %i.reg2mem
+  %94 = load i32, i32* %i.reload20, align 4
+  %95 = add i32 %94, 620714647
+  %96 = add i32 %95, 1
+  %97 = sub i32 %96, 620714647
+  %inc = add nsw i32 %94, 1
+  %i.reload19 = load volatile i32*, i32** %i.reg2mem
+  store i32 %97, i32* %i.reload19, align 4
+  store i32 -481810029, i32* %switchVar
+  br label %loopEnd
+
+for.end:                                          ; preds = %loopEntry
+  %sum.reload = load volatile i32*, i32** %sum.reg2mem
+  %98 = load i32, i32* %sum.reload, align 4
+  %99 = sub i32 0, 12
+  %100 = sub i32 %98, %99
+  %add1 = add nsw i32 %98, 12
+  ret i32 %100
+
+originalBBalteredBB:                              ; preds = %loopEntry
+  %m.addralteredBB = alloca i32, align 4
+  %sumalteredBB = alloca i32, align 4
+  %monthalteredBB = alloca [12 x i32], align 16
+  %ialteredBB = alloca i32, align 4
+  store i32 %m, i32* %m.addralteredBB, align 4
+  store i32 0, i32* %sumalteredBB, align 4
+  %101 = bitcast [12 x i32]* %monthalteredBB to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %101, i8* bitcast ([12 x i32]* @Day.month to i8*), i64 48, i32 16, i1 false)
+  store i32 0, i32* %ialteredBB, align 4
+  store i32 -879056773, i32* %switchVar
+  br label %loopEnd
+
+originalBB2alteredBB:                             ; preds = %loopEntry
+  %i.reload = load volatile i32*, i32** %i.reg2mem
+  %102 = load i32, i32* %i.reload, align 4
+  %m.addr.reload = load volatile i32*, i32** %m.addr.reg2mem
+  %103 = load i32, i32* %m.addr.reload, align 4
+  %104 = sub i32 0, 1
+  %105 = add i32 %103, %104
+  %_ = sub i32 %103, 1
+  %gen = mul i32 %105, 1
+  %106 = sub i32 %103, 391798609
+  %107 = sub i32 %106, 1
+  %108 = add i32 %107, 391798609
+  %_3 = sub i32 %103, 1
+  %gen4 = mul i32 %108, 1
+  %109 = sub i32 %103, 747746365
+  %110 = sub i32 %109, 1
+  %111 = add i32 %110, 747746365
+  %_5 = sub i32 %103, 1
+  %gen6 = mul i32 %111, 1
+  %112 = sub i32 %103, 1947750246
+  %113 = sub i32 %112, 1
+  %114 = add i32 %113, 1947750246
+  %subalteredBB = sub nsw i32 %103, 1
+  %cmpalteredBB = icmp slt i32 %102, %114
+  store i32 1884206257, i32* %switchVar
+  br label %loopEnd
+
+loopEnd:                                          ; preds = %originalBB2alteredBB, %originalBBalteredBB, %for.inc, %for.body, %originalBBpart28, %originalBB2, %for.cond, %originalBBpart2, %originalBB, %first, %switchDefault
+  br label %loopEntry
+}
+
+declare i32 @printf(i8*, ...) #1
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #2
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { argmemonly nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"Obfuscator-LLVM clang version 4.0.1  (based on Obfuscator-LLVM 4.0.1)"}
