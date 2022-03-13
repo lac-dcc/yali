@@ -1,0 +1,78 @@
+#
+# TARGET
+#
+
+TARGET = a.out
+
+#
+# VARIABLES
+#
+
+# Compiler
+CC = clang
+
+# LLVM opt
+OPT = opt
+
+# LLVM linker
+LINK = llvm-link
+
+# LLVM compiler
+LLC = llc
+
+# Compile-time flags
+CFLAGS = -Xclang -disable-O0-optnone -w -emit-llvm
+
+# Includes
+INCLUDES =
+
+# Library paths
+LFLAGS =
+
+# Linker flags
+LIBS = -lm
+
+# Source files
+SRCS = $(wildcard *.c)
+
+# Object file
+OBJ = $(TARGET).o
+
+# LLVM IR files
+IRS = $(SRCS:.c=.bc)
+
+#
+# BUILD
+#
+
+.PHONY: depend clean
+
+all:    $(TARGET)
+
+$(TARGET): $(OBJ)
+	@$(CC) -o $(TARGET) $(OBJ) $(LFLAGS) $(LIBS)
+
+%.bc: %.c
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(TARGET).o: $(IRS)
+	@$(LINK) *.bc -o $(TARGET).bc
+	@$(OPT) $(PASSES) $(TARGET).bc -o $(TARGET)_o.bc
+	@$(LLC) -filetype=obj $(TARGET)_o.bc -o $@
+
+#
+# CLEAN
+#
+
+clean:
+	@$(RM) -f *.o *.bc *~ *.yaml diff.txt output.txt output.all runtime.csv error.log
+
+cleanup:
+	@$(RM) -f *.o *.bc *~ *.yaml $(TARGET) diff.txt output.txt output.all runtime.csv error.log
+
+#
+# DEPEND
+#
+depend: $(SRCS)
+	@makedepend $(INCLUDES) $^
+
