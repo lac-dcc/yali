@@ -195,13 +195,13 @@ int main(int argc, char ** argv)
 
     // write the data
 
-    long ret = ret = write(STDOUT_FILENO, header, dataLength);
+    //long ret = ret = write(STDOUT_FILENO, header, dataLength);
 
 
     free(buffer);
 
     tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
     return 0;
 }

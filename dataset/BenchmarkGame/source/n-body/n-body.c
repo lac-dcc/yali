@@ -231,9 +231,9 @@ int main(int argc, char *argv[]){
     tSimu = clock();
     offset_Momentum(solar_Bodies);
     output_Energy(solar_Bodies);
-    for(intnative_t n=atoi(argv[1]); n--; advance(solar_Bodies));
+    for(intnative_t n= (argc == 1) ? 10000000 : atoi(argv[1]); n--; advance(solar_Bodies));
     output_Energy(solar_Bodies);
     tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 }
 

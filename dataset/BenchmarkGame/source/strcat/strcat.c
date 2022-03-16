@@ -16,7 +16,7 @@ main(int argc, char *argv[]) {
     clock_t tSimu;
     tSimu = clock();
 
-    int n = ((argc == 2) ? atoi(argv[1]) : 10000000);
+    int n = ((argc == 2) ? atoi(argv[1]) : 170000000);
     int i, buflen = 32;
     char *strbuf = calloc(sizeof(char), buflen);
     char *strend = strbuf;
@@ -38,7 +38,7 @@ main(int argc, char *argv[]) {
     free(strbuf);
 
     tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
     return(0);
 }

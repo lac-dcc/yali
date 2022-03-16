@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
     tSimu = clock(); 
 
 #ifdef SMALL_PROBLEM_SIZE
-#define LENGTH 7000000
+#define LENGTH 70000000
 #else
 #define LENGTH 70000000
 #endif
@@ -105,6 +105,6 @@ int main(int argc, char *argv[]) {
 	DESTROY(ntog);
     }
     tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
     return 0;
 }

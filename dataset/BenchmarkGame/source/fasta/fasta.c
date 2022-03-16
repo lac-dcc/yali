@@ -312,7 +312,7 @@ int main(int argc, char ** argv)
   clock_t tSimu;
     tSimu = clock();
 
- const intnative_t n = atoi(argv[1]);
+ const intnative_t n = (argc == 1) ? 10000000 : atoi(argv[1]);
 
  fputs(">ONE Homo sapiens alu\n", stdout);
  const char homo_Sapiens_Alu[] =
@@ -345,7 +345,7 @@ int main(int argc, char ** argv)
   sizeof(homo_Sapien_Nucleotides_Information) / sizeof(nucleotide_info), 5 * n);
 
   tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
  return 0;
 }

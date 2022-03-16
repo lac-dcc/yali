@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
   printf("%.9f\n", gen_random(100.0));
 
   tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
   return(0);
 }

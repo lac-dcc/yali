@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   free(y);
 
   tSimu = clock() - tSimu;
-  printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+  printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
   
   return(0);
 }

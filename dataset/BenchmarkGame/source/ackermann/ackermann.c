@@ -26,7 +26,7 @@ main(int argc, char *argv[]) {
     printf("Ack(3,%d): %d\n", n, Ack(3, n));
 
     tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
     return(0);
 }

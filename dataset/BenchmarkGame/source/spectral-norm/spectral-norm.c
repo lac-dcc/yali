@@ -70,7 +70,7 @@ int main(int argc, char**argv) {
    clock_t tSimu;
     tSimu = clock(); 
 
-   int n = atoi(argv[1]);
+   int n = (argc == 1) ? 10000 : atoi(argv[1]);
    if (n <= 0) n = 2000;
    if (n & 1) n++;   // make it multiple of two
 
@@ -88,7 +88,7 @@ int main(int argc, char**argv) {
 
    printf("%.9f\n", sqrt(dot(u,v, n) / dot(v,v,n)));
    tSimu = clock() - tSimu;
-    printf("Time: %.2f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
+    printf("Time: %.4f s.\n", ((float)tSimu) / CLOCKS_PER_SEC);
 
    return 0;
 }
