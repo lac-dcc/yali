@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <apr-1.0/apr_pools.h>
+#include <apr-1/apr_pools.h>
 
 #include <time.h>
 
@@ -58,9 +58,10 @@ int main(int argc, char *argv[]){
 
  // Set minimum_Tree_Depth to 4 and maximum_Tree_Depth to the maximum of what
  // was specified as the argument to the program and minimum_Tree_Depth+2.
- const intnative_t minimum_Tree_Depth=4, 
-   maximum_Tree_Depth=atoi(argv[1])<minimum_Tree_Depth+2 ?
-   minimum_Tree_Depth+2 : atoi(argv[1]);
+ const intnative_t minimum_Tree_Depth=4, maximum_Tree_Depth = 21; 
+  
+ // maximum_Tree_Depth=atoi(argv[1])<minimum_Tree_Depth+2 ?
+ //  minimum_Tree_Depth+2 : atoi(argv[1]);
 
  apr_initialize();
 

@@ -22,20 +22,25 @@
 #include <time.h>
 
 // intptr_t should be the native integer type on most sane systems.
-typedef intptr_t intnative_t;
+typedef long long intnative_t;
 
 
 int main(int argc, char ** argv){
 
    clock_t tSimu;
    tSimu = clock();
+   
+   intnative_t n;
+   
+   
+   n=1000000;	
 
-   const intnative_t n=atoi(argv[1]);
+   
 
    // Create and initialize factorial_Lookup_Table.
    intnative_t factorial_Lookup_Table[n+1];
    factorial_Lookup_Table[0]=1;
-   for(intnative_t i=0; ++i<=n;)
+   for(intnative_t i=1; ++i<=n;)
       factorial_Lookup_Table[i]=i*factorial_Lookup_Table[i-1];
 
    // Determine the block_Size to use. If n! is less than

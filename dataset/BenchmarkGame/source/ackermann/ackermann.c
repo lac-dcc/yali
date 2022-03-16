@@ -21,7 +21,7 @@ main(int argc, char *argv[]) {
     clock_t tSimu;
     tSimu = clock(); 
 
-    int n = ((argc == 2) ? atoi(argv[1]) : 8);
+    int n = ((argc == 2) ? atoi(argv[1]) : 12);
 
     printf("Ack(3,%d): %d\n", n, Ack(3, n));
 

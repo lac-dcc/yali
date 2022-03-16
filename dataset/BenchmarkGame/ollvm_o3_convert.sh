@@ -4,7 +4,7 @@ BENCH=(
     source/ackermann/ackermann.c
 	source/ary3/ary3.c
 	#source/binary-trees/binary-trees.c
-	#source/fannkuch-redux/fannkuch-redux.c
+	source/fannkuch-redux/fannkuch-redux.c
 	#source/fasta/fasta.c
 	source/fib2/fib2.c
 	source/hash/hash.c
@@ -24,15 +24,13 @@ BENCH=(
 	source/strcat/strcat.c
 )
 
-ARGS=(
-	12
-)
+FLAGS="-lm -ldl -lcurl -lz -lexpat -lapr-1 -laprutil-1 -lpcreposix -lstdc++"
 
 for ((i = 0; i < ${#BENCH[@]}; i++)); do
 	
     echo ${BENCH[i]}
 	
-    clang -O3 ${BENCH[i]} -lm
+    clang -O3 ${BENCH[i]} $FLAGS
 	./a.out > t.txt
 	cat t.txt | grep "Time:"
 	rm -rf a.out
