@@ -26,11 +26,12 @@ BENCH=(
 
 FLAGS="-lm -ldl -lcurl -lz -lexpat -lapr-1 -laprutil-1 -lpcreposix -lstdc++ -lpcre2-8"
 
+echo "bench, time (s), std (s)" > time_O0.csv
 for ((i = 0; i < ${#BENCH[@]}; i++)); do
 	
     echo ${BENCH[i]}
 	
-    clang -O3 ${BENCH[i]} $FLAGS
+    clang -O0 ${BENCH[i]} $FLAGS
     
     echo "" > t.txt
     for ((j = 0; j < 5; j++)); do
@@ -42,9 +43,7 @@ for ((i = 0; i < ${#BENCH[@]}; i++)); do
 		cat t.txt | grep "Time:" > time.txt
 	done
 	
-	python3 process_time.py ${BENCH[i]}
-	
+	python3 process_time.py ${BENCH[i]} >> time_O0.csv
 	
 	rm -rf a.out
-  	
 done
