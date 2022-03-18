@@ -1,4 +1,4 @@
-# 🥷🏻 Obfuscation Project 🥷🏻
+# 🥷🏻 Yali Project 🥷🏻
 Let _D_ be a deep learning model that classifies programs according to the problem that they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected.
 
 ## 🗂️ Dataset Folder
