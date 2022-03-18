@@ -2,3 +2,4 @@ dataset/codenet/build_*/programs
 dataset/POJ104/build_*/programs
 *_bkp
 scripts/venv
+scripts/pdfs
