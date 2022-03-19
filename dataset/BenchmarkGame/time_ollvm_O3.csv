@@ -1,0 +1,20 @@
+bench, time (s), std (s)
+ary3.c, 14.1826, 0.0860
+binary-trees.c, 36.5989, 0.7338
+fannkuch-redux.c, 0.0143, 0.0004
+fasta.c, 43.0656, 1.6267
+fib2.c, 45.1679, 0.0450
+hash.c, 14.5778, 0.6332
+heapsort.c, 14.1185, 0.0635
+lists.c, 76.6243, 0.5850
+mandelbrot.c, nan, nan
+matrix.c, 96.2587, 1.4286
+methcall.c, 53.2173, 1.2110
+n-body.c, nan, nan
+nestedloop.c, 325.1222, 4.5408
+objinst.c, 11.4473, 0.1711
+random.c, 8.6137, 0.0433
+regex-redux.c, 5.3685, 0.0209
+sieve.c, 146.8021, 0.3119
+spectral-norm.c, 132.8361, 0.4993
+strcat.c, 7.4146, 0.0307
