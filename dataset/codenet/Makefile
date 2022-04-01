@@ -32,7 +32,7 @@ ollvmfla:
 	$(MAKE) -C ${FOLDEROLLVMFLA}
 
 # CodeNet with OLLVM+O3
-ollvmbcf:
+ollvmo3:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMO3}"
 	$(MAKE) -C ${FOLDEROLLVMO3}
 
