@@ -1,5 +1,6 @@
 REPO=./programs
-BUILD=../../../features
+BUILD=../../../features/codenet/
+FILENAME=codenet_features_ollvm_O3.csv
 
 LLPATH=${LLVM13}
 CC=${LLPATH}/clang
@@ -21,6 +22,6 @@ build: ${FOLDERS}
 	@echo "$@ Started!"
 	$(eval FILES:=$(wildcard programs/$(basename $@)/*.ll))
 	@for file in ${FILES} ; do \
-		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/codenet_features_ollvm_O3.csv; \
+		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
 	done;
 	@echo "$@ Finished! \n"

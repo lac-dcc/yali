@@ -3,7 +3,7 @@
 # and saves all output in the *${BUILD}/${FILENAME}* file
 ###################################################################################
 REPO=./programs
-BUILD=../../../features
+BUILD=../../../features/codenet/
 FILENAME=codenet_features_ollvm_bcf.csv
 
 LLPATH=${LLVM13}
