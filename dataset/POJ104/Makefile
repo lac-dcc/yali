@@ -3,20 +3,17 @@
 ###################################################################################
 FOLDERO0=build_O0
 FOLDERO3=build_O3
-FOLDEROZ=build_Oz
 FOLDEROLLVM=build_ollvm
 FOLDEROLLVMBCF=build_ollvm_bcf
 FOLDEROLLVMFLA=build_ollvm_fla
+FOLDEROLLVMO3=build_ollvm_O3
 FOLDEROLLVMSUB=build_ollvm_sub
+FOLDEROZ=build_Oz
 
-all: clean O0 O3 ollvm ollvmbcf ollvmfla ollvmsub Oz
+all: clean O0 O3 ollvm ollvmbcf ollvmfla ollvmo3 ollvmsub Oz
+
 
 # POJ104 with O0
-Oz:
-	@echo "Generating features from POJ-104 ~> ${FOLDEROZ}"
-	$(MAKE) -C ${FOLDEROZ}
-
-# POJ104 with OZ
 O0:
 	@echo "Generating features from POJ-104 ~> ${FOLDERO0}"
 	$(MAKE) -C ${FOLDERO0}
@@ -36,15 +33,25 @@ ollvmbcf:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMBCF}"
 	$(MAKE) -C ${FOLDEROLLVMBCF}
 	
-# POJ104 with OLLVM ()
+# POJ104 with OLLVM (Flattening)
 ollvmfla:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMFLA}"
 	$(MAKE) -C ${FOLDEROLLVMFLA}
 
-# POJ104 with OLLVM ()
+# POJ104 with OLLVM+O3
+ollvmo3:
+	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMO3}"
+	$(MAKE) -C ${FOLDEROLLVMO3}
+
+# POJ104 with OLLVM (Instruction Substitution)
 ollvmsub:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMSUB}"
 	$(MAKE) -C ${FOLDEROLLVMSUB}
 
+# POJ104 with Oz
+Oz:
+	@echo "Generating features from POJ-104 ~> ${FOLDEROZ}"
+	$(MAKE) -C ${FOLDEROZ}
+
 clean:
-	rm ../../features/poj_*.csv
+	rm ../../features/POJ/poj_*.csv

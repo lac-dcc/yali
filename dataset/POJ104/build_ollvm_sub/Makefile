@@ -3,7 +3,7 @@
 # and saves all output in the *${BUILD}/${FILENAME}* file
 ###################################################################################
 REPO=./programs
-BUILD=../../../features
+BUILD=../../../features/POJ/
 FILENAME=poj_features_ollvm_sub.csv
 
 LLPATH=${LLVM13}

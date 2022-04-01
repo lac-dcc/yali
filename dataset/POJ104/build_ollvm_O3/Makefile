@@ -1,5 +1,5 @@
 REPO=./programs
-BUILD=../../../features
+BUILD=../../../features/POJ/
 
 LLPATH=${LLVM13}
 CC=${LLPATH}/clang
