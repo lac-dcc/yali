@@ -3,3 +3,4 @@ dataset/POJ104/build_*/programs
 *_bkp
 .venv
 scripts/pdfs
+models/AdvancedModels/__pycache__
