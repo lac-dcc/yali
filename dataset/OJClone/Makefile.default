@@ -17,7 +17,7 @@ FOLDERS=$(SRC:${REPO}/%/.=%.dir)
 
 # Output name
 TYPE=$(patsubst build_%,%,$(FOLDER))
-FILENAME=ojclone_${TYPE}.csv
+FILENAME=ojclone_features_${TYPE}.csv
 
 
 build: clf ${FOLDERS}
