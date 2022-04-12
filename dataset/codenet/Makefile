@@ -5,11 +5,11 @@ FOLDERO3=build_O3
 FOLDEROLLVM=build_ollvm
 FOLDEROLLVMBCF=build_ollvm_bcf
 FOLDEROLLVMFLA=build_ollvm_fla
-FOLDEROLLVMSUB=build_ollvm_sub
 FOLDEROLLVMO3=build_ollvm_O3
+FOLDEROLLVMSUB=build_ollvm_sub
 FOLDEROZ=build_Oz
 
-all: clean O3 ollvm ollvmbcf ollvmfla ollvmo3 ollvmsub Oz
+all: O3 ollvm ollvm_bcf ollvm_fla ollvm_o3 ollvm_sub oz
 
 # CodeNet with O3
 O3:
@@ -22,22 +22,22 @@ ollvm:
 	$(MAKE) -C ${FOLDEROLLVM}
 
 # CodeNet with OLLVM (Bogus Control Flow)
-ollvmbcf:
+ollvm_bcf:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMBCF}"
 	$(MAKE) -C ${FOLDEROLLVMBCF}
 	
 # CodeNet with OLLVM (Flattening)
-ollvmfla:
+ollvm_fla:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMFLA}"
 	$(MAKE) -C ${FOLDEROLLVMFLA}
 
 # CodeNet with OLLVM+O3
-ollvmo3:
+ollvm_o3:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMO3}"
 	$(MAKE) -C ${FOLDEROLLVMO3}
 
 # CodeNet with OLLVM (Intruction Substitution)
-ollvmsub:
+ollvm_sub:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMSUB}"
 	$(MAKE) -C ${FOLDEROLLVMSUB}
 
@@ -45,6 +45,3 @@ ollvmsub:
 Oz:
 	@echo "Generating features from CodeNet ~> ${FOLDEROZ}"
 	$(MAKE) -C ${FOLDEROZ}
-
-clean:
-	rm ../../features/codenet/codenet_*.csv
