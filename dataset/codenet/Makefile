@@ -1,6 +1,7 @@
 ###################################################################################
 # This Makefile generates features of a selected folder
 ###################################################################################
+FOLDERO0=build_O0
 FOLDERO3=build_O3
 FOLDEROLLVM=build_ollvm
 FOLDEROLLVMBCF=build_ollvm_bcf
@@ -9,7 +10,13 @@ FOLDEROLLVMO3=build_ollvm_O3
 FOLDEROLLVMSUB=build_ollvm_sub
 FOLDEROZ=build_Oz
 
-all: O3 ollvm ollvm_bcf ollvm_fla ollvm_o3 ollvm_sub oz
+all: O0 O3 ollvm ollvm_bcf ollvm_fla ollvm_o3 ollvm_sub oz
+
+
+# CodeNet with O0
+O0:
+	@echo "Generating features from CodeNet ~> ${FOLDERO0}"
+	$(MAKE) -C ${FOLDERO0}
 
 # CodeNet with O3
 O3:
@@ -41,7 +48,7 @@ ollvm_sub:
 	@echo "Generating features from CodeNet ~> ${FOLDEROLLVMSUB}"
 	$(MAKE) -C ${FOLDEROLLVMSUB}
 
-# POJ104 with O0
+# CodeNet with Oz
 Oz:
 	@echo "Generating features from CodeNet ~> ${FOLDEROZ}"
 	$(MAKE) -C ${FOLDEROZ}
