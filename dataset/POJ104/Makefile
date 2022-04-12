@@ -10,7 +10,7 @@ FOLDEROLLVMO3=build_ollvm_O3
 FOLDEROLLVMSUB=build_ollvm_sub
 FOLDEROZ=build_Oz
 
-all: clean O0 O3 ollvm ollvmbcf ollvmfla ollvmo3 ollvmsub Oz
+all: O0 O3 ollvm ollvmbcf ollvmfla ollvmo3 ollvmsub Oz
 
 
 # POJ104 with O0
@@ -28,12 +28,12 @@ ollvm:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVM}"
 	$(MAKE) -C ${FOLDEROLLVM}
 
-# POJ104 with OLLVM (Bogus Control Flow)
+# POJ104 with OLLVM bcf (Bogus Control Flow)
 ollvmbcf:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMBCF}"
 	$(MAKE) -C ${FOLDEROLLVMBCF}
 	
-# POJ104 with OLLVM (Flattening)
+# POJ104 with OLLVM fla (Flattening)
 ollvmfla:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMFLA}"
 	$(MAKE) -C ${FOLDEROLLVMFLA}
@@ -43,7 +43,7 @@ ollvmo3:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMO3}"
 	$(MAKE) -C ${FOLDEROLLVMO3}
 
-# POJ104 with OLLVM (Instruction Substitution)
+# POJ104 with OLLVM sub (Instruction Substitution)
 ollvmsub:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROLLVMSUB}"
 	$(MAKE) -C ${FOLDEROLLVMSUB}
@@ -52,6 +52,3 @@ ollvmsub:
 Oz:
 	@echo "Generating features from POJ-104 ~> ${FOLDEROZ}"
 	$(MAKE) -C ${FOLDEROZ}
-
-clean:
-	rm ../../features/POJ/poj_*.csv
