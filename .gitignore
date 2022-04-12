@@ -1,6 +1,11 @@
-dataset/codenet/build_*/programs
-dataset/POJ104/build_*/programs
+dataset/*/build_*/programs
+
 *_bkp
+
 .venv
+
 scripts/pdfs
+
 models/AdvancedModels/__pycache__
+
+test/*
