@@ -28,7 +28,7 @@ clf:
 	@echo ${HEADER} >> ${BUILD}/${FILENAME}
 
 # Get the program features of each folder
-%.dir: 
+%.dir:
 	@echo "$@ Started!"
 	$(eval FILES:=$(wildcard programs/$(basename $@)/*.ll))
 	@for file in ${FILES} ; do \
