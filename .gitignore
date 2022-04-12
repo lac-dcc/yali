@@ -6,6 +6,6 @@ dataset/*/build_*/programs
 
 scripts/pdfs
 
-models/AdvancedModels/__pycache__
+models/*/*/__pycache__
 
 test/*
