@@ -1,4 +1,5 @@
 dataset/*/build_*/programs
+dataset/*/*.temp.*
 
 *_bkp
 
@@ -9,3 +10,5 @@ scripts/pdfs
 models/*/*/__pycache__
 
 test/*
+
+.vscode
