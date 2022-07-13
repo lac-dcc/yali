@@ -1,3 +1,5 @@
+set -e
+
 OPTLEVEL=$1
 DATASET=$2
 FOLDER=~/yali/Dataset/Source/${DATASET}
