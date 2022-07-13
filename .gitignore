@@ -1,8 +1,9 @@
 .old
 
 ######################
-# Python ENV
+# Python ENV and Results
 .venv
+Statistics/pdfs
 
 # IDE
 .vscode

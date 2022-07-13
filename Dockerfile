@@ -96,7 +96,7 @@ RUN cd YaCoS \
     && pip3 install numpy --upgrade 
 
 ######################################### Compilation Scripts ###########################################
-COPY --chown=ml4code:sudo Extraction /home/ml4code/yali/Compilation
+COPY --chown=ml4code:sudo Compilation /home/ml4code/yali/Compilation
 
 ######################################### Histogram Extraction ##########################################
 COPY --chown=ml4code:sudo Extraction /home/ml4code/yali/Extraction
