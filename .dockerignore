@@ -1,0 +1,8 @@
+.vscode
+.venv
+.gitignore
+.docker-compose
+Dockerfile
+Volume
+Statistics
+README.md
