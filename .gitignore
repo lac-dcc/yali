@@ -1,14 +1,14 @@
-dataset/*/build_*/programs
-dataset/*/*.temp.*
+.old
 
-*_bkp
-
+######################
+# Python ENV
 .venv
 
-scripts/pdfs
-
-models/*/*/__pycache__
-
-test/*
-
+# IDE
 .vscode
+
+# Volume
+Volume/Source/*
+Volume/Histograms/*
+Volume/Irs/*
+!Volume/Irs/Makefile.*
