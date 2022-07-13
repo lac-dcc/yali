@@ -13,5 +13,5 @@ mkdir -p ./Volume/Source
 # Run classification model
 docker run --rm \
     -v /home/thais/Documents/Master/DL/Obfuscation/Volume:/yali/Dataset \
-    yacos:ubuntu-20.04 /bin/bash \
+    yali:ubuntu-20.04 /bin/bash \
     -c "./yali/Classification/Classify.sh ${MODEL} ${TRAINDATASET} ${OPTLEVEL} ${NUMCLASSES} ${TESTDATASET}"
