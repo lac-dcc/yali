@@ -3,6 +3,6 @@
 .gitignore
 .docker-compose
 Dockerfile
-Volume
+Volume/*
 Statistics
 README.md
