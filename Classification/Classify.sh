@@ -1,3 +1,5 @@
+set -e
+
 MODEL=$1
 TRAINDATASET=$2
 OPTLEVEL=$3
