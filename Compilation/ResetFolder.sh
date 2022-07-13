@@ -21,4 +21,5 @@ else
 		resetFolder
 		echo "The repository is ready to be processed!"
 	fi
+	echo "===> Folder reseted <==="
 fi

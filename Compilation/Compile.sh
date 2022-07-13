@@ -1,6 +1,6 @@
 OPTLEVEL=$1
 DATASET=$2
-FOLDER=../Dataset/Source/${DATASET}
+FOLDER=~/yali/Dataset/Source/${DATASET}
 FOLDERPROCESSED=${FOLDER}.done
 
 BUILD=~/yali/Irs/${DATASET}${OPTLEVEL}
@@ -61,6 +61,6 @@ else
     done
 	
 	source resetFolder.sh ${FOLDER}
-    echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
-    echo "===> ${DATASET} finished (OPT = ${OPTLEVEL}) <==="
+    echo -e "-include ~/yali/Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
+    echo "===> ${DATASET} Finished (OPT = ${OPTLEVEL}) <==="
 fi

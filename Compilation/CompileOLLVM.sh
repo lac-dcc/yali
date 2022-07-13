@@ -1,4 +1,4 @@
-FOLDER=../Dataset/Source/OJClone
+FOLDER=~/yali/Dataset/Source/OJClone
 DATASET=$(basename ${FOLDER})
 FOLDERPROCESSED=${FOLDER}.done
 OPTLEVEL=$1
@@ -86,5 +86,5 @@ else
 	
 	source resetFolder.sh ${FOLDER}
     echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
-    echo "===> ${DATASET} finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <==="
+    echo "===> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <==="
 fi
