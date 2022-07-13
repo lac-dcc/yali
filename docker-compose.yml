@@ -2,8 +2,8 @@ version: "3"
 
 services:
   nginx:
-    container_name: yacos
-    image: yacos:ubuntu-20.04
+    container_name: yali
+    image: yali:ubuntu-20.04
     logging:
       driver: none
     build:
