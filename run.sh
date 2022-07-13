@@ -5,7 +5,7 @@ NUMCLASSES=$4       # 104 | 10
 TESTDATASET=$3      # OJClone | BCF| FLA | SUB | OLLVM | | MCMC | GA | DRLSG | RS (or the same names with the suffix "O3")
 
 # Python Env for the statistics
-python3 -m venv ./Statistics/.venv
+python3 -m venv .venv
 
 # Creating main directories
 mkdir -p ./Volume/Csv
