@@ -1,3 +1,5 @@
+set -e
+
 REPOSITORY=$1
 AVERAGESIZE=50000
 

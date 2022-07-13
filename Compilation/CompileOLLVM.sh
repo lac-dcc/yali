@@ -1,3 +1,5 @@
+set -e
+
 FOLDER=~/yali/Dataset/Source/OJClone
 DATASET=$(basename ${FOLDER})
 FOLDERPROCESSED=${FOLDER}.done
