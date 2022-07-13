@@ -23,25 +23,25 @@ checkParameters() {
 histograms() {
     local setName=$1
     echo "===> Creating histograms ${setName}..."
-    make -C ../Dataset/${setName}${OPTLEVEL}
+    make -C ~/yali/Dataset/${setName}${OPTLEVEL}
     echo "===> Histograms finished ${setName} <==="
 
     echo "===> Converting CSV to Numpy ${setName}..."
-    python3 ../Extraction/ConvertCSVToNP.py --histogramCSV ../Dataset/Csv/features_${setName}_${OPTLEVEL}.csv --outputDir ../Dataset/Histograms/${setName}${OPTLEVEL}
+    python3 ~/yali/Extraction/ConvertCSVToNP.py --histogramCSV ~/yali/Dataset/Csv/features_${setName}_${OPTLEVEL}.csv --outputDir ~/yali/Dataset/Histograms/${setName}${OPTLEVEL}
     echo "===> Conversion finished ${setName} <==="
 }
 
 compiling() {
     local setName=$1
-    if [ -z "$(ls -A ../Dataset/${setName}${OPTLEVEL})" ]; then
+    if [ -z "$(ls -A ~/yali/Dataset/${setName}${OPTLEVEL})" ]; then
         echo "===> Compiling ${setName}..."
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
-            source ../Compilation/CompileOLLVM.sh ${OPTLEVEL} ${setName}
+            source ~/yali/Compilation/CompileOLLVM.sh ${OPTLEVEL} ${setName}
             echo "===> Compilation finished <==="
             histograms ${setName}
         else
-            source ../Compilation/Compile.sh ${OPTLEVEL} ${setName}
+            source ~/yali/Compilation/Compile.sh ${OPTLEVEL} ${setName}
             echo "===> Compilation finished <==="
             histograms ${setName}
         fi
@@ -54,10 +54,10 @@ classification() {
 
     if [ -z ${testName} ]; then
         python3 VectorTTClassify.py --train_dataset_directory ${trainName} \
-            --results_directory ../Dataset/Results/${trainName} --model ${MODEL}
+            --results_directory ~/yali/Dataset/Results/${trainName} --model ${MODEL}
     else
         python3 VectorTTClassify.py --train_dataset_directory ${trainName} --train_p 100 \
-            --test_dataset_directory ${tesName} --results_directory ../Dataset/Results/${trainName}_${testName} --model ${MODEL}
+            --test_dataset_directory ${tesName} --results_directory ~/yali/Dataset/Results/${trainName}_${testName} --model ${MODEL}
     fi
 }
 
