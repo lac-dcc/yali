@@ -1,4 +1,4 @@
 set -e
 
 # Run classification model
-docker-compose up -d
+docker compose up -d
