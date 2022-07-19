@@ -1,11 +1,11 @@
 set -e
 
-OPTLEVEL=$1
-DATASET=$2
-FOLDER=~/yali/Dataset/Source/${DATASET}${OPTLEVEL}
+DATASET=$1
+OPTLEVEL=$2
+FOLDER=~/yali/Dataset/Source/${DATASET}
 FOLDERPROCESSED=${FOLDER}.done
 
-BUILD=~/yali/Irs/${DATASET}${OPTLEVEL}
+BUILD=~/yali/Dataset/Irs/${DATASET}${OPTLEVEL}
 LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/build/bin
 
@@ -65,6 +65,6 @@ else
     done
 	
 	source resetFolder.sh ${FOLDER}
-    echo -e "-include ~/yali/Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
+    echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
     echo "===> ${DATASET} Finished (OPT = ${OPTLEVEL}) <==="
 fi

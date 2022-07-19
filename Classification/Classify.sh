@@ -2,74 +2,95 @@ set -e
 
 MODEL=$1
 TRAINDATASET=$2
-OPTLEVEL=$3
+OPTLEVELTRAIN=$3
 NUMCLASSES=$4
 TESTDATASET=$5
+OPTLEVELTEST=$6
 
 checkParameters() {
-    if [ -z ${MODEL} ]; then
+    if [ -z "${MODEL}" ]; then
         echo "Error: No model specified!"
         exit 1
-    elif [ -z ${TRAINDATASET} ]; then
+    elif [ -z "${TRAINDATASET}" ]; then
         echo "Error: No training dataset specified!"
         exit 1
-    elif [ -z ${OPTLEVEL} ]; then
-        echo "Error: No optimization level specified!"
+    elif [ -z "${OPTLEVELTRAIN}" ]; then
+        echo "Error: No optimization level specified for the training dataset!"
         exit 1
-    elif [ -z ${NUMCLASSES} ]; then
+    elif [ -z "${NUMCLASSES}" ]; then
         echo "Error: No number of classes specified!"
         exit 1
+    fi
+
+    if [[ ! -z "${TRAINDATASET}" ]]; then
+        if [ -z "${OPTLEVELTEST}" ]; then
+            echo "Error: No optimization level specified for the testing dataset!"
+            exit 1
+        fi
     fi
 }
 
 histograms() {
     local setName=$1
-    local mainDir=~/yali/Dataset
+    local optType=$2
+    local irFolder=~/yali/Dataset/Irs/${setName}${optType}/
+    local csvFile=~/yali/Dataset/Csv/features_${setName}${optType}.csv
+    local outputDir=~/yali/Histograms/${setName}${optType}/
 
     echo "===> Creating histograms ${setName}..."
-    make -C ${mainDir}/Irs/${setName}${OPTLEVEL}
+    make -C ${irFolder}
     echo "===> Histograms finished ${setName} <==="
 
     echo "===> Converting CSV to Numpy ${setName}..."
-    python3 ~/yali/Extraction/ConvertCSVToNP.py --histogramCSV ${mainDir}/Csv/features_${setName}${OPTLEVEL}.csv --outputDir ${mainDir}/Histograms/${setName}${OPTLEVEL}/
+    python3 ~/yali/Extraction/ConvertCSVToNP.py \
+        --histogramCSV ${csvFile} \
+        --outputDir ${outputDir}
     echo "===> Conversion finished ${setName} <==="
 }
 
 compiling() {
     local setName=$1
+    local optType=$2
+    local irFolder=~/yali/Dataset/Irs/${setName}${optType}
+    local scriptFolder=~/yali/Compilation/
 
-    if [ -z "$(ls -A ~/yali/Dataset/Irs/${setName}${OPTLEVEL})" ]; then
+    mkdir -p ${irFolder}
+
+    if [ -z "$(ls -A ${irFolder})" ]; then
         echo "===> Compiling ${setName}..."
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
-            source ~/yali/Compilation/CompileOLLVM.sh ${OPTLEVEL} ${setName}
+            source ${scriptFolder}/CompileOLLVM.sh ${optType} ${setName}
             echo "===> Compilation finished <==="
-            histograms ${setName}
+            histograms ${setName} ${optType}
         else
-            source ~/yali/Compilation/Compile.sh ${OPTLEVEL} ${setName}
+            source ${scriptFolder}/Compile.sh ${setName} ${optType}
             echo "===> Compilation finished <==="
-            histograms ${setName}
+            histograms ${setName} ${optType}
         fi
     fi
 }
 
 classification() {
     local trainName=$1
-    local testName=$2
-    local resultsPath=~/yali/Dataset/Results/${trainName}${OPTLEVEL}
-    local mainDir=~/yali/Dataset
+    local optTypeTrain=$2
+    local testName=$3
+    local optTypeTest=$4
+    local resultsPath=~/yali/Dataset/Results/${trainName}${optTypeTrain}
+    local trainDir=~/yali/Dataset/${trainName}${optTypeTrain}/
+    local testDir=~/yali/Dataset/${testDir}${optTypeTest}/
 
     if [ -z ${testName} ]; then
         python3 ~/yali/Classification/VectorTTClassify.py \
-            --train_dataset_directory ${mainDir}/${trainName}${OPTLEVEL} \
+            --train_dataset_directory ${trainDir} \
             --results_directory ${resultsPath} \
             --model ${MODEL}
     else
         python3 ~/yali/Classification/VectorTTClassify.py \
-            --train_dataset_directory ${mainDir}/${trainName}${OPTLEVEL} \
+            --train_dataset_directory ${trainDir} \
             --train_p 100 \
-            --test_dataset_directory ${mainDir}/${tesName} \
-            --results_directory ${resultsPath}_${testName} \
+            --test_dataset_directory ${testDir} \
+            --results_directory ${resultsPath}_${testName}${optTypeTest} \
             --model ${MODEL}
     fi
 }
@@ -78,12 +99,12 @@ classification() {
 checkParameters
 
 if [ -z ${TESTDATASET} ]; then
-    compiling ${TRAINDATASET}
+    compiling ${TRAINDATASET} ${OPTLEVELTRAIN}
 
     classification ${TRAINDATASET}
 else
-    compiling ${TRAINDATASET}
-    compiling ${TESTDATASET}
-
+    compiling ${TRAINDATASET} ${OPTLEVELTRAIN}
+    compiling ${TESTDATASET} ${OPTLEVELTEST}
+ 
     classification ${TRAINDATASET} ${TESTDATASET}
 fi
