@@ -1,12 +1,12 @@
 set -e
 
-FOLDER=~/yali/Dataset/Source/OJCloneO0
+FOLDER=~/yali/Dataset/Source/OJClone
 DATASET=$(basename ${FOLDER})
 FOLDERPROCESSED=${FOLDER}.done
 OPTLEVEL=$1
 STRATEG=$2
 
-BUILD=~/yali/Irs/${STRATEG}${OPTLEVEL}
+BUILD=~/yali/Dataset/Irs/${STRATEG}${OPTLEVEL}
 LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/ollvm/bin
 OLLVMFLAGS=""
