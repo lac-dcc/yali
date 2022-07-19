@@ -35,7 +35,7 @@ histograms() {
 
 compiling() {
     local setName=$1
-    if [ -z "$(ls -A ~/yali/Dataset/${setName}${OPTLEVEL})" ]; then
+    if [ -z "$(ls -A ~/yali/Dataset/Source/${setName}${OPTLEVEL})" ]; then
         echo "===> Compiling ${setName}..."
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
