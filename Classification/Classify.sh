@@ -22,7 +22,7 @@ checkParameters() {
         exit 1
     fi
 
-    if [[ ! -z "${TRAINDATASET}" ]]; then
+    if [[ ! -z "${TESTDATASET}" ]]; then
         if [ -z "${OPTLEVELTEST}" ]; then
             echo "Error: No optimization level specified for the testing dataset!"
             exit 1
