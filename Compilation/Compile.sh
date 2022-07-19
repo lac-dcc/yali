@@ -7,7 +7,7 @@ FOLDERPROCESSED=${FOLDER}.done
 
 BUILD=~/yali/Dataset/Irs/${DATASET}${OPTLEVEL}
 LOGFOLDER=~/yali/Dataset/Irs/logs
-OLLVM=/build/bin
+OLLVM=/opt/ollvm/bin/
 
 
 compilingC() {

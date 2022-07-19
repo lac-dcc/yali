@@ -8,7 +8,7 @@ STRATEG=$2
 
 BUILD=~/yali/Dataset/Irs/${STRATEG}${OPTLEVEL}
 LOGFOLDER=~/yali/Dataset/Irs/logs
-OLLVM=/ollvm/bin
+OLLVM=/opt/ollvm/bin/
 OLLVMFLAGS=""
 
 
