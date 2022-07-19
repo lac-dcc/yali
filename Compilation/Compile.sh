@@ -45,6 +45,8 @@ else
         TOTAL=$((${TOTAL} + ${count}))
     done
 
+    mkdir -p ${LOGFOLDER}
+
     echo "NEW COMPILATION: " >> ${LOGFOLDER}/${DATASET}_${OPTLEVEL}_log.txt
     for d in ${FOLDER}/*/; do
         for f in $d/*; do
