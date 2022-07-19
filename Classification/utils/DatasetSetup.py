@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-import GeneralSetup as GS
+from . import GeneralSetup as GS
 import numpy as np
 import glob as gl
 import random
