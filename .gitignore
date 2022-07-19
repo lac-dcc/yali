@@ -13,3 +13,6 @@ Volume/Source/*
 Volume/Histograms/*
 Volume/Irs/*
 !Volume/Irs/Makefile.*
+
+# HistogramPass
+HistogramPass/build/*
