@@ -80,7 +80,7 @@ def execute(argv):
     """
     del argv
 
-    FLAGS = FlagSetup.flags
+    FLAGS = FlagSetup.flags.FLAGS
     flagsTimes = {}
   
     print('\nLoading the dataset ...')

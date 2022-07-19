@@ -84,7 +84,7 @@ def loadDataset(numClasses, trainDir, trainPer, testDir =  None, testPer = None,
     else:
         testPer = testPer if (100 - trainPer) <= 0 else (100 -  trainPer)
         X_train, X_test, y_train, y_test = train_test_split(
-            X_train, y_train, test_size=testPer, random_state=GS.RandomSeed
+            X_train, y_train, test_size=testPer/100.0, random_state=GS.RandomSeed
         )
 
     

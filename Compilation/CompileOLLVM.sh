@@ -40,7 +40,7 @@ compilingC() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${DATASET}_${OPTLEVEL}_${STRATEG}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
+    ${OLLVM}/clang -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
 }
 
 
@@ -51,13 +51,13 @@ compilingCPP() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang++ -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${DATASET}_${OPTLEVEL}_${STRATEG}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
+    ${OLLVM}/clang++ -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
 }
 
 
-if [ -z $2 ]; then
+if [ -z $1 ]; then
     echo "Error: No optimization level specified (-O3 and -O0, for instance)!"
-elif [ -z $3 ]; then
+elif [ -z $2 ]; then
     echo "Error: No obfuscation level specified (SUB, FLA, BCF or ALL)!"
 else
     setOLLVMFlags
@@ -69,7 +69,9 @@ else
         TOTAL=$((${TOTAL} + ${count}))
     done
 
-    echo "NEW COMPILATION: " >> ${LOGFOLDER}/${DATASET}_${OPTLEVEL}_log.txt
+    mkdir -p ${LOGFOLDER}
+    
+    echo "NEW COMPILATION: " >> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt
     for d in ${FOLDER}/*/; do
         for f in $d/*; do
             ext="${f##*.}"
