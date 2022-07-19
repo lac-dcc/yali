@@ -6,7 +6,7 @@ FOLDER=~/yali/Dataset/Source/${DATASET}
 FOLDERPROCESSED=${FOLDER}.done
 
 BUILD=~/yali/Irs/${DATASET}${OPTLEVEL}
-LOGFOLDER=~/yali/Irs/logs
+LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/build/bin
 
 
