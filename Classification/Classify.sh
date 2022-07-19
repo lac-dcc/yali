@@ -77,8 +77,8 @@ classification() {
     local testName=$3
     local optTypeTest=$4
     local resultsPath=~/yali/Dataset/Results/${trainName}${optTypeTrain}
-    local trainDir=~/yali/Dataset/${trainName}${optTypeTrain}/
-    local testDir=~/yali/Dataset/${testDir}${optTypeTest}/
+    local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
+    local testDir=~/yali/Dataset//Histograms/${testDir}${optTypeTest}/
 
     if [ -z ${testName} ]; then
         python3 ~/yali/Classification/VectorTTClassify.py \
