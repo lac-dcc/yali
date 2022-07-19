@@ -1,3 +1,4 @@
+set -e
 # # Download the OJClone dataset
 # wget --quiet [link] -O Volume/Source/OJClone.tar.xz
 # tar -xf Volume/Source/OjClone.tar.xz
