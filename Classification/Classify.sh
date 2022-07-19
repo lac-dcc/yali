@@ -24,18 +24,21 @@ checkParameters() {
 
 histograms() {
     local setName=$1
+    local mainDir=~/yali/Dataset
+
     echo "===> Creating histograms ${setName}..."
-    make -C ~/yali/Dataset/${setName}${OPTLEVEL}
+    make -C ${mainDir}/Irs/${setName}${OPTLEVEL}
     echo "===> Histograms finished ${setName} <==="
 
     echo "===> Converting CSV to Numpy ${setName}..."
-    python3 ~/yali/Extraction/ConvertCSVToNP.py --histogramCSV ~/yali/Dataset/Csv/features_${setName}_${OPTLEVEL}.csv --outputDir ~/yali/Dataset/Histograms/${setName}${OPTLEVEL}
+    python3 ~/yali/Extraction/ConvertCSVToNP.py --histogramCSV ${mainDir}/Csv/features_${setName}${OPTLEVEL}.csv --outputDir ${mainDir}/Histograms/${setName}${OPTLEVEL}/
     echo "===> Conversion finished ${setName} <==="
 }
 
 compiling() {
     local setName=$1
-    if [ -z "$(ls -A ~/yali/Dataset/Source/${setName}${OPTLEVEL})" ]; then
+
+    if [ -z "$(ls -A ~/yali/Dataset/Irs/${setName}${OPTLEVEL})" ]; then
         echo "===> Compiling ${setName}..."
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
@@ -53,13 +56,21 @@ compiling() {
 classification() {
     local trainName=$1
     local testName=$2
+    local resultsPath=~/yali/Dataset/Results/${trainName}${OPTLEVEL}
+    local mainDir=~/yali/Dataset
 
     if [ -z ${testName} ]; then
-        python3 ~/yali/Classification/VectorTTClassify.py --train_dataset_directory ${trainName} \
-            --results_directory ~/yali/Dataset/Results/${trainName} --model ${MODEL}
+        python3 ~/yali/Classification/VectorTTClassify.py \
+            --train_dataset_directory ${mainDir}/${trainName}${OPTLEVEL} \
+            --results_directory ${resultsPath} \
+            --model ${MODEL}
     else
-        python3 ~/yali/Classification/VectorTTClassify.py --train_dataset_directory ${trainName} --train_p 100 \
-            --test_dataset_directory ${tesName} --results_directory ~/yali/Dataset/Results/${trainName}_${testName} --model ${MODEL}
+        python3 ~/yali/Classification/VectorTTClassify.py \
+            --train_dataset_directory ${mainDir}/${trainName}${OPTLEVEL} \
+            --train_p 100 \
+            --test_dataset_directory ${mainDir}/${tesName} \
+            --results_directory ${resultsPath}_${testName} \
+            --model ${MODEL}
     fi
 }
 
