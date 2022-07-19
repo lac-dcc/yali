@@ -55,10 +55,10 @@ classification() {
     local testName=$2
 
     if [ -z ${testName} ]; then
-        python3 VectorTTClassify.py --train_dataset_directory ${trainName} \
+        python3 ~/yali/Classification/VectorTTClassify.py --train_dataset_directory ${trainName} \
             --results_directory ~/yali/Dataset/Results/${trainName} --model ${MODEL}
     else
-        python3 VectorTTClassify.py --train_dataset_directory ${trainName} --train_p 100 \
+        python3 ~/yali/Classification/VectorTTClassify.py --train_dataset_directory ${trainName} --train_p 100 \
             --test_dataset_directory ${tesName} --results_directory ~/yali/Dataset/Results/${trainName}_${testName} --model ${MODEL}
     fi
 }
