@@ -8,9 +8,10 @@ OPTLEVEL=$4
 NUMCLASSES=$5
 TESTDATASET=$6
 
-sudo chown -R ml4code ${VOLUME}/Csv
-sudo chown -R ml4code ${VOLUME}/Histograms
-sudo chown ml4code ${VOLUME}/Irs
-sudo chown -R ml4code ${VOLUME}/Results
-sudo chown -R ml4code ${VOLUME}/Source
+sudo chmod 755 ${VOLUME}
+sudo chown -R ml4code:sudo ${VOLUME}/Csv
+sudo chown -R ml4code:sudo ${VOLUME}/Histograms
+sudo chown ml4code:sudo ${VOLUME}/Irs
+sudo chown -R ml4code:sudo ${VOLUME}/Results
+sudo chown -R ml4code:sudo ${VOLUME}/Source
 ./yali/Classification/Classify.sh ${MODEL} ${TRAINDATASET} ${OPTLEVEL} ${NUMCLASSES} ${TESTDATASET}
