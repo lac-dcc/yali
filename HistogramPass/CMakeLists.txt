@@ -13,13 +13,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(LLVM_INSTALL_DIR "" CACHE PATH "LLVM installation directory")
 
 # A bit of a sanity checking:
-set(LLVM_INSTALL_INCLUDE "${LLVM_INSTALL_DIR}/include/llvm")
+set(LLVM_INSTALL_INCLUDE "${LLVM_INSTALL_DIR}/include/llvm-10")
 if(NOT EXISTS "${LLVM_INSTALL_INCLUDE}")
 message(FATAL_ERROR
     " LLVM_INSTALL_INCLUDE (${LLVM_INSTALL_INCLUDE}) is invalid.")
 endif()
 
-set(LLVM_INSTALL_CMAKE "${LLVM_INSTALL_DIR}/lib/cmake/llvm/LLVMConfig.cmake")
+set(LLVM_INSTALL_CMAKE "${LLVM_INSTALL_DIR}/lib/llvm-10/cmake/LLVMConfig.cmake")
 if(NOT EXISTS "${LLVM_INSTALL_CMAKE}")
 message(FATAL_ERROR
     " LLVM_INSTALL_CMAKE (${LLVM_INSTALL_CMAKE}) is invalid.")
@@ -31,7 +31,7 @@ endif()
 #===============================================================================
 # Add the location of LLVMConfig.cmake to CMake search paths (so that
 # find_package can locate it):
-list(APPEND CMAKE_PREFIX_PATH "${LLVM_INSTALL_DIR}/lib/cmake/llvm/")
+list(APPEND CMAKE_PREFIX_PATH "${LLVM_INSTALL_DIR}/lib/llvm-10/cmake/")
 
 find_package(LLVM REQUIRED CONFIG)
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
