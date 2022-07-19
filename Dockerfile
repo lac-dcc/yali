@@ -127,4 +127,4 @@ COPY --chown=ml4code:sudo Extraction /home/ml4code/yali/Extraction
 COPY --chown=ml4code:sudo Classification /home/ml4code/yali/Classification
 
 ############################################ Entrypoint #############################################
-ADD ./Entrypoint/start.sh /
+COPY --chmod=755 ./Entrypoint/start.sh /
