@@ -84,7 +84,7 @@ def execute(argv):
     flagsTimes = {}
   
     print('\nLoading the dataset ...')
-    X_train, y_train, X_test, y_test, totalTime = __loadDataset(X_train, y_train, X_test, y_test)
+    X_train, y_train, X_test, y_test, totalTime = __loadDataset(FLAGS)
     flagsTimes['loading'] = totalTime
 
     print('\nBuilding the dataset ...')
