@@ -1,6 +1,6 @@
 set -e
 
-FOLDER=~/yali/Dataset/Source/OJClone
+FOLDER=~/yali/Dataset/Source/OJCloneO0
 DATASET=$(basename ${FOLDER})
 FOLDERPROCESSED=${FOLDER}.done
 OPTLEVEL=$1

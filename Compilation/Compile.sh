@@ -2,7 +2,7 @@ set -e
 
 OPTLEVEL=$1
 DATASET=$2
-FOLDER=~/yali/Dataset/Source/${DATASET}
+FOLDER=~/yali/Dataset/Source/${DATASET}${OPTLEVEL}
 FOLDERPROCESSED=${FOLDER}.done
 
 BUILD=~/yali/Irs/${DATASET}${OPTLEVEL}
