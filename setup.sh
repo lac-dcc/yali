@@ -11,3 +11,6 @@ mkdir -p ./Volume/Csv
 mkdir -p ./Volume/Histograms
 mkdir -p ./Volume/Results
 mkdir -p ./Volume/Source
+
+# Creating the docker image
+docker compose build
