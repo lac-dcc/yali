@@ -7,14 +7,14 @@ resetFolder() {
 	FOLDER=$(basename ${REPOSITORY})
 	DIR=$(dirname ${REPOSITORY})
 	mv ${DIR}/${FOLDER} ${DIR}/tmp_${FOLDER}
-	mv ${DIR}/${FOLDER}.done ${FOLDER}
-	mv tmp_${FOLDER} ${FOLDER}.done
+	mv ${DIR}/${FOLDER}.done ${DIR}/${FOLDER}
+	mv ${DIR}/tmp_${FOLDER} ${DIR}/${FOLDER}.done
 }
 
 if [ -z $1 ]; then
 	echo "Error: No repository specified!"
 else	
-	echo "===> Reseting folder $1..."
+	echo "=====> Reseting folder $1..."
 	NUMFILES=$(ls ${REPOSITORY}/* | wc -l)
 	
 	if [ ${NUMFILES} -gt ${AVERAGESIZE} ]; then
@@ -23,5 +23,5 @@ else
 		resetFolder
 		echo "The repository is ready to be processed!"
 	fi
-	echo "===> Folder reseted <==="
+	echo "=====> Folder reseted <====="
 fi
