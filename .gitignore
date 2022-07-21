@@ -13,6 +13,7 @@ Volume/Source/*
 Volume/Csv/*
 Volume/Histograms/*
 Volume/Irs/*
+Volume/Results/*
 !Volume/Irs/Makefile.*
 
 # HistogramPass
