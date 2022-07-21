@@ -19,6 +19,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 from utils import DatasetSetup
 from utils import ResultSetup
 from utils import FlagSetup
+from utils import GeneralSetup as GS
 from models import Model
 from absl import app
 import time
@@ -49,7 +50,7 @@ def __loadDataset(FLAGS):
 
 
 def runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback = None):
-    print('\n====>>> ROUND: {}'.format(round))
+    print('\n=====> ROUND: {}'.format(round))
     
     print('\nTraining ...')
     start = time.time()
@@ -102,5 +103,7 @@ def execute(argv):
 
 # Execute
 if __name__ == '__main__':
+    GS.config()
     FlagSetup.loadFlags()
+    GS.setRandomSeed(42)
     app.run(execute)
