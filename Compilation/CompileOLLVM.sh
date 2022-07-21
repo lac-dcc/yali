@@ -11,7 +11,7 @@ LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/opt/ollvm/bin/
 OLLVMFLAGS=""
 
-
+# Define th OLLVM flags
 setOLLVMFlags() {
     case "${STRATEG}" in
         "FLA")
@@ -27,12 +27,13 @@ setOLLVMFlags() {
                 OLLVMFLAGS="-mllvm -fla -mllvm -bcf -mllvm -sub"
                 ;;
         *)
-                echo "Error: Not a valid argument"
+                echo "Error: OLLVM strategy (Dataset) is not a valid argument."
                 exit 1
                 ;;
     esac
 }
 
+# Compile programs in C
 compilingC() {
     PROG=$1
     DIR=$(basename $2)
@@ -43,7 +44,7 @@ compilingC() {
     ${OLLVM}/clang -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
 }
 
-
+# Compile programs in CPP
 compilingCPP() {
     PROG=$1
     DIR=$(basename $2)
@@ -55,20 +56,22 @@ compilingCPP() {
 }
 
 
-if [ -z $1 ]; then
+if [ -z ${OPTLEVEL} ]; then
     echo "Error: No optimization level specified (-O3 and -O0, for instance)!"
-elif [ -z $2 ]; then
+elif [ -z ${STRATEG} ]; then
     echo "Error: No obfuscation level specified (SUB, FLA, BCF or ALL)!"
 else
     setOLLVMFlags
-    echo "===> Starting in ${DATASET} (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS})..."
+    echo "=====> Starting in ${DATASET} (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS})..."
 
-    TOTAL=0
+    # Count the number of programs
+    TOTAL=1
     for d in ${FOLDER}/*/; do
         count="$(ls $d | wc -l)"
         TOTAL=$((${TOTAL} + ${count}))
     done
 
+    # Setup the build folder
     mkdir -p ${LOGFOLDER}
     
     echo "NEW COMPILATION: " >> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt
@@ -88,7 +91,9 @@ else
         done
     done
 	
-	source resetFolder.sh ${FOLDER}
+    # Last setup of the build folder
+	source ~/yali/Compilation/ResetFolder.sh ${FOLDER}
     echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
-    echo "===> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <==="
+    echo "1" > ${BUILD}/Finished
+    echo "=====> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <====="
 fi
