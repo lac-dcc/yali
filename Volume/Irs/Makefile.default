@@ -4,7 +4,7 @@
 ###################################################################################
 
 # Folder to save features
-BUILD=${ROOT}/histograms/
+BUILD=${ROOT}/Csv/
 
 # Which is the current folder
 FOLDER_PATH=$(CURDIR)
@@ -19,7 +19,6 @@ FOLDERS=$(SRC:${REPO}/%/.=%.dir)
 TYPE=$(patsubst build_%,%,$(FOLDER))
 FILENAME=features_${TYPE}.csv
 
-
 build: clf ${FOLDERS}
 
 # Clean the output file
@@ -32,7 +31,7 @@ clf:
 	@echo "$@ Started!"
 	$(eval FILES:=$(wildcard ./$(basename $@)/*.ll))
 	@for file in ${FILES} ; do \
-		${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file >/dev/null 2>&1 || continue; \
-		{ echo -n $$file", "; ${OPT} -load ${MY_LLVM_LIB} -enable-new-pm=0 -histogram -disable-output $$file; } | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
+		${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file >/dev/null 2>&1 || continue; \
+		{ echo -n $$file", "; ${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file; } | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
 	done;
 	@echo "$@ Finished! \n"

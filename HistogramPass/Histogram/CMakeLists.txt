@@ -1,5 +1,5 @@
-add_library(LLVMHistogram2 MODULE
+add_library(LLVMHistogram MODULE
   Histogram.cpp
 )
 
-target_include_directories(LLVMHistogram2 PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/")
+target_include_directories(LLVMHistogram PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/")
