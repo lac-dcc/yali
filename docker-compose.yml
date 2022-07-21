@@ -5,7 +5,7 @@ services:
     container_name: yali
     entrypoint: "/start.sh ${VOLUME} ${MODEL} ${TRAINDATASET} ${OPTLEVELTRAIN} ${NUMCLASSES} ${TESTDATASET} ${OPTLEVELTEST}"
     logging:
-      driver: none
+      driver: local
     build:
       context: .
       dockerfile: Dockerfile
