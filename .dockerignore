@@ -1,0 +1,10 @@
+.vscode
+.venv
+.git
+.gitignore
+.docker-compose
+Dockerfile
+HistogramPass/build/*
+Volume/*
+Statistics
+README.md
