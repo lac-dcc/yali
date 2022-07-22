@@ -102,7 +102,7 @@ The `Statistcs` folder contains _Jupyter Notebooks_ that plot the data generated
 ## :card_index_dividers: Structure
 The repository has the following organization:
 
-```json
+```bash
 |-- Classification: "scripts for the classification process"
 |-- Compilation: "scripts for the compilation process"
 |-- Entrypoint: "container setup"
