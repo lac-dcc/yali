@@ -1,5 +1,13 @@
 <h1 align="center" style=""> 🥷🏻 Yali 🥷🏻 </h1> <br>
 
+<p align="center">
+  <a href="https://github.com/thais-damasio/yali/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-GPL%203.0%20only-green?style=for-the-badge" alt="License: GPL v3"></a>
+  <a href="https://github.com/thais-damasio/yali/commits/main">
+    <img src="https://img.shields.io/github/last-commit/thais-damasio/yali/main?style=for-the-badge"
+         alt="License: GPL v3">
+  </a>
+</p>
+
 
 ## :pushpin: **Contents Table**
 
