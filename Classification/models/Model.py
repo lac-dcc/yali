@@ -66,7 +66,7 @@ def predict(modelName, model, X_test):
 
 
 
-def buildModel(modelName, numClasses, X_train, X_test, shouldPrint = False):
+def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = False):
     """Build the model
 
     Args:
@@ -99,15 +99,15 @@ def buildModel(modelName, numClasses, X_train, X_test, shouldPrint = False):
             X_test = X_test.reshape(X_test.shape[0], X_test.shape[1], X_test.shape[2], 1)
             model = CNNModel.buildModel2D(X_train[0].shape, numClasses)
     elif modelName == 'rf':
-        model = RandomForestModel.buildModel()
+        model = RandomForestModel.buildModel(seed)
     elif modelName == 'svm':
-        model = SVMModel.buildModel()
+        model = SVMModel.buildModel(seed)
     elif modelName == 'knn':
         model = KNNModel.buildModel()
     elif modelName == 'lr':
         model = LogisticRegressionModel.buildModel()
     elif modelName == 'mlp':
-        model = MLPModel.buildModel()
+        model = MLPModel.buildModel(seed)
     else:
       logging.error('Model error.')
       sys.exit(1)
@@ -137,7 +137,7 @@ def train(modelName, epochs, model, X_train, y_train, esCallback, verbose = Fals
     """
     history = None
 
-    if modelName in ['lr', 'mlp', 'svn', 'rf', 'knn']:
+    if modelName in ['lr', 'mlp', 'svm', 'rf', 'knn']:
         history = model.fit(X_train, y_train)
     else:
         history = model.fit(X_train,
