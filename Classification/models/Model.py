@@ -112,7 +112,7 @@ def buildModel(modelName, numClasses, X_train, X_test, shouldPrint = False):
       logging.error('Model error.')
       sys.exit(1)
 
-    if shouldPrint and not modelName in ['lr', 'mlp', 'svn', 'rf', 'knn']:
+    if shouldPrint and not modelName in ['lr', 'mlp', 'svm', 'rf', 'knn']:
         print("\n")
         model.summary()
 
