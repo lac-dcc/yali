@@ -6,7 +6,15 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import Dense
 
 def buildModel1D(input_shape, classes):
-    """Create the model."""
+    """Build a 1D CNN Model.
+
+    Args:
+        input_shape (Tuple): Shape of the input
+        classes (int): Number of classes
+        
+    Returns:
+        Sequential: 1D CNN model
+    """
     layer_sizes = [3]
     model = Sequential()
     
@@ -37,7 +45,15 @@ def buildModel1D(input_shape, classes):
 
 
 def buildModel2D(input_shape, classes):
-    """Create the model."""
+    """Build a 2D CNN Model. 
+
+    Args:
+        input_shape (Tuple): Shape of the input
+        classes (int): Number of classes
+
+    Returns:
+        Sequential: 2D CNN model
+    """
     layer_sizes = [3]
     model = Sequential()
 
