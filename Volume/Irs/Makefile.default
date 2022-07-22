@@ -1,0 +1,37 @@
+###################################################################################
+# This Makefile extracts the histogram for each program in the *classes* folder 
+# and saves all output in the *${BUILD}/${FILENAME}* file
+###################################################################################
+
+# Folder to save features
+BUILD=${ROOT}/Csv/
+
+# Which is the current folder
+FOLDER_PATH=$(CURDIR)
+FOLDER=$(shell basename ${FOLDER_PATH})
+
+# Where the programs are
+REPO=${FOLDER_PATH}/
+SRC=$(wildcard ${REPO}/*/.)
+FOLDERS=$(SRC:${REPO}/%/.=%.dir)
+
+# Output name
+TYPE=$(patsubst build_%,%,$(FOLDER))
+FILENAME=features_${TYPE}.csv
+
+build: clf ${FOLDERS}
+
+# Clean the output file
+clf:
+	> ${BUILD}/${FILENAME}
+	@echo ${HEADER} >> ${BUILD}/${FILENAME}
+
+# Get the program features of each folder
+%.dir: 
+	@echo "$@ Started!"
+	$(eval FILES:=$(wildcard ./$(basename $@)/*.ll))
+	@for file in ${FILES} ; do \
+		${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file >/dev/null 2>&1 || continue; \
+		{ echo -n $$file", "; ${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file; } | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
+	done;
+	@echo "$@ Finished! \n"

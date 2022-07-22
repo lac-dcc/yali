@@ -1,29 +1,118 @@
-# 🥷🏻 Yali Project 🥷🏻
-Let _D_ be a deep learning model that classifies programs according to the problem they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected.
+<h1 align="center" style=""> 🥷🏻 Yali 🥷🏻 </h1> <br>
+
+
+## :pushpin: **Contents Table**
+
+* [Introduction](#introduction)
+* [Getting Started](#getting-started)
+    * [Prerequisites](#prerequisites)
+    * [Setup](#setup)
+    * [Running](#running)
+* [Statistics](#statistics)
+* [Structure](#structure)
+
+
 
 ---
-## 🗂️ Dataset Folder
-Each folder within the **dataset** folder contains data from a specific dataset. Each one contains:
-- Folders to store the compiled code (in the **IR** - Intermediate Representation - format) using different modes (O0, O3, obfuscation, etc).
+<a id="introduction"></a>
 
->Each folder is named as `build_[strategy]`, where the `[strategy]` is the name of the strategy applied to the compiled code. For instance, if POJ104 programs were compiled using `-O3`, then we are going to store them in the `build_O3` folder
+## :scroll: **Introduction**
 
-- A `make` script to get the histogram representation of the compiled programs
-
-## 📊 Features Folder
-It contains `.csv` with the features extracted from the datasets. The files have the following pattern name:
-
-`[dataset_name]/[dataset_name]_features_[mode].csv`
-
-There is a file `opcodes.csv` that describes the name of the LLVM opcodes.
-
-## 🛠️ Histogram Pass
-This is an edited version of an LLVM pass made by Kind brothers (Cissa and Bruno Kind) that extracts the histogram from the entire program instead of extracting one function at a time.
+Let _D_ be a deep learning model that classifies programs according to the problem they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected.
 
 
-## 🤖 Models
-This is a folder with the models trained and tested with the datasets from the dataset folder.
+
+---
+<a id="getting-started"></a>
+
+## :checkered_flag: **Getting Started**
+In this section are the steps to reproduce our experiments.
 
 
-## 📉 Scripts
-This folder contains Jupyter notebooks that summarize the results of each model used in this work.
+<a id="prerequisites"></a>
+
+### **Prerequsites**
+You need to install the following packages to run this project:
+
+* [Docker](https://www.docker.com/get-started/) and [Docker Compose](https://docs.docker.com/compose/install/) to run our experiments
+* [Python-3](https://www.python.org/downloads/) to plot the results in the project's Jupyter Notebook
+
+
+<a id="setup"></a>
+
+###  **Setup**
+First, you need to prepare the environment to run our experiments. Run the following command line:
+
+```bash
+$ ./setup.sh
+```
+
+> This will download the datasets, build the docker image and create the necessary folders for the project. 
+
+After that, you can set the environment variables into the file `.env` at the project's root. You can change the following variables:
+
+* `MODEL`: This is the machine learning model used in the training/testing phase. You can choose:
+    * _"lstm"_ (Long Short-Term Memory) 
+    * _"cnn"_ (Convolutional Neural Network by [Lili Mou et al.](https://dl.acm.org/doi/10.5555/3015812.3016002))
+    * _"rf"_ (Random Forest)
+    * _"svm"_ (Support Vector Machine)
+    * _"knn"_ (K-Nearest Neighbors)
+    * _"lr"_ (Logistic Regression)
+    * _"mlp"_ (Multilayer Perceptron)
+* `TRAINDATASET` or `TESTDATASET`: This is the dataset that will be used in the training phase. You can choose:
+    * _"OJClone"_ (POJ-104 dataset used by [Lili Mou et al.](https://dl.acm.org/doi/10.5555/3015812.3016002))
+    * _"BCF"_ (The OJClone dataset that was obfuscated by the [Bogus Control Flow](https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow) strategy)
+    * _"FLA"_ (The OJClone dataset that was obfuscated by the [Control Flow Flattening](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening) strategy)
+    * _"SUB"_ (The OJClone dataset was obfuscated by the [Instructions Substitution](https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution) strategy)
+    * _"OLLVM"_ (The OJClone dataset that was obfuscated by the [Control Flow Flattening](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening), [Bogus Control Flow Strategy](https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow) and [Instructions Substitution](https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution) strategies, respectively)
+    * _"MCMC"_ (The OJClone dataset that was obfuscated by the [Markov Chain Monte Carlo](https://arxiv.org/pdf/2111.10793.pdf) strategy)
+    * _"GA"_ (The OJClone dataset that was obfuscated by the [Genetic Algorithm](https://arxiv.org/pdf/2111.10793.pdf) strategy)
+    * _"DRLSG"_ (The OJClone dataset that was obfuscated by the [Deep Reinforcement Learning Sequence Generation](https://arxiv.org/pdf/2111.10793.pdf) strategy)
+    * _"RS"_ (The OJClone dataset that was obfuscated by the [Random-Search](https://arxiv.org/pdf/2111.10793.pdf) strategy)
+* `OPTLEVELTRAIN` or `OPTLEVELTEST`: The optimization level applied in the traning dataset. You can choose:
+    * O0
+    * O3
+* `NUMCLASSES`: The number of classes of the dataset
+
+
+<a id="running"></a>
+
+### **Running**
+Now, you can run the following command line:
+
+```bash
+$ ./run.sh
+```
+
+> This will run the docker container with the configurations in the `.env` file.
+
+
+
+---
+<a id="statistics"></a>
+
+## :bar_chart: **Statistcs**
+The `Statistcs` folder contains _Jupyter Notebooks_ that plot the data generated by the experiments. Each notebook describes each chart and the steps to develop them. 
+
+
+
+---
+<a id="structure"></a>
+
+## :card_index_dividers: Structure
+The repository has the following organization:
+
+```bash
+|-- Classification: "scripts for the classification process"
+|-- Compilation: "scripts for the compilation process"
+|-- Entrypoint: "container setup"
+|-- Extraction: "scripts to convert CSV to Numpy"
+|-- HistogramPass: "LLVM pass to get the histograms"
+|-- Statistics: "jupyter notebooks"
+|-- Volume: "volume of the container"
+    |-- Csv: "CSVs with the histograms"
+    |-- Histograms: "histograms in the Numpy format"
+    |-- Irs: "LLVM IRs of the programs"
+    |-- Results: "results of the training/testing phase"
+    |-- Source: "source code of the programs"
+```
