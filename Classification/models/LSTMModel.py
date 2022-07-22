@@ -4,6 +4,17 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras import Model
 
 def buildModel(input_shape, embedding_dim, classes):
+    """Build a LSTM Model. The hyperparameters information can be get at 
+    https://keras.io/api/layers/recurrent_layers/lstm/
+
+    Args:
+        input_shape (Tuple): Shape of the input
+        embedding_dim (int): Number of the embedding dimensions
+        classes (int): Number of classes
+
+    Returns:
+        Model: LSTM model
+    """
     dense_layer_size = 32
     inp = Input(shape=input_shape, dtype="float32", name="code_in")
     x = LSTM(embedding_dim, implementation=1, return_sequences=True, name="lstm_1")(inp)
