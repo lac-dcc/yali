@@ -89,7 +89,7 @@ def execute(argv):
     flagsTimes['loading'] = totalTime
 
     print('\nBuilding the dataset ...')
-    X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_train, X_test, FLAGS.print_model)
+    X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_train, X_test, GS.RandomSeed, FLAGS.print_model)
 
     esCallback = EarlyStopping(monitor="accuracy",
                                 patience=FLAGS.patience,
