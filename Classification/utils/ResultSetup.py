@@ -2,7 +2,34 @@ import numpy as np
 import yaml as yl
 import os
 
-def storeResults(model, resultDir, round, history, cm, cr, acc, y_pred, y_test, flags_times):
+def storeMemoryConsumption(round, resultDir, memInfo):
+    """Store memory consumption information
+
+    Args:
+        round (int): The round number
+        resultDir (str): Path to save the results
+        memInfo (Any): Memory information
+    """
+    os.makedirs(resultDir, exist_ok=True)
+    np.savez_compressed('{}/memory_{}'.format(resultDir, round), values=memInfo)
+
+
+
+def storeResults(model, resultDir, round, history, cm, cr, acc, y_pred, y_test, flagsTimes):
+    """Store statistics information
+
+    Args:
+        model (str): Model name
+        resultDir (str): Path to save the results
+        round (int): The round number
+        history (Any): History of the model (training phase)
+        cm (Any): Confusion Matrix
+        cr (Any): Classification Report
+        acc (float): Accuracy of the model
+        y_pred (array): Predicted Y (testing phase)
+        y_test (array): True Y (testing phase)
+        flagsTimes (Any): Time consumption information
+    """
     os.makedirs(resultDir, exist_ok=True)
 
     if not model in ['lr', 'mlp', 'svn', 'rf', 'knn']:
@@ -19,5 +46,5 @@ def storeResults(model, resultDir, round, history, cm, cr, acc, y_pred, y_test, 
 
     # Store the elapsed time
     fout = open('{}/elapsed_time_{}.yaml'.format(resultDir, round), 'w')
-    yl.dump(flags_times, fout)
+    yl.dump(flagsTimes, fout)
     fout.close()
