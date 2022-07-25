@@ -105,9 +105,6 @@ After that, you can set the environment variables into the file `.env` at the pr
                         "MCMC" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Markov Chain Monte Carlo</a> strategy)
                     </li>
                     <li>
-                        "GA" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Genetic Algorithm</a> strategy)
-                    </li>
-                    <li>
                         "DRLSG" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Deep Reinforcement Learning Sequence Generation</a> strategy)
                     </li>
                     <li>
@@ -130,6 +127,21 @@ After that, you can set the environment variables into the file `.env` at the pr
             <td>NUMCLASSES</td>
             <td>The number of classes of the dataset</td>
             <td></td>
+        </tr>
+        <tr>
+            <td>ROUNDS</td>
+            <td>The number of rounds to run the model</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>MEMORYPROF</td>
+            <td>Indicate whether a memory profiler will be used</td>
+            <td>
+                <ul>
+                    <li>yes</li>
+                    <li>no</li>
+                </ul>
+            </td>
         </tr>
     </tbody>
 </table>
