@@ -15,7 +15,7 @@ if [ -z $1 ]; then
 	echo "Error: No repository specified!"
 else	
 	echo "=====> Reseting folder $1..."
-	NUMFILES=$(ls ${REPOSITORY}/* | wc -l)
+	NUMFILES=$(find ${REPOSITORY}/ -name '*.c' -or -name '*.cpp' | wc -l)
 	
 	if [ ${NUMFILES} -gt ${AVERAGESIZE} ]; then
 		echo "The repository is now ready to be processed!"
