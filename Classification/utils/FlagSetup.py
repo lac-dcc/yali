@@ -40,7 +40,7 @@ def __getFlags():
             "value": 500, "type": "int", "description": "Number of epochs", "options": [], "required": False
         },
         "rounds": {
-            "value": 5, "type": "int", "description": "Rounds", "options": [], "required": False
+            "value": 1, "type": "int", "description": "Round", "options": [], "required": False
         },
         "verbose": {
             "value": False, "type": "bool", "description": "Verbose the training phase", "options": [], "required": False
@@ -53,6 +53,9 @@ def __getFlags():
         },
         "print_cr": {
             "value": False, "type": "bool", "description": "Print the classification report", "options": [], "required": False
+        },
+        "memory_prof": {
+            "value": False, "type": "bool", "description": "If false get all statistics, if true get only memory consumption", "options": [], "required": False
         },
     }
 

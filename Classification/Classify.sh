@@ -1,15 +1,20 @@
 set -e
 
-MODEL=$1
-TRAINDATASET=$2
-OPTLEVELTRAIN=$3
-NUMCLASSES=$4
-TESTDATASET=$5
-OPTLEVELTEST=$6
+ROUNDS=$1
+MEMORYPROF=$2
+MODEL=$3
+TRAINDATASET=$4
+OPTLEVELTRAIN=$5
+NUMCLASSES=$6
+TESTDATASET=$7
+OPTLEVELTEST=$8
 
 # Set Parameters 
 checkParameters() {
-    if [ -z "${MODEL}" ]; then
+    if [ -z "${ROUNDS}" ]; then
+        echo "Error: No number of rounds specified!"
+        exit 1
+    elif [ -z "${MODEL}" ]; then
         echo "Error: No model specified!"
         exit 1
     elif [ -z "${TRAINDATASET}" ]; then
@@ -27,6 +32,15 @@ checkParameters() {
         if [ -z "${OPTLEVELTEST}" ]; then
             echo "Error: No optimization level specified for the testing dataset!"
             exit 1
+        fi
+    fi
+
+    if [ -z "${MEMORYPROF}" ]; then
+        echo "Error: No flag memory profiler specified!"
+        exit 1
+    else
+        if [ "${MEMORYPROF}" = "yes" ]; then
+            MEMORYPROF=""
         fi
     fi
 }
@@ -51,7 +65,7 @@ histograms() {
 
     # Histogram Numpy Format
     mkdir -p ${outputDir}
-    touch -p ${outputDir}/Finished
+    touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
         echo "===> Converting CSV to Numpy ${setName}..."
         python3 ~/yali/Extraction/ConvertCSVToNP.py \
@@ -89,27 +103,35 @@ compiling() {
 
 # Classification process
 classification() {
-    local trainName=$1
-    local optTypeTrain=$2
-    local testName=$3
-    local optTypeTest=$4
-    local resultsPath=~/yali/Dataset/Results/${trainName}${optTypeTrain}/
+    local rounds=$1
+    local trainName=$2
+    local optTypeTrain=$3
+    local testName=$4
+    local optTypeTest=$5
+    local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
+    local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
     local testDir=~/yali/Dataset//Histograms/${testDir}${optTypeTest}/
 
     if [ -z ${testName} ]; then
-        echo "===> Classification: train and testing phase (${setName}${opTypeTrain}) ..."
+        echo "===> Classification: train and testing phase (${trainName}${opTypeTrain}) ..."
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
-            --results_directory ${resultsPath} \
+            --rounds ${rounds} \
+            --${MEMORYPROF}memory_prof \
+            --classes ${NUMCLASSES} \
+            --results_directory ${resultsOnlyTrain} \
             --model ${MODEL}
     else
-        echo "===> Classification: training phase (${setName}${opTypeTrain}) --- testing phase (${testDir}${optTypeTest}) ..."
+        echo "===> Classification: training phase (${trainName}${opTypeTrain}) --- testing phase (${testName}${optTypeTest}) ..."
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
+            --rounds ${rounds} \
+            --${MEMORYPROF}memory_prof \
+            --classes ${NUMCLASSES} \
             --train_p 100 \
             --test_dataset_directory ${testDir} \
-            --results_directory ${resultsPath}_${testName}${optTypeTest} \
+            --results_directory ${resultsWithTest} \
             --model ${MODEL}
     fi
     echo "===> Classification finished <==="
@@ -121,10 +143,10 @@ checkParameters
 if [ -z ${TESTDATASET} ]; then
     compiling ${TRAINDATASET} ${OPTLEVELTRAIN}
 
-    classification ${TRAINDATASET} ${OPTLEVELTRAIN}
+    classification ${ROUNDS} ${TRAINDATASET} ${OPTLEVELTRAIN}
 else
     compiling ${TRAINDATASET} ${OPTLEVELTRAIN}
     compiling ${TESTDATASET} ${OPTLEVELTEST}
- 
-    classification ${TRAINDATASET} ${OPTLEVELTRAIN} ${TESTDATASET} ${OPTLEVELTEST}
+    
+    classification ${ROUNDS} ${TRAINDATASET} ${OPTLEVELTRAIN} ${TESTDATASET} ${OPTLEVELTEST}
 fi
