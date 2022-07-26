@@ -57,7 +57,8 @@ $ ./setup.sh
 
 > This will download the datasets, build the docker image and create the necessary folders for the project. 
 
-After that, you can set the environment variables into the file `.env` at the project's root. You can change the following variables:
+After that, you should copy the `.env.example` file and rename it to `.env`.
+You can now set environment variables in the `.env` file at the project's root. You can change the following variables:
 
 <table>
     <tbody>
@@ -68,7 +69,7 @@ After that, you can set the environment variables into the file `.env` at the pr
         </tr>
         <tr>
             <td>MODEL</td>
-            <td>Selected machine learning model</td>
+            <td>Selected machine learning model. This variable is required.</td>
             <td>
                 <ul>
                     <li>"lstm" (Long Short-Term Memory) </li>
@@ -83,7 +84,7 @@ After that, you can set the environment variables into the file `.env` at the pr
         </tr>
         <tr>
             <td>TRAINDATASET / TESTDATASET</td>
-            <td>Dataset that will be used in the training/testing phase</td>
+            <td>Dataset that will be used in the training/testing phase. TRAINDATASET is required, but <b>TESTDATASET must be empty if you want to use the same dataset in training and testing phase.</b></td>
             <td>
                 <ul>
                     <li>
@@ -115,7 +116,7 @@ After that, you can set the environment variables into the file `.env` at the pr
         </tr>
         <tr>
             <td>OPTLEVELTRAIN / OPTLEVELTEST</td>
-            <td>Optimization level applied in the traning/testing dataset</td>
+            <td>Optimization level applied in the traning/testing dataset. OPTLEVELTRAIN is required, but <b>OPTLEVELTEST must be empty if TESTDATASET is empty.</b></td>
             <td>
                 <ul>
                     <li>O0</li>
@@ -125,17 +126,17 @@ After that, you can set the environment variables into the file `.env` at the pr
         </tr>
         <tr>
             <td>NUMCLASSES</td>
-            <td>The number of classes of the dataset</td>
+            <td>The number of classes of the dataset. This variable is required.</td>
             <td></td>
         </tr>
         <tr>
             <td>ROUNDS</td>
-            <td>The number of rounds to run the model</td>
+            <td>The number of rounds to run the model. This variable is required.</td>
             <td></td>
         </tr>
         <tr>
             <td>MEMORYPROF</td>
-            <td>Indicate whether a memory profiler will be used</td>
+            <td>Indicate whether a memory profiler will be used. This variable is required.</td>
             <td>
                 <ul>
                     <li>yes</li>
