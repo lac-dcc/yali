@@ -9,6 +9,10 @@ BUILD=~/yali/Dataset/Irs/${DATASET}${OPTLEVEL}
 LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/opt/ollvm/bin/
 
+YC='\033[0;33m'
+RC='\033[0;31m'
+NC='\033[0m'
+
 # Compile programs in C
 compilingC() {
     PROG=$1
@@ -33,11 +37,11 @@ compilingCPP() {
 
 
 if [ -z ${DATASET} ]; then
-    echo "Error: No repository specified!"
+    echo -e "${RC}Error: No repository specified!${NC}"
 elif [ -z ${OPTLEVEL} ]; then
-    echo "Error: No optimization level specified (-O3 and -O0, for instance)!"
+    echo -e "${RC}Error: No optimization level specified (-O3 and -O0, for instance)!${NC}"
 else
-    echo "=====> Starting in ${DATASET} (OPT = ${OPTLEVEL})..."
+    echo -e "${YC}=====> Starting in ${DATASET} (OPT = ${OPTLEVEL})...${NC}"
 
     # Count the number of programs
     TOTAL=1
@@ -71,5 +75,5 @@ else
 	source ~/yali/Compilation/ResetFolder.sh ${FOLDER}
     echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
     echo "1" > ${BUILD}/Finished
-    echo "=====> ${DATASET} Finished (OPT = ${OPTLEVEL}) <====="
+    echo -e "${YC}=====> ${DATASET} Finished (OPT = ${OPTLEVEL}) <=====${NC}"
 fi
