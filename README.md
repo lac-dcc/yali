@@ -57,30 +57,95 @@ $ ./setup.sh
 
 > This will download the datasets, build the docker image and create the necessary folders for the project. 
 
-After that, you can set the environment variables into the file `.env` at the project's root. You can change the following variables:
+After that, you should copy the `.env.example` file and rename it to `.env`.
+You can now set environment variables in the `.env` file at the project's root. You can change the following variables:
 
-* `MODEL`: This is the machine learning model used in the training/testing phase. You can choose:
-    * _"lstm"_ (Long Short-Term Memory) 
-    * _"cnn"_ (Convolutional Neural Network by [Lili Mou et al.](https://dl.acm.org/doi/10.5555/3015812.3016002))
-    * _"rf"_ (Random Forest)
-    * _"svm"_ (Support Vector Machine)
-    * _"knn"_ (K-Nearest Neighbors)
-    * _"lr"_ (Logistic Regression)
-    * _"mlp"_ (Multilayer Perceptron)
-* `TRAINDATASET` or `TESTDATASET`: This is the dataset that will be used in the training phase. You can choose:
-    * _"OJClone"_ (POJ-104 dataset used by [Lili Mou et al.](https://dl.acm.org/doi/10.5555/3015812.3016002))
-    * _"BCF"_ (The OJClone dataset that was obfuscated by the [Bogus Control Flow](https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow) strategy)
-    * _"FLA"_ (The OJClone dataset that was obfuscated by the [Control Flow Flattening](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening) strategy)
-    * _"SUB"_ (The OJClone dataset was obfuscated by the [Instructions Substitution](https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution) strategy)
-    * _"OLLVM"_ (The OJClone dataset that was obfuscated by the [Control Flow Flattening](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening), [Bogus Control Flow Strategy](https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow) and [Instructions Substitution](https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution) strategies, respectively)
-    * _"MCMC"_ (The OJClone dataset that was obfuscated by the [Markov Chain Monte Carlo](https://arxiv.org/pdf/2111.10793.pdf) strategy)
-    * _"GA"_ (The OJClone dataset that was obfuscated by the [Genetic Algorithm](https://arxiv.org/pdf/2111.10793.pdf) strategy)
-    * _"DRLSG"_ (The OJClone dataset that was obfuscated by the [Deep Reinforcement Learning Sequence Generation](https://arxiv.org/pdf/2111.10793.pdf) strategy)
-    * _"RS"_ (The OJClone dataset that was obfuscated by the [Random-Search](https://arxiv.org/pdf/2111.10793.pdf) strategy)
-* `OPTLEVELTRAIN` or `OPTLEVELTEST`: The optimization level applied in the traning dataset. You can choose:
-    * O0
-    * O3
-* `NUMCLASSES`: The number of classes of the dataset
+<table>
+    <tbody>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>MODEL</td>
+            <td>Selected machine learning model. This variable is required.</td>
+            <td>
+                <ul>
+                    <li>"lstm" (Long Short-Term Memory) </li>
+                    <li>"cnn" (Convolutional Neural Network by <a href="https://dl.acm.org/doi/10.5555/3015812.3016002">Lili Mou et al.</a>)</li>
+                    <li>"rf" (Random Forest) </li>
+                    <li>"svm" (Support Vector Machine) </li>
+                    <li>"knn" (K-Nearest Neighbors) </li>
+                    <li>"lr" (Logistic Regression) </li>
+                    <li>"mlp" (Multilayer Perceptron) </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>TRAINDATASET / TESTDATASET</td>
+            <td>Dataset that will be used in the training/testing phase. TRAINDATASET is required, but <b>TESTDATASET must be empty if you want to use the same dataset in training and testing phase.</b></td>
+            <td>
+                <ul>
+                    <li>
+                        "OJClone" (POJ-104 dataset used by <a href="https://dl.acm.org/doi/10.5555/3015812.3016002">Lili Mou et al.</a>)
+                    </li>
+                    <li>
+                        "BCF" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow</a> strategy) 
+                    </li>
+                    <li>
+                        "FLA" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a> strategy)
+                    </li>
+                    <li>
+                        "SUB" (The OJClone dataset was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategy)
+                    </li>
+                    <li>
+                        "OLLVM" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a>, <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow Strategy</a> and <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategies, respectively)
+                    </li>
+                    <li>
+                        "MCMC" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Markov Chain Monte Carlo</a> strategy)
+                    </li>
+                    <li>
+                        "DRLSG" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Deep Reinforcement Learning Sequence Generation</a> strategy)
+                    </li>
+                    <li>
+                        "RS" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Random-Search</a> strategy)
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>OPTLEVELTRAIN / OPTLEVELTEST</td>
+            <td>Optimization level applied in the traning/testing dataset. OPTLEVELTRAIN is required, but <b>OPTLEVELTEST must be empty if TESTDATASET is empty.</b></td>
+            <td>
+                <ul>
+                    <li>O0</li>
+                    <li>O3</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>NUMCLASSES</td>
+            <td>The number of classes of the dataset. This variable is required.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ROUNDS</td>
+            <td>The number of rounds to run the model. This variable is required.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>MEMORYPROF</td>
+            <td>Indicate whether a memory profiler will be used. This variable is required.</td>
+            <td>
+                <ul>
+                    <li>yes</li>
+                    <li>no</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
 <a id="running"></a>

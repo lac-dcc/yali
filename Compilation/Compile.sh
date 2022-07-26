@@ -42,7 +42,7 @@ else
     # Count the number of programs
     TOTAL=1
     for d in ${FOLDER}/*/; do
-        count="$(ls $d | wc -l)"
+        count="$(find $d -name '*.c' -or -name '*.cpp' | wc -l)"
         TOTAL=$((${TOTAL} + ${count}))
     done
 
