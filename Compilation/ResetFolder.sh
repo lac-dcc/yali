@@ -3,6 +3,10 @@ set -e
 REPOSITORY=$1
 AVERAGESIZE=50000
 
+YC='\033[0;33m'
+RC='\033[0;31m'
+NC='\033[0m'
+
 resetFolder() {
 	FOLDER=$(basename ${REPOSITORY})
 	DIR=$(dirname ${REPOSITORY})
@@ -12,9 +16,9 @@ resetFolder() {
 }
 
 if [ -z $1 ]; then
-	echo "Error: No repository specified!"
+	echo -e "${RC}Error: No repository specified!${NC}"
 else	
-	echo "=====> Reseting folder $1..."
+	echo -e "${YC}=====> Reseting folder $1...${NC}"
 	NUMFILES=$(find ${REPOSITORY}/ -name '*.c' -or -name '*.cpp' | wc -l)
 	
 	if [ ${NUMFILES} -gt ${AVERAGESIZE} ]; then
@@ -23,5 +27,5 @@ else
 		resetFolder
 		echo "The repository is ready to be processed!"
 	fi
-	echo "=====> Folder reseted <====="
+	echo -e "${YC}=====> Folder reseted <=====${NC}"
 fi
