@@ -1,7 +1,8 @@
 .old
 
 ######################
-# Python ENV and Results
+# Environment and Results
+.env
 .venv
 Statistics/pdfs
 
