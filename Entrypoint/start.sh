@@ -14,7 +14,7 @@ OPTLEVELTEST=$9
 sudo chmod 755 ${VOLUME}
 sudo chown -R ml4code:sudo ${VOLUME}/Csv
 sudo chown -R ml4code:sudo ${VOLUME}/Histograms
-sudo chown ml4code:sudo ${VOLUME}/Irs
+sudo chown -R ml4code:sudo ${VOLUME}/Irs
 sudo chown -R ml4code:sudo ${VOLUME}/Results
 sudo chown -R ml4code:sudo ${VOLUME}/Source
 ./yali/Classification/Classify.sh ${ROUNDS} ${MEMORYPROF} ${MODEL} ${TRAINDATASET} ${OPTLEVELTRAIN} ${NUMCLASSES} ${TESTDATASET} ${OPTLEVELTEST}
