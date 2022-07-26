@@ -1,5 +1,9 @@
 set -e
 
+YC='\033[0;33m'
+RC='\033[0;31m'
+NC='\033[0m'
+
 ROUNDS=$1
 MEMORYPROF=$2
 MODEL=$3
@@ -12,31 +16,31 @@ OPTLEVELTEST=$8
 # Set Parameters 
 checkParameters() {
     if [ -z "${ROUNDS}" ]; then
-        echo "Error: No number of rounds specified!"
+        echo -e "${RC}Error: No number of rounds specified!${NC}"
         exit 1
     elif [ -z "${MODEL}" ]; then
-        echo "Error: No model specified!"
+        echo -e "${RC}Error: No model specified!${NC}"
         exit 1
     elif [ -z "${TRAINDATASET}" ]; then
-        echo "Error: No training dataset specified!"
+        echo -e "${RC}Error: No training dataset specified!${NC}"
         exit 1
     elif [ -z "${OPTLEVELTRAIN}" ]; then
-        echo "Error: No optimization level specified for the training dataset!"
+        echo -e "${RC}Error: No optimization level specified for the training dataset!${NC}"
         exit 1
     elif [ -z "${NUMCLASSES}" ]; then
-        echo "Error: No number of classes specified!"
+        echo -e "${RC}Error: No number of classes specified!${NC}"
         exit 1
     fi
 
     if [[ ! -z "${TESTDATASET}" ]]; then
         if [ -z "${OPTLEVELTEST}" ]; then
-            echo "Error: No optimization level specified for the testing dataset!"
+            echo -e "${RC}Error: No optimization level specified for the testing dataset!${NC}"
             exit 1
         fi
     fi
 
     if [ -z "${MEMORYPROF}" ]; then
-        echo "Error: No flag memory profiler specified!"
+        echo -e "${RC}Error: No flag memory profiler specified!${NC}"
         exit 1
     else
         if [ "${MEMORYPROF}" = "yes" ]; then
@@ -57,22 +61,22 @@ histograms() {
     # Histogram CSV
     touch ${csvFinished}
     if [ -z "$(cat ${csvFinished})" ]; then
-        echo "===> Creating histograms ${setName}..."
+        echo -e "${YC}===> Creating histograms ${setName}...${NC}"
         make -C ${irFolder}
-        echo "===> Histograms finished ${setName} <==="
-        echo "1" > ${csvFinished}
+        echo -e "${YC}===> Histograms finished ${setName} <===${NC}"
+        echo -e "1" > ${csvFinished}
     fi
 
     # Histogram Numpy Format
     mkdir -p ${outputDir}
     touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
-        echo "===> Converting CSV to Numpy ${setName}..."
+        echo -e "${YC}===> Converting CSV to Numpy ${setName}...${NC}"
         python3 ~/yali/Extraction/ConvertCSVToNP.py \
             --histogramCSV ${csvFile} \
             --outputDir ${outputDir}/
-        echo "1" > ${outputDir}/Finished
-        echo "===> Conversion finished ${setName} <==="
+        echo -e "1" > ${outputDir}/Finished
+        echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
     fi
 }
 
@@ -87,14 +91,14 @@ compiling() {
     touch ${irFolder}/Finished
 
     if [ -z "$(cat ${irFolder}/Finished)" ]; then
-        echo "===> Compiling ${setName}..."
+        echo -e "${YC}===> Compiling ${setName}...${NC}"
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
             source ${scriptFolder}/CompileOLLVM.sh ${optType} ${setName}
-            echo "===> Compilation finished <==="
+            echo -e "${YC}===> Compilation finished <===${NC}"
         else
             source ${scriptFolder}/Compile.sh ${setName} ${optType}
-            echo "===> Compilation finished <==="
+            echo -e "${YC}===> Compilation finished <===${NC}"
         fi
     fi
 
@@ -114,7 +118,7 @@ classification() {
     local testDir=~/yali/Dataset//Histograms/${testDir}${optTypeTest}/
 
     if [ -z ${testName} ]; then
-        echo "===> Classification: train and testing phase (${trainName}${opTypeTrain}) ..."
+        echo -e "${YC}===> Classification: train and testing phase (${trainName}${opTypeTrain}) ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
@@ -123,7 +127,7 @@ classification() {
             --results_directory ${resultsOnlyTrain} \
             --model ${MODEL}
     else
-        echo "===> Classification: training phase (${trainName}${opTypeTrain}) --- testing phase (${testName}${optTypeTest}) ..."
+        echo -e "${YC}===> Classification: training phase (${trainName}${opTypeTrain}) --- testing phase (${testName}${optTypeTest}) ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
@@ -134,7 +138,7 @@ classification() {
             --results_directory ${resultsWithTest} \
             --model ${MODEL}
     fi
-    echo "===> Classification finished <==="
+    echo -e "${YC}===> Classification finished <===${NC}"
 }
 
 

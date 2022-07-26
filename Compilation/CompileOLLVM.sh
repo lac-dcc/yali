@@ -11,6 +11,10 @@ LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/opt/ollvm/bin/
 OLLVMFLAGS=""
 
+YC='\033[0;33m'
+RC='\033[0;31m'
+NC='\033[0m'
+
 # Define th OLLVM flags
 setOLLVMFlags() {
     case "${STRATEG}" in
@@ -27,7 +31,7 @@ setOLLVMFlags() {
                 OLLVMFLAGS="-mllvm -fla -mllvm -bcf -mllvm -sub"
                 ;;
         *)
-                echo "Error: OLLVM strategy (Dataset) is not a valid argument."
+                echo -e "${RC}Error: OLLVM strategy (Dataset) is not a valid argument.${NC}"
                 exit 1
                 ;;
     esac
@@ -57,12 +61,12 @@ compilingCPP() {
 
 
 if [ -z ${OPTLEVEL} ]; then
-    echo "Error: No optimization level specified (-O3 and -O0, for instance)!"
+    echo -e "${RC}Error: No optimization level specified (-O3 and -O0, for instance)!${NC}"
 elif [ -z ${STRATEG} ]; then
-    echo "Error: No obfuscation level specified (SUB, FLA, BCF or ALL)!"
+    echo -e "${RC}Error: No obfuscation level specified (SUB, FLA, BCF or ALL)!${NC}"
 else
     setOLLVMFlags
-    echo "=====> Starting in ${DATASET} (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS})..."
+    echo -e "${YC}=====> Starting in ${DATASET} (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS})...${NC}"
 
     # Count the number of programs
     TOTAL=1
@@ -95,5 +99,5 @@ else
 	source ~/yali/Compilation/ResetFolder.sh ${FOLDER}
     echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
     echo "1" > ${BUILD}/Finished
-    echo "=====> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <====="
+    echo -e "${YC}=====> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <=====${NC}"
 fi
