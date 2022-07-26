@@ -20,6 +20,7 @@ from utils import DatasetSetup
 from utils import ResultSetup
 from utils import FlagSetup
 from utils import GeneralSetup as GS
+import memory_profiler as MP
 from models import Model
 from absl import app
 import time
@@ -39,40 +40,66 @@ def __loadDataset(FLAGS):
     Returns:
         Tuple: X (data) and Y (classes) of the dataset, time to load the datasets
     """
-    start = time.time()
+    start, end = 0, 0
+
+    if not FLAGS.memory_prof:
+        start = time.time()
+
     X_train, y_train, X_test, y_test = DatasetSetup.loadDataset(
         FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
-    end = time.time()
+    
+    if not FLAGS.memory_prof:
+        end = time.time()
 
     totalTime = end - start
     return X_train, y_train, X_test, y_test, totalTime
 
 
 
-def runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback = None):
-    print('\n=====> ROUND: {}'.format(round))
-    
-    print('\nTraining ...')
-    start = time.time()
-    history = Model.train(FLAGS.model, FLAGS.epochs, model, X_train, y_train, esCallback, FLAGS.verbose)
-    end = time.time()
-    flagsTimes['training_{}'.format(round)] = end - start
-
-
-    if not FLAGS.verbose and not FLAGS.model in ['lr', 'mlp', 'svn', 'rf', 'knn']:
-        Model.showHistory(history)
-
+def __predict(FLAGS, model, X_test, flagsTimes):
+    start, end = 0, 0
     print('\nPredicting ...')
     start = time.time()
     y_pred = Model.predict(FLAGS.model, model, X_test)
     end = time.time()
+
     flagsTimes['predicting_{}'.format(round)] = end - start
+    return y_pred, flagsTimes
 
-    print('\nCalculating statistics ...')
-    acc, cm, cr = Model.getStatistics(y_test, y_pred, FLAGS.print_cm, FLAGS.print_cr)
 
-    print('\nStoring the results ...')
-    ResultSetup.storeResults(FLAGS.model ,FLAGS.results_directory, round, history, cm, cr, acc, y_pred, y_test, flagsTimes)
+
+def __runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback = None):
+    print('\n=====> ROUND: {}'.format(round))
+    memInfo = {}
+    start, end = 0, 0
+    
+    if not FLAGS.memory_prof:
+        print('\nTraining ...')
+        start = time.time()
+        history = Model.train(FLAGS.model, FLAGS.epochs, model, X_train, y_train, esCallback, FLAGS.verbose)
+        end = time.time()    
+
+        flagsTimes['training_{}'.format(round)] = end - start
+
+        if not FLAGS.verbose and not FLAGS.model in ['lr', 'mlp', 'svn', 'rf', 'knn']:
+            Model.showHistory(history)
+
+        y_pred, flagsTimes = __predict(FLAGS, model, X_test, flagsTimes)
+
+        print('\nCalculating statistics ...')
+        acc, cm, cr = Model.getStatistics(y_test, y_pred, FLAGS.print_cm, FLAGS.print_cr)
+
+        print('\nStoring the results ...')
+        ResultSetup.storeResults(
+            FLAGS.model ,FLAGS.results_directory, round, history, cm, cr, acc, y_pred, y_test, flagsTimes
+        )
+    else:
+        print('\nGet memory usage (training phase) ...')
+        memCon = MP.memory_usage((Model.train, (FLAGS.model, FLAGS.epochs, model, X_train, y_train, esCallback, FLAGS.verbose),))
+        memInfo['training_{}'.format(round)] = max(memCon)
+
+        ResultSetup.storeMemoryConsumption(round, FLAGS.results_directory, memInfo)
+
 
 
 
@@ -97,7 +124,8 @@ def execute(argv):
 
 
     for i in range(FLAGS.rounds):
-        runRound(FLAGS, i, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback)
+        GS.setRandomSeed(i)
+        __runRound(FLAGS, i, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback)
 
     
 
@@ -105,5 +133,5 @@ def execute(argv):
 if __name__ == '__main__':
     GS.config()
     FlagSetup.loadFlags()
-    GS.setRandomSeed(42)
+    GS.setRandomSeed(1)
     app.run(execute)
