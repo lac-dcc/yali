@@ -49,15 +49,8 @@ You need to install the following packages to run this project:
 <a id="setup"></a>
 
 ###  **Setup**
-First, you need to prepare the environment to run our experiments. Run the following command line:
 
-```bash
-$ ./setup.sh
-```
-
-> This will download the datasets, build the docker image and create the necessary folders for the project. 
-
-After that, you should copy the `.env.example` file and rename it to `.env`.
+First, you should copy the `.env.example` file and rename it to `.env`.
 You can now set environment variables in the `.env` file at the project's root. You can change the following variables:
 
 <table>
@@ -146,6 +139,14 @@ You can now set environment variables in the `.env` file at the project's root. 
         </tr>
     </tbody>
 </table>
+
+
+After that, you need to prepare the environment to run our experiments. Run the following command line:
+
+```bash
+$ ./setup.sh
+```
+> This will download the datasets, build the docker image and create the necessary folders for the project. 
 
 
 <a id="running"></a>
