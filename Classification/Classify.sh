@@ -115,7 +115,7 @@ classification() {
     local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
     local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
-    local testDir=~/yali/Dataset//Histograms/${testDir}${optTypeTest}/
+    local testDir=~/yali/Dataset//Histograms/${testName}${optTypeTest}/
 
     if [ -z ${testName} ]; then
         echo -e "${YC}===> Classification: train and testing phase (${trainName}${opTypeTrain}) ...${NC}"
