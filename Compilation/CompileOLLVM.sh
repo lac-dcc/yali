@@ -1,8 +1,8 @@
 set -e
 
-FOLDER=~/yali/Dataset/Source/OJClone
-DATASET=$(basename ${FOLDER})
-FOLDERPROCESSED=${FOLDER}.done
+ORIGINAL=~/yali/Dataset/Source/OJClone
+DATASET=$(basename ${ORIGINAL})
+FOLDERPROCESSED=${ORIGINAL}.done
 OPTLEVEL=$1
 STRATEG=$2
 
@@ -45,7 +45,7 @@ compilingC() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
+    ${OLLVM}/clang -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
 }
 
 # Compile programs in CPP
@@ -56,7 +56,7 @@ compilingCPP() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang++ -${OPTLEVEL} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
+    ${OLLVM}/clang++ -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
 }
 
 
@@ -70,7 +70,7 @@ else
 
     # Count the number of programs
     TOTAL=1
-    for d in ${FOLDER}/*/; do
+    for d in ${ORIGINAL}/*/; do
         count="$(find $d -name '*.c' -or -name '*.cpp' | wc -l)"
         TOTAL=$((${TOTAL} + ${count}))
     done
@@ -79,7 +79,7 @@ else
     mkdir -p ${LOGFOLDER}
     
     echo "NEW COMPILATION: " >> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt
-    for d in ${FOLDER}/*/; do
+    for d in ${ORIGINAL}/*/; do
         for f in $d/*; do
             ext="${f##*.}"
 
@@ -96,7 +96,7 @@ else
     done
 	
     # Last setup of the build folder
-	source ~/yali/Compilation/ResetFolder.sh ${FOLDER}
+	source ~/yali/Compilation/ResetFolder.sh ${ORIGINAL}
     echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
     echo "1" > ${BUILD}/Finished
     echo -e "${YC}=====> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <=====${NC}"
