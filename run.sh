@@ -27,9 +27,7 @@ playGame() {
     sed -i "s/OPTLEVELTRAIN=.*/OPTLEVELTRAIN=${optTypeTrain}/g" $(pwd)/.env
     sed -i "s/TESTDATASET=.*/TESTDATASET=${testName}/g" $(pwd)/.env
     sed -i "s/OPTLEVELTEST=.*/OPTLEVELTEST=${optTypeTest}/g" $(pwd)/.env
-    # docker-compose up
-    cat .env
-    echo -e "\n"
+    docker compose up
 }
 
 
