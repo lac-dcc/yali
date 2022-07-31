@@ -118,7 +118,7 @@ classification() {
     local testDir=~/yali/Dataset//Histograms/${testName}${optTypeTest}/
 
     if [ -z ${testName} ]; then
-        echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${opTypeTrain}), ${NUMCLASSES} classes ...${NC}"
+        echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${optTypeTrain}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
@@ -127,7 +127,7 @@ classification() {
             --results_directory ${resultsOnlyTrain} \
             --model ${MODEL}
     else
-        echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${opTypeTrain}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
+        echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${optTypeTrain}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
