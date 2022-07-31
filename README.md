@@ -44,6 +44,7 @@ You need to install the following packages to run this project:
 
 * [Docker](https://www.docker.com/get-started/) and [Docker Compose](https://docs.docker.com/compose/install/) to run our experiments
 * [Python-3](https://www.python.org/downloads/) to plot the results in the project's Jupyter Notebook
+* [Wget](https://www.gnu.org/software/wget/), [Tar](https://www.gnu.org/software/tar/) and [Sed](https://www.gnu.org/software/sed/) to run the initial scripts to configure the repository and 
 
 
 <a id="setup"></a>
