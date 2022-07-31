@@ -105,7 +105,7 @@ def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = Fal
     elif modelName == 'knn':
         model = KNNModel.buildModel()
     elif modelName == 'lr':
-        model = LogisticRegressionModel.buildModel()
+        model = LogisticRegressionModel.buildModel(seed)
     elif modelName == 'mlp':
         model = MLPModel.buildModel(seed)
     else:
