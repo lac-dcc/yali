@@ -32,7 +32,7 @@ def storeResults(model, resultDir, round, history, cm, cr, acc, y_pred, y_test, 
     """
     os.makedirs(resultDir, exist_ok=True)
 
-    if not model in ['lr', 'mlp', 'svn', 'rf', 'knn']:
+    if not model in ['lr', 'mlp', 'svm', 'rf', 'knn']:
         np.savez_compressed('{}/history_{}'.format(resultDir, round), values=history)
 
     # Store the statistics

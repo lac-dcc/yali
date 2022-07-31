@@ -31,7 +31,7 @@ def __getFlags():
             "value": False, "type": "bool", "description": "Scaler the X (MinMaxScaler)", "options": [], "required": False
         },
         "model": {
-            "value": "lstm", "type": "enum", "description": "The model", "options": ['lstm','cnn','lr','mlp','svn','rf','knn'], "required": False
+            "value": "lstm", "type": "enum", "description": "The model", "options": ['lstm','cnn','lr','mlp','svm','rf','knn'], "required": False
         },
         "patience": {
             "value": 50, "type": "int", "description": "Number of epochs without improvement", "options": [], "required": False
