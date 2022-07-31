@@ -81,7 +81,7 @@ def __runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model
 
         flagsTimes['training_{}'.format(round)] = end - start
 
-        if not FLAGS.verbose and not FLAGS.model in ['lr', 'mlp', 'svn', 'rf', 'knn']:
+        if not FLAGS.verbose and not FLAGS.model in ['lr', 'mlp', 'svm', 'rf', 'knn']:
             Model.showHistory(history)
 
         y_pred, flagsTimes = __predict(FLAGS, model, X_test, flagsTimes)
