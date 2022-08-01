@@ -112,19 +112,18 @@ def execute(argv):
     flagsTimes = {}
   
     print('\nLoading the dataset ...')
-    X_train, y_train, X_test, y_test, totalTime = __loadDataset(FLAGS)
+    X_data, y_train, X_data_test, y_test, totalTime = __loadDataset(FLAGS)
     flagsTimes['loading'] = totalTime
-
-    print('\nBuilding the dataset ...')
-    X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_train, X_test, GS.RandomSeed, FLAGS.print_model)
-
-    esCallback = EarlyStopping(monitor="accuracy",
-                                patience=FLAGS.patience,
-                                restore_best_weights=True)
-
 
     for i in range(FLAGS.rounds):
         GS.setRandomSeed(i)
+
+        print('\nBuilding the dataset ...')
+        X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_data, X_data_test, GS.RandomSeed, FLAGS.print_model)
+
+        esCallback = EarlyStopping(monitor="accuracy",
+                                    patience=FLAGS.patience,
+                                    restore_best_weights=True)
         __runRound(FLAGS, i, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback)
 
     

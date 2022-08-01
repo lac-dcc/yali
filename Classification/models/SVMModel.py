@@ -9,8 +9,7 @@ def buildModel(seed = 0):
         seed (int, optional): Seed to the random numbers. Defaults to 1.
 
         LinearSVC: SVM Model
-    """
-    
+    """    
     model = LinearSVC(
         penalty='l2',
         loss='squared_hinge',
