@@ -55,8 +55,10 @@ def predict(modelName, model, X_test):
     Returns:
         Any: Predicted class
     """
-    if modelName in ['lr', 'mlp', 'svm', 'rf', 'knn']:
+    if modelName in ['lr', 'mlp', 'rf', 'knn']:
         y_pred = model.predict_proba(X_test)
+    elif modelName == "svm":
+        return model.predict(X_test)
     else:
         y_pred = model.predict(X_test)
 
