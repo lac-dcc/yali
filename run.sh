@@ -32,7 +32,35 @@ playGame() {
 
 
 
+# Classes Analysis
 setDefaultVar
+echo -e "\n${YC} ==========> 🧮 Classes Analysis ...${NC}"
+for m in "${!MODELS[@]}"; do 
+    ALLCLASSES=( 4 8 16 32 64 )
+    for n in ${ALLCLASSES[@]}; do 
+        sed -i "s/NUMCLASSES=.*/NUMCLASSES=${n}/g" $(pwd)/.env
+        playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+    done
+done
+echo -e "${YC} ==========> End of Classes Analysis <==========${NC}"
+
+
+
+# Memory Analysis
+setDefaultVar
+echo -e "\n${YC} ==========> 💾 Memory Analysis ...${NC}"
+sed -i "s/MEMORYPROF=.*/MEMORYPROF=yes/g" $(pwd)/.env
+for m in "${!MODELS[@]}"; do 
+    playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+done
+echo -e "${YC} ==========> End of Memory Analysis <==========${NC}"
+
+
+
+##################################################################################################
+setDefaultVar
+
+
 
 # Game 0
 echo -e "\n${YC} ==========> 🎮 Game 0 ...${NC}"
