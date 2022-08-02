@@ -1,0 +1,10 @@
+VARS={
+    "figsize":(9,7),
+    "width":4.5,
+    "height":5,
+    "legendsize":13,
+    "fontsizetitle":14,
+    "barwidth":0.4,
+    "rot":45,
+    "tickssize":14,
+}
