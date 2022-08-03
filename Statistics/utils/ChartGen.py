@@ -94,7 +94,7 @@ def boxplotChart(data, ticks, title, xLabel, save = True):
     Returns:
         Figure: Figure with the boxplot
     """
-    fig, ax = plt.subplots(1, 1, figsize=(15,5))
+    fig, ax = plt.subplots(1, 1, figsize=(15,8))
 
     fig.suptitle(title, fontsize=Constants.VARS["fontsizetitle"])
     ax.boxplot(
@@ -107,4 +107,4 @@ def boxplotChart(data, ticks, title, xLabel, save = True):
         plt.savefig(f"pdfs/{xLabel}.pdf")
     
     fig.tight_layout()
-    return fig
+    return fig, ax

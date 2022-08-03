@@ -58,23 +58,20 @@ def getInfo(obfuscator, norm):
     if obfuscator == "ollvm":
         strategies = ["OLLVMO0", "BCFO0", "FLAO0", "SUBO0"]
     elif obfuscator == "clonegen":
-        strategies = ["DRLSGO0", "GAO0", "MCMCO0", "OJCloneO0", "RSO0"]
+        strategies = ["DRLSGO0", "MCMCO0", "RSO0"]
     else:
         strategies = ["OJCloneO0", "OJCloneO3"]
 
     data = __getStrategies(strategies)
     for name in strategies:
-        print(f"Normalizing {name}...")
-        data[name] = data[name].T
-        classData = data[name].loc['class']
-        ids = data[name].loc['id']
-        data[name] = data[name].drop(['class'])
-        data[name] = data[name].drop(['id'])
+        classData = data[name]['class']
+        ids = data[name]['id']
+        del data[name]['class']
+        del data[name]['id']
 
         data[name] = __normData(data[name], norm)
-        data[name] = pd.concat([data[name], pd.DataFrame([classData, ids])], ignore_index=False, axis=0)
-        data[name] = data[name].T
-        print("Normalized.\n")
+        data[name]["class"] = classData
+        data[name]["id"] = ids
 
     return data
 
@@ -92,23 +89,13 @@ def getDistances(datasetObfuscator, baseline):
     """
     dists = {}
     for strategy in datasetObfuscator:
-        print(f"Dataset: {strategy}")
-        i = 0
-        for _, row in baseline.loc[:, baseline.columns != 'class'].iterrows():
-            id = row.name
-            original = row.to_numpy()
+        minusDf = datasetObfuscator[strategy].set_index("id") - baseline.set_index("id")
+        minusDf.dropna(axis=1)
 
-            if id in datasetObfuscator[strategy].index:
-                temp = datasetObfuscator[strategy].loc[:, datasetObfuscator[strategy].columns != 'class'].loc[id]
-                otimized = temp.to_numpy()
-                dist = np.linalg.norm(original - otimized)
-                if not dists[strategy]:
-                    dists[strategy] = np.zeros(baseline.shape[0])
-                dists[strategy][i] = dist
-
-            print("The index {} was successfully calculated".format(i), end='\r')
-            i += 1
-        dists[strategy] = pd.Series(dists[strategy])
+        powDf = minusDf**2
+        sumDf = powDf.sum(axis=1)
+        distDf = sumDf**(1/2)
+        dists[strategy] = distDf
 
     return dists
 
@@ -138,11 +125,11 @@ def plotDistances(distances):
         distances (dict): Dict with the distances of each strategy
 
     Returns:
-        Figure: Boxplot
+        Tuple: Figure and Axis
     """
     title = "Distance Between Original and Obfuscated Program"
-    data = [ distances[key] for key in distances ]
-    labels = ( key for key in distances )
+    data = [ distances[key].to_numpy() for key in distances ]
+    labels = [ key for key in distances ]
     xLabel = "Distance"
 
     return ChartGen.boxplotChart(data, labels, title, xLabel, save=True)
