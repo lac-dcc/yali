@@ -155,11 +155,12 @@ def normMinMax(df):
         DataFrame: Normalized dataset
     """
     cout = 0
+    total=len(df.columns)
     for column in df.columns:
         if not (df[column].max() == 0 and df[column].min() == 0):
             dif = df[column].max() - df[column].min()
             df[column] = (df[column] - df[column].min())/dif
-        print(f"Column {cout} calculated", end='\r')
+        print(f"Column {cout}/{total} calculated", end='\r')
         cout += 1
 
     return df
@@ -176,11 +177,12 @@ def normStnd(df):
         DataFrame: Normalized dataset
     """
     cout = 0
+    total=len(df.columns)
     for column in df.columns:
         if not (df[column].max() == 0 and df[column].min() == 0):
             mean = df[column].mean()
             df[column] = (df[column] - mean)/df[column].std()
-        print(f"Column {cout} calculated", end='\r')
+        print(f"Column {cout}/{total} calculated", end='\r')
         cout += 1
     return df
 
@@ -195,12 +197,9 @@ def normPerc(df):
     Returns:
         DataFrame: Normalized dataset
     """
-    cout = 0
-    for column in df.columns:
-        s = df[column].sum()
-        if not (s == 0):
-            df[column] = (df[column]/s)
-        print(f"Column {cout} calculated", end='\r', flush=True)
-        cout += 1
-    print()
+    s = df.sum(axis=1)
+    cols = df.columns
+    for column in cols:
+        df[column] = (df[column]/s)
+        
     return df
