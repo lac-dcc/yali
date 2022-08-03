@@ -5,6 +5,7 @@
 .gitignore
 .docker-compose
 Dockerfile
+Docs/*
 HistogramPass/build/*
 Volume/*
 Statistics
