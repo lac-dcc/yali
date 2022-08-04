@@ -20,18 +20,22 @@ def __getFigAxis(fig, axis):
 
 
 
-def __axisConfig(axis):
+def __axisConfig(axis, xLabels, lim):
     """Configure the axis
 
     Args:
         axis (Axes): Axes to configure
+        xLabels (array, optional): Labels to the X-Axis. Defaults to None.
+        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
 
     Returns:
         Axes: Configured axes
     """
     axis.set_axisbelow(True)
     axis.grid(axis='y')
-    axis.set_ylim([0,1])
+    axis.set_ylim(lim)
+    axis.set_xticks(axis.get_xticks())
+    axis.set_xticklabels(xLabels)
     axis.tick_params(axis='x', labelsize=Constants.VARS["tickssize"])
     axis.tick_params(axis='y', labelsize=Constants.VARS["tickssize"])
     axis.tick_params(axis='x', labelrotation = Constants.VARS["rot"])
@@ -40,7 +44,7 @@ def __axisConfig(axis):
 
 
 
-def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, save=True):
+def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
     """Generate a bar chart
 
     Args:
@@ -51,6 +55,8 @@ def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToU
         baseline (DataFrame, optional): Data that is the baseline. Defaults to None.
         figToUse (Figure, optional): Figure to plot the chart. Defaults to None.
         axisToUse (Axes, optional): Axis to plot the data. Defaults to None.
+        xLabels (array, optional): Labels to the X-Axis. Defaults to [].
+        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
         save (bool, optional): Save the figure as PDF. Defaults to True.
 
     Returns:
@@ -58,16 +64,16 @@ def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToU
     """
     figToUse, axisToUse = __getFigAxis(figToUse, axisToUse) 
 
-    if baseline:
+    if not baseline is None:
         axisToUse.bar(
-            baseline.columns, baseline.mean(), color='k', alpha=0.5, label="Baseline", width=Constants.VARS["barwidth"]
+            baseline.index, baseline, color='k', alpha=0.5, label="Baseline", width=Constants.VARS["barwidth"]
         )
 
-    axisToUse.bar(df.columns, df.mean(), width=Constants.VARS["barwidth"], color='k', label=barLabel)
+    axisToUse.bar(df.index, df, width=Constants.VARS["barwidth"], color='k', label=barLabel)
 
-    axisToUse = __axisConfig(axisToUse)
+    axisToUse = __axisConfig(axisToUse, xLabels, lim)
 
-    if baseline:
+    if not baseline is None:
         axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
 
     figToUse.set_facecolor("w")

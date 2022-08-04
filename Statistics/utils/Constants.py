@@ -1,6 +1,5 @@
 VARS={
-    "figsize":(9,7),
-    "width":4.5,
+    "width":5.5,
     "height":5,
     "legendsize":13,
     "fontsizetitle":14,
