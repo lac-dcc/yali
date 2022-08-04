@@ -6,6 +6,7 @@
 .venv
 Statistics/pdfs
 Statistics/utils/__pycache__
+Statistics/utils/games/__pycache__
 
 # IDE
 .vscode

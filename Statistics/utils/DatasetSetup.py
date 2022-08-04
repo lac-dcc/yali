@@ -68,7 +68,11 @@ def __loadTimeConsumption(folder, rounds):
     file=f"{folder}/elapsed_time_{rounds - 1}.yaml"
     if os.path.exists(file):
         with open(f"{folder}/elapsed_time_{rounds - 1}.yaml") as f:
-            data = yaml.load(f)
+            try:
+                data = yaml.safe_load(f)
+            except yaml.YAMLError as ex:
+                print(ex)
+                return timeCons
 
         for i in range(rounds):
             timeCons.append(data[f"training_{i}"])
@@ -124,7 +128,6 @@ def getMetric(type, models, metricType, numClasses=104, rounds=10):
             else:
                 metricValues[m] = __loadTimeConsumption(folder, rounds)
 
-    print(metricValues)
     return pd.DataFrame.from_dict(metricValues)
 
 
