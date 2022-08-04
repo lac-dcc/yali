@@ -4,6 +4,6 @@ VARS={
     "legendsize":13,
     "fontsizetitle":14,
     "barwidth":0.4,
-    "rot":45,
-    "tickssize":14,
+    "rot":50,
+    "tickssize":13,
 }
