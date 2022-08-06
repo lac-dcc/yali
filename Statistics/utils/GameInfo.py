@@ -1,4 +1,4 @@
-from . import Game1, Game2, Game3, Game
+from . import Game1, Game2, Game3
 import matplotlib.pyplot as plt
 from . import DatasetSetup
 from . import ChartGen
@@ -66,14 +66,13 @@ def getGame0ClassesChart(metricType="acc"):
     """
     dataset = {}
     axisData = {}
+    xLabels = None
 
-    fig = plt.figure(figsize=(19,5))
-    _, xLabels, game, data = __getMainInfo(metricType, 4)
-    axisData["4"] = data
-    dataset["4"] = game
+    fig, ax = plt.subplots(1,1, figsize=(12,5))
+    numClasses = [4, 8, 16, 32, 64]
 
-    for n in [8, 16, 32, 64]:
-        _, _, game, data = __getMainInfo(metricType, n)
+    for n in numClasses:
+        _, xLabels, game, data = __getMainInfo(metricType, n)
         axisData[f"{n}"] = data
         dataset[f"{n}"] = game
 
@@ -81,13 +80,10 @@ def getGame0ClassesChart(metricType="acc"):
     labelY = values[metricType]
     titulo = f"Variation in the Number of Classes - {labelY}"
 
-    i = 1
-    for key in axisData:
-        Game.makeSingleChart(
-            letter=f"{key} Classes", df=axisData[key], fig=fig, coord=int(f"15{i}"), barLabel=f"{key}", 
-            titulo=titulo, labelY=labelY, hideX=False, xLabels=xLabels
-        )
-        i += 1
+    fig = ChartGen.multipleBars(
+        titulo=titulo, labelY=labelY, ax=ax, fig=fig, data=axisData, colors=None, totalWidth=0.8, 
+        singleWidth=1, legend=True, save=True, xLabels=xLabels
+    )
 
     return fig, dataset
 
