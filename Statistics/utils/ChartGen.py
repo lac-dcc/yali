@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from . import Constants
+import numpy as np
 
 
 
@@ -20,13 +21,14 @@ def __getFigAxis(fig, axis):
 
 
 
-def __axisConfig(axis, xLabels, lim):
+def __axisConfig(axis, xLabels, lim, offsets = None):
     """Configure the axis
 
     Args:
         axis (Axes): Axes to configure
         xLabels (array, optional): Labels to the X-Axis. Defaults to None.
         lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        offsets (array): Offsets of the xticks
 
     Returns:
         Axes: Configured axes
@@ -34,7 +36,10 @@ def __axisConfig(axis, xLabels, lim):
     axis.set_axisbelow(True)
     axis.grid(axis='y')
     axis.set_ylim(lim)
-    axis.set_xticks(axis.get_xticks())
+    if offsets is None:
+        axis.set_xticks(axis.get_xticks())
+    else:
+        axis.set_xticks(offsets)
     axis.set_xticklabels(xLabels)
     axis.tick_params(axis='x', labelsize=Constants.VARS["tickssize"])
     axis.tick_params(axis='y', labelsize=Constants.VARS["tickssize"])
@@ -44,6 +49,61 @@ def __axisConfig(axis, xLabels, lim):
 
 
 
+def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth=0.8, singleWidth=1, legend=True, lim=[0,1], save=True):
+    """Draws a bar plot with multiple bars per data point.
+
+    Args:
+        titulo (str): Title of the chart
+        ax (Axis):The axis we want to draw our plot on.
+        fig (Figure): Figure to plot the chart.
+        data (dict): Dictionary containing the data we want to plot.
+        labelY (str): Label of the Y-Axis
+        xLabels (array): Labels to the X-Axis.
+        colors (array, optional): Llist of colors which are used for the bars. Default to None
+        totalWidth (float, optional): The width of a bar group. 0.8 means that 80% of the x-axis is covered
+            by bars and 20% will be spaces between the bars. Default to 0.8
+        singleWidth (float, optional): The relative width of a single bar within a group. 1 means the bars
+            will touch eachother within a group, values less than 1 will make these bars thinner. Default to 1
+        legend (bool, optional): If this is set to true, a legend will be added to the axis. Default to True.
+        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        save (bool, optional): Save the figure as PDF. Defaults to True.
+    """
+    if colors is None:
+        colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
+
+    # Number of bars per group
+    n_bars = len(data)
+
+    # The width of a single bar
+    bar_width = totalWidth / n_bars
+
+    # List containing handles for the drawn bars, used for the legend
+    bars = []
+
+    for i, (name, values) in enumerate(data.items()):
+        # The offset in x direction of that bar
+        x_offset = (i - n_bars / 2) * bar_width + bar_width / 2
+
+        # Draw a bar for every value of that type
+        for x, y in enumerate(values):
+            bar = ax.bar(x + x_offset, y, width=bar_width * singleWidth, color=colors[i % len(colors)])
+
+        bars.append(bar[0])
+
+    if legend:
+        ax.legend(bars, data.keys())
+
+    __axisConfig(ax, xLabels, lim, np.arange(len(xLabels)))
+
+    fig.set_facecolor("w")
+    fig.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+    fig.supylabel(labelY)
+    fig.tight_layout()
+    if save:
+        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+    
+    
+    
 def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
     """Generate a bar chart
 

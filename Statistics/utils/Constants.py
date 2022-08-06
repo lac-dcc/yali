@@ -3,7 +3,7 @@ VARS={
     "height":5,
     "legendsize":13,
     "fontsizetitle":14,
-    "barwidth":0.4,
+    "barwidth":0.3,
     "rot":50,
     "tickssize":13,
 }
