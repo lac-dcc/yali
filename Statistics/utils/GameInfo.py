@@ -1,3 +1,4 @@
+from numpy import average
 from . import Game1, Game2, Game3
 import matplotlib.pyplot as plt
 from . import DatasetSetup
@@ -5,12 +6,13 @@ from . import ChartGen
 
 
 
-def __getMainInfo(metricType, nClasses=104):
+def __getMainInfo(metricType, nClasses=104, average=True):
     """Get the main info to build the charts
 
     Args:
         metricType (str): 'acc' to accuracy, 'f1' to f1-score, "mem" to memory and "time" to time. Defaults to "acc".
         nClasses (int): Number of classes
+        average (bool, optional): return the data with the average or not
 
     Returns:
         Tuple: Name of the models, name of the labels, game0 DataFrame and game0 averages
@@ -21,7 +23,8 @@ def __getMainInfo(metricType, nClasses=104):
         "OJCloneO0", models=models, metricType=metricType, numClasses=nClasses, rounds=10
     )
 
-    data = game0.mean()
+
+    data = game0.mean() if average else game0
     if (metricType == "mem"):
         data = data/1000
     elif metricType == "time":
@@ -40,15 +43,17 @@ def getGame0Chart(metricType="acc"):
     Returns:
         Tuple: Figure and Dataset
     """
-    _, xLabels, game0, data = __getMainInfo(metricType)
+    average=False
+    _, xLabels, game0, data = __getMainInfo(metricType, average=average)
     
     values = {"acc": "Accuracy", "f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
     labelY = values[metricType]
+    maxVal = data.max() if average else data.mean().max()
 
-    fig = ChartGen.barChart(
+    fig = ChartGen.boxPlot(
         "O0", f"Game 0 - {labelY}", data, 
         labelY, xLabels=xLabels, 
-        lim=[0,1] if metricType in ["acc", "f1"] else [0,data.max()+0.5]
+        lim=[0,1] if metricType in ["acc", "f1"] else [0,maxVal+0.5]
     )
 
     return fig, game0
