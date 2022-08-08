@@ -160,8 +160,15 @@ $ ./setup.sh
 Now, you can run the following command line:
 
 ```bash
-$ ./run.sh
+$ ./run.sh MODE
 ```
+There are the following values to `MODE`:
+* **all**: Run all games and the resources analysis
+* **resources**: Run only the resources analysis
+* **game0** Run the [Game 0]()(*We will put the link later*)
+* **game1**: Run the [Game 1]()(*We will put the link later*)
+* **game2**: Run the [Game 2]()(*We will put the link later*)
+* **game3**: Run the [Game 3]()(*We will put the link later*)
 
 > This will run the docker container with the configurations in the `.env` file.
 
