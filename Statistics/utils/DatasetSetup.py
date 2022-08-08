@@ -26,7 +26,7 @@ def __loadF1(folder, rounds=10):
             report = np.load(file, allow_pickle=True)["cr"].tolist()
             pattern = re.search("macro avg.*\n", report)
             if pattern:
-                macroAvg = pattern.group(0).split("      ")
+                macroAvg = pattern.group(0).split("     ")
                 f1.append(float(macroAvg[3]))
     
     return f1
