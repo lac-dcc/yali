@@ -103,7 +103,51 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
         fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
     
     
-    
+
+def boxPlot(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
+    """Generate a bar chart
+
+    Args:
+        barLabel (str): Label of the bars
+        titulo (str): Title of the chart
+        df (DataFrame): Data of the chart
+        labelY (str): Label of the Y-Axis
+        baseline (DataFrame, optional): Data that is the baseline. Defaults to None.
+        figToUse (Figure, optional): Figure to plot the chart. Defaults to None.
+        axisToUse (Axes, optional): Axis to plot the data. Defaults to None.
+        xLabels (array, optional): Labels to the X-Axis. Defaults to [].
+        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        save (bool, optional): Save the figure as PDF. Defaults to True.
+
+    Returns:
+        Figure: Figure with the chart
+    """
+    figToUse, axisToUse = __getFigAxis(figToUse, axisToUse) 
+
+    if baseline is not None:
+        axisToUse.bar(
+            baseline.index, baseline, color='k', alpha=0.5, label="Baseline", width=Constants.VARS["barwidth"]
+        )
+
+    axisToUse.boxplot(df, widths=Constants.VARS["barwidth"])
+
+    axisToUse = __axisConfig(axisToUse, xLabels, lim)
+    axisToUse.autoscale(tight=True)
+
+    if baseline is not None:
+        axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
+
+    figToUse.set_facecolor("w")
+    figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+    figToUse.supylabel(labelY)
+    figToUse.tight_layout()
+    if save:
+        figToUse.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+
+    return figToUse
+
+
+
 def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
     """Generate a bar chart
 
