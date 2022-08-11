@@ -1,7 +1,7 @@
 <h1 align="center" style=""> Yali </h1>
 
 <p align="center">
-  <img alt="logo" src="./Docs/yali.png" width="45%" height="auto"/>
+  <img alt="logo" src="./Docs/yali.png" width="35%" height="auto"/>
 </p>
 
 <p align="center">
