@@ -22,6 +22,7 @@
     * [Running](#running)
 * [Statistics](#statistics)
 * [Structure](#structure)
+* [To Do](#to-do)
 
 
 
@@ -211,3 +212,14 @@ The repository has the following organization:
     |-- Results: "results of the training/testing phase"
     |-- Source: "source code of the programs"
 ```
+
+
+---
+<a id="next-steps"></a>
+
+## To Do
+
+We are going to do the following to increment our repository:
+
+- [] Put the paper link in this ReadME
+- [] Add the experiment that compares different embeddings
