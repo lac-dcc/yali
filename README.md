@@ -221,5 +221,5 @@ The repository has the following organization:
 
 We are going to do the following to increment our repository:
 
-- [] Put the paper link in this ReadME
-- [] Add the experiment that compares different embeddings
+- [ ] Put the paper link in this ReadME
+- [ ] Add the experiment that compares different embeddings
