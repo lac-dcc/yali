@@ -32,7 +32,11 @@
 
 Let _D_ be a deep learning model that classifies programs according to the problem they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected.
 
+<p align="center">
+<img alt="examples of classifications" src="./Docs/examples.gif" width="60%" height="auto"/>
+</p>
 
+> The top of the image above shows the histogram produced by a specific strategy for program *292*. This program belongs to class 11 of the *POJ-104 dataset*. The bottom of the image shows how each model classifies the variations of program *292*.
 
 ---
 <a id="getting-started"></a>
