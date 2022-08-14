@@ -18,7 +18,6 @@ def __getMainInfo(metricType, nClasses=104, average=True):
         Tuple: Name of the models, name of the labels, game0 DataFrame and game0 averages
     """
     models=["cnn", "knn", "mlp", "svm", "lr", "rf"]
-    xLabels=["CNN", "K-NN", "MLP", "SVM", "Logistic\nRegression", "Random\nForest"]
     game0 = DatasetSetup.getMetric(
         "OJCloneO0", models=models, metricType=metricType, numClasses=nClasses, rounds=10
     )
@@ -30,7 +29,9 @@ def __getMainInfo(metricType, nClasses=104, average=True):
     elif metricType == "time":
         data = data/60
 
-    return models, xLabels, game0, data
+    labels=[m.upper() for m in models]
+
+    return models, labels, game0, data
 
 
 
