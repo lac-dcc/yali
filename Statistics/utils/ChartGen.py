@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from . import Constants
 import numpy as np
+import os
 
 
 
@@ -100,7 +101,10 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
     fig.supylabel(labelY)
     fig.tight_layout()
     if save:
-        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        fig.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
     
     
 
@@ -142,7 +146,10 @@ def boxPlot(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUs
     figToUse.supylabel(labelY)
     figToUse.tight_layout()
     if save:
-        figToUse.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        figToUse.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
 
     return figToUse
 
@@ -185,7 +192,10 @@ def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToU
     figToUse.supylabel(labelY)
     figToUse.tight_layout()
     if save:
-        figToUse.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        figToUse.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
 
     return figToUse
 
@@ -214,7 +224,10 @@ def boxplotChart(data, ticks, title, xLabel, save = True):
     ax.set_xlim([0,1.2])
 
     if save:
-        plt.savefig(f"pdfs/{xLabel}.pdf")
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        plt.savefig(f"{pdfDir}/{xLabel}.pdf")
     
     fig.tight_layout()
     return fig, ax
