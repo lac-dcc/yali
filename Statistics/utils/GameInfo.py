@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from . import DatasetSetup
 from . import ChartGen
 
-
+MODELS=["cnn", "knn", "mlp", "svm", "lr", "rf"]
 
 def __getMainInfo(metricType, nClasses=104, average=True):
     """Get the main info to build the charts
@@ -17,7 +17,7 @@ def __getMainInfo(metricType, nClasses=104, average=True):
     Returns:
         Tuple: Name of the models, name of the labels, game0 DataFrame and game0 averages
     """
-    models=["cnn", "knn", "mlp", "svm", "lr", "rf"]
+    models=MODELS
     game0 = DatasetSetup.getMetric(
         "OJCloneO0", models=models, metricType=metricType, numClasses=nClasses, rounds=10
     )
@@ -52,8 +52,7 @@ def getGame0Chart(metricType="acc"):
     maxVal = data.max() if average else data.mean().max()
 
     fig = ChartGen.boxPlot(
-        "O0", f"Game 0 - {labelY}", data, 
-        labelY, xLabels=xLabels, 
+        f"Game 0 - {labelY}", data, labelY, xLabels=xLabels, 
         lim=[0,1] if metricType in ["acc", "f1"] else [0,maxVal+0.5]
     )
 
@@ -104,16 +103,10 @@ def getGame1Chart(metricType="acc"):
     Returns:
         Tuple: Figure and Dataset
     """
-    models, xLabels, _, data0 = __getMainInfo(metricType)
-
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 1 - {labelY}"
-    fig = plt.figure(figsize=(18,11))
 
-    game1 = Game1.getCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
-
-    fig.tight_layout()
-    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+    fig, game1 = Game1.getChart(titulo, MODELS, labelY, metricType)
 
     return fig, game1
 
