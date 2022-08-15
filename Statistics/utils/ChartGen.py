@@ -27,8 +27,8 @@ def __axisConfig(axis, xLabels, lim, offsets = None):
 
     Args:
         axis (Axes): Axes to configure
-        xLabels (array, optional): Labels to the X-Axis. Defaults to None.
-        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        xLabels (array): Labels to the X-Axis.
+        lim (array): Limits of the Y-Axis.
         offsets (array): Offsets of the xticks
 
     Returns:
@@ -108,11 +108,10 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
     
     
 
-def boxPlot(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
+def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
     """Generate a bar chart
 
     Args:
-        barLabel (str): Label of the bars
         titulo (str): Title of the chart
         df (DataFrame): Data of the chart
         labelY (str): Label of the Y-Axis
@@ -155,11 +154,11 @@ def boxPlot(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUs
 
 
 
-def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
+def barChart(legendData, titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
     """Generate a bar chart
 
     Args:
-        barLabel (str): Label of the bars
+        legendData (str): Label of the bars
         titulo (str): Title of the chart
         df (DataFrame): Data of the chart
         labelY (str): Label of the Y-Axis
@@ -180,12 +179,53 @@ def barChart(barLabel, titulo, df, labelY, baseline=None, figToUse=None, axisToU
             baseline.index, baseline, color='k', alpha=0.5, label="Baseline", width=Constants.VARS["barwidth"]
         )
 
-    axisToUse.bar(df.index, df, width=Constants.VARS["barwidth"], color='k', label=barLabel)
+    axisToUse.bar(df.index, df, width=Constants.VARS["barwidth"], color='k', label=legendData)
 
     axisToUse = __axisConfig(axisToUse, xLabels, lim)
 
     if not baseline is None:
         axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
+
+    figToUse.set_facecolor("w")
+    figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+    figToUse.supylabel(labelY)
+    figToUse.tight_layout()
+    if save:
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        figToUse.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
+
+    return figToUse
+
+
+
+def scatterChart(legendData, titulo, df, marker, labelY, figToUse=None, axisToUse=None, xLabels=None, lim=[0,1],save=True):
+    """Generate a bar chart
+
+    Args:
+        legendData (str): Label of the data
+        titulo (str): Title of the chart
+        df (DataFrame): Data of the chart
+        marker (str): Marker of the scatter
+        labelY (str): Label of the Y-Axis
+        figToUse (Figure, optional): Figure to plot the chart. Defaults to None.
+        axisToUse (Axes, optional): Axis to plot the data. Defaults to None.
+        xLabels (array, optional): Labels to the X-Axis (xticks). Defaults to None.
+        lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        save (bool, optional): Save the figure as PDF. Defaults to True.
+
+    Returns:
+        Figure: Figure with the chart
+    """
+    figToUse, axisToUse = __getFigAxis(figToUse, axisToUse) 
+    if xLabels is None or len(xLabels) == 0:
+        xLabels = df.index
+
+    axisToUse.scatter(df.index, df, marker=marker, s=Constants.VARS["markerwidth"], label=legendData)
+
+    axisToUse = __axisConfig(axisToUse, xLabels, lim)
+    axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
 
     figToUse.set_facecolor("w")
     figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
