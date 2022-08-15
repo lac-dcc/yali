@@ -105,6 +105,8 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
         pdfDir = f"{mainDir}/pdfs"
         os.makedirs(pdfDir, exist_ok=True)
         fig.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
+
+    return fig
     
     
 
