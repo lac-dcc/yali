@@ -160,15 +160,19 @@ def getGame3Chart(metricType="acc"):
     Returns:
         Tuple: Figure and Dataset
     """
-    models, xLabels, _, data0 = __getMainInfo(metricType)
-
+    scatter=True
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 3 - {labelY}"
-    fig = plt.figure(figsize=(18,11))
-    
-    game3 = Game3.getCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+    if scatter:
+        fig, game3 = Game3.getChart(titulo, MODELS, labelY, metricType)
+    else:
+        models, xLabels, _, data0 = __getMainInfo(metricType)
 
-    fig.tight_layout()
-    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+        fig = plt.figure(figsize=(18,11))
+        
+        game3 = Game3.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+
+        fig.tight_layout()
+        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game3
