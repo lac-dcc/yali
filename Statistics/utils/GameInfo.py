@@ -103,10 +103,20 @@ def getGame1Chart(metricType="acc"):
     Returns:
         Tuple: Figure and Dataset
     """
+    scatter=True
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 1 - {labelY}"
+    if scatter:
+        fig, game1 = Game1.getChart(titulo, MODELS, labelY, metricType)
+    else:
+        models, xLabels, _, data0 = __getMainInfo(metricType)
 
-    fig, game1 = Game1.getChart(titulo, MODELS, labelY, metricType)
+        fig = plt.figure(figsize=(18,11))
+        
+        game1 = Game1.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+
+        fig.tight_layout()
+        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game1
 
@@ -120,18 +130,22 @@ def getGame2Chart(metricType="acc"):
 
     Returns:
         Tuple: Figure and Dataset
-    """    
-    models, xLabels, _, data0 = __getMainInfo(metricType)
-
+    """
+    scatter=True
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 2 - {labelY}"
-    fig = plt.figure(figsize=(18,11))
-    
-    game2 = Game2.getCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+    if scatter:
+        fig, game2 = Game2.getChart(titulo, MODELS, labelY, metricType)
+    else:
+        models, xLabels, _, data0 = __getMainInfo(metricType)
+
+        fig = plt.figure(figsize=(18,11))
+        
+        game2 = Game2.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
 
 
-    fig.tight_layout()
-    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+        fig.tight_layout()
+        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game2
 
