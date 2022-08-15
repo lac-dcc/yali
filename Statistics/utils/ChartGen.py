@@ -109,7 +109,7 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
     
 
 def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
-    """Generate a bar chart
+    """Generate a boxplot chart
 
     Args:
         titulo (str): Title of the chart
@@ -241,7 +241,7 @@ def scatterChart(legendData, titulo, df, marker, labelY, figToUse=None, axisToUs
 
 
 
-def boxplotChart(data, ticks, title, xLabel, save = True):
+def boxPlotToDistances(data, ticks, title, xLabel, save = True):
     """Generate boxplots
 
     Args:
@@ -254,7 +254,7 @@ def boxplotChart(data, ticks, title, xLabel, save = True):
     Returns:
         Figure: Figure with the boxplot
     """
-    fig, ax = plt.subplots(1, 1, figsize=(15,8))
+    fig, ax = plt.subplots(1, 1, figsize=(Constants.VARS["width"],Constants.VARS["height"]))
 
     fig.suptitle(title, fontsize=Constants.VARS["fontsizetitle"])
     ax.boxplot(

@@ -132,4 +132,4 @@ def plotDistances(distances):
     labels = [ key for key in distances ]
     xLabel = "Distance"
 
-    return ChartGen.boxplotChart(data, labels, title, xLabel, save=True)
+    return ChartGen.boxPlotToDistances(data, labels, title, xLabel, save=True)
