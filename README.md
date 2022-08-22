@@ -174,6 +174,7 @@ There are the following values for `MODE`:
 * **game1**: Run the [Game 1]() (*We will put the link later*)
 * **game2**: Run the [Game 2]() (*We will put the link later*)
 * **game3**: Run the [Game 3]() (*We will put the link later*)
+* **discover**: Run the [Discover Game]() (*We will put the link later*)
 
 > This will run the docker container with the configurations in the `.env` file.
 

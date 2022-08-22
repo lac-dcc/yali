@@ -30,7 +30,7 @@ playGame() {
     sed -i "s/OPTLEVELTRAIN=.*/OPTLEVELTRAIN=${optTypeTrain}/g" $(pwd)/.env
     sed -i "s/TESTDATASET=.*/TESTDATASET=${testName}/g" $(pwd)/.env
     sed -i "s/OPTLEVELTEST=.*/OPTLEVELTEST=${optTypeTest}/g" $(pwd)/.env
-    DOCKER_BUILDKIT=1 docker compose up
+    DOCKER_BUILDKIT=1 docker-compose up
 }
 
 
@@ -117,6 +117,20 @@ game3() {
     echo -e "${YC} ==========> End of the Game 3 <==========${NC}"
 }
 
+discover() {
+    setDefaultVar
+    sed -i "s/NUMCLASSES=.*/NUMCLASSES=10/g" $(pwd)/.env
+
+    echo -e "\n${YC} ==========> 🎮 Discover Game ...${NC}"
+    TRAINSTEP=( dataset1 dataset2 dataset3 dataset4 )
+    for m in "${!MODELS[@]}"; do 
+        for t in "${!TRAINSTEP[@]}"; do
+            playGame ${MODELS[$m]} "${TRAINSTEP[$t]}" "O0" "" ""
+        done
+    done
+    echo -e "${YC} ==========> End of the Discover Game <==========${NC}"
+}
+
 
 
 ##################################################################################################
@@ -125,7 +139,7 @@ game3() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified!${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'all', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
         exit 1
     fi
 
@@ -138,6 +152,7 @@ run() {
                 game1
                 game2
                 game3
+                discover
                 ;;
         "resource")
                 classAnalysis
@@ -155,8 +170,11 @@ run() {
         "game3")
                 game3
                 ;;
+        "discover")
+                discover
+                ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
                 exit 1
                 ;;
     esac
