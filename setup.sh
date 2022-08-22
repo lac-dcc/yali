@@ -18,6 +18,10 @@ wget ${YALI}/OJClone.tar.xz -O $(pwd)/Volume/Source/OJClone.tar.xz
 wget ${YALI}/MCMC.tar.xz -O $(pwd)/Volume/Source/MCMC.tar.xz
 wget ${YALI}/RS.tar.xz -O $(pwd)/Volume/Source/RS.tar.xz
 wget ${YALI}/DRLSG.tar.xz -O $(pwd)/Volume/Source/DRLSG.tar.xz
+wget ${YALI}/dataset1.tar.xz -O $(pwd)/Volume/Source/dataset1.tar.xz
+wget ${YALI}/dataset2.tar.xz -O $(pwd)/Volume/Source/dataset2.tar.xz
+wget ${YALI}/dataset3.tar.xz -O $(pwd)/Volume/Source/dataset3.tar.xz
+wget ${YALI}/dataset4.tar.xz -O $(pwd)/Volume/Source/dataset4.tar.xz
 echo -e "${YC}===> Done. <===${NC}\n"
 
 # Unpacking the datasets
@@ -26,12 +30,20 @@ tar -xf $(pwd)/Volume/Source/OJClone.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/MCMC.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/RS.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/DRLSG.tar.xz -C $(pwd)/Volume/Source/
+tar -xf $(pwd)/Volume/Source/dataset1.tar.xz -C $(pwd)/Volume/Source/
+tar -xf $(pwd)/Volume/Source/dataset2.tar.xz -C $(pwd)/Volume/Source/
+tar -xf $(pwd)/Volume/Source/dataset3.tar.xz -C $(pwd)/Volume/Source/
+tar -xf $(pwd)/Volume/Source/dataset4.tar.xz -C $(pwd)/Volume/Source/
 
 # Removing the .tar.xz
 rm $(pwd)/Volume/Source/OJClone.tar.xz
 rm $(pwd)/Volume/Source/MCMC.tar.xz
 rm $(pwd)/Volume/Source/RS.tar.xz
 rm $(pwd)/Volume/Source/DRLSG.tar.xz
+rm $(pwd)/Volume/Source/dataset1.tar.xz
+rm $(pwd)/Volume/Source/dataset2.tar.xz
+rm $(pwd)/Volume/Source/dataset3.tar.xz
+rm $(pwd)/Volume/Source/dataset4.tar.xz
 echo -e "${YC}===> Done. <===${NC}\n"
 
 # Python Env for the statistics
