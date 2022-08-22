@@ -1,7 +1,7 @@
 from . import DatasetSetup
 from . import ChartGen
+from . import GameInfo
 import pandas as pd
-import numpy as np
 
 
 
@@ -133,3 +133,29 @@ def plotDistances(distances):
     xLabel = "Distance"
 
     return ChartGen.boxPlotToDistances(data, labels, title, xLabel, save=True)
+
+
+
+def plotDiscover(metricType="acc", average=False):
+    """Plot with the discover game
+
+    Args:
+        metricType (str): 'acc' to accuracy, 'f1' to f1-score and "time" to time. Defaults to "acc".
+        average (bool, optional): return the data with the average or not
+
+    Returns:
+        Tuple: Figure and DataFrame with the data
+    """
+    DISCOVERS = ["dataset1O0"]
+    df = None
+
+    for d in DISCOVERS:
+        data = DatasetSetup.getMetric(d, GameInfo.MODELS, metricType, 10, 10)
+        if df is None:
+            print(data)
+            df = pd.DataFrame(data, columns=[d])
+        else:
+            df = df.join(data.to_frame(d))
+
+    print(df)
+    return None, df
