@@ -1,8 +1,8 @@
+from matplotlib import pyplot as plt
 from . import DatasetSetup
 from . import ChartGen
 from . import GameInfo
-import pandas as pd
-
+from . import Constants
 
 
 def __getStrategies(startegiesName):
@@ -140,22 +140,36 @@ def plotDiscover(metricType="acc", average=False):
     """Plot with the discover game
 
     Args:
-        metricType (str): 'acc' to accuracy, 'f1' to f1-score and "time" to time. Defaults to "acc".
+        metricType (str): 'acc' to accuracy and 'f1' to f1-score. Defaults to "acc".
         average (bool, optional): return the data with the average or not
 
     Returns:
         Tuple: Figure and DataFrame with the data
     """
-    DISCOVERS = ["dataset1O0"]
-    df = None
+    DISCOVERS = ["dataset1O0", "dataset2O0", "dataset3O0", "dataset4O0"]
+    discoverData = {}
 
+    values = {"acc": "Accuracy", "f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
+    labelY = values[metricType]
+    title = f"Discover Game - {labelY}"
+
+    fig, axs = plt.subplots(2,2, figsize=(8,5))
+    x, y = 0, 0
     for d in DISCOVERS:
+        ax = axs[x][y]
         data = DatasetSetup.getMetric(d, GameInfo.MODELS, metricType, 10, 10)
-        if df is None:
-            print(data)
-            df = pd.DataFrame(data, columns=[d])
+        discoverData[d] = data
+        ax.set_xlabel(rf"$\bf({d})$", fontsize=Constants.VARS["tickssize"], labelpad=10)
+        ax.xaxis.set_label_position("top")
+        fig = ChartGen.boxPlot(
+            None, data, labelY, xLabels=GameInfo.MODELS, 
+            lim=[0,1], scale=False, figToUse=fig, axisToUse=ax
+        )
+        # TODO: Remove this temporary modification
+        if y < 1:
+            y += 1
         else:
-            df = df.join(data.to_frame(d))
+            y = 0
+            x += 1
 
-    print(df)
-    return None, df
+    return fig, discoverData

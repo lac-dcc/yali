@@ -110,7 +110,7 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
     
     
 
-def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1],save=True):
+def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xLabels=[], lim=[0,1], scale=True, save=True):
     """Generate a boxplot chart
 
     Args:
@@ -122,6 +122,7 @@ def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xL
         axisToUse (Axes, optional): Axis to plot the data. Defaults to None.
         xLabels (array, optional): Labels to the X-Axis. Defaults to [].
         lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
+        scale (bool, optional): Scale the y-axis
         save (bool, optional): Save the figure as PDF. Defaults to True.
 
     Returns:
@@ -137,7 +138,8 @@ def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xL
     axisToUse.boxplot(df, widths=Constants.VARS["barwidth"])
 
     axisToUse = __axisConfig(axisToUse, xLabels, lim)
-    axisToUse.autoscale(tight=True)
+    if scale:
+        axisToUse.autoscale(tight=True)
 
     if baseline is not None:
         axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
