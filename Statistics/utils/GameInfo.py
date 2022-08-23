@@ -1,4 +1,3 @@
-from numpy import average
 from . import Game1, Game2, Game3
 import matplotlib.pyplot as plt
 from . import DatasetSetup
@@ -49,10 +48,12 @@ def getGame0Chart(metricType="acc"):
     
     values = {"acc": "Accuracy", "f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
     labelY = values[metricType]
+    title = f"Game 0 - {labelY}"
+
     maxVal = data.max() if average else data.mean().max()
 
     fig = ChartGen.boxPlot(
-        f"Game 0 - {labelY}", data, labelY, xLabels=xLabels, 
+        None, data, labelY, xLabels=xLabels, 
         lim=[0,1] if metricType in ["acc", "f1"] else [0,maxVal+0.5]
     )
 
@@ -60,37 +61,43 @@ def getGame0Chart(metricType="acc"):
 
 
 
-def getGame0ClassesChart(metricType="acc"):
-    """Create a chart for the game 0 with information about the number of classes
-
-    Args:
-        metricType (str): 'acc' to accuracy, 'f1' to f1-score and "time" to time. Defaults to "acc".
+def getGame0ClassesChart():
+    """Create a two charts for the game 0 (acc and f1) with information about the number 
+    of classes. 
 
     Returns:
-        Tuple: Figure and Dataset
+        Figure: Figure with the charts
     """
-    dataset = {}
     axisData = {}
-    xLabels = None
 
-    fig, ax = plt.subplots(1,1, figsize=(12,5))
+    fig, axs = plt.subplots(2,1, figsize=(8,5))
     numClasses = [4, 8, 16, 32, 64]
 
-    for n in numClasses:
-        _, xLabels, game, data = __getMainInfo(metricType, n)
-        axisData[f"{n}"] = data
-        dataset[f"{n}"] = game
+    def plot(metricType, fig, ax):
+        dataset = {}
+        xLabels = None
+        for n in numClasses:
+            _, xLabels, game, data = __getMainInfo(metricType, n)
+            axisData[f"{n}"] = data
+            dataset[f"{n}"] = game
 
-    values = {"acc": "Accuracy", "f1": "F1-Score", "time": "Time (Minutes)"}
-    labelY = values[metricType]
-    titulo = f"Variation in the Number of Classes - {labelY}"
+        values = {"acc": "Accuracy", "f1": "F1-Score", "time": "Time (Minutes)"}
+        labelY = values[metricType]
+        titulo = f"Variation in the Number of Classes - {labelY}"
 
-    fig = ChartGen.multipleBars(
-        titulo=titulo, labelY=labelY, ax=ax, fig=fig, data=axisData, colors=None, totalWidth=0.8, 
-        singleWidth=1, legend=True, save=True, xLabels=xLabels
-    )
+        ax.set_ylabel(labelY)
+        _, bars = ChartGen.multipleBars(
+            None, labelY="", ax=ax, fig=fig, data=axisData, colors=None, totalWidth=0.8, 
+            singleWidth=1, legend=False, save=True, xLabels=xLabels
+        )
 
-    return fig, dataset
+        return bars
+
+    bars = plot("acc", fig, axs[0])
+    plot("f1", fig, axs[1])
+    fig.legend(bars, numClasses, loc='upper center', ncol=len(numClasses), bbox_to_anchor=(0.5, 1.05))
+
+    return fig
 
 
 
@@ -107,13 +114,13 @@ def getGame1Chart(metricType="acc"):
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 1 - {labelY}"
     if scatter:
-        fig, game1 = Game1.getChart(titulo, MODELS, labelY, metricType)
+        fig, game1 = Game1.getChart(None, MODELS, labelY, metricType)
     else:
         models, xLabels, _, data0 = __getMainInfo(metricType)
 
         fig = plt.figure(figsize=(18,11))
         
-        game1 = Game1.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+        game1 = Game1.getSeparateCharts(None, fig, data0, models, labelY, xLabels, metricType)
 
         fig.tight_layout()
         fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
@@ -135,13 +142,13 @@ def getGame2Chart(metricType="acc"):
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 2 - {labelY}"
     if scatter:
-        fig, game2 = Game2.getChart(titulo, MODELS, labelY, metricType)
+        fig, game2 = Game2.getChart(None, MODELS, labelY, metricType)
     else:
         models, xLabels, _, data0 = __getMainInfo(metricType)
 
         fig = plt.figure(figsize=(18,11))
         
-        game2 = Game2.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+        game2 = Game2.getSeparateCharts(None, fig, data0, models, labelY, xLabels, metricType)
 
 
         fig.tight_layout()
@@ -164,13 +171,13 @@ def getGame3Chart(metricType="acc"):
     labelY = "Accuracy" if metricType == "acc" else "F1-Score"
     titulo=f"Game 3 - {labelY}"
     if scatter:
-        fig, game3 = Game3.getChart(titulo, MODELS, labelY, metricType)
+        fig, game3 = Game3.getChart(None, MODELS, labelY, metricType)
     else:
         models, xLabels, _, data0 = __getMainInfo(metricType)
 
         fig = plt.figure(figsize=(18,11))
         
-        game3 = Game3.getSeparateCharts(titulo, fig, data0, models, labelY, xLabels, metricType)
+        game3 = Game3.getSeparateCharts(None, fig, data0, models, labelY, xLabels, metricType)
 
         fig.tight_layout()
         fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
