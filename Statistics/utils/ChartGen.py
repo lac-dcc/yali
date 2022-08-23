@@ -68,6 +68,9 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
         legend (bool, optional): If this is set to true, a legend will be added to the axis. Default to True.
         lim (array, optional): Limits of the Y-Axis. Defaults to [0,1].
         save (bool, optional): Save the figure as PDF. Defaults to True.
+
+    Returns:
+        Tuple: Figure with the chart and bars of the chart
     """
     if colors is None:
         colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
@@ -97,7 +100,8 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
     __axisConfig(ax, xLabels, lim, np.arange(len(xLabels)))
 
     fig.set_facecolor("w")
-    fig.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+    if titulo:
+        fig.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
     fig.supylabel(labelY)
     fig.tight_layout()
     if save:
@@ -106,7 +110,7 @@ def multipleBars(titulo, ax, fig, data, labelY, xLabels, colors=None, totalWidth
         os.makedirs(pdfDir, exist_ok=True)
         fig.savefig(f"{pdfDir}/{titulo}.pdf", format="pdf", transparent=False)
 
-    return fig
+    return fig, bars
     
     
 
@@ -143,7 +147,8 @@ def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xL
         axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
 
     figToUse.set_facecolor("w")
-    figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+    if titulo:
+        figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
     figToUse.supylabel(labelY)
     figToUse.tight_layout()
     if save:
@@ -227,7 +232,7 @@ def scatterChart(legendData, titulo, df, marker, labelY, figToUse=None, axisToUs
     axisToUse.scatter(df.index, df, marker=marker, s=Constants.VARS["markerwidth"], label=legendData)
 
     axisToUse = __axisConfig(axisToUse, xLabels, lim)
-    axisToUse.legend(loc='upper right', ncol=1, prop={"size":Constants.VARS["legendsize"]})
+    axisToUse.legend(loc='upper center', ncol=len(df.index), prop={"size":Constants.VARS["legendsize"]}, bbox_to_anchor=(0.5, 1.20))
 
     figToUse.set_facecolor("w")
     figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
