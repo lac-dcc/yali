@@ -263,7 +263,8 @@ def boxPlotToDistances(data, ticks, title, xLabel, save = True):
     """
     fig, ax = plt.subplots(1, 1, figsize=(Constants.VARS["width"],Constants.VARS["height"]))
 
-    fig.suptitle(title, fontsize=Constants.VARS["fontsizetitle"])
+    if title:
+        fig.suptitle(title, fontsize=Constants.VARS["fontsizetitle"])
     ax.boxplot(
         data, vert=False, showfliers=True, labels=ticks
     )
