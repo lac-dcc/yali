@@ -163,7 +163,7 @@ def plotDiscover(metricType="acc", average=False):
         ax.xaxis.set_label_position("top")
         fig = ChartGen.boxPlot(
             None, data, labelY, xLabels=GameInfo.MODELS, 
-            lim=[0,1], scale=False, figToUse=fig, axisToUse=ax
+            lim=[0,1], scale=False, figToUse=fig, axisToUse=ax, save=False
         )
         # TODO: Remove this temporary modification
         if y < 1:
@@ -172,4 +172,5 @@ def plotDiscover(metricType="acc", average=False):
             y = 0
             x += 1
 
+    fig.savefig(f"pdfs/Discover - {labelY}.pdf", format="pdf", transparent=False)
     return fig, discoverData

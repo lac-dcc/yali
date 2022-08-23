@@ -70,7 +70,7 @@ def getGame0ClassesChart():
     """
     axisData = {}
 
-    fig, axs = plt.subplots(2,1, figsize=(8,5))
+    fig, axs = plt.subplots(2,1, figsize=(8,5.5))
     numClasses = [4, 8, 16, 32, 64]
 
     def plot(metricType, fig, ax):
@@ -88,7 +88,7 @@ def getGame0ClassesChart():
         ax.set_ylabel(labelY)
         _, bars = ChartGen.multipleBars(
             None, labelY="", ax=ax, fig=fig, data=axisData, colors=None, totalWidth=0.8, 
-            singleWidth=1, legend=False, save=True, xLabels=xLabels
+            singleWidth=1, legend=False, save=False, xLabels=xLabels
         )
 
         return bars
@@ -96,6 +96,8 @@ def getGame0ClassesChart():
     bars = plot("acc", fig, axs[0])
     plot("f1", fig, axs[1])
     fig.legend(bars, numClasses, loc='upper center', ncol=len(numClasses), bbox_to_anchor=(0.5, 1.05))
+    fig.tight_layout()
+    fig.savefig(f"pdfs/varClasses.pdf", format="pdf", transparent=False)
 
     return fig
 
@@ -123,7 +125,8 @@ def getGame1Chart(metricType="acc"):
         game1 = Game1.getSeparateCharts(None, fig, data0, models, labelY, xLabels, metricType)
 
         fig.tight_layout()
-        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+
+    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game1
 
@@ -152,7 +155,8 @@ def getGame2Chart(metricType="acc"):
 
 
         fig.tight_layout()
-        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+
+    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game2
 
@@ -180,6 +184,7 @@ def getGame3Chart(metricType="acc"):
         game3 = Game3.getSeparateCharts(None, fig, data0, models, labelY, xLabels, metricType)
 
         fig.tight_layout()
-        fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
+
+    fig.savefig(f"pdfs/{titulo}.pdf", format="pdf", transparent=False)
 
     return fig, game3
