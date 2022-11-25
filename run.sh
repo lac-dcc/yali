@@ -153,7 +153,7 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'all', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'all', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
         exit 1
     fi
 
