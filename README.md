@@ -187,7 +187,8 @@ Now, you can run the following command line:
 $ ./run.sh MODE
 ```
 There are the following values for `MODE`:
-* **all**: Run all games and the resources analysis
+* **all**: Run all games, the resources analysis and embedding analysis
+* **embeddings**: Run the embedding analysis
 * **resources**: Run only the resources analysis
 * **game0** Run the [Game 0]() (*We will put the link later*)
 * **game1**: Run the [Game 1]() (*We will put the link later*)

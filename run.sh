@@ -16,6 +16,7 @@ setDefaultVar() {
     sed -i "s/ROUNDS=.*/ROUNDS=10/g" $(pwd)/.env
     sed -i "s/NUMCLASSES=.*/NUMCLASSES=104/g" $(pwd)/.env
     sed -i "s/MEMORYPROF=.*/MEMORYPROF=no/g" $(pwd)/.env
+    sed -i "s/REPRESENTATION=.*/REPRESENTATION=histogram/g" $(pwd)/.env
 }
 
 playGame() {
@@ -62,6 +63,19 @@ memAnalysis() {
         playGame ${MODELS[$m]} "OJClone" "O0" "" ""
     done
     echo -e "${YC} ==========> End of Memory Analysis <==========${NC}"
+}
+
+# Embedding Analysis
+embeddingAnalysis() {
+    setDefaultVar
+    echo -e "\n${YC} ==========> 📋 Embedding Analysis ...${NC}"
+    sed -i "s/NUMCLASSES=.*/NUMCLASSES=32/g" $(pwd)/.env
+    EMBEDDINGS=( histogram ir2vec milepost cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
+    for e in "${!EMBEDDINGS[@]}"; do 
+        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${e}/g" $(pwd)/.env
+        playGame "dgcnn" "OJClone" "O0" "" ""
+    done
+    echo -e "${YC} ==========> End of Embedding Analysis <==========${NC}"
 }
 
 
@@ -148,11 +162,15 @@ run() {
         "all")
                 classAnalysis
                 memAnalysis
+                embeddingAnalysis
                 game0
                 game1
                 game2
                 game3
                 discover
+                ;;
+        "embeddings")
+                embeddingAnalysis
                 ;;
         "resource")
                 classAnalysis
@@ -174,7 +192,7 @@ run() {
                 discover
                 ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
                 exit 1
                 ;;
     esac
