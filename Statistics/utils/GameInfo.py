@@ -34,27 +34,34 @@ def __getMainInfo(metricType, nClasses=104, average=True):
 
 
 
-def getGame0Chart(metricType="acc"):
-    """Create a chart for the game 0
+def getGame0Chart(metricType="mem"):
+    """Creates a chart for the game 0.
+
+    This chart has two subplots: the first about accuracy and the other one is related to the `metric_type` argument. 
 
     Args:
-        metricType (str): 'acc' to accuracy, 'f1' to f1-score, "mem" to memory and "time" to time. Defaults to "acc".
+        metricType (str): 'f1' to f1-score, "mem" to memory and "time" to time. Defaults to "acc".
 
-    Returns:
         Tuple: Figure and Dataset
     """
     average=False
-    _, xLabels, game0, data = __getMainInfo(metricType, average=average)
-    
-    values = {"acc": "Accuracy", "f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
-    labelY = values[metricType]
-    title = f"Game 0 - {labelY}"
+    fig, axs = plt.subplots(2,1, figsize=(8,5.5))
+    _, _, game0, data = __getMainInfo("acc", average=average)
 
+    ChartGen.boxPlot(
+        None, data, "Accuracy", figToUse=fig, axisToUse=axs[0], 
+        lim=[0,1]
+    )
+    
+    values = {"f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
+    labelY = values[metricType]
+
+    _, xLabels, _, data = __getMainInfo(metricType, average=average)
     maxVal = data.max() if average else data.mean().max()
 
-    fig = ChartGen.boxPlot(
-        None, data, labelY, xLabels=xLabels, 
-        lim=[0,1] if metricType in ["acc", "f1"] else [0,maxVal+0.5]
+    ChartGen.boxPlot(
+        None, data, labelY, figToUse=fig, axisToUse=axs[1], xLabels=xLabels, 
+        lim=[0,1] if metricType == "f1" else [0,maxVal+0.5]
     )
 
     return fig, game0
@@ -83,7 +90,6 @@ def getGame0ClassesChart():
 
         values = {"acc": "Accuracy", "f1": "F1-Score", "time": "Time (Minutes)"}
         labelY = values[metricType]
-        titulo = f"Variation in the Number of Classes - {labelY}"
 
         ax.set_ylabel(labelY)
         _, bars = ChartGen.multipleBars(

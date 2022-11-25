@@ -151,7 +151,7 @@ def boxPlot(titulo, df, labelY, baseline=None, figToUse=None, axisToUse=None, xL
     figToUse.set_facecolor("w")
     if titulo:
         figToUse.suptitle(titulo, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
-    figToUse.supylabel(labelY)
+    axisToUse.set_ylabel(labelY)
     figToUse.tight_layout()
     if save:
         mainDir = os.getcwd()
