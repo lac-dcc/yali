@@ -3,11 +3,13 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from models import LogisticRegressionModel
 from models import RandomForestModel
+from models import DGCNNModel
 from models import LSTMModel
 from models import SVMModel
 from models import MLPModel
 from models import KNNModel
 from models import CNNModel
+from models import GCNModel
 from absl import logging
 import pandas as pd
 import sys
@@ -68,7 +70,7 @@ def predict(modelName, model, X_test):
 
 
 
-def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = False):
+def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = False, DataArr = None):
     """Build the model
 
     Args:
@@ -77,7 +79,7 @@ def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = Fal
         X_train (array): Training dataset without classes
         X_test (array): Testing dataset without classes
         shouldPrint (bool, optional): Should print the model. Defaults to False
-
+        DataArr (array): Array with the whole data
     Returns:
         Tuple: Modified training and testing dataset, and model
     """
@@ -110,11 +112,15 @@ def buildModel(modelName, numClasses, X_train, X_test, seed=0, shouldPrint = Fal
         model = LogisticRegressionModel.buildModel(seed)
     elif modelName == 'mlp':
         model = MLPModel.buildModel(seed)
+    elif modelName == 'dgcnn':
+        model = DGCNNModel.buildModel(DataArr, numClasses)
+    elif modelName == 'gcn':
+        model = GCNModel.buildModel(DataArr, numClasses)
     else:
-      logging.error('Model error.')
+      logging.error(f'Model error (model = {model}).')
       sys.exit(1)
 
-    if shouldPrint and not modelName in ['lr', 'mlp', 'svm', 'rf', 'knn']:
+    if shouldPrint and not modelName in ['lr', 'mlp', 'svm', 'rf', 'knn', 'dgcnn', 'gcn']:
         print("\n")
         model.summary()
 
@@ -141,6 +147,12 @@ def train(modelName, epochs, model, X_train, y_train, esCallback, verbose = Fals
 
     if modelName in ['lr', 'mlp', 'svm', 'rf', 'knn']:
         history = model.fit(X_train, y_train)
+    elif modelName in ['gcn', 'dgcnn']:
+        history = model.fit(X_train,
+                            epochs=epochs,
+                            verbose=1 if verbose else 0,
+                            shuffle=True,
+                            callbacks=[esCallback])
     else:
         history = model.fit(X_train,
                             pd.get_dummies(y_train),
