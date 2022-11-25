@@ -15,6 +15,7 @@ Statistics/utils/games/__pycache__
 Volume/Source/*
 Volume/Csv/*
 Volume/Histograms/*
+Volume/Embeddings/*
 Volume/Irs/*
 Volume/Results/*
 !Volume/Irs/Makefile.*

@@ -8,6 +8,7 @@ NC='\033[0m'
 echo -e "${YC}===> Creating folders of the volume...${NC}"
 mkdir -p $(pwd)/Volume/Csv
 mkdir -p $(pwd)/Volume/Histograms
+mkdir -p $(pwd)/Volume/Embeddings
 mkdir -p $(pwd)/Volume/Results
 mkdir -p $(pwd)/Volume/Source
 echo -e "${YC}===> Folders created. <===${NC}\n"

@@ -73,7 +73,8 @@ RUN apt-get update -y \
     bc \
     time \
     graphviz \
-    libgraphviz-dev
+    libgraphviz-dev \
+    lsb-release
 
 ############################################ Histogram Pass #############################################
 
@@ -107,6 +108,9 @@ WORKDIR /home/ml4code
 RUN pip3 install --no-warn-script-location protobuf==3.19.2 
 RUN git clone https://github.com/ComputerSystemsLaboratory/YaCoS.git
 RUN cd YaCoS \
+    && sudo pip3 install numpy \
+    && ./install_deps.sh \
+    && sed -i '/install_requires = \[/a "chardet==5.0.0",' setup.py \
     && sed -i 's/numpy~=1.19.2/numpy>=1.20/g' setup.py \
     && sed -i 's/gensim==3.4.0/gensim/g' setup.py \
     && sed -i 's/six==1.15.0/six/g' setup.py \
@@ -126,6 +130,9 @@ COPY --chown=ml4code:sudo Extraction /home/ml4code/yali/Extraction
 
 ############################################ Classification #############################################
 COPY --chown=ml4code:sudo Classification /home/ml4code/yali/Classification
+
+############################################ Representations #############################################
+COPY --chown=ml4code:sudo Representations /home/ml4code/yali/Representations
 
 ############################################ Entrypoint #############################################
 COPY --chmod=755 ./Entrypoint/start.sh /
