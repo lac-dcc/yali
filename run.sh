@@ -70,7 +70,13 @@ embeddingAnalysis() {
     setDefaultVar
     echo -e "\n${YC} ==========> 📋 Embedding Analysis ...${NC}"
     sed -i "s/NUMCLASSES=.*/NUMCLASSES=32/g" $(pwd)/.env
-    EMBEDDINGS=( histogram ir2vec milepost cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
+    EMBEDDINGS=( histogram ir2vec milepost )
+    for e in "${!EMBEDDINGS[@]}"; do 
+        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS[$e]}/g" $(pwd)/.env
+        playGame "cnn" "OJClone" "O0" "" ""
+    done
+
+    EMBEDDINGS_GRAPH=( cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
     for e in "${!EMBEDDINGS[@]}"; do 
         sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS[$e]}/g" $(pwd)/.env
         playGame "dgcnn" "OJClone" "O0" "" ""
