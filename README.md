@@ -71,8 +71,25 @@ You can now set environment variables in the `.env` file at the project's root. 
             <th>Value</th>
         </tr>
         <tr>
+            <td>REPRESENTATION</td>
+            <td>Program embedding that will be used to represent a program. This variable is required.</td>
+            <td>
+                <ul>
+                    <li>histogram</li>
+                    <li>ir2vec</li>
+                    <li>milepost</li>
+                    <li>cfg</li>
+                    <li>cfg_compact</li>
+                    <li>cdfg</li>
+                    <li>cdfg_compact</li>
+                    <li>cdfg_plus</li>
+                    <li>programl</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td>MODEL</td>
-            <td>Selected machine learning model. This variable is required.</td>
+            <td>Selected machine learning model. This variable is required. If REPRESENTATION is equal to `cfg`, `cfg_compact`, `cdfg`, `cdfg_compact`, `cdfg_plus` or `programl`, the model must be `dgcnn` or `gcn`.</td>
             <td>
                 <ul>
                     <li>"lstm" (Long Short-Term Memory) </li>
@@ -82,6 +99,8 @@ You can now set environment variables in the `.env` file at the project's root. 
                     <li>"knn" (K-Nearest Neighbors) </li>
                     <li>"lr" (Logistic Regression) </li>
                     <li>"mlp" (Multilayer Perceptron) </li>
+                    <li>"gcn" (GCN Supervised Graph Classification) </li>
+                    <li>"dgcnn" (Deep Graph CNN) </li>
                 </ul>
             </td>
         </tr>
@@ -200,18 +219,19 @@ The repository has the following organization:
 
 ```bash
 |-- Classification: "scripts for the classification process"
-|-- Compilation: "scripts for the compilation process"
+|-- Compilation: "Scripts for the compilation process"
 |-- Docs: "Repository documentation"
-|-- Entrypoint: "container setup"
-|-- Extraction: "scripts to convert CSV to Numpy"
+|-- Entrypoint: "Container setup"
+|-- Extraction: "Script to extract a program representation and convert CSV to Numpy"
 |-- HistogramPass: "LLVM pass to get the histograms"
-|-- Statistics: "jupyter notebooks"
-|-- Volume: "volume of the container"
+|-- Representations: "Scripts to extract different program representations"
+|-- Statistics: "Jupyter notebooks"
+|-- Volume: "Volume of the container"
     |-- Csv: "CSVs with the histograms"
     |-- Histograms: "histograms in the Numpy format"
     |-- Irs: "LLVM IRs of the programs"
-    |-- Results: "results of the training/testing phase"
-    |-- Source: "source code of the programs"
+    |-- Results: "Results of the training/testing phase"
+    |-- Source: "Source code of the programs"
 ```
 
 
