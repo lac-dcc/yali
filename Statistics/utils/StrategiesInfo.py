@@ -136,17 +136,16 @@ def plotDistances(distances):
 
 
 
-def plotDiscover(metricType="acc", average=False):
+def plotDiscover(metricType="acc"):
     """Plot with the discover game
 
     Args:
         metricType (str): 'acc' to accuracy and 'f1' to f1-score. Defaults to "acc".
-        average (bool, optional): return the data with the average or not
 
     Returns:
         Tuple: Figure and DataFrame with the data
     """
-    DISCOVERS = ["dataset1O0", "dataset2O0", "dataset3O0", "dataset4O0"]
+    DISCOVERS = {"dataset1O0": "dataset1", "dataset2O0": "dataset2", "dataset3O0": "dataset3", "dataset4O0": "dataset4"}
     discoverData = {}
 
     values = {"acc": "Accuracy", "f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
@@ -155,11 +154,11 @@ def plotDiscover(metricType="acc", average=False):
 
     fig, axs = plt.subplots(2,2, figsize=(8,5))
     x, y = 0, 0
-    for d in DISCOVERS:
+    for key, value in DISCOVERS.items():
         ax = axs[x][y]
-        data = DatasetSetup.getMetric(d, GameInfo.MODELS, metricType, 10, 10)
-        discoverData[d] = data
-        ax.set_xlabel(rf"$\bf({d})$", fontsize=Constants.VARS["tickssize"], labelpad=10)
+        data = DatasetSetup.getMetric(key, GameInfo.MODELS, metricType, 10, 10)
+        discoverData[value] = data
+        ax.set_xlabel(rf"$\bf{value}$", fontsize=Constants.VARS["tickssize"], labelpad=10)
         ax.xaxis.set_label_position("top")
         fig = ChartGen.boxPlot(
             None, data, labelY, xLabels=GameInfo.MODELS, 
