@@ -21,9 +21,11 @@ from utils import ResultSetup
 from utils import FlagSetup
 from utils import GeneralSetup as GS
 import memory_profiler as MP
+from absl import logging
 from models import Model
 from absl import app
 import time
+import sys
 
 
 
@@ -45,14 +47,18 @@ def __loadDataset(FLAGS):
     if not FLAGS.memory_prof:
         start = time.time()
 
-    X_train, y_train, X_test, y_test = DatasetSetup.loadDataset(
-        FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
+    DataArr, X_train, y_train, X_test, y_test = None, None, None, None, None
+    if FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
+        X_train, y_train, X_test, y_test = DatasetSetup.loadDataset(
+            FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
+    else:
+        DataArr, X_train, y_train, X_test, y_test = DatasetSetup.loadGraphDataset(FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p)
     
     if not FLAGS.memory_prof:
         end = time.time()
 
     totalTime = end - start
-    return X_train, y_train, X_test, y_test, totalTime
+    return DataArr, X_train, y_train, X_test, y_test, totalTime
 
 
 
@@ -65,7 +71,6 @@ def __predict(FLAGS, model, X_test, flagsTimes):
 
     flagsTimes['predicting_{}'.format(round)] = end - start
     return y_pred, flagsTimes
-
 
 
 def __runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback = None):
@@ -101,8 +106,6 @@ def __runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model
         ResultSetup.storeMemoryConsumption(round, FLAGS.results_directory, memInfo)
 
 
-
-
 def execute(argv):
     """ Execute DGCNN.
     """
@@ -112,14 +115,18 @@ def execute(argv):
     flagsTimes = {}
   
     print('\nLoading the dataset ...')
-    X_data, y_train, X_data_test, y_test, totalTime = __loadDataset(FLAGS)
+    DataArr, X_data, y_train, X_data_test, y_test, totalTime = __loadDataset(FLAGS)
     flagsTimes['loading'] = totalTime
 
     for i in range(FLAGS.rounds):
         GS.setRandomSeed(i)
 
         print('\nBuilding the dataset ...')
-        X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_data, X_data_test, GS.RandomSeed, FLAGS.print_model)
+        if FLAGS.model not in ['dgcnn', 'gcn'] and FLAGS.representation not in ['histogram', 'ir2vec', 'milepost']:
+            logging.error(f'The {FLAGS.representation} must be used with the models dgcnn or gcn.')
+            sys.exit(1)
+
+        X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_data, X_data_test, GS.RandomSeed, FLAGS.print_model, DataArr)
 
         esCallback = EarlyStopping(monitor="accuracy",
                                     patience=FLAGS.patience,

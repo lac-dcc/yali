@@ -31,7 +31,7 @@ def __getFlags():
             "value": False, "type": "bool", "description": "Scaler the X (MinMaxScaler)", "options": [], "required": False
         },
         "model": {
-            "value": "lstm", "type": "enum", "description": "The model", "options": ['lstm','cnn','lr','mlp','svm','rf','knn'], "required": False
+            "value": "lstm", "type": "enum", "description": "The model", "options": ['lstm','cnn','lr','mlp','svm','rf','knn', 'gcn', 'dgcnn'], "required": False
         },
         "patience": {
             "value": 50, "type": "int", "description": "Number of epochs without improvement", "options": [], "required": False
@@ -56,6 +56,9 @@ def __getFlags():
         },
         "memory_prof": {
             "value": False, "type": "bool", "description": "If false get all statistics, if true get only memory consumption", "options": [], "required": False
+        },
+        "representation": {
+            "value": "histogram", "type": "enum", "description": "The program representation", "options": ['histogram','ir2vec','milepost', 'cfg', 'cfg_compact', 'cdfg', 'cdfg_compact', 'cdfg_plus', 'programl'], "required": True
         },
     }
 

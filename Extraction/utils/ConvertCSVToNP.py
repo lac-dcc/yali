@@ -12,7 +12,7 @@ def convert(csvFile, outDir):
     if (os.path.isdir(outDir)):
         df = pd.read_csv(csvFile, skipinitialspace=True)
 
-        for idx, row in df.iterrows():
+        for _, row in df.iterrows():
             # It removes the extension ".ll" and "./" at the beginning of the string
             llName = (row['id'])[2:-3] 
             fileName = outDir  + llName

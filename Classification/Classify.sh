@@ -10,8 +10,9 @@ MODEL=$3
 TRAINDATASET=$4
 OPTLEVELTRAIN=$5
 NUMCLASSES=$6
-TESTDATASET=$7
-OPTLEVELTEST=$8
+REPRESENTATION=$7
+TESTDATASET=$8
+OPTLEVELTEST=$9
 
 # Set Parameters 
 checkParameters() {
@@ -29,6 +30,9 @@ checkParameters() {
         exit 1
     elif [ -z "${NUMCLASSES}" ]; then
         echo -e "${RC}Error: No number of classes specified!${NC}"
+        exit 1
+    elif [ -z "${REPRESENTATION}" ]; then
+        echo -e "${RC}Error: No representation type specified!${NC}"
         exit 1
     fi
 
@@ -72,7 +76,7 @@ histograms() {
     touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
         echo -e "${YC}===> Converting CSV to Numpy ${setName}...${NC}"
-        python3 ~/yali/Extraction/ConvertCSVToNP.py \
+        python3 ~/yali/Extraction/utils/ConvertCSVToNP.py \
             --histogramCSV ${csvFile} \
             --outputDir ${outputDir}/
         echo -e "1" > ${outputDir}/Finished
@@ -85,7 +89,8 @@ compiling() {
     local setName=$1
     local optType=$2
     local irFolder=~/yali/Dataset/Irs/${setName}${optType}
-    local scriptFolder=~/yali/Compilation/
+    local compilationScriptFolder=~/yali/Compilation/
+    local representationScriptFolder=~/yali/Extraction/
 
     mkdir -p ${irFolder}
     touch ${irFolder}/Finished
@@ -94,15 +99,18 @@ compiling() {
         echo -e "${YC}===> Compiling ${setName}...${NC}"
 
         if [ "${setName}" = "BCF" ] || [ "${setName}" = "FLA" ] || [ "${setName}" = "SUB" ] || [ "${setName}" = "OLLVM" ]; then
-            source ${scriptFolder}/CompileOLLVM.sh ${optType} ${setName}
+            source ${compilationScriptFolder}/CompileOLLVM.sh ${optType} ${setName}
             echo -e "${YC}===> Compilation finished <===${NC}"
         else
-            source ${scriptFolder}/Compile.sh ${setName} ${optType}
+            source ${compilationScriptFolder}/Compile.sh ${setName} ${optType}
             echo -e "${YC}===> Compilation finished <===${NC}"
         fi
     fi
 
-    histograms ${setName} ${optType}
+    if [ ${REPRESENTATION} == "histogram" ]; then
+        histograms ${setName} ${optType}
+    else
+        source ${representationScriptFolder}/Extract.sh "${setName}${optType}" ${REPRESENTATION}
 }
 
 # Classification process
@@ -114,20 +122,27 @@ classification() {
     local optTypeTest=$5
     local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
     local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
-    local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
-    local testDir=~/yali/Dataset//Histograms/${testName}${optTypeTest}/
+    
+    if [ ${REPRESENTATION} == "histogram" ]; then
+        local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
+        local testDir=~/yali/Dataset/Histograms/${testName}${optTypeTest}/
+    else
+        local trainDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}
+        local testDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${testName}${optTypeTest}
+    fi
 
     if [ -z ${testName} ]; then
-        echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${optTypeTrain}), ${NUMCLASSES} classes ...${NC}"
+        echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${optTypeTrain} -- ${REPRESENTATION}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
             --${MEMORYPROF}memory_prof \
             --classes ${NUMCLASSES} \
             --results_directory ${resultsOnlyTrain} \
-            --model ${MODEL}
+            --model ${MODEL} \
+            --representation ${REPRESENTATION}
     else
-        echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${optTypeTrain}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
+        echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${optTypeTrain} -- ${REPRESENTATION}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/VectorTTClassify.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
@@ -136,7 +151,8 @@ classification() {
             --train_p 100 \
             --test_dataset_directory ${testDir} \
             --results_directory ${resultsWithTest} \
-            --model ${MODEL}
+            --model ${MODEL} \
+            --representation ${REPRESENTATION}
     fi
     echo -e "${YC}===> Classification finished <===${NC}"
 }
