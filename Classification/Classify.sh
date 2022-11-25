@@ -121,15 +121,17 @@ classification() {
     local optTypeTrain=$3
     local testName=$4
     local optTypeTest=$5
-    local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
-    local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     
     if [ ${REPRESENTATION} == "histogram" ]; then
         local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
         local testDir=~/yali/Dataset/Histograms/${testName}${optTypeTest}/
+        local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
+        local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     else
         local trainDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}
         local testDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${testName}${optTypeTest}
+        local resultsOnlyTrain=~/yali/Dataset/Results/Embeddings/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
+        local resultsWithTest=~/yali/Dataset/Results/Embeddings/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     fi
 
     if [ -z ${testName} ]; then
