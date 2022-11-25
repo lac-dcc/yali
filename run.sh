@@ -72,7 +72,7 @@ embeddingAnalysis() {
     sed -i "s/NUMCLASSES=.*/NUMCLASSES=32/g" $(pwd)/.env
     EMBEDDINGS=( histogram ir2vec milepost cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
     for e in "${!EMBEDDINGS[@]}"; do 
-        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${e}/g" $(pwd)/.env
+        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS[$e]}/g" $(pwd)/.env
         playGame "dgcnn" "OJClone" "O0" "" ""
     done
     echo -e "${YC} ==========> End of Embedding Analysis <==========${NC}"
