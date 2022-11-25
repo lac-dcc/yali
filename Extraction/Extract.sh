@@ -24,7 +24,7 @@ createRepresentation() {
 
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
         echo -e "${YC}===> Extracting ${REPRESENTATION} from ${DATASET} ...${NC}"
-        python3 Representations/extract_representations.py \
+        python3 ~/yali/Representations/extract_representations.py \
                 --representation ${REPRESENTATION} \
                 --dataset_directory ${irFolder} \
                 --output_directory ${outputDir} \
