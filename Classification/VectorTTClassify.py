@@ -125,6 +125,9 @@ def execute(argv):
         if FLAGS.model not in ['dgcnn', 'gcn'] and FLAGS.representation not in ['histogram', 'ir2vec', 'milepost']:
             logging.error(f'The {FLAGS.representation} must be used with the models dgcnn or gcn.')
             sys.exit(1)
+        elif FLAGS.model in ['dgcnn', 'gcn'] and FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
+            logging.error(f'The {FLAGS.representation} cannot be used with the models dgcnn or gcn.')
+            sys.exit(1)
 
         X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_data, X_data_test, GS.RandomSeed, FLAGS.print_model, DataArr)
 
