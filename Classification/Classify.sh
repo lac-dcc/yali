@@ -111,6 +111,7 @@ compiling() {
         histograms ${setName} ${optType}
     else
         source ${representationScriptFolder}/Extract.sh "${setName}${optType}" ${REPRESENTATION}
+    fi
 }
 
 # Classification process
