@@ -77,8 +77,8 @@ embeddingAnalysis() {
     done
 
     EMBEDDINGS_GRAPH=( cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
-    for e in "${!EMBEDDINGS[@]}"; do 
-        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS[$e]}/g" $(pwd)/.env
+    for e in "${!EMBEDDINGS_GRAPH[@]}"; do 
+        sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS_GRAPH[$e]}/g" $(pwd)/.env
         playGame "dgcnn" "OJClone" "O0" "" ""
     done
     echo -e "${YC} ==========> End of Embedding Analysis <==========${NC}"
