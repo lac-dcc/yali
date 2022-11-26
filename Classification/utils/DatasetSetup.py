@@ -70,8 +70,11 @@ def __loadNPArray(datasetDir, numClasses, percentage, pickle=False):
 
             if counter == total:
                 break
+    if pickle:
+        return X, np.array(y)
 
     return np.array(X), np.array(y)
+    
 
 
 
@@ -80,6 +83,7 @@ def loadGraphDataset(numClasses, trainDir, trainPer, testDir =  None, testPer = 
     X, X_test, y_test = None, None, None
 
     if testDir:
+        X_test, y_test = __loadNPArray(testDir, numClasses, testPer, pickle=True)
         X = X_train.copy()
         X.extend(X_test)
         X_train_idx = np.array([i for i in range(len(X_train))])
