@@ -130,8 +130,8 @@ classification() {
     else
         local trainDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}
         local testDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${testName}${optTypeTest}
-        local resultsOnlyTrain=~/yali/Dataset/Results/Embeddings/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
-        local resultsWithTest=~/yali/Dataset/Results/Embeddings/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
+        local resultsOnlyTrain=~/yali/Dataset/Results/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
+        local resultsWithTest=~/yali/Dataset/Results/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
     fi
 
     if [ -z ${testName} ]; then
