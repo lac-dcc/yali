@@ -2,6 +2,7 @@ from . import Game1, Game2, Game3
 import matplotlib.pyplot as plt
 from . import DatasetSetup
 from . import ChartGen
+import pandas as pd
 
 MODELS=["cnn", "knn", "mlp", "svm", "lr", "rf"]
 
@@ -31,6 +32,51 @@ def __getMainInfo(metricType, nClasses=104, average=True):
     labels=[m.upper() for m in models]
 
     return models, labels, game0, data
+
+
+
+def getEmbeddingsComparison():
+    fig, ax = plt.subplots(1,1, figsize=(8,5.5))
+
+    embeddings = {
+        "cfg": ("cfg", "dgcnn"),
+        "cfg_compact": ("cfg_c", "dgcnn"),
+        "cdfg": ("cdfg", "dgcnn"),
+        "cdfg_compact": ("cdfg_c", "dgcnn"),
+        "cdfg_plus": ("cdfg+", "dgcnn"),
+        "programl": ("programl", "dgcnn"),
+        "ir2vec": ("ir2vec", "cnn"),
+        "milepost": ("milepost", "cnn"),
+        "histogram": ("histogram", "cnn")
+    }
+    data = {}
+    labels = []
+    for emb, value in embeddings.items():
+        dataset = ""
+        if emb == "histogram":
+            dataset = f"OJCloneO0"
+        else:
+            dataset = f"Embeddings/{emb}/OJCloneO0"
+
+        df = DatasetSetup.getMetric(
+            dataset, models=[value[1]], 
+            metricType="acc", numClasses=32, rounds=10
+        )
+        data[emb] = df.to_dict()[value[1]]
+        labels.append(value[0])
+    
+    fig.text(0.25,-0.17, "dgcnn (Zhang et al.’s original model)")
+    fig.text(0.75,-0.17, "cnn (adapt. of dgcnn)")
+    trans = ax.get_xaxis_transform()
+    ax.plot([6.5,6.5],[-.3,0], color="k", transform=trans, clip_on=False, linestyle='dashed')
+    data = pd.DataFrame(data)
+    ChartGen.boxPlot(
+        None, data, "Accuracy: hits / (hits + misses)", figToUse=fig, axisToUse=ax, 
+        lim=[0,1]
+    )
+    ax.set_xticklabels(labels)
+
+    return fig, data
 
 
 
