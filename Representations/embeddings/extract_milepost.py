@@ -37,7 +37,7 @@ def _build_milepost(function_infos):
     Returns:
         Milepost vector
     """
-    with open(os.path.expanduser("~/yali/Representations/MilepostInfo.txt"), "r") as file:
+    with open(os.path.expanduser("~/yali/Representations/utils/MilepostInfo.txt"), "r") as file:
         KEYS = list(file.read().splitlines())
 
     values = []
