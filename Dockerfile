@@ -1,5 +1,5 @@
 ################################################# Image #################################################
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM nvidia/cuda:11.7.0-devel-ubuntu20.04
 
 ############################################# Date and Time #############################################
 ENV TZ="America/Sao_Paulo"
