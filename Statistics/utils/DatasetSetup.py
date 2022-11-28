@@ -1,3 +1,4 @@
+from glob import glob
 import pandas as pd
 import numpy as np
 import yaml
@@ -206,3 +207,41 @@ def normPerc(df):
         df[column] = (df[column]/s)
         
     return df
+
+
+
+def loadSpeedup():
+    """Gets speedup information based on the results of BenchmarkGame.
+
+    Returns:
+        Dataframe with benchmark information:
+            - O0/ollvm: Speedup of baseline (O0) over compilation with ollvm
+            - O0/O3: Speedup of baseline (O0) over compilation with O3
+    """
+    FOLDERS = glob(f"{RESULTS}/benchmarkgame/*")
+    data = { "o3": {}, "ollvm": {} }
+
+    for folder_path in FOLDERS:
+        folder_name = os.path.basename(folder_path)
+        baseline = None
+
+        with open(f"{folder_path}/{folder_name}_O0.txt") as file:
+            baseline = pd.Series([
+                float(line.replace("Time: ", "")) for line in file
+            ], dtype="float64")
+
+        with open(f"{folder_path}/{folder_name}_O3.txt") as file:
+            series = pd.Series([
+                float(line.replace("Time: ", "")) for line in file
+            ], dtype="float64")
+            m = (baseline/series).mean()
+            data["o3"][folder_name] = m if m >= 1 else m * -1
+        
+        with open(f"{folder_path}/{folder_name}_ollvm.txt") as file:
+            series = pd.Series([
+                float(line.replace("Time: ", "")) for line in file
+            ], dtype="float64")
+            m = (baseline/series).mean()
+            data["ollvm"][folder_name] = m if m >= 1 else m * -1
+            
+    return pd.DataFrame(data)

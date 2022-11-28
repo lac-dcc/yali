@@ -250,7 +250,44 @@ def scatterChart(legendData, titulo, df, marker, labelY, figToUse=None, axisToUs
 
 
 
-def boxPlotToDistances(data, ticks, title, xLabel, save = True):
+def speedupPlot(title, data, s1, s2, l1, l2, save = True):
+    """Generate chart with speedup comparison
+
+    Args:
+        data (DataFrame): Data of the boxplots
+        s1 (array): Name of the column with the second strategy
+        s2 (str): Name of the column with the second strategy
+        l1 (str): Label of the first strategy (plot)
+        l2 (str): Label of the second strategy (plot)
+        save (bool, optional): Save the chart. Defaults to True.
+
+    Returns:
+        Figure: Figure and axis with the boxplot
+    """
+    fig, ax = plt.subplots(1, 1, figsize=(Constants.VARS["width"],Constants.VARS["height"]))
+    barwidth = Constants.VARS["barwidth"]
+
+    if title:
+        fig.suptitle(title, fontsize=Constants.VARS["fontsizetitle"])
+
+    y_pos = np.arange(len(data))
+    ax.barh(y_pos, data[s1], label=l1, height=barwidth)
+    ax.barh(y_pos + barwidth, data[s2], label=l2, height=barwidth)
+    ax.set_yticks(y_pos, data.index)
+
+    fig.tight_layout()
+    fig.legend(ncol=2, loc='upper center', bbox_to_anchor=(0.5, 1.05))
+    if save:
+        mainDir = os.getcwd()
+        pdfDir = f"{mainDir}/pdfs"
+        os.makedirs(pdfDir, exist_ok=True)
+        plt.savefig(f"{pdfDir}/speedup.pdf")
+
+    return fig, ax
+
+
+
+def boxPlotForDistances(data, ticks, title, xLabel, save = True):
     """Generate boxplots
 
     Args:
@@ -273,11 +310,11 @@ def boxPlotToDistances(data, ticks, title, xLabel, save = True):
     ax.set_xlabel(xLabel, fontsize=12)
     ax.set_xlim([0,1.2])
 
+    fig.tight_layout()
     if save:
         mainDir = os.getcwd()
         pdfDir = f"{mainDir}/pdfs"
         os.makedirs(pdfDir, exist_ok=True)
         plt.savefig(f"{pdfDir}/{xLabel}.pdf")
     
-    fig.tight_layout()
     return fig, ax

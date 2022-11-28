@@ -44,6 +44,25 @@ def __normData(data, norm):
 
 
 
+def plotSpeedupInfo():
+    """Generates a plot with speedup information.
+
+    This data is based on the BenchmarkGame.
+
+    Returns:
+        Figure and data with speedup information.
+    """
+    data = DatasetSetup.loadSpeedup()
+    data.sort_index(inplace=True, ascending=False)
+
+    fig, _ = ChartGen.speedupPlot(
+        None, data, "ollvm", "o3", "O0/ollvm", "O0/O3"
+    )
+
+    return fig, data
+
+
+
 def getInfo(obfuscator, norm):
     """Get the info about a specific obfuscator
 
@@ -132,7 +151,7 @@ def plotDistances(distances):
     labels = [ key for key in distances ]
     xLabel = "Distance"
 
-    return ChartGen.boxPlotToDistances(data, labels, None, xLabel, save=True)
+    return ChartGen.boxPlotForDistances(data, labels, None, xLabel, save=True)
 
 
 
