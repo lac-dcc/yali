@@ -38,7 +38,13 @@ playGame() {
 
 ##################################################################################################
 
-
+# Speddup Analysis
+speedupAnalysis() {
+    DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
+        yali_yali /home/ml4code/yali/Compilation/CompileBenchmarkGame.sh speedup
+    DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
+        yali_yali /home/ml4code/yali/Classification/SpeedupBenchmarkGame.sh
+}
 
 # Classes Analysis
 classAnalysis() {
@@ -159,7 +165,7 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'all', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'all', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
         exit 1
     fi
 
@@ -167,6 +173,7 @@ run() {
     case "${MODE}" in
         "all")
                 classAnalysis
+                speedupAnalysis
                 memAnalysis
                 embeddingAnalysis
                 game0
@@ -174,6 +181,9 @@ run() {
                 game2
                 game3
                 discover
+                ;;
+        "speedup")
+                speedupAnalysis
                 ;;
         "embeddings")
                 embeddingAnalysis
@@ -198,7 +208,7 @@ run() {
                 discover
                 ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
                 exit 1
                 ;;
     esac
