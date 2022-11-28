@@ -98,7 +98,6 @@ You can now set environment variables in the `.env` file at the project's root. 
                     <li>"knn" (K-Nearest Neighbors) </li>
                     <li>"lr" (Logistic Regression) </li>
                     <li>"mlp" (Multilayer Perceptron) </li>
-                    <li>"gcn" (GCN Supervised Graph Classification) </li>
                     <li>"dgcnn" (Deep Graph CNN) </li>
                 </ul>
             </td>
