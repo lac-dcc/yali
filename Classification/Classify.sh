@@ -136,7 +136,7 @@ classification() {
 
     if [ -z ${testName} ]; then
         echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${optTypeTrain} -- ${REPRESENTATION}), ${NUMCLASSES} classes ...${NC}"
-        python3 ~/yali/Classification/VectorTTClassify.py \
+        python3 ~/yali/Classification/ClassifyPrograms.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
             --${MEMORYPROF}memory_prof \
@@ -146,7 +146,7 @@ classification() {
             --representation ${REPRESENTATION}
     else
         echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${optTypeTrain} -- ${REPRESENTATION}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
-        python3 ~/yali/Classification/VectorTTClassify.py \
+        python3 ~/yali/Classification/ClassifyPrograms.py \
             --train_dataset_directory ${trainDir} \
             --rounds ${rounds} \
             --${MEMORYPROF}memory_prof \
