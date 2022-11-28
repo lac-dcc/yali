@@ -121,6 +121,7 @@ RUN cd YaCoS \
     && sed -i 's/padding += list(embeddings\[unk_idx\])/padding.append(embeddings\[unk_idx\])/g' ~/YaCoS.examples/representation/extract_inst2vec.py \
     && pip3 install numpy --upgrade 
 RUN pip3 install --no-warn-script-location memory-profiler==0.60.0
+RUN sudo apt-get install -y libpcre3-dev
 
 ######################################### Compilation Scripts ###########################################
 COPY --chown=ml4code:sudo Compilation /home/ml4code/yali/Compilation
