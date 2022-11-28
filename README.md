@@ -91,7 +91,6 @@ You can now set environment variables in the `.env` file at the project's root. 
             <td>Selected machine learning model. This variable is required. If REPRESENTATION is equal to `cfg`, `cfg_compact`, `cdfg`, `cdfg_compact`, `cdfg_plus` or `programl`, the model must be `dgcnn` or `gcn`.</td>
             <td>
                 <ul>
-                    <li>"lstm" (Long Short-Term Memory) </li>
                     <li>"cnn" (Convolutional Neural Network by <a href="https://dl.acm.org/doi/10.5555/3015812.3016002">Lili Mou et al.</a>)</li>
                     <li>"rf" (Random Forest) </li>
                     <li>"svm" (Support Vector Machine) </li>
