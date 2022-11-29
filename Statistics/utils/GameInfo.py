@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from . import DatasetSetup
 from . import ChartGen
 import pandas as pd
+import numpy as np
 
 MODELS=["cnn", "knn", "mlp", "svm", "lr", "rf"]
 
@@ -32,6 +33,63 @@ def __getMainInfo(metricType, nClasses=104, average=True):
     labels=[m.upper() for m in models]
 
     return models, labels, game0, data
+
+
+
+def getMalwareDetectionInfo():
+    """Creates a chart for the malware detection problem.
+
+    This chart has two subplots: the first about cnn model and the other one is related to the `rf` model.
+    Both plot the malware detection using the models.
+
+    Returns:
+        Tuple: Figure with the data
+    """
+    fig, axs = plt.subplots(2,1, figsize=(8,5.5))
+
+    dataset = ["mixO0", "mixO1", "mixO2", "mixO3", "mixFLA", "mixBCF", "mixSUB"]
+
+    oldCnnResults = np.array([])
+    oldRfResults = np.array([])
+    for d1 in dataset:
+        cnnResults = []
+        rfResults = []
+        for d2 in dataset:
+            df = DatasetSetup.getMetric(
+                f"Embeddings/histogram/{d2}_{d1}", models=["cnn", "rf"],
+                metricType="acc", numClasses=2, rounds=1
+            )
+            cnnResults.append(df["cnn"].mean())
+            rfResults.append(df["rf"].mean())
+
+        label = d1.replace("mix", "")
+
+        axs[0].bar(np.arange(
+            len(cnnResults)), cnnResults, 
+            bottom=oldCnnResults if len(oldCnnResults) > 0 else None, label=label
+        )
+        axs[0].set_title("cnn")
+        axs[0].set_xticklabels([])
+        axs[1].bar(
+            np.arange(len(rfResults)), rfResults, 
+            bottom=oldRfResults if len(oldRfResults) > 0 else None
+        )
+        axs[1].set_title("rf")
+        axs[1].set_xticks(np.arange(len(dataset)))
+        axs[1].set_xticklabels([e.replace("mix", "") for e in dataset])
+
+        if len(oldCnnResults) > 0:
+            oldCnnResults = oldCnnResults + np.array(cnnResults)
+            oldRfResults = oldRfResults + np.array(rfResults)
+        else:
+            oldCnnResults = np.array(cnnResults)
+            oldRfResults = np.array(rfResults)
+
+    fig.legend(ncol=len(dataset), loc='upper center', bbox_to_anchor=(0.5, 1.05))
+    fig.tight_layout()
+
+    return fig
+
 
 
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 MODE=$1
@@ -40,10 +41,12 @@ playGame() {
 
 # Speddup Analysis
 speedupAnalysis() {
+    echo -e "\n${YC} ==========> 🚀 Speedup Analysis ...${NC}"
     DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
         yali_yali /home/ml4code/yali/Compilation/CompileBenchmarkGame.sh speedup
     DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
         yali_yali /home/ml4code/yali/Classification/SpeedupBenchmarkGame.sh
+    echo -e "${YC} ==========> End of Speedup Analysis <==========${NC}"
 }
 
 # Classes Analysis
@@ -90,6 +93,27 @@ embeddingAnalysis() {
     echo -e "${YC} ==========> End of Embedding Analysis <==========${NC}"
 }
 
+# Malware Analysis
+malwareAnalysis() {
+    echo -e "\n${YC} ==========> 🦠 Malware Analysis ...${NC}"
+    SCRIPTFOLDER=/home/ml4code/yali/Classification
+    TRAINLEVELSTEP=( O0 O1 O2 O3 FLA BCF SUB )
+    TESTLEVELSTEP=( O0 O1 O2 O3 FLA BCF SUB )
+    ROUNDS=10
+
+    for l1 in "${!TRAINLEVELSTEP[@]}"; do
+        for l2 in "${!TESTLEVELSTEP[@]}"; do
+            DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
+                yali_yali ${SCRIPTFOLDER}/MalwareDetection.sh ${ROUNDS} cnn "mix" ${TRAINLEVELSTEP[$l1]} "mix" ${TESTLEVELSTEP[$l2]}
+
+            DOCKER_BUILDKIT=1 docker run -v $(pwd)/Volume:/home/ml4code/yali/Dataset \
+                yali_yali ${SCRIPTFOLDER}/MalwareDetection.sh ${ROUNDS} rf "mix" ${TRAINLEVELSTEP[$l1]} "mix" ${TESTLEVELSTEP[$l2]}
+        done
+    done
+
+
+    echo -e "${YC} ==========> End of Malware Analysis <==========${NC}"
+}
 
 
 ##################################################################################################
@@ -181,6 +205,10 @@ run() {
                 game2
                 game3
                 discover
+                malwareAnalysis
+                ;;
+        "malware")
+                malwareAnalysis
                 ;;
         "speedup")
                 speedupAnalysis

@@ -19,6 +19,7 @@ Volume/Embeddings/*
 Volume/Irs/*
 Volume/Results/*
 !Volume/Irs/Makefile.*
+!Volume/Irs/MiraiAndSpec/
 
 # HistogramPass
 HistogramPass/build/*

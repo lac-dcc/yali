@@ -48,7 +48,7 @@ In this section are the steps to reproduce our experiments.
 
 <a id="prerequisites"></a>
 
-### **Prerequsites**
+### **Prerequisites**
 You need to install the following packages to run this project:
 
 * [Docker](https://www.docker.com/get-started/) and [Docker Compose](https://docs.docker.com/compose/install/) to run our experiments
@@ -188,6 +188,7 @@ There are the following values for `MODE`:
 * **speedup**: Run the speedup analysis with the benchmark game
 * **embeddings**: Run the embedding analysis
 * **resources**: Run only the resources analysis
+* **malware**: Run the experiment to detect classes of malware
 * **game0** Run the [Game 0]() (*We will put the link later*)
 * **game1**: Run the [Game 1]() (*We will put the link later*)
 * **game2**: Run the [Game 2]() (*We will put the link later*)
