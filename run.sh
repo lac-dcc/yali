@@ -189,7 +189,7 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'all', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
         exit 1
     fi
 
@@ -236,7 +236,7 @@ run() {
                 discover
                 ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
                 exit 1
                 ;;
     esac
