@@ -1,146 +1,187 @@
-#! /usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Copyright 2021 Anderson Faustino da Silva.
+"""Runs a specific model with a specific dataset."""
+from typing import Tuple, Dict
+from utils import GeneralSetup as GS
+GS.Config()
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-"""
-from tensorflow.keras.callbacks import EarlyStopping
+# pylint: disable=wrong-import-order disable=wrong-import-position
+import time
+import sys
+import numpy.typing as npt
+from models.Model import Model
 from utils import DatasetSetup
 from utils import ResultSetup
 from utils import FlagSetup
-from utils import GeneralSetup as GS
 import memory_profiler as MP
-from absl import logging
-from models import Model
-from absl import app
-import time
-import sys
+from absl import logging, app
+from tensorflow.keras.callbacks import EarlyStopping
+
+FLAGS = None
 
 
-
-def __loadDataset(FLAGS):
-    """Load the dataset
-
-    Args:
-        FLAGS (flags): Defined flags in the command line
-        X_train (_type_): Training dataset without classes
-        y_train (_type_): Classes of the training dataset
-        X_test (_type_): Testing dataset without classes
-        y_test (_type_): Classes of the testing dataset
+def _LoadDataset() -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray,
+                            npt.NDArray, npt.NDArray, float]:
+    """Loads the dataset.
 
     Returns:
-        Tuple: X (data) and Y (classes) of the dataset, time to load the datasets
+        Tuple with:
+            - The whole dataset (training and testing elements)
+            - Training dataset without classes
+            - Classes of the training dataset
+            - Testing dataset without classes
+            - Classes of the testing dataset
+            - Time spent to load the datasets
     """
+    x_train, y_train = None, None
+    x_test, y_test = None, None
     start, end = 0, 0
+    data_arr = None
 
     if not FLAGS.memory_prof:
         start = time.time()
 
-    DataArr, X_train, y_train, X_test, y_test = None, None, None, None, None
     if FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
-        X_train, y_train, X_test, y_test = DatasetSetup.loadDataset(
-            FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
+        x_train, y_train, x_test, y_test = DatasetSetup.LoadDataset(
+            FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p,
+            FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
     else:
-        DataArr, X_train, y_train, X_test, y_test = DatasetSetup.loadGraphDataset(FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p)
-    
+        output = DatasetSetup.LoadGraphDataset(
+            FLAGS.classes, FLAGS.train_dataset_directory,
+            FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p)
+        data_arr, x_train, y_train, x_test, y_test = output
+
     if not FLAGS.memory_prof:
         end = time.time()
 
-    totalTime = end - start
-    return DataArr, X_train, y_train, X_test, y_test, totalTime
+    total_time = end - start
+
+    return data_arr, x_train, y_train, x_test, y_test, total_time
 
 
+def _Predict(iteration: int, model: Model, flags_times: Dict[str, float]):
+    """Predicts the classes of the test dataset from the `model` argument.
 
-def __predict(FLAGS, model, X_test, flagsTimes):
+    Args:
+        iteration: Number of the current round of training and testing phase
+        model: Model that is used to the training and testing phase
+        flags_times: Log of the time spent in each task of the training and
+            testing phase
+
+    Returns:
+        Updated `flags_times`
+    """
     start, end = 0, 0
+
     print('\nPredicting ...')
     start = time.time()
-    y_pred = Model.predict(FLAGS.model, model, X_test)
+    model.Predict()
     end = time.time()
 
-    flagsTimes['predicting_{}'.format(round)] = end - start
-    return y_pred, flagsTimes
+    flags_times[f"predicting_{iteration}"] = end - start
+
+    return flags_times
 
 
-def __runRound(FLAGS, round, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback = None):
-    print('\n=====> ROUND: {}'.format(round))
-    memInfo = {}
+def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
+    """_summary_
+
+    Args:
+        iteration:  Number of the current round of training and testing phase
+        model: Model that is used to the training and testing phase
+        flags_times: Log of the time spent in each task of the training and
+            testing phase
+    """
+    print(f"\n=====> ROUND: {iteration}")
+
+    mem_info = {}
     start, end = 0, 0
-    
+
     if not FLAGS.memory_prof:
         print('\nTraining ...')
         start = time.time()
-        history = Model.train(FLAGS.model, FLAGS.epochs, model, X_train, y_train, esCallback, FLAGS.verbose)
-        end = time.time()    
+        model.Train(FLAGS.verbose)
+        end = time.time()
 
-        flagsTimes['training_{}'.format(round)] = end - start
+        flags_times[f"training_{iteration}"] = end - start
 
-        if not FLAGS.verbose and not FLAGS.model in ['lr', 'mlp', 'svm', 'rf', 'knn']:
-            Model.showHistory(history)
+        if (not FLAGS.verbose
+                and not FLAGS.model in ['lr', 'mlp', 'svm', 'rf', 'knn']):
+            model.ShowHistory()
 
-        y_pred, flagsTimes = __predict(FLAGS, model, X_test, flagsTimes)
+        flags_times = _Predict(iteration, model, flags_times)
 
         print('\nCalculating statistics ...')
-        acc, cm, cr = Model.getStatistics(y_test, y_pred, FLAGS.print_cm, FLAGS.print_cr)
+        acc, conf_matrix, report = model.GetStatistics(
+            FLAGS.print_cm, FLAGS.print_cr)
 
         print('\nStoring the results ...')
-        ResultSetup.storeResults(
-            FLAGS.model ,FLAGS.results_directory, round, history, cm, cr, acc, y_pred, y_test, flagsTimes
+        ResultSetup.StoreResults(
+            FLAGS.model, FLAGS.results_directory, iteration,
+            model.model, conf_matrix, report, acc, model.y_pred,
+            model.y_test, flags_times
         )
     else:
         print('\nGet memory usage (training phase) ...')
-        memCon = MP.memory_usage((Model.train, (FLAGS.model, FLAGS.epochs, model, X_train, y_train, esCallback, FLAGS.verbose),))
-        memInfo['training_{}'.format(round)] = max(memCon)
+        mem_data = MP.memory_usage((model.Train, (FLAGS.verbose,),))
+        mem_info[f"training_{iteration}"] = max(mem_data)
 
-        ResultSetup.storeMemoryConsumption(round, FLAGS.results_directory, memInfo)
+        ResultSetup.StoreMemoryConsumption(
+            iteration, FLAGS.results_directory, mem_info)
 
 
-def execute(argv):
-    """ Execute DGCNN.
+def Execute(argv):
+    """Gets information about the training and testing phase.
+
+    These phases depending on the user's argument.
     """
     del argv
 
-    FLAGS = FlagSetup.flags.FLAGS
-    flagsTimes = {}
-  
-    print('\nLoading the dataset ...')
-    DataArr, X_data, y_train, X_data_test, y_test, totalTime = __loadDataset(FLAGS)
-    flagsTimes['loading'] = totalTime
+    flags_times = {}
 
-    for i in range(FLAGS.rounds):
-        GS.setRandomSeed(i)
+    print('\nLoading the dataset ...')
+    output = _LoadDataset()
+    data_arr, train_data, train_y, test_data, test_y, total_time = output
+    flags_times['loading'] = total_time
+
+    for iteration in range(FLAGS.rounds):
+        GS.SetRandomSeed(iteration)
 
         print('\nBuilding the dataset ...')
-        if FLAGS.model not in ['dgcnn', 'gcn'] and FLAGS.representation not in ['histogram', 'ir2vec', 'milepost']:
-            logging.error(f'The {FLAGS.representation} must be used with the models dgcnn or gcn.')
+        if (FLAGS.model not in ['dgcnn', 'gcn'] and FLAGS.representation
+                not in ['histogram', 'ir2vec', 'milepost']):
+            repres = FLAGS.representation
+            logging.error(
+                f'The {repres} must be used with the models dgcnn or gcn.')
             sys.exit(1)
-        elif FLAGS.model in ['dgcnn', 'gcn'] and FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
-            logging.error(f'The {FLAGS.representation} cannot be used with the models dgcnn or gcn.')
+        elif (FLAGS.model in ['dgcnn', 'gcn']
+              and FLAGS.representation in ['histogram', 'ir2vec', 'milepost']):
+            repres = FLAGS.representation
+            logging.error(
+                f'The {repres} cannot be used with the models dgcnn or gcn.'
+            )
             sys.exit(1)
 
-        X_train, X_test, model = Model.buildModel(FLAGS.model, FLAGS.classes, X_data, X_data_test, GS.RandomSeed, FLAGS.print_model, DataArr)
-
-        esCallback = EarlyStopping(monitor="accuracy",
+        es_callback = EarlyStopping(monitor="accuracy",
                                     patience=FLAGS.patience,
                                     restore_best_weights=True)
-        __runRound(FLAGS, i, X_train, y_train, X_test, y_test, flagsTimes, model, esCallback)
+        model = Model(
+            FLAGS.model,
+            FLAGS.classes,
+            train_data,
+            train_y,
+            test_data,
+            test_y,
+            FLAGS.epochs,
+            es_callback,
+            GS.random_seed,
+            FLAGS.print_model,
+            data_arr)
 
-    
+        _RunRound(iteration, model, flags_times)
+
 
 # Execute
 if __name__ == '__main__':
-    GS.config()
-    FlagSetup.loadFlags()
-    GS.setRandomSeed(1)
-    app.run(execute)
+    FlagSetup.LoadFlags()
+    FLAGS = FlagSetup.flags.FLAGS
+    GS.SetRandomSeed(1)
+    app.run(Execute)
