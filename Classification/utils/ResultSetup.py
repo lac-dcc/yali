@@ -1,50 +1,60 @@
+"""Methods to save the results."""
+import os
+from typing import Dict, Any
+import numpy.typing as npt
 import numpy as np
 import yaml as yl
-import os
 
-def storeMemoryConsumption(round, resultDir, memInfo):
-    """Store memory consumption information
+
+def StoreMemoryConsumption(
+        iteration: int, result_dir: str, mem_info: Dict[str, float]):
+    """Stores memory consumption information.
 
     Args:
-        round (int): The round number
-        resultDir (str): Path to save the results
-        memInfo (Any): Memory information
+        iteration: The number of the current iteration
+        result_dir: Path to save the results
+        mem_info: Memory consumption information
     """
-    os.makedirs(resultDir, exist_ok=True)
-    np.savez_compressed('{}/memory_{}'.format(resultDir, round), values=memInfo)
+    os.makedirs(result_dir, exist_ok=True)
+    np.savez_compressed(f"{result_dir}/memory_{iteration}", values=mem_info)
 
 
-
-def storeResults(model, resultDir, round, history, cm, cr, acc, y_pred, y_test, flagsTimes):
+def StoreResults(
+        model_name: str, result_dir: str, iteration: int, history: Any,
+        conf_matrix: npt.NDArray, report: str, acc: float, y_pred: npt.NDArray,
+        y_test: npt.NDArray, flags_times: Dict[str, float]):
     """Store statistics information
 
     Args:
-        model (str): Model name
-        resultDir (str): Path to save the results
-        round (int): The round number
-        history (Any): History of the model (training phase)
-        cm (Any): Confusion Matrix
-        cr (Any): Classification Report
-        acc (float): Accuracy of the model
-        y_pred (array): Predicted Y (testing phase)
-        y_test (array): True Y (testing phase)
-        flagsTimes (Any): Time consumption information
+        model_name: Model name
+        result_dir: Path to save the results
+        iteration: The number of the current iteration
+        history: Model/History of the training phase
+        conf_matrix: Confusion Matrix
+        report: Classification Report
+        acc: Accuracy of the model
+        y_pred: Predicted classes in the testing phase
+        y_test: Real classes of the training dataset
+        flags_times: Log of the time spent in each task of the training and
+            testing phase
     """
-    os.makedirs(resultDir, exist_ok=True)
+    os.makedirs(result_dir, exist_ok=True)
 
-    if not model in ['lr', 'mlp', 'svm', 'rf', 'knn']:
-        np.savez_compressed('{}/history_{}'.format(resultDir, round), values=history)
+    if not model_name in ['lr', 'mlp', 'svm', 'rf', 'knn']:
+        np.savez_compressed(
+            f"{result_dir}/history_{iteration}", values=history)
 
     # Store the statistics
-    np.savez_compressed('{}/statistics_{}'.format(resultDir, round), cm=cm, cr=cr, acc=acc)
+    np.savez_compressed(f"{result_dir}/statistics_{iteration}",
+                        cm=conf_matrix, cr=report, acc=acc)
 
     # Store the prediction
-    np.savez_compressed('{}/y_pred_{}'.format(resultDir, round), values=y_pred)
+    np.savez_compressed(f"{result_dir}/y_pred_{iteration}", values=y_pred)
 
     # Store y_test
-    np.savez_compressed('{}/y_test_{}'.format(resultDir, round), values=y_test)
+    np.savez_compressed(f"{result_dir}/y_test_{iteration}", values=y_test)
 
     # Store the elapsed time
-    fout = open('{}/elapsed_time_{}.yaml'.format(resultDir, round), 'w')
-    yl.dump(flagsTimes, fout)
-    fout.close()
+    file_path = f"{result_dir}/elapsed_time_{iteration}.yaml"
+    with open(file_path, "w", encoding="utf-8") as file:
+        yl.dump(flags_times, file)

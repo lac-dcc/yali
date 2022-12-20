@@ -1,51 +1,59 @@
-from sklearn.model_selection import train_test_split
-from stellargraph.mapper import PaddedGraphGenerator
-from sklearn.preprocessing import MinMaxScaler
-from . import GeneralSetup as GS
-from absl import logging
+"""Loadas the datasets."""
 import pickle as pk
-import pandas as pd
-import numpy as np
 import glob as gl
 import random
 import os
+from typing import Optional, Tuple
+import numpy.typing as npt
+import numpy as np
+import pandas as pd
+from absl import logging
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from stellargraph.mapper import PaddedGraphGenerator, PaddedGraphSequence
+from . import GeneralSetup as GS
 
 
-
-def __scalerDataset(X_train, X_test):
-    """ Scale the data using MinMaxScaler
+def _ScalerDataset(x_train: npt.NDArray, x_test: npt.NDArray):
+    """Scales `x_train` and `x_test` in place using MinMaxScaler.
 
     Args:
-        X_train (Array): Training dataset without classes
-        X_test (Array): Testing dataset without classes
+        x_train: Training dataset without classes
+        x_test: Testing dataset without classes
     """
     scaler = MinMaxScaler()
-    scaler.fit(X_train)
-    X_train = scaler.transform(X_train)
-    X_test = scaler.transform(X_test)
+    scaler.fit(x_train)
+    x_train = scaler.transform(x_train)
+    x_test = scaler.transform(x_test)
 
 
+def _LoadDataset(
+        dataset_dir: str, num_classes: int, percentage: float,
+        pickle: Optional[bool] = False) -> Tuple[npt.NDArray, npt.NDArray]:
+    """Loads the files which stores the dataset.
 
-def __loadNPArray(datasetDir, numClasses, percentage, pickle=False):
-    """ Load the dataset stored with numpy format
+    It only supports `pk` (pickle) or `npz` (numpy) formats.
 
     Args:
-        datasetDir (str): Dataset directory
-        numClasses (int): Number of dataset classes
-        percentage (float): Percentage of the data that will be loaded
-        pickle (bool): Whether the data is saved using pickle
-    Returns:
-        Tuple: X (data) and Y (classes) of the dataset
-    """
-    X, y = [], []
+        dataset_dir: Dataset directory
+        num_classes: Number of dataset classes
+        percentage: Percentage of the data that will be loaded
+        pickle: Whether the data is saved using pickle
 
-    for label in range(1, numClasses+1):
-        ddir = os.path.join(datasetDir, str(label))
+    Returns:
+        Tuple with:
+            - Dataset
+            - Classes of the dataset
+    """
+    data, classes = [], []
+
+    for label in range(1, num_classes + 1):
+        ddir = os.path.join(dataset_dir, str(label))
         samples = None
         if pickle:
-            samples = gl.glob('{}/*.pk'.format(ddir))
+            samples = gl.glob(f"{ddir}/*.pk")
         else:
-            samples = gl.glob('{}/*.npz'.format(ddir))
+            samples = gl.glob(f"{ddir}/*.npz")
 
         random.shuffle(samples)
         total = len(samples)*percentage/100
@@ -60,84 +68,118 @@ def __loadNPArray(datasetDir, numClasses, percentage, pickle=False):
                 else:
                     x_val = np.load(sample)['values']
 
-                y_val = label - 1
-                X.append(x_val)
-                y.append(y_val)
+                data.append(x_val)
+                classes.append(label - 1)
                 counter += 1
+            # pylint: disable=broad-except
             except Exception as err:
-                logging.error('Error from {}: {}.'.format(sample, err))
+                logging.error(f"Error from {sample}: {err}.")
                 continue
 
             if counter == total:
                 break
     if pickle:
-        return X, np.array(y)
+        return data, np.array(classes)
 
-    return np.array(X), np.array(y)
-    
-
+    return np.array(data), np.array(classes)
 
 
-def loadGraphDataset(numClasses, trainDir, trainPer, testDir =  None, testPer = None):
-    X_train, y_train = __loadNPArray(trainDir, numClasses, trainPer, pickle=True)
-    X, X_test, y_test = None, None, None
+def LoadGraphDataset(
+        num_classes: int, train_dir: str,
+        train_per: float, test_dir: Optional[str] = None,
+        test_per: Optional[float] = None) -> Tuple[npt.NDArray,
+                                                   PaddedGraphSequence, 
+                                                   npt.NDArray, 
+                                                   PaddedGraphSequence, 
+                                                   npt.NDArray]:
+    """_summary_
 
-    if testDir:
-        X_test, y_test = __loadNPArray(testDir, numClasses, testPer, pickle=True)
-        X = X_train.copy()
-        X.extend(X_test)
-        X_train_idx = np.array([i for i in range(len(X_train))])
-        X_test_idx = np.array([i for i in range(len(X_train_idx), len(X_train_idx) + len(X_test))])
-        del(X_train)
-        del(X_test)
+    Args:
+        num_classes: Number of dataset classes
+        train_dir: Directory of the training dataset
+        train_per: Percentage of the training dataset that will be loaded
+        test_dir: Directory of the testing dataset
+        test_per: Percentage of the testing dataset that will be loaded
+
+    Returns:
+        Tuple with:
+            - All data including the training and testing dataset
+            - `PaddedGraphSequence` with the training dataset
+            - Classes of the training dataset
+            - `PaddedGraphSequence` with the testing dataset
+            - Classes of the testing dataset
+    """
+    all_data = None
+    x_test, y_test = None, None
+    x_train_idx, x_test_idx = None, None
+
+    x_train, y_train = _LoadDataset(
+        train_dir, num_classes, train_per, pickle=True)
+
+    if test_dir:
+        x_test, y_test = _LoadDataset(
+            test_dir, num_classes, test_per, pickle=True)
+        all_data = np.append(x_train, x_test)
+        x_train_idx = np.arange(len(x_train))
+        x_test_idx = np.arange(
+            len(x_train_idx), len(x_train_idx) + len(x_test))
     else:
-        X_idx = np.array([i for i in range(len(X_train))])
-        X_train_idx, X_test_idx, y_train, y_test = train_test_split(X_idx, y_train, test_size=testPer/100.0, random_state=GS.RandomSeed)
-        X = X_train.copy()
-        del(X_train)
+        x_train_idx, x_test_idx, y_train, y_test = train_test_split(
+            np.arange(len(x_train)), y_train,
+            test_size=test_per/100.0, random_state=GS.random_seed)
+        all_data = x_train.copy()
 
-    gen = PaddedGraphGenerator(graphs=X)
+    gen = PaddedGraphGenerator(graphs=all_data)
 
-    X_train = gen.flow(list(X_train_idx),
+    x_train = gen.flow(list(x_train_idx),
                        targets=pd.get_dummies(y_train),
                        batch_size=50,
                        symmetric_normalization=False)
-    X_test = gen.flow(list(X_test_idx),
+    x_test = gen.flow(list(x_test_idx),
                       targets=pd.get_dummies(y_test),
                       batch_size=1,
-                      symmetric_normalization=False) 
+                      symmetric_normalization=False)
 
-    return X, X_train, y_train, X_test, y_test
+    return all_data, x_train, y_train, x_test, y_test
 
 
-def loadDataset(numClasses, trainDir, trainPer, testDir =  None, testPer = None, shouldScale = False):
-    """ Load the dataset (training and testing data) and return the X (data) and Y (class) 
-    for each dataset.
+def LoadDataset(
+    num_classes: int, train_dir: str, train_per: float,
+    test_dir: Optional[str] = None, test_per: Optional[float] = None,
+    should_scale: Optional[bool] = False) -> Tuple[npt.NDArray, npt.NDArray,
+                                                   npt.NDArray, npt.NDArray]:
+    """Loads the training and testing dataset.
 
     Args:
-        numClasses (int): Number of dataset classes
-        trainDir (str): Training directory
-        trainPer (float): Percentage of data to use of the training dataset
-        testDir (str, optional):Testing directory. Defaults to None.
-        testPer (float, optional): Percentage of data to use of the testing dataset. Defaults to None.
-        shouldScale (bool, optional): Should scale the data of the datatsets. Defaults to False.
+        num_classes: Number of dataset classes
+        train_dir: Directory of the training dataset
+        train_per: Percentage of data to use of the training dataset
+        test_dir: Directory of the testing dataset. Defaults to None.
+        test_per: Percentage of data to use of the testing dataset. Defaults to
+            None.
+        should_scale: Should scale the data of the datatsets. Defaults to False.
 
     Returns:
-        Tuple: X (data) and Y (classes) of training and testing
+        Tuple with:
+            - Data of the training dataset
+            - Classes of the training dataset
+            - Data of the testing dataset
+            - Classes of the testing dataset
     """
-    X_train, y_train = __loadNPArray(trainDir, numClasses, trainPer)
-    X_test, y_test = None, None
+    x_train, y_train = _LoadDataset(train_dir, num_classes, train_per)
 
-    if testDir:
-        X_test, y_test = __loadNPArray(testDir, numClasses, testPer)
+    x_test, y_test = None, None
+
+    if test_dir:
+        x_test, y_test = _LoadDataset(test_dir, num_classes, test_per)
     else:
-        testPer = testPer if (100 - trainPer) <= 0 else (100 -  trainPer)
-        X_train, X_test, y_train, y_test = train_test_split(
-            X_train, y_train, test_size=testPer/100.0, random_state=GS.RandomSeed
+        test_per = test_per if (100 - train_per) <= 0 else (100 - train_per)
+        x_train, x_test, y_train, y_test = train_test_split(
+            x_train, y_train, test_size=test_per/100.0,
+            random_state=GS.random_seed
         )
 
-    
-    if shouldScale:
-        __scalerDataset(X_train, X_test)
+    if should_scale:
+        _ScalerDataset(x_train, x_test)
 
-    return X_train, y_train, X_test, y_test
+    return x_train, y_train, x_test, y_test
