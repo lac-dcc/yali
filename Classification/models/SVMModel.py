@@ -1,15 +1,20 @@
+"""Creates SVM model."""
+from typing import Optional
 from sklearn.svm import LinearSVC
 
-def buildModel(seed = 0):
-    """ Build a SVM Model. The hyperparameters information can be get at 
+
+def BuildModel(seed: Optional[int] = 0) -> LinearSVC:
+    """Builds a SVM Model.
+
+    The hyperparameters information can be get at
     https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
 
-    Returns:
     Args:
-        seed (int, optional): Seed to the random numbers. Defaults to 1.
+        seed: Seed to the random numbers. Defaults to 0.
 
-        LinearSVC: SVM Model
-    """    
+    Returns:
+        LinearSVC Model
+    """
     model = LinearSVC(
         penalty='l2',
         loss='squared_hinge',
@@ -24,4 +29,5 @@ def buildModel(seed = 0):
         random_state=2**seed,
         max_iter=1000
     )
+
     return model
