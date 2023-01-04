@@ -108,18 +108,17 @@ WORKDIR /home/ml4code
 RUN pip3 install --no-warn-script-location protobuf==3.19.2 
 RUN git clone https://github.com/ComputerSystemsLaboratory/YaCoS.git
 RUN cd YaCoS \
-    && sudo pip3 install numpy \
+    && sudo pip3 install numpy==1.23.5 \
     && ./install_deps.sh \
     && sed -i '/install_requires = \[/a "chardet==5.0.0",' setup.py \
-    && sed -i 's/numpy~=1.19.2/numpy>=1.20/g' setup.py \
+    && sed -i 's/numpy~=1.19.2/numpy==1.23.5/g' setup.py \
     && sed -i 's/gensim==3.4.0/gensim/g' setup.py \
     && sed -i 's/six==1.15.0/six/g' setup.py \
     && pip3 install --no-warn-script-location . \
     && mv examples ~/YaCoS.examples \
     && cd .. \
     && rm -rf YaCoS \
-    && sed -i 's/padding += list(embeddings\[unk_idx\])/padding.append(embeddings\[unk_idx\])/g' ~/YaCoS.examples/representation/extract_inst2vec.py \
-    && pip3 install numpy --upgrade 
+    && sed -i 's/padding += list(embeddings\[unk_idx\])/padding.append(embeddings\[unk_idx\])/g' ~/YaCoS.examples/representation/extract_inst2vec.py
 RUN pip3 install --no-warn-script-location memory-profiler==0.60.0
 RUN pip3 install typing
 RUN sudo apt-get install -y libpcre3-dev
