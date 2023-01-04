@@ -1,4 +1,3 @@
-.old
 .vscode
 .venv
 .git
@@ -9,4 +8,5 @@ Docs/*
 HistogramPass/build/*
 Volume/*
 Statistics
+MalwareDataset/*
 README.md

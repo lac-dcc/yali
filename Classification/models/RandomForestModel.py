@@ -1,16 +1,20 @@
+"""Creates Random Forest model."""
+from typing import Optional
 from sklearn.ensemble import RandomForestClassifier
 
-def buildModel(seed = 0):
-    """ Build a Random Forest Model. The hyperparameters information can be get at 
+
+def BuildModel(seed: Optional[int] = 0):
+    """Builds a Random Forest Model.
+
+    The hyperparameters information can be get at
     https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
 
     Args:
-        seed (int, optional): Seed to the random numbers. Defaults to 1.
+        seed: Seed to the random numbers. Defaults to 0.
 
     Returns:
-        RandomForestClassifier: Random Forest Model
+        Random Forest Model.
     """
-
     model = RandomForestClassifier(
         n_estimators=100,
         criterion='gini',
@@ -31,4 +35,5 @@ def buildModel(seed = 0):
         ccp_alpha=0.0,
         max_samples=None
     )
+
     return model

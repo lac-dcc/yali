@@ -1,14 +1,19 @@
+"""Creates Logistic Regression model."""
+from typing import Optional
 from sklearn.linear_model import LogisticRegression
 
-def buildModel(seed=0):
-    """Build a Logistic Regression Model. The hyperparameters information can be get at 
+
+def BuildModel(seed: Optional[int] = 0) -> LogisticRegression:
+    """Builds a Logistic Regression Model.
+
+    The hyperparameters information can be get at
     https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 
     Args:
-        seed (int, optional): Seed to the random numbers. Defaults to 1.
+        seed: Seed to the random numbers. Defaults to 0.
 
     Returns:
-        LogisticRegression: Logistic Regression model
+        Logistic Regression model
     """
     model = LogisticRegression(
         penalty='l2',
@@ -27,4 +32,5 @@ def buildModel(seed=0):
         n_jobs=None,
         l1_ratio=None
     )
+
     return model

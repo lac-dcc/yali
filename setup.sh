@@ -24,6 +24,7 @@ wget ${YALI}/dataset2.tar.xz -O $(pwd)/Volume/Source/dataset2.tar.xz
 wget ${YALI}/dataset3.tar.xz -O $(pwd)/Volume/Source/dataset3.tar.xz
 wget ${YALI}/dataset4.tar.xz -O $(pwd)/Volume/Source/dataset4.tar.xz
 wget ${YALI}/benchmarkgame.tar.xz -O $(pwd)/Volume/Source/benchmarkgame.tar.xz
+wget ${YALI}/MiraiAndSpec.tar.xz -O $(pwd)/Volume/Irs/MiraiAndSpec.tar.xz
 echo -e "${YC}===> Done. <===${NC}\n"
 
 # Unpacking the datasets
@@ -37,6 +38,7 @@ tar -xf $(pwd)/Volume/Source/dataset2.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/dataset3.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/dataset4.tar.xz -C $(pwd)/Volume/Source/
 tar -xf $(pwd)/Volume/Source/benchmarkgame.tar.xz -C $(pwd)/Volume/Source/
+tar -xf $(pwd)/Volume/Irs/MiraiAndSpec.tar.xz -C $(pwd)/Volume/Irs/
 
 # Removing the .tar.xz
 rm $(pwd)/Volume/Source/OJClone.tar.xz
@@ -48,6 +50,7 @@ rm $(pwd)/Volume/Source/dataset2.tar.xz
 rm $(pwd)/Volume/Source/dataset3.tar.xz
 rm $(pwd)/Volume/Source/dataset4.tar.xz
 rm $(pwd)/Volume/Source/benchmarkgame.tar.xz
+rm $(pwd)/Volume/Irs/MiraiAndSpec.tar.xz
 echo -e "${YC}===> Done. <===${NC}\n"
 
 # Python Env for the statistics

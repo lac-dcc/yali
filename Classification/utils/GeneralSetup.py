@@ -1,23 +1,25 @@
+"""Defines some initial configurations."""
 import warnings
 import os
 
-RandomSeed = 42
+# pylint: disable=invalid-name
+random_seed = 42
 
 
 
-def config():
-    """Define some initial configurations
-    """
+def Config():
+    """Defines some initial configurations."""
     warnings.filterwarnings('ignore')
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
 
-def setRandomSeed(newSeed):
-    """Set the random seed used in all files
+def SetRandomSeed(new_seed: int):
+    """Sets the random seed used in all files.
 
     Args:
-        newSeed (int): Seed
+        new_seed: New seed
     """
-    global RandomSeed
-    RandomSeed = newSeed
+    # pylint: disable=global-statement
+    global random_seed
+    random_seed = new_seed
