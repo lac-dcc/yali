@@ -6,9 +6,10 @@
 
 <p align="center">
   <a href="https://github.com/thais-damasio/yali/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL%203.0%20only-green?style=for-the-badge" alt="License: GPL v3"></a>
+  <a href="https://github.com/PyCQA/pylint"><img src="https://img.shields.io/badge/linting-pylint-yellowgreen?style=for-the-badge" alt="Linting: Pylint"></a>
   <a href="https://github.com/lac-dcc/yali/commits/main">
     <img src="https://img.shields.io/github/last-commit/lac-dcc/yali/main?style=for-the-badge"
-         alt="License: GPL v3">
+         alt="Last update">
   </a>
 </p>
 
