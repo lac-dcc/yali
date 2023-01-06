@@ -8,6 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.metrics import accuracy_score
 from tensorflow.keras import Model as ModelTF
 from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.models import Sequential
 from . import LogisticRegressionModel
 from . import RandomForestModel
 from . import DGCNNModel
@@ -157,7 +158,7 @@ class Model:
         return LSTMModel.BuildModel(
             self.x_train[0].shape, embedding_dim, self.num_classes)
 
-    def _CreateCNNModel(self):
+    def _CreateCNNModel(self) -> Sequential:
         """Creates a CNN model.
 
         This method also updates the dimensions of `x_train` and `x_test`

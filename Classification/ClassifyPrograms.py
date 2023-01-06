@@ -1,16 +1,16 @@
 """Runs a specific model with a specific dataset."""
 from typing import Tuple, Dict
-from utils import GeneralSetup as GS
+from Utils import GeneralSetup as GS
 GS.Config()
 
-# pylint: disable=wrong-import-order disable=wrong-import-position
+# pylint: disable=wrong-import-order disable=wrong-import-position disable=ungrouped-imports
 import time
 import sys
 import numpy.typing as npt
-from models.Model import Model
-from utils import DatasetSetup
-from utils import ResultSetup
-from utils import FlagSetup
+from Models.Model import Model
+from Utils import DatasetSetup
+from Utils import ResultSetup
+from Utils import FlagSetup
 import memory_profiler as MP
 from absl import logging, app
 from tensorflow.keras.callbacks import EarlyStopping
@@ -57,7 +57,9 @@ def _LoadDataset() -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray,
     return data_arr, x_train, y_train, x_test, y_test, total_time
 
 
-def _Predict(iteration: int, model: Model, flags_times: Dict[str, float]):
+def _Predict(
+    iteration: int, model: Model,
+    flags_times: Dict[str, float]) -> Dict[str, float]:
     """Predicts the classes of the test dataset from the `model` argument.
 
     Args:

@@ -3,7 +3,7 @@ from typing import Optional
 from sklearn.ensemble import RandomForestClassifier
 
 
-def BuildModel(seed: Optional[int] = 0):
+def BuildModel(seed: Optional[int] = 0) -> RandomForestClassifier:
     """Builds a Random Forest Model.
 
     The hyperparameters information can be get at
