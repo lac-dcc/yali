@@ -1,3 +1,4 @@
+"""Sets constants to generate charts."""
 VARS={
     "width":5.5,
     "height":5,
