@@ -1,18 +1,17 @@
 """Extracts a specific representation from a programs dataset"""
-from utils import GeneralSetup as GS
+from Utils import GeneralSetup as GS
+from Utils import FlagSetup
 GS.Config()
 
 # pylint: disable=wrong-import-order disable=wrong-import-position
 import os
 import sys
 from absl import app, logging
-import embeddings.ExtractIr2vec as ir2vec
-import embeddings.ExtractMilepost as milepost
-import embeddings.ExtractHistogram as histogram
-import embeddings.ExtractStellarGraph as graph
+import Embeddings.ExtractIr2vec as ir2vec
+import Embeddings.ExtractMilepost as milepost
+import Embeddings.ExtractHistogram as histogram
+import Embeddings.ExtractStellarGraph as graph
 from yacos.info.compy.extractors import LLVMDriver
-from utils import FlagSetup
-
 
 
 FLAGS = None

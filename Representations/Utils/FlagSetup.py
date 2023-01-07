@@ -1,5 +1,5 @@
 """Sets up the flags of the system."""
-from typing import List, Any, Dict
+from typing import Any, Dict
 from absl import flags
 
 
