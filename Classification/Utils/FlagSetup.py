@@ -1,9 +1,10 @@
 """Sets ups the program flags."""
+from typing import Any, Dict
 from absl import flags
 
 
-def _GetFlags():
-    """List of allowed flags 
+def _GetFlags() -> Dict[str, Dict[str, Any]]:
+    """List of allowed flags.
 
     Returns:
         Dict: Dictionary with the flags
@@ -11,7 +12,7 @@ def _GetFlags():
     return {
         "train_dataset_directory": {
             "value": None, "type": "str",
-            "description": "Training dataset directory", 
+            "description": "Training dataset directory",
             "options": [], "required": True
         },
         "test_dataset_directory": {

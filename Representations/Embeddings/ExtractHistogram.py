@@ -18,7 +18,7 @@ def _BuildHistogram(function_infos: Any) -> List[int]:
         List with histogram info
     """
     operands = []
-    operands_path = "~/yali/Representations/utils/HistogramInfo.txt"
+    operands_path = "~/yali/Representations/Utils/HistogramInfo.txt"
     with open(os.path.expanduser(operands_path), "r", encoding="utf-8") as file:
         operands = list(file.read().splitlines())
 

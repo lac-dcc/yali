@@ -18,7 +18,7 @@ def _BuildMilepost(function_infos: Any) -> List[int]:
         List with milepost info
     """
     keys = []
-    milepost_type = "~/yali/Representations/utils/MilepostInfo.txt"
+    milepost_type = "~/yali/Representations/Utils/MilepostInfo.txt"
     with open(os.path.expanduser(milepost_type), "r", encoding="utf-8") as file:
         keys = list(file.read().splitlines())
 

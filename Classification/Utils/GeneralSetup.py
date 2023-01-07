@@ -6,12 +6,10 @@ import os
 random_seed = 42
 
 
-
 def Config():
     """Defines some initial configurations."""
     warnings.filterwarnings('ignore')
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 
 
 def SetRandomSeed(new_seed: int):

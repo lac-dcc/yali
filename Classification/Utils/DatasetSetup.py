@@ -88,9 +88,9 @@ def LoadGraphDataset(
         num_classes: int, train_dir: str,
         train_per: float, test_dir: Optional[str] = None,
         test_per: Optional[float] = None) -> Tuple[npt.NDArray,
-                                                   PaddedGraphSequence, 
-                                                   npt.NDArray, 
-                                                   PaddedGraphSequence, 
+                                                   PaddedGraphSequence,
+                                                   npt.NDArray,
+                                                   PaddedGraphSequence,
                                                    npt.NDArray]:
     """_summary_
 

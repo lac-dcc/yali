@@ -76,7 +76,7 @@ histograms() {
     touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
         echo -e "${YC}===> Converting CSV to Numpy ${setName}...${NC}"
-        python3 ~/yali/Extraction/utils/ConvertCSVToNP.py \
+        python3 ~/yali/Extraction/Utils/ConvertCSVToNP.py \
             --histogramCSV ${csvFile} \
             --outputDir ${outputDir}/
         echo -e "1" > ${outputDir}/Finished
