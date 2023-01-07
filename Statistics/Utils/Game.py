@@ -58,25 +58,25 @@ def GetAveragesByStrategies(
     figsize = (8, Constants.VARS["height"])
     fig, axis = plt.subplots(1, 1, figsize=figsize)
 
-    data = None
+    data_df = None
     for strategy in strategies:
         data = DatasetSetup.GetMetric(
-            strategy, models=models, metric_type=metric_type,
-            num_classes=104, rounds=10)
+            strategy, models=models, metric_type=metric_type, num_classes=104,
+            rounds=10)
         data = data.mean()
-        if data is None:
-            data = pd.DataFrame(data, columns=[strategy])
+        if data_df is None:
+            data_df = pd.DataFrame(data, columns=[strategy])
         else:
-            data = data.join(data.to_frame(strategy))
+            data_df = data_df.join(data.to_frame(strategy))
 
     i = 0
-    for key, row in data.iterrows():
+    for key, row in data_df.iterrows():
         ChartGen.ScatterChart(
             key, title, row, markers[i], y_caption, fig,
             axis, x_labels, [0, 1], save)
         i += 1
 
-    return fig, data
+    return fig, data_df
 
 
 def MakeSingleChart(
