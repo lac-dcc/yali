@@ -4,9 +4,9 @@
 # Environment and Results
 .env
 .venv
-Statistics/pdfs
-Statistics/utils/__pycache__
-Statistics/utils/games/__pycache__
+Statistics/Pdfs
+Statistics/Utils/__pycache__
+Statistics/Utils/games/__pycache__
 
 # IDE
 .vscode
