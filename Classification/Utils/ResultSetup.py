@@ -1,6 +1,6 @@
 """Methods to save the results."""
 import os
-from typing import Dict, Any
+from typing import Dict, Any, List
 import numpy.typing as npt
 import numpy as np
 import yaml as yl
@@ -58,3 +58,16 @@ def StoreResults(
     file_path = f"{result_dir}/elapsed_time_{iteration}.yaml"
     with open(file_path, "w", encoding="utf-8") as file:
         yl.dump(flags_times, file)
+
+
+def SaveOpcodesFilter(result_dir: str, filter_opcodes: List[int]):
+    """Creates a CSV file with the used opcode filter.
+
+    Args:
+        result_dir: Path to save the results
+        filter_opcodes: List with the opcodes that were used
+    """
+    file_path = f"{result_dir}/opcodes.csv"
+
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write(",".join(map(str, filter_opcodes)))

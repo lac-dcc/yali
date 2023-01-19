@@ -11,8 +11,9 @@ TRAINDATASET=$4
 OPTLEVELTRAIN=$5
 NUMCLASSES=$6
 REPRESENTATION=$7
-TESTDATASET=$8
-OPTLEVELTEST=$9
+FILTER_HISTOGRAM=$8
+TESTDATASET=$9
+OPTLEVELTEST=${10}
 
 # Set Parameters 
 checkParameters() {
@@ -125,8 +126,15 @@ classification() {
     if [ ${REPRESENTATION} == "histogram" ]; then
         local trainDir=~/yali/Dataset/Histograms/${trainName}${optTypeTrain}/
         local testDir=~/yali/Dataset/Histograms/${testName}${optTypeTest}/
-        local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
-        local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
+
+        if [[ ! -z "${FILTER_HISTOGRAM}" ]]; then
+            echo -e "${YC}Opcodes filter will be applied!${NC}"
+            local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}/custom
+            local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}/custom
+        else
+            local resultsOnlyTrain=~/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}
+            local resultsWithTest=~/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}
+        fi
     else
         local trainDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${trainName}${optTypeTrain}
         local testDir=~/yali/Dataset/Embeddings/${REPRESENTATION}/${testName}${optTypeTest}
@@ -143,7 +151,8 @@ classification() {
             --classes ${NUMCLASSES} \
             --results_directory ${resultsOnlyTrain} \
             --model ${MODEL} \
-            --representation ${REPRESENTATION}
+            --representation ${REPRESENTATION} \
+            --filter_histogram "${FILTER_HISTOGRAM}"
     else
         echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${optTypeTrain} -- ${REPRESENTATION}) --- testing phase (${testName}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/ClassifyPrograms.py \
@@ -155,7 +164,8 @@ classification() {
             --test_dataset_directory ${testDir} \
             --results_directory ${resultsWithTest} \
             --model ${MODEL} \
-            --representation ${REPRESENTATION}
+            --representation ${REPRESENTATION} \
+            --filter_histogram "${FILTER_HISTOGRAM}"
     fi
     echo -e "${YC}===> Classification finished <===${NC}"
 }

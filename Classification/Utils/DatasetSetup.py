@@ -3,7 +3,7 @@ import pickle as pk
 import glob as gl
 import random
 import os
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List
 import numpy.typing as npt
 import numpy as np
 import pandas as pd
@@ -27,8 +27,29 @@ def _ScalerDataset(x_train: npt.NDArray, x_test: npt.NDArray):
     x_test = scaler.transform(x_test)
 
 
+def _FilterOpcodes(x_data: List[int],
+                   filter_opcodes: Optional[List[int]] = None) -> List[int]:
+    """Gets only the opcodes in `x_data` specified in `filter_opcodes`.
+
+    If `filter_opcodes` is *None* or empty, the `x_data` itself will be
+    returned.
+
+    Args:
+        x_data: List with a histogram representation
+        filter_opcodes: Indexes of the opcodes that will be considered
+
+    Returns:
+        The histogram only with the features specified in `filter_opcodes`
+    """
+    if filter_opcodes is not None and len(filter_opcodes) > 0:
+        return [x_data[idx] for idx in filter_opcodes]
+
+    return x_data
+
+
 def _LoadDataset(
         dataset_dir: str, num_classes: int, percentage: float,
+        filter_opcodes: Optional[List[int]] = None,
         pickle: Optional[bool] = False) -> Tuple[npt.NDArray, npt.NDArray]:
     """Loads the files which stores the dataset.
 
@@ -38,6 +59,8 @@ def _LoadDataset(
         dataset_dir: Dataset directory
         num_classes: Number of dataset classes
         percentage: Percentage of the data that will be loaded
+        filter_opcodes: Indexes of the opcodes that will be considered. If
+            *None* or empty, all opcodes will be considered
         pickle: Whether the data is saved using pickle
 
     Returns:
@@ -68,7 +91,7 @@ def _LoadDataset(
                 else:
                     x_val = np.load(sample)['values']
 
-                data.append(x_val)
+                data.append(_FilterOpcodes(x_val, filter_opcodes))
                 classes.append(label - 1)
                 counter += 1
             # pylint: disable=broad-except
@@ -87,11 +110,10 @@ def _LoadDataset(
 def LoadGraphDataset(
         num_classes: int, train_dir: str,
         train_per: float, test_dir: Optional[str] = None,
-        test_per: Optional[float] = None) -> Tuple[npt.NDArray,
-                                                   PaddedGraphSequence,
-                                                   npt.NDArray,
-                                                   PaddedGraphSequence,
-                                                   npt.NDArray]:
+        test_per: Optional[float] = None,
+        filter_opcodes: Optional[List[int]] = None
+) -> Tuple[npt.NDArray, PaddedGraphSequence, npt.NDArray,
+           PaddedGraphSequence, npt.NDArray]:
     """_summary_
 
     Args:
@@ -100,6 +122,8 @@ def LoadGraphDataset(
         train_per: Percentage of the training dataset that will be loaded
         test_dir: Directory of the testing dataset
         test_per: Percentage of the testing dataset that will be loaded
+        filter_opcodes: Indexes of the opcodes that will be considered. If
+            *None* or empty, all opcodes will be considered
 
     Returns:
         Tuple with:
@@ -114,11 +138,11 @@ def LoadGraphDataset(
     x_train_idx, x_test_idx = None, None
 
     x_train, y_train = _LoadDataset(
-        train_dir, num_classes, train_per, pickle=True)
+        train_dir, num_classes, train_per, filter_opcodes, pickle=True)
 
     if test_dir:
         x_test, y_test = _LoadDataset(
-            test_dir, num_classes, test_per, pickle=True)
+            test_dir, num_classes, test_per, filter_opcodes, pickle=True)
         all_data = np.append(x_train, x_test)
         x_train_idx = np.arange(len(x_train))
         x_test_idx = np.arange(
@@ -146,8 +170,9 @@ def LoadGraphDataset(
 def LoadDataset(
     num_classes: int, train_dir: str, train_per: float,
     test_dir: Optional[str] = None, test_per: Optional[float] = None,
-    should_scale: Optional[bool] = False) -> Tuple[npt.NDArray, npt.NDArray,
-                                                   npt.NDArray, npt.NDArray]:
+    should_scale: Optional[bool] = False,
+    filter_opcodes: Optional[List[int]] = None
+) -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray, npt.NDArray]:
     """Loads the training and testing dataset.
 
     Args:
@@ -157,7 +182,9 @@ def LoadDataset(
         test_dir: Directory of the testing dataset. Defaults to None.
         test_per: Percentage of data to use of the testing dataset. Defaults to
             None.
-        should_scale: Should scale the data of the datatsets. Defaults to False.
+        should_scale: Should scale the data of the datatsets. Defaults to False
+        filter_opcodes: Indexes of the opcodes that will be considered. If
+            *None* or empty, all opcodes will be considered
 
     Returns:
         Tuple with:
@@ -166,12 +193,14 @@ def LoadDataset(
             - Data of the testing dataset
             - Classes of the testing dataset
     """
-    x_train, y_train = _LoadDataset(train_dir, num_classes, train_per)
+    x_train, y_train = _LoadDataset(
+        train_dir, num_classes, train_per, filter_opcodes)
 
     x_test, y_test = None, None
 
     if test_dir:
-        x_test, y_test = _LoadDataset(test_dir, num_classes, test_per)
+        x_test, y_test = _LoadDataset(
+            test_dir, num_classes, test_per, filter_opcodes)
     else:
         test_per = test_per if (100 - train_per) <= 0 else (100 - train_per)
         x_train, x_test, y_train, y_test = train_test_split(
