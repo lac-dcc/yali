@@ -164,6 +164,11 @@ You can now set environment variables in the `.env` file at the project's root. 
                 </ul>
             </td>
         </tr>
+        <tr>
+            <td>FILTER_HISTOGRAM</td>
+            <td>String with a comma separated list of opcodes to consider. Only available if <b>REPRESENTATION=histogram.</b></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
