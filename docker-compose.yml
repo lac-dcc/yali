@@ -3,7 +3,7 @@ version: "3"
 services:
   yali:
     container_name: yali
-    entrypoint: "/start.sh ${ROUNDS} ${VOLUME} ${MEMORYPROF} ${MODEL} ${TRAINDATASET} ${OPTLEVELTRAIN} ${NUMCLASSES} ${REPRESENTATION} ${TESTDATASET} ${OPTLEVELTEST}"
+    entrypoint: "/start.sh ${ROUNDS} ${VOLUME} ${MEMORYPROF} ${MODEL} ${TRAINDATASET} ${OPTLEVELTRAIN} ${NUMCLASSES} ${REPRESENTATION} ${FILTER_HISTOGRAM} ${TESTDATASET} ${OPTLEVELTEST}"
     logging:
       driver: local
     build:

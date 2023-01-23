@@ -35,6 +35,12 @@ def _GetFlags() -> Dict[str, Dict[str, Any]]:
             "description": "Nof classes",
             "options": [], "required": False
         },
+        "filter_histogram": {
+            "value": "", "type": "str",
+            "description":
+            "Comma-separated list of opcodes to consider in a histogram",
+            "options": [], "required": False
+        },
         "results_directory": {
             "value": None, "type": "str",
             "description": "Results directory",

@@ -1,19 +1,20 @@
 """Runs a specific model with a specific dataset."""
-from typing import Tuple, Dict
 from Utils import GeneralSetup as GS
 GS.Config()
 
 # pylint: disable=wrong-import-order disable=wrong-import-position disable=ungrouped-imports
-import time
 import sys
-import numpy.typing as npt
-from Models.Model import Model
-from Utils import DatasetSetup
-from Utils import ResultSetup
-from Utils import FlagSetup
-import memory_profiler as MP
-from absl import logging, app
+import time
+from typing import Tuple, Dict
 from tensorflow.keras.callbacks import EarlyStopping
+from absl import logging, app
+import memory_profiler as MP
+from Utils import FlagSetup
+from Utils import ResultSetup
+from Utils import DatasetSetup
+from Models.Model import Model
+import numpy.typing as npt
+
 
 FLAGS = None
 
@@ -42,11 +43,13 @@ def _LoadDataset() -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray,
     if FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
         x_train, y_train, x_test, y_test = DatasetSetup.LoadDataset(
             FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p,
-            FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler)
+            FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler,
+            filter_opcodes=FLAGS.filter_histogram)
     else:
         output = DatasetSetup.LoadGraphDataset(
-            FLAGS.classes, FLAGS.train_dataset_directory,
-            FLAGS.train_p, FLAGS.test_dataset_directory, FLAGS.test_p)
+            FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p,
+            FLAGS.test_dataset_directory, FLAGS.test_p,
+            filter_opcodes=FLAGS.filter_histogram)
         data_arr, x_train, y_train, x_test, y_test = output
 
     if not FLAGS.memory_prof:
@@ -58,8 +61,8 @@ def _LoadDataset() -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray,
 
 
 def _Predict(
-    iteration: int, model: Model,
-    flags_times: Dict[str, float]) -> Dict[str, float]:
+        iteration: int, model: Model,
+        flags_times: Dict[str, float]) -> Dict[str, float]:
     """Predicts the classes of the test dataset from the `model` argument.
 
     Args:
@@ -130,12 +133,23 @@ def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
             iteration, FLAGS.results_directory, mem_info)
 
 
+def _SetListOfOpcodes():
+    """Sets the flag `filter_histogram` to the array format.
+    """
+    if FLAGS.filter_histogram != "" and FLAGS.representation == "histogram":
+        values = FLAGS.filter_histogram.split(",")
+        FLAGS.filter_histogram = [ int(idx) for idx in values ]
+    else:
+        FLAGS.filter_histogram = None
+
+
 def Execute(argv):
     """Gets information about the training and testing phase.
 
     These phases depending on the user's argument.
     """
     del argv
+    _SetListOfOpcodes()
 
     flags_times = {}
 
@@ -179,6 +193,10 @@ def Execute(argv):
             data_arr)
 
         _RunRound(iteration, model, flags_times)
+
+        if FLAGS.filter_histogram is not None:
+            ResultSetup.SaveOpcodesFilter(
+                FLAGS.results_directory, FLAGS.filter_histogram)
 
 
 # Execute
