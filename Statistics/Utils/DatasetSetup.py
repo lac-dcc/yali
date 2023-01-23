@@ -1,4 +1,5 @@
 """Loads the data."""
+from pathlib import Path
 from typing import Optional, List
 import re
 import os
@@ -7,8 +8,10 @@ import pandas as pd
 import numpy as np
 import yaml
 
-RESULTS = "../Volume/Results"
-CSVS = "../Volume/Csv"
+PROJPATH=Path(
+    Path(Path(__file__).parent.absolute()).parent.absolute()).parent.absolute()
+RESULTS = f"{PROJPATH}/Volume/Results"
+CSVS = f"{PROJPATH}/Volume/Csv"
 
 
 def _LoadF1(folder: str, rounds: Optional[int] = 10) -> List[float]:
@@ -108,7 +111,8 @@ def _LoadMemConsumption(folder: str, rounds: Optional[int] = 10) -> List[float]:
 def GetMetric(
         type_dataset: str, models: List[str],
         metric_type: str, num_classes: Optional[int] = 104,
-        rounds: Optional[int] = 10) -> pd.DataFrame:
+        rounds: Optional[int] = 10,
+        custom: Optional[bool] = False) -> pd.DataFrame:
     """Gets the metric of all models.
 
     Args:
@@ -116,16 +120,19 @@ def GetMetric(
         models: List with the model names
         metric_type: 'acc' to accuracy, 'f1' to f1-score, "mem" to memory and
             "time" to time
-        num_classes: Number of classes of the dataset. Defaults to 104.
-        rounds: Number of metric logs to get. Defaults to 10.
+        num_classes: Number of classes of the dataset. Defaults to 104
+        rounds: Number of metric logs to get. Defaults to 10
+        custom: Whether the metrics will be obtained from an experiment that
+            modified the features of the histogram
 
     Returns:
         DataFrame with the metrics
     """
     metric_values = {}
+    end_of_path = f"{num_classes}/custom" if custom else num_classes
 
     for model in models:
-        folder = f"{RESULTS}/{type_dataset}/{model}/{num_classes}"
+        folder = f"{RESULTS}/{type_dataset}/{model}/{end_of_path}"
         if os.path.exists(folder):
             if metric_type == "acc":
                 metric_values[model] = _LoadAcc(folder, rounds)

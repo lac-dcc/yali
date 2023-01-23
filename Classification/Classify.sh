@@ -115,6 +115,34 @@ compiling() {
     fi
 }
 
+# Copy custom results to another folder, this avoids overwritten
+copyCustomResults() {
+    local trainName=$1
+    local optTypeTrain=$2
+    local testName=$3
+    local optTypeTest=$4
+
+    if [ ${REPRESENTATION} == "histogram" ] && [[ ! -z "${FILTER_HISTOGRAM}" ]]; then
+        local n=0
+
+        if [ -z ${testName} ]; then
+            local resultsOnlyTrain=$HOME/yali/Dataset/Results/${trainName}${optTypeTrain}/${MODEL}/${NUMCLASSES}/custom
+            while [ -d "$resultsOnlyTrain$n" ]; do
+                (( n = n + 1 ));
+            done
+
+            cp -R $resultsOnlyTrain $resultsOnlyTrain$n
+        else
+            local resultsWithTest=$HOME/yali/Dataset/Results/${trainName}${optTypeTrain}_${testName}${optTypeTest}/${MODEL}/${NUMCLASSES}/custom
+            while [ -d "$resultsWithTest$n" ]; do
+                (( n = n + 1 ));
+            done
+
+            cp -R $resultsWithTest $resultsWithTest$n
+        fi
+    fi
+}
+
 # Classification process
 classification() {
     local rounds=$1
@@ -167,6 +195,8 @@ classification() {
             --representation ${REPRESENTATION} \
             --filter_histogram "${FILTER_HISTOGRAM}"
     fi
+
+    copyCustomResults ${trainName} ${optTypeTrain} ${testName} ${optTypeTest}
     echo -e "${YC}===> Classification finished <===${NC}"
 }
 
