@@ -190,6 +190,7 @@ Now, you can run the following command line:
 $ ./run.sh MODE
 ```
 There are the following values for `MODE`:
+* **custom**: Run the project based on the variables set on `.env` file
 * **all**: Run all games, the resources analysis and embedding analysis
 * **speedup**: Run the speedup analysis with the benchmark game
 * **embeddings**: Run the embedding analysis
@@ -234,6 +235,8 @@ The repository has the following organization:
 |-- MalwareDataset: "Malware dataset to support experiments in the project"
 |-- Representations: "Scripts to extract different program representations"
 |-- Statistics: "Jupyter notebooks"
+    |-- Experiments: "Extra experiments using the yali infrastructure (each one of them has its own ReadME)"
+    |-- Utils: "Python scripts to support the `Experiments` folder and the Jupyter Notebooks"
 |-- Volume: "Volume of the container"
     |-- Csv: "CSVs with the histograms"
     |-- Embeddings: "Different representations of programs in the Source folder"
