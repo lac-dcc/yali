@@ -87,7 +87,7 @@ def _Predict(
 
 
 def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
-    """_summary_
+    """Runs a training and testing round of a specific model.
 
     Args:
         iteration:  Number of the current round of training and testing phase
