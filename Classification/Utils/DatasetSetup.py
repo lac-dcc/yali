@@ -114,7 +114,7 @@ def LoadGraphDataset(
         filter_opcodes: Optional[List[int]] = None
 ) -> Tuple[npt.NDArray, PaddedGraphSequence, npt.NDArray,
            PaddedGraphSequence, npt.NDArray]:
-    """_summary_
+    """Loads the training and testing graph dataset.
 
     Args:
         num_classes: Number of dataset classes
