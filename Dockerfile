@@ -105,16 +105,19 @@ USER ml4code
 WORKDIR /home/ml4code
 
 ################################################# YaCos #################################################
-RUN pip3 install --no-warn-script-location protobuf==3.19.2 
+RUN pip3 install --no-warn-script-location protobuf==3.19.4
 RUN git clone https://github.com/ComputerSystemsLaboratory/YaCoS.git
+RUN sudo pip3 install numpy==1.23.5
 RUN cd YaCoS \
-    && sudo pip3 install numpy==1.23.5 \
-    && ./install_deps.sh \
+    && ./install_deps.sh
+RUN cd YaCoS \
     && sed -i '/install_requires = \[/a "chardet==5.0.0",' setup.py \
     && sed -i 's/numpy~=1.19.2/numpy==1.23.5/g' setup.py \
     && sed -i 's/gensim==3.4.0/gensim/g' setup.py \
     && sed -i 's/six==1.15.0/six/g' setup.py \
-    && pip3 install --no-warn-script-location . \
+    && sed -i 's/pygmo/pygmo==2.16.1/g' setup.py \
+    && pip3 install --no-warn-script-location .
+RUN cd YaCoS \
     && mv examples ~/YaCoS.examples \
     && cd .. \
     && rm -rf YaCoS \
