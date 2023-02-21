@@ -121,7 +121,7 @@ def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
         print('\nStoring the results ...')
         ResultSetup.StoreResults(
             FLAGS.model, FLAGS.results_directory, iteration,
-            model.model, conf_matrix, report, acc, model.y_pred,
+            model.history, conf_matrix, report, acc, model.y_pred,
             model.y_test, flags_times
         )
     else:

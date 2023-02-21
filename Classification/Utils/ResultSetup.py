@@ -40,8 +40,7 @@ def StoreResults(
     """
     os.makedirs(result_dir, exist_ok=True)
 
-    if not model_name in ['lr', 'mlp', 'svm', 'rf', 'knn']:
-        np.savez_compressed(
+    np.savez_compressed(
             f"{result_dir}/history_{iteration}", values=history)
 
     # Store the statistics
@@ -58,6 +57,8 @@ def StoreResults(
     file_path = f"{result_dir}/elapsed_time_{iteration}.yaml"
     with open(file_path, "w", encoding="utf-8") as file:
         yl.dump(flags_times, file)
+
+    print(f"Stored results for {model_name}.")
 
 
 def SaveOpcodesFilter(result_dir: str, filter_opcodes: List[int]):
