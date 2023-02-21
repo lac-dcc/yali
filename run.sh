@@ -189,14 +189,17 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
         exit 1
     fi
 
 
     case "${MODE}" in
+        "build")
+                DOCKER_BUILDKIT=1 docker-compose build
+                ;;
         "custom")
-                DOCKER_BUILDKIT=1 docker-compose up
+                DOCKER_BUILDKIT=1 docker-compose up --quiet-pull
                 ;;
         "all")
                 classAnalysis
@@ -239,7 +242,7 @@ run() {
                 discover
                 ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
                 exit 1
                 ;;
     esac

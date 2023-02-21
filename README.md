@@ -190,17 +190,18 @@ Now, you can run the following command line:
 $ ./run.sh MODE
 ```
 There are the following values for `MODE`:
-* **custom**: Run the project based on the variables set on `.env` file
-* **all**: Run all games, the resources analysis and embedding analysis
-* **speedup**: Run the speedup analysis with the benchmark game
-* **embeddings**: Run the embedding analysis
-* **resources**: Run only the resources analysis
-* **malware**: Run the experiment to detect classes of malware
-* **game0** Run the [Game 0]() (*We will put the link later*)
-* **game1**: Run the [Game 1]() (*We will put the link later*)
-* **game2**: Run the [Game 2]() (*We will put the link later*)
-* **game3**: Run the [Game 3]() (*We will put the link later*)
-* **discover**: Run the [Discover Game]() (*We will put the link later*)
+* **build**: Builds the docker container based on the modifications in the yali project
+* **custom**: Runs the project based on the variables set on `.env` file
+* **all**: Runs all games, the resources analysis and embedding analysis
+* **speedup**: Runs the speedup analysis with the benchmark game
+* **embeddings**: Runs the embedding analysis
+* **resources**: Runs only the resources analysis
+* **malware**: Runs the experiment to detect classes of malware
+* **game0** Runs the [Game 0]() (*We will put the link later*)
+* **game1**: Runs the [Game 1]() (*We will put the link later*)
+* **game2**: Runs the [Game 2]() (*We will put the link later*)
+* **game3**: Runs the [Game 3]() (*We will put the link later*)
+* **discover**: Runs the [Discover Game]() (*We will put the link later*)
 
 > This will run the docker container with the configurations in the `.env` file.
 
