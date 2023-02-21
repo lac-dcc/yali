@@ -1,6 +1,7 @@
 # Environment and Results
 .env
 .venv
+HistogramPass/build
 Statistics/Pdfs
 Statistics/Utils/__pycache__
 Statistics/__pycache__
