@@ -139,5 +139,8 @@ COPY --chown=ml4code:sudo Classification /home/ml4code/yali/Classification
 ############################################ Representations #############################################
 COPY --chown=ml4code:sudo Representations /home/ml4code/yali/Representations
 
+############################################ Representations #############################################
+COPY --chown=ml4code:sudo HistogramPass/opcodes.csv /home/ml4code/yali/HistogramPass/opcodes.csv
+
 ############################################ Entrypoint #############################################
 COPY --chmod=755 ./Entrypoint/start.sh /
