@@ -1,4 +1,4 @@
-"""Converts CSVs Histograms (with 64 opcodes) files to numpy."""
+"""Converts CSVs Histograms (the whole histogram) files to numpy."""
 import os
 import argparse
 import pandas as pd
@@ -22,7 +22,6 @@ def Convert(csv_file: str, out_dir: str):
     """
     if os.path.isdir(out_dir):
         data = pd.read_csv(csv_file, skipinitialspace=True)
-        data = data[data.columns.difference([i for i in range(65, 70)])]
 
         for _, row in data.iterrows():
             # Removes ".ll" and "./" at the beginning of the string
@@ -32,7 +31,8 @@ def Convert(csv_file: str, out_dir: str):
             dir_name = out_dir + class_name
             os.makedirs(dir_name, exist_ok=True)
             np.savez_compressed(file_name, values=row.drop(
-                labels = ["id", "class"]).to_list())
+                labels = ["id", "class"]
+            ).to_list())
 
 
 if __name__ == "__main__":
