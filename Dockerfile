@@ -76,12 +76,6 @@ RUN apt-get update -y \
     libgraphviz-dev \
     lsb-release
 
-############################################ Histogram Pass #############################################
-
-COPY ./HistogramPass/ /HistogramPass
-RUN mkdir -p /HistogramPass/build && cd /HistogramPass/build && cmake .. -D LLVM_INSTALL_DIR=/usr
-RUN cd /HistogramPass/build && make
-
 ################################################ IR2Vec #################################################
 RUN git clone https://github.com/IITH-Compilers/IR2Vec.git
 RUN cd IR2Vec \
@@ -125,6 +119,13 @@ RUN cd YaCoS \
 RUN pip3 install --no-warn-script-location memory-profiler==0.60.0
 RUN pip3 install typing
 RUN sudo apt-get install -y libpcre3-dev
+
+############################################ Histogram Pass #############################################
+
+COPY ./HistogramPass/ /HistogramPass
+RUN mkdir -p /HistogramPass/build
+RUN cd /HistogramPass/build && sudo cmake .. -D LLVM_INSTALL_DIR=/usr
+RUN cd /HistogramPass/build && sudo make
 
 ######################################### Compilation Scripts ###########################################
 COPY --chown=ml4code:sudo Compilation /home/ml4code/yali/Compilation
