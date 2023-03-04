@@ -22,7 +22,7 @@ def Convert(csv_file: str, out_dir: str):
     """
     if os.path.isdir(out_dir):
         data = pd.read_csv(csv_file, skipinitialspace=True)
-        data = data[data.columns.difference([str(i) for i in range(65, 70)])]
+        data = data[list(["id", "class"] + [str(i) for i in range(0, 65)])]
 
         for _, row in data.iterrows():
             # Removes ".ll" and "./" at the beginning of the string
