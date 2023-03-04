@@ -97,9 +97,9 @@ histograms_ext() {
     # Histogram CSV
     touch ${csvFinished}
     if [ -z "$(cat ${csvFinished})" ]; then
-        echo -e "${YC}===> Creating histograms ${setName}...${NC}"
+        echo -e "${YC}===> Creating extended histograms ${setName}...${NC}"
         make -C ${irFolder}
-        echo -e "${YC}===> Histograms finished ${setName} <===${NC}"
+        echo -e "${YC}===> Extended Histograms finished ${setName} <===${NC}"
         echo -e "1" > ${csvFinished}
     fi
 
@@ -107,7 +107,7 @@ histograms_ext() {
     mkdir -p ${outputDir}
     touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
-        echo -e "${YC}===> Converting CSV to Numpy ${setName}...${NC}"
+        echo -e "${YC}===> Converting CSV (extended) to Numpy ${setName}...${NC}"
         python3 ~/yali/Extraction/Utils/ConvertCSVToNPExt.py \
             --histogramCSV ${csvFile} \
             --outputDir ${outputDir}/
