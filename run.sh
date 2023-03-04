@@ -115,6 +115,17 @@ malwareAnalysis() {
     echo -e "${YC} ==========> End of Malware Analysis <==========${NC}"
 }
 
+# Extended Histogram Analysis
+extendedHistogramAnalysis() {
+    setDefaultVar
+    echo -e "\n${YC} ==========> 🆕 Extended Histogram Analysis ...${NC}"
+    sed -i "s/REPRESENTATION=.*/REPRESENTATION=histogram_ext/g" $(pwd)/.env
+    for m in "${!MODELS[@]}"; do 
+        playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+    done
+    echo -e "${YC} ==========> End of Extended Histogram Analysis <==========${NC}"
+}
+
 
 ##################################################################################################
 
@@ -189,7 +200,7 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
         exit 1
     fi
 
@@ -212,6 +223,7 @@ run() {
                 game3
                 discover
                 malwareAnalysis
+                extendedHistogramAnalysis
                 ;;
         "malware")
                 malwareAnalysis
@@ -241,8 +253,11 @@ run() {
         "discover")
                 discover
                 ;;
+        "histogram_ext")
+                extendedHistogramAnalysis
+                ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3' or 'discover'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
                 exit 1
                 ;;
     esac

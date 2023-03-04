@@ -192,7 +192,7 @@ $ ./run.sh MODE
 There are the following values for `MODE`:
 * **build**: Builds the docker container based on the modifications in the yali project
 * **custom**: Runs the project based on the variables set on `.env` file
-* **all**: Runs all games, the resources analysis and embedding analysis
+* **all**: Runs all experiments available in `MODE`
 * **speedup**: Runs the speedup analysis with the benchmark game
 * **embeddings**: Runs the embedding analysis
 * **resources**: Runs only the resources analysis
@@ -202,6 +202,7 @@ There are the following values for `MODE`:
 * **game2**: Runs the [Game 2]() (*We will put the link later*)
 * **game3**: Runs the [Game 3]() (*We will put the link later*)
 * **discover**: Runs the [Discover Game]() (*We will put the link later*)
+* **histogram_ext**: Runs an models accuracy analysis with an extended histogram
 
 > This will run the docker container with the configurations in the `.env` file.
 
