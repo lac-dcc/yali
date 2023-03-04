@@ -3,7 +3,7 @@ OPCODES=$1
 MODEL=$2
 TRAINDATASET=$3
 OPTTRAIN=$4
-ROOTPATH=$(pwd)/../../..
+ROOTPATH=$(dirname "$0")/../../..
 
 setDefaultVar() {
     sed -i "s/ROUNDS=.*/ROUNDS=10/g" $ROOTPATH/.env

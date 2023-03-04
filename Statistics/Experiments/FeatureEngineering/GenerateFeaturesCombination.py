@@ -4,6 +4,7 @@ from typing import List, Optional, Tuple
 from pathlib import Path
 import subprocess
 import sys
+import os
 
 PATH_TO_PARENT = str(Path(Path(
     Path(Path(__file__).parent.absolute()).parent.absolute()
@@ -43,18 +44,20 @@ def _GetAccuracy(features: List[int], model_name: str) -> float:
     Returns:
         The accuracy obtained
     """
+    main_folder = f"{PATH_TO_PARENT}/Statistics/Experiments/FeatureEngineering"
     dataset_name = "OJClone"
     optlevel = "O0"
     features_str = ",".join(map(str, features))
+
     command = [
-        "./FeatureEngineering.sh",
+        f"{main_folder}/FeatureEngineering.sh",
         f"\"{features_str}\"",
         model_name,
         dataset_name,
         optlevel
     ]
 
-    subprocess.run(command, check=True)
+    subprocess.run(command, check=True, stdout=open(os.devnull, 'wb'))
     data = DatasetSetup.GetMetric(
         f"{dataset_name}{optlevel}", [model_name], "acc", rounds=1, custom=True)
 
@@ -81,14 +84,17 @@ def _AnalyzeFeature(
             - New list of features
             - `i = i` if `features[i]` was removed, otherwise, `i = i`
     """
-    print(f"Analyzing features[{i}] = {features[i]}")
+    print(f"\n--> Analyzing features[{i}] = {features[i]}...")
 
     features_without_i = _RemoveFeature(features, i)
     acc = _GetAccuracy(features_without_i, model_name)
 
+    print(f"Acc: {acc} and Baseline: {threshold}.")
     if acc >= threshold:
+        print(f"Remove features[{i}] = {features[i]}.")
         features = features_without_i
     else:
+        print(f"Keep features[{i}] = {features[i]}.")
         i += 1
 
     return features, i
@@ -156,6 +162,7 @@ def GetBestCombinationLinearly(
         features = features.sum()[features.sum() > 0].index
 
     for model_name in GameInfo.MODELS:
+        print(f"----> Model {model_name}")
         baseline = DatasetSetup.GetMetric(
             "OJCloneO0", [model_name], "acc", rounds=10)
         threshold = baseline[model_name].mean()
