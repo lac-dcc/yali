@@ -207,10 +207,10 @@ run() {
 
     case "${MODE}" in
         "build")
-                DOCKER_BUILDKIT=1 docker-compose build
+                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
                 ;;
         "custom")
-                DOCKER_BUILDKIT=1 docker-compose up --quiet-pull
+                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up --quiet-pull
                 ;;
         "all")
                 classAnalysis
