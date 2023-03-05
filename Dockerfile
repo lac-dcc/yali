@@ -123,7 +123,7 @@ RUN sudo apt-get install -y libpcre3-dev
 ############################################ Histogram Pass #############################################
 
 COPY ./HistogramPass/ /HistogramPass
-RUN mkdir -p /HistogramPass/build
+RUN sudo mkdir -p /HistogramPass/build
 RUN cd /HistogramPass/build && sudo cmake .. -D LLVM_INSTALL_DIR=/usr
 RUN cd /HistogramPass/build && sudo make
 
