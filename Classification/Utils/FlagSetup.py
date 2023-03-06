@@ -101,7 +101,7 @@ def _GetFlags() -> Dict[str, Dict[str, Any]]:
             "value": "histogram", "type": "enum",
             "description": "The program representation",
             "options": [
-                'histogram', 'ir2vec', 'milepost', 'cfg', 'cfg_compact', 'cdfg',
+                'histogram', 'histogram_ext', 'ir2vec', 'milepost', 'cfg', 'cfg_compact', 'cdfg',
                 'cdfg_compact', 'cdfg_plus', 'programl'],
             "required": False
         },

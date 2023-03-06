@@ -64,3 +64,8 @@ code, name
 62, insertelement
 63, shufflevector
 64, extractvalue
+loop_depth_1, loop_depth_1
+loop_depth_2, loop_depth_2
+loop_depth_3, loop_depth_3
+loop_depth_n, loop_depth_n
+num_bbs, num_bbs

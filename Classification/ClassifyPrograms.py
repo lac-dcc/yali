@@ -40,7 +40,8 @@ def _LoadDataset() -> Tuple[npt.NDArray, npt.NDArray, npt.NDArray,
     if not FLAGS.memory_prof:
         start = time.time()
 
-    if FLAGS.representation in ['histogram', 'ir2vec', 'milepost']:
+    if FLAGS.representation in [
+        'histogram', 'histogram_ext', 'ir2vec', 'milepost']:
         x_train, y_train, x_test, y_test = DatasetSetup.LoadDataset(
             FLAGS.classes, FLAGS.train_dataset_directory, FLAGS.train_p,
             FLAGS.test_dataset_directory, FLAGS.test_p, FLAGS.scaler,
@@ -121,7 +122,7 @@ def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
         print('\nStoring the results ...')
         ResultSetup.StoreResults(
             FLAGS.model, FLAGS.results_directory, iteration,
-            model.model, conf_matrix, report, acc, model.y_pred,
+            model.history, conf_matrix, report, acc, model.y_pred,
             model.y_test, flags_times
         )
     else:
@@ -136,7 +137,8 @@ def _RunRound(iteration: int, model: Model, flags_times: Dict[str, float]):
 def _SetListOfOpcodes():
     """Sets the flag `filter_histogram` to the array format.
     """
-    if FLAGS.filter_histogram != "" and FLAGS.representation == "histogram":
+    if FLAGS.filter_histogram != "" and (FLAGS.representation == "histogram"
+    or FLAGS.representation == "histogram_ext"):
         values = FLAGS.filter_histogram.split(",")
         FLAGS.filter_histogram = [ int(idx) for idx in values ]
     else:
@@ -163,13 +165,14 @@ def Execute(argv):
 
         print('\nBuilding the dataset ...')
         if (FLAGS.model not in ['dgcnn', 'gcn'] and FLAGS.representation
-                not in ['histogram', 'ir2vec', 'milepost']):
+                not in ['histogram', 'histogram_ext', 'ir2vec', 'milepost']):
             repres = FLAGS.representation
             logging.error(
                 f'The {repres} must be used with the models dgcnn or gcn.')
             sys.exit(1)
         elif (FLAGS.model in ['dgcnn', 'gcn']
-              and FLAGS.representation in ['histogram', 'ir2vec', 'milepost']):
+              and FLAGS.representation in [
+                'histogram', 'histogram_ext', 'ir2vec', 'milepost']):
             repres = FLAGS.representation
             logging.error(
                 f'The {repres} cannot be used with the models dgcnn or gcn.'

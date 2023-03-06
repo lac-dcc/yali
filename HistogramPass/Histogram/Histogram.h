@@ -1,9 +1,5 @@
-//===--- llvm/Histogram.h - Instruction class definition --------*- C++ -*-===//
+//===--- Histogram.h - Instruction class definition --------*- C++ -*-===//
 //
-// Part of the Lif Project, under the Apache License v2.0 with LLVM Exceptions.
-//
-//===----------------------------------------------------------------------===//
-///
 /// \file
 ///
 /// This file contains code to print a histogram of the instructions in a
@@ -14,7 +10,9 @@
 #ifndef _HISTOGRAM_H
 #define _HISTOGRAM_H
 
+#include "llvm/ADT/DenseMap.h"
 #include "llvm/Pass.h"
+#include "ExtraFeatures.h"
 
 ///
 /// \class Histogram
@@ -25,13 +23,26 @@ class Histogram: public llvm::ModulePass {
   public:
     static char ID;
 
-    Histogram(): llvm::ModulePass(ID) {}
+    Histogram();
 
     void getAnalysisUsage(llvm::AnalysisUsage &) const override;
 
     bool runOnModule(llvm::Module &M) override;
 
     const unsigned NUM_OPCODES = 65;
+
+  private:
+    void printHistogram(llvm::DenseMap<unsigned, unsigned> &histogram);
+
+    void fillHistogramWithOpcodes(
+      llvm::DenseMap<unsigned, unsigned> &hist, llvm::Function &instructions);
+
+    void fillHistogramWithExtraFeatures(
+      llvm::DenseMap<unsigned, unsigned> &hist, ExtraFeatures &extra_features);
+    
+    void countExtraFeatures(
+      ExtraFeatures &extra_features, llvm::Function &F,
+      const llvm::LoopInfo *loop_info);
 };
 
 char Histogram::ID = 0;

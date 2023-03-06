@@ -38,7 +38,7 @@ class Model:
         model: Instace of the generated model
         y_pred: Array with predicted classes. It has some value when the
             _Predicted_ method is called, otherwise its value is equal to _None_
-        history: History of the model after training
+        history: Model object after training
     """
 
     def __init__(
@@ -239,15 +239,16 @@ class Model:
             verbose: Should print information of the training phase. Defaults to
                 False.
         """
+        result = None
+
         if self.model_name in ['lr', 'mlp', 'svm', 'rf', 'knn']:
-            self.model.fit(self.x_train, self.y_train)
+            result = self.model.fit(self.x_train, self.y_train)
         elif self.model_name in ['gcn', 'dgcnn']:
             result = self.model.fit(self.x_train,
                                     epochs=self.num_epochs,
                                     verbose=1 if verbose else 0,
                                     shuffle=True,
                                     callbacks=[self.es_callback])
-            self.history = result.history
         else:
             result = self.model.fit(self.x_train,
                                     pd.get_dummies(self.y_train),
@@ -255,10 +256,10 @@ class Model:
                                     verbose=1 if verbose else 0,
                                     shuffle=True,
                                     callbacks=[self.es_callback])
-            self.history = result.history
+        self.history = result
 
     def ShowHistory(self):
         """Prints the model history.
         """
-        history = pd.DataFrame(self.history)
+        history = pd.DataFrame(self.history.history)
         print(history.tail())

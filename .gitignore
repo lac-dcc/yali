@@ -1,12 +1,10 @@
-.old
-
-######################
 # Environment and Results
 .env
 .venv
+HistogramPass/build
 Statistics/Pdfs
 Statistics/Utils/__pycache__
-Statistics/Utils/games/__pycache__
+Statistics/__pycache__
 
 # IDE
 .vscode
