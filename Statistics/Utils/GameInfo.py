@@ -13,7 +13,8 @@ MODELS = ["cnn", "knn", "mlp", "svm", "lr", "rf"]
 def _GetMainInfo(
     metric_type: str,
     num_classes: Optional[int] = 104,
-    average: Optional[bool] = True
+    average: Optional[bool] = True,
+    dataset_name: Optional[str] = "OJCloneO0"
 ) -> Tuple[List[str], List[str], pd.DataFrame, pd.Series]:
     """Gets the main info to build the charts.
 
@@ -32,7 +33,7 @@ def _GetMainInfo(
     """
     models = MODELS
     game0 = DatasetSetup.GetMetric(
-        "OJCloneO0", models=models, metric_type=metric_type,
+        dataset_name, models=models, metric_type=metric_type,
         num_classes=num_classes, rounds=10
     )
 
@@ -159,15 +160,17 @@ def GetEmbeddingsComparison() -> Tuple[Any, pd.DataFrame]:
 
 
 def GetGame0Chart(
-        metric_type: Optional[str] = "mem") -> Tuple[Any, pd.DataFrame]:
+        metric_type: Optional[str] = "mem",
+        dataset_name: Optional[str] = "OJCloneO0") -> Tuple[Any, pd.DataFrame]:
     """Creates a chart for the game 0.
 
     This chart has two subplots: the first about accuracy and the other one is
-    related to the `metric_type` argument.
+    related to the `metric_type` argument. If `metric_type` is equal to "acc",
+    so only one chart will be generated.
 
     Args:
-        metric_type: 'f1' to f1-score, "mem" to memory and "time" to time.
-        Defaults to "acc".
+        metric_type: "acc" to accuracy, "f1" to f1-score, "mem" to memory and
+        "time" to time. Defaults to "mem".
 
     Returns:
         Tuple with:
@@ -175,17 +178,30 @@ def GetGame0Chart(
             - Dataset of the chart
     """
     average = False
-    fig, axs = plt.subplots(2, 1, figsize=(8, 5.5))
-    _, _, game0, data = _GetMainInfo("acc", average=average)
+    num_subplots = 2
+    figsize = (8,5.5)
+
+    if metric_type == "acc":
+        num_subplots = 1
+        figsize = (8, 3)
+
+    fig, axs = plt.subplots(num_subplots, 1, figsize=figsize)
+    _, x_labels, game0, data = _GetMainInfo(
+        "acc", average=average, dataset_name = dataset_name)
 
     ChartGen.BoxPlot(
-        None, data, "Accuracy", fig_to_use=fig, axis_to_use=axs[0], lim=[0, 1]
+        None, data, "Accuracy", fig_to_use=fig,
+        axis_to_use=axs[0] if metric_type != "acc" else axs, lim=[0, 1],
+        x_labels=x_labels if metric_type == "acc" else None,
     )
+
+    if metric_type == "acc":
+        return fig, game0
 
     values = {"f1": "F1-Score", "mem": "Memory (GB)", "time": "Time (Minutes)"}
     y_caption = values[metric_type]
 
-    _, x_labels, _, data = _GetMainInfo(metric_type, average=average)
+    _, _, _, data = _GetMainInfo(metric_type, average=average)
     max_val = data.max() if average else data.mean().max()
 
     ChartGen.BoxPlot(
