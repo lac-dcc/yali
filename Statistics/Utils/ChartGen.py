@@ -3,6 +3,7 @@ from typing import Any, List, Optional, Dict, Tuple
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
 from . import Constants
 
@@ -125,9 +126,121 @@ def MultipleBars(
     return fig, bars
 
 
+def PlotBinaryMatrix(
+    title: str, data: pd.DataFrame, x_labels: Optional[List[str]] = None,
+    y_labels: Optional[List[str]] = None, save: Optional[bool] = True) -> Any:
+    """Generates a boxplot chart with pairs of boxplots.
+
+    Args:
+        title: Title of the chart
+        data: Binary matrix
+        x_labels: Labels to the X-Axis. Defaults to [].
+        y_labels: Labels to the X-Axis. Defaults to [].
+        save: Save the figure as PDF. Defaults to True.
+
+    Returns:
+        Figure with the chart
+    """
+        # Plot
+    fig, axis = plt.subplots(figsize=(15,4))
+
+    non_zero_rows = ~np.all(data == 0, axis=1)
+    tick_labels = []
+    for i, has_value in enumerate(non_zero_rows):
+        if has_value:
+            tick_labels.append(x_labels[i]) #!!
+
+    data = data[non_zero_rows]
+
+    axis.pcolor(data.T, cmap=plt.cm.Blues, lw=2, edgecolor='white')
+    axis.yaxis.set(ticks=np.arange(0.5, len(y_labels)), ticklabels=y_labels)
+    axis.xaxis.set(
+        ticks=np.arange(0.5, len(tick_labels)), ticklabels=tick_labels)
+    axis.set_xticklabels(tick_labels, rotation = 90)
+
+    fig.set_facecolor("w")
+    if title:
+        fig.suptitle(
+            title, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+
+    fig.tight_layout()
+
+    if save:
+        main_dir = os.getcwd()
+        pdf_dir = f"{main_dir}/Pdfs"
+        os.makedirs(pdf_dir, exist_ok=True)
+        fig.savefig(f"{pdf_dir}/{title}.pdf",
+                           format="pdf", transparent=False)
+
+    return fig
+
+
+def MultipleBoxPlots(
+    title: str, data1: pd.DataFrame, data2: pd.DataFrame, y_caption: str,
+    legend1: str, legend2: str, fig_to_use: Optional[Any] = None,
+    axis_to_use: Optional[plt.Axes] = None,
+    x_labels: Optional[List[str]] = None,
+    save: Optional[bool] = True) -> Any:
+    """Generates a boxplot chart with pairs of boxplots.
+
+    Args:
+        title: Title of the chart
+        data1: First elements (data) of the pair
+        data2: Second elements (data) of the pair
+        y_caption: Label of the Y-Axis
+        legend1: Legend of the `data1`
+        legend2: Legend of the `data2`
+        fig_to_use: Figure to plot the chart. Defaults to None.
+        axis_to_use: Axis to plot the data. Defaults to None.
+        x_labels: Labels to the X-Axis. Defaults to [].
+        save: Save the figure as PDF. Defaults to True.
+
+    Returns:
+        Figure with the chart
+    """
+    def SetBoxColor(boxplot: Any, color: str):
+        plt.setp(boxplot['boxes'], color=color)
+        plt.setp(boxplot['whiskers'], color=color)
+        plt.setp(boxplot['caps'], color=color)
+        plt.setp(boxplot['medians'], color=color)
+
+    bpl = axis_to_use.boxplot(
+        data1, positions=np.array(range(len(data1.columns)))*2.0-0.4, sym='',
+        widths=0.6)
+    bpr = axis_to_use.boxplot(
+        data2, positions=np.array(range(len(data2.columns)))*2.0+0.4, sym='',
+        widths=0.6)
+    SetBoxColor(bpl, '#D7191C')
+    SetBoxColor(bpr, '#2C7BB6')
+
+    # draw temporary red and blue lines and use them to create a legend
+    axis_to_use.plot([], c='#D7191C', label=legend1)
+    axis_to_use.plot([], c='#2C7BB6', label=legend2)
+    axis_to_use.legend()
+
+    axis_to_use.set_xticks(range(0, len(x_labels) * 2, 2), x_labels)
+    axis_to_use.set_xlim(-2, len(x_labels)*2)
+    axis_to_use.set_ylabel(y_caption)
+
+    fig_to_use.set_facecolor("w")
+    if title:
+        fig_to_use.suptitle(
+            title, fontsize=Constants.VARS["fontsizetitle"], color='0.3')
+
+    fig_to_use.tight_layout()
+
+    if save:
+        main_dir = os.getcwd()
+        pdf_dir = f"{main_dir}/Pdfs"
+        os.makedirs(pdf_dir, exist_ok=True)
+        fig_to_use.savefig(f"{pdf_dir}/{title}.pdf",
+                           format="pdf", transparent=False)
+
+    return fig_to_use
+
+
 def BoxPlot(
         title: str, data: pd.DataFrame, y_caption: str,
-        baseline: Optional[pd.DataFrame] = None,
         fig_to_use: Optional[Any] = None,
         axis_to_use: Optional[plt.Axes] = None,
         x_labels: Optional[List[str]] = None,
@@ -139,7 +252,6 @@ def BoxPlot(
         title: Title of the chart
         data: Data of the chart
         y_caption: Label of the Y-Axis
-        baseline: Data that is the baseline. Defaults to None.
         fig_to_use: Figure to plot the chart. Defaults to None.
         axis_to_use: Axis to plot the data. Defaults to None.
         x_labels: Labels to the X-Axis. Defaults to [].
@@ -157,21 +269,11 @@ def BoxPlot(
 
     fig_to_use, axis_to_use = _GetFigAxis(fig_to_use, axis_to_use)
 
-    if baseline is not None:
-        axis_to_use.bar(
-            baseline.index, baseline, color='k', alpha=0.5, label="Baseline",
-            width=Constants.VARS["barwidth"]
-        )
-
     axis_to_use.boxplot(data, widths=Constants.VARS["barwidth"])
 
     axis_to_use = _AxisConfig(axis_to_use, x_labels, lim)
     if scale:
         axis_to_use.autoscale(tight=True)
-
-    if baseline is not None:
-        axis_to_use.legend(loc='upper right', ncol=1, prop={
-            "size": Constants.VARS["legendsize"]})
 
     fig_to_use.set_facecolor("w")
     if title:
@@ -385,3 +487,24 @@ def BoxPlotForDistances(
         plt.savefig(f"{pdf_dir}/{x_caption}.pdf")
 
     return fig, axis
+
+
+def GetCorrelationChart(data: pd.DataFrame) -> pd.DataFrame:
+    """Generates a seaborn chart with the correlation analysis.
+
+    It makes a correlation analysis from the features of `data`.
+
+    Args:
+        data: Data frame with the data
+
+    Returns:
+        Dataframe with the correlations
+    """
+    plt.figure(figsize=(15,15))
+
+    corr = data.corr()
+    abs_cor = abs(corr)
+
+    sns.heatmap(abs_cor, cmap=plt.cm.Reds)
+
+    return corr
