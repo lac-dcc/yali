@@ -1,4 +1,9 @@
-<h1 align="center" style=""> Yali </h1>
+<div align="center">
+    <h1> Yali </h1>
+    <div style="font-style: italic">
+        A framework to analyze a space formed by the combination of program encodings, obfuscation passes and stochastic classification models.
+    </div>
+</div>
 
 <p align="center">
   <img alt="logo" src="./Docs/yali.png" width="35%" height="auto"/>
@@ -32,7 +37,7 @@
 
 ## :scroll: **Introduction**
 
-Let _D_ be a deep learning model that classifies programs according to the problem they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected.
+Let _D_ be a deep learning model that classifies programs according to the problem they solve. This project aims to evaluate how _D_ behaves with obfuscated code. We want to know how much the accuracy of _D_ is affected. This study also evaluates different types of program representations.
 
 <p align="center">
 <img alt="examples of classifications" src="./Docs/examples.gif" width="60%" height="auto"/>
@@ -202,7 +207,7 @@ There are the following values for `MODE`:
 * **game2**: Runs the [Game 2](https://doi.org/10.1145/3579990.3580012)
 * **game3**: Runs the [Game 3](https://doi.org/10.1145/3579990.3580012)
 * **discover**: Runs the [Discover Game](https://doi.org/10.1145/3579990.3580012)
-* **histogram_ext**: Runs an models accuracy analysis with an extended histogram
+* **histogram_ext**: Runs an accuracy analysis with an extended histogram
 
 > This will run the docker container with the configurations in the `.env` file.
 
