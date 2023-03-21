@@ -252,7 +252,7 @@ The repository has the following organization:
 ---
 <a id="technical-report"></a>
 
-## Technical Report
+## :closed_book: Technical Report
 
 This framework is used in the following published papers:
 
