@@ -4,6 +4,7 @@
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Analysis/LoopInfo.h"
 #include "llvm/IR/InstIterator.h"
+#include "llvm/Demangle/Demangle.h"
 #include "llvm/Support/Debug.h"
 #include "llvm/ADT/DenseMap.h"
 
@@ -13,6 +14,18 @@
 #define DEBUG_TYPE "histogram"
 
 Histogram::Histogram(): llvm::ModulePass(ID) { }
+
+std::string Histogram::getOnlyFunctionName(const std::string &function_signature) {
+  std::string function_name = "";
+  for (char character : function_signature) {
+    if (character == '(')
+      break;
+
+    function_name += character;
+  }
+
+  return function_name;
+}
 
 void Histogram::countExtraFeatures(
   ExtraFeatures &extra_features, llvm::Function &F,
@@ -78,6 +91,14 @@ bool Histogram::runOnModule(llvm::Module& M) {
   for (llvm::Function &F : M) {
     if (F.isDeclaration())
       continue;
+
+    if (selected_function != "") {
+      std::string demangle_name = llvm::demangle(F.getName());
+      std::string function_name = getOnlyFunctionName(demangle_name);
+
+      if (selected_function != function_name)
+        continue;
+    }
 
     LLVM_DEBUG(llvm::dbgs() << "Function " << F.getName() << "\n");
     fillHistogramWithOpcodes(hist, F);

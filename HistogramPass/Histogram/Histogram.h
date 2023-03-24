@@ -11,8 +11,13 @@
 #define _HISTOGRAM_H
 
 #include "llvm/ADT/DenseMap.h"
+#include "llvm/Support/CommandLine.h"
 #include "llvm/Pass.h"
 #include "ExtraFeatures.h"
+
+static llvm::cl::opt<std::string> selected_function(
+  "function-name", llvm::cl::init(""), llvm::cl::Hidden,
+  llvm::cl::desc("Extracts the histogram of only a specific function of the program"));
 
 ///
 /// \class Histogram
@@ -43,6 +48,9 @@ class Histogram: public llvm::ModulePass {
     void countExtraFeatures(
       ExtraFeatures &extra_features, llvm::Function &F,
       const llvm::LoopInfo *loop_info);
+
+    std::string getOnlyFunctionName(
+      const std::string &function_signature);
 };
 
 char Histogram::ID = 0;
