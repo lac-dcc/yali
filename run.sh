@@ -18,6 +18,7 @@ setDefaultVar() {
     sed -i "s/NUMCLASSES=.*/NUMCLASSES=104/g" $(pwd)/.env
     sed -i "s/MEMORYPROF=.*/MEMORYPROF=no/g" $(pwd)/.env
     sed -i "s/REPRESENTATION=.*/REPRESENTATION=histogram/g" $(pwd)/.env
+    sed -i "s/FILTER_HISTOGRAM=.*/FILTER_HISTOGRAM=\"\"/g" $(pwd)/.env
 }
 
 playGame() {
