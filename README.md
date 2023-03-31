@@ -26,6 +26,7 @@
     * [Prerequisites](#prerequisites)
     * [Setup](#setup)
     * [Running](#running)
+* [Datasets](#datasets)
 * [Statistics](#statistics)
 * [Structure](#structure)
 * [Technical Report](#technical-report)
@@ -227,9 +228,15 @@ The `Statistics` folder contains _Jupyter Notebooks_ that plot the data generate
 
 
 ---
+<a id="datasets"></a>
+
+## :card_file_box: **Datasets**
+All datasets used in the experiments are also available at this [link](http://cuda.dcc.ufmg.br/Yali/).
+
+---
 <a id="structure"></a>
 
-## :card_index_dividers: Structure
+## :card_index_dividers: **Structure**
 The repository has the following organization:
 
 ```bash
@@ -257,7 +264,7 @@ The repository has the following organization:
 ---
 <a id="technical-report"></a>
 
-## :closed_book: Technical Report
+## :closed_book: **Technical Report**
 
 This framework is used in the following published papers:
 
