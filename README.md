@@ -82,6 +82,7 @@ You can now set environment variables in the `.env` file at the project's root. 
             <td>
                 <ul>
                     <li>histogram</li>
+                    <li>histogram_ext</li>
                     <li>ir2vec</li>
                     <li>milepost</li>
                     <li>cfg</li>
