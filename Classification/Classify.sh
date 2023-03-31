@@ -58,15 +58,17 @@ checkParameters() {
 histograms() {
     local setName=$1
     local optType=$2
+    local outputDir=$3
+    local type=$4
+    local flagExtended=$5
     local irFolder=~/yali/Dataset/Irs/${setName}${optType}/
     local csvFile=~/yali/Dataset/Csv/features_${setName}${optType}.csv
     local csvFinished=~/yali/Dataset/Csv/Finished_${setName}${optType}
-    local outputDir=~/yali/Dataset/Histograms/${setName}${optType}
 
     # Histogram CSV
     touch ${csvFinished}
     if [ -z "$(cat ${csvFinished})" ]; then
-        echo -e "${YC}===> Creating histograms ${setName}...${NC}"
+        echo -e "${YC}===> Creating histograms (${type}) ${setName}...${NC}"
         make -C ${irFolder}
         echo -e "${YC}===> Histograms finished ${setName} <===${NC}"
         echo -e "1" > ${csvFinished}
@@ -76,41 +78,11 @@ histograms() {
     mkdir -p ${outputDir}
     touch ${outputDir}/Finished
     if [ -z "$(cat ${outputDir}/Finished)" ]; then
-        echo -e "${YC}===> Converting CSV to Numpy ${setName}...${NC}"
+        echo -e "${YC}===> Converting CSV (${type}) to Numpy ${setName}...${NC}"
         python3 ~/yali/Extraction/Utils/ConvertCSVToNP.py \
             --histogramCSV ${csvFile} \
-            --outputDir ${outputDir}/
-        echo -e "1" > ${outputDir}/Finished
-        echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
-    fi
-}
-
-# Create the histograms
-histograms_ext() {
-    local setName=$1
-    local optType=$2
-    local irFolder=~/yali/Dataset/Irs/${setName}${optType}/
-    local csvFile=~/yali/Dataset/Csv/features_${setName}${optType}.csv
-    local csvFinished=~/yali/Dataset/Csv/Finished_${setName}${optType}
-    local outputDir=~/yali/Dataset/Embeddings/histogram_ext/${setName}${optType}
-
-    # Histogram CSV
-    touch ${csvFinished}
-    if [ -z "$(cat ${csvFinished})" ]; then
-        echo -e "${YC}===> Creating extended histograms ${setName}...${NC}"
-        make -C ${irFolder}
-        echo -e "${YC}===> Extended Histograms finished ${setName} <===${NC}"
-        echo -e "1" > ${csvFinished}
-    fi
-
-    # Histogram Numpy Format
-    mkdir -p ${outputDir}
-    touch ${outputDir}/Finished
-    if [ -z "$(cat ${outputDir}/Finished)" ]; then
-        echo -e "${YC}===> Converting CSV (extended) to Numpy ${setName}...${NC}"
-        python3 ~/yali/Extraction/Utils/ConvertCSVToNPExt.py \
-            --histogramCSV ${csvFile} \
-            --outputDir ${outputDir}/
+            --outputDir ${outputDir}/ \
+            ${flagExtended}
         echo -e "1" > ${outputDir}/Finished
         echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
     fi
@@ -140,9 +112,11 @@ compiling() {
     fi
 
     if [ ${REPRESENTATION} == "histogram" ]; then
-        histograms ${setName} ${optType}
+        local outputDir=~/yali/Dataset/Histograms/${setName}${optType}
+        histograms ${setName} ${optType} ${outputDir} "only opcodes" "--noextended"
     elif [ ${REPRESENTATION} == "histogram_ext" ]; then
-        histograms_ext ${setName} ${optType}
+        local outputDir=~/yali/Dataset/Embeddings/histogram_ext/${setName}${optType}
+        histograms ${setName} ${optType} ${outputDir} "extended" "--extended"
     else
         source ${representationScriptFolder}/Extract.sh "${setName}${optType}" ${REPRESENTATION}
     fi

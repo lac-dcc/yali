@@ -1,4 +1,4 @@
-"""Converts CSVs Histograms (with 64 opcodes) files to numpy."""
+"""Converts CSVs Histograms files to numpy."""
 import os
 import argparse
 import pandas as pd
@@ -10,19 +10,27 @@ parser.add_argument(
 parser.add_argument(
     "--outputDir", type=str, required=True,
     help="Directory to save the histograms in a numpy format")
+parser.add_argument(
+    "--extended", required=False, default=False, action="store_true",
+    help="Extracts the whole histogram")
+parser.add_argument(
+    "--noextended", dest="extended", default=False, action="store_false",
+    help="Extracts only 64 opcodes instead of the whole histogram")
 args = parser.parse_args()
 
 
-def Convert(csv_file: str, out_dir: str):
+def Convert(csv_file: str, out_dir: str, is_extended: bool):
     """Converts all the lines of a CSV file to numpy format.
 
     Args:
         csv_file: Path to the CSV file
         out_dir: Path to save the output
+        is_extended: Extracts all histogram features if it is `true`
     """
     if os.path.isdir(out_dir):
         data = pd.read_csv(csv_file, skipinitialspace=True)
-        data = data[list(["id", "class"] + [str(i) for i in range(0, 65)])]
+        if not is_extended:
+            data = data[list(["id", "class"] + [str(i) for i in range(0, 65)])]
 
         for _, row in data.iterrows():
             # Removes ".ll" and "./" at the beginning of the string
@@ -38,5 +46,6 @@ def Convert(csv_file: str, out_dir: str):
 if __name__ == "__main__":
     histogramCSV = args.histogramCSV
     outputDir = args.outputDir
+    extended = args.extended
 
-    Convert(histogramCSV, outputDir)
+    Convert(histogramCSV, outputDir, extended)
