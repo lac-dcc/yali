@@ -1,12 +1,22 @@
 set -e
 
-ORIGINAL=~/yali/Dataset/Source/OJClone
-DATASET=$(basename ${ORIGINAL})
-FOLDERPROCESSED=${ORIGINAL}.done
 OPTLEVEL=$1
 STRATEG=$2
+ORIGINAL=$3
+DATASET=""
 
-BUILD=~/yali/Dataset/Irs/${STRATEG}${OPTLEVEL}
+if [ -z $ORIGINAL ]; then
+    ORIGINAL=~/yali/Dataset/Source/OJClone
+    DATASET=OJClone
+    BUILD=~/yali/Dataset/Irs/${STRATEG}${OPTLEVEL}
+else
+    DATASET=${ORIGINAL}
+    ORIGINAL=~/yali/Dataset/Source/${ORIGINAL}
+    BUILD=~/yali/Dataset/Irs/${DATASET}${STRATEG}${OPTLEVEL}
+fi
+
+FOLDERPROCESSED=${ORIGINAL}.done
+
 LOGFOLDER=~/yali/Dataset/Irs/logs
 OLLVM=/opt/ollvm/bin/
 OLLVMFLAGS=""
@@ -45,7 +55,7 @@ compilingC() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
+    ${OLLVM}/clang -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${DATASET}${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}
 }
 
 # Compile programs in CPP
@@ -56,7 +66,7 @@ compilingCPP() {
 
     mkdir -p ${BUILD}/${DIR}
     mkdir -p ${FOLDERPROCESSED}/${DIR}
-    ${OLLVM}/clang++ -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
+    ${OLLVM}/clang++ -${OPTLEVEL} ${OLLVMFLAGS} -S -emit-llvm ${PROG} -o ${BUILD}/${DIR}/${NAME}.ll 2>> ${LOGFOLDER}/${DATASET}${STRATEG}_${OPTLEVEL}_log.txt && mv ${PROG} ${FOLDERPROCESSED}/${DIR}    
 }
 
 
@@ -78,7 +88,7 @@ else
     # Setup the build folder
     mkdir -p ${LOGFOLDER}
     
-    echo "NEW COMPILATION: " >> ${LOGFOLDER}/${STRATEG}_${OPTLEVEL}_log.txt
+    echo "NEW COMPILATION: " >> ${LOGFOLDER}/${DATASET}${STRATEG}_${OPTLEVEL}_log.txt
     for d in ${ORIGINAL}/*/; do
         for f in $d/*; do
             ext="${f##*.}"
@@ -91,8 +101,9 @@ else
 
             PROCESSED=$((${PROCESSED} + 1))
             PERC=$(echo "scale=2;(${PROCESSED}/${TOTAL})*100" | bc -l)
-	        echo -ne "\r${PERC}% Processed (${OPTLEVEL} script)!"
+	        echo -ne "\r--- ${PERC}% Processed (${OPTLEVEL} script)!"
         done
+        echo -e "\n----- Class $(basename $d) processed!"
     done
 	
     # Last setup of the build folder
