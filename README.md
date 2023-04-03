@@ -163,7 +163,7 @@ You can now set environment variables in the `.env` file at the project's root. 
         </tr>
         <tr>
             <td>MEMORYPROF</td>
-            <td>Indicate whether a memory profiler will be used. This variable is required.</td>
+            <td>Indicates whether a memory profiler will be used. This variable is required.</td>
             <td>
                 <ul>
                     <li>yes</li>
