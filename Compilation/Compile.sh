@@ -58,11 +58,13 @@ else
         for f in $d/*; do
             ext="${f##*.}"
 
+            set +e
             if [ ${ext} == "c" ]; then 
                 compilingC $f $d
             elif [ ${ext} == "cpp" ]; then
                 compilingCPP $f $d
             fi
+            set -e
 
             PROCESSED=$((${PROCESSED} + 1))
             PERC=$(echo "scale=2;(${PROCESSED}/${TOTAL})*100" | bc -l)
@@ -73,7 +75,7 @@ else
 	
     # Last setup of the build folder
 	source ~/yali/Compilation/ResetFolder.sh ${FOLDER}
-    echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
+    echo -e "-include ../Makefile.config\n-include ../Makefile.default" >> ${BUILD}/Makefile
     echo "1" > ${BUILD}/Finished
     echo -e "${YC}=====> ${DATASET} Finished (OPT = ${OPTLEVEL}) <=====${NC}"
 fi

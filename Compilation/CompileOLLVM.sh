@@ -8,13 +8,12 @@ DATASET=""
 if [ -z $ORIGINAL ]; then
     ORIGINAL=~/yali/Dataset/Source/OJClone
     DATASET=OJClone
-    BUILD=~/yali/Dataset/Irs/${STRATEG}${OPTLEVEL}
 else
     DATASET=${ORIGINAL}
     ORIGINAL=~/yali/Dataset/Source/${ORIGINAL}
-    BUILD=~/yali/Dataset/Irs/${DATASET}${STRATEG}${OPTLEVEL}
 fi
 
+BUILD=~/yali/Dataset/Irs/${DATASET}${STRATEG}${OPTLEVEL}
 FOLDERPROCESSED=${ORIGINAL}.done
 
 LOGFOLDER=~/yali/Dataset/Irs/logs
@@ -108,7 +107,7 @@ else
 	
     # Last setup of the build folder
 	source ~/yali/Compilation/ResetFolder.sh ${ORIGINAL}
-    echo -e "-include ../Makefile.config\n-include ../Makefile.default" > ${BUILD}/Makefile
+    echo -e "-include ../Makefile.config\n-include ../Makefile.default" >> ${BUILD}/Makefile
     echo "1" > ${BUILD}/Finished
     echo -e "${YC}=====> ${DATASET} Finished (OPT = ${OPTLEVEL} | FLAGS = ${OLLVMFLAGS}) <=====${NC}"
 fi
