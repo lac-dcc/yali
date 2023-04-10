@@ -27,11 +27,16 @@ clf:
 	@echo ${HEADER} >> ${BUILD}/${FILENAME}
 
 # Get the program features of each folder
-%.dir: 
-	@echo "$@ Started!"
-	$(eval FILES:=$(wildcard ./$(basename $@)/*.ll))
-	@for file in ${FILES} ; do \
-		${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file >/dev/null 2>&1 || continue; \
-		{ echo -n $$file", "; ${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $$file; } | sed "s/$$/$(basename $@)/g" >> ${BUILD}/${FILENAME}; \
-	done;
-	@echo "$@ Finished! \n"
+.SECONDEXPANSION:
+%.dir: $$(addsuffix .csv,$$(wildcard $$*/*.ll))
+	@echo "Folder $* finished!"
+
+%.csv:
+	@if [ -z ${FUNC_ONLY} ]; then \
+		${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $* >/dev/null 2>&1 || continue; \
+		{ echo -n $*", "; ${OPT} -load ${MY_LLVM_LIB} -histogram -disable-output $*; } | sed "s/$$/$(shell basename $(dir $*))/g" >> ${BUILD}/${FILENAME}; \
+	else \
+		FUNC_NAME="$$(echo $* | sed "s/.*\.[A-Za-z]*_//1" | sed "s/_Final..*//1")"; \
+		${OPT} -load ${MY_LLVM_LIB} -histogram -function-name $$FUNC_NAME -disable-output $* >/dev/null 2>&1 || continue; \
+		{ echo -n $*", "; ${OPT} -load ${MY_LLVM_LIB} -histogram -function-name $$FUNC_NAME -disable-output $*; } | sed "s/$$/$(shell basename $(dir $*))/g" >> ${BUILD}/${FILENAME}; \
+	fi;
