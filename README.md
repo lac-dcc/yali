@@ -118,18 +118,6 @@ You can now set environment variables in the `.env` file at the project's root. 
                         "OJClone" (POJ-104 dataset used by <a href="https://dl.acm.org/doi/10.5555/3015812.3016002">Lili Mou et al.</a>)
                     </li>
                     <li>
-                        "BCF" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow</a> strategy) 
-                    </li>
-                    <li>
-                        "FLA" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a> strategy)
-                    </li>
-                    <li>
-                        "SUB" (The OJClone dataset was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategy)
-                    </li>
-                    <li>
-                        "OLLVM" (The OJClone dataset that was obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a>, <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow Strategy</a> and <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategies, respectively)
-                    </li>
-                    <li>
                         "MCMC" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Markov Chain Monte Carlo</a> strategy)
                     </li>
                     <li>
@@ -138,6 +126,27 @@ You can now set environment variables in the `.env` file at the project's root. 
                     <li>
                         "RS" (The OJClone dataset that was obfuscated by the <a href="https://arxiv.org/pdf/2111.10793.pdf">Random-Search</a> strategy)
                     </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>OBF_TRAIN / OBF_TEST </td>
+            <td>Ofuscation strategy applied in the traning/testing dataset. OBF_TRAIN is required, but <b>OBF_TEST can be empty if TESTDATASET is empty.</b> If you don't want to apply an obfuscation strategy, set the value to <i>None</i>.</td>
+            <td>
+                <ul>
+                    <li>
+                        "BCF" (The TRAINDATASET or TESTDATASET dataset will be obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow</a> strategy) 
+                    </li>
+                    <li>
+                        "FLA" (The TRAINDATASET or TESTDATASET dataset will be obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a> strategy)
+                    </li>
+                    <li>
+                        "SUB" (The TRAINDATASET or TESTDATASET dataset will be obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategy)
+                    </li>
+                    <li>
+                        "OLLVM" (The TRAINDATASET or TESTDATASET dataset will be obfuscated by the <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening">Control Flow Flattening</a>, <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Bogus-Control-Flow">Bogus Control Flow Strategy</a> and <a href="https://github.com/obfuscator-llvm/obfuscator/wiki/Instructions-Substitution">Instructions Substitution</a> strategies, respectively)
+                    </li>
+                    <li>"None" (No strategy applied)</li>
                 </ul>
             </td>
         </tr>
