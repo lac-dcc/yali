@@ -24,14 +24,18 @@ setDefaultVar() {
 playGame() {
     local modelName=$1
     local trainName=$2
-    local optTypeTrain=$3
-    local testName=$4
-    local optTypeTest=$5
+    local obfTrain=$3
+    local optTypeTrain=$4
+    local testName=$5
+    local obfTest=$6
+    local optTypeTest=$7
 
     sed -i "s/MODEL=.*/MODEL=${modelName}/g" $(pwd)/.env
     sed -i "s/TRAINDATASET=.*/TRAINDATASET=${trainName}/g" $(pwd)/.env
+    sed -i "s/OBF_TRAIN=.*/OBF_TRAIN=${obfTrain}/g" $(pwd)/.env
     sed -i "s/OPTLEVELTRAIN=.*/OPTLEVELTRAIN=${optTypeTrain}/g" $(pwd)/.env
     sed -i "s/TESTDATASET=.*/TESTDATASET=${testName}/g" $(pwd)/.env
+    sed -i "s/OBF_TEST=.*/OBF_TEST=${obfTest}/g" $(pwd)/.env
     sed -i "s/OPTLEVELTEST=.*/OPTLEVELTEST=${optTypeTest}/g" $(pwd)/.env
     DOCKER_BUILDKIT=1 docker-compose up
 }
@@ -58,7 +62,7 @@ classAnalysis() {
         ALLCLASSES=( 4 8 16 32 64 )
         for n in ${ALLCLASSES[@]}; do 
             sed -i "s/NUMCLASSES=.*/NUMCLASSES=${n}/g" $(pwd)/.env
-            playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+            playGame ${MODELS[$m]} "OJClone" "None" "O0" "" "" ""
         done
     done
     echo -e "${YC} ==========> End of Classes Analysis <==========${NC}"
@@ -70,7 +74,7 @@ memAnalysis() {
     echo -e "\n${YC} ==========> 💾 Memory Analysis ...${NC}"
     sed -i "s/MEMORYPROF=.*/MEMORYPROF=yes/g" $(pwd)/.env
     for m in "${!MODELS[@]}"; do 
-        playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+        playGame ${MODELS[$m]} "OJClone" "None" "O0" "" "" ""
     done
     echo -e "${YC} ==========> End of Memory Analysis <==========${NC}"
 }
@@ -83,13 +87,13 @@ embeddingAnalysis() {
     EMBEDDINGS=( histogram ir2vec milepost )
     for e in "${!EMBEDDINGS[@]}"; do 
         sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS[$e]}/g" $(pwd)/.env
-        playGame "cnn" "OJClone" "O0" "" ""
+        playGame "cnn" "OJClone" "None" "O0" "" "" ""
     done
 
     EMBEDDINGS_GRAPH=( cfg cfg_compact cdfg cdfg_compact cdfg_plus programl )
     for e in "${!EMBEDDINGS_GRAPH[@]}"; do 
         sed -i "s/REPRESENTATION=.*/REPRESENTATION=${EMBEDDINGS_GRAPH[$e]}/g" $(pwd)/.env
-        playGame "dgcnn" "OJClone" "O0" "" ""
+        playGame "dgcnn" "OJClone" "None" "O0" "" "" ""
     done
     echo -e "${YC} ==========> End of Embedding Analysis <==========${NC}"
 }
@@ -122,7 +126,7 @@ extendedHistogramAnalysis() {
     echo -e "\n${YC} ==========> 🆕 Extended Histogram Analysis ...${NC}"
     sed -i "s/REPRESENTATION=.*/REPRESENTATION=histogram_ext/g" $(pwd)/.env
     for m in "${!MODELS[@]}"; do 
-        playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+        playGame ${MODELS[$m]} "OJClone" "None" "O0" "" "" ""
     done
     echo -e "${YC} ==========> End of Extended Histogram Analysis <==========${NC}"
 }
@@ -136,7 +140,7 @@ game0(){
     setDefaultVar
     echo -e "\n${YC} ==========> 🎮 Game 0 ...${NC}"
     for m in "${!MODELS[@]}"; do 
-        playGame ${MODELS[$m]} "OJClone" "O0" "" ""
+        playGame ${MODELS[$m]} "OJClone" "None" "O0" "" "" ""
     done
     echo -e "${YC} ==========> End of the Game 0 <==========${NC}"
 }
@@ -144,11 +148,12 @@ game0(){
 game1() {
     setDefaultVar
     echo -e "\n${YC} ==========> 🎮 Game 1 ...${NC}"
-    TESTSTEP=( OJClone FLA SUB BCF OLLVM RS MCMC DRLSG )
+    TESTSTEP=( OJClone OJClone OJClone OJClone OJClone RS MCMC DRLSG )
+    OBFTEST=( None FLA SUB BCF OLLVM None None None)
     TESTLEVELSTEP=( O3 O0 O0 O0 O0 O0 O0 O0)
     for m in "${!MODELS[@]}"; do 
         for t in "${!TESTSTEP[@]}"; do 
-            playGame ${MODELS[$m]} "OJClone" "O0" "${TESTSTEP[$t]}" "${TESTLEVELSTEP[$t]}"
+            playGame ${MODELS[$m]} "OJClone" "None" "O0" "${TESTSTEP[$t]}" "${OBFTEST[$t]}" "${TESTLEVELSTEP[$t]}"
         done
     done
     echo -e "${YC} ==========> End of the Game 1 <==========${NC}"
@@ -157,11 +162,12 @@ game1() {
 game2() {
     setDefaultVar
     echo -e "\n${YC} ==========> 🎮 Game 2 ...${NC}"
-    TRAINSTEP=( OJClone FLA SUB BCF OLLVM RS MCMC DRLSG )
+    TRAINSTEP=( OJClone OJClone OJClone OJClone OJClone RS MCMC DRLSG )
+    OBFTRAIN=( None FLA SUB BCF OLLVM None None None )
     TRAINLEVELSTEP=( O3 O0 O0 O0 O0 O0 O0 O0)
     for m in "${!MODELS[@]}"; do 
         for t in "${!TRAINSTEP[@]}"; do 
-            playGame ${MODELS[$m]} "${TRAINSTEP[$t]}" "${TRAINLEVELSTEP[$t]}" "" ""
+            playGame ${MODELS[$m]} "${TRAINSTEP[$t]}" "${OBFTRAIN[$t]}" "${TRAINLEVELSTEP[$t]}" "" "" ""
         done
     done
     echo -e "${YC} ==========> End of the Game 2 <==========${NC}"
@@ -170,10 +176,11 @@ game2() {
 game3() {
     setDefaultVar
     echo -e "\n${YC} ==========> 🎮 Game 3 ...${NC}"
-    TESTSTEP=( FLA SUB BCF OLLVM RS MCMC DRLSG )
+    TESTSTEP=( OJClone OJClone OJClone OJClone RS MCMC DRLSG )
+    OBFTEST=( FLA SUB BCF OLLVM None None None )
     for m in "${!MODELS[@]}"; do 
         for t in "${!TESTSTEP[@]}"; do
-            playGame ${MODELS[$m]} "OJClone" "O3" "${TESTSTEP[$t]}" "O3"
+            playGame ${MODELS[$m]} "OJClone" "None" "O3" "${TESTSTEP[$t]}" "${OBFTEST[$t]}" "O3"
         done
     done
     echo -e "${YC} ==========> End of the Game 3 <==========${NC}"
@@ -187,7 +194,7 @@ discover() {
     TRAINSTEP=( dataset1 dataset2 dataset3 dataset4 )
     for m in "${!MODELS[@]}"; do 
         for t in "${!TRAINSTEP[@]}"; do
-            playGame ${MODELS[$m]} "${TRAINSTEP[$t]}" "O0" "" ""
+            playGame ${MODELS[$m]} "${TRAINSTEP[$t]}" "None" "O0" "" "" ""
         done
     done
     echo -e "${YC} ==========> End of the Discover Game <==========${NC}"
