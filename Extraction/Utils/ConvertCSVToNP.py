@@ -33,11 +33,10 @@ def Convert(csv_file: str, out_dir: str, is_extended: bool):
             data = data[list(["id", "class"] + [str(i) for i in range(0, 65)])]
 
         for _, row in data.iterrows():
-            # Removes ".ll" and "./" at the beginning of the string
-            ll_name = (row["id"])[2:-3]
-            file_name = out_dir + ll_name
-            class_name = ll_name.split("/")[0]
-            dir_name = out_dir + class_name
+            ll_name = os.path.basename(row["id"])
+            class_name = row["class"]
+            dir_name = f"{out_dir}/{class_name}"
+            file_name = f"{dir_name}/{ll_name}"
             os.makedirs(dir_name, exist_ok=True)
             np.savez_compressed(file_name, values=row.drop(
                 labels = ["id", "class"]).to_list())
