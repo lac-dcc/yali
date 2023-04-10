@@ -77,7 +77,8 @@ def GetInfo(obfuscator: str, norm: str) -> Dict[str, pd.DataFrame]:
     """
     strategies = None
     if obfuscator == "ollvm":
-        strategies = ["OLLVMO0", "BCFO0", "FLAO0", "SUBO0"]
+        strategies = [
+            "OJCloneOLLVMO0", "OJCloneBCFO0", "OJCloneFLAO0", "OJCloneSUBO0"]
     elif obfuscator == "clonegen":
         strategies = ["DRLSGO0", "MCMCO0", "RSO0"]
     else:

@@ -4,8 +4,8 @@ import pandas as pd
 from . import Game
 
 STRATEGIES = [
-    "OJCloneO0", "OLLVMO0", "FLAO0", "OJCloneO3", "MCMCO0", "SUBO0", "BCFO0",
-    "DRLSGO0", "RSO0"
+    "OJCloneO0", "OJCloneOLLVMO0", "OJCloneFLAO0", "OJCloneO3", "MCMCO0",
+    "OJCloneSUBO0", "OJCloneBCFO0", "DRLSGO0", "RSO0"
 ]
 
 LABELSSTRATEGIES = [
