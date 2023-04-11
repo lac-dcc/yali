@@ -92,11 +92,13 @@ else
         for f in $d/*; do
             ext="${f##*.}"
 
+            set +e
             if [ ${ext} == "c" ]; then 
                 compilingC $f $d
             elif [ ${ext} == "cpp" ]; then
                 compilingCPP $f $d
             fi
+            set -e
 
             PROCESSED=$((${PROCESSED} + 1))
             PERC=$(echo "scale=2;(${PROCESSED}/${TOTAL})*100" | bc -l)
