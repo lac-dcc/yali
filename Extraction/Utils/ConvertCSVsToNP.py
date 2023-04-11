@@ -36,13 +36,13 @@ def CreateClassWithEqualPairs(
         out_dir: Directory path to save the class with equal pairs of programs
             (matrices)
     """
-    for _, row1 in data1.iterrows():
-        file_name = os.path.basename(row1.name)
+    for idx1, row1 in zip(data1.index, data1.values.tolist()):
+        file_name = os.path.basename(idx1)
 
-        if row1.name in data2.index:
-            row2 = data2.loc[row1.name]
+        if idx1 in data2.index:
+            row2 = data2.loc[idx1]
             row2.name = f"{row2.name}2"
-            pair = row1.to_list() + row2.to_list()
+            pair = row1 + row2.to_list()
 
             dir_name = f"{out_dir}/1"
             file_path = f"{dir_name}/{file_name}"
@@ -63,21 +63,22 @@ def CreateClassWithDifferentPairs(
         out_dir: Directory path to save the class with different pairs of
             programs (matrices)
     """
-    for _, row1 in data1.iterrows():
-        file_name = os.path.basename(row1.name)
+    for idx1, row1 in zip(data1.index, data1.values.tolist()):
+        file_name = os.path.basename(idx1)
 
         min_distance = float('inf')
-        data2 = data2.drop(row1.name)
+        data2 = data2.drop(idx1)
         selected_row = None
 
         if len(data2) > 0:
-            for _, row2 in data2.iterrows():
-                dist = np.linalg.norm(row1 - row2)
+            for _, row2 in zip(data2.index, data2.values.tolist()):
+                sub = [r1 - r2 for r1, r2 in zip(row1, row2)]
+                dist = np.linalg.norm(sub)
                 if dist < min_distance:
                     min_distance = dist
                     selected_row = row2
 
-            pair = row1.to_list() + selected_row.to_list()
+            pair = row1 + selected_row
 
             dir_name = f"{out_dir}/2"
             file_path = f"{dir_name}/{file_name}"
