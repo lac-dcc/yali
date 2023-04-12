@@ -66,19 +66,16 @@ def CreateClassWithDifferentPairs(
     for idx1, row1 in zip(data1.index, data1.values.tolist()):
         file_name = os.path.basename(idx1)
 
-        min_distance = float('inf')
         data2 = data2.drop(idx1)
-        selected_row = None
 
         if len(data2) > 0:
-            for _, row2 in zip(data2.index, data2.values.tolist()):
-                sub = [r1 - r2 for r1, r2 in zip(row1, row2)]
-                dist = np.linalg.norm(sub)
-                if dist < min_distance:
-                    min_distance = dist
-                    selected_row = row2
+            sub = data2 - row1
+            dist = np.linalg.norm(sub.to_numpy(), axis=1)
 
-            pair = row1 + selected_row
+            row2_idx = np.argmin(dist)
+            row2 = data2.iloc[row2_idx].to_list()
+
+            pair = row1 + row2
 
             dir_name = f"{out_dir}/2"
             file_path = f"{dir_name}/{file_name}"
