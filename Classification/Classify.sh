@@ -145,10 +145,10 @@ compiling() {
 
     if [ ${REPRESENTATION} == "histogram" ]; then
         local outputDir=~/yali/Dataset/Histograms/${setName}${obfStrategy}${optType}
-        histograms ${setName} ${optType} ${outputDir} "only opcodes" "--noextended"
+        histograms ${setName} ${optType} ${outputDir} "only opcodes" "--noextended" ${obfStrategy}
     elif [ ${REPRESENTATION} == "histogram_ext" ]; then
         local outputDir=~/yali/Dataset/Embeddings/histogram_ext/${setName}${obfStrategy}${optType}
-        histograms ${setName} ${optType} ${outputDir} "extended" "--extended"
+        histograms ${setName} ${optType} ${outputDir} "extended" "--extended" ${obfStrategy}
     else
         source ${representationScriptFolder}/Extract.sh "${setName}${obfStrategy}${optType}" ${REPRESENTATION}
     fi
