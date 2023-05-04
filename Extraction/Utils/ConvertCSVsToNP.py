@@ -72,8 +72,15 @@ def CreateClassWithDifferentPairs(
             sub = data2 - row1
             dist = np.linalg.norm(sub.to_numpy(), axis=1)
 
-            row2_idx = np.argmin(dist)
-            row2 = data2.iloc[row2_idx].to_list()
+            dist_with_idx = zip(dist, [i for i in range(len(dist))])
+            dist_with_idx = np.array(list(dist_with_idx))
+            dist_sorted_window = dist_with_idx[
+                dist_with_idx[:, 0].argsort()]
+
+            rand_int = np.random.randint(min(50, len(dist_sorted_window)))
+            rand_dist = dist_sorted_window[rand_int]
+
+            row2 = data2.iloc[int(rand_dist[1])].to_list()
 
             pair = row1 + row2
 
@@ -82,6 +89,7 @@ def CreateClassWithDifferentPairs(
 
             os.makedirs(dir_name, exist_ok=True)
             np.savez_compressed(file_path, values=pair)
+
 
 def Convert(csv_file1: str, csv_file2: str, out_dir: str, is_extended: bool):
     """Converts all the lines of a CSV file to numpy format.
