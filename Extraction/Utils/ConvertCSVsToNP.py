@@ -103,6 +103,11 @@ def Convert(csv_file1: str, csv_file2: str, out_dir: str, is_extended: bool):
     if os.path.isdir(out_dir):
         data1 = pd.read_csv(csv_file1, skipinitialspace=True)
         data2 = pd.read_csv(csv_file2, skipinitialspace=True)
+
+        commom_indexes = data1.index.intersection(data2.index.intersection)
+        data1 = data1.loc[commom_indexes]
+        data2 = data2.loc[commom_indexes]
+
         if not is_extended:
             opcodes =[str(i) for i in range(0, 65)]
             data1 = data1[list(["id"] + opcodes)]
@@ -111,8 +116,16 @@ def Convert(csv_file1: str, csv_file2: str, out_dir: str, is_extended: bool):
         data1 = data1.set_index("id")
         data2 = data2.set_index("id")
 
-        CreateClassWithEqualPairs(data1, data2, out_dir)
-        CreateClassWithDifferentPairs(data1, data2, out_dir)
+        train1 = data1.sample(n=int(len(data1)*.8))
+        train2 = data2.loc[train1.index]
+
+        test1 = data1.loc[data1.index.difference(train1.index)]
+        test2 = data2.loc[test1.index]
+
+        CreateClassWithEqualPairs(train1, train2, f"{out_dir}/train/")
+        CreateClassWithEqualPairs(test1, test2, f"{out_dir}/test/")
+        CreateClassWithDifferentPairs(train1, train2, f"{out_dir}/train/")
+        CreateClassWithDifferentPairs(test1, test2, f"{out_dir}/test/")
 
 
 if __name__ == "__main__":
