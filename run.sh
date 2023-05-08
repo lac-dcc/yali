@@ -2,6 +2,7 @@
 set -e
 
 MODE=$1
+DATASETNAME=$2
 
 # Colors
 YC='\033[0;33m'
@@ -40,7 +41,24 @@ playGame() {
     DOCKER_BUILDKIT=1 docker-compose up
 }
 
+##################################################################################################
 
+clearDatasetResults() {
+    local rootpath=$(dirname $(realpath "$0"))
+    local datasetName=$1
+
+    if [ -z $datasetName ]; then
+        echo -e "${YC}Provide the name of the dataset, ensuring that no other dataset uses this name as a preffix.${NC}"
+        exit 1
+    fi
+
+    sudo rm -rf $rootpath/Volume/Csv/features_$datasetName*.csv
+    sudo rm -rf $rootpath/Volume/Csv/Finished_$datasetName*
+    sudo rm -rf $rootpath/Volume/Embeddings/*/$datasetName*
+    sudo rm -rf $rootpath/Volume/Histograms/$datasetName*
+    sudo rm -rf $rootpath/Volume/Irs/$datasetName*
+    sudo rm -rf $rootpath/Volume/Results/$datasetName*
+}
 
 ##################################################################################################
 
@@ -208,7 +226,7 @@ discover() {
 
 run() {
     if [ -z "${MODE}" ]; then
-        echo -e "${RC}Error: No mode specified! Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
+        echo -e "${RC}Error: No mode specified! Choose 'build', 'clearResults', 'custom', 'all', 'malware', 'speedup', 'embeddings', 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
         exit 1
     fi
 
@@ -219,6 +237,9 @@ run() {
                 ;;
         "custom")
                 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up --quiet-pull
+                ;;
+        "clearResults")
+                clearDatasetResults $DATASETNAME
                 ;;
         "all")
                 classAnalysis
@@ -265,7 +286,7 @@ run() {
                 extendedHistogramAnalysis
                 ;;
         *)
-                echo -e "${RC}Error: MODE is not a valid argument. Choose 'build', 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
+                echo -e "${RC}Error: MODE is not a valid argument. Choose 'build', 'clearResults', 'custom', 'all', 'malware', 'speedup', 'embeddings' 'resource', 'game0', 'game1', 'game2', 'game3', 'discover' or 'histogram_ext'.${NC}"
                 exit 1
                 ;;
     esac

@@ -207,6 +207,7 @@ $ ./run.sh MODE
 ```
 There are the following values for `MODE`:
 * **build**: Builds the docker container based on the modifications in the yali project
+* **clearResults**: Run the command line by typing `./run.sh MODE DATASETNAME`. Please note that executing this command will delete all folders that have the preffix `DATASETNAME`.
 * **custom**: Runs the project based on the variables set on `.env` file
 * **all**: Runs all experiments available in `MODE`
 * **speedup**: Runs the speedup analysis with the benchmark game
