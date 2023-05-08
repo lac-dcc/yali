@@ -193,6 +193,8 @@ classification() {
     local testName=$5
     local obfTest=$6
     local optTypeTest=$7
+    local trainNameExt=$8
+    local testNameExt=$9
     
     if [ ${REPRESENTATION} == "histogram" ]; then
         local trainDir=~/yali/Dataset/Histograms/${trainName}${obfTrain}${optTypeTrain}/
@@ -216,7 +218,7 @@ classification() {
     if [ -z ${testName} ]; then
         echo -e "${YC}===> Classification with ${MODEL}: training and testing phase (${trainName}${obfTrain}${optTypeTrain} -- ${REPRESENTATION}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/ClassifyPrograms.py \
-            --train_dataset_directory ${trainDir} \
+            --train_dataset_directory ${trainDir}${trainNameExt} \
             --rounds ${rounds} \
             --${MEMORYPROF}memory_prof \
             --classes ${NUMCLASSES} \
@@ -227,12 +229,12 @@ classification() {
     else
         echo -e "${YC}===> Classification with ${MODEL}: training phase (${trainName}${obfTrain}${optTypeTrain} -- ${REPRESENTATION}) --- testing phase (${testName}${obfTest}${optTypeTest}), ${NUMCLASSES} classes ...${NC}"
         python3 ~/yali/Classification/ClassifyPrograms.py \
-            --train_dataset_directory ${trainDir} \
+            --train_dataset_directory ${trainDir}${trainNameExt} \
             --rounds ${rounds} \
             --${MEMORYPROF}memory_prof \
             --classes ${NUMCLASSES} \
             --train_p 100 \
-            --test_dataset_directory ${testDir} \
+            --test_dataset_directory ${testDir}${testNameExt} \
             --results_directory ${resultsWithTest} \
             --model ${MODEL} \
             --representation ${REPRESENTATION} \
