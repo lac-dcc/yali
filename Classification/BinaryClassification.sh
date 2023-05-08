@@ -6,7 +6,7 @@ NC='\033[0m'
 
 ROUNDS=$1
 MODEL=$2
-TRAINDATASET=$3
+DATASET=$3
 OBFTRAIN=$4
 OPTLEVELTRAIN=$5
 
@@ -41,8 +41,8 @@ if [ ! -z "${OBFTRAIN}" ]; then
     fi
 fi
 
-BUILD1=~/yali/Dataset/Irs/${TRAINDATASET}O0/
-BUILD2=~/yali/Dataset/Irs/${TRAINDATASET}${OBFTRAIN}${OPTLEVELTRAIN}/
+BUILD1=~/yali/Dataset/Irs/${DATASET}O0/
+BUILD2=~/yali/Dataset/Irs/${DATASET}${OBFTRAIN}${OPTLEVELTRAIN}/
 
 mkdir -p $BUILD1
 touch ${BUILD1}/Makefile
@@ -64,16 +64,16 @@ source ~/yali/Classification/Classify.sh \
     $ROUNDS \
     "no" \
     $MODEL \
-    $TRAINDATASET \
+    $DATASET \
     "None" \
     $OPTLEVELTRAIN \
     2 \
     "histogram" \
     "" "" "" ""
 
-compiling ${TRAINDATASET} O0 ""
-compiling ${TRAINDATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
+compiling ${DATASET} O0 ""
+compiling ${DATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
 
-# mixedHistograms "$TRAINDATASET" "$OBFTRAIN" "$OPTLEVELTRAIN" "only opcodes" "--noextended"
+mixedHistograms "$DATASET" "$OBFTRAIN" "$OPTLEVELTRAIN" "only opcodes" "--noextended"
 
-# classification "${ROUNDS}" "${TRAINDATASET}MIXED" "${OBFTRAIN}" "${OPTLEVELTRAIN}"
+classification "${ROUNDS}" "${DATASET}MIXED" "${OBFTRAIN}" "${OPTLEVELTRAIN}" "${DATASET}MIXED" "${OBFTRAIN}" "${OPTLEVELTRAIN}" "/train/" "/test/"
