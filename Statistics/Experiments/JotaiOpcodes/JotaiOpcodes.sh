@@ -28,9 +28,9 @@ playGame() {
 }
 
 jotaiClassification() {
-    MODELS=( rf ) #cnn rf mlp svm knn lr )
+    MODELS=( cnn rf mlp svm knn lr )
     OBFSTRATEGY=( FLA BCF SUB OLLVM )
-    OPTLEVEL=( O1 O2 O3 )
+    OPTLEVEL=( O3 O1 O2 O3 )
     
     for m in "${!MODELS[@]}"; do
         for o in "${!OBFSTRATEGY[@]}"; do
