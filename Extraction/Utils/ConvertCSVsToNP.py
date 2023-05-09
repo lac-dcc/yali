@@ -104,7 +104,7 @@ def Convert(csv_file1: str, csv_file2: str, out_dir: str, is_extended: bool):
         data1 = pd.read_csv(csv_file1, skipinitialspace=True)
         data2 = pd.read_csv(csv_file2, skipinitialspace=True)
 
-        commom_indexes = data1.index.intersection(data2.index.intersection)
+        commom_indexes = data1.index.intersection(data2.index)
         data1 = data1.loc[commom_indexes]
         data2 = data2.loc[commom_indexes]
 
