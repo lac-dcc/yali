@@ -98,6 +98,9 @@ RUN useradd --create-home --gid sudo --shell /bin/bash --system ml4code \
 USER ml4code
 WORKDIR /home/ml4code
 
+######################################### Python Requirements ##########################################
+COPY --chown=ml4code:sudo requirements.txt /home/ml4code/yali/requirements.txt
+
 ################################################# YaCos #################################################
 RUN pip3 install --no-warn-script-location protobuf==3.19.4
 RUN git clone https://github.com/ComputerSystemsLaboratory/YaCoS.git
@@ -110,14 +113,12 @@ RUN cd YaCoS \
     && sed -i 's/gensim==3.4.0/gensim/g' setup.py \
     && sed -i 's/six==1.15.0/six/g' setup.py \
     && sed -i 's/pygmo/pygmo==2.16.1/g' setup.py \
-    && pip3 install --no-warn-script-location .
+    && pip3 install --no-warn-script-location -r /home/ml4code/yali/requirements.txt .
 RUN cd YaCoS \
     && mv examples ~/YaCoS.examples \
     && cd .. \
     && rm -rf YaCoS \
     && sed -i 's/padding += list(embeddings\[unk_idx\])/padding.append(embeddings\[unk_idx\])/g' ~/YaCoS.examples/representation/extract_inst2vec.py
-RUN pip3 install --no-warn-script-location memory-profiler==0.60.0
-RUN pip3 install typing
 RUN sudo apt-get install -y libpcre3-dev
 
 ############################################ Histogram Pass #############################################
