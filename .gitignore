@@ -3,14 +3,18 @@
 .venv
 HistogramPass/build
 Statistics/Pdfs
+Statistics/Experiments/*/build/*
 Statistics/Utils/__pycache__
+Statistics/Experiments/JotaiOpcodes/features_MIXED.csv
 Statistics/__pycache__
+test
 
 # IDE
 .vscode
 
 # Volume
 Volume/Source/*
+Volume/Build/*
 Volume/Csv/*
 Volume/Histograms/*
 Volume/Embeddings/*
