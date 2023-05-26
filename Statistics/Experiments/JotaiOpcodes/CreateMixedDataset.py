@@ -52,12 +52,13 @@ def GetObfuscatedSamples(
         sample = None
         if not has_indexes:
             sample = dataframe.sample(n=int(len(dataframe) * percent))
-            indexes = sample.index
+            indexes = list(sample.index)
             has_indexes = True
         else:
             diff_indexes = dataframe.index.difference(indexes)
             dataframe = dataframe.loc[diff_indexes]
             sample = dataframe.sample(n=int(len(dataframe) * percent))
+            indexes = indexes + list(sample.index)
 
         obfuscated_samples.append(sample)
 
