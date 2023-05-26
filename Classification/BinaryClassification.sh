@@ -23,41 +23,46 @@ mixedHistograms() {
     local csvFile2=~/yali/Dataset/Csv/features_${setName}${obfStrategy}${optType}.csv
 
     # Histogram Numpy Format
-    rm -rf ${outputDir}/*
     mkdir -p ${outputDir}
-
-    echo -e "${YC}===> Creating mixed CSV (${type}) to Numpy ${setName}${obfStrategy}${optType}...${NC}"
-    python3 ~/yali/Extraction/Utils/ConvertCSVsToNP.py \
-        --histogramCSV1 ${csvFile1} \
-        --histogramCSV2 ${csvFile2} \
-        --outputDir ${outputDir}/ \
-        ${flagExtended}
-    echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
+    touch ${outputDir}/Finished
+    if [ -z "$(cat ${outputDir}/Finished)" ]; then
+        echo -e "${YC}===> Creating mixed CSV (${type}) to Numpy ${setName}${obfStrategy}${optType}...${NC}"
+        python3 ~/yali/Extraction/Utils/ConvertCSVsToNP.py \
+            --histogramCSV1 ${csvFile1} \
+            --histogramCSV2 ${csvFile2} \
+            --outputDir ${outputDir}/ \
+            ${flagExtended}
+        echo -e "1" > ${outputDir}/Finished
+        echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
+    fi
 }
 
-if [ ! -z "${OBFTRAIN}" ]; then
-    if [ "${OBFTRAIN}" = "None" ]; then
-        OBFTRAIN=""
+# Configures the makefile for extracting the histogram of a specific function
+setupHistogramExtraction() {
+    if [ ! -z "${OBFTRAIN}" ]; then
+        if [ "${OBFTRAIN}" = "None" ]; then
+            OBFTRAIN=""
+        fi
     fi
-fi
 
-BUILD1=~/yali/Dataset/Irs/${DATASET}O0/
-BUILD2=~/yali/Dataset/Irs/${DATASET}${OBFTRAIN}${OPTLEVELTRAIN}/
+    local build1=~/yali/Dataset/Irs/${DATASET}O0/
+    local build2=~/yali/Dataset/Irs/${DATASET}${OBFTRAIN}${OPTLEVELTRAIN}/
 
-mkdir -p $BUILD1
-touch ${BUILD1}/Makefile
-mkdir -p $BUILD2
-touch ${BUILD2}/Makefile
+    mkdir -p $build1
+    touch ${build1}/Makefile
+    mkdir -p $build2
+    touch ${build2}/Makefile
 
-# TODO: Check if Makefile is already full and avoid erasing include options put by Compile.sh script
-if [ "$(head -n 1 $BUILD1/Makefile)" != "FUNC_ONLY=yes" ]; then
-    echo -e "\n" > ${BUILD1}/Makefile
-    sed -i "1s/^/FUNC_ONLY=yes/"  ${BUILD1}/Makefile
-fi
-if [ "$(head -n 1 $BUILD2/Makefile)" != "FUNC_ONLY=yes" ]; then
-    echo -e "\n" > ${BUILD2}/Makefile
-    sed -i "1s/^/FUNC_ONLY=yes/"  ${BUILD2}/Makefile
-fi
+    # TODO: Check if Makefile is already full and avoid erasing include options put by Compile.sh script
+    if [ "$(head -n 1 $build1/Makefile)" != "FUNC_ONLY=yes" ]; then
+        echo -e "\n" > ${build1}/Makefile
+        sed -i "1s/^/FUNC_ONLY=yes/"  ${build1}/Makefile
+    fi
+    if [ "$(head -n 1 $build2/Makefile)" != "FUNC_ONLY=yes" ]; then
+        echo -e "\n" > ${build2}/Makefile
+        sed -i "1s/^/FUNC_ONLY=yes/"  ${build2}/Makefile
+    fi
+}
 
 source ~/yali/Classification/Classify.sh \
     "no" \
@@ -70,6 +75,8 @@ source ~/yali/Classification/Classify.sh \
     2 \
     "histogram" \
     "" "" "" ""
+
+setupHistogramExtraction
 
 compiling ${DATASET} O0 ""
 compiling ${DATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
