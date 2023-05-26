@@ -51,6 +51,8 @@ def _GetCFGGrindStatistics(
 
         csv_static.append(out_json["static"]["instructions"]["opcodes"])
         csv_dynamic.append(out_json["dynamic"]["instructions"]["opcodes"])
+    else:
+        print(f"Err handling output. Output: {out_json}")
 
 
 def _Compile(
