@@ -41,13 +41,16 @@ def _GetCFGGrindStatistics(
 
     out_raw = subprocess.run(
         command, capture_output=True, shell=True, check=True)
-    out_json = json.loads(out_raw.stdout)[0]
+    out_json = json.loads(out_raw.stdout)
 
-    out_json["static"]["instructions"]["opcodes"]["id"] = file_name
-    out_json["dynamic"]["instructions"]["opcodes"]["id"] = file_name
+    if isinstance(out_json, list) and len(out_json) > 0:
+        out_json = out_json[0]
 
-    csv_static.append(out_json["static"]["instructions"]["opcodes"])
-    csv_dynamic.append(out_json["dynamic"]["instructions"]["opcodes"])
+        out_json["static"]["instructions"]["opcodes"]["id"] = file_name
+        out_json["dynamic"]["instructions"]["opcodes"]["id"] = file_name
+
+        csv_static.append(out_json["static"]["instructions"]["opcodes"])
+        csv_dynamic.append(out_json["dynamic"]["instructions"]["opcodes"])
 
 
 def _Compile(
