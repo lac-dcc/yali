@@ -15,9 +15,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--datasets", required=True, nargs="+", type=str,
     help="Datasets' names to combine and create a mixed dataset")
-parser.add_argument(
-    "--outputDir", type=str, required=True,
-    help="Directory to save the histograms (matrices) in a numpy format")
 args = parser.parse_args()
 
 
@@ -90,6 +87,5 @@ def CreateMixedDataset(dataset_names: List[str]):
 
 if __name__ == "__main__":
     datasets = args.datasets
-    outputDir = args.outputDir
 
     CreateMixedDataset(datasets)
