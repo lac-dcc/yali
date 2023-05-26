@@ -8,13 +8,15 @@ YC='\033[0;33m'
 NC='\033[0m'
 
 getDataset() {
-    echo -e "${YC}===> Downloading the datasets...${NC}"
-    wget ${YALI}/jotai.tar.xz -O $ROOTPATH/Volume/Source/jotai.tar.xz
+    if [ ! -d "$ROOTPATH/Volume/Source/jotai" ]; then
+        echo -e "${YC}===> Downloading the datasets...${NC}"
+        wget ${YALI}/jotai.tar.xz -O $ROOTPATH/Volume/Source/jotai.tar.xz
 
-    echo -e "${YC}===> Unpacking...${NC}"
-    tar -xf $ROOTPATH/Volume/Source/jotai.tar.xz -C $ROOTPATH/Volume/Source/
+        echo -e "${YC}===> Unpacking...${NC}"
+        tar -xf $ROOTPATH/Volume/Source/jotai.tar.xz -C $ROOTPATH/Volume/Source/
 
-    rm $ROOTPATH/Volume/Source/jotai.tar.xz
+        rm $ROOTPATH/Volume/Source/jotai.tar.xz
+    fi
 }
 
 playGame() {
@@ -24,7 +26,7 @@ playGame() {
     local optType=$3
 
     DOCKER_BUILDKIT=1 docker run -v ${ROOTPATH}/Volume:/home/ml4code/yali/Dataset \
-                yali_yali ${SCRIPTFOLDER}/BinaryClassification.sh 10 $modelName "jotai" $obfStrategy $optType
+                yali_yali ${SCRIPTFOLDER}/BinaryClassification.sh 1 $modelName "randomeasy" $obfStrategy $optType
 }
 
 jotaiClassification() {
@@ -45,5 +47,5 @@ jotaiClassification() {
     done
 }
 
-# getDataset
+getDataset
 jotaiClassification
