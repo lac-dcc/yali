@@ -1,6 +1,7 @@
 """Converts CSVs Histograms files to numpy."""
 import os
 import argparse
+from typing import List
 import pandas as pd
 import numpy as np
 
@@ -11,26 +12,24 @@ parser.add_argument(
     "--outputDir", type=str, required=True,
     help="Directory to save the histograms in a numpy format")
 parser.add_argument(
-    "--extended", required=False, default=False, action="store_true",
-    help="Extracts the whole histogram")
-parser.add_argument(
-    "--noextended", dest="extended", default=False, action="store_false",
-    help="Extracts only 64 opcodes instead of the whole histogram")
+    "--remove", required=False, nargs="+", type=str, default=[],
+    help="Feature' names to remove from the histogram")
 args = parser.parse_args()
 
 
-def Convert(csv_file: str, out_dir: str, is_extended: bool):
+def Convert(csv_file: str, out_dir: str, features_to_remove: List[str]):
     """Converts all the lines of a CSV file to numpy format.
 
     Args:
         csv_file: Path to the CSV file
         out_dir: Path to save the output
-        is_extended: Extracts all histogram features if it is `true`
+        features_to_remove: Feature' names to remove from the histogram
     """
     if os.path.isdir(out_dir):
         data = pd.read_csv(csv_file, skipinitialspace=True)
-        if not is_extended:
-            data = data[list(["id", "class"] + [str(i) for i in range(0, 65)])]
+        if len(features_to_remove) > 0:
+            columns = data.columns.difference(features_to_remove)
+            data = data[columns]
 
         for _, row in data.iterrows():
             ll_name = os.path.basename(row["id"])
@@ -45,6 +44,6 @@ def Convert(csv_file: str, out_dir: str, is_extended: bool):
 if __name__ == "__main__":
     histogramCSV = args.histogramCSV
     outputDir = args.outputDir
-    extended = args.extended
+    remove = args.remove
 
-    Convert(histogramCSV, outputDir, extended)
+    Convert(histogramCSV, outputDir, remove)

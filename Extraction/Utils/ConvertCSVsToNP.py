@@ -1,6 +1,7 @@
 """Converts CSVs Histograms files to numpy."""
 import os
 import argparse
+from typing import List
 import pandas as pd
 import numpy as np
 
@@ -15,11 +16,8 @@ parser.add_argument(
     "--outputDir", type=str, required=True,
     help="Directory to save the histograms (matrices) in a numpy format")
 parser.add_argument(
-    "--extended", required=False, default=False, action="store_true",
-    help="Extracts the whole histogram")
-parser.add_argument(
-    "--noextended", dest="extended", default=False, action="store_false",
-    help="Extracts only 64 opcodes instead of the whole histogram")
+    "--remove", required=False, nargs="+", type=str, default=[],
+    help="Feature' names to remove from the histogram")
 args = parser.parse_args()
 
 
@@ -49,6 +47,7 @@ def CreateClassWithEqualPairs(
 
             os.makedirs(dir_name, exist_ok=True)
             np.savez_compressed(file_path, values=pair)
+
 
 def CreateClassWithDifferentPairs(
         data1: pd.DataFrame, data2: pd.DataFrame, out_dir: str):
@@ -91,23 +90,25 @@ def CreateClassWithDifferentPairs(
             np.savez_compressed(file_path, values=pair)
 
 
-def Convert(csv_file1: str, csv_file2: str, out_dir: str, is_extended: bool):
+def Convert(
+        csv_file1: str, csv_file2: str, out_dir: str,
+        features_to_remove: List[str]):
     """Converts all the lines of a CSV file to numpy format.
 
     Args:
         csv_file1: Path to the first CSV file
         csv_file2: Path to the second CSV file
         out_dir: Path to save the output
-        is_extended: Extracts all histogram features if it is `true`
+        features_to_remove: Feature' names to remove from the histogram
     """
     if os.path.isdir(out_dir):
         data1 = pd.read_csv(csv_file1, skipinitialspace=True)
         data2 = pd.read_csv(csv_file2, skipinitialspace=True)
 
-        if not is_extended:
-            opcodes =[str(i) for i in range(0, 65)]
-            data1 = data1[list(["id"] + opcodes)]
-            data2 = data2[list(["id"] + opcodes)]
+        if len(features_to_remove) > 0:
+            columns = data1.columns.difference(features_to_remove)
+            data1 = data1[columns]
+            data2 = data2[columns]
 
         data1 = data1.set_index("id")
         data2 = data2.set_index("id")
@@ -132,6 +133,6 @@ if __name__ == "__main__":
     histogramCSV1 = args.histogramCSV1
     histogramCSV2 = args.histogramCSV2
     outputDir = args.outputDir
-    extended = args.extended
+    remove = args.remove
 
-    Convert(histogramCSV1, histogramCSV2, outputDir, extended)
+    Convert(histogramCSV1, histogramCSV2, outputDir, remove)

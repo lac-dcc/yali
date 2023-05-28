@@ -85,7 +85,7 @@ histograms() {
     local optType=$2
     local outputDir=$3
     local type=$4
-    local flagExtended=$5
+    local flagRemoveFeatures=$5
     local obfStrategy=$6
     local irFolder=~/yali/Dataset/Irs/${setName}${obfStrategy}${optType}/
     local csvFile=~/yali/Dataset/Csv/features_${setName}${obfStrategy}${optType}.csv
@@ -108,7 +108,7 @@ histograms() {
         python3 ~/yali/Extraction/Utils/ConvertCSVToNP.py \
             --histogramCSV ${csvFile} \
             --outputDir ${outputDir}/ \
-            ${flagExtended}
+            ${flagRemoveFeatures}
         echo -e "1" > ${outputDir}/Finished
         echo -e "${YC}===> Conversion finished ${setName} <===${NC}"
     fi
@@ -145,10 +145,11 @@ compiling() {
 
     if [ ${REPRESENTATION} == "histogram" ]; then
         local outputDir=~/yali/Dataset/Histograms/${setName}${obfStrategy}${optType}
-        histograms ${setName} ${optType} ${outputDir} "only opcodes" "--noextended" ${obfStrategy}
+        local removeFlag="--remove loop_depth_1 loop_depth_2 loop_depth_3 loop_depth_n num_bbs"
+        histograms ${setName} ${optType} ${outputDir} "only opcodes" "${removeFlag}" ${obfStrategy}
     elif [ ${REPRESENTATION} == "histogram_ext" ]; then
         local outputDir=~/yali/Dataset/Embeddings/histogram_ext/${setName}${obfStrategy}${optType}
-        histograms ${setName} ${optType} ${outputDir} "extended" "--extended" ${obfStrategy}
+        histograms ${setName} ${optType} ${outputDir} "extended" "" ${obfStrategy}
     else
         source ${representationScriptFolder}/Extract.sh "${setName}${obfStrategy}${optType}" ${REPRESENTATION}
     fi
