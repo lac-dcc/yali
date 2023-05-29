@@ -20,12 +20,6 @@ parser.add_argument(
     "--dataset", type=str, required=True,
     help="Directory name with the IRs (Jotai) to get the histogram")
 parser.add_argument("--clang", type=str, required=True, help="Path to clang")
-parser.add_argument(
-    "--baselineCSVStatic", type=str, required=False,
-    help="CSV path for static histograms compiled with -O0")
-parser.add_argument(
-    "--baselineCSVDynamic", type=str, required=False,
-    help="CSV path for dynamic histograms compiled with -O0")
 args = parser.parse_args()
 
 
@@ -187,33 +181,8 @@ def _InstallCFGGrind(valgrind_version: str, path_to_build: str):
     os.system("sudo make install")
 
 
-def _CallHistogramScript(
-        baseline_csv: str, csv_path: str, out_folder_name: str):
-    """Calls script python to extract histograms (numpy format)
-
-    Args:
-        baseline_csv: CSV path for histograms compiled with -O0
-        csv_path: Path to CSV with histograms
-        out_folder_name: Output directory name
-    """
-    out_dir = f"{PATH_TO_YALI}/Volume/Histograms/{out_folder_name}"
-    os.makedirs(out_dir, exist_ok=True)
-    ext_features = "loop_depth_1 loop_depth_2 loop_depth_3 loop_depth_n num_bbs"
-
-    command = (f"python3 {PATH_TO_YALI}/Extraction/Utils/ConvertCSVsToNP.py " +
-        f"--histogramCSV1 {baseline_csv} " +
-        f"--histogramCSV2 {csv_path} " +
-        f"--outputDir {out_dir} " +
-        f"--remove {ext_features}")
-    os_result = os.system(command)
-
-    if os_result != 0:
-        print("Err extracting histogram (numpy format)!")
-
-
 def _SaveHistograms(
-        csv_dynamic: List[Dict], csv_static: List[Dict],
-        dataset_name: str, baseline_sta_csv: str, baseline_dyn_csv: str):
+        csv_dynamic: List[Dict], csv_static: List[Dict], dataset_name: str):
     """Saves the CSVs and Histograms (numpy format) on hard disk.
 
     Args:
@@ -237,15 +206,8 @@ def _SaveHistograms(
     df_static.to_csv(dyn_csv)
     df_dynamic.to_csv(sta_csv)
 
-    if baseline_sta_csv is not None:
-        _CallHistogramScript(baseline_sta_csv, sta_csv, sta_name)
-    if baseline_dyn_csv is not None:
-        _CallHistogramScript(baseline_dyn_csv, dyn_csv, dyn_name)
 
-
-def GetDynamicHistograms(
-        dataset_name: str, clang_path: str,
-        baseline_sta_csv: str, baseline_dyn_csv: str):
+def GetDynamicHistograms(dataset_name: str, clang_path: str):
     """Generates histograms from `dataset` through a dynamic analysis.
 
     Args:
@@ -268,15 +230,11 @@ def GetDynamicHistograms(
     csv_static, csv_dynamic = _GenerateHistogramsUsingCFGGrind(
         dataset_name, clang_path, path_to_dots)
 
-    _SaveHistograms(
-        csv_dynamic, csv_static, dataset_name, baseline_sta_csv,
-        baseline_dyn_csv)
+    _SaveHistograms(csv_dynamic, csv_static, dataset_name)
 
 
 if __name__ == "__main__":
     dataset = args.dataset
     clang = args.clang
-    baselineCSVStatic = args.baselineCSVStatic
-    baselineCSVDynamic = args.baselineCSVDynamic
 
-    GetDynamicHistograms(dataset, clang, baselineCSVStatic, baselineCSVDynamic)
+    GetDynamicHistograms(dataset, clang)
