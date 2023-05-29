@@ -81,6 +81,6 @@ setupHistogramExtraction
 compiling ${DATASET} O0 ""
 compiling ${DATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
 
-mixedHistograms "$DATASET" "$OBFTRAIN" "$OPTLEVELTRAIN" "only opcodes" "--noextended"
+mixedHistograms "$DATASET" "$OBFTRAIN" "$OPTLEVELTRAIN" "only opcodes" "--remove loop_depth_1 loop_depth_2 loop_depth_3 loop_depth_n num_bbs"
 
 classification "${ROUNDS}" "${DATASET}MIXED" "${OBFTRAIN}" "${OPTLEVELTRAIN}" "${DATASET}MIXED" "${OBFTRAIN}" "${OPTLEVELTRAIN}" "/train/" "/test/"
