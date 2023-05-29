@@ -41,9 +41,7 @@ jotaiCFGGrindClassification() {
     python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotaiO0 --clang clang-10
 
     for o in "${!OBFSTRATEGY[@]}"; do
-        python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OBFSTRATEGY[$o]}O0 --clang clang-10 \
-            --baselineCSVStatic ${BASELINE_CSV}/features_CFGGRIND-DjotaiO0.csv \
-            --baselineCSVDynamic ${BASELINE_CSV}/features_CFGGRIND-SjotaiO0.csv
+        python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OBFSTRATEGY[$o]}O0 --clang clang-10
         
         for m in "${!MODELS[@]}"; do
             playGame ${MODELS[$m]} ${OBFSTRATEGY[$o]} "O0" CFGGRIND-Djotai
@@ -52,9 +50,7 @@ jotaiCFGGrindClassification() {
     done
 
     for o in "${!OPTLEVEL[@]}"; do
-        python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OPTLEVEL[$o]} --clang clang-10 \
-            --baselineCSVStatic ${BASELINE_CSV}/features_CFGGRIND-DjotaiO0.csv \
-            --baselineCSVDynamic ${BASELINE_CSV}/features_CFGGRIND-SjotaiO0.csv
+        python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OPTLEVEL[$o]} --clang clang-10
     
         for m in "${!MODELS[@]}"; do
             playGame ${MODELS[$m]} "None" ${OPTLEVEL[$o]} CFGGRIND-Djotai
