@@ -26,9 +26,11 @@ playGame() {
     local obfStrategy=$2
     local optType=$3
     local dataset=$4
+    local csvAlreadyExist=$5
 
     DOCKER_BUILDKIT=1 docker run -v ${ROOTPATH}/Volume:/home/ml4code/yali/Dataset \
-                yali_yali ${SCRIPTFOLDER}/BinaryClassification.sh 1 $modelName $dataset $obfStrategy $optType
+                yali_yali ${SCRIPTFOLDER}/BinaryClassification.sh 1 \
+                $modelName $dataset $obfStrategy $optType $csvAlreadyExist
 }
 
 jotaiCFGGrindClassification() {
@@ -44,8 +46,8 @@ jotaiCFGGrindClassification() {
         python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OBFSTRATEGY[$o]}O0 --clang clang-10
         
         for m in "${!MODELS[@]}"; do
-            playGame ${MODELS[$m]} ${OBFSTRATEGY[$o]} "O0" CFGGRIND-Djotai
-            playGame ${MODELS[$m]} ${OBFSTRATEGY[$o]} "O0" CFGGRIND-Sjotai
+            playGame ${MODELS[$m]} ${OBFSTRATEGY[$o]} "O0" CFGGRIND-Djotai "yes"
+            playGame ${MODELS[$m]} ${OBFSTRATEGY[$o]} "O0" CFGGRIND-Sjotai "yes"
         done
     done
 
@@ -53,8 +55,8 @@ jotaiCFGGrindClassification() {
         python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${OPTLEVEL[$o]} --clang clang-10
     
         for m in "${!MODELS[@]}"; do
-            playGame ${MODELS[$m]} "None" ${OPTLEVEL[$o]} CFGGRIND-Djotai
-            playGame ${MODELS[$m]} "None" ${OPTLEVEL[$o]} CFGGRIND-Sjotai
+            playGame ${MODELS[$m]} "None" ${OPTLEVEL[$o]} CFGGRIND-Djotai "yes"
+            playGame ${MODELS[$m]} "None" ${OPTLEVEL[$o]} CFGGRIND-Sjotai "yes"
         done
     done
 }
@@ -78,5 +80,5 @@ jotaiClassification() {
 }
 
 getDataset
-# jotaiClassification
+jotaiClassification
 jotaiCFGGrindClassification
