@@ -1,7 +1,7 @@
 """Converts CSVs Histograms files to numpy."""
 import os
 import argparse
-from typing import List
+from typing import List, Tuple
 import pandas as pd
 import numpy as np
 
@@ -90,6 +90,32 @@ def CreateClassWithDifferentPairs(
             np.savez_compressed(file_path, values=pair)
 
 
+def AlignDataframes(
+        csv_file1: str, csv_file2: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """Formats the dataframes for having the same columns.
+
+    Args:
+        csv_file1: Path to the first CSV
+        csv_file2: Path to the second CSV
+
+    Returns:
+        Tuple with the corresponding dataframe of each CSV
+    """
+    data1 = pd.read_csv(csv_file1, skipinitialspace=True)
+    data2 = pd.read_csv(csv_file2, skipinitialspace=True)
+
+    diff_columns = data2.columns.difference(data1.columns)
+    diff_columns2 = data1.columns.difference(data2.columns)
+
+    for column in diff_columns:
+        data1[column] = 0
+
+    for column in diff_columns2:
+        data2[column] = 0
+
+    return data1, data2
+
+
 def Convert(
         csv_file1: str, csv_file2: str, out_dir: str,
         features_to_remove: List[str]):
@@ -102,8 +128,7 @@ def Convert(
         features_to_remove: Feature' names to remove from the histogram
     """
     if os.path.isdir(out_dir):
-        data1 = pd.read_csv(csv_file1, skipinitialspace=True)
-        data2 = pd.read_csv(csv_file2, skipinitialspace=True)
+        data1, data2 = AlignDataframes(csv_file1, csv_file2)
 
         if len(features_to_remove) > 0:
             columns = data1.columns.difference(features_to_remove)
