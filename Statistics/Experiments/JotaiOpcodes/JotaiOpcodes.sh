@@ -41,7 +41,7 @@ jotaiCFGGrindClassification() {
     python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotaiO0 --clang clang-10
 
     for o in "${!OBFSTRATEGY[@]}"; do
-        python3 CFGGrind.py --dataset jotai${o}O0 --clang clang-10 \
+        python3 ${SCRIPTPATH}/CFGGrind.py --dataset jotai${o}O0 --clang clang-10 \
             --baselineCSVStatic ${BASELINE_CSV}/features_CFGGRIND-DjotaiO0.csv \
             --baselineCSVDynamic ${BASELINE_CSV}/features_CFGGRIND-SjotaiO0.csv
         
