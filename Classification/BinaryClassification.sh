@@ -9,6 +9,7 @@ MODEL=$2
 DATASET=$3
 OBFTRAIN=$4
 OPTLEVELTRAIN=$5
+CSVALREADYEXIST=$6
 
 
 # Create the histograms
@@ -39,12 +40,6 @@ mixedHistograms() {
 
 # Configures the makefile for extracting the histogram of a specific function
 setupHistogramExtraction() {
-    if [ ! -z "${OBFTRAIN}" ]; then
-        if [ "${OBFTRAIN}" = "None" ]; then
-            OBFTRAIN=""
-        fi
-    fi
-
     local build1=~/yali/Dataset/Irs/${DATASET}O0/
     local build2=~/yali/Dataset/Irs/${DATASET}${OBFTRAIN}${OPTLEVELTRAIN}/
 
@@ -76,10 +71,18 @@ source ~/yali/Classification/Classify.sh \
     "histogram" \
     "" "" "" ""
 
-setupHistogramExtraction
+if [ ! -z "${OBFTRAIN}" ]; then
+    if [ "${OBFTRAIN}" = "None" ]; then
+        OBFTRAIN=""
+    fi
+fi
 
-compiling ${DATASET} O0 ""
-compiling ${DATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
+if [ -z ${CSVALREADYEXIST} ]; then
+    setupHistogramExtraction
+
+    compiling ${DATASET} O0 ""
+    compiling ${DATASET} ${OPTLEVELTRAIN} ${OBFTRAIN}
+fi
 
 mixedHistograms "$DATASET" "$OBFTRAIN" "$OPTLEVELTRAIN" "only opcodes" "--remove loop_depth_1 loop_depth_2 loop_depth_3 loop_depth_n num_bbs"
 
