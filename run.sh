@@ -32,7 +32,7 @@ playGame() {
     sed -i "s/OPTLEVELTRAIN=.*/OPTLEVELTRAIN=${optTypeTrain}/g" $(pwd)/.env
     sed -i "s/TESTDATASET=.*/TESTDATASET=${testName}/g" $(pwd)/.env
     sed -i "s/OPTLEVELTEST=.*/OPTLEVELTEST=${optTypeTest}/g" $(pwd)/.env
-    DOCKER_BUILDKIT=1 docker-compose up
+    DOCKER_BUILDKIT=1 docker compose up
 }
 
 
@@ -207,10 +207,10 @@ run() {
 
     case "${MODE}" in
         "build")
-                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
+                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose build
                 ;;
         "custom")
-                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up --quiet-pull
+                COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose up --quiet-pull
                 ;;
         "all")
                 classAnalysis
