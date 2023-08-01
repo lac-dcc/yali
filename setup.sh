@@ -60,5 +60,5 @@ echo -e "${YC}===> Environment created. <===${NC}\n"
 
 # Creating the docker image
 echo -e "${YC}===> Creating docker image...${NC}"
-DOCKER_BUILDKIT=1 docker-compose build
+DOCKER_BUILDKIT=1 docker compose build
 echo -e "${YC}===> Image created. <===${NC}"
